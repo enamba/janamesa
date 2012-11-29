@@ -1,0 +1,4 @@
+<option value=""></option>
+{foreach from=$children item=c}
+<option value="{$c->getId()}" {if $c->getId()==$newtypeId}selected{/if}>{$c->getName()}</option>
+{/foreach}

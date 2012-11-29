@@ -1,0 +1,23 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<form action="/administration_upselling_goods/edit" method="post">
+    <input type="hidden" name="id" value="{$item->getId()}" />
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+            {include file='administration/upselling/goods/_item.htm'}
+            </div>
+        </div>
+    </div>
+    
+    {if $bill->getStatus() < 2}
+    <input type="submit" name="cancel" value="{__b('Stornieren')}" class="yd-are-you-sure" />
+    {/if}
+    <a href="/download/bill/{Default_Helpers_Crypt::hash($bill->getId())}/pdf" class="button">{__b('Rechnung angucken')}</a>
+    <a href="/administration_upselling_goods/send/id/{$item->getId()}" class="button" class="yd-are-you-sure">{__b('Rechnung erneut verschicken')}</a>
+    {if $bill->getStatus() < 2}
+    <input type="submit" name="pay" value="{__b('Bezahlt -> Verschicken!')}" class="yd-are-you-sure" />
+    {/if}
+</form>
+{/block}

@@ -1,0 +1,31 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/stats/companies/_navigation.htm'}
+
+<div class="two-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Übersicht')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <td>{__b('Accounts pro Firma')}</td>
+                    <td>{$account_per_company}</td>
+                </tr>
+                <tr>
+                    <td>{__b('Bestellungen pro Monat')}</td>
+                    <td>{$orders_per_company_per_employee}</td>
+                </tr>
+                <tr>
+                    <td>{__b('Durschnittlicher Warenkorb')}</td>
+                    <td>{$average_bucket_value|inttoprice} &euro;</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="item-content">&nbsp;</div>
+</div>
+
+{/block}

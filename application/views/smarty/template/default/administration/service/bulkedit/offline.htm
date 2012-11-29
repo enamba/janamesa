@@ -1,0 +1,29 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="one-column-box">
+    <a name="courier"></a>
+    <div class="item">
+        <div class="item-head">
+            {__b('Dienstleister offline stellen')}
+        </div>
+        <div class="item-content">
+          
+           
+            <form action="" method="post">
+                <a id="yd-service-offline-select-all" class="button" >{__b('alle auswählen')}</a>
+                <input type="submit" onclick="return  confirm('{__('Dienstleister offline stellen?')}')" value="{__b('Ausgewählte Dienstleister offline stellen')}" class="button" ></a>
+                <input type="checkbox" name="notify" checked="checked" /> {__b('Nachricht an Backoffice')}
+                <br />
+                <br />
+                 {__('Ausgewählte Dienstleister werden auf den Status Urlaub gesetzt.')}
+                  <br />
+                <br />
+                {$grid}
+            </form>
+        </div>
+    </div>
+    <div class="item">     
+    </div>
+</div>
+{/block}

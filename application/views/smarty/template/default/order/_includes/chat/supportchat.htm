@@ -1,0 +1,108 @@
+{if in_array($config->domain->base, array('lieferando.de', 'lieferando.at', 'lieferando.ch', 'pyszne.pl', 'taxiresto.fr'))}
+    <!-- BEGIN ProvideSupport.com Graphics Chat Button Code -->
+    <div id="ci0MyQ" style="z-index:100;position:absolute"></div>
+    <div id="sc0MyQ" style="display:inline"></div>
+    <div id="sd0MyQ" style="display:none"></div>
+    <script type="text/javascript">
+        
+        var chatLang = new Array();
+        chatLang['lieferando.de'] = {
+                yes : 'ja',
+                no : 'nein',
+                email : 'E-Mail',
+                loggedin : 'eingeloggt',
+                dlname : 'Dienstleister-Name',
+                dlid : 'Dienstleister-ID',
+                dlpayment : 'Bezahloptionen',
+                dlvoucher : 'Gutschein möglich',
+                deliver : 'Liefergebiet',
+                order : 'Order-ID'             
+            };
+            
+       chatLang['taxiresto.fr'] = {
+                yes : 'ouais',
+                no : 'nan',
+                email : 'email',
+                loggedin : 'enregistré',
+                dlname : 'Nom du prestataire',
+                dlid : 'ID-Restaurant',
+                dlpayment : 'options de paiement',
+                dlvoucher : "Bons d'achat acceptés",
+                deliver : 'zone de livraison',
+                order : 'ID-commande'   
+            };
+        
+        chatLang['lieferando.at'] = chatLang['lieferando.de'];
+        chatLang['lieferando.ch'] = chatLang['lieferando.de'];
+        
+        chatLang['pyszne.pl'] = {
+                yes : 'tak',
+                no : 'nie',
+                email : 'E-Mail',
+                loggedin : 'zalogowany',
+                dlname : 'Nazwa restauracji',
+                dlid : 'ID-Restauracji',
+                dlpayment : 'Opcje płatności',
+                dlvoucher : 'Możliwy kupon',
+                deliver : 'Miejsce dostawy',
+                order : 'ID-Zamówienia'             
+            };
+        
+        var se0MyQ=document.createElement("script");
+        se0MyQ.type="text/javascript";
+        
+        {if $config->domain->base == 'lieferando.de' || $config->domain->base == 'lieferando.at' || $config->domain->base == 'lieferando.ch'}
+            var se0MyQs=(location.protocol.indexOf("https")==0?"https":"http")+"://image.providesupport.com/js/yourdelivery/safe-standard.js?ps_h=0MyQ&ps_t="+new Date().getTime();
+        {elseif $config->domain->base == 'taxiresto.fr'}
+            var se0MyQs=(location.protocol.indexOf("https")==0?"https":"http")+"://image.providesupport.com/js/taxiresto/safe-standard.js?ps_h=0MyQ&ps_t="+new Date().getTime();
+        {elseif $config->domain->base == 'pyszne.pl'}
+            var se0MyQs=(location.protocol.indexOf("https")==0?"https":"http")+"://image.providesupport.com/js/yourdelivery_polen/safe-standard.js?ps_h=0MyQ&ps_t="+new Date().getTime();
+        {/if}
+        
+        var loggedIn = ydState.maybeLoggedIn() ? escape(chatLang["{$config->domain->base}"].yes) : escape(chatLang["{$config->domain->base}"].no);
+        se0MyQs += "&" + escape(chatLang["{$config->domain->base}"].loggedin) + "=" + loggedIn;
+        
+        {if $cust && $cust->getEmail()}
+            se0MyQs += "&" + escape(chatLang["{$config->domain->base}"].email) + "=" + escape("{$cust->getEmail()}");
+        {elseif $order && $order->getCustomer() && $order->getCustomer()->getEmail()}
+            se0MyQs += "&" + escape(chatLang["{$config->domain->base}"].email) + "=" + escape("{$order->getCustomer()->getEmail()}");
+        {/if}
+        
+        {if $order && $order->getService()}
+            {assign var=currentservice value=$order->getService()}
+        {/if}
+        {if $currentservice}
+            se0MyQs += "&" + escape(chatLang["{$config->domain->base}"].dlname) + "=" + escape("{$currentservice->getName()}");
+            se0MyQs += "&" + escape(chatLang["{$config->domain->base}"].dlid) + "=" + escape("{$currentservice->getId()}");
+            se0MyQs += "&" + escape(chatLang["{$config->domain->base}"].dlpayment) + "=" + escape({if $currentservice->getOnlycash()}"bar"{else}"online"{/if});
+            se0MyQs += "&" + escape(chatLang["{$config->domain->base}"].dlvoucher) + "=" + escape({if $currentservice->getOnlycash()}"cash"{else}"online"{/if});
+        {/if}
+        
+        {if $location}
+            se0MyQs += "&" + escape(chatLang["{$config->domain->base}"].deliver) + "=" + escape("{$location->getCity()->getFullname()}");    
+        {elseif $order && $order->getLocation()}
+            se0MyQs += "&" + escape(chatLang["{$config->domain->base}"].deliver) + "=" + escape("{$order->getLocation()->getCity()->getFullname()}");    
+        {/if}
+        
+        {if $order && $order->getId()}
+            se0MyQs += "&" + escape(chatLang["{$config->domain->base}"].order) + "=" + escape({$order->getId()});
+        {/if}
+        
+        //images
+        {if $config->domain->base == 'lieferando.de' || $config->domain->base == 'lieferando.at' || $config->domain->base == 'lieferando.ch'}
+            se0MyQs += "&online-image=" + escape('/media/images/yd-chat/de/order/online.gif');
+            se0MyQs += "&offline-image=" + escape('/media/images/yd-chat/de/order/offline.gif');
+        {elseif $config->domain->base == 'taxiresto.fr'}
+            se0MyQs += "&online-image=" + escape('/media/images/yd-chat/fr/order/online.gif');
+            se0MyQs += "&offline-image=" + escape('/media/images/yd-chat/fr/order/offline.jpg');
+        {elseif $config->domain->base == 'pyszne.pl'}
+            se0MyQs += "&online-image=" + escape('/media/images/yd-chat/pl/order/online.gif');
+            se0MyQs += "&offline-image=" + escape('/media/images/yd-chat/pl/order/offline.jpg');
+        {/if}
+
+        setTimeout("se0MyQ.src=se0MyQs;document.getElementById('sd0MyQ').appendChild(se0MyQ)",1)
+    </script>
+    <!-- END ProvideSupport.com Graphics Chat Button Code -->
+    <div style="height:20px;"></div>
+{/if}
+

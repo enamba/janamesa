@@ -1,0 +1,84 @@
+{if $APPLICATION_ENV == "production"}
+    {if $pixel}
+
+        <!-- conversion pixel for affilinet -->
+        {if $pixel && $APPLICATION_ENV == "production"}
+            {$pixel}
+        {else}
+            <iframe src="/null.php?ecommerce_for={$pixel}" height="1" width="1" frameborder="0"></iframe>
+        {/if}
+
+    {elseif $uadomain == 'lieferando.de'}
+
+        {if $order->getMode() == 'rest'}
+            <iframe src="http://img-cdn.mediaplex.com/0/18421/universal.html?page_name=success_lieferdienst&Success_Lieferdienst=1&mpuid={time()}" height="1" width="1" frameborder="0"></iframe>
+        {elseif $order->getMode() == 'cater'}
+            <iframe src="http://img-cdn.mediaplex.com/0/18421/universal.html?page_name=success_catering&Success_Catering=1&mpuid={time()}" height="1" width="1" frameborder="0"></iframe>
+        {elseif $order->getMode() == 'great'}
+            <iframe src="http://img-cdn.mediaplex.com/0/18421/universal.html?page_name=success_supermarkt&Success_Supermarkt=1&mpuid={time()}" height="1" width="1" frameborder="0"></iframe>
+        {/if}
+
+        <!-- masterpixel -->
+        <iframe
+            src="http://img-cdn.mediaplex.com/0/18421/universal.html?page_name=dankeseite&Sale=1&LS_sale={if $order->getMode() == 'rest'}1{else}0{/if}&ca_sale={if $order->getMode() == 'cater'}1{else}0{/if}&sm_sale={if $order->getMode() == 'great'}1{else}0{/if}&warenkorbwert={$order->getBucketTotal()|inttoprice:2:'.'}&did={$order->getService()->getId()}&oid={$order->getId()}&uid={if $order->getCustomer()->isLoggedIn()}{$order->getCustomer()->getId()}{else}0{/if}&stadt={$order->getLocation()->getOrt()->getOrt()}&mpuid=DID_{$order->getService()->getId()};PID_{$order->getMealIds()|implode:';'};OID_{$order->getId()};UID_{if $order->getCustomer()->isLoggedIn()}{$order->getCustomer()->getId()}{else}0{/if}&dl_name={$order->getService()->getName()|urlencode|strtolower}&vouid={$vouid}"
+            height="1"
+            width="1"
+            frameborder="0">
+        </iframe>
+
+    {elseif $uadomain == 'lieferando.at'}
+        <!-- currently all orders are delivery, so no if clause here -->
+        <iframe src="http://img-cdn.mediaplex.com/0/18589/universal.html?page_name=at_dankeseite&at_sale=1&at_ls_sale=1&at_ca_sale=0&at_sm_sale=0&at_warenkorbwert={$order->getBucketTotal()|inttoprice:2:'.'}&at_kategorie=1&did={$order->getService()->getId()}&oid={$order->getId()}&uid={if $order->getCustomer()->isLoggedIn()}{$order->getCustomer()->getId()}{else}0{/if}&stadt={$order->getLocation()->getOrt()->getOrt()}&mpuid=DID_{$order->getService()->getId()};PID_{$order->getMealIds()|implode:';'};OID_{$order->getId()};UID_{if $order->getCustomer()->isLoggedIn()}{$order->getCustomer()->getId()}{else}0{/if}&dl_name={$order->getService()->getName()|urlencode|strtolower}&vouid={$vouid}"
+                height="1"
+                width="1"
+                frameborder="0">
+
+        </iframe>
+    {elseif $uadomain == 'lieferando.ch'}
+        <!-- currently all orders are delivery, so no if clause here -->
+        <iframe src="http://img-cdn.mediaplex.com/0/18590/universal.html?page_name=ch_dankeseite&ch_sale=1&ch_ls_sale=1&ch_ca_sale=0&ca_sm_sale=0&ch_warenkorbwert={$order->getBucketTotal()|inttoprice:2:'.'}&ch_kategorie=1&did={$order->getService()->getId()}&oid={$order->getId()}&uid={if $order->getCustomer()->isLoggedIn()}{$order->getCustomer()->getId()}{else}0{/if}&stadt={$order->getLocation()->getOrt()->getOrt()}&mpuid=DID_{$order->getService()->getId()};PID_{$order->getMealIds()|implode:';'};OID_{$order->getId()};UID_{if $order->getCustomer()->isLoggedIn()}{$order->getCustomer()->getId()}{else}0{/if}&dl_name={$order->getService()->getName()|urlencode|strtolower}&vouid={$vouid}"
+                height="1"
+                width="1"
+                frameborder="0">
+
+        </iframe>
+    {elseif $uadomain == 'taxiresto.fr'}
+        <!-- currently all orders are delivery, so no if clause here -->
+        <iframe src="http://img-cdn.mediaplex.com/0/18591/universal.html?page_name=fr_dankeseite&fr_sale=1&fr_ls_sale=1&fr_ca_sale=0&fr_sm_sale=0&fr_warenkorbwert={$order->getBucketTotal()|inttoprice:2:'.'}&fr_kategorie=1&did={$order->getService()->getId()}&oid={$order->getId()}&uid={if $order->getCustomer()->isLoggedIn()}{$order->getCustomer()->getId()}{else}0{/if}&stadt={$order->getLocation()->getOrt()->getOrt()}&mpuid=DID_{$order->getService()->getId()};PID_{$order->getMealIds()|implode:';'};OID_{$order->getId()};UID_{if $order->getCustomer()->isLoggedIn()}{$order->getCustomer()->getId()}{else}0{/if}&dl_name={$order->getService()->getName()|urlencode|strtolower}&vouid={$vouid}"
+               height="1"
+                width="1"
+                frameborder="0">
+
+        </iframe>
+    {elseif $uadomain == 'elpedido.es'}
+
+    {elseif $uadomain == 'appetitos.it'}
+
+    {elseif $uadomain == 'smakuje.pl'}
+
+    {elseif $uadomain == 'pyszne.pl'}
+    <iframe frameborder="0" src="http://img-cdn.mediaplex.com/0/20585/universal.html?page_name=Dankeseite&amp;Sale=1&amp;warenkorbwert={round($order->getAbsTotal(),2)|inttoprice:2:'.'}"></iframe>
+    {/if}
+
+{else}
+    {if $pixel}
+        <!-- conversion pixel for affilinet -->
+        <iframe src="/null.php?pixel={$pixel|urlencode}" height="1" width="1" frameborder="0"></iframe>
+    {else}
+        <iframe
+            src="/null.php?page_name=dankeseite&amp;Sale=1&amp;LS_sale={if $order->getMode() == 'rest'}1{else}0{/if}&amp;ca_sale={if $order->getMode() == 'cater'}1{else}0{/if}&amp;sm_sale={if $order->getMode() == 'great'}1{else}0{/if}&amp;warenkorbwert={$order->getBucketTotal()|inttoprice:2:'.'}&amp;did={$order->getService()->getId()}&amp;oid={$order->getId()}&amp;uid={if $order->getCustomer()->isLoggedIn()}{$order->getCustomer()->getId()}{else}0{/if}&amp;stadt={$order->getLocation()->getOrt()->getOrt()}&amp;mpuid=DID_{$order->getService()->getId()};PID_{$order->getMealIds()|implode:';'};OID_{$order->getId()};UID_{if $order->getCustomer()->isLoggedIn()}{$order->getCustomer()->getId()}{else}0{/if}&dl_name={$order->getService()->getName()|urlencode|strtolower}&vouid={$vouid}"
+            height="1"
+            width="1"
+            frameborder="0">
+        </iframe>
+
+        {if $order->getMode() == 'rest'}
+            <iframe src="/null.php?page_name=success_lieferdienst&amp;Success_Lieferdienst=1&amp;mpuid={time()}" height="1" width="1" frameborder="0"></iframe>
+        {elseif $order->getMode() == 'cater'}
+            <iframe src="/null.php?page_name=success_catering&amp;Success_Catering=1&amp;mpuid={time()}" height="1" width="1" frameborder="0"></iframe>
+        {elseif $order->getMode() == 'great'}
+            <iframe src="/null.php?page_name=success_supermarkt&amp;Success_Supermarkt=1&amp;mpuid={time()}" height="1" width="1" frameborder="0"></iframe>
+        {/if}
+
+    {/if}
+{/if}

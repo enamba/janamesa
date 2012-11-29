@@ -1,0 +1,76 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+            <a href="/administration_city/create">{__b('Liefergebiet erstellen')}</a>
+        </div>
+    </div>
+</div>
+
+<form action="/administration_city/edit" method="post">
+<input type="hidden" name="cityId" value="{$city->getId()}"/>
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Postleitzahl und Teilgebiet für PLZ ')}{$city->getPlz()}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="30%">{__b('Stadt:')}</td>
+                            <td width="70%"><input type="text" name="city" value="{$city->getCity()}" class="rund_set text"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Bundesland')}</td>
+                            <td>
+                                <select name="state_stateId">
+                                    {foreach from=Yourdelivery_Model_DbTable_City::allStates() item=st}
+                                        <option value="{$st['state']}_{$st['stateId']}" {if $city->getState()==$st['state']}selected{/if}>{$st['state']}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Übergeordnetes Liefergebiet')}</td>
+                            <td>
+                                <select name="parentCityId">
+                                    <option value="0"></option>
+                                    {foreach from=Yourdelivery_Model_City::possibleParentsForCityId($city->getId()) item=p}
+                                    <option value="{$p['id']}" {if $city->getParentCityId()==$p['id']}selected{/if}>{$p['city']} ({$p['state']})</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('URLs automatisch zusammenbauen:')}</td>
+                            <td><input type="checkbox" id="yd-city-assemble-urls" name="assembleurls" value="1" checked="checked"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Restaurant URL:')}</td>
+                            <td><input type="text" name="restUrl" value="{$city->getRestUrl()}" disabled="disabled" class="rund_set text" id="yd-city-resturl"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Caterer URL:')}</td>
+                            <td><input type="text" name="caterUrl" value="{$city->getCaterUrl()}" disabled="disabled" class="rund_set text" id="yd-city-caterurl"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Großhandel URL:')}</td>
+                            <td><input type="text" name="greatUrl" value="{$city->getGreatUrl()}" disabled="disabled" class="rund_set text" id="yd-city-greaturl"/> *</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" />
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+</form>
+{/block}    

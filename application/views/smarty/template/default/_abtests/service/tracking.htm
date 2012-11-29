@@ -1,0 +1,7 @@
+{if !is_object($cust) || (is_object($cust) && !$cust->isLoggedIn())}
+{if $APPLICATION_ENV == "production"}{literal}
+
+{/literal}{else}
+    <!-- AB Test Service: TRACKING -->
+{/if}
+{/if}

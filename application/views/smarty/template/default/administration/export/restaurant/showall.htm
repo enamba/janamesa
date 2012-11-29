@@ -1,0 +1,23 @@
+<h1>{__b('All restaurant for google')} - {$city}</h1>
+{if $stats != 'all'}
+<table frame="box" align="center">
+    <tr>
+        <td><font color = "blue">#</font><font color = "red">{__b('Description')}</font> </td><td>: {__b('restaurant description ist nicht komplett')}</td>
+    </tr>
+    <tr>
+        <td><font color = "blue">#</font><font color = "red">{__b('Privat')}</font> </td><td>: {__b('restaurant ist privat')}</td>
+    </tr>
+        <td><font color = "blue">#</font><font color = "red">{__b('Exclude')}</font></td><td>: {__b('restaurant ist nicht fur google export')}</td>
+    <tr>
+        <td><font color = "blue">#</font><font color = "red">{__b('GoogleCategories')}</font> </td><td>: {__b('restaurant google categories ist nicht komplett')}</td>
+    </tr>
+</table>
+{/if}
+<div id="error"></div>
+<br />
+{assign var=num value=0}
+<div style="overflow: auto; height: 300px; width:500px;">
+    <table>
+    {foreach from=$data item=list}{assign var=num value=$num+1}<tr><td>{$num}. </td><td>{$list.name}</td><td>{$list.street}</td><td>{$list.error}</td></tr>{/foreach}
+    </table>
+</div>

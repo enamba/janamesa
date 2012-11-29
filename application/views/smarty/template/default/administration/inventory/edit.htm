@@ -1,0 +1,548 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<script type="text/javascript">
+    function sum(){
+        var end=0;
+        var size=$(".two-column-box .sum-function .yd-js-sumfunction select").size();
+        for(var i=0; i<size; i++){
+            var val=($(".two-column-box .sum-function .yd-js-sumfunction select").eq(i).val());
+            var temp=parseFloat($(".two-column-box .sum-function .yd-js-sumfunction select").eq(i).parent().next("td").text().substr(0,5));
+            end=end+(temp*val);
+            $("td .sum").text(end+" {__b('Euro')}");
+        };
+    };
+    function special(){
+        var val1=$("#specialCostCanton2626").val();
+        
+        if(val1!=0){
+            $("#specialCostCanton2626").parent().parent().prev("tr").children("td").eq(2).text(val1+".00 {__b('Euro')} "); 
+        };
+        var val2=$("#specialCostCanton2828").val();
+        
+        if(val2!=0){
+            $("#specialCostCanton2828").parent().parent().prev("tr").children("td").eq(2).text(val2+".00 {__b('Euro')} "); 
+        };
+        var val3=$("#specialCostCanton3232").val();
+        
+        if(val3!=0){
+            $("#specialCostCanton3232").parent().parent().prev("tr").children("td").eq(2).text(val3+".00 {__b('Euro')} "); 
+        };
+    };
+    $(document).ready(function() {  
+        special();
+        sum();
+        $(".two-column-box select").bind('change', function(){
+            if($(this).attr("name") == "specialCostCanton2626" || $(this).attr("name") =="specialCostCanton2828" || $(this).attr("name") =="specialCostCanton3232"){
+                var val2=$(this).val();
+                $(this).parent().parent().prev("tr").children("td").eq(2).text($(this).val()+".00 {__b('Euro')} "); 
+                sum();
+            }
+            else{
+                sum();   
+            };
+        });
+    });
+</script>
+<form action="/administration_inventory/edit/id/{$item->getId()}" method="POST">
+
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Lieferservice Bedarf')}
+
+                <select name="restaurantId">
+                    {foreach from=$restIds item=ri}
+                    <option value="{$ri.id}" {if $item->getRestaurantId()==$ri.id}selected="selected"{/if}>{$ri.id} - {$ri.name}</option>
+                    {/foreach}
+                </select>
+
+            </div>
+            <div class="item-content">
+                <table class="yd-inventory-border sum-function">
+                    <tr>
+                        <td class="yd-inventory-pizzacaselittle yd-inventory-big">{__b('Pizza Karton')} 26x26x4</td>
+                        <td class="yd-js-sumfunction"><select name="countCanton2626">
+                                {counter start=0 skip=1}
+                                {section name=count loop=21001 start=0 step=700}
+                                <option value="{$smarty.section.count.iteration-1}" {if $item->getCountCanton2626() == $smarty.section.count.iteration-1}selected="selected"{/if} >{$smarty.section.count.index}</option>
+                                {/section}
+
+                            </select>
+                        </td>
+                        <td class="yd-select-important">49.00 {__b('Euro')} </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="yd-select-right">{__b('%sAchtung%s nur bei Härtefall!', '<b>', '</b>')}</td>
+
+                        <td class="yd-select-important">
+                            <select class="yd-select-important" name="specialCostCanton2626" id="specialCostCanton2626">
+                                <option value="0"></option>
+                                <option value="30" {if $item->getSpecialCostCanton2626()==30}selected{/if}>30 {__b('€')}</option>
+                                <option value="40" {if $item->getSpecialCostCanton2626()==40}selected{/if}>40 {__b('€')}</option>
+                                <option value="49">{__b('Old')} :49 {__b('€')}</option>
+
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-pizzacaselittle yd-inventory-big">{__b('Pizza Karton')} 28x28x4</td>
+                        <td class="yd-js-sumfunction"><select name="countCanton2828">
+                                {section name=count loop=21001 start=0 step=700}
+                                <option value="{$smarty.section.count.iteration-1}" {if $item->getCountCanton2828() == $smarty.section.count.iteration-1}selected="selected"{/if} >{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                        <td class="yd-select-important">63.00 {__b('Euro')} </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="yd-select-right">{__b('%sAchtung%s nur bei Härtefall!', '<b>', '</b>')}</td>
+
+                        <td class="yd-select-important">
+                            <select class="yd-select-important" name="specialCostCanton2828" id="specialCostCanton2828" >
+                                <option value="0"></option>
+                                <option value="30" {if $item->getSpecialCostCanton2828()==30}selected{/if}>30 {__b('€')}</option>
+                                <option value="40" {if $item->getSpecialCostCanton2828()==40}selected{/if}>40 {__b('€')}</option>
+                                <option value="50" {if $item->getSpecialCostCanton2828()==50}selected{/if}>50 {__b('€')}</option>
+                                <option value="60" {if $item->getSpecialCostCanton2828()==60}selected{/if}>60 {__b('€')}</option>
+                                <option value="63" >{__b('Old: ')}63 {__b('€')}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-pizzacase yd-inventory-big">{__b('Pizza Karton')} 32x32x4</td>
+                        <td class="yd-js-sumfunction"><select name="countCanton3232">
+                                {section name=count loop=21001 start=0 step=700}
+                                <option value="{$smarty.section.count.iteration-1}" {if $item->getCountCanton3232() == $smarty.section.count.iteration-1}selected="selected"{/if} >{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                        <td>70.00 {__b('Euro')}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="yd-select-right">{__b('%sAchtung%s nur bei Härtefall!', '<b>', '</b>')}</td>
+
+                        <td class="yd-select-important">
+                            <select class="yd-select-important" name="specialCostCanton3232" id="specialCostCanton3232" >
+                                <option value="0"></option>
+                                <option value="30" {if $item->getSpecialCostCanton3232()==30}selected{/if}>30 {__b('€')}</option>
+                                <option value="40" {if $item->getSpecialCostCanton3232()==40}selected{/if}>40 {__b('€')}</option>
+                                <option value="50" {if $item->getSpecialCostCanton3232()==50}selected{/if}>50 {__b('€')}</option>
+                                <option value="60" {if $item->getSpecialCostCanton3232()==60}selected{/if}>60 {__b('€')}</option>
+                                <option value="70" >{__b('Old')}: 70 {__b('€')}</option>
+
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-napkins">{__b('Servietten 2lagig')}, 33x33</td>
+                        <td class="yd-js-sumfunction"><select name="countServicing">
+                                {section name=count loop=10001 start=0 step=2000}
+                                <option value="{$smarty.section.count.iteration-1}" {if $item->getCountServicing() == $smarty.section.count.iteration-1}selected="selected"{/if} >{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                        <td>15.00 {__b('Euro')}</td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-plasticbag">{__b('Plastiktüten')} {$item->countBags()}</td>
+                        <td class="yd-js-sumfunction"><select name="countBags">
+                                {section name=count loop=100001 start=0 step=2500}
+                                <option value="{$smarty.section.count.iteration-1}" {if $item->getCountBags() == $smarty.section.count.iteration-1}selected="selected"{/if} >{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                        <td>12.50 {__b('Euro')}</td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-chopsticks">{__b('Chopsticks')}</td>
+                        <td class="yd-js-sumfunction"><select name="countSticks">
+                                {section name=count loop=30001 start=0 step=3000}
+                                <option value="{$smarty.section.count.iteration-1}" {if $item->getCountSticks() == $smarty.section.count.iteration-1}selected="selected"{/if} >{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                        <td>21.00 {__b('Euro')}</td>
+                        <td></td>
+                    </tr>
+                    <td></td><td></td><td style="width: 100px"><span class="sum">00,00 {__b('Euro')}</span><td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+
+               {__b(' Notizen zum Lieferservice Bedarf')}
+
+            </div>
+            <div class="item-content">
+                {foreach from=$item->getComments('needs') item=comment}
+                <p>{$comment.date}, {$comment.status}, {$comment.comment}, {$comment.name}</p>
+                {/foreach}
+                <i class="yd-inventory-status">Status:</i>
+                <select name="statusNeeds" class="yd-inventory-status-select">
+                    <option value="0">{__b('Noch keine Info')}</option>
+                    <option>{__b('noch nicht versand')}</option>
+                    <option>{__b('verschickt')}</option>
+                    <option>{__b('nur Kommentar')} -></option>
+                </select>
+                <textarea name="statusCommentNeeds"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="two-column-box">
+        <div class="item" id="yd-flyer">
+            <div class="item-head">
+                {__b('Flyer für Restaurant')}
+            </div>
+            <div class="item-content">
+                <table>
+                    <tr>
+                        <td class="yd-inventory-print">{__b('Druckvolumen Lieferando')}</td>
+                        <td>
+                            <select name="countFlyer">
+                                {section name=count loop=100001 start=0 step=5000}
+                                <option value="{$smarty.section.count.index}" {if $item->getCountFlyer() == $smarty.section.count.index}selected="selected"{/if}>{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-type">{__b('Flyertyp')}</td>
+                        <td>
+                            <select name="typeFlyer">
+                                <option></option>
+                                <option {if $item->getTypeFlyer() == 'Pasta'}selected="selected"{/if}>{__b('Pasta')}</option>
+                                <option {if $item->getTypeFlyer() == 'Pizza'}selected="selected"{/if}>{__b('Pizza')}</option>
+                                <option {if $item->getTypeFlyer() == 'Burger'}selected="selected"{/if}>{__b('Burger')}</option>
+                                <option {if $item->getTypeFlyer() == 'Sushi'}selected="selected"{/if}>{__b('Sushi')}</option>
+                                <option {if $item->getTypeFlyer() == 'Thai'}selected="selected"{/if}>{__b('Thai')}</option>
+                                <option {if $item->getTypeFlyer() == 'Amerikanisch'}selected="selected"{/if}>{__b('Amerikanisch')}</option>
+                                <option {if $item->getTypeFlyer() == 'Französisch'}selected="selected"{/if}>{__b('Französisch')}</option>
+                                <option {if $item->getTypeFlyer() == 'Croque'}selected="selected"{/if}>{__b('Croque')}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-colors">{__b('Farbe')} 1</td>
+                        <td>
+                            <select name="colorOneFlyer">
+                                <option></option>
+                                {foreach from=$colors item=color}
+                                <option {if $item->getColorOneFlyer() == $color}selected="selected"{/if}>{$color}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-colors">{__b('Farbe')} 2</td>
+                        <td>
+                            <select name="colorTwoFlyer">
+                                {foreach from=$colors item=color}
+                                <option {if $item->getColorTwoFlyer() == $color}selected="selected"{/if}>{$color}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-colors">{__b('Farbe')} 3</td>
+                        <td>
+                            <select name="colorThreeFlyer">
+                                {foreach from=$colors item=color}
+                                <option {if $item->getColorThreeFlyer() == $color}selected="selected"{/if}>{$color}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-head">
+
+                {__b('Notizen zum Flyer für Restaurant')}
+
+            </div>
+            <div class="item-content">
+                {foreach from=$item->getComments('flyer') item=comment}
+                <p>{$comment.date}, {$comment.status}, {$comment.comment}, {$comment.name}</p>
+                {/foreach}
+                <i class="yd-inventory-status">{__b('Status:')}</i>
+                <select name="statusFlyer" class="yd-inventory-status-select">
+                    <option value="0">{__b('Noch keine Info')}<option>
+                    <option>{__b('TODO: Domain und Design')}</option>
+                    <option>{__b('TODO: nur Design')} </option>
+                    <option>{__b('TODO: Flyer designen')} </option>
+                    <option>{__b('Flyer versand')} </option>
+                    <option>{__b('nur Kommentar')} -></option>
+                </select>
+                <textarea name="statusCommentFlyer"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="two-column-box">
+
+        <div class="item">
+            <div class="item-head">
+                {__b('Druckkostenbeteiligung für Flyer')}
+            </div>
+            <div class="item-content">
+                <table>
+                    <tr>
+                        <td class="yd-inventory-costshare">{__b('Kostenbeteiligung')}</td>
+                        <td>
+                            <select name="printerCostShare">
+                                <option value="1" {if $item->getPrinterCostShare() == '2'}selected="selected"{/if}>{__b('keine Info')}</option>
+                                <option value="1" {if $item->getPrinterCostShare() == '1'}selected="selected"{/if}>{__b('Ja')}</option>
+                                <option value="0" {if $item->getPrinterCostShare() == '0'}selected="selected"{/if}>{__b('Nein')}</option>
+                            </select>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-paperstack">{__b('eigenes Druckvolumen')}</td>
+                        <td>
+                            <select name="printerOwn">
+                                {section name=count loop=200001 start=0 step=5000}
+                                <option value="{$smarty.section.count.index}" {if $item->getPrinterOwn() == $smarty.section.count.index}selected="selected"{/if}>{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-percent">
+                            {__b('Höhe der Beteiligung')}</td>
+                        <td>
+                            <select name="printerCostPercent">
+                                <option value="25" {if $item->getPrinterCostPercent() == 25}selected="selected"{/if}>25%</option>
+                                <option value="50" {if $item->getPrinterCostPercent() == 50}selected="selected"{/if}>50%</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-format">{__b('Format')}</td>
+                        <td>
+                            <select name="printerFormat">
+                                <option value="1" {if $item->getPrinterFormat() == 1}selected="selected"{/if}>{__b('Quadrat')}</option>
+                                <option value="2" {if $item->getPrinterFormat() == 2}selected="selected"{/if}>{__b('DIN Lang - Hochformat')}</option>
+                                <option value="3" {if $item->getPrinterFormat() == 3}selected="selected"{/if}>{__b('DIN Lang - Querformat')}</option>
+                                <option value="4" {if $item->getPrinterFormat() == 4}selected="selected"{/if}>{__b('DIN A - Hochformat')}</option>
+                                <option value="5" {if $item->getPrinterFormat() == 5}selected="selected"{/if}>{__b('DIN A - Querformat')}</option>
+                            </select>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-priority">Priorität</td>
+                        <td>
+                            <select name="printerPrio">
+                                <option value="1" {if $item->getPrinterPrio() == 1}selected="selected"{/if}>{__b('Sofort')}</option>
+                                <option value="2" {if $item->getPrinterPrio() == 2}selected="selected"{/if}>{__b('Hoch')}</option>
+                                <option value="3" {if $item->getPrinterPrio() == 3}selected="selected"{/if}>{__b('Wichtig')}</option>
+                                <option value="4" {if $item->getPrinterPrio() == 4}selected="selected"{/if}>{__b('Normal')}</option>
+                                <option value="5" {if $item->getPrinterPrio() == 5}selected="selected"{/if}>{__b('Niedrig')}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-time">{__b('nächster Drucktermin')}</td>
+                        <td>
+                            <!-- datepicker -->
+                            <input type="text" name="printerNextDate" id="yd-date" value="{$item->getPrinterNextDate()|date_format:'d.m.Y'}" />
+                        </td>
+                    </tr>
+                </table>
+
+
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+
+                {__b('Notizen zur Druckkostenbeteiligung')}
+
+            </div>
+            <div class="item-content">
+                {foreach from=$item->getComments('printer') item=comment}
+                <p>{$comment.date}, {$comment.status}, {$comment.comment}, {$comment.name}</p>
+                {/foreach}
+                <i class="yd-inventory-status">Status:</i>
+                <select name="statusPrinterCost" class="yd-inventory-status-select">
+                    <option value="0">{__b('Noch keine Info')}</option>
+                    <option>{__b('TODO: Grafik erstellen')}</option>
+                    <option>{__b('TODO: Grafik verschicken')} </option>
+                    <option>{__b('verschickt')}</option>
+                    <option>{__b('im Druck')}</option>
+                    <option>{__b('abgeschlossen')}</option>
+                    <option>{__b('nur Kommentar')} -></option>
+                </select>
+                <textarea name="statusCommentPrinterCost"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Webseite')}               
+            </div>
+            <div class="item-content">
+                <table>
+                    <tr>
+                        <td class="yd-inventory-yesno">{__b('Seite ist gewünscht')}</td>
+                        <td>
+                            <select name="website" id="yd-website">
+                                <option value="1" {if $item->getWebsite() == '1'}selected="selected"{/if}>{__b('keine Info')}</option>
+                                <option value="1" {if $item->getWebsite() == '1'}selected="selected"{/if}>{__b('Ja')}</option>
+                                <option value="0" {if $item->getWebsite() == '0'}selected="selected"{/if}>{__b('Nein')}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-price">{__b('Preis der Webseite:')}</td>
+                        <td>
+                            <select name="websiteCost">
+                                {section name=count loop=100 start=0 step=1}
+                                <option value="{$smarty.section.count.index}" {if $item->getWebsiteCost() == $smarty.section.count.index}selected="selected"{/if}>{$smarty.section.count.index} {__b('Euro')}</option>
+                                {/section}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-colors">{__b('Farbe')} 1</td>
+                        <td>
+                            <select name="colorOneWebsite">
+                                {foreach from=$colors item=color}
+                                <option {if $item->getColorOneWebsite() == $color}selected="selected"{/if}>{$color}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>                      
+                        <td class="yd-inventory-colors">{__b('Farbe')} 2</td>
+                        <td>
+                            <select name="colorTwoWebsite">
+                                {foreach from=$colors item=color}
+                                <option {if $item->getColorTwoWebsite() == $color}selected="selected"{/if}>{$color}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-colors">{__b('Farbe')} 3</td>
+                        <td>
+                            <select name="colorThreeWebsite">
+                                {foreach from=$colors item=color}
+                                <option {if $item->getColorThreeWebsite() == $color}selected="selected"{/if}>{$color}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+
+                {__b('Notizen zur Webseite')}
+
+            </div>
+            <div class="item-content">
+                {foreach from=$item->getComments('website') item=comment}
+                <p>{$comment.date}, {$comment.status}, {$comment.comment}, {$comment.name}</p>
+                {/foreach}
+                <i class="yd-inventory-status">Status:</i>
+                <select name="statusWebsite" class="yd-inventory-status-select">
+                    <option value="0">{__b('Noch keine Info')}</option>
+                    <option>{__b('Domain gekauft & noch kein Design')}</option>
+                    <option>{__b('TODO: Design bauen & Übertragung starten')}</option>
+                    <option>{__b('TODO: Domain und Design kaufen')}</option>
+                    <option>{__b('TODO: nur Design bauen')}</option>
+                    <option>{__b('anrufen')}</option>
+                    <option>{__b('Design in Arbeit')}</option>
+                    <option>{__b('Design in Arbeit und warten auf Routing')}</option>
+                    <option>{__b('Design fertig und Domain gekauft')}</option>
+                    <option>{__b('Design fertig, warten auf Übertragung der Domain')}</option>
+                    <option>{__b('Design fertig - keine Domain bisher')}</option>
+                    <option>{__b('nur Kommentar')} -></option>
+                </select>
+                <textarea name="statusCommentWebsite"></textarea>
+            </div>
+        </div>
+
+    </div> 
+    <div class="two-column-box">
+
+        <div class="item">
+            <div class="item-head">
+                {__b('SMS Terminal')}
+            </div>
+            <div class="item-content">
+                <table>
+                    <tr>
+                        <td class="yd-inventory-yesno">{__b('Terminal gewünscht')}</td>
+                        <td>
+                            <select name="terminal">
+                                <option value="2" {if $item->getTerminal() == 2}selected="selected"{/if}>{__b('keine Info')}</option>
+                                <option value="1" {if $item->getTerminal() == 1}selected="selected"{/if}>{__b('Ja')}</option>
+                                <option value="0" {if $item->getTerminal() == 0}selected="selected"{/if}>{__b('Nein')}</option>
+                            </select>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-costshare">
+                            {__b('Kostenbeteiligung')}
+                        </td>
+                        <td>
+                            <input type="text" name="terminalBail" value="{$item->getTerminalBail()}" class="yd-only-nr" />
+                        </td> 
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-head">
+
+                {__b('Notizen zum SMS Terminal')}
+
+            </div>
+            <div class="item-content">
+                {foreach from=$item->getComments('terminal') item=comment}
+                <p>{$comment.date}, {$comment.status}, {$comment.comment}, {$comment.name}</p>
+                {/foreach}
+
+                <i class="yd-inventory-status">Status:</i>
+                <select name="statusTerminal" class="yd-inventory-status-select">
+                    <option value="0">{__b('Noch keine Info')}</option>
+                    <option>{__b('keine Status definiert')}</option>
+                    <option>{__b('nur Kommentar')} -></option>
+                    <option>{__b('Kauf - separate Rechnung')}</option>
+                    <option>{__b('Kauf - Lastschrift')}</option>
+                    <option>{__b('Ratenkauf 3 x 50 €')}</option>
+                    <option>{__b('Miete')}</option>
+                    <option>{__b('Zahlungseingang prüfen')}</option>
+                    <option>{__b('Zu verschicken')}</option>
+                    <option>{__b('Verschickt - warte auf Einrichtung')}</option>
+                    <option>{__b('Problem bei Einrichtung')}</option>
+                    <option>{__b('Aktiviert - in Betrieb')}</option>
+                    <option>{__b('Erwarte Retoure')}</option>
+                    <option>{__b('Retoure - prüfen')}</option>
+                    <option>{__b('Austausch')}</option>
+                    <option>{__b('Gutschrift')}</option>
+                    <option>{__b('kein Interesse')}</option>
+                    <option>{__b('nur Kommentar (kein Statuswechsel)')}</option>
+                </select>
+                <textarea name="statusCommentTerminal"></textarea>
+            </div>
+        </div>
+
+    </div>
+
+    <input type="submit" value="{__b('speichern')}" />
+</form>
+{/block}

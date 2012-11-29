@@ -1,0 +1,36 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+            <a href="/administration_service_printer/create">{__b('Drucker anlegen')}</a>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Übersicht der GPRS Drucker')}
+        </div>
+        <div class="item-content">
+            <div id="yd-check-all-link"><input id="yd-check-all-checkboxes" type="checkbox" value="1"/> {{__b('Alle')}}</div><br/>
+            {$grid}
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Firmware für die markierten Drucker setzen')}
+        </div>
+        <div class="item-content">
+            Firmware: <br/>
+            <input type="text" id="yd-firmware-new-value" style="width: 250px;"/> <a href="#x" id="yd-save-new-printer-firmware" class="button">{__b('Setzen')}</a>
+        </div>
+    </div>
+</div>
+
+{/block}

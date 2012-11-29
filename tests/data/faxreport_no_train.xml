@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE reports SYSTEM "rep.dtd">
+<reports>
+	<job-ref-id>XR-b1a130b5-6f26-4183-a849-c46a11c2a95f-4E317B8F1C0571E24A14</job-ref-id>
+	<reference>yd-fax-broadcastfax-13440-1311865739-lieferando.de</reference>
+	<fax>
+		<job-id>XF4E317B8F1C0571E33F6C</job-id>
+		<job-reference>yd-fax-broadcastfax-13440-1311865739-lieferando.de-1</job-reference>
+		<fax-file-list>
+			<fax-file>
+				<file-name>13440-1311865739-lieferando.de-stand_alone_fax_gutscheine_DL.pdf</file-name>
+				<file-status>available</file-status>
+			</fax-file>
+		</fax-file-list>
+		<fax-options>
+			<resolution>low</resolution>
+			<csid>004980020207702</csid>
+			<header>%0f    %d.%m.%Y %H:%M:%S    %C    %P/%T</header>
+			<blacklist>no</blacklist>
+			<express>yes</express>
+			<schedule>now</schedule>
+		</fax-options>
+		<distribution-list>
+			<fax-address>
+				<addr-id>XA4E317B8F1C0571E43350</addr-id>
+				<fax-number>03053090454</fax-number>
+				<status>NO_TRAIN</status>
+				<reason>Hangup: Command-Receive, invalid command received. (23)</reason>
+				<remote-csid>03053090454</remote-csid>
+				<duration>7</duration>
+				<timestamp>2011-07-28-17.09.24</timestamp>
+			</fax-address>
+		</distribution-list>
+	</fax>
+</reports>

@@ -1,0 +1,19 @@
+
+<div style="font-family: Arial,serif;font-size: 12px;padding: 15px;background: #fff;border-radius: 5px;box-shadow: 0 0 3px #000;">
+
+{__('Pizza, Pasta, Sushi und vieles mehr! Bei der Online-Bestellplatfform %s aus über %s Lieferdiensten in ganz Deutschland
+            wählen und Lieblingsessen bequem nach Hause liefern lassen. %s Neben der Barzahlung kann auch bargeldlos bezahlt werden. Außerdem mit
+            jeder Bestellung Treuepunkte sammeln und ab %d Punkten ein Essen kostenlos bekommen. %s
+            yd. yourdelivery GmbH %s
+            Chausseestraße 86 %s
+            D-10115 Berlin %s
+            Tel.: %s %s
+            Fax: %s %s
+            %s%s%s%s%s'
+                , $config->domain->base, '500', '<br /><br />', 
+                $fidelityConfig->fidelity->cashin->need, 
+                '<br /><br />','<br />', '<br />', '<br />',
+                $config->locale->tel->support, '<br />', 
+                '0800 202 07 702', '<br />', '<a href="mailto:', $config->locale->email->info, '">', $config->locale->email->info, '</a>')}
+
+</div>

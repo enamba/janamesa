@@ -1,0 +1,73 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+    <div class="one-column-box">
+        <div class="item">
+            <table class="billings-links-tab">
+                <tr>
+                    {if (is_null($interval) || strcmp($interval, 'all')==0)}
+                    <td colspan="10"><b>{__b('Alle')}</b></td>
+                    {else}
+                    <td colspan="10"><a href="/administration_billing/changeintervalcomp/intervall">{__b('Alle')}</td>
+                    {/if}
+                <tr>
+                {$ind = 1}
+                <tr>
+                    {foreach from=$allintervals key=timeInSqlFormat item=billingTime}
+                    <td>
+                        {if strcmp($interval, $timeInSqlFormat)==0}
+                        <b>{$billingTime}</b>
+                        {else}
+                        <a href="/administration_billing/changeintervalcomp/interval/{$timeInSqlFormat}">{$billingTime}</a>
+                        {/if}
+                    </td>
+                    {if ($ind++%10 == 0)}
+                        </tr><tr>
+                    {/if}
+                {/foreach}
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Alternativ: Zeitinterval festlegen')}
+            </div>
+            <div class="item-content">
+                <form action="/administration_billing/changeintervalcomp" method="post" name="form">
+                <table class="user-tab">
+                    <tr>
+                        <td width="5%">{__b('Von')}</td>
+                        <td width="15%"><input type="text" name="fromD" id="yd-statistics-start" value="{$from}" readonly/></td>
+                        <td width="5%">{__b('Bis')}</td>
+                        <td width="15%"><input type="text" name="untilD" id="yd-statistics-end"  value="{$until}" readonly/></td>
+                        <td width="20%"><input value="{__b('Festlegen')}" type="submit" class="button"/></td>
+                        <td width="40%">{__b('Aktuelles Intervall: ')}{if strcmp($interval, 'all')==0}{__b('alle')}{else}{str_replace("_", " - ", $interval)}{/if}</td>
+                    </tr>
+                </table>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Übersicht der Firmenrechnungen')}
+            </div>
+            <div class="item-content">
+                <table class="user-tab">
+                    <tr>
+                        <td align="right" height="50px"><input type="button" id="yd-send-selected" value="{__b('Markierte Rechnungen versenden')}"  class="button"/></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><input class="yd-check-all-checkboxes" type="checkbox" value="1"/> Alle</td>
+                    </tr>
+                </table>
+                {$grid}
+            </div>
+        </div>
+
+    </div>
+{/block}

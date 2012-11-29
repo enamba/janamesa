@@ -1,0 +1,221 @@
+{extends file='user/_base.htm'}
+
+{block name="content"}
+
+<div class="yd-profile yd-clearfix {if $isLoggedIn != 1}yd-profile-not-logged-in{/if}">
+
+    {include file='user/_header.htm' active=5 active_title=__('Restaurant bewerten')}
+
+    <div class="yd-profile-body">
+        <h1>{__('Dein aktueller Stand')}</h1>
+
+        <div class="yd-awesome-rating default">
+            <div class="default"></div>
+            <div class="paper-body">
+                <div class="paper-head"></div><div class="paper-left"></div><div class="paper-foot"><div></div></div>
+
+                <div class="paper-right">
+                    <div class="paper-right-head"></div>
+                    <div class="paper-right-body">
+                        <h1>{__('Bestellzettel')}<span>{__('vom %s Uhr', $order->getDeliverTime()|date_format:__('%d.%m.%Y um %H:%M'))}</span></h1>
+
+                        {__('Bestellnr.:')} {$order->getNr()}<br />
+                        {if $order->getDiscount()}
+                        {__('Gutschein:')} {$order->getDiscount()->getCode()}
+                        {/if}
+                        {__('Bezahlart:')} {if $order->getPayment() == "bill"}{__('Rechnung')}{/if}
+                        {if $order->getPayment() == "credit"}{__('Kreditkarte')}{/if}
+                        {if $order->getPayment() == "bar"}{__('Barzahlung')}{/if}
+                        {if $order->getPayment() == "paypal"}{__('PayPal')}{/if}
+
+                        <div>
+                            <span>{__('Gericht')}</span>{__('Preis')}
+                        </div>
+                        <ul>
+                            {assign var=card value=$order->getCard()}
+                            {foreach from=$card.bucket item=custItems key=custId}
+                            {foreach from=$custItems item=item key=hash name=position}
+                            {assign var=meal value=$item.meal}
+                            {assign var=count value=$item.count}
+                            {assign var=size value=$item.size}
+                            <li>
+                                <span>{$count} x  {$meal->getName()}</span>
+                                <span class="price"> {__('%s €',($count*$meal->getAllCosts())|inttoprice)}</span>
+                                <span class="desc">
+                                    {if $meal->getCurrentExtrasCount() > 0}
+                                    {foreach name=be from=$meal->getCurrentExtras() item=extra}
+                                     
+                                     {$extra->getName()}{if !$smarty.foreach.be.last},{/if}
+                                    {/foreach}
+                                    {/if}
+                                </span>
+                            </li>
+                            {/foreach}
+                            {/foreach}
+                        </ul>
+                        <ul class="details">
+                            <li>
+                                <span>{__('Netto:')}</span> {__('%s €',$order->getItem()|inttoprice)}<br />
+                               
+                            </li>
+                             {foreach from=$taxes item=tax}
+                            {if $order->getTax($tax)>0}
+                                <li {if $order->getDiscount() == null} class="none" {/if}>
+                                    <span>{__('MwSt %s%%:', $tax)}</span> {__('%s €',$order->getTax($tax)|inttoprice)}
+                                </li>
+                            {/if}
+                            {/foreach}
+                            {if $order->getDiscount() != null}
+                            <li class="none">
+                                <span>{__('Rabatt')} {if $order->getDiscount()->getKind() == 0}
+                                    {$order->getDiscount()->getParent()->getRabatt()}&nbsp;%
+                                    {/if}:
+                                </span>
+                                
+                                {__('%s €',$order->getDiscountAmount()|inttoprice)}
+                            </li>
+                            {/If}
+                            <li class="black">
+                                <span>{__('Gesamtpreis:')}</span> {__('%s €',$order->getAbsTotal(false,true,true,true,false,false,true)|inttoprice)}<br />
+                            </li>
+                            
+                            {if $config->domain->base != 'janamesa.com.br'}
+                                <li class="none">
+                                    <a href="http://www.{$config->domain->base}/user/billrequest/hash/{$order->getHashtag()}">{__('Signierte Rechnung anfordern')}</a>
+                                </li>
+                            {/if}
+                            
+                        </ul>
+                    </div>
+                    <div class="paper-right-foot"></div>
+                </div>
+                <div class="yd-rating-tesa">
+                    <span></span>
+                    <img src="{$order->getService()->getImg('small')}" alt="{$order->getService()->getName()}" />
+                    <ul>
+                        <li>{{$order->getService()->getName()}}</li>
+                        <li>{{$order->getService()->getStreet()}} {{$order->getService()->getHausnr()}}</li>
+                        <li>{{$order->getService()->getPlz()}} {{$order->getService()->getCity()}}</li>
+                        <li>{__('Tel.:')} {{$order->getService()->getTel()}}</li>
+                    </ul>
+                </div>
+
+                <h1>{__('Jetzt Bestellung bewerten')}</h1>
+
+                <h2>{__('Würdest du deinen Freunden diesen Lieferservice empfehlen?')}</h2>
+
+                <a id="yd-rating-yes" class="yd-rate-advise {$activeyes}"><span>{__('Ja')}</span></a>
+                <a id="yd-rating-no" class="yd-rate-advise {$activeno}"><span>{__('Nein')}</span></a>
+
+                <h3>{__('Wie hat es dir geschmeckt?')}</h3>
+                {section name=rate1 start=1 loop=6 step=1}
+                {assign var=key1 value=$smarty.section.rate1.index}
+
+                {if is_null($rating)}
+                <img src="{$domain_static}/images/yd-profile/star-big-full.png" class="rate-1" id="yd-rate1-qual-{$key1}" />
+                {elseif $rating->quality && $rating->quality >= $key1}
+                <img src="{$domain_static}/images/yd-profile/star-big-full.png" class="rate-1" id="yd-rate1-qual-{$key1}" />
+                {elseif $rating->quality && $rating->quality < $key1}
+                <img src="{$domain_static}/images/yd-profile/star-big-empty.png" class="rate-1" id="yd-rate1-qual-{$key1}" />
+                {/if}    
+
+                {/section}
+
+                <h3>{__('Lieferservice:')}</h3>
+
+                {section name=rate2 start=1 loop=6 step=1}
+                {assign var=key2 value=$smarty.section.rate2.index}
+
+                {if is_null($rating)}
+                <img id="yd-rate2-qual-{$key2}"  src="{$domain_static}/images/yd-profile/star-big-full.png" class="rate-2" />
+                {elseif $rating->quality && $rating->delivery >= $key2}
+                <img id="yd-rate2-qual-{$key2}"  src="{$domain_static}/images/yd-profile/star-big-full.png" class="rate-2" />
+                {elseif $rating->quality && $rating->delivery < $key2}
+                <img id="yd-rate2-qual-{$key2}"  src="{$domain_static}/images/yd-profile/star-big-empty.png" class="rate-2"  />
+                {/if}    
+
+                {/section}
+
+                <h3>{__('Dein Name')} <span>{__('(optional)')}</span>:</h3>
+                <form id="yd-rate-form" method="post" action="">
+                    <input type="text" name="author" class="yd-please-write-your-name" value="{$rating->author|default:$order->getCustomer()->getNickname()}" />
+
+                    <h3>{__('Deine Bewertung')} <span>{__('(optional)')}</span>:</h3>
+
+                    <textarea  name="comment" class="yd-please-write-your-rating">{$rating->comment}</textarea>
+
+                    <h3>{__('Bewerte hier die einzelnen Speisen')}:</h3>
+
+                    <div class="table">
+                        {foreach from=$card.bucket item=custItems key=custId}
+                        {foreach from=$custItems item=item key=hash name=position}
+                        {assign var=meal value=$item.meal}
+                        <div class="tr">
+                            <div class="td" style="width: 200px; font-size: 14px;">
+
+                                <div class="mealname-lenght-toggle">
+                                    <span>{$meal->getName()|truncate:23:"..."}</span>
+                                    {if strlen($meal->getName())>23}
+                                    <span class="mealname-lenght-toggle-full" style="display:none;">{$meal->getName()}</span>
+                                    {/if}
+                                </div>
+
+                                <!--
+                                {if $meal->getCurrentExtrasCount() > 0}mit 
+                                {foreach name=be from=$meal->getCurrentExtras() item=extra}
+                                    {$extra->getName()}{if !$smarty.foreach.be.last},{/if}
+                                {/foreach}
+                                {/if}
+                                -->
+                            </div>
+                            <div class="td">
+                                {section name=rate1 start=1 loop=6 step=1}
+                                {assign var=key  value=$smarty.section.rate1.index}
+                                {assign var=meal_rating value=$meals[$meal->getId()]->getRatings()->getRatingforOrder($order->getId())}
+                                {if !$meal_rating}
+                                    <img id="meal-rate-{$meal->getId()}-{$key}" class="yd-rate-meal rate-meal-id-{$meal->getId()}" src="{$domain_static}/images/yd-profile/star-small-full.png" />
+                                {elseif $meal_rating >= $key}
+                                    <img id="meal-rate-{$meal->getId()}-{$key}" class="yd-rate-meal rate-meal-id-{$meal->getId()}" src="{$domain_static}/images/yd-profile/star-small-full.png" />
+                                {elseif $meal_rating < $key}
+                                    <img id="meal-rate-{$meal->getId()}-{$key}" class="yd-rate-meal rate-meal-id-{$meal->getId()}" src="{$domain_static}/images/yd-profile/star-small-empty.png" />
+                                {/if}    
+
+                                {/section}
+                        
+
+                                {if $meals[$meal->getId()]->getRatings()->getRatingforOrder($order->getId())}
+                                <input id="meal-rate-{$meal->getId()}" type="hidden" name="meal[{$meal->getId()}]" value="{$meals[$meal->getId()]->getRatings()->getRatingforOrder($order->getId())}" />
+                                {else}
+                                <input id="meal-rate-{$meal->getId()}" type="hidden" name="meal[{$meal->getId()}]" value="5" />
+                                {/if}
+                            </div>
+                        </div>
+                        {/foreach}
+                        {/foreach}
+                    </div>
+
+                    <div class="hidden">
+                        <input type="hidden" name="advise" id="advise" value="{$checked}"/>         
+
+                        {if $rating}                 
+                        <input id="rate1" type="hidden" name="rate-1" value="{$rating->quality}" />
+                        {else}
+                        <input  id="rate1" type="hidden" name="rate-1" value="5" />        
+                        {/if}
+
+                        {if $rating}
+                        <input id="rate2" type="hidden" name="rate-2" value="{$rating->delivery}" />                      
+                        {else}
+                        <input id="rate2" type="hidden" name="rate-2" value="5" />              
+                        {/if}
+                    </div>
+                    {if $rating.status == -1}
+                    <input id="yd-rating-deleted" type="hidden" value ="1" name="deleted" />
+                    {/if}
+                    <a class="yd-button-250 yd-submit-on-click" id="yd-rate-submit" href="">{__('Bewertung abschicken')}</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

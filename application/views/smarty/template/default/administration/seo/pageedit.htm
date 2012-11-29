@@ -1,0 +1,88 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<form action="/administration_seo/pageedit/id/{$page->getId()}" method="post" name="form" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="{$page->getId()}"/>
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Landing Page')}  #{$page->getId()}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="20%">{__b('Name')}:</td>
+                            <td width="80%"><input type="text" name="name" class="rund_set text" value="{$page->getName()}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Stadt')}:</td>
+                            <td>
+                                <select name="city">
+                                    <option value="">{__b('keine Stadtzuordnung')}</option>
+                                    {foreach from=$lpcity item=city key=cval}
+                                        <option value="{$cval}" {if $page->getCity() == $cval}selected{/if}>{$city}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Link')}</td>
+                            <td><input type="text" name="link" class="rund_set text" value="{$page->getLink()}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('H1:')}</td>
+                            <td><input type="text" name="h1" class="rund_set text" value="{$page->getH1()}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('H2:')}</td>
+                            <td><input type="text" name="h2" class="rund_set text" value="{$page->getH2()}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('H3:')}</td>
+                            <td><input type="text" name="h3" class="rund_set text" value="{$page->getH3()}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Bild Auswahl')}:</td>
+                            <td>
+                                <select name="select_img">
+                                    <option value="">{__b('Eigens Bild hochladen')}</option>
+                                    {foreach from=$img_select item=opt}
+                                        <option value="{$opt}" {if $page->getImg() == $opt}selected{/if}>{$opt}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Bild')}:</td>
+                            <td><input type="file" class="inp w160" name="img" id="file"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Aktuelles Bild')}:</td>
+                            <td><img src="{$page->getImg()}" alt="" width="100" /></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Rabatt')}</td>
+                            <td>
+                                <select name="rabattCodeId">
+                                    <option value="">{__b('Kein Rabatt Code')}</option>
+                                    {foreach from=$codes item=code}
+                                        {foreach from=$code->getCodes() item=c}
+                                            <option value="{$c->id}" {if $c->id == $page->getRabattCodeId()}selected="selected"{/if}>{$c->code}</option>
+                                        {/foreach}
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" name="editpage" value="{__b('Bestätigen')}" class="button rund_set" />
+                <input type="submit" name="editpage" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+</form>
+{/block}    

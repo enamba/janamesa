@@ -1,0 +1,3 @@
+-- drop table customer_credit;
+-- drop table customer_credit_transaction;
+-- alter table orders drop column creditAmount;

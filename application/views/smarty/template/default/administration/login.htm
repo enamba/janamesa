@@ -1,0 +1,23 @@
+{extends file='administration/base.htm'}
+{block name="content"}
+
+<div class="yd-backend-login be-box">
+    <h2>{$domain_base} {__b('Administration-Backend')}</h2>
+    <div class="be-box-in">
+        <form action="/administration/login" method="post" id="login">
+            <label for="email">{__b('E-Mail')}:</label><br />
+            <input type="text" name="user" id="email" />
+
+            <br /><br />
+
+            <label for="passwd">{__b('Passwort')}:</label><br />
+            <input type="password" name="pass" id="passwd" />
+
+            <br /><br />
+
+            <input type="submit" value="{__b('Anmelden')}" class="button" />
+        </form>
+    </div>
+</div>
+
+{/block}

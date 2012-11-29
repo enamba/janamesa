@@ -1,0 +1,387 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+
+<form action="/administration_seo_links/edit/" method="post" enctype="multipart/form-data" class="yd-internal-create">
+    <input type="hidden" name="id" value="{$link->id|escape}" />
+
+    <ul class="be-tabs">
+        <li><a href="/administration_seo_links/">{__b('Zurück zur Übersicht')}</a></li>
+    </ul>
+
+    <div class="be-2-column">
+        <div class="be-box">
+            <h2>{__b('Neue Verlinkung erstellen')}</h2>
+            <div class="be-box-in yd-form1">
+                <label class="v1">{__b('Domain')} *</label>
+
+                <select name="domain">
+                    {foreach from=$domains item=domain}
+                    <option value="{$domain}"{if $link->domain eq $domain} selected="selected"{/if}>{$domain}</option>
+                    {/foreach}
+                </select>
+
+                <hr />
+
+                <label class="v2">{__b('URL')} *</label>
+
+                <input type="text" name="url" value="{$link->url|escape}" {if $link->id}readonly=readonly{/if}/>
+                       {if $link->id}<a id="yd-link-edit-url" href="#">{__b('ändern')}</a>{/if}
+
+                <hr />
+
+                <label class="v3">{__b('Eingabefeld Position')}:</label>
+
+                <select name="inputPosition">
+                    <option value=""></option>
+                    {foreach from=$positions item=position}
+                    <option value="{$position}"{if $link->inputPosition eq $position} selected="selected"{/if}>{$position}</option>
+                    {/foreach}
+                </select>
+
+                <hr />
+
+                <label class="v4">{__b('Hintergrundbild')}:</label>
+
+                <select name="backgroundImage">
+                    <option value=""></option>
+                    {foreach from=$images item=image}
+                    <option value="{$image}"{if $link->backgroundImage eq $image} selected="selected"{/if}>{$image}</option>
+                    {/foreach}
+                </select>
+                <br />
+                <label>&nbsp;</label>
+
+                <input type="file" name="_image" />
+
+                <hr />
+
+                <label class="v5">{__b('Button')}:</label>
+
+                <select name="buttonImage">
+                    <option value=""></option>
+                    {foreach from=$buttons item=button}
+                    <option value="{$button}"{if $link->buttonImage eq $button} selected="selected"{/if}>{$button}</option>
+                    {/foreach}
+                </select>
+                <br />
+                <label>&nbsp;</label>
+
+                <input type="file" name="_button" />
+
+                <hr />
+
+                <label class="v6">{__b('Reiter')}:</label>
+
+                <select name="tab">
+                    {foreach from=$tabs item=tab key=t}
+                    <option value="{$t}"{if $link->tab eq $t} selected="selected"{/if}>{$tab}</option>
+                    {/foreach}
+                </select>
+
+                <hr />
+
+                <label class="v7">{__b('Kategorie')}:</label>
+
+                <select name="categoryId">
+                    <option value="0"></option>
+                    {foreach from=$categories item=category}
+                    <option value="{$category->id}"{if $link->categoryId eq $category->id} selected="selected"{/if}>{$category->level}.{$category->subLevel} {$category->name}</option>
+                    {/foreach}
+                </select>
+            </div>
+        </div>
+
+        <div class="be-box">
+            <h2>{__b('Meta Angaben')}</h2>
+            <div class="be-box-in yd-form1">
+
+                <label class="v8">{__b('Titel')} *</label>
+                <input type="text" name="title" value="{$link->title|escape}" />
+
+                <hr />
+
+                <label class="v9">{__b('Stichwörter')} *</label>
+                <input type="text" name="keywords" value="{$link->keywords|escape}" />
+
+                <hr />
+
+                <label class="v9">{__b('Beschreibung')} *</label>
+                <textarea name="description">{$link->description}</textarea>
+
+                <hr />
+
+                <label class="v10">{__b('Robots')}</label>
+
+                <select name="robots">
+                    {foreach from=$robots key=val item=robot}
+                    <option value="{$val}"{if $link->robots eq $val} selected="selected"{/if}>{$robot}</option>
+                    {/foreach}
+                </select>
+
+                <hr />
+            </div>
+        </div>
+
+    </div>
+
+    <div style="margin: 0 0 20px;">
+        <input type="submit" name="save" value="{__b('Speichern & zurück zur Übersicht')}" class="button" />
+        <input type="submit" value="{__b('Speichern')}" class="button" />
+        <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button" />
+    </div>
+
+    <div class="be-2-column">
+        <div class="be-box">
+            <h2>{__b('Inhalt')}</h2>
+            <div class="be-box-in">
+                <div style="height:350px;overflow-y:auto;">
+                    <textarea name="content" style="width:430px;">{$link->content}</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="be-box">
+            <h2>{__b('Link')}</h2>
+            <div class="be-box-in">
+                <table>
+                    <tr>
+                        <td>{__b('Miniaturbild')} : </td>
+                        <td>
+                            <select name="previewImage" style="width:100px">
+                                <option value=""></option>
+                                {foreach from=$previews item=preview}
+                                <option value="{$preview}"{if $link->previewImage eq $preview} selected="selected"{/if}>{$preview}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                        <td></td>
+                        <td><input type="file" name="_preview" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><textarea name="previewText" style="width:430px; height: 150px;">{$link->previewText}</textarea></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin: 0 0 20px;">
+        <input type="submit" name="save" value="{__b('Speichern & zurück zur Übersicht')}" class="button" />
+        <input type="submit" value="{__b('Speichern')}" class="button" />
+        <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button" />
+    </div>
+
+    <div class="be-2-column">
+        <div class="be-box">
+            <h2>{__b('Navigation: Verlinkung löschen')}</h2>
+            <div class="be-box-in">
+                <div style="height:350px;overflow-y:auto;">
+                    <ul>
+                        {foreach from=$link->getNavigationLinks() item=l}
+                        <li style="margin:5px 0px 5px 0px;">
+                            <input type="checkbox" name="rmNavigationLinks[]" value="{$l.navigationLinkId}" title="{__b('Löschen')}" />
+                            <a href="http://{$l.domain}/{$l.url}" target="_blank">{$l.domain}/{$l.url}</a> {if !$l.manual}&bull;&bull;&bull;{/if}
+                            <br />{$l.title}
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="be-box">
+            <h2>{__b('Navigation: Verlinkung hinzufügen')}</h2>
+            <div class="be-box-in">
+                <div style="height:350px;overflow-y:auto;">
+                    <ul>
+                        {foreach from=$link->getLinks() item=l}
+                        <li style="margin:5px 0px 5px 0px;">
+                            <input type="checkbox" name="addNavigationLinks[]" value="{$l.id}" title="{__b('Hinzufügen')}" />
+                            <a href="http://{$l.domain}/{$l.url}" target="_blank">{$l.domain}/{$l.url}</a>
+                            <br />{$l.title}
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin: 0 0 20px;">
+        <input type="submit" name="save" value="{__b('Speichern & zurück zur Übersicht')}" class="button" />
+        <input type="submit" value="{__b('Speichern')}" class="button" />
+        <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button" />
+    </div>
+
+    <div class="be-2-column">
+        <div class="be-box">
+            <h2>{__b('Links: Verlinkung löschen')}</h2>
+            <div class="be-box-in">
+                <div style="height:350px;overflow-y:auto;">
+                    <ul>
+                        {foreach from=$link->getListLinks() item=l}
+                        <li style="margin:5px 0px 5px 0px;">
+                            <input type="checkbox" name="rmListLinks[]" value="{$l.listLinkId}" title="{__b('Löschen')}" />
+                            <a href="http://{$l.domain}/{$l.url}" target="_blank">{$l.domain}/{$l.url}</a> {if !$l.manual}&bull;&bull;&bull;{/if}
+                            <br />{$l.title}
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="be-box">
+            <h2>{__b('Links: Verlinkung hinzufügen')}</h2>
+            <div class="be-box-in">
+                <div style="height:350px;overflow-y:auto;">
+                    <ul>
+                        {foreach from=$link->getLinks() item=l}
+                        <li style="margin:5px 0px 5px 0px;">
+                            <input type="checkbox" name="addListLinks[]" value="{$l.id}" title="{__b('Hinzufügen')}" />
+                            <a href="http://{$l.domain}/{$l.url}" target="_blank">{$l.domain}/{$l.url}</a>
+                            <br />{$l.title}
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin: 0 0 20px;">
+        <input type="submit" name="save" value="{__b('Speichern & zurück zur Übersicht')}" class="button" />
+        <input type="submit" value="{__b('Speichern')}" class="button" />
+        <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button" />
+    </div>
+
+    <div class="be-2-column">
+        <div class="be-box">
+            <h2>{__b('Weitere Infos: Verlinkung löschen')}</h2>
+            <div class="be-box-in">
+                <div style="height:350px;overflow-y:auto;">
+                    <ul>
+                        {foreach from=$link->getRelatedLinks() item=l}
+                        <li style="margin:5px 0px 5px 0px;">
+                            <input type="checkbox" name="rmRelatedLinks[]" value="{$l.relatedLinkId}" title="{__b('Löschen')}" />
+                            <a href="http://{$l.domain}/{$l.url}" target="_blank">{$l.domain}/{$l.url}</a> {if !$l.manual}&bull;&bull;&bull;{/if}
+                            <br />{$l.title}
+                            <br />{$l.previewText}
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="be-box">
+            <h2>{__b('Weitere Infos: Verlinkung hinzufügen')}</h2>
+            <div class="be-box-in">
+                <div style="height:350px;overflow-y:auto;">
+                    <ul>
+                        {foreach from=$link->getLinks() item=l}
+                        <li style="margin:5px 0px 5px 0px;">
+                            <input type="checkbox" name="addRelatedLinks[]" value="{$l.id}" title="{__b('Hinzufügen')}" />
+                            <a href="http://{$l.domain}/{$l.url}" target="_blank">{$l.domain}/{$l.url}</a>
+                            <br />{$l.title}
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin: 0 0 20px;">
+        <input type="submit" name="save" value="{__b('Speichern & zurück zur Übersicht')}" class="button" />
+        <input type="submit" value="{__b('Speichern')}" class="button" />
+        <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button" />
+    </div>
+
+    <div class="be-2-column">
+        <div class="be-box">
+            <h2>{__b('Dienstleister: Verlinkung löschen')}</h2>
+            <div class="be-box-in">
+                <div style="height:350px;overflow-y:auto;">
+                    <ul>
+                        {foreach from=$link->getRestaurants() item=r}
+                        <li style="margin:5px 0px 5px 0px;">
+                            <input type="checkbox" name="rmRestaurants[]" value="{$r.restaurantId}" title="{__b('Löschen')}" />
+                            {$r.name}, {$r.street} {$r.hausnr} {$r.plz}  {$r.city} {if !$l.manual}&bull;&bull;&bull;{/if}
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="be-box">
+            <h2>{__b('Dienstleister: Verlinkung hinzufügen')}</h2>
+            <div class="be-box-in">
+                <div style="height:350px;overflow-y:auto;">
+                    <ul>
+                        {foreach from=$link->getDirectLinks() item=r}
+                        <li style="margin:5px 0px 5px 0px;">
+                            <input type="checkbox" name="addRestaurants[]" value="{$r.id}" title="{__b('Hinzufügen')}" />
+                            {$r.name}, {$r.street} {$r.hausnr} {$r.plz}  {$r.city}
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin: 0 0 20px;">
+        <input type="submit" name="save" value="{__b('Speichern & zurück zur Übersicht')}" class="button" />
+        <input type="submit" value="{__b('Speichern')}" class="button" />
+        <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button" />
+    </div>
+
+    <div class="be-2-column">
+        <div class="be-box">
+            <h2>{__b('Javascript: Kopfzeile')}</h2>
+            <div class="be-box-in">
+                <textarea name="scriptTop" style="width:95%;">{$link->scriptTop}</textarea>
+            </div>
+        </div>
+        <div class="be-box">
+            <h2>{__b('Javascript: Fußzeile')}</h2>
+            <div class="be-box-in">
+                <textarea name="scriptBottom" style="width:95%;">{$link->scriptBottom}</textarea>
+            </div>
+        </div>
+    </div>
+
+    {if $link->id}
+    <div class="be-2-column">
+        <div class="be-box">
+            <h2>{__b('Ausgehende Links')} ({$link->linksTo})</h2>
+            <div class="be-box-in">
+                <div style="height:350px;overflow-y:auto;">
+                    <ul>
+                        {foreach from=$link->getLinksTo() key=i item=l}
+                        <li style="margin:5px 0px 5px 0px;">
+                            {$i + 1}. <a href="{$l.url}" target="_blank">{$l.url}</a>
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="be-box">
+            <h2>{__b('Eingehende Links')} ({$link->linksFrom})</h2>
+            <div class="be-box-in">
+                <div style="height:350px;overflow-y:auto;">
+                    <ul>
+                        {foreach from=$link->getLinksFrom() key=i item=l}
+                        <li style="margin:5px 0px 5px 0px;">
+                            {$i + 1}. <a href="{$l.url}" target="_blank">{$l.url}</a>
+                        <li>
+                            {/foreach}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {/if}
+
+</form>
+
+{/block}

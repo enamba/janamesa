@@ -1,0 +1,47 @@
+{extends file="base.htm"}    
+
+{block name="content"}
+
+    <div class="inhaltsbox" style="padding-top: 50px;">
+        <div style="padding-bottom: 50px; width: 600px;">
+            <form action="" method="post" name="form" enctype="multipart/form-data">
+                <label for="file">Datei auswählen: </label><input type="file" name="file" id="file" />
+                <input name="submit" type="submit" value="Upload" />
+            </form>
+        </div>
+
+        <div id="upload-content">
+            <a href="#" id="link-upload-all" style="text-decoration: underline; padding: 10px;">Alle Bearbeitungen ({$basefiles|@count})</a>
+            <a href="#" id="link-upload-open" style="text-decoration: underline; padding: 10px;">Offene Bearbeitungen ({($basefiles|@count)-($uploadedfiles|@count)})</a>
+            <a href="#" id="link-upload-done" style="text-decoration: underline; padding: 10px;">Abgeschlossene Bearbeitungen ({$uploadedfiles|@count})</a>
+            <a href="#" id="link-upload-download" style="text-decoration: underline; padding: 10px;">Downloads ({$basefiles|@count})</a>
+
+            <div id="upload-all">
+                <ul style="padding-top: 50px; width: 240px;">
+                    {foreach from=$basefiles item=file}
+                    <li {if in_array($file,$uploadedfiles)}class="up"{else}class="open"{/if}>
+                        {if in_array($file,$uploadedfiles)}
+                            <a href="/../storage/csvimport/csvupload/{$file}"><u>{$file}</u></a>
+                        {else}
+                            {$file}
+                        {/if}
+                        <span style="float:right;">
+                            <input type="checkbox" name="" {if in_array($file,$uploadedfiles)}checked{/if} disabled /></span>
+                    </li>
+                    {/foreach}
+                </ul>
+            </div>
+
+            <div id="upload-download" style="display:none;">
+                <ul style="padding-top: 50px;">
+                    {foreach from=$basefiles item=file}
+                    <li><a href="/../storage/csvimport/csvbases/{$file}" ><u>{$file}</u></a></li>
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+
+    </div>
+{/block}
+
+    

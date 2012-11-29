@@ -1,0 +1,53 @@
+<!-- Google eCommerce -->
+<script type="text/javascript">
+    {foreach from=$googleAccounts item=ua}
+        log('adding ecomerce for {$ua}');
+        _gaq.push(['_addTrans',
+            // order ID - required
+            '{$order->getId()}',
+            // affiliation or store name
+            '{str_replace("'", "\\\\\'", $order->getService()->getName())}',
+            // total - required
+            '{$order->getAbsTotal(false, false, true, false, false, false)|inttoprice:2:'.'}',
+            // tax
+            '{$order->getTax()|inttoprice:2:'.'}',
+            // shipping
+            '{$order->getServiceDeliverCost()|inttoprice:2:'.'}',
+            // city
+            '{$order->getLocation()->getCity()->getCity()|escape:'quotes'}',
+            // state or province
+            '{$order->getLocation()->getCity()->getState()|escape:'quotes'}',
+            // country
+            ''
+        ]);
+
+
+        {assign var=categoryname value=$order->getService()->getCategory()->name}
+        {assign var=card value=$order->getCard()}
+
+        {foreach from=$card.bucket item=custItems key=custId}
+            {foreach from=$custItems item=item key=hash name=meals}
+                {assign var=meal value=$item.meal}
+                {assign var=count value=$item.count}
+                _gaq.push(['_addItem',
+                    // order ID - necessary to associate item with transaction
+                    '{$order->getId()}',
+                    // SKU/code - required
+                    '{$order->getNr()}',
+                    // product name
+                    '{$meal->getName()|escape:'quotes'}',
+                    // category or variation
+                    '{$categoryname|escape:'quotes'}',
+                    // unit price - required
+                    '{($meal->getAllCosts() * $count)|inttoprice:2:'.'}',
+                    // quantity - required
+                    '{$count}'
+                ]);
+            {/foreach}
+        {/foreach}
+
+        _gaq.push(['_trackTrans']);
+
+    {/foreach}
+</script>
+

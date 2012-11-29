@@ -1,0 +1,21 @@
+{if $order->getCustomer()->getCompany()->getCodeVariant() != 0}
+<div class="yd-box" {if $order->getCustomer()->getCompany()->isCode()} id="yd-comp-need-code"{/if}>
+     <input type="hidden" name="yd-need-code" value="{$cust->getCompany()->isCode()}" />
+    <div class="yd-bigbox-head">
+        {__('Projektnummer')}
+    </div>
+    <div class="yd-bigbox-body">
+
+        <ul class="yd-company-form">
+            <li>
+                <span>{__('Projektcode:')} {if $order->getCustomer()->getCompany()->isCode()}<b class="red">*</b>{/if}</span>
+                <input type="text" value="" class="input3 yd-clear-on-click {if $order->getCustomer()->getCompany()->isCode()}validate[projectnumber]{/if}" name="pnumber" id="yd-pn" />
+                <input type="hidden" id="check_project_addition_for" value="bbdo" />
+                / <input type="text" value="" maxlength="2" class="input3 yd-clear-on-click {if $order->getCustomer()->getCompany()->isCode()}validate[projectnumber]{/if}" name="projectAddition" id="yd-pn-bbdo-1" /> /
+                <input type="text" value="" maxlength="4" class="input3 yd-clear-on-click {if $order->getCustomer()->getCompany()->isCode()}validate[projectnumber]{/if}" name="projectAddition2" id="yd-pn-bbdo-2" />
+            </li>
+        </ul>
+
+    </div>
+</div>
+{/if}

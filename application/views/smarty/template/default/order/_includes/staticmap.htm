@@ -1,0 +1,10 @@
+<div class="yd-voodoo-map yd-box" itemprop="contentLocation" itemscope itemtype="http://schema.org/Place">
+    <img itemprop="map" class="static-googlemap" src="http://maps.google.com/maps/api/staticmap?center={$domain_base|substr:-2}-{$plz}&zoom=14&size=640x300&maptype=roadmap&sensor=false"/>
+    <div class="yd-voodoo-map-address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{$location->getTitle(true)}</div>
+    {if $geo['lat']}
+    <div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+        <meta itemprop="latitude" content="{$geo['lat']}" />
+        <meta itemprop="longitude" content="{$geo['lng']}" />
+    </div>
+    {/if}
+</div>

@@ -1,0 +1,46 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<form action="/administration_seo/trackingsummary" method="post" name="calculate">
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Trackingcodes Zusammenfassung')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table>
+                        <tr>
+                            <td><input name="time_eval" value="Auswertung über Zeit" type="submit"  class="button"/></td>
+                            <td><input type="radio" id="sem" name="type1" value="sem" checked/> {__b('SEM')} <input type="radio" id="seo" name="type1" value="seo" disabled="disabled"/> {__b('SEO')} <small>{__b('(kommt später)')}</small></td>
+                            <td>
+                                {__b('von')} <input id="yd-admin-start-dateshort" type="text" value="" class="inp w80" name="startTimeShortD" /> {__b('bis:')} <input id="yd-admin-end-dateshort" type="text" value="" class="inp w80" name="endTimeShortD" />
+                            </td>
+                            <td>
+                                &nbsp;
+                                {if $time_sum}
+                                    <b>{__b('Umsatz im gewählten Zeitraum')}: {$time_sum|inttoprice} {__b('€')}</b>
+                                {/if}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input name="track_eval" value="{__b('Auswertung vom Auswahl')}" type="submit"  class="button"/></td>
+                            <td><input type="radio" id="sem" name="type2" value="sem" checked/> {__b('SEM')} <input type="radio" id="seo" name="type2" value="seo" disabled="disabled"/> {__b('SEO')} <small>{__b('(kommt später)')}</small></td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;
+                                {if $eval_sum}
+                                    <b>{__b('Umsatz der ausgewählten Codes')}: {$eval_sum|inttoprice} {__b('€')}</b>
+                                {/if}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="item-content">
+
+                {$grid}
+
+            </div>
+        </div>
+    </div>
+</form>
+{/block}

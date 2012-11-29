@@ -1,0 +1,35 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<ul class="be-tabs">
+    <li><a href="/administration_service/create">{__b('Dienstleister erstellen')}</a></li>
+    <li>
+        {if $showdeleted}
+        <a style="color: red" href="/administration/showdeletedservices/do/0">{__b('Gelöschte Dienstleister verbergen')}</a>
+        {else}
+        <a style="color: green" href="/administration/showdeletedservices/do/1">{__b('Gelöschte Dienstleister anzeigen')}</a>
+        {/if}
+    </li>
+    <li>
+        {if $showoffline}
+        <a style="color: red" href="/administration/showofflineservices/do/0">{__b('Offline Dienstleister verbergen')}</a>
+        {else}
+        <a style="color: green" href="/administration/showofflineservices/do/1">{__b('Offline Dienstleister anzeigen')}</a>
+        {/if}
+    </li>
+    <li><a href="/administration_service_bulkedit/offline">{__b('Restaurants offline stellen')}</a></li>
+    <li><a href="/administration_service_bulkedit/faxservice">{__b('Faxdienstleister wechseln')}</a></li>      
+</ul>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Übersicht der Dienstleister')}
+        </div>
+        <div class="item-content">
+            {$grid}
+        </div>
+    </div>
+</div>
+
+{/block}

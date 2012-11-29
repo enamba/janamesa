@@ -1,0 +1,1424 @@
+@font-face {
+    font-family: 'FuturaCondensedMedium';
+    src: url('/media/fonts/futura-condensed-medium.eot'); /* IE9 Compat Modes */
+    src: url('/media/fonts/futura-condensed-medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/media/fonts/futura-condensed-medium.woff') format('woff'), /* Modern Browsers */
+        url('/media/fonts/futura-condensed-medium.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('/media/fonts/futura-condensed-medium.svg#FuturaCondensedMedium') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'FuturaCondensedBold';
+    src: url('/media/fonts/futura-condensed-bold.eot'); /* IE9 Compat Modes */
+    src: url('/media/fonts/futura-condensed-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/media/fonts/futura-condensed-bold.woff') format('woff'), /* Modern Browsers */
+        url('/media/fonts/futura-condensed-bold.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('/media/fonts/futura-condensed-bold.svg#FuturaCondensedBold') format('svg'); /* Legacy iOS */
+}
+
+/*
+    1. Reset
+***********************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+body {
+    height: 100%;
+    font-family: "trebuchet ms",arial,"nimbus sans l",sans-serif;
+    font-size: 12px;
+    color: #333;
+    background: #fff;
+}
+
+img {
+    border: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+a {
+    color: #05a;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+p {
+    margin: 0 0 10px;
+    line-height: 160%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+input, textarea, select {
+    padding: 4px 5px;
+    font-size: 11px;
+    color: #333;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background: url(/media/images/satellites/start/yd-input-text.png) repeat-x #fff;
+    outline: 0 none;
+}
+
+input:focus, textarea:focus, select:focus {
+    background: #fff;
+}
+
+.yd-lightbox-buttons input, .button, .button:focus {
+    cursor: pointer;
+    padding: 3px 20px 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid #066fc0;
+    text-shadow: 1px 1px 0px #000;
+    border-radius: 4px;
+    background: #62abef;
+    background: -moz-linear-gradient(top,#62abef,#066fc0);
+    background: -webkit-gradient(linear, left top, left bottom, from(#62abef), to(#066fc0));
+}
+
+.yd-lightbox-buttons input:hover, .button:hover {
+    background: #066fc0;
+    background: -moz-linear-gradient(top,#066fc0,#62abef);
+    background: -webkit-gradient(linear, left top, left bottom, from(#066fc0), to(#62abef));
+}
+
+.yd-lightbox-buttons {
+    padding: 10px 0;
+    text-align: center;
+    border-top: 1px dotted #ccc;
+}
+
+.yd-clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+.hidden{
+    display: none;
+}
+.invisible{
+    display: none;
+}
+/*
+    2. Header, Content, Footer
+***********************************************************/
+
+#yd-nonfooter {
+    position: relative;
+    min-height: 100%;
+}
+
+#content {
+    position: relative;
+    width: 1020px;
+    margin: 0 auto;
+    padding: 0 0 200px;
+}
+
+#yd-sidebar {
+    float: right;
+    width: 280px;
+    margin-right: 10px;
+}
+.linktoindex{
+    display: block;
+    height: 135px;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 390px;
+}
+/*
+    3. PLZ + Buttondesign
+***********************************************************/
+
+#yd-plz-search {
+    padding: 0;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    border: 1px solid #297e20;
+    background: #bae8a8;
+    border-radius: 0;
+    box-shadow: inset 3px 3px 3px #6f915f;
+}
+/*
+    Buttons
+***********************************************************/
+
+.yd-button-140,
+.yd-button-190,
+.yd-button-240,
+.yd-button-250,
+.yd-button-280 {
+    position: relative;
+    display: block;
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    color: #fff;
+    text-shadow: 0 -1px 0 green;
+    background: #72cb00; /* Old browsers */
+    background: -moz-linear-gradient(top, #72cb00 0%, #63b900 50%, #5baa00 51%, #579b00 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#72cb00), color-stop(50%,#63b900), color-stop(51%,#5baa00), color-stop(100%,#579b00)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #72cb00 0%,#63b900 50%,#5baa00 51%,#579b00 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #72cb00 0%,#63b900 50%,#5baa00 51%,#579b00 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #72cb00 0%,#63b900 50%,#5baa00 51%,#579b00 100%); /* IE10+ */
+    background: linear-gradient(top, #72cb00 0%,#63b900 50%,#5baa00 51%,#579b00 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#72cb00', endColorstr='#579b00',GradientType=0 ); /* IE6-9 */
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 0 0 1px #529a00;
+}
+
+.yd-button-140:hover,
+.yd-button-190:hover,
+.yd-button-240:hover,
+.yd-button-250:hover,
+.yd-button-280:hover {
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+
+.yd-button-140:focus, .yd-button-140:active,
+.yd-button-190:focus, .yd-button-190:active,
+.yd-button-240:focus, .yd-button-240:active,
+.yd-button-250:focus, .yd-button-250:active,
+.yd-button-280:focus, .yd-button-280:active {
+    color: rgba(255,255,255,0.8);
+    text-shadow: 0 -1px 0 green;
+    box-shadow: inset 0 0 4px #000, 0 0 0 1px #fff;
+}
+
+.yd-button-140 span,
+.yd-button-190 span,
+.yd-button-240 span,
+.yd-button-250 span,
+.yd-button-280 span {
+    display: block;
+    background: url(/media/images/satellites/yd-button-arrow-big.png) no-repeat;
+}.yd-button-140 span { background: url(/media/images/satellites/yd-button-arrow-small.png) no-repeat; }
+
+.yd-button-140 span { background-position: 112px 10px; }
+.yd-button-190 span { background-position: 165px 12px; }
+.yd-button-240 span { background-position: 190px 14px; }
+.yd-button-250 span { background-position: 220px 12px; }
+.yd-button-280 span { background-position: 250px 14px; }
+
+.yd-button-140:focus span, .yd-button-140:active span,
+.yd-button-190:focus span, .yd-button-190:active span,
+.yd-button-240:focus span, .yd-button-240:active span,
+.yd-button-250:focus span, .yd-button-250:active span,
+.yd-button-280:focus span, .yd-button-280:active span {
+    background: url(/media/images/ajax-loader-16-buttons.gif) no-repeat;
+}
+
+.yd-button-140:focus span, .yd-button-140:active span { background-position: 105px 10px; }
+.yd-button-190:focus span, .yd-button-190:active span { background-position: 165px 16px; }
+.yd-button-240:focus span, .yd-button-240:active span { background-position: 190px 18px; }
+.yd-button-250:focus span, .yd-button-250:active span { background-position: 220px 16px; }
+.yd-button-280:focus span, .yd-button-280:active span { background-position: 250px 18px; }
+
+.yd-button-140.yd-gray-button,
+.yd-button-190.yd-gray-button,
+.yd-button-240.yd-gray-button,
+.yd-button-250.yd-gray-button,
+.yd-button-280.yd-gray-button {
+    color: #888 !important;
+    text-shadow: 0 1px 0 #fff;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* IE10+ */
+    background: linear-gradient(top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 0 0 1px #ccc;
+}
+
+.yd-button-140.yd-gray-button:hover,
+.yd-button-190.yd-gray-button:hover,
+.yd-button-240.yd-gray-button:hover,
+.yd-button-250.yd-gray-button:hover,
+.yd-button-280.yd-gray-button:hover {
+    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+
+.yd-button-140.yd-gray-button:focus, .yd-button-140.yd-gray-button:active,
+.yd-button-190.yd-gray-button:focus, .yd-button-190.yd-gray-button:active,
+.yd-button-240.yd-gray-button:focus, .yd-button-240.yd-gray-button:active,
+.yd-button-250.yd-gray-button:focus, .yd-button-250.yd-gray-button:active,
+.yd-button-280.yd-gray-button:focus, .yd-button-280.yd-gray-button:active {
+    text-shadow: 0 1px 0 #fff;
+}
+
+.yd-button-140.yd-gray-button span,
+.yd-button-190.yd-gray-button span,
+.yd-button-240.yd-gray-button span,
+.yd-button-250.yd-gray-button span,
+.yd-button-280.yd-gray-button span {
+    background: none;
+}
+
+/********** New Button 140 px width **********/
+
+.yd-button-140 {
+    width: 130px;
+    padding-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 19px;
+}
+
+.yd-service-list .yd-button-140 {
+    position: absolute;
+    top: 65px;
+    right: 10px;
+}
+
+/********** New Button 190 px width **********/
+
+.yd-button-190 {
+    width: 190px;
+    text-align: center;
+    height: 50px;
+    line-height: 45px;
+    font-size: 21px;
+}
+
+/********** New Button 240 px width **********/
+
+.yd-button-240 {
+    width: 220px;
+    padding-left: 20px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 0 20px;
+    font-size: 26px;
+}
+
+/********** New Button 250 px width **********/
+
+.yd-button-250 {
+    width: 250px;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    margin: 10px 0 0;
+    font-size: 21px;
+}
+
+/********** New Button 280 px width **********/
+
+.yd-button-280 {
+    width: 280px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 0 20px;
+    font-size: 26px;
+}
+/*
+    14. Notifications
+***********************************************************/
+
+.notification {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 50%;
+    width: 940px;
+    margin: -1px 0 0 -510px;
+    padding: 12px 40px;
+    font-size: 12px;
+    border: 1px solid #555;
+    border-radius: 0 0 4px 4px;
+    background: url(/media/images/satellites/start/yd-sprites-icons.png) 10px -2410px no-repeat #def;
+}
+
+.error {
+    background: url(/media/images/satellites/start/yd-sprites-icons.png) 10px -2510px no-repeat #fcc;
+}
+
+.warn {
+    background: url(/media/images/satellites/start/yd-sprites-icons.png) 10px -2610px no-repeat #ffe;
+}
+
+.success {
+    background: url(/media/images/satellites/start/yd-sprites-icons.png) 10px -2710px no-repeat #dfc;
+}
+
+.notification a {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.notification-menu {
+    padding: 12px 20px 12px 40px;
+    font-size: 11px;
+    border: 1px solid #a2b4ee;
+    border-radius: 4px;
+    margin: 0 0 20px;
+    background: url(/media/images/satellites/start/yd-sprites-icons.png) 10px -2410px no-repeat #def;
+}
+.green{
+    color: #297e20 !important;
+}
+.formError {
+    cursor: pointer;
+    display: block;
+    left: 300px;
+    padding-bottom: 13px;
+    position: absolute;
+    top: 300px;
+    z-index: 5000;
+}
+.formError .formErrorContent {
+    background: url("/media/images/satellites/menu/validationengine-close.png") no-repeat scroll 154px 0 #D7413A;
+    border: 2px solid #DDDDDD;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 0 6px #000000;
+    color: #FFFFFF;
+    font-family: tahoma;
+    font-size: 11px;
+    padding: 4px 10px;
+    width: 150px;
+}
+.formError .formErrorArrow {
+    bottom: 0;
+    height: 15px;
+    left: 20px;
+    position: absolute;
+    width: 15px;
+    z-index: 5001;
+}
+.formError .formErrorArrow div {
+    background: none repeat scroll 0 0 #D7413A;
+    border-left: 2px solid #DDDDDD;
+    border-right: 2px solid #DDDDDD;
+    box-shadow: 0 2px 3px #444444;
+    display: block;
+    font-size: 0;
+    height: 1px;
+    line-height: 0;
+    margin: 0 auto;
+}
+.formError .formErrorArrowBottom div {
+    box-shadow: none;
+}
+.greenPopup .formErrorArrow div {
+    background: none repeat scroll 0 0 #33BE40;
+}
+.blackPopup .formErrorArrow div {
+    background: none repeat scroll 0 0 #393939;
+    color: #FFFFFF;
+}
+.formError .formErrorArrow .line10 {
+    border: medium none;
+    width: 15px;
+}
+.formError .formErrorArrow .line9 {
+    border: medium none;
+    width: 13px;
+}
+.formError .formErrorArrow .line8 {
+    width: 11px;
+}
+.formError .formErrorArrow .line7 {
+    width: 9px;
+}
+.formError .formErrorArrow .line6 {
+    width: 7px;
+}
+.formError .formErrorArrow .line5 {
+    width: 5px;
+}
+.formError .formErrorArrow .line4 {
+    width: 3px;
+}
+.formError .formErrorArrow .line3 {
+    border-bottom: 0 solid #DDDDDD;
+    border-left: 2px solid #DDDDDD;
+    border-right: 2px solid #DDDDDD;
+    width: 1px;
+}
+.formError .formErrorArrow .line2 {
+    background: none repeat scroll 0 0 #DDDDDD;
+    border: medium none;
+    width: 3px;
+}
+.formError .formErrorArrow .line1 {
+    background: none repeat scroll 0 0 #DDDDDD;
+    border: medium none;
+    width: 1px;
+}
+/*
+            Head
+******************************************/
+.yd-menu-head {
+    background-repeat: no-repeat !important;
+    border-radius: 0;
+    min-height:  172px;
+    position: relative;
+}
+
+#yd-menu{
+    width: 700px;
+    float: left;
+    margin-left: 10px;
+}
+.yd-menu-timcat:after {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.yd-menu-timcat {
+    position: relative;
+}
+
+.yd-menu-nav-div{
+    width: 700px;
+    min-height: 150px;
+}
+
+/* Timepicker
+----------------------------------*/
+
+.time-picker {
+    position: absolute;
+    height: 120px;
+    width: 160px;
+    overflow: auto;
+    background: #fff;
+    border: 1px solid #05a;
+    z-index: 99;
+}
+
+div.time-picker-12hours {
+    width: 6em; /* needed for IE */
+}
+
+div.time-picker ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+div.time-picker li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+div.time-picker li.selected {
+    background: #05a;
+    color: #fff;
+}
+/* Autocomplete
+----------------------------------*/
+
+.ui-autocomplete {
+    width: 200px;
+    max-height: 190px;
+    overflow: auto;
+    background: #fff;
+}
+
+.ui-autocomplete li {
+    padding: 0 !important;
+}
+
+.ui-autocomplete li a {
+    display: block;
+    color: #555 !important;
+    padding: 9px 5px 7px 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.ui-autocomplete li:nth-child(even) {
+    background: #FFFFFF; /* Old browsers */
+}
+
+.ui-autocomplete li:nth-child(odd) {
+    background: #FFFFFF; /* Old browsers */
+    background: -moz-linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFFFFF), color-stop(100%,#EEEEEE)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #FFFFFF 0%,#EEEEEE 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #FFFFFF 0%,#EEEEEE 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #FFFFFF 0%,#EEEEEE 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#EEEEEE',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #FFFFFF 0%,#EEEEEE 100%); /* W3C */
+}
+
+.ui-autocomplete li a:hover {
+    background: #eee;
+}
+
+* html .ui-autocomplete {height: 190px;}
+*+html .ui-autocomplete {height: 190px;}
+.ui-autocomplete{
+    color: #000 !important;
+}
+
+/*
+    12. Forms
+***********************************************************/
+
+.yd-form strong.yd-form-tease {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 15px;
+    padding: 0 0 5px;
+    color: #333;
+    border-bottom: 1px dotted #ccc;
+}
+
+.yd-form strong.yd-form-tease span {
+    display: block;
+    font-size: 11px;
+    color: #999;
+}
+
+.yd-form-valid {
+    border: 2px solid #00c800;
+    background:
+        url(/media/images/satellites/start/yd-sprites-icons.png) 160px -1966px no-repeat,
+        url(/media/images/satellites/start/yd-input-text.png) repeat-x top left #fff;
+}
+
+.yd-form-invalid {
+    border: 2px solid red;
+}
+
+.yd-form input:focus,
+.yd-form textarea:focus {
+    border: 2px solid #00c800;
+}
+
+.yd-form .yd-form-wrapper {
+    width: 400px;
+}
+
+.yd-form ul.yd-form-section {
+    margin: 0 0 10px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.yd-form li {
+    position: relative;
+    width: 198px;
+    margin: 0 0 10px;
+}
+
+.yd-form span {
+    display: block;
+    margin: 0 0 5px;
+}
+
+.yd-form span small {
+    font-size: 11px;
+    color: #aaa;
+}
+
+.yd-form i {
+    font-style: normal;
+    line-height: 25px;
+}
+
+.yd-form strong {
+    font-weight: normal;
+    line-height: 21px;
+    color: green;
+}
+
+.yd-form-left {
+    float: left;
+}
+
+.yd-form-left input,
+.yd-form-right input {
+    width: 180px;
+}
+
+.yd-form-right select {
+    width: 185px;
+}
+
+.yd-form-right {
+    float: right;
+}
+
+.yd-form li.yd-form-middle {
+    float: left;
+    width: 380px;
+}
+
+.yd-form .yd-form-middle textarea {
+    width: 382px !important;
+    height: 70px;
+    max-height: 70px;
+}
+
+.yd-form input[type=checkbox] {
+    width: 20px;
+}
+
+.yd-form-info {
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: -130px;
+    z-index: 1;
+    width: 90px;
+    min-height: 70px;
+    padding: 7px;
+    font-style: normal;
+    text-shadow: 0 1px 0px #fff;
+    font-size: 11px;
+    border: 1px solid #d2be00;
+    border-radius: 4px;
+    background: #ffffe5; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffe5 0%, #ffee9d 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffe5), color-stop(100%,#ffee9d)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* IE10+ */
+    background: linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffe5', endColorstr='#ffee9d',GradientType=0 ); /* IE6-9 */
+}
+
+.yd-form-info:before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 30px;
+    z-index: 1;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 5px solid #fff7c4;
+}
+
+.yd-form-info:after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: -6px;
+    z-index: 0;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 5px solid #d2be00;
+}
+
+.yd-form-yquery img {
+    vertical-align: top;
+}
+
+.yd-form-yquery input {
+    width: 150px;
+}
+
+.yd-form-yquery input:focus {
+    border: 1px solid #555;
+}
+
+#yd-finish-deliver-time {
+    width: 165px;
+}
+
+#debit-reg-name-info,
+#debit-reg-nr-info,
+#debit-reg-blz-info {
+    top: -27px !important;
+}
+/*
+    4. Boxdesign
+***********************************************************/
+
+.yd-box {
+    position: relative;
+    margin: 0 0 20px;
+    padding: 15px;
+    border-radius: 4px;
+    background: #fff;
+    background: -moz-linear-gradient(top,#fff,#fafafa);
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fafafa));
+    box-shadow: 0 0 2px #aaa;
+}
+
+.yd-box-head {
+    position: relative;
+    margin: -5px 0 10px;
+    padding: 5px 0 10px 25px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.yd-bigbox-head {
+    font: 21px FuturaCondensedMedium,arial,"nimbus sans l",sans-serif;
+    border-radius: 5px 5px 0 0;
+    margin: -3px -15px 10px;
+    padding: 8px 0 8px 20px;
+    position: static;
+    width: auto;
+    background: url(/media/images/satellites/menu/yd-bigbox-head.png) no-repeat;
+}
+
+.yd-bigbox-head em {
+    padding: 5px 0 5px 25px;
+    font-style: normal;
+}
+
+.yd-bigbox-head a {
+    margin: 0 0 0 25px;
+    font-size: 11px;
+}
+
+.yd-bigbox-head img {
+    vertical-align: middle;
+}
+
+.yd-start-adress-icon {
+    padding: 5px 0 5px 20px;
+    background: url(/media/images/satellites/start/yd-sprites-icons.png) 0 -597px no-repeat;
+}
+
+.yd-bigbox-body {
+    margin: 0 0 0 180px;
+    min-height: 48px;
+}
+
+.yd-bigbox-body .yd-finish-times {
+    padding: 10px 0 0;
+}
+
+.yd-bigbox-body .yd-finish-times img {
+    vertical-align: middle;
+}
+/*
+                Footer
+**********************************************/
+#yd-menu-footer{
+    position: relative;
+    height: 30px;
+    width: 1005px;
+    margin: -50px auto 0px auto;
+    height: 50px;
+    border-radius: 5px 5px 0 0;
+}
+#yd-menu-footer #yd-menu-footer_content{
+    margin: 0 auto;
+    padding-top: 15px;
+    width: 1005px;
+    text-align: center;
+}
+#yd-menu-footer p, #yd-menu-footer a{
+    padding: 3px;
+    font-size: 10px;
+    font-weight: bold;
+}
+#yd-menu-footer a{
+    text-decoration: underline;
+}
+#yd-menu-footer a:hover{
+    background: none;
+}
+h1.yd-lbicon-adress { background: url(/media/images/satellites/start/yd-sprites-icons.png) 25px -1467px no-repeat #eee; }
+h1.yd-lbicon-store { background: url(/media/images/satellites/start/yd-sprites-icons.png) 25px -1745px no-repeat #eee; }
+h1.yd-lbicon-pw { background: url(/media/images/satellites/start/yd-sprites-icons.png) 25px -2906px no-repeat #eee; }
+h1.yd-lbicon-fav { background: url(/media/images/satellites/start/yd-sprites-icons.png) 25px -2866px no-repeat #eee; }
+h1.yd-lbicon-thumb { background: url(/media/images/satellites/start/yd-sprites-icons.png) 25px -2826px no-repeat #eee; }
+h1.yd-lbicon-time { background: url(/media/images/satellites/start/yd-sprites-icons.png) 25px -2785px no-repeat #eee; }
+h1.yd-lbicon-changeplz { background: url(/media/images/satellites/start/yd-sprites-icons.png) 25px -2945px no-repeat #eee; }
+
+.ui-dialog-buttonpane {
+    padding: 15px 0 !important;
+    text-align: center !important;
+    border: 0;
+    border-top: 1px solid !important;
+    background: #eee;
+}
+
+.ui-dialog-buttonset {
+    float: none !important;
+}
+
+.ui-dialog-buttonpane button, .ui-dialog-buttonpane .button {
+    margin: 0 10px;
+}
+
+.yd-lightbox-content-container label{
+    color: #000;
+
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-input input {
+    width: 30px;
+}
+.yd-lightbox-content-container #yd-special-input {
+    height: 100px !important;
+}
+
+/*
+                Siedebar
+****************************************/
+.yd-box{
+    box-shadow: none;
+    border-radius:5px;
+    border: medium none;
+    padding-top: 3px;
+    margin: 10px 0 20px 0;
+}
+.yd-box .edit-meal, .yd-box yd-minamount-toogle-in{
+    background: none;
+    text-decoration: underline;
+}
+.yd-box .yd-button-240 {
+    color: #fff;
+}
+.yd-box-head, #yd-sidebar .yd-box-body ul li.yd-shopping-discount, #yd-sidebar .yd-box-body ul li.yd-shopping-price{
+    border-bottom: 1px solid;
+}
+#yd-minamount-toogle-out{
+    color: #000;
+}
+.yd-shopping-notmincost{
+    display: block;
+    font-size: 10px;
+    color: red;
+}
+#yd-sidebar .yd-box-body  input{
+    border-top: 1px solid #868686;
+    border-left: 1px solid #868686;
+    border-right: 1px solid #868686;
+    border-bottom: 1px solid #a6a6a6;
+    background: url(/media/images/satellites/menu/yd-sort-search.png) 250px 8px no-repeat #fff;
+    background: url(/media/images/satellites/menu/yd-sort-search.png) 250px 8px no-repeat, -moz-linear-gradient(top,#e7e7e7,#fff);
+    background: url(/media/images/satellites/menu/yd-sort-search.png) 250px 8px no-repeat, -webkit-gradient(linear, left top, left bottom, from(#e7e7e7), to(#fff));
+}
+.yd-menu-table_satellite tr td a i{
+    position: relative;
+}
+
+.yd-menu-table_satellite tr td a i span{
+    position: absolute;
+    display: none;
+}
+
+.yd-menu-table_satellite tr td i:hover span{
+    border-radius:2px;
+    display: block;
+    margin: -20px 0 30px 30px;
+    text-align: center;
+    padding: 5px;
+}
+/*LODING GIF Sidebar head*/
+.yd-loading{
+    width:15px;
+    display:none;
+}
+
+.yd-loading-visible{
+    width:15px;
+}
+
+
+/*
+*TO TOP (scrollup button)
+*/
+
+#toTop {
+    display:none;
+    text-decoration:none;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    overflow:hidden;
+    width:51px;
+    height:51px;
+    border:none;
+    text-indent:-999px;
+    background: url(/media/images/yd-frontend-core/yd-sprite-core.png) no-repeat 0 -185px;
+}
+
+#toTopHover {
+    background: url(/media/images/yd-frontend-core/yd-sprite-core.png) no-repeat 0 -236px;
+    width:51px;
+    height:51px;
+    display:block;
+    overflow:hidden;
+    float:left;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter:alpha(opacity=0);
+}
+
+#toTop:active, #toTop:focus {
+    outline:none;
+}
+
+
+
+
+
+
+
+
+/*
+ * Rescue CSS June 2012
+ **********************************************************/
+
+.yd-dialogs label,
+.yd-dialogs .yd-dbh-extras a {
+    color: #000 !important;
+}
+
+.yd-form-info-left {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * jQuery Autocomplete
+ **********************************************************/
+
+.ui-autocomplete {
+    position: absolute;
+    max-height: 190px;
+    overflow: auto;
+    background: #fff;
+    border-radius: 0 0 4px 4px;
+}
+
+.ui-autocomplete li a {
+    display: block;
+    padding: 8px 0 8px 10px;
+    font-family: FuturaCondensedMediumCE, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 24px;
+    color: #999;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+}
+
+.ui-autocomplete .ui-state-hover,
+.ui-autocomplete .ui-state-focus {
+    text-decoration: none;
+    background: #eee;
+}
+
+/*
+ * PL Autocomplete
+ **********************************************************/
+
+.pl-autocomplete-wrapper {
+    position: relative;
+    width: 1020px;
+    height: 110px;
+    margin: 0 auto;
+    background: url(/media/images/yd-frontend-core/1px.png) repeat;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+
+
+.pl-autocomplete-wrapper .pl-autocomplete-arrow {
+    position: absolute;
+    top: 8px;
+    left: -11px;
+    width: 210px;
+    height: 67px;
+    padding: 18px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+    font: 20px arial, "nimbus sans l", sans-serif;
+}
+
+.pl-autocomplete-wrapper .pl-autocomplete-city,
+.pl-autocomplete-wrapper .pl-autocomplete-street,
+.pl-autocomplete-wrapper .pl-autocomplete-number,
+.pl-autocomplete-wrapper .pl-autocomplete-button {
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    border-radius: 4px;
+}
+
+.pl-autocomplete-wrapper .pl-autocomplete-street {
+    z-index: 3; /* visibility bug */
+}
+
+.pl-autocomplete-wrapper input.pl-autocomplete-city,
+.pl-autocomplete-wrapper input.pl-autocomplete-street,
+.pl-autocomplete-wrapper input.pl-autocomplete-number {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    height: 40px;
+    font: 28px/40px FuturaCondensedMediumCE, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    color: #999;
+    text-align: center;
+    border-bottom: 1px dotted #ccc;
+}
+
+.pl-autocomplete-city {
+    left: 215px;
+    width: 215px;
+    background: url(/media/images/www.pyszne.pl/conversion-dropdown.png) 185px 15px no-repeat;
+}
+
+.pl-autocomplete-street {
+    left: 445px;
+    width: 280px;
+    background: none;
+}
+
+.pl-autocomplete-city.ui-autocomplete-loading,
+.pl-autocomplete-street.ui-autocomplete-loading {
+    background: url(/media/images/ajax-loader-16-white.gif) no-repeat 15px 13px transparent;
+}
+
+.pl-autocomplete-number {
+    left: 655px;
+    width: 70px;
+    background: none;
+}
+
+.pl-select-city-list {
+    position: absolute;
+    top: 85px;
+    left: 215px;
+    z-index: 5;
+    width: 500px;
+    padding: 5px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* W3C */
+}
+
+.yd-register-form .pl-select-city-list {
+    top: 255px;
+    left: 30px;
+}
+
+.yd-dialogs-body .pl-select-city-list {
+    top: 125px;
+    left: 120px;
+}
+
+.pl-select-city-list ul li {
+    float: left;
+}
+
+.pl-select-city-list ul li a {
+    display: block;
+    padding: 5px;
+    font: 22px FuturaCondensedMediumCE, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    color: #555;
+}
+
+.pl-autocomplete-wrapper .pl-autocomplete-button {
+    display: block;
+    left: 740px;
+    width: 265px;
+    height: 60px;
+    font: 30px/60px FuturaCondensedBoldCE, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    color: #fff;
+    -webkit-box-shadow: 0 0 0 1px #3f6f00;
+    -moz-box-shadow: 0 0 0 1px #3f6f00;
+    box-shadow: 0 0 0 1px #3f6f00;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: #81e200; /* Old browsers */
+    background: -moz-linear-gradient(top, #81e200 0%, #3f6f00 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#81e200), color-stop(100%,#3f6f00)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #81e200 0%,#3f6f00 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #81e200 0%,#3f6f00 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #81e200 0%,#3f6f00 100%); /* IE10+ */
+    background: linear-gradient(top, #81e200 0%,#3f6f00 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81e200', endColorstr='#3f6f00',GradientType=0 ); /* IE6-9 */
+}
+
+.pl-autocomplete-wrapper .pl-autocomplete-button:hover {
+    text-decoration: none;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+
+.pl-autocomplete-wrapper .pl-autocomplete-button:focus,
+.pl-autocomplete-wrapper .pl-autocomplete-button:active {
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 0 0 1px #3f6f00, 0 0 5px rgba(0,0,0,0.8) inset;
+    -moz-box-shadow: 0 0 0 1px #3f6f00, 0 0 5px rgba(0,0,0,0.8) inset;
+    box-shadow: 0 0 0 1px #3f6f00, 0 0 5px rgba(0,0,0,0.8) inset;
+}
+
+.pl-autocomplete-helper1,
+.pl-autocomplete-helper2,
+.pl-autocomplete-helper3 {
+    display: block;
+    cursor: default;
+    position: absolute;
+    z-index: 1;
+    top: 25px;
+    height: 18px;
+    padding: 42px 0 0;
+    text-align: center;
+    font: 14px FuturaCondensedMediumCE, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    color: #999;
+    background: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 3px #999 inset, 0 0 0 1px #555;
+    -moz-box-shadow: 0 2px 3px #999 inset, 0 0 0 1px #555;
+    box-shadow: 0 2px 3px #999 inset, 0 0 0 1px #555;
+}
+
+.pl-autocomplete-helper1 {
+    left: 215px;
+    width: 215px;
+}
+
+.pl-autocomplete-helper2 {
+    left: 445px;
+    width: 280px;
+}
+
+.pl-autocomplete-helper3 {
+    left: 655px;
+    display: none;
+    width: 70px;
+}
+
+.pl-autocomplete-error {
+    color: red !important;
+}
+
+.pl-autocomplete-why {
+    position: absolute;
+    z-index: 4;
+    top: 91px;
+    left: 485px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #59d;
+    cursor: pointer;
+}
+
+.pl-autocomplete-reason {
+    position: absolute;
+    top: 24px;
+    left: -9999px;
+    z-index: 1;
+    width: 230px;
+    padding: 10px;
+    font-weight: normal;
+    color: #555;
+    border-radius: 4px;
+    box-shadow: 0 0 3px #000;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* IE10+ */
+    background: linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* W3C */
+}
+
+.pl-autocomplete-why:hover {
+    text-decoration: underline;
+}
+
+.pl-autocomplete-why:hover .pl-autocomplete-reason {
+    left: -25px;
+}
+
+.pl-autocomplete-reason:after {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 105px;
+    width: 20px;
+    height: 12px;
+    background: url(/media/images/www.pyszne.pl/conversion-reason.png) no-repeat;
+}
+
+/*
+ * PL Autocomplete is short
+ **********************************************************/
+
+.pl-autocomplete-is-short input.pl-autocomplete-street,
+.pl-autocomplete-is-short .pl-autocomplete-helper2 {
+    width: 195px;
+}
+
+.pl-autocomplete-is-short .pl-autocomplete-helper3 {
+    display: block;
+}
+
+/*
+ * PL Lightbox Autocomplete
+ **********************************************************/
+
+.yd-dialogs .pl-autocomplete-wrapper {
+    width: 280px;
+    height: 360px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: 0 0 0;
+    -moz-box-shadow: 0 0 0;
+    box-shadow: 0 0 0;
+    background: none;
+}
+
+.yd-dialogs .pl-autocomplete-wrapper .pl-autocomplete-arrow {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 280px;
+    height: 60px;
+    padding: 15px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+    font: 20px arial, "nimbus sans l", sans-serif;
+}
+
+.yd-dialogs .pl-autocomplete-wrapper .pl-autocomplete-city { top: 200px; left: 0; }
+.yd-dialogs .pl-autocomplete-wrapper .pl-autocomplete-street { top: 110px; left: 0; }
+.yd-dialogs .pl-autocomplete-wrapper .pl-autocomplete-number { top: 110px; left: 210px; }
+.yd-dialogs .pl-autocomplete-helper1 { top: 200px; left: 0; }
+.yd-dialogs .pl-autocomplete-helper2 { top: 110px; left: 0; }
+.yd-dialogs .pl-autocomplete-helper3 { top: 110px; left: 210px;}
+.yd-dialogs .pl-autocomplete-wrapper .pl-autocomplete-button { top: 280px; left: 0; }
+
+.yd-dialogs .pl-autocomplete-helper1 {
+    width: 280px;
+}
+
+.yd-dialogs .pl-autocomplete-wrapper .pl-autocomplete-button {
+    width: 280px;
+}
+
+.yd-dialogs .pl-autocomplete-city {
+    width: 280px;
+    background: url(/media/images/www.pyszne.pl/conversion-dropdown.png) 250px 15px no-repeat;
+}
+
+.yd-dialogs .pl-select-city-list {
+    top: 260px;
+    left: -1px;
+    z-index: 1006;
+    width: 270px;
+}
+
+.yd-dialogs .pl-select-city-list ul li a {
+    font-size: 18px;
+}
+
+.yd-dialogs .pl-autocomplete-why {
+    top: 175px;
+    left: 45px;
+    z-index: 1007;
+}
+
+/* Z-Index-Bug */
+
+.yd-dialogs .pl-autocomplete-wrapper .pl-autocomplete-city,
+.yd-dialogs .pl-autocomplete-wrapper .pl-autocomplete-street,
+.yd-dialogs .pl-autocomplete-wrapper .pl-autocomplete-number,
+.yd-dialogs .pl-autocomplete-wrapper .pl-autocomplete-button {
+    z-index: 1005;
+}
+
+.yd-dialogs .pl-autocomplete-wrapper .pl-autocomplete-street {
+    z-index: 1006; /* visibility bug */
+}
+
+/* YD Forms in Dialogs */
+
+.yd-dialogs .yd-form .pl-autocomplete-city,
+.yd-dialogs .yd-form .pl-autocomplete-street,
+.yd-dialogs .yd-form .pl-autocomplete-number {
+    width: 173px !important;
+}
+
+.yd-dialogs .yd-form .pl-autocomplete-city.ui-autocomplete-loading,
+.yd-dialogs .yd-form .pl-autocomplete-street.ui-autocomplete-loading {
+    background: url(/media/images/ajax-loader-16-white.gif) no-repeat 160px 4px transparent;
+}
+

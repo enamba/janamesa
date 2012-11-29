@@ -1,0 +1,26 @@
+.br-hidden { display: none!important; }
+
+.hidden {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.paymentHidden {
+    visibility: hidden;
+    position: absolute;
+}
+
+img[alt*=plex],
+img[src*=turn],
+iframe[src*=footer],
+iframe[src*=mediaplex],
+iframe[src*=analytics],
+iframe[src*=avazudsp],
+iframe[src*=mnkys] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}

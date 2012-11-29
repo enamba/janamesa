@@ -1,0 +1,10 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+    {include file='administration/service/edit/_navigation.htm'}
+
+    <form action="/administration_service_edit/billing/id/{$restaurant->getId()}" method="post">
+        {include file='administration/billing/default/customized_form.htm'}
+    </form>
+
+{/block}

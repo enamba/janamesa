@@ -1,0 +1,38 @@
+{assign var=serviceCacheId value=$service->getId()}
+{include file='order/_includes/menu/ranges.htm' caching=1 cache_lifetime=86400 cache_id="ranges.$serviceCacheId"}
+
+{if isset($cityIds) && count($cityIds) == 1}
+<script type="text/javascript">
+    $(document).ready(function(){  
+        if (typeof ydState !== "undefined") {
+            ydState.setCity({$cityIds.0});
+        }
+    });
+</script>
+{/if}
+
+<script type="text/javascript">
+    //check for cityId in Url
+    if(window.location.search.length > 0) {
+        params = getUrlVars();          
+        if(ydCurrentRanges &&  ydState && params['cityId']) {
+            ydState.setCity(params['cityId']);                                             
+        }        
+    }                   
+</script>
+
+
+<script type="text/javascript">
+    var services = [];
+    services.push({
+        id: {$service->getId()},
+        openings: {$this->formatOpeningsAsJson($service->getOpening()->getIntervalOfDay(time()))},
+        type: '{$service->getType()}'
+    });
+</script>
+
+<script type="text/javascript">
+    // store custom variable, how many sercies are available
+    log('logging custom variable services :: {$service->getCategory()->name}');
+    _paq.push(['setCustomVariable','2','ServiceCategory',"{$service->getCategory()->name}", "page"]); //concat, must be a string!
+</script>

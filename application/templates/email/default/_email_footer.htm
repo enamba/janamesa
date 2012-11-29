@@ -1,0 +1,54 @@
+
+                                <br />
+                            </td>
+                        </tr>
+                    </table>
+
+                    <br />
+
+                    <table cellspacing="0" border="0" align="center" style="font-size: 13px; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444;" cellpadding="0" width="550">
+                        <tr>
+                            <td style="text-align:center;font-size: 13px; line-height: 22px; font-family: Arial; color: #444444;">
+                                <p>
+                                    <b>{__('%s</b>, %s, %s', $config->locale->headoffice->name, $config->locale->headoffice->address, $config->locale->headoffice->country)}<br />
+                                    {$config->locale->tel->support} | E-Mail: <a href="mailto:{$config->locale->email->support}" style="color: #444444;">{$config->locale->email->support}</a><br />
+                                    <a href="http://www.{$config->domain->base}" style="color: #444444;">http://www.{$config->domain->base}</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table cellspacing="0" border="0" align="center" style="font-size: 13px; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444;" cellpadding="0" width="600">
+                        <tr>
+                            <td height="35" valign="middle">
+                                <img src="http://www.{$config->domain->base}/media/images/yd-mail/hr.jpg" height="5" alt="separator" width="600" />
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table cellspacing="0" border="0" align="center" style="font-size: 13px; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444;" cellpadding="0" width="550">
+                        <tr>
+                            <td align="center" style="font-size: 12px; line-height: 18px; font-family: Arial; color: #6f6f6f;">
+                                <p>
+                                    {__("Dies ist eine automatisch versendete Nachricht.")}<br />
+                                    {if $config->domain->base != 'janamesa.com.br'}
+                                        {__("Diese Adresse wurde nur zur Versendung von E-Mails eingerichtet.")}<br />
+                                        {__("Verschiedene Kontaktmöglichkeiten sind unter %sImpressum%s zu finden.", '<a style="color: #444444;" href="http://www.'|cat:$config->domain->base|cat:'/about">', '</a>')}
+                                    {/if}
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <table cellspacing="0" border="0" align="center" style="font-size: 13px; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444;" cellpadding="0" width="550">
+                        <tr>
+                            <td align="center" style="font-size: 12px; line-height: 18px; font-family: Arial; color: #6f6f6f;">
+                                <p>
+                                    {__("Du erhältst diese E-Mail, weil Du bei %s bestellt hast <br /> oder unseren Newsletter abbonniert hast.", $config->domain->base)}
+                                    <br /><br />
+                                    {__("Wenn Du keine weiteren Informationen mehr von uns erhalten möchtest, klicke bitte %shier%s.", '<a style="color: #444444;" href="http://www.'|cat:$config->domain->base|cat:'/unsubscribe">', '</a>')}
+                                </p>
+                                <br /><br />
+                            </td>
+                        </tr>
+                    </table>

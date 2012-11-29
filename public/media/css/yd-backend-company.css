@@ -1,0 +1,1174 @@
+/*
+   Admincase Reset CSS
+***********************************************************/
+
+#admincase {
+    line-height: 1;
+    color: black;
+    background: white;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+#admincase table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+#admincase caption,
+#admincase th,
+#admincase td {
+    text-align: left;
+    font-weight: normal;
+}
+#admincase blockquote:before,
+#admincase blockquote:after,
+#admincase q:before,
+#admincase q:after {
+    content: "";
+}
+#admincase blockquote,
+#admincase q {
+    quotes: "" "";
+}
+
+/*
+   Admincase Container
+***********************************************************/
+
+#admincase {
+    position: relative;
+    width: 960px;
+    margin: 20px auto;
+    padding: 0 0 200px;
+    font-family: arial, "nimbus sans l", sans-serif;
+    font-size: 12px;
+    color: #555;
+    background: url(/media/images/yd-backend/admin-sidebar-bg.png) no-repeat 176px -15px;
+}
+
+/*
+   Grundstruktur
+***********************************************************/
+
+#admincase #main-content {
+    margin: 0 0 0 206px;
+    padding: 20px 0 0 40px;
+}
+
+#admincase .column-left {
+    width: 48%;
+    float: left;
+}
+
+#admincase .column-right {
+    width: 48%;
+    float: right;
+}
+
+
+
+#admincase h2 { font-size: 20px; padding: 0 0 10px 0; }
+#admincase h3 { font-size: 17px; padding: 0 0 10px 0; }
+#admincase h4 { font-size: 16px; padding: 0 0 5px 0; }
+#admincase h5 { font-size: 14px; padding: 0 0 5px 0; }
+#admincase h6 { font-size: 12px; padding: 0 0 5px 0; }
+
+
+#admincase a        { color: #57a000; text-decoration: none; }
+#admincase a:hover  { color: #000; }
+#admincase a:active { color: #777; }
+#admincase a:focus  { outline: 1px; }
+
+#admincase strong   { font-weight: bold; color: #333; }
+
+#admincase small   	{ font-size: 0.85em; }
+
+#admincase pre      { font-family: monospace; }
+
+#admincase p        { padding: 5px 0 10px 0; line-height: 1.6em; }
+
+
+#admincase h2.welcome {
+    font: 30px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    margin: 0 0 5px;
+    padding: 0;
+}
+
+#admincase #page-intro {
+    font: 24px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    margin: 0 0 15px;
+    padding: 0 0 10px;
+    color: #aaa;
+    border-bottom: 1px dotted #aaa;
+}
+
+/*
+   General classes
+***********************************************************/
+
+#admincase .clear { clear: both; }
+
+#admincase .align-left { float: left; }
+
+#admincase .align-right { float: right; }
+
+/*
+   Sidebar
+***********************************************************/
+
+#admincase #main-nav {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 206px;
+}
+
+#admincase #main-nav li {
+    list-style: none;
+    padding-bottom: 10px;
+    text-align: right;
+}
+
+#admincase #main-nav li a.nav-top-item {
+    text-shadow: 0 1px 0 #510000;
+    background: transparent url(/media/images/yd-backend/admin-sidebar-nav.png) right center no-repeat;
+    padding: 10px 15px 9px 0px;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+}
+
+#admincase ul#main-nav li a.current {
+    background-image: url(/media/images/yd-backend/admin-sidebar-nav-active.png) !important;
+    color: #555;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #fff;
+}
+
+#admincase ul#main-nav li a.current:hover {
+    color: #333;
+}
+
+#admincase #main-nav ul {
+    padding: 0;
+    font-size: 12px;
+    margin: 0;
+}
+
+#admincase #main-nav ul li {
+    list-style: none;
+    margin: 0;
+    text-align: right;
+    padding: 0;
+}
+
+#admincase #main-nav ul li a {
+    padding: 8px 15px;
+    display: block;
+    color: #333;
+    font-size: 12px;
+    line-height: 1.2em;
+}
+
+#admincase ul#main-nav li ul li a:hover,
+#admincase ul#main-nav li ul li a.current,
+#admincase ul#main-nav li ul li a.current:hover {
+}
+
+#admincase ul#main-nav li ul li a.current {
+    background: transparent url(/media/images/yd-backend/company-navarrow.gif) right center no-repeat !important;
+}
+
+/*
+   Übersicht des Companybackends (Startseite)
+***********************************************************/
+
+#admincase #main-content .back-overview ul {
+    padding: 0;
+}
+
+#admincase #main-content .back-overview ul li {
+    float: left;
+    margin: 0 30px 30px 0;
+    padding: 0;
+    list-style: none;
+    background: none;
+}
+
+#admincase #main-content .back-overview ul li a {
+    display: block;
+    width: 325px;
+    height: 120px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* W3C */
+}
+
+#admincase #main-content .back-overview ul li a:hover {
+    border: 1px solid #555;
+    -webkit-box-shadow: 0 0 20px #ccc inset;
+    -moz-box-shadow: 0 0 20px #ccc inset;
+    box-shadow: 0 0 20px #ccc inset;
+}
+
+#admincase #main-content .back-overview ul li a span {
+    display: block;
+    height: 90px;
+    padding: 30px 10px 0 100px;
+    font-size: 24px;
+}
+
+#admincase #main-content .back-overview ul li a.overview-1 span {
+    background: url(/media/images/yd-backend/company-1.png) no-repeat 15px center;
+}
+
+#admincase #main-content .back-overview ul li a.overview-2 span {
+    background: url(/media/images/yd-backend/company-2.png) no-repeat 15px center;
+}
+
+#admincase #main-content .back-overview ul li a.overview-3 span {
+    background: url(/media/images/yd-backend/company-3.png) no-repeat 15px center;
+}
+
+#admincase #main-content .back-overview ul li a.overview-4 span {
+    background: url(/media/images/yd-backend/company-4.png) no-repeat 15px center;
+}
+
+#admincase #main-content .back-overview ul li a span small {
+    display: block;
+    margin: 10px 0 0;
+    font-size: 12px;
+}
+
+
+
+/*
+   Backend-Formatierungen
+***********************************************************/
+
+#content.right .settings_group {
+    padding: 5px 0 0 0;
+}
+
+#content.right .settings_group a {
+    font-weight: bold;
+    color: #2969a7;
+}
+
+#content.right .settings_group .time a {
+    font-weight: normal;
+}
+
+#content.right .settings_group a:hover {
+    text-decoration: underline;
+}
+
+#content.right .settings_group a.button {
+    color: #fff;
+    padding: 2px 10px;
+}
+
+#content.right .settings_group a.button:hover {
+    text-decoration: none;
+}
+
+#content.right .settings_group th {
+    font-weight: bold;
+    font-size: 12px;
+    text-align: left;
+    padding: 0 0 5px 0;
+}
+
+#content.right .settings_group td {
+    padding: 5px 0;
+}
+
+#content.right .settings_group td.admin {
+    padding: 0 40px 0 0;
+    text-align: center;
+    width: 85px;
+}
+
+#content.right .settings_group td.active {
+    padding: 0 30px 0 0;
+    text-align: center;
+    width: 38px;
+}
+
+#content.right .settings_group td.actions a {
+    margin: 0 10px 0 0;
+}
+
+#content.right .settings_group td span.active {
+    color: #16c504;
+}
+
+#content.right .settings_group .title {
+    margin: 30px 0 10px 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#content.right .settings_group .user-content {
+    padding: 0;
+    overflow: hidden;
+    height: auto;
+    margin: 0 0 10px 0;
+}
+
+#content.right .settings_group label {
+    float: left;
+    width: 150px;
+    font-weight: normal;
+    line-height: normal;
+    color: #727272;
+}
+
+/* Kleine Korrekturen der Abstände */
+
+#admincase #content.right .settings_group .yd-inner-margin {
+    padding: 9px 0 1px 0;
+}
+
+#admincase p.yd-title-margin {
+    padding-top: 12px !important;
+}
+
+#admincase .dataTables_filter {
+    margin: 10px 10px 10px 0;
+}
+
+/*
+<div class="dataTables_filter" id="emp-table_filter">
+Suchen:
+  <input class="rund rund_set" value="" type="text">
+</div>
+*/
+/* Kleine Korrekturen der Abstände Ende */
+
+#content.right .settings_group .user-content label, #content.right .settings_group .title {
+    padding: 8px 0 0 20px;
+}
+
+#content.right .settings_group .user-content i.comp-name {
+    line-height: 25px;
+}
+
+#content.right .settings_group .w280 {
+    width: 280px;
+    float: left;
+}
+
+#content.right .settings_group .w110 {
+    width: 110px;
+    float: left;
+    margin: 0 15px 0 0;
+}
+
+#content.right .settings_group select.w110 {
+    width: 115px;
+}
+
+#content.right .settings_group .w90 {
+    width: 90px;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+#content.right .settings_group .w45 {
+    width: 45px;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+#content.right .settings_group .w60 {
+    width: 60px;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+#content.right .settings_group a.cal {
+    float: left;
+    width: 16px;
+    margin: 4px 0 0 0;
+    display: block;
+}
+
+#content.right .settings_group span {
+    color: #727272;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+#content.right .settings_group .radio {
+    float: left;
+    margin: 0 8px 0 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #444444;
+}
+
+#content.right .settings_group span.checked {
+    display: none;
+    width: 35px;
+    text-align: center;
+    float: left;
+}
+
+#content.right .settings_group span.txt {
+    display: block;
+    width: 280px;
+    text-align: center;
+    float: right;
+}
+
+#content.right .settings_group .select {
+    width: 280px;
+    float: left;
+    padding: 10px 0 20px 35px;
+    overflow: hidden;
+}
+
+#content.right .settings_group .select .head {
+    text-align: center;
+    padding: 0 0 10px 0;
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: bold;
+    height: 20px;
+}
+
+#content.right .settings_group .select .head select {
+    width: 90px;
+}
+
+#content.right .settings_group .select .sel {
+    border: 1px solid #c3c3c3;
+    background: #fff;
+    height: 180px;
+    overflow: auto;
+    margin: 0 0 5px 0;
+    padding: 5px;
+}
+
+#content.right .settings_group .buttons {
+    width: 41px;
+    float: left;
+    overflow: hidden;
+    padding: 70px 0 0 35px;
+}
+
+#content.right .settings_group .buttons a {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#content.right .settings_group .user-content.submit {
+    clear: both;
+    text-align: center;
+}
+
+#content.right .settings_group table .w45 {
+    float: none;
+    margin: 0 2px;
+}
+
+#content.right .settings_group table .w60 {
+    float: none;
+    margin: 0 5px;
+}
+
+/*
+   Basic
+***********************************************************/
+
+#admincase ul.content-box-tabs li a:hover {
+    color: #bb0000;
+}
+
+#admincase .pagination a.current {
+    background: #950000 !important;
+    border-color: #940000 !important;
+}
+
+#admincase .action-button span:hover {
+    color: #bb0000;
+}
+
+/*
+   End Bugfixing
+***********************************************************/
+
+#admincase #main-content a,
+#admincase .shortcut-button span:hover {
+    color: #2550a5 !important;
+}
+
+input .button {
+    padding: 20px !important;
+}
+
+.right .mydata .top-info {
+    padding: 10px 0 0 10px !important;
+}
+
+.wspezial {
+    width: 190px !important;
+}
+
+/*
+   Button
+***********************************************************/
+
+#admincase .button {
+    cursor: pointer;
+    padding: 3px 20px 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid #066fc0;
+    text-shadow: 1px 1px 0px #000;
+    background: #62abef;
+    background: -moz-linear-gradient(top,#62abef,#066fc0);
+    background: -webkit-gradient(linear, left top, left bottom, from(#62abef), to(#066fc0));
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+#admincase .button:hover {
+    cursor: pointer;
+    background: #6d99dd;
+}
+
+#admincase a.remove-link {
+    color: #bb0000;
+}
+
+#admincase a.remove-link:hover {
+    color: #000;
+}
+
+/************ Messages ************/
+
+#admincase #messages p,
+#admincase #messages form {
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+#admincase #messages h4 {
+    padding: 10px 0;
+}
+
+#admincase #messages fieldset {
+    margin: 0;
+}
+
+#admincase #messages textarea {
+    margin: 0 0 15px 0;
+}
+/********************************      Main Content      ********************************/
+
+
+/************ Lists ************/
+
+#admincase #main-content ul,
+#admincase #main-content ol {
+    padding: 10px 0;
+}
+
+/* Unordered List */
+
+#admincase #main-content ul li {
+    background: url('/media/images/yd-icons/bullet_black.png') center left no-repeat;
+    padding: 4px 0 4px 20px;
+}
+
+/* Ordered List */
+
+#admincase #main-content ol {
+    padding: 0 0 0 24px;
+}
+
+#admincase #main-content ol li {
+    list-style: decimal;
+    padding: 4px 0;
+}
+
+/*************** Content Box ***************/
+
+#admincase .content-box {
+    border: 1px solid #ccc;
+    margin: 0 0 20px 0;
+    background: #fff;
+}
+
+#admincase .content-box-header {
+    background: url(/media/images/yd-backend/admin-bg-content-box.png) repeat-x;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    height: 40px;
+}
+
+#admincase .content-box-header h3 {
+    padding: 12px 15px 10px;
+    float: left;
+}
+
+#admincase ul.content-box-tabs {
+    float: right;
+    padding: 12px 15px 0 0 !important;
+    margin: 0 !important;
+}
+
+#admincase ul.content-box-tabs li {
+    float: left;
+    margin: 0;
+    padding: 0 !important;
+    background-image: none !important;
+}
+
+#admincase ul.content-box-tabs li a {
+    color: #333;
+    padding: 8px 10px;
+    display: block;
+    margin: 1px;
+    border-bottom: 0;
+}
+
+#admincase ul.content-box-tabs li a:hover {
+    color: #57a000;
+}              
+
+#admincase ul.content-box-tabs li a.current {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    margin: 0;
+}
+
+#admincase .content-box-content {
+    padding: 20px;
+    font-size: 13px;
+    border-top: 1px solid #ccc;
+}
+
+/************ Table ************/
+
+#admincase #main-content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#admincase #main-content table thead th {
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+#admincase #main-content tbody {
+    border-bottom: 1px solid #ddd;
+}
+
+#admincase #main-content tbody tr {
+    background: #fff;
+}
+
+#admincase #main-content tbody tr.alt-row {
+    background: #f3f3f3;
+}
+
+#admincase #main-content table td,
+#admincase #main-content table th {
+    padding: 10px;
+    line-height: 1.3em;
+}        
+
+#admincase #main-content table tfoot td .bulk-actions {
+    padding: 15px 0 5px 0;
+} 
+
+#admincase #main-content table tfoot td .bulk-actions select {
+    padding: 4px;
+    border: 1px solid #ccc;
+}      
+
+/*************** Pagination ***************/
+
+#admincase #main-content .pagination {
+    text-align: right;
+    padding: 20px 0 5px 0;
+    font-family: arial, "nimbus sans l", sans-serif;
+    font-size: 10px;
+}
+#admincase .pagination a {
+    margin: 0 5px 0 0;
+    padding: 3px 6px;
+}
+
+#admincase .pagination a.number {
+    border: 1px solid #ddd;
+}
+
+#admincase .pagination a.current {
+    background: #469400 !important;
+    border-color: #459300 !important;
+    color: #fff !important;
+}
+
+#admincase .pagination a.current:hover {
+    text-decoration: underline;
+}
+
+/************ Shortcut Buttons ************/
+
+#admincase .shortcut-button {
+    border: 1px solid #ccc;
+    background: #f7f7f7;
+    display: block;
+    width: 120px;
+    margin: 0 0 20px 0;
+}
+
+#admincase .shortcut-button span {
+    border: 1px solid #fff;
+    display:block;
+    padding: 15px 10px 15px 10px;
+    text-align: center;
+    color: #555;
+    font-size: 13px;
+    line-height: 1.3em;
+}
+
+#admincase .shortcut-button span img {
+    margin-bottom: 10px;
+}
+
+#admincase .shortcut-button:hover {
+    background: #fff;
+
+}
+
+
+
+#admincase ul.shortcut-buttons-set li {
+    float: left;
+    margin: 0 15px 0 0;
+    padding: 0 !important;
+    background: 0;
+}
+
+/*************** Forms ***************/
+
+#admincase form label {
+    display: block;
+    padding: 0 0 10px;
+    font-weight: bold;
+}
+
+#admincase form fieldset legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+#admincase form p small {
+    font-size: 0.75em;
+    color: #777;
+}
+
+
+#admincase form input.text-input,
+#admincase form select,
+#admincase form textarea,
+#admincase form .wysiwyg {
+    padding: 6px;
+    font-size: 13px;
+    border: 1px solid #d5d5d5;
+    color: #333;
+    background: #fff;
+}
+
+#admincase form input.text-input:focus {
+    background: #fff;
+}
+
+#admincase form .small-input {
+    width: 25% !important;
+}
+
+#admincase form .medium-input {
+    width: 50% !important;
+}
+
+#admincase form .large-input {
+    width: 97.5% !important;
+    font-size: 16px !important;
+    padding: 8px !important;
+}
+
+#admincase form textarea {
+    width: 97.5% !important;
+    font-family: arial, "nimbus sans l", sans-serif;
+}
+
+#admincase form select {
+    padding: 4px;
+    background: #fff;
+}
+
+#admincase form input[type="checkbox"],
+#admincase form input[type="radio"] {
+    padding: 0;
+    background: none;
+    border: 0;
+}
+
+/*************** Notifications ***************/
+
+#admincase .notification {
+    position: relative;
+    margin: 0 0 15px 0;
+    padding: 0;
+    border: 1px solid;
+    background-position: 10px 11px !important;
+    background-repeat: no-repeat !important;
+    font-size: 13px;
+    width: 99.8%;
+}
+
+
+#admincase .attention {
+    background: #fffbcc url('/media/images/yd-icons/exclamation.png') 10px 11px no-repeat;
+    border-color: #e6db55;
+    color: #666452;
+}
+
+#admincase .information {
+    background: #dbe3ff url('/media/images/yd-icons/information.png');
+    border-color: #a2b4ee;
+    color: #585b66;
+}
+
+#admincase .success {
+    background: #d5ffce url('/media/images/yd-icons/tick_circle.png');
+    border-color: #9adf8f;
+    color: #556652;
+}
+
+#admincase .error {
+    background: #ffcece url('/media/images/yd-icons/cross_circle.png');
+    border-color: #df8f8f;
+    color: #665252;
+}
+
+#admincase .notification div {
+    display:block;
+    font-style:normal;
+    padding: 10px 10px 10px 36px;
+    line-height: 1.5em;
+}
+
+#admincase .notification .close {
+    color:#990000;
+    font-size:9px;
+    position:absolute;
+    right:5px;
+    top:5px;
+}
+
+/* Notification for form inputs */
+
+.input-notification {
+    background-position: left 2px;
+    background-repeat: no-repeat;
+    padding: 2px 0 2px 22px;
+    background-color: transparent;
+    margin: 0 0 0 5px;
+}
+
+/* Notification for login page */
+
+#login-wrapper #login-content .notification {
+    border: 0;
+    background-color: #141414;
+    color: #fff !important;
+}
+
+/*
+   Invalides CSS
+******************************************************/
+
+#admincase .button,
+#admincase #main-content table tfoot td .bulk-actions select,
+#admincase .pagination a.number,
+#admincase form input.text-input,
+#admincase form textarea,
+#admincase form .wysiwyg,
+#admincase form select {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#admincase .content-box,
+#admincase .content-box-header,
+#admincase ul.content-box-tabs li a.current,
+#admincase .shortcut-button,
+#admincase .notification {
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+
+#admincase .content-box-header {
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-bottomright: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#admincase .closed-box .content-box-header {
+    -moz-border-radius-bottomleft: 6px;
+    -moz-border-radius-bottomright: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+#admincase ul.content-box-tabs li a.current {
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-bottomright: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+#admincase .shortcut-button span {
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+}
+
+#admincase div.wysiwyg ul.panel li a { opacity: 0.6; }
+#admincase div.wysiwyg ul.panel li a:hover, #admincase div.wysiwyg ul.panel li a.active { opacity: 0.99; }
+
+
+
+
+
+
+.settings_comp {
+    padding: 0px 10px 10px 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background: #ffc;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+
+.spezialdiv {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #ffc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * jQuery UI CSS Framework 1.8.7
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+*/
+
+/* Layout helpers
+----------------------------------*/
+.ui-helper-hidden { display: none; }
+.ui-helper-hidden-accessible { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); }
+.ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+.ui-helper-clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.ui-helper-clearfix { display: inline-block; }
+/* required comment for clearfix to work in Opera \*/
+* html .ui-helper-clearfix { height:1%; }
+.ui-helper-clearfix { display:block; }
+/* end clearfix */
+.ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled { cursor: default !important; }
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/*
+ * jQuery UI CSS Framework 1.8.7
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ *
+ * To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Verdana,Arial,sans-serif&fwDefault=normal&fsDefault=1.1em&cornerRadius=4px&bgColorHeader=cccccc&bgTextureHeader=03_highlight_soft.png&bgImgOpacityHeader=75&borderColorHeader=aaaaaa&fcHeader=222222&iconColorHeader=222222&bgColorContent=ffffff&bgTextureContent=01_flat.png&bgImgOpacityContent=75&borderColorContent=aaaaaa&fcContent=222222&iconColorContent=222222&bgColorDefault=e6e6e6&bgTextureDefault=02_glass.png&bgImgOpacityDefault=75&borderColorDefault=d3d3d3&fcDefault=555555&iconColorDefault=888888&bgColorHover=dadada&bgTextureHover=02_glass.png&bgImgOpacityHover=75&borderColorHover=999999&fcHover=212121&iconColorHover=454545&bgColorActive=ffffff&bgTextureActive=02_glass.png&bgImgOpacityActive=65&borderColorActive=aaaaaa&fcActive=212121&iconColorActive=454545&bgColorHighlight=fbf9ee&bgTextureHighlight=02_glass.png&bgImgOpacityHighlight=55&borderColorHighlight=fcefa1&fcHighlight=363636&iconColorHighlight=2e83ff&bgColorError=fef1ec&bgTextureError=02_glass.png&bgImgOpacityError=95&borderColorError=cd0a0a&fcError=cd0a0a&iconColorError=cd0a0a&bgColorOverlay=aaaaaa&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=0&opacityOverlay=30&bgColorShadow=aaaaaa&bgTextureShadow=01_flat.png&bgImgOpacityShadow=0&opacityShadow=30&thicknessShadow=8px&offsetTopShadow=-8px&offsetLeftShadow=-8px&cornerRadiusShadow=8px
+*/
+
+/* Component containers
+----------------------------------*/
+.ui-widget { font-family: Verdana,Arial,sans-serif; font-size: 1.1em; }
+.ui-widget .ui-widget { font-size: 1em; }
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Verdana,Arial,sans-serif; font-size: 1em; }
+.ui-widget-content { border: 1px solid #aaaaaa; background: #ffffff url(/media/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x; color: #222222; }
+.ui-widget-content a { color: #222222; }
+.ui-widget-header { border: 1px solid #aaaaaa; background: #cccccc url(/media/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x; color: #222222; font-weight: bold; }
+.ui-widget-header a { color: #222222; }
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: 1px solid #d3d3d3; background: #e6e6e6 url(/media/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #555555; }
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #555555; text-decoration: none; }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 1px solid #999999; background: #dadada url(/media/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #212121; }
+.ui-state-hover a, .ui-state-hover a:hover { color: #212121; text-decoration: none; }
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid #aaaaaa; background: #ffffff url(/media/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #212121; }
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #212121; text-decoration: none; }
+.ui-widget :active { outline: none; }
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {border: 1px solid #fcefa1; background: #fbf9ee url(/media/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_glass_55_fbf9ee_1x400.png) 50% 50% repeat-x; color: #363636; }
+.ui-state-highlight a, .ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a { color: #363636; }
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {border: 1px solid #cd0a0a; background: #fef1ec url(/media/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_glass_95_fef1ec_1x400.png) 50% 50% repeat-x; color: #cd0a0a; }
+.ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a { color: #cd0a0a; }
+.ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text { color: #cd0a0a; }
+.ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary { font-weight: bold; }
+.ui-priority-secondary, .ui-widget-content .ui-priority-secondary,  .ui-widget-header .ui-priority-secondary { opacity: .7; filter:Alpha(Opacity=70); font-weight: normal; }
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon { width: 16px; height: 16px; background-image: url(/media/javascript/library/jquery/ui/1.8.7/themes/images/ui-icons_222222_256x240.png); }
+.ui-widget-content .ui-icon {background-image: url(/media/javascript/library/jquery/ui/1.8.7/themes/images/ui-icons_222222_256x240.png); }
+.ui-widget-header .ui-icon {background-image: url(/media/javascript/library/jquery/ui/1.8.7/themes/images/ui-icons_222222_256x240.png); }
+.ui-state-default .ui-icon { background-image: url(/media/javascript/library/jquery/ui/1.8.7/themes/images/ui-icons_888888_256x240.png); }
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background-image: url(/media/javascript/library/jquery/ui/1.8.7/themes/images/ui-icons_454545_256x240.png); }
+.ui-state-active .ui-icon {background-image: url(/media/javascript/library/jquery/ui/1.8.7/themes/images/ui-icons_454545_256x240.png); }
+.ui-state-highlight .ui-icon {background-image: url(/media/javascript/library/jquery/ui/1.8.7/themes/images/ui-icons_2e83ff_256x240.png); }
+.ui-state-error .ui-icon, .ui-state-error-text .ui-icon {background-image: url(/media/javascript/library/jquery/ui/1.8.7/themes/images/ui-icons_cd0a0a_256x240.png); }
+
+.ui-icon-circle-triangle-e { background-position: -48px -192px; }
+.ui-icon-circle-triangle-w { background-position: -80px -192px; }
+
+/* Overlays */
+.ui-widget-overlay { background: #aaaaaa url(/media/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x; opacity: .30;filter:Alpha(Opacity=30); }
+.ui-widget-shadow { margin: -8px 0 0 -8px; padding: 8px; background: #aaaaaa url(/media/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x; opacity: .30;filter:Alpha(Opacity=30); -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; }
+
+/*
+ * jQuery UI Datepicker 1.8.7
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Datepicker#theming
+*/
+.ui-datepicker { width: 17em; padding: .2em .2em 0; display: none; }
+.ui-datepicker .ui-datepicker-header { position:relative; padding:.2em 0; }
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { position:absolute; top: 2px; width: 1.8em; height: 1.8em; }
+.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover { top: 1px; }
+.ui-datepicker .ui-datepicker-prev { left:2px; }
+.ui-datepicker .ui-datepicker-next { right:2px; }
+.ui-datepicker .ui-datepicker-prev-hover { left:1px; }
+.ui-datepicker .ui-datepicker-next-hover { right:1px; }
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span { display: block; position: absolute; left: 50%; margin-left: -8px; top: 50%; margin-top: -8px;  }
+.ui-datepicker .ui-datepicker-title { margin: 0 2.3em; line-height: 1.8em; text-align: center; }
+.ui-datepicker .ui-datepicker-title select { font-size:1em; margin:1px 0; }
+.ui-datepicker select.ui-datepicker-month-year {width: 100%;}
+.ui-datepicker select.ui-datepicker-month, 
+.ui-datepicker select.ui-datepicker-year { width: 49%;}
+.ui-datepicker table {width: 100%; font-size: .9em; border-collapse: collapse; margin:0 0 .4em; }
+.ui-datepicker th { padding: .7em .3em; text-align: center; font-weight: bold; border: 0;  }
+.ui-datepicker td { border: 0; padding: 1px; }
+.ui-datepicker td span, .ui-datepicker td a { display: block; padding: .2em; text-align: right; text-decoration: none; }
+.ui-datepicker .ui-datepicker-buttonpane { background-image: none; margin: .7em 0 0 0; padding:0 .2em; border-left: 0; border-right: 0; border-bottom: 0; }
+.ui-datepicker .ui-datepicker-buttonpane button { float: right; margin: .5em .2em .4em; cursor: pointer; padding: .2em .6em .3em .6em; width:auto; overflow:visible; }
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current { float:left; }
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi { width:auto; }
+.ui-datepicker-multi .ui-datepicker-group { float:left; }
+.ui-datepicker-multi .ui-datepicker-group table { width:95%; margin:0 auto .4em; }
+.ui-datepicker-multi-2 .ui-datepicker-group { width:50%; }
+.ui-datepicker-multi-3 .ui-datepicker-group { width:33.3%; }
+.ui-datepicker-multi-4 .ui-datepicker-group { width:25%; }
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header { border-left-width:0; }
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header { border-left-width:0; }
+.ui-datepicker-multi .ui-datepicker-buttonpane { clear:left; }
+.ui-datepicker-row-break { clear:both; width:100%; }
+
+/* RTL support */
+.ui-datepicker-rtl { direction: rtl; }
+.ui-datepicker-rtl .ui-datepicker-prev { right: 2px; left: auto; }
+.ui-datepicker-rtl .ui-datepicker-next { left: 2px; right: auto; }
+.ui-datepicker-rtl .ui-datepicker-prev:hover { right: 1px; left: auto; }
+.ui-datepicker-rtl .ui-datepicker-next:hover { left: 1px; right: auto; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane { clear:right; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane button { float: left; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current { float:right; }
+.ui-datepicker-rtl .ui-datepicker-group { float:right; }
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+
+/* IE6 IFRAME FIX (taken from datepicker 1.5.3 */
+.ui-datepicker-cover {
+    display: none; /*sorry for IE5*/
+    display/**/: block; /*sorry for IE5*/
+    position: absolute; /*must have*/
+    z-index: -1; /*must have*/
+    filter: mask(); /*must have*/
+    top: -4px; /*must have*/
+    left: -4px; /*must have*/
+    width: 200px; /*must have*/
+    height: 200px; /*must have*/
+}

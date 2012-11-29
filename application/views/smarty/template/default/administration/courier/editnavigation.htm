@@ -1,0 +1,17 @@
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            <h1>{__b('Kurierdienst: ')}{$courier->getName()} (#{$courier->getId()})</h1>
+        </div>
+        <div class="item-content">
+            <ul class="be-tabs">
+                <li><a href="/administration_courier/edit/cid/{$courier->getId()}">{__b('Informationen')}</a></li>
+                <li><a href="/administration_courier/editrestaurants/cid/{$courier->getId()}">{__b('Dienstleister')}</a></li>
+                <li><a href="/administration_courier/editplzs/cid/{$courier->getId()}">{__b('Liefergebiete')}</a></li>
+                <li><a href="/administration_courier/editdynamiccosts/cid/{$courier->getId()}">{__b('Dynamische Kosten')}</a></li>
+                <li><a href="/administration_courier/editlocations/cid/{$courier->getId()}">{__b('Kosten')}</a></li>
+                <li><a href="/administration_courier/editbilling/cid/{$courier->getId()}">{__b('Rechnung')}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

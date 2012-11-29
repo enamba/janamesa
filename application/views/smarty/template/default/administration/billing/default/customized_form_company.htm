@@ -1,0 +1,75 @@
+<div class="three-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Auflistung')}
+        </div>
+        <div class="item-content">
+            {__b('Markierte Felder werden in der Auflistung ebenfalls angezeigt.')}<br/><br/>
+            <table class="user-tab">
+                <tr>
+                    <td>{__b('Mitarbeiter')}</td>
+                    <td><input type="checkbox" name="showEmployee" value="1" {if $customized.showEmployee}checked="checked"{/if} /></td>
+                </tr>
+                <tr>
+                    <td>{__b('ProjectCode')}</td>
+                    <td><input type="checkbox" name="showProject" value="1" {if $customized.showProject}checked="checked"{/if} /></td>
+                </tr>
+                <tr>
+                    <td>{__b('Kostenstelle')}</td>
+                    <td><input type="checkbox" name="showCostcenter" value="1" {if $customized.showCostcenter}checked="checked"{/if} /> </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="item">
+        <div class="item-head">
+            {__b('Templates und Auflistung')}
+        </div>
+        <div class="item-content">
+            {__b('Auswahl des Templates und Möglichkeit die Auflistung auf ausführlich zu stellen.')}<br/><br/>
+            <table class="user-tab">
+                <tr>
+                    <td>{__b('Ausführliche Auflistung')}</td>
+                    <td><input type="checkbox" name="verbose" value="1" {if $customized.verbose}checked="checked"{/if} /></td>
+                </tr>
+                <tr>
+                    <td>{__b('Template')}</td>
+                    <td>
+                        <select name="template">
+                            <option value="standard" {if $customized.template=='standard'}selected="selected"{/if}>{__b('Standard')}</option>
+                            <option value="project" {if $customized.template=='project'}selected="selected"{/if}>{__b('Projekt (standard)')}</option>
+                            <option value="costcenter" {if $customized.template=='costcenter'}selected="selected"{/if}>{__b('Kostenstellen (standard)')}</option>
+                            <option value="simple" {if $customized.template=='simple'}selected="selected"{/if}>{__b('Einfach (nur Bruttowerte)')}</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="item">
+        <div class="item-head">
+            {__b('Eigenständige PDF pro Kostenstelle oder Projektcode')}            
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <td>{__b('Projekte')}</td>
+                    <td><input type="checkbox" name="projectSub" value="1" {if $customized.projectSub}checked="checked"{/if} /></td>
+                </tr>
+                <tr>
+                    <td>{__b('Kostenstellen')}</td>
+                    <td><input type="checkbox" name="costcenterSub" value="1" {if $customized.costcenterSub}checked="checked"{/if} /> </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+            <input type="submit" value="{__b('speichern')}" class="button" />
+        </div>
+    </div>
+</div>
+

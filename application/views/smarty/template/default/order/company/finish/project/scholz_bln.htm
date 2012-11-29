@@ -1,0 +1,64 @@
+{if $order->getCustomer()->getCompany()->getCodeVariant() != 0}
+<div class="yd-box" {if $order->getCustomer()->getCompany()->isCode()} id="yd-comp-need-code"{/if}>
+     <input type="hidden" name="yd-need-code" value="{$cust->getCompany()->isCode()}" />
+    <div class="yd-bigbox-head">
+        {__('Projektnummer')}
+    </div>
+    <div class="yd-bigbox-body">
+
+        <ul class="yd-company-form">
+            <li>
+
+                <span>{__('Projektcode:')} {if $order->getCustomer()->getCompany()->isCode()}<b class="red">*</b>{/if}</span>
+
+                <select name="projectAddition" style="width:212px;">
+                    <option value="NWB">{__('NWB')}</option>
+                    <option value="WB">{__('WB')}</option>
+                </select>
+
+            </li>
+            <li>
+
+                <input type="text" value="" class="input1 yd-clear-on-click {if $order->getCustomer()->getCompany()->isCode()}validate[projectnumber]{/if}" name="pnumber" id="yd-pn" />
+                {if $order->getCustomer()->getCompany()->getCodeVariant() == 1}
+                <script type="text/javascript">
+                    <!--
+                    //TODO mustMatch: true
+                    $("#yd-pn").autocomplete({
+                        source: "/autocomplete/projectnumbers",
+                        focus: function (event, ui) {
+                            this.value = ui.item.number;
+                            return false;
+                        },
+                        select: function (event, ui) {
+                            this.value = ui.item.number;
+                            return false;
+                        }
+                    });
+                    -->
+                </script>
+                {/if}
+                {if $order->getCustomer()->getCompany()->getCodeVariant() == 2}
+                <script type="text/javascript">
+                    <!--
+                    $("#yd-pn").autocomplete({
+                        source: "/autocomplete/projectnumbers",
+                        focus: function (event, ui) {
+                            this.value = ui.item.number;
+                            return false;
+                        },
+                        select: function (event, ui) {
+                            this.value = ui.item.number;
+                            return false;
+                        }
+                    });
+                    -->
+                </script>
+                {/if}
+
+            </li>
+        </ul>
+
+    </div>
+</div>
+{/if}

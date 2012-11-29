@@ -1,0 +1,42 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<ul class="be-tabs">
+    <li><a href="/administration_service_category_picture/create" class="tab" id="yd-this-tab-1">{__b('Bilderkategorie erstellen')}</a></li>
+</ul>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <table>
+                    <tr>
+                        <td>
+                            {__b('Dienstleister wählen und Bilderkategorien zuordnen')}
+                        </td>
+                        <td>&nbsp;</td>
+                        <td>
+                            <select name="id" class="yd-assign-picture-cat-restid">
+                                <option value="">{__b('bitte wählen')}</option>
+                                {foreach from=$restIds item=ri}
+                                    <option value="{$ri.id}">{$ri.name} (#{$ri.id})</option>
+                                {/foreach}
+                            </select>
+                            <input type="button" class="yd-assign-picture-cat button" value="{__b('Zuordnen')}"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Übersicht der Bilderkategorien')}
+            </div>
+            <div class="item-content">
+                {$grid}
+            </div>
+        </div>
+    </div>
+
+{/block}

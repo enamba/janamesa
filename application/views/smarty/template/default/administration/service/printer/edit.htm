@@ -1,0 +1,106 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+{$softMode = ($config->domain->base|substr:-3 == '.pl')}
+<form action="/administration_service_printer/edit/" method="post">
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Drucker')} #{$printer->getId()}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td>{__b('Id:')}</td>
+                            <td><input type="text" name="id" value="{$printer->getId()}" style="width: 250px;" readonly="readonly" /> *</td>
+                        </tr>
+                        <tr>
+                            <td width="20%">{__b('Typ')}:</td>
+                            <td width="80%">
+                                <select name="type">>
+                                    <option value="topup" {if $printer->getType() =='topup'}selected="selected"{/if}>{__b('Topup Drucker')}</option>
+                                    <option value="wiercik" {if $printer->getType() == 'wiercik'}selected="selected"{/if}>{__b('Wiercik Drucker (Polen)')}</option>
+                                </select> *
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Status')}:</td>
+                            <td>
+                                <select name="stateId" style="width: 200px;">
+                                    {foreach from=Yourdelivery_Model_DbTable_Printer_Topup::getStates() item=s}
+                                    <option value="{$s['id']}" {if $printer->getStateId() == $s['id']}selected="selected"{/if}>{$s['state']}</option>
+                                    {/foreach}
+                                </select> *
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Seriennummer')}:</td>
+                            <td><input type="text" name="serialNumber" value="{$printer->getSerialNumber()}" style="width: 250px;"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('SIM Nummer')}:</td>
+                            <td><input type="text" name="simNumber" value="{$printer->getSimNumber()}" style="width: 250px;"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('SIM PIN1')}:</td>
+                            <td><input type="text" name="simPin1" value="{$printer->getSimPin1()}" style="width: 250px;"/> {if !$softMode}*{/if}</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('SIM PIN2')}:</td>
+                            <td><input type="text" name="simPin2" value="{$printer->getSimPin2()}" style="width: 250px;"/> {if !$softMode}*{/if}</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('SIM PUK1')}:</td>
+                            <td><input type="text" name="simPuk1" value="{$printer->getSimPuk1()}" style="width: 250px;"/> {if !$softMode}*{/if}</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('SIM PUK2')}:</td>
+                            <td><input type="text" name="simPuk2" value="{$printer->getSimPuk2()}" style="width: 250px;"/> {if !$softMode}*{/if}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="checkbox" name="notify" value="1"{if $printer->getNotify()} checked="checked"{/if} /> {__b('Benachrichtigung beim Erstbetrieb')}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Dienstleister')}</td>
+                            <td>
+                                <select name="restaurantId[]" style="width: 350px;" multiple size="10">
+                                    {foreach from=$restIds item=ri}
+                                    <option value="{$ri.id}">{$ri.name} (#{$ri.id})</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <table class="user-tab">
+                                    {foreach $printer->getRestaurantAssociations() as $a}
+                                    <tr>
+                                        <td width="30%">
+                                            <a href="/administration_service_edit/index/id/{$a->getRestaurantId()}">{$a->getRestaurant()->getName()}</a>
+                                        </td>
+                                        <td>
+                                            <a href="/administration_service_printer/deleteassoc/id/{$a->getId()}"><img src="{$domain_static}/images/yd-backend/del-cat.gif" alt="{__b('Löschen')}" /></a><br>
+                                        </td>
+                                    </tr>
+                                    {/foreach}
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Speichern')}" class="button rund_set"/>
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+
+</form>
+{/block}

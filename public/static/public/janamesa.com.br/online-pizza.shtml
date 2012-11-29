@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html>         <!--<![endif]-->
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="Jánamesa Delivery On-line Pizza" />
+        <meta name="description" content="Entrega rápida da sua comida favorita. Peça pizza, sushi, temaki, bebidas e tudo o que você quiser e pague on-line ou em dinheiro." />
+        <meta name="robots" content="noindex, follow" />
+        <link rel="SHORTCUT ICON" href="/media/css/www.janamesa.com.br/favicon.ico" type="image/x-icon">
+
+            <title>Pizza delivery online</title>
+
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-core.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-home.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-jquery.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-ie.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-infocenter.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-hidden.css" />
+            
+            <script type="text/javascript" src="/media/javascript/compiled/frontend-sem.js"></script>
+   </head>
+    <body class="br">
+
+		<!--#include virtual="_br_header.html" -->
+
+            <div id="yd-content" class="yd-clearfix post" style="margin-top:-10px; padding-top:10px;">
+					<div style="background-image:url(http://www.janamesa.com.br/media/css/www.janamesa.com.br/images/sem-lps/pizza_1.jpg); width:1020px; height:600px; margin:0 auto;">
+                    <!--#include virtual="_br_cepbox.html" -->
+						</div>
+						
+						<h1>Online pizza</h1>
+<p>Entre todas as comidas que costumam ser entregues por delivery a mais popular, campeã em números de entrega e em tempo de serviço é sem dúvida a pizza. A grande maioria das pizzerias de São Paulo nem ao menos contam com um ambiente para se sentar e fazer sua refeição ao lado do forno de pizza, todas estas pizzerias partem do princípio que a maioria esmagadora dos clientes irão preferir pedir a pizza por delivery. Um mercado grande como o de delivery de pizza não poderia se estagnar, por tanto hoje em dia em diversas pizzerias é possível fazer este pedido online, realizando assim o serviço que chamamos de online pizza, online pizza é por tanto e doravante o serviço de entrega de pizzas através da web. Quando você liga seu computador, conecta o a internet, abre seu browser e pede uma pizza através de uma plataforma de delivery online, o que você esta fazendo é online pizza.</p>
+
+<h2>Online pizza</h2>
+<p>Muitas pessoas gostam de pizza e muitas pessoas gostam de internet, surge então uma ideia: por que não juntar-se ambos interesses e criar-se algo novo como o incrível online pizza , Online pizza é uma maneira revolucionária de se comer pizza, os pobres italianos que criaram este saboroso prato mal podiam desconfiar da grandeza que sua invenção alcançaria um dia com a criação do online pizza. Agora, como se já não fosse prático o suficiente comer um alimento que dispensa talheres e até pratos, você pode come-lo sem sair de casa, ou sem ter que dar um mísero telefonema para fazer seu pedido, basta entrar no Google, procurar online pizza, escolher uma das milhares de opções e vualá! O online pizza delivery acabou de se tornar um realidade na sua vida. Nada mais saboros e prático do que uma pizza entregue na porta da sua casa.</p>
+                </div>
+
+            </div>
+        </div>
+
+		<!--#include virtual="_br_footer.html" -->

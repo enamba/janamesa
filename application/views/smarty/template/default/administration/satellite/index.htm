@@ -1,0 +1,14 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<header class="yd-newsatellite"><a href="/administration_satellite/edit/">{__b('Neuen Satelliten bauen...')}</a></header>
+
+<div class="be-1-column">
+    <div class="be-box">
+        <h2>{__b('Satelliten')}</h2>
+        <div class="be-box-in">
+            {$grid}
+        </div>
+    </div>
+</div>
+
+{/block}

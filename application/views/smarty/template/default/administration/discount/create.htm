@@ -1,0 +1,171 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="be-1-column">
+    <div class="be-box">
+        <h2>{__b('Rabattaktion erstellen')}   </h2>
+        <div class="be-box-in be-discount-formulars be-discount-create">
+
+            <form action="/administration_discount/create" method="post" enctype="multipart/form-data">
+
+                <ul>
+                    <li class="be-dc1">
+                        <label>{__b('Name:')}</label>
+                        <input type="text" name="name" value="{$p.name}"/> *
+                    </li>
+                    <li class="be-dc2">
+                        <label>{__b('Status')}</label>
+                        <select name="status">
+                            <option value="1" {if isset($p.status) && $p.status == 1}selected{/if}>{__b('aktiviert')}</option>
+                            <option value="0" {if isset($p.status) && $p.status == 0}selected{/if}>{__b('deaktiviert')}</option>
+                        </select>
+                    </li>
+                    <li class="be-dc3">
+                        <label>{__b('Typ')}</label>
+                        <select name="type" id='yd-rabatt_type' style="width: 300px;">
+                            <option value="0">{__b('Typ 0')}</option>
+                            <option value="1" {if isset($p.type) && $p.type == 1}selected{/if}>{__b('Typ 1')}</option>
+                            <option value="2" {if isset($p.type) && $p.type == 2}selected{/if}>{__b('Typ 2')}</option>
+                            <option value="3" {if isset($p.type) && $p.type == 3}selected{/if}>{__b('Typ 3')}</option>
+                            <option value="4" {if isset($p.type) && $p.type == 4}selected{/if}>{__b('Typ 4')}</option>
+                            <option value="5" {if isset($p.type) && $p.type == 5}selected{/if}>{__b('Typ 5')}</option>
+                            <option value="6" {if isset($p.type) && $p.type == 6}selected{/if}>{__b('Typ 6')}</option>
+                            <option value="7" {if isset($p.type) && $p.type == 7}selected{/if}>{__b('Typ 7')}</option>
+                        </select>
+                        <small><span id="yd-rabatt_type_info">{__b('Einfache Rabattaktion')}</span></small>
+                    </li>
+                    <li class="be-dc32" id="yd-admin-discount-restaurants">
+                        <label>{__b('nur für bestimmte Dienstleister')}</label>
+                        <input id="yd-discount-restaurants-restriction" type="checkbox"  value="0" />
+                        <input id="yd-discount-add-restaurant" class="hidden" type="text" value="" />
+
+                        <div class="yd-restaurants-list-container hidden" >
+                            <div id="yd-restaurants-list">
+                            </div>
+                            <a id="yd-restaurants-list-delete-all" style="display:none">{__b('alle entfernen')}</a>
+                        </div>
+
+                    </li>                   
+                    <li class="be-dc32" id="yd-admin-discount-citys">
+                        <label>{__b('nur für bestimmte PLZ-Bereiche')}</label>
+                        <input id="yd-discount-citys-restriction" type="checkbox"  value="0" />
+                        <input id="yd-discount-add-city" class="hidden" type="text" value="" />
+
+                        <div class="yd-restaurants-list-container hidden"  >
+                            <div id="yd-discount-citys" >                             
+                            </div>
+                            <a id="yd-discount-citys-delete-all" style="display:none">{__b('alle entfernen')}</a>
+                        </div>
+
+                    </li>
+                    <li class="be-dc41" id="yd-admin-discount-create-usage-row" class="hidden">
+                        <label>{__b('Nutzung')}</label>
+                        <select name="rrepeat" id="yd-admin-discount-create-usage" autocomplete="off">
+                            <option value="0" {if isset($p.rrepeat) && $p.rrepeat == 0}selected{/if}>{__b('einmalig')}</option>
+                            <option value="1" {if isset($p.rrepeat) && $p.rrepeat == 1}selected{/if}>{__b('wiederholt')}</option>
+                            <option value="2" {if isset($p.rrepeat) && $p.rrepeat == 2}selected{/if}>{__b('Anzahl')}</option>
+                        </select>
+                        <span id="yd-admin-discount-create-usage-count" class="hidden">
+                            <input style="width:50px" type="text" value="{$p.countUsage}" name="countUsage"  /> ({__b('Anzahl der Nutzungen dieses Gutscheins')})
+                        </span>
+                    </li>
+                    <li class="be-dc42" id="yd-admin-discount-referer-row" style="display:none;">
+                        <label>{__b('Referer URL')}</label>
+                        <input type="text" name="referer" id="yd-admin-discount-referer" value="{$p.referer}" /> * <small>{__b('Bitte nur den letzten Teil der URL Adresse angeben, ohne Sonderzeichen. Wenn also die Adresse der Rabattaktion "http://www.lieferando.de/discountaction" sein soll, dann nur "discountaction" in diesem Feld eintragen')}</small>
+                    </li>
+                    <li class="be-dc5" id="yd-admin-discount-img-row" style="display:none;">
+                        <label>{__b('Bild')}</label>
+                        <input type="file" name="img" class="rund_set text"/>
+                    </li>
+                    <li class="be-dc6" id="yd-admin-discount-fake-code-row" style="display:none;">
+                        <label>{__b('Universeller Rabattcode')}</label>
+                        <input type="text" name="fakeCode" value="{$p.fakeCode}" id="yd-admin-discount-fakeCode" /> *
+                    </li>
+                    <li class="be-dc7">
+                        <label>{__b('Rabatt')}</label>
+                        <input style="width: 150px" type="text" name="rabatt" value="{$p.rabatt}"/> *
+                        <select style="width: 127px" name="kind">
+                            <option value="0" {if isset($p.kind) && $p.kind == 0}selected{/if}>%</option>
+                            <option value="1" {if isset($p.kind) && $p.kind == 1}selected{/if}>{__b('€')}</option>
+                        </select>
+                    </li>
+                    <li class="be-dc8">
+                        <label>{__b('Startzeitpunkt:')}</label>
+                        <input style="width: 205px" type="text" name="startTimeD" id="yd-discount-create-start" value="{if ($p.startTimeD>0)}{$p.startTimeD}{else}{time()|timestampYMD}{/if}" readonly/> *
+                        {include file='administration/timebit.htm' separator=':' mode='startTimeT'}
+                    </li>
+                    <li class="be-dc9">
+                        <label>{__b('Endzeitpunkt:')}</label>
+                        <input style="width: 205px" type="text" name="endTimeD" id="yd-discount-create-end" value="{if ($p.endTimeD>0)}{$p.endTimeD}{else}{if $until>0}{$until}{else}{time()|timestampYMD}{/if}{/if}" readonly/> *
+                        {include file='administration/timebit.htm' separator=':' mode='endTimeT' value='24:00'}
+                    </li>
+                    <li class="be-dc10">
+                        <label>{__b('Mindestbestellwert:')}</label>
+                        <input type="text" name="minAmount" value="{$p.minAmount|default:0}"/> €
+                    </li>
+                    <li class="be-dc11" id="yd-admin-discount-code-count-row">
+                        <label>{__b('Anzahl Codes:')}</label>
+                        <input style="width: 100px" type="text" name="number" value="{$p.number|default:1}" id="yd-admin-discount-number" /> *
+                        <input style="width: 164px" type="text" name="email" value="{$p.email}" />
+                        <small>{__b('Bei mehr als 500 Gutscheincodes trage hier deine eMail Adresse ein und du bekommst eine Nachricht, wenn diese generiert wurden')}</small>
+                    </li>
+                    <li class="be-dc11">
+                        <label>{__b('Beschreibung:')}</label>
+                        <textarea name="info">{$p.info}</textarea>
+                        <small>{__b('Für Nutzer sichtbar nach dem erfolgreichen Einlösen')}</small>
+                    </li>
+                    <li class="be-dc11">
+                        <label>{__b('Rabatt noch nicht gültig:')}</label>
+                        <textarea name="notStartedInfo">{$p.notStartedInfo}</textarea>
+                        <small>{__b('Für Nutzer sichtbar, wenn der Gutschein VOR seiner Gültigkeit eingelöst wird. (wenn leer, dann wird Standardtext gezeigt)')}</small>
+                    </li>
+                    <li class="be-dc11">
+                        <label>{__b('Rabatt beendet weil:')}</label>
+                        <textarea name="expirationInfo">{$p.expirationInfo}</textarea>
+                        <small>{__b('Für Nutzer sichtbar, wenn der Gutschein NACH seiner Gültigkeit eingelöst wird. (wenn leer, dann wird Standardtext gezeigt)')}</small>
+                    </li>
+                    <li class="be-dc13" id="yd-admin-discount-newCustomerCheck" style="display: none">
+                        <label>{__b('Verifizierung bei Payment:')}</label>
+                        <input type="checkbox" value="1" name="newCustomerCheck" checked="checked" />
+                        {__b('Neukundengutscheine werden standartmäßig mit Paypal/SÜ zusätzlich verifiziert. Im Einzelfall und in Absprache kann das deaktiviert werden.')}
+                    </li>
+                    <li class="be-dc14">
+                        <label>{__b('Nur privat:')}</label>
+                        <input type="checkbox" value="1" name="onlyPrivate" {if isset($p.onlyPrivate) && $p.onlyPrivate == 1}checked{/if}/>
+                    </li>
+                    <li class="be-dc15">
+                        <label>{__b('Nur Firmen:')}</label>
+                        <input type="checkbox" value="1" name="onlyCompany" {if isset($p.onlyCompany) && $p.onlyCompany == 1}checked{/if}/>
+                    </li>
+                    <li class="be-dc16">
+                        <label>{__b('Nur Restaurants:')}</label>
+                        <input type="checkbox" value="1" name="onlyRestaurant" {if isset($p.onlyRestaurant) && $p.onlyRestaurant == 1}checked{/if}/>
+                    </li>
+                    <li class="be-dc17">
+                        <label>{__b('Nur Kunden:')}</label>
+                        <input type="checkbox" value="1" name="onlyCustomer" {if isset($p.onlyCustomer) && $p.onlyCustomer == 1}checked{/if}/>
+                    </li>
+                    <li class="be-dc18">
+                        <label>{__b('Nur Premium:')}</label>
+                        <input type="checkbox" value="1" name="onlyPremium" {if isset($p.onlyPremium) && $p.onlyPremium == 1}checked{/if}/>
+                               {__b('nur einlösbar bei Premiumbestellungen')}
+                    </li>
+                    <li class="be-dc19">
+                        <label>{__b('nur über Mobile Apps einlösbar')}</label>
+                        <input type="checkbox" value="1" name="onlyIphone" {if isset($p.onlyIphone) && $p.onlyIphone == 1}checked{/if}/>
+                               {__b('Nur über Android- oder iPhone-App einlösbar.')}
+                    </li>
+                </ul>
+
+                <hr />
+
+                <input type="submit" value="{__b('Jetzt erstellen!')}" class="button" />
+                &nbsp;&nbsp;&nbsp;
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button cancel" />
+
+            </form>
+
+        </div>
+    </div>
+</div>
+{/block}

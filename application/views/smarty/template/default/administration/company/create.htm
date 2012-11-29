@@ -1,0 +1,320 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<div id="yd-admin-backend-wait" style="display:none;"><img src="{$domain_static}/images/yd-backend/yd-back-load.gif" /></div>
+
+<form action="/administration_company/create" method="post" class="yd-form-toggle">
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set"/>
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Firma')} <a href="#" class="yd-form-toggle">{__b('bearbeiten')}</a>
+            </div>
+            <div class="item-content">
+                <table class="user-tab" width="100%">
+                    <tr>
+                        <td width="30%">{__b('Name')}</td>
+                        <td><input type="text" name="name" class="rund_set text" value="{$p.name}"/> *</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Branche')}</td>
+                        <td><input type="text" name="industry" class="rund_set text"  value="{$p.industry}"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Webseite')}</td>
+                        <td><input type="text" name="website" class="rund_set text"  value="{$p.website}"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('AGB akzeptiert:')}</td>
+                        <td><input type="checkbox" id="agb" value="1" name="agb" checked/></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+                {__b('Hinweis')}
+            </div>
+            <div class="item-content">
+                {__b('Wenn die AGB beim erstellen nicht ausgewählt werden, wird ein Testaccount erstellt')}
+            </div>
+        </div>
+    </div>
+
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Adressdaten')}
+            </div>
+            <div class="item-content">
+                <table class="user-tab" width="100%">
+                    <tr>
+                        <td width="30%">{__b('Straße:')}</td>
+                        <td width="80%"><input type="text" name="street" class="rund_set text" value="{$p.street}"/> *</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('HausNr:')}</td>
+                        <td><input type="text" name="hausnr" class="rund_set text" value="{$p.hausnr}"/> *</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('PLZ:')}</td>
+                        <td>
+                            {if strpos($config->domain->base, "janamesa")!==false}
+                                <input type="text" name="plz"/> *
+                            {else}
+                                {include file='administration/city_autocomplete.htm'} *
+                            {/if}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Hinweis')}</td>
+                        <td><input type="text" name="comment" class="rund_set text" value="{$p.comment}"/></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+                {__b('Hinweis')}
+            </div>
+            <div class="item-content">
+            </div>
+        </div>
+    </div>
+    
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Zahlungsinformationen')}
+            </div>
+            <div class="item-content">
+                <table class="user-tab" width="100%">
+                    <tr>
+                        <td width="30%">{__b('Kontobesitzer:')}</td>
+                        <td width="40%"><input type="text" name="ktoName" value="{$p.ktoName}" class="rund_set text"/></td>
+                        <td width="30%"></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Kontonummer:')}</td>
+                        <td colspan="2"><input type="text" name="ktoNr" value="{$p.ktoNr}" class="rund_set text"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('BLZ:')}</td>
+                        <td colspan="2"><input type="text" name="ktoBlz" value="{$p.ktoBlz}" class="rund_set text"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Akzeptiert Lastschrift')}</td>
+                        <td colspan="2"><input type="checkbox" name="debit" value="1" {if $p.debit==1}checked{/if} class="rund_set text"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Steuernummer')}</td>
+                        <td><input type="text" name="steuerNr" value="{$p.steuerNr}" class="rund_set text"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Rechnungsintervall')}<td>
+                        <td>
+                            <select name="billInterval">
+                                <option value="0">{__b('Monatlich')}</option>
+                                <option value="1" {if ($p.billInterval=='1')}selected="selected"{/if}>{__b('Alle 2 Wochen')}</option>
+                                <option value="2" {if ($p.billInterval=='2')}selected="selected"{/if}>{__b('Täglich')}</option>
+                                <option value="3" {if ($p.billInterval=='3')}selected="selected"{/if}>{__b('pro Bestellung')}</option>
+                            </select>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Rechnungsversand:')}</td>
+                        <td colspan="2">
+                            <select name="billDeliver" class="rund_set text">
+                                <option value="">{__b('Kein')}</option>
+                                <option value="fax" {if $p.billDeliver == "fax"}selected="selected"{/if}>{__b('Faxgerät')}</option>
+                                <option value="email" {if $p.billDeliver == "email"}selected="selected"{/if}>{__b('eMail')}</option>
+                                <option value="post" {if $p.billDeliver == "post"}selected="selected"{/if}>{__b('Post')}</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+                {__b('Hinweis')}
+            </div>
+            <div class="item-content">
+            </div>
+        </div>
+    </div>
+
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Rechnungsadresse')}
+            </div>
+            <div class="item-content">
+                <div>
+                    {__b('Rechnungsadresse ist die selbe wie Kontakt ')}<input type="checkbox" name="bill_as_contact" value="1" id="yd-bill-as-contact" checked="checked" />
+                </div>
+                <div id="yd-other-bill" style="display:none;">
+                    <br/>
+                    <table class="user-tab" width="100%">
+                        <tr>
+                            <td width="20%">{__b('Bestehenden Kontakt auswählen')}</td>
+                            <td width="80%">
+                                <select name="selBillingContactId" id="yd-select_billcontact">
+                                    <option value="-1" >{__b('Neuer Kontakt')}</option>
+                                    {foreach from=$contacts item=ci}
+                                    <option value="{$ci.id}">{$ci.name} {$ci.prename}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    <div id="yd-create-billcontact">
+                        <table class="user-tab" width="100%">
+                            <tr>
+                                <td width="20%">{__b('Vorname:')}</td>
+                                <td width="80%"><input type="text" name="bill_prename" class="rund_set text"/> *</td>
+                            </tr>
+                            <tr>
+                                <td>{__b('Nachname:')}</td>
+                                <td><input type="text" name="bill_name" class="rund_set text"/> *</td>
+                            </tr>
+                            <tr>
+                                <td>{__b('Position:')}</td>
+                                <td><input type="text" name="bill_position" class="rund_set text"/></td>
+                            </tr>
+                            <tr>
+                                <td>{__b('Straße:')}</td>
+                                <td><input type="text" name="bill_street" class="rund_set text"/></td>
+                            </tr>
+                            <tr>
+                                <td>{__b('HausNr:')}</td>
+                                <td><input type="text" name="bill_hausnr" class="rund_set text"/></td>
+                            </tr>
+                            <tr>
+                                <td>{__b('PLZ:')}</td>
+                                <td>
+                                    {include file='administration/city_autocomplete.htm' prefix='bill_'}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{__b('eMail:')}</td>
+                                <td><input type="text" name="bill_email" class="rund_set text"/> *</td>
+                            </tr>
+                            <tr>
+                                <td>{__b('Telefon:')}</td>
+                                <td><input type="text" name="bill_tel" class="rund_set text"/></td>
+                            </tr>
+                            <tr>
+                                <td>{__b('Fax:')}</td>
+                                <td><input type="text" name="bill_fax" class="rund_set text"/></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+                {__b('Hinweis')}
+            </div>
+            <div class="item-content">
+            </div>
+        </div>
+    </div>
+
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Kontakt')}
+            </div>
+            <div class="item-content">
+                <table class="user-tab" width="100%">
+                    <tr>
+                        <td width="20%">{__b('Bestehenden Kontakt auswählen')}</td>
+                        <td width="80%">
+                            <select name="selContactId" id="yd-select_contact">
+                                <option value="-1" >{__b('Neuer Kontakt')}</option>
+                                {foreach from=$contacts item=ci}
+                                <option value="{$ci.id}">{$ci.name} {$ci.prename}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <div id="yd-create-contact">
+                    <table class="user-tab" width="100%">
+                        <tr>
+                            <td width="20%">{__b('Vorname:')}</td>
+                            <td width="80%"><input type="text" name="contact_prename" class="rund_set text yd-duplicate"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Nachname:')}</td>
+                            <td><input type="text" name="contact_name" class="rund_set text yd-duplicate"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Position:')}</td>
+                            <td><input type="text" name="contact_position" class="rund_set text yd-duplicate"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Straße:')}</td>
+                            <td><input type="text" name="contact_street" class="rund_set text yd-duplicate"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('HausNr:')}</td>
+                            <td><input type="text" name="contact_hausnr" class="rund_set text yd-duplicate"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('PLZ:')}</td>
+                            <td>
+                                {include file='administration/city_autocomplete.htm' prefix='contact_'}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('eMail:')}</td>
+                            <td><input type="text" name="contact_email" class="rund_set text yd-duplicate"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Telefon:')}</td>
+                            <td><input type="text" name="contact_tel" class="rund_set text yd-duplicate"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Fax')}:</td>
+                            <td><input type="text" name="contact_fax" class="rund_set text yd-duplicate"/></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+                {__b('Hinweis')}
+            </div>
+            <div class="item-content">
+                <ul>
+                    <li>{__b('Der Ansprechpartner wird vom System automatisch als erster Mitarbeiter und Administrator angelegt')}</li>
+                    <li>{__b('Für ihn wird eine Budgetgruppe "Ansprechpartner" erstellt, ohne Budget')}</li>
+                    <li>{__b('Die Adresse wird als erste Firmenadresse angelegt')}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set"/>
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+
+</form>
+{/block}

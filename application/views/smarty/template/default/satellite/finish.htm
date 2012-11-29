@@ -1,0 +1,56 @@
+{extends file='satellite/_base_menu.htm'}
+{block name="content"}
+
+<div id="nonFooter">
+    <a href="{if $preview}/satellite/menu/id/{$satellite->getId()}{else}{$satellite->getUrl()}/menu{/if}" class="backbutton">{__("Zurück zur Speisekarte")}</a>
+
+    <div id="yd-content" class="yd-clearfix finish">
+        {assign var=orderData value=$order->getOrderData()}
+
+        <form action="{$satellite->getUrl()}/finish" method="post" id="finishForm">
+
+            <div id="yd-sidebar">
+
+                {include file="order/_includes/sidebar/cart-finish.htm"}
+
+                {if $config->domain->base == 'lieferando.de'}
+                    <a id="yd-private-single-finish-bottom" class="yd-button-280 finish-button">{__("Jetzt kaufen")}</a>
+                {else}
+                    <a id="yd-private-single-finish-bottom" class="yd-button-280 finish-button">{__("Bestellung abschicken")}</a>
+                {/if}
+
+            </div>
+
+            <div id="yd-ordering">
+                {if is_object($order->getDiscount()) && $order->getDiscount()->isGroupon()}
+                <div style="text-align:center; margin: 0 0 15px;">
+                    <img src="{$domain_static}/images/yd-groupon/yd-groupon-finish.png" />
+                </div>
+                {/if}
+                <div id="yd-menu" class="yd-clearfix">
+                    <span id="paymentcontent">
+                        {include file='order/_includes/finish/payment.htm'}
+                    </span>
+                    {if $satellite->isPremium()}
+                    <div class="premium-finish">
+                        <h2>{__("Pflichtangaben")}:</h2>
+                        <div class="finish-background"></div>
+                        <h2 class="non-compulsory">{__("Optionale Angaben")}:</h2>{/if}
+                        {include file="order/_includes/finish/address.htm"}
+                        {if $satellite->isPremium()}</div>{/if}
+
+                </div>
+            </div>
+            <input type="hidden" name="finish" value="get me some food" />
+            <input type="hidden" name="satellite" value="{$satellite->getDomain()}" />
+
+            {include file='order/_includes/form_order.htm'}
+
+        </form>
+
+    </div>
+
+</div>
+</div>
+
+{/block}

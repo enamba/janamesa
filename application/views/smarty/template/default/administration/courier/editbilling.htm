@@ -1,0 +1,12 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{if isset($courier)}
+{include file='administration/courier/editnavigation.htm'}
+
+<form action="/administration_courier/editbilling/id/{$courier->getId()}" method="post">
+    {include file='administration/billing/default/customized_form.htm'}
+</form>
+
+{/if}
+{/block}

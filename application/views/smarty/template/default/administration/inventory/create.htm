@@ -1,0 +1,507 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<script type="text/javascript">
+    function inventory_sum(){
+        var inventorysumme=0;
+        var size=$(".two-column-box .sum-function .yd-js-sumfunction select").size();
+        var inventoryvalue=0;
+        for(var i=0; i<size; i++){
+        inventoryvalue=($(".two-column-box .sum-function .yd-js-sumfunction select").eq(i).val());
+        var temp=parseFloat($(".two-column-box .sum-function .yd-js-sumfunction select").eq(i).parent().next("td").text().substr(0,5));
+        inventorysumme=inventorysumme+(temp*inventoryvalue);
+        $("td .sum").text(inventorysumme+" Euro");
+        };
+    };
+    $(document).ready(function() {    
+        $(".two-column-box select").bind('change', function(){
+            if($(this).attr("name") == "specialCostCanton2626" || $(this).attr("name") =="specialCostCanton2828" || $(this).attr("name") =="specialCostCanton3232"){
+                $(this).parent().parent().prev("tr").children("td").eq(2).text($(this).val()+".00 Euro ");
+                inventory_sum();
+            }
+            else{
+                inventory_sum();   
+            };
+        });
+    });
+</script>
+<form action="/administration_inventory/create" method="POST">
+
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-head yd-inventory-restaurantId">
+                {__b('Lieferservice Bedarf')}
+
+                <select name="restaurantId">
+                    {foreach from=$restIds item=ri}
+                    <option value="{$ri.id}" {if $post && $post.restaurantId==$ri.id}selected="selected"{/if}>{$ri.id} - {$ri.name}</option>
+                    {/foreach}
+                </select>
+
+            </div>
+            <div class="item-content">
+                <table class="yd-inventory-border sum-function">
+                    <tr>
+                        <td class="yd-inventory-pizzacaselittle yd-inventory-big">{__b('Pizza Karton')} <b>26x26x4</b></td>
+                        <td class="yd-js-sumfunction"><select name="countCanton2626" id="countCanton2626">
+                                {section name=count loop=21001 start=0 step=700}
+                                <option value="{$smarty.section.count.iteration-1}">{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+
+
+                        </td>
+                        <td>49.00 {__b('Euro')} </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>{__b('%sAchtung%s nur bei Härtefall!', '<b>', '</b>')}</td>
+
+                        <td>
+                            <select name="specialCostCanton2626" id="specialCostCanton2626" style="width: 60px;" >
+                                <option value="0"></option>
+                                <option value="30">30 {__b('€')}</option>
+                                <option value="40">40 {__b('€')}</option>
+                                <option value="49">Old:49 {__b('€')}</option>
+
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-pizzacaselittle yd-inventory-big">{__b('Pizza Karton')} <b>28x28x4</b></td>
+                        <td class="yd-js-sumfunction"><select name="countCanton2828" id="countCanton2828">
+                                {section name=count loop=21001 start=0 step=700}
+                                <option value="{$smarty.section.count.iteration-1}">{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+
+
+                        </td>
+                        <td>63.00 {__b('Euro')} </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>{__b('%sAchtung%s nur bei Härtefall!', '<b>', '</b>')}</td>
+
+                        <td>
+                            <select name="specialCostCanton2828" id="specialCostCanton2828" style="width: 60px;" >
+                                <option value="1"></option>
+                                <option value="30">30 {__b('€')}</option>
+                                <option value="40">40 {__b('€')}</option>
+                                <option value="50">50 {__b('€')}</option>
+                                <option value="60">60 {__b('€')}</option>
+                                <option value="63">Old:63 {__b('€')}</option>
+
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-pizzacase">{__b('Pizza Karton')} <b>32x32x4</b></td>
+                        <td class="yd-js-sumfunction"><select name="countCanton3232" id="countCanton3232">
+                                {section name=count loop=21001 start=0 step=700}
+                                <option value="{$smarty.section.count.iteration-1}">{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+
+                        </td>
+                        <td>70.00 {__b('Euro')}<td>
+
+
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>{__b('%sAchtung%s nur bei Härtefall!', '<b>', '</b>')}</td>
+
+                        <td>  <select name="specialCostCanton3232" id="specialCostCanton3232" style="width:60px;">
+                                <option value="0"></option>
+                                <option value="30">30 {__b('€')}</option>
+                                <option value="40">40 {__b('€')}</option>
+                                <option value="50">50 {__b('€')}</option>
+                                <option value="60">60 {__b('€')}</option>
+                                <option value="70">Old:70 {__b('€')}</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="yd-inventory-napkins">{__b('Servietten 2lagig')}, 33x33</td>
+                        <td class="yd-js-sumfunction"><select name="countServicing">
+                                {section name=count loop=10001 start=0 step=2000}
+                                <option value="{$smarty.section.count.iteration-1}">{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                        <td>15.00 {__b('Euro')}</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-plasticbag">{__b('Plastiktüten')}</td>
+                        <td class="yd-js-sumfunction"><select name="countBags">
+                                {section name=count loop=100001 start=0 step=2500}
+                                <option value="{$smarty.section.count.iteration-1}">{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                        <td>12.50 {__b('Euro')}</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-chopsticks">{__b('Chopsticks')}</td>
+                        <td class="yd-js-sumfunction"><select name="countSticks">
+                                {section name=count loop=30001 start=0 step=3000}
+                                <option value="{$smarty.section.count.iteration-1}">{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                        <td>21.00 {__b('Euro')}</td>
+                        <td></td>
+                    </tr>
+                    <tr><td></td><td></td><td style="width: 100px"><span class="sum">00,00 {__b('Euro')}</span><td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+
+                {__b('Notizen zum Lieferservice Bedarf')}
+
+            </div>
+            <div class="item-content">
+                <i class="yd-inventory-status">{__b('Status:')}</i>
+                <select name="statusNeeds" class="yd-inventory-status-select">
+                    <option value="0">{__b('Noch keine Info')}</option>
+                    <option>{__b('noch nicht versand')}</option>
+                    <option>{__b('verschickt')}</option>
+                    <option>{__b('nur Kommentar')} -></option>
+                </select>
+                <textarea name="statusCommentNeeds"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="two-column-box">
+        <div class="item" id="yd-flyer">
+            <div class="item-head">
+                {__b('Flyer für Restaurant')}
+            </div>
+            <div class="item-content">
+                <table class="yd-inventory-border">
+                    <tr>
+                        <td class="yd-inventory-print">{__b('Druckvolumen Lieferando')}</td>
+                        <td>
+                            <select name="countFlyer">
+                                {section name=count loop=100001 start=0 step=5000}
+                                <option value="{$smarty.section.count.index}">{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-type">{__b('Flyertyp')}</td>
+                        <td>
+                            <select name="typeFlyer">
+                                <option></option>
+                                <option>{__b('Pasta')}</option>
+                                <option>{__b('Pizza')}</option>
+                                <option>{__b('Burger')}</option>
+                                <option>{__b('Sushi')}</option>
+                                <option>{__b('Thai')}</option>
+                                <option>{__b('Amerikanisch')}</option>
+                                <option>{__b('Französisch')}</option>
+                                <option>{__b('Croque')}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-colors">{__b('Farbe')} 1</td>
+                        <td>
+                            <select name="colorOneFlyer">
+                                {foreach from=$colors item=color}
+                                <option>{$color}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-colors">{__b('Farbe')} 2</td>
+                        <td>
+                            <select name="colorTwoFlyer">
+                                {foreach from=$colors item=color}
+                                <option>{$color}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-colors">{__b('Farbe')} 3</td>
+                        <td>
+                            <select name="colorThreeFlyer">
+                                {foreach from=$colors item=color}
+                                <option>{$color}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-head">
+
+                {__b('Notizen zum Flyer für Restaurant')}
+
+            </div>
+            <div class="item-content">
+                <i class="yd-inventory-status">Status:</i>
+                <select name="statusFlyer" class="yd-inventory-status-select">
+                    <option value="0">{__b('Noch keine Info')}</option>
+                    <option>{__b('TODO: Domain und Design')}</option>
+                    <option>{__b('TODO: nur Design')} </option>
+                    <option>{__b('TODO: Flyer designen')} </option>
+                    <option>{__b('Flyer versand')} </option>
+                    <option>{__b('nur Kommentar')} -></option>
+                </select>
+                <textarea name="statusCommentFlyer"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="two-column-box">
+
+        <div class="item">
+            <div class="item-head">
+                {__b('Druckkostenbeteiligung für Flyer')}
+            </div>
+            <div class="item-content">
+                <table class="yd-inventory-border">
+                    <tr>
+                        <td class="yd-inventory-costshare">{__b('Kostenbeteiligung')}</td>
+                        <td>
+                            <select name="printerCostShare">
+                                <option value="2">{__b('keine Info')}</option>
+                                <option value="1">{__b('Ja')}</option>
+                                <option value="0">{__b('Nein')}</option>
+                            </select>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-paperstack">{__b('eigenes Druckvolumen')}</td>
+                        <td>
+                            <select name="printerOwn">
+                                {section name=count loop=200001 start=0 step=5000}
+                                <option value="{$smarty.section.count.index}">{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-percent">
+                            {__b('Höhe der Beteiligung')}</td>
+                        <td>
+
+                            <select name="printerCostPercent">
+                                <option value="0">{__b('Noch keine Info')}</option>
+                                <option value="25">25%</option>
+                                <option value="50">50%</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-format">{__b('Format')}</td>
+                        <td>
+                            <select name="printerFormat">
+                                <option value="1">{__b('Quadrat')}</option>
+                                <option value="2">{__b('DIN Lang - Hochformat')}</option>
+                                <option value="3">{__b('DIN Lang - Querformat')}</option>
+                                <option value="4">{__b('DIN A - Hochformat')}</option>
+                                <option value="5">{__b('DIN A - Querformat')}</option>
+                            </select>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-priority">{__b('Priorität')}</td>
+                        <td>
+                            <select name="printerPrio">
+                                <option value="1">{__b('Sofort')}</option>
+                                <option value="2">{__b('Hoch')}</option>
+                                <option value="3">{__b('Wichtig')}</option>
+                                <option value="4">{__b('Normal')}</option>
+                                <option value="5">{__b('Niedrig')}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-time">{__b('nächster Drucktermin')}</td>
+                        <td>
+                            <!-- datepicker -->
+                            <input type="text" name="printerNextDate" id="yd-date" value="{time()|timestampYMD}" />
+                        </td>
+                    </tr>
+                </table>
+
+
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+
+                {__b('Notizen zur Druckkostenbeteiligung')}
+
+            </div>
+            <div class="item-content">
+                <i class="yd-inventory-status">{__b('Status:')}</i>
+                <select name="statusPrinterCost" class="yd-inventory-status-select">
+                    <option value="0">{__b('Noch keine Info')}</option>
+                    <option>{__b('TODO: Grafik erstellen')}</option>
+                    <option>{__b('TODO: Grafik verschicken')} </option>
+                    <option>{__b('verschickt')}</option>
+                    <option>{__b('im Druck')}</option>
+                    <option>{__b('abgeschlossen')}</option>
+                    <option>{__b('nur Kommentar')} -></option>
+                </select>
+                <textarea name="statusCommentPrinterCost"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Webseite')}
+            </div>
+            <div class="item-content">
+                <table class="yd-inventory-border">
+                    <tr>
+                        <td class="yd-inventory-yesno">{__b('Seite ist gewünscht')}</td>
+                        <td>
+                            <select name="website" id="yd-website">
+                                <option value="2">{__b('keine Info')}</option>
+                                <option value="1">{__b('Ja')}</option>
+                                <option value="0">{__b('Nein')}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-price">{__b('Preis der Webseite:')}</td>
+                        <td>
+                            <select name="websiteCost">
+                                {section name=count loop=100 start=0 step=1}
+                                <option value="{$smarty.section.count.index}">{$smarty.section.count.index} {__b('Euro')}</option>
+                                {/section}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-colors">{__b('Farbe')} 1</td>
+                        <td>
+                            <select name="colorOneWebsite">
+                                {foreach from=$colors item=color}
+                                <option>{$color}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>                      
+                        <td class="yd-inventory-colors">{__b('Farbe')} 2</td>
+                        <td>
+                            <select name="colorTwoWebsite">
+                                {foreach from=$colors item=color}
+                                <option>{$color}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-colors">{__b('Farbe 3')}</td>
+                        <td>
+                            <select name="colorThreeWebsite">
+                                {foreach from=$colors item=color}
+                                <option>{$color}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+
+                {__b('Notizen zur Webseite')}
+
+            </div>
+            <div class="item-content">
+                <i class="yd-inventory-status">{__b('Status')}:</i>
+                <select name="statusWebsite">
+                    <option value="0">{__b('Noch keine Info')}</option>
+                    <option>{__b('TODO: Design bauen & Übertragung starten')}</option>
+                    <option>{__b('TODO: Domain und Design kaufen')}</option>
+                    <option>{__b('TODO: nur Design bauen')}</option>
+                    <option>{__b('anrufen')}</option>
+                    <option>{__b('Design in Arbeit')}</option>
+                    <option>{__b('Design in Arbeit und warten auf Routing')}</option>
+                    <option>{__b('Design fertig und Domain gekauft')}</option>
+                    <option>{__b('Design fertig, warten auf Übertragung der Domain')}</option>
+                    <option>{__b('Design fertig - keine Domain bisher')}</option>
+                    <option>{__b('nur Kommentar')} -></option>
+                </select>
+                <textarea name="statusCommentWebsite"></textarea>
+            </div>
+        </div>
+
+    </div> 
+    <div class="two-column-box">
+
+        <div class="item">
+            <div class="item-head">
+                {__b('SMS Terminal')}
+            </div>
+            <div class="item-content">
+                <table class="yd-inventory-border">
+                    <tr>
+                        <td class="yd-inventory-yesno">{__b('Terminal gewünscht')}</td>
+                        <td>
+                            <select name="terminal">
+                                <option value="2">{__b('keine Info')}</option>
+                                <option value="1">{__b('Ja')}</option>
+                                <option value="0">{__b('Nein')}</option>
+                            </select>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-costshare">
+                            {__b('Kostenbeteiligung')}
+                        </td>
+                        <td>
+                            <input type="text" name="terminalBail" value="150" class="yd-only-nr" />
+                        </td> 
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-head">
+
+                {__b('Notizen zum SMS Terminal')}
+
+            </div>
+            <div class="item-content">
+                <i class="yd-inventory-status">{__b('Status:')}</i>
+                <select name="statusTerminal" class="yd-inventory-status-select">
+                    <option value="0">{__b('Noch keine Info')}</option>
+                    <option>{__b('keine Status definiert')}</option>
+                    <option>{__b('nur Kommentar')} -></option>
+                </select>
+                <textarea name="statusCommentTerminal"></textarea>
+            </div>
+        </div>
+
+    </div>
+
+    <input type="submit" value="{__b('speichern')}" />
+</form>
+{/block}

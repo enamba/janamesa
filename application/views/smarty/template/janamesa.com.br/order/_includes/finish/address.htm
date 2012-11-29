@@ -1,0 +1,184 @@
+<input type="hidden" id="kind" value="{$order->getKind()}" />
+<div class="yd-box br-address">
+
+    <div class="yd-bigbox-head">
+        Observações para seu pedido:
+        <br />
+    </div>
+    
+    <div class="yd-bigbox-body yd-form">
+        
+        <ul class="yd-clearfix yd-form-section">
+            <li class="yd-form-middle">
+                <span>{__('Besondere Hinweise')} <small class="green">{__('(optional)')}</small></span>
+                <textarea rows=""
+                            cols=""
+                            name="comment"
+                            autocomplete="off"
+                            id="comment"
+                            class="validate[length[0,1000]]">{$order->getLocation()->getComment()}</textarea>
+            </li>
+        </ul>
+        
+    </div>
+</div>
+
+<div class="yd-box br-address">
+    <div class="yd-bigbox-head">
+        {__('Lieferadresse')}
+        <br />
+        {if $order->getMode() != "rest"}
+        <span class="yd-opening-info">{__('Dieser Lieferservice benötigt eine Vorlaufzeit von <b>%s</b>', $order->getService()->getDeliverTimeFormated())}</span>
+        {/if}
+    </div>
+
+    <div class="yd-bigbox-body yd-form" id="yd-form-finish">
+
+        <strong class="yd-form-tease">
+            {if $domain_base == 'eat-star.de'}
+            {__('Bitte gib deine Lieferadresse ein:')}
+            {else}
+            {__('Bitte gib Deine Lieferadresse ein:')}
+            {/if}
+
+        </strong>
+
+        <div class="yd-form-wrapper">
+            <ul class="yd-clearfix">
+                <li class="yd-form-left">
+                    <span>{__('Vorname')} <b class="red yd-only-priv">*</b></span>
+                    <!-- hide this input field, if the customer is logged in -->
+                    <input class="yd-only-priv yd-form-invalid yd-form-input validate[length[2,25]]"
+                           type="text"
+                           name="prename"
+                           id="prename"
+                           value="{$order->getCustomer()->getPrename()|default:$post.prename}" />
+                </li>
+                <li class="yd-form-right">
+                    <span>{__('Nachname')} <b class="red yd-only-priv">*</b></span>
+                    <input class="yd-only-priv yd-form-invalid yd-form-input validate[length[2,25]]"
+                           type="text"
+                           name="name"
+                           id="name"
+                           value="{$order->getCustomer()->getName()|default:$post.name}" />
+                </li>
+            </ul>
+            <ul class="yd-clearfix">
+                <li class="yd-form-{if $domain_base != 'taxiresto.fr'}left{else}right{/if}">
+                    <span>{__('Straße')} <b class="red yd-only-priv">*</b></span>                 
+                    <input type="text"
+                           name="street"
+                           autocomplete="off"
+                           id="street"
+                           value="{$post.street|default:$order->getLocation()->getStreet()}"
+                           class="yd-only-priv yd-form-invalid yd-form-input validate[street,length[1,100]]" />
+                </li>
+                <li class="yd-form-{if $domain_base != 'taxiresto.fr'}right{else}left{/if}">
+                    <span>{__('Hausnummer')} <b class="red yd-only-priv">*</b></span>               
+                    <input type="text"
+                           name="hausnr"
+                           autocomplete="off"
+                           id="hausnr"
+                           value="{if $post.hausnr}{$post.hausnr}{elseif $post.street}{else}{$order->getLocation()->getHausnr()}{/if}"
+                           class="yd-only-priv yd-form-invalid yd-form-input validate[hausnr,length[{$config->locale->housenumber->min},{$config->locale->housenumber->max}]]" />
+                    <em class="yd-form-info hidden" {if $domain_base == 'taxiresto.fr'}style="right:-315px;"{/if}>{__('Bitte gib hier Deine Straße und Nr ein in die Du beliefert werden möchtest.')}</em>
+                </li>
+            </ul>
+
+            <ul class="yd-clearfix">
+                <li class="yd-form-right">
+                    <span>{__('Stadt:')} 
+                        <strong>                            
+                            {$order->getLocation()->getCity()->getPlz()} {$order->getLocation()->getCity()->getFullName()}
+                        </strong>
+                    </span>
+                </li>
+            </ul>
+
+            <ul class="yd-clearfix yd-form-section">
+                <li class="yd-form-left">
+                    <span>{__('Telefon')} <b class="red">*</b> <small>{__('Für evtl. Rückfragen')}</small></span>
+                    <input type="text"
+                           name="telefon"
+                           id="telefon"
+                           value="{if $post.telefon}{$post.telefon}{elseif $order->getLocation()->getTel()}{$order->getLocation()->getTel()}{else}{$order->getCustomer()->getTel()}{/if}"
+                           class="yd-form-invalid yd-form-input" />
+                </li>
+                <li class="yd-form-right">
+                    <span>{__('E-Mail')} <b class="red">*</b> <small>{__('Für Ihre Bestellbestätigung')}</small></span>
+                    <input type="text"
+                           name="email"
+                           id="email"
+                           value="{$post.email|default:$order->getCustomer()->getEmail()}"
+                           class="yd-form-invalid yd-form-input validate[length[0,100],custom[email]]" />
+                    <em class="yd-form-info hidden">{__('Bitte gib Deine Telefonnummer und E-Mail-Adresse ein.')}</em>
+                </li>
+            </ul>
+            <ul class="yd-clearfix">
+                <li class="yd-form-left">
+                    <span>{__('Firma')} <small class="green yd-only-priv">{__('(optional)')}</small></span>
+                    <input type="text"
+                           name="companyName"
+                           autocomplete="off"
+                           id="company"
+                           value="{$post.companyName|default:$order->getLocation()->getCompanyName()}"
+                           class="yd-only-priv validate[length[0,100]]" />                            
+                </li>
+
+                {include file='order/_includes/finish/floorfee.htm'}
+
+            </ul>
+
+            <ul class="yd-clearfix yd-form-section yd-form-yquery yd-deliver-time-input">
+                <li class="yd-form-left">
+                    <span>{__('Lieferzeitpunkt')}</span>
+                    <img src="{$domain_static}/images/yd-icons/yd-clock-big.png" alt="" />
+                    <em id="yd-finish-deliver-time-select"><!-- dynamic loaded available opening times at this day --></em>
+                </li>
+                <li class="yd-form-right">
+                    <span>{__('Datum')}</span>                    
+                    <img src="{$domain_static}/images/yd-icons/yd-cal.png" alt="" />
+                    <input type="text" name="deliver-time-day" value="{if $order->getDeliverTime() > $order->getService()->getNextDeliverTime()}{$order->getDeliverTime()|date_format:__('%d.%m.%Y')}{else}{$order->getService()->getNextDeliverTime()|date_format:__('%d.%m.%Y')}{/if}" id="yd-finish-deliver-time-day" class="{if $order->getMode() == 'rest'}yd-only-priv{/if}" />
+                </li>
+            </ul>
+            <input type="hidden" id="deliver-time-now" name="deliver-time-now" value="{__('sofort')}" />
+            
+            {if $config->domain->base == 'janamesa.com.br'}
+                <ul class="yd-clearfix yd-form-section yd-form-yquery yd-deliver-time-input">
+                    <li class="yd-form-left">
+                        <span>CPF</span>
+                        <input type="text" name="cpf" value="{$post.cpf}" />
+                    </li>
+                </ul>
+            {/if}
+
+            {if !$order->getCustomer()->isLoggedIn()}
+            <div class="br-terms">
+                <ul class="yd-clearfix">
+                    <li class="yd-form-middle">
+                        <input type="checkbox"
+                               name="agb"
+                               id="agb"
+                               value="1" class="validate[agb]"/>
+                        <label for="agb">
+                            {__('Ich bin mit den %s%s%sAGB%s und dem %s%s%sDatenschutz%s einverstanden.', '<a href="http://www.', $config->domain->base, '/customer-terms" target="_blank">', '</a>', '<a href="http://www.',$config->domain->base, '/privacy" target="_blank">', '</a>')}
+                        </label>
+                    </li>
+                </ul>
+                <ul class="yd-clearfix">
+                    <li class="yd-form-middle">
+                        <input type="checkbox"
+                               name="create_user"
+                               id="createuser"
+                               value="1" />
+                        <label for="createuser">
+                            {__('Ich möchte einen Account anlegen.')}
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            {/if}
+
+        </div>
+    </div>
+</div>

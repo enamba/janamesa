@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="yourdelivery GmbH" />
+        <meta name="publisher" content="yourdelivery GmbH" />
+        <meta name="robots" content="noindex, nofollow" />
+
+        <link type="text/css" rel="stylesheet" href="/media/css/yd-backend-partner.css" />
+        <link type="text/css" rel="stylesheet" href="/media/css/yd-backend-zendform.css" />
+        <link type="text/css" rel="stylesheet" href="/media/css/visualize/visualize.css"/>
+        <link type="text/css" rel="stylesheet" href="/media/css/visualize/visualize-light.css"/>
+        <link type="text/css" rel="stylesheet" href="/media/css/www.{$config->domain->base}/yd-frontend-jquery.css"/>
+        <link type="text/css" rel="stylesheet" href="/media/css/www.{$config->domain->base}/yd-frontend-expansions.css"/>
+
+        <!--[if IE]><script type="text/javascript" src="/media/javascript/library/visualize/excanvas.compiled.js"></script><![endif]-->
+        <script type="text/javascript" src="/media/javascript/compiled/partner-{$REVISION}.js"></script>
+        {if $config->node->orderticker->enabled}
+            <script src="http://{$config->node->orderticker->url}:{$config->node->orderticker->port}/socket.io/socket.io.js"></script>
+        {/if}
+
+        {if $grid}
+        <script type='text/javascript' charset='UTF-8'>
+            /* <![CDATA[ */
+            {$grid->getHeaderScript()}
+            /* ]]> */
+        </script>
+        {/if}
+
+        <title>lieferando.de {__p('Partner-Konto')}</title>
+
+        <script type="text/javascript">
+            var partnerServiceId = null;
+            var partnerOrderTickerEnabled = false;
+            var partnerOrderTickerSound = false;
+
+            {if $restaurant}
+                partnerServiceId = {$restaurant->getId()};
+                partnerOrderTickerEnabled = {$restaurant->getOrderticker()|intval};
+                partnerOrderTickerSound = {$restaurant->getSound()|intval};
+            {/if}
+
+            $(document).ready(function() {
+                $('.be-quick a, .be-tabs a').wrapInner('<span></span>');
+            });
+        </script>
+
+    </head>
+    <body class="de">
+        <div id="yd-nonfooter">
+
+            <div class="yd-header">
+                <div class="yd-inner">
+                    <a class="logo" href="{$this->url([],'partnerRoute',true)}"></a>
+
+                    {if $loggedIn}
+
+                    <span id="logout">
+                        {__p('Eingeloggt als: %s', $restaurant->getName())} (#{$restaurant->getCustomerNr()})
+                        | <a href="{$this->url(['action'=>'logout'],'partnerRoute',true)}">{__p('Logout')}</a>
+                    </span>
+
+                    <div class="yd-order-notification" style="display: none">
+                        <h1>{__p('Eine neue Bestellung ist eingetroffen!')}</h1>
+                        <div id="yd-incoming-orders"></div>
+                    </div>
+
+                    {if $statistics}
+                    <div class="be-partner-orders-head">
+                        <a href="{$this->url(['action'=>'orders','filter'=>'today'],'partnerRoute',true)}">{__p('Bestellungen Heute: %s', $statisticsOrderCountToday )}</a>
+                        <a href="{$this->url(['action'=>'orders','filter'=>'lastseven'],'partnerRoute',true)}">{__p('Bestellungen letzten 7 Tage: %s', $statisticsOrderCountLastseven )}</a>
+                        <a href="{$this->url(['action'=>'orders','filter'=>'week'],'partnerRoute',true)}">{__p('Bestellungen diese Woche: %s', $statisticsOrderCountWeek )}</a>
+                        <a href="{$this->url(['action'=>'orders','filter'=>'month'],'partnerRoute',true)}">{__p('Bestellungen diesen Monat: %s', $statisticsOrderCountMonth )}</a>
+                        <a href="{$this->url(['action'=>'orders','filter'=>'lastmonth'],'partnerRoute',true)}">{__p('Bestellungen letzter Monat: %s', $statisticsOrderCountLastmonth )}</a>
+                    </div>
+                    {/if}
+
+                    {/if}
+
+                </div>
+            </div>
+
+            <div id="yd-content" class="yd-clearfix">
+
+                {include file='administration/_notifications.htm'}
+                {block name="content"}{/block}
+
+            </div>
+
+
+        </div>
+
+        <div class="yd-footer"></div>
+
+        {include file='_cookies/masterpixel/global.htm'}
+        {include file='_cookies/piwik/global.htm'}
+        {include file='_cookies/google/analytics.htm'}
+
+    </body>
+</html>

@@ -1,0 +1,60 @@
+{include file="testing/cms/_testingCmsHeader.htm"}
+<div id="content">
+
+    <div class='yd-box yd-box-testing-response'>
+        <h2 class="yd-icon-cms1">Contact-Form</h2>
+        <h4>Here you can submit infos:</h3>
+        <form action="/testing_cms/info" method="post" enctype="multipart/form-data">
+            <textarea name="response" ></textarea>
+            <br />
+            <input type="file" name="imagePath" size="chars"/>
+           
+            <br />
+            <input class="yd-form-toggled" readonly="readonly" type="text" name="executor" id="executor" value="{$userName}"/>  
+             <input class="button" type="submit" name="submit" id="submit" />  
+                   
+            
+        </form>           
+    </div>
+    
+    <div class="yd-box">        
+
+        <h2 class="yd-icon-cms1">Overview</h2>
+
+        <table class="executorsoverview">
+            <tr>
+                <td class="yd-testing-overview">
+                    <p id='yd-testing-mission'>Testcase</p> 
+                    <p id='yd-testing-count'>Clicks</p>
+                    <p id='yd-testing-last-response'>Last Response</p>
+                </td>
+            </tr>
+
+            {assign var=myCounter value=0}
+            {foreach from=$testcases item=testcase}
+            {assign var=myCounter value=$myCounter+1}
+
+            <tr>
+                <td>
+                    
+                    <div class='yd-testing-sub-overview'>
+                        <p id='yd-testing-mission-sub'>
+                            <b>{$myCounter}.</b><a  href="/testing_cms/overviewexecutor/id/{$testcase['id']}" > {$testcase['title']}</a>                    
+                        </p>
+                        <p id='yd-testing-count-sub'>{$testcase['count']}</p>
+                        <p id='yd-testing-last-response-sub'>{$testcase['last']}</p>
+                        </p> 
+                        <br /><br />
+                    </div>
+                    
+                </td>
+            </tr>
+            {/foreach}
+        </table>
+
+    </div>
+    
+</div>
+
+</body>
+</html>

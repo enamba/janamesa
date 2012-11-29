@@ -1,0 +1,28 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Sitemaps')}
+            </div>
+            <div class="item-content">
+                <table>
+                    <tr>
+                        <td>
+                            <a href="/sitemap.xml" target="_blank">{__b('sitemap.xml')}</a>
+                        </td>
+                    </tr>
+                    {foreach from=$domains item=domain}
+                    <tr>
+                        <td>
+                            <a href="/storage/public/sitemap-{$domain}.xml" target="_blank">{$domain}</a>
+                        </td>
+                    </tr>
+                    {/foreach}
+                </table>
+            </div>
+        </div>
+    </div>
+
+{/block}

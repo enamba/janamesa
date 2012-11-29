@@ -1,0 +1,61 @@
+<div id="yd-nonfooter">
+    <div id="wrapper-header" class="blue">
+        <div class="header-bg">
+            <div class="yd-header">
+                <div class="yd-inner">
+                    <a class="yd-logo" href="/"><img src="/media/css/www.janamesa.com.br/images/logo.png" title="jáNAMESA" alt="jáNAMESA" /></a>               
+                    <div class="yd-login">                           	
+                        <div class="yd-login-wrapper yd-logged-out">
+                            <a class="yd-header-login">Fazer login</a>
+                            <a class="yd-header-register" href="/user/register">Registrieren</a>   
+                            <div class="yd-login-window hidden">
+                                <form name="login" action="/user/login?redirect_url=/user/loginfailed" method="post" id="login">
+                                    <input name="login" value="1" type="hidden" />
+                                    <input class="yd-empty-text" name="user" value="" title="Endereco de email" type="text" />
+                                    <input class="yd-empty-text" name="pass" value="" title="" type="password" />
+                                    <input class="" name="yd-login" value="Login" type="submit" /> 
+                                </form>
+                                <div class="br-label-login">Login</div>
+                                <div class="br-register">
+                                    Ainda nao faz parte?&nbsp;&nbsp;<a title="Crie sua conta" href="/user/register">Crie sua conta</a>
+                                </div>
+                                <a class="yd-forgotten-pass">Esqueceu a senha?</a>
+                            </div>
+                        </div>
+                        <div id="logout" class="yd-logged-in hidden">
+                            <span class="yd-customer-name"></span><em class="yd-customer-company hidden"></em>
+                            | <a href="/user/index">Conta</a>
+                            <span id="yd-customer-company-admin" class="hidden">| <a href="/company">Firmenadmin</a></span>
+                            | <a href="/user/logout?redirect_url=/user/loginfailed" class="yd-log-out" id="yd-logout">
+                                Sair
+                            </a>
+                        </div>				
+                    </div>
+                    <div class="wrapper-plz-br hidden">
+                        <h3>Esta com fome ?</h3>
+                        <h4>Peca sua<br /> comida preferida<br />online</h4>
+                        <div class="hidden" id="yd-lang-plzerror">Este CEP nao existe </div>  
+                        <form name="plzAutocomplete" id="yd-start-order-form" method="get" action="/order_basis/plz">
+                            <input name="cityId" value="" type="hidden" />
+                            <input id="yd-plz-search" class="yd-only-nr yd-empty-text" name="plz" value="CEP" title="" type="text" />
+                            <a id="br-cep-autocomplete">Nao sabe o seu CEP ?</a>
+                            <a id="yd-start-order" class="link1554 yd-button-280" name="yd-start-order" href=""><span>Iniciar seu Pedido</span></a>        
+                            <a id="yd-start-order" class="link1554 yd-button-280" name="yd-start-order" href=""><span>Faca seu pedido!</span></a> 
+                            <a class="buscar-btn" href="#">Buscar Restaurantes</a>
+                        </form>
+                    </div>
+                    <div class="wrapper-benefits-block hidden">
+                        <div class="benefits-block">
+                            <div class="inner-benefits-block">
+                                <p>Page no cartao ou a vista</p>
+                                <p>Pizza, Sushi e muito mais</p>
+                                <p>Facil e rapido</p>
+                                <p>Sem nenhum custo extra</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="bottom-bg"></div>
+    </div>

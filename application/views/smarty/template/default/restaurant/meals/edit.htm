@@ -1,0 +1,89 @@
+{extends file="restaurant/base.htm"}
+{block name="content"}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            Speise #{$meal->getId()}
+        </div>
+        <div class="item-content">
+            <form action="/restaurant_meals/edit" method="post" name="form">
+                <input type="hidden" name="id" value="{$meal->getId()}" />
+                <input type="hidden" name="categoryId" value="{$category->getId()}"/>
+                <table width="100%" class="user-tab">
+                    <tr>
+                        <td width="15%">Kategorie:</td>
+                        <td width="85%"><a href="/restaurant_categories/edit/id/{$category->getId()}" target="_blank">{$category->getName()}</td>
+                    </tr>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" size="25" name="name" value="{$meal->getName()}"/> *</td>
+                    </tr>
+                    <tr>
+                        <td>Beschreibung:</td>
+                        <td><textarea rows="3" name="description" class="inp">{$meal->getDescription()}</textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Mwst, %:</td>
+                        <td>
+                            <select name="mwst" class="inp sel w50">
+                                <option value="7" {if $meal->getMwst() == 7}selected{/if}>7</option>
+                                <option value="19" {if $meal->getMwst() == 19}selected{/if}>19</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Interne Nr:</td>
+                        <td><input type="text" class="inp broad-inp" name="nr" value="{$meal->getNr()}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Minimale Anzahl:</td>
+                        <td> <input type="text" size="3" class="inp broad-inp" name="minAmount" value="{$meal->getMinAmount()}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Typ:</td>
+                        <td>
+                            <table width="100%">
+                                <tr>
+                                    <td width="10%">
+                                        Vegetarisch<br/>
+                                        <input type="checkbox" name="vegetarian" value="1" {if $meal->getVegetarian()==1}checked{/if}/>
+                                    </td>
+                                    <td width="10%">
+                                        Bio<br/>
+                                        <input type="checkbox" name="bio" value="1" {if $meal->getBio()==1}checked{/if}/>
+                                    </td>
+                                    <td width="10%">
+                                        Tabak<br/>
+                                        <input type="checkbox" name="tabaco" value="1" {if $meal->getTabaco()==1}checked{/if}/>
+                                    </td>
+                                    <td width="70%">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nicht im Mindestbestellwert:</td>
+                        <td><input type="checkbox" name="excludeFromMinCost" value="1" {if $meal->getExcludeFromMinCost()==1}checked{/if}/></td>
+                    </tr>
+                    <tr>
+                        <td>Status:</td>
+                        <td>
+                            <select name="status">
+                                <option value="0" {if $meal->getStatus() == 0}selected{/if}>Online</option>
+                                <option value="1" {if $meal->getStatus() == 1}selected{/if}>Offline</option>
+                            </select>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input name="cancel" type="submit" value="Abbrechen"/></td>
+                        <td><input type="submit" value="Bearbeiten"/></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+{/block}

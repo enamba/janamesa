@@ -1,0 +1,2 @@
+2012-10-26T16:51:31+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PAGE NOT FOUND: www.yourdeliverynew.test//yd/lieferando.de/index 
+2012-10-26T16:51:31+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template error/notfound.htm 

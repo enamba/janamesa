@@ -1,0 +1,15 @@
+{assign var=ranges value=$service->getRanges(null, true)}
+<script type="text/javascript">
+{obfuscator}
+var ydCurrentRanges = { {foreach $ranges as $r}
+'{$r.cityId}': { 
+name: "{$r.cityname}",
+deliverTime: {$r.deliverTime|default:0},
+deliverCost: {$r.delcost|default:0},
+noDeliverCostAbove: {$r.noDeliverCostAbove|default:0},
+minCost: {$r.mincost|default:0},
+restUrl: "{$r.restUrl}"
+}{if !$r@last},{/if} 
+{/foreach} };
+{/obfuscator}
+</script>

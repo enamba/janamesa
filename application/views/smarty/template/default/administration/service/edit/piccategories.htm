@@ -1,0 +1,47 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{if isset($restaurant)}
+{include file='administration/service/edit/_navigation.htm'}
+
+<div class="one-column-box">
+    <div class="item">
+        <form action="/administration_service_category_picture/assign/id/{$restaurant->getId()}" method="post" >
+            <div class="item-head">
+                {__b('Kategorien von %s zuordnen', $restaurant->getName())}
+            </div>
+            <div class="item-content">
+                <table class="user-tab">
+                    <tr>
+                        <th>{__b('Menukategorie')}</th>
+                        <th>{__b('Bildkategorie')}</th>
+                        <th>{__b('hinterlegtes Bild')}</th>
+                        <th><input type="submit" class="button rund_set" name="submitassign" value="{__b('Speichern')}" /></th>
+                    </tr>
+                    {foreach from=$restaurant->getMealCategories() item=cat name=mealcats}
+                        <tr>
+                            <td>{$cat->getName()}</td>
+                            <td>
+                                <select name="pcat[{$cat->getId()}][]">
+                                    <option value="0"></option>
+                                    {foreach from=$picCat item=pcat}
+                                        <option value="{$pcat.id}"  {if $pcat.id==$cat->getCategoryPictureId()}selected{/if} >{$pcat.name}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                            <td>
+                                {if $cat->getImage()}
+                                    <img src="/storage/category/{$cat->getId()}-image.jpg" id="yd-menu-picture" height="50" alt="{__b('Kathegoriebild')}" />
+                                {/if}
+                            </td>
+                            <td>{if $smarty.foreach.mealcats.last}<input type="submit" class="button rund_set" name="submitassign" value="{__b('Speichern')}" />{else}&nbsp;{/if}</td>
+                        </tr>
+                    {/foreach}
+                </table>
+            </div>
+        </form>
+    </div>
+</div>
+
+{/if}
+{/block}

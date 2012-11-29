@@ -1,0 +1,95 @@
+{extends file='base.htm'}
+
+{block name="content"}
+
+    {assign var=serviceCacheId value=$service->getId()}
+    {include file='order/_includes/menu/ranges.htm' caching=1 cache_lifetime=86400 cache_id="ranges.$serviceCacheId"}
+    
+    <div id="yd-finish-content" class="yd-finish-content-company">      
+        
+        <div class="yd-breadcrumbs-new">
+            <a href="/">{__('Startseite')}</a>
+            <a href="/{$order->getCityUrl()}">{__('Lieferservices in %s %s', $order->getLocation()->getPLz(), $order->getLocation()->getCity()->getCity())}</a>
+            <a href="/{$order->getServiceUrl()}">{__('Speisekarte %s', $order->getService()->getName())}</a>
+            <a class="active">{__('Bezahlmethode wählen')}</a>
+        </div>
+        
+        <form action="/order_company/finish" method="post" id="finishForm">
+
+            <div id="yd-sidebar">
+
+                {include file="order/_includes/sidebar/kind-switch.htm"}
+                
+                {include file="order/_includes/sidebar/cart-finish.htm"}
+
+                {if $order->getMode() == 'rest'}
+                    <div class="yd-box">
+
+                        <div class="yd-box-body">
+
+                            <ul class="yd-sidebar-list hidden" id="yd-invite-budget"><li>&nbsp;</li></ul>
+
+                            <ul class="yd-sidebar-list">
+                                <li>
+                                    <em><strong>{__("Eigenes Budget:")}</strong></em>
+                                    <span class="rabatt yd-own-budget"><strong>{__('%s €',$order->getCustomer()->getCurrentBudget()|inttoprice)}</strong></span>
+                                    <input type="hidden" name="own_budget" value="{$order->getCustomer()->getCurrentBudget()}" />
+                                </li>
+                            </ul>
+
+                            <ul class="yd-sidebar-list">
+                                <li>
+                                    <em>{__("Offener Betrag:")}</em>
+                                    <span class="totalCost yd-open-amount">{__('%s €',$order->getAbsTotal()|inttoprice)}</span>
+                                    <input type="hidden" name="open_amount" value="{$order->getAbsTotal()}" />
+                                </li>
+                            </ul>
+
+                        </div>
+                   
+                    </div>
+                {/if}
+
+                {if $config->domain->base == 'lieferando.de'}
+                    <a href="#" id="yd-company-single-finish-bottom" class="yd-button-280 finish-button">{__("Jetzt kaufen")}</a>
+                {else}
+                    <a href="#" id="yd-company-single-finish-bottom" class="yd-button-280 finish-button">{__("Bestellung abschicken")}</a>
+                {/if}
+
+            </div>
+
+            <div id="yd-ordering">
+                <input type="hidden" id="yd-customerId" value="{$order->getCustomer()->getId()}" />
+
+                {if $order->getMode() == 'rest'}
+                    {$budgethtml}
+                {/if}
+                
+                {$projecthtml}
+
+                {if $order->getMode() == 'rest'}
+                    <span id="paymentcontent" {if !Yourdelivery_Helpers_Payment::showPayment($order)}class="hidden"{/if}>
+                        {include file='order/_includes/finish/payment.htm'}
+                    </span>
+                {/if}
+                
+                {include file="order/_includes/finish/address.htm"}
+
+            </div>
+
+            <input type="hidden" name="finish" value="get me some food" />
+
+            {include file='order/_includes/form_order.htm'}
+
+        </form>
+    </div>
+    <div id="yd-finish-presuccess-content" class="hidden">
+        {*include file='order/_includes/success/precompany.htm'*}
+    </div>
+     {*include file='_cookies/sociomatic/finish.htm'*}
+     {include file='_cookies/monkeys/finish.htm'}
+     {if $domain_base == 'lieferando.de'}
+      {include file='_cookies/cadreon/finish.htm'}
+     {/if}
+{/block}
+

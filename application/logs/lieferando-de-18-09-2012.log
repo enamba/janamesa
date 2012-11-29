@@ -1,0 +1,209 @@
+2012-09-18T09:46:41+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/login.htm 
+2012-09-18T09:46:43+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Successfully loggged in admin #Supporter Jens Naie (417) 
+2012-09-18T09:46:43+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/dashboard.htm 
+2012-09-18T12:00:55+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T12:03:46+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T12:03:55+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T14:26:46+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T14:27:23+02:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Run into error: Message: SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('select COUNT(*)...', Array)
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(799): Zend_Db_Adapter_Pdo_Abstract->query('select COUNT(*)...', Array)
+#4 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid/Source/Zend/Select.php(329): Zend_Db_Adapter_Abstract->fetchOne('select COUNT(*)...')
+#5 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid.php(2641): Bvb_Grid_Source_Zend_Select->execute()
+#6 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid/Deploy/Table.php(1873): Bvb_Grid->deploy()
+#7 /home/ydadmin/htdocs/lieferando/application/controllers/Administration/OrderController.php(31): Bvb_Grid_Deploy_Table->deploy()
+#8 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): Administration_OrderController->indexAction()
+#9 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('indexAction')
+#10 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#13 /home/ydadmin/htdocs/lieferando/public/index.php(116): Zend_Application->run()
+#14 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-09-18T14:27:23+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template error/error.htm 
+2012-09-18T14:31:13+02:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Run into error: Message: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'lieferando.de.``' doesn't exist
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('select COUNT(*)...', Array)
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(799): Zend_Db_Adapter_Pdo_Abstract->query('select COUNT(*)...', Array)
+#4 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid/Source/Zend/Select.php(332): Zend_Db_Adapter_Abstract->fetchOne('select COUNT(*)...')
+#5 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid.php(2641): Bvb_Grid_Source_Zend_Select->execute()
+#6 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid/Deploy/Table.php(1873): Bvb_Grid->deploy()
+#7 /home/ydadmin/htdocs/lieferando/application/controllers/Administration/OrderController.php(31): Bvb_Grid_Deploy_Table->deploy()
+#8 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): Administration_OrderController->indexAction()
+#9 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('indexAction')
+#10 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#13 /home/ydadmin/htdocs/lieferando/public/index.php(116): Zend_Application->run()
+#14 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-09-18T14:31:13+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template error/error.htm 
+2012-09-18T14:31:41+02:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Run into error: Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`' at line 1
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('select COUNT(*)...', Array)
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(799): Zend_Db_Adapter_Pdo_Abstract->query('select COUNT(*)...', Array)
+#4 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid/Source/Zend/Select.php(332): Zend_Db_Adapter_Abstract->fetchOne('select COUNT(*)...')
+#5 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid.php(2641): Bvb_Grid_Source_Zend_Select->execute()
+#6 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid/Deploy/Table.php(1873): Bvb_Grid->deploy()
+#7 /home/ydadmin/htdocs/lieferando/application/controllers/Administration/OrderController.php(31): Bvb_Grid_Deploy_Table->deploy()
+#8 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): Administration_OrderController->indexAction()
+#9 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('indexAction')
+#10 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#13 /home/ydadmin/htdocs/lieferando/public/index.php(116): Zend_Application->run()
+#14 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-09-18T14:31:41+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template error/error.htm 
+2012-09-18T14:33:57+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T14:39:36+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T14:39:41+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T14:39:51+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T14:39:58+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T15:08:28+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/dashboard.htm 
+2012-09-18T15:18:27+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T15:18:34+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T15:38:31+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T15:39:59+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T15:51:15+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T15:51:25+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T15:52:05+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T15:52:12+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T15:56:25+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T15:56:41+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:15:32+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:15:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:15:43+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:15:48+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/ticketsystem/index.htm 
+2012-09-18T16:15:50+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: fetching template request/administration/ticketsystem/cronjob.htm with cachetag  
+2012-09-18T16:15:55+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:15:58+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/gridsearch.htm 
+2012-09-18T16:17:02+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:17:12+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:17:25+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:17:29+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/gridsearch.htm 
+2012-09-18T16:17:48+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:18:05+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/gridsearch.htm 
+2012-09-18T16:18:19+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:19:41+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:19:57+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:20:03+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:20:18+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:34:26+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:34:52+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/stats/sales/index.htm 
+2012-09-18T16:36:12+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:36:18+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:37:15+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:37:28+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:38:55+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:39:08+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/stats/sales/matrix.htm 
+2012-09-18T16:39:52+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:41:45+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/login.htm 
+2012-09-18T16:41:51+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Successfully loggged in admin #Supporter Jens Naie (417) 
+2012-09-18T16:41:51+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/dashboard.htm 
+2012-09-18T16:41:58+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:43:27+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:45:33+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:52:24+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:53:27+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T16:57:02+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T17:02:29+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T17:03:28+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T17:03:43+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T17:07:25+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T17:07:52+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T17:08:48+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T17:09:03+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T17:09:10+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T17:09:27+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T17:09:35+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T17:09:49+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T17:10:01+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T17:11:26+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T17:12:14+02:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Run into error: Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY `o`.`id` ORDER BY `o`.`id` DESC LIMIT 15' at line 6
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Default_Model_Db_Select), Array)
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Select.php(686): Zend_Db_Adapter_Pdo_Abstract->query(Object(Default_Model_Db_Select))
+#4 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid/Source/Zend/Select.php(322): Zend_Db_Select->query(2)
+#5 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid.php(2641): Bvb_Grid_Source_Zend_Select->execute()
+#6 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid/Deploy/Table.php(1873): Bvb_Grid->deploy()
+#7 /home/ydadmin/htdocs/lieferando/application/controllers/Administration/OrderController.php(35): Bvb_Grid_Deploy_Table->deploy()
+#8 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): Administration_OrderController->indexAction()
+#9 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('indexAction')
+#10 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#13 /home/ydadmin/htdocs/lieferando/public/index.php(116): Zend_Application->run()
+#14 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-09-18T17:12:14+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template error/error.htm 
+2012-09-18T17:14:35+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T17:14:44+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T17:16:21+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T17:16:30+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T17:20:12+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T17:20:36+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T18:08:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/stats/sales/index.htm 
+2012-09-18T18:35:16+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T18:35:32+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T18:35:38+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T18:36:11+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-18T18:36:19+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/service/edit/index.htm 
+2012-09-18T18:36:31+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T18:37:09+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T18:41:52+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-18T18:42:11+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-18T18:42:34+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="de" xml:lang="de" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="de" xml:lang="de" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="de" xml:lang="de" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="de" xml:lang="de" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="de" xml:lang="de">         <!--<![endif]-->
+    <head>
+        <title>Avanti Pizza München Augsburg Lieferservice Pizzaservice Heimservice</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="verify-v1" content="8FkQKoLGBaYuIR6TefpycUGdFpQKEg/TqVO+fFIIVL4=" />
+        <link rel="shortcut icon" href="img/favicon.ico" TYPE="image/x-icon">
+        <meta name="language" content="deutsch, de">
+        <meta name="keywords" content="avanti, pizza, München, Augsburg, Lieferservice, Pizzaservice, heimservice, Lieferservice">
+        <meta name="description" content="avanti pizza heimservice münchen  Augsburg online bestellen Liefervice Pizzaserivce">  
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" ></script> 
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript">
+            /**
+             * validate rating form
+             * 
+             * @author Toni Meuschke <meuschke@lieferando.de>
+             * @sionce 14.12.2011
+             */
+            function avantiValidate(){
+                if($('#store').val().length <= 0){
+                    alert('Bitte wähle einen Store aus!');
+                    return false;
+                }
+                if($('#bewerten input[name="email"]').val().length <= 0){
+                    alert('Gib bitte deine Email an!');
+                    return false;
+                }
+                
+                var isOk = true;
+                
+                $('input[type="radio"]').each(function(i, item){            
+                    if(isOk && $(item).prop('checked') ===  true  && item.value === "keine Angabe"){
+                         alert('Bitte bewerte den Store!');
+                         isOk = false;
+                    }                                       
+                } );
+                                
+               if(!isOk) {
+                   return false;
+               }                 
+                                
+               return true;
+            }
+            $(document).ready(function(){
+                $('#bewerten input[type="submit"]').bind('click', function(event){
+                    event.stopPropagation();
+                    var check = avantiValidate();
+                    if(check) {
+                        $('#bewerten').attr('action', '/satellite_multiple/bewertensend');
+                        return true;
+                    }else {
+                        return false;
+                    }
+                                                           
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="non-footer" class="yd-clearfix">
+            <div id="avanti-header">
+                <a href="/" class="homelink"></a>
+                <ul class="social">
+                    <li>Folge uns auf</li>
+                    <li>
+                        <a href="http://www.facebook.com/PizzaAvanti" class="facebook_icon" target="_blank" title="PIZZA AVANTI"></a>
+                    </li>
+                    <li>
+                        <a href="http://twitter.com/pizzaavanti/" class="twitter_icon" target="_blank" title="PIZZA AVANTI (pizzaavanti) on Twitter"></a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li><a href="bestellen/deutschland">Online bestellen</a></li>
+                    <li><a href="http://www.avanti-franchise.de">Franchise</a></li>
+                    <!--<li><a href="newsletter">Newsletter</a></li>-->
+
+                    <li><a href="qualitaet">Qualität</a></li>
+                    <li><a href="jobs">Jobs</a></li>
+                    <li class="active"><a href="bewerten">Bewertung</a></li>
+                    <li><a href="sponsoring">Sponsoring</a></li>
+                    <li><a href="video">Video</a></li>
+                </ul>
+                <a href="/impr" class="impress">Impressum</a>
+            </div>     
+            <div id="avanti-content" class="bewerten">
+                <div class="content-header">
+                    <h1>Bewerten</h1>
+                </div>
+                <p>Wir wollen noch besser werden, daher ist uns Ihre Meinung wichtig!</p>
+                <br/>
+                <br/>
+                <p>Ihr Avanti Team.</p>
+                <b>In welcher Filiale haben Sie bestellt</b>
+                <br/><br/>
+                <form id="bewerten" action="" method="post" >
+                    <select name="store"  id="store" size="1" style="width:350px;">
+                        <option value="">--- Bitte einen Store wählen ---</option>
+                        {foreach from=$satelliteList item=satellite}
+                        {assign var=service value=$satellite->getService()}
+                            {if $service}
+                                <option value="{$service->getCity()->getPlz()} {$service->getCity()->getFullname()}">{$service->getCity()->getPlz()} {$service->getCity()->getFullname()}</option>
+                            {/if}
+                        {/foreach}
+                    </select>
+                    <br/>
+                    <br/>
+                    <table cellpadding="0" cellspacing="5" border="0">
+                        <tr>
+                            <th width="200">&nbsp;</th>
+                            <th><img src="img/hand_01.jpg" alt="Sehr gut" /></th>
+                            <th><img src="img/hand_02.jpg" alt="Gut" /></th>
+                            <th><img src="img/hand_03.jpg" alt="Mittel" /></th>
+                            <th><img src="img/hand_04.jpg" alt="Schlecht" /></th>
+                            <th><img src="img/hand_05.jpg" alt="Sehr schlecht" /></th>
+
+                            <th>keine<br>Angabe</th>
+                        </tr>
+                        <tr>
+                            <td align="left" width="200">Geschmack</td>
+                            <td align="center" width="47"><input type="radio" name="geschmack" value="Sehr Gut"></td>
+                            <td align="center" width="47"><input type="radio" name="geschmack" value="Gut"></td>
+                            <td align="center" width="47"><input type="radio" name="geschmack" value="Mittel"></td>
+                            <td align="center" width="47"><input type="radio" name="geschmack" value="Schlecht"></td>
+                            <td align="center" width="47"><input type="radio" name="geschmack" value="Sehr Schlecht"></td>
+                            <td align="center" width="47"><input type="radio" name="geschmack" value="keine Angabe" checked></td>
+                        </tr>
+                        <tr>
+                            <td align="left" width="200">verwendete Zutaten</td>
+                            <td align="center" width="47"><input type="radio" name="verwendete_zutaten" value="Sehr Gut"></td>
+                            <td align="center" width="47"><input type="radio" name="verwendete_zutaten" value="Gut"></td>
+                            <td align="center" width="47"><input type="radio" name="verwendete_zutaten" value="Mittel"></td>
+                            <td align="center" width="47"><input type="radio" name="verwendete_zutaten" value="Schlecht"></td>
+                            <td align="center" width="47"><input type="radio" name="verwendete_zutaten" value="Sehr Schlecht"></td>
+                            <td align="center" width="47"><input type="radio" name="verwendete_zutaten" value="keine Angabe" checked></td>
+                        </tr>
+                        <tr>
+                            <td align="left" width="200">Temperatur</td>
+                            <td align="center" width="47"><input type="radio" name="temperatur" value="Sehr Gut"></td>
+                            <td align="center" width="47"><input type="radio" name="temperatur" value="Gut"></td>
+                            <td align="center" width="47"><input type="radio" name="temperatur" value="Mittel"></td>
+                            <td align="center" width="47"><input type="radio" name="temperatur" value="Schlecht"></td>
+                            <td align="center" width="47"><input type="radio" name="temperatur" value="Sehr Schlecht"></td>
+                            <td align="center" width="47"><input type="radio" name="temperatur" value="keine Angabe" checked></td>
+                        </tr>
+                        <tr>
+                            <td align="left" width="200">Lieferzeit</td>
+                            <td align="center" width="47"><input type="radio" name="lieferzeit" value="Sehr Gut"></td>
+                            <td align="center" width="47"><input type="radio" name="lieferzeit" value="Gut"></td>
+                            <td align="center" width="47"><input type="radio" name="lieferzeit" value="Mittel"></td>
+                            <td align="center" width="47"><input type="radio" name="lieferzeit" value="Schlecht"></td>
+                            <td align="center" width="47"><input type="radio" name="lieferzeit" value="Sehr Schlecht"></td>
+                            <td align="center" width="47"><input type="radio" name="lieferzeit" value="keine Angabe" checked></td>
+                        </tr>
+                        <tr>
+                            <td align="left" width="200">Kompetenz des Telefonisten</td>
+                            <td align="center" width="47"><input type="radio" name="kompetenz_des_telefonisten" value="Sehr Gut"></td>
+                            <td align="center" width="47"><input type="radio" name="kompetenz_des_telefonisten" value="Gut"></td>
+
+                            <td align="center" width="47"><input type="radio" name="kompetenz_des_telefonisten" value="Mittel"></td>
+                            <td align="center" width="47"><input type="radio" name="kompetenz_des_telefonisten" value="Schlecht"></td>
+                            <td align="center" width="47"><input type="radio" name="kompetenz_des_telefonisten" value="Sehr Schlecht"></td>
+                            <td align="center" width="47"><input type="radio" name="kompetenz_des_telefonisten" value="keine Angabe" checked></td>
+                        </tr>
+                        <tr>
+                            <td align="left" width="200">Kompetenz des Fahrers</td>
+                            <td align="center" width="47"><input type="radio" name="kompetenz_des_fahrers" value="Sehr Gut"></td>
+                            <td align="center" width="47"><input type="radio" name="kompetenz_des_fahrers" value="Gut"></td>
+                            <td align="center" width="47"><input type="radio" name="kompetenz_des_fahrers" value="Mittel"></td>
+                            <td align="center" width="47"><input type="radio" name="kompetenz_des_fahrers" value="Schlecht"></td>
+                            <td align="center" width="47"><input type="radio" name="kompetenz_des_fahrers" value="Sehr Schlecht"></td>
+                            <td align="center" width="47"><input type="radio" name="kompetenz_des_fahrers" value="keine Angabe" checked></td>
+                        </tr>
+                        <tr>
+                            <td align="left" width="200">Preis / Leistung</td>
+
+                            <td align="center" width="47"><input type="radio" name="preis_leistung" value="Sehr Gut"></td>
+                            <td align="center" width="47"><input type="radio" name="preis_leistung" value="Gut"></td>
+                            <td align="center" width="47"><input type="radio" name="preis_leistung" value="Mittel"></td>
+                            <td align="center" width="47"><input type="radio" name="preis_leistung" value="Schlecht"></td>
+                            <td align="center" width="47"><input type="radio" name="preis_leistung" value="Sehr Schlecht"></td>
+                            <td align="center" width="47"><input type="radio" name="preis_leistung" value="keine Angabe" checked></td>
+                        </tr>
+                        <tr>
+                            <td align="left" width="200">Umfang des Angebots</td>
+                            <td align="center" width="47"><input type="radio" name="umfang_des_angebots" value="Sehr Gut"></td>
+                            <td align="center" width="47"><input type="radio" name="umfang_des_angebots" value="Gut"></td>
+                            <td align="center" width="47"><input type="radio" name="umfang_des_angebots" value="Mittel"></td>
+                            <td align="center" width="47"><input type="radio" name="umfang_des_angebots" value="Schlecht"></td>
+                            <td align="center" width="47"><input type="radio" name="umfang_des_angebots" value="Sehr Schlecht"></td>
+                            <td align="center" width="47"><input type="radio" name="umfang_des_angebots" value="keine Angabe" checked></td>
+                        </tr>
+
+                        <tr>
+                            <td align="left" width="200">Qualit&auml;t der Sonderaktionen</td>
+                            <td align="center" width="47"><input type="radio" name="qualitaet_der_sonderaktionen" value="Sehr Gut"></td>
+                            <td align="center" width="47"><input type="radio" name="qualitaet_der_sonderaktionen" value="Gut"></td>
+                            <td align="center" width="47"><input type="radio" name="qualitaet_der_sonderaktionen" value="Mittel"></td>
+                            <td align="center" width="47"><input type="radio" name="qualitaet_der_sonderaktionen" value="Schlecht"></td>
+                            <td align="center" width="47"><input type="radio" name="qualitaet_der_sonderaktionen" value="Sehr Schlecht"></td>
+                            <td align="center" width="47"><input type="radio" name="qualitaet_der_sonderaktionen" value="keine Angabe" checked></td>
+                        </tr>
+                    </table>
+                    <br/><br/>
+                    <p>Haben Sie zum ersten Mal bestellt?</p>
+                    <br/>
+                    <input type="radio" name="erstesmal" value="Ja"/>&nbsp;Ja
+                    <input type="radio" name="erstesmal" value="Nein"/>&nbsp;Nein
+                    <br/><br/>
+                    <p> Anregungen / Bemerkungen</p>
+                    <br/>
+                    <textarea name="comment" rows="5" cols=50></textarea>
+                    <br/><br/>  
+                    <p>Meine Emailadresse</p>
+                    <br/>
+                    <input type="text" name="email" value="" size=45 />
+                    <br/><br/>
+                    <input type="submit" value="Und ab die Post!"  name="action">
+                </form>
+            </div>
+            <div id="avanti-sidebar">
+                <div>
+                    <script type="text/javascripte">
+                        (function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) {
+                        return;
+                        }
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1";
+                        fjs.parentNode.insertBefore(js, fjs);
+                        }
+                        (document, 'script', 'facebook-jssdk'));
+                    </script>
+                    <fb:fan profile_id="117273638296456" stream="0" width="190" height="250px" logobar="0" css="http://staging.lieferando.de/storage/satellites/www.zaboos-bringdienst.de/facebook.css?3"></fb:fan>
+                    <!--<div class="fb-like-box" data-href="http://www.facebook.com/PizzaAvanti" data-width="190" data-show-faces="true" data-stream="false" data-header="true"></div>-->
+                </div>
+                <!-- <div class="iphone">
+                     <h3>PIZZA AVANTI iphone APP</h3>
+                     <p>Geschmack und Qualiät jetzt mobil bestellen!</p>
+                     <a href="http://itunes.apple.com/de/app/pizza-avanti/id381706861?mt=8" title="iphone APP">mehr...</a>
+                 </div>-->
+                <div class="sponsor">
+                    <h3>Sponsoring</h3>
+                    <p>Jetzt aber schnell!</p>
+                    <p>Münchens neue Liebe EHC München Eishockey ist in den Herzen angekommen</p>
+                    <a href="/sponsoring" title="Sponsoring">mehr...</a>
+                </div>
+                <div class="quali">
+                    <h3>PIZZA AVANTI Qualität</h3>
+                    <p>Geschmack und Qualiät bei Pizza Avanti - Hierfür stehen wir ein!</p>
+                    <a href="/qualitaet" title="Qualität">mehr...</a>
+                </div>
+                <div class="rating" >
+                    <h3>Bewerten Sie uns</h3>
+                    <p>Wir wollen noch besser werden, dafür ist uns Ihre Meinung wichtig.</p>
+                    <a href="/bewerten" title="Bewerten">mehr...</a>
+                </div>
+
+                <div class="video">
+                    <h3>PIZZA AVANTI Video</h3>
+                    <p>So kommt die Pizza zu Ihnen nach Hause!</p>
+                    <a href="/video" title="Bewerten">Jetzt ansehen...</a>
+                </div>
+
+                <div class="jobs">
+                         <h3>Jobs bei Avanti</h3>
+                         <p>Vom Pizzafahrer zum Millionär!</p>
+                         <p>Jobs und Stellenangebote bei Pizza Avanti.</p>
+                         <a href="/jobs" title="Jobs">mehr...</a>
+                     </div>
+
+                <div class="franchise">
+                    <h3>Franchisenehmer werden</h3>
+                    <p>Erfolgreich selbständig, natürlich mit System.</p>
+                    <a href="http://www.avanti-franchise.de" title="Franchise">mehr...</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

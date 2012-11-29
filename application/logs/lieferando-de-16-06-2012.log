@@ -1,0 +1,17 @@
+2012-06-16T08:31:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/login.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-16T08:31:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/login.htm 
+2012-06-16T08:39:06-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/serviceinfo.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-16T08:39:06-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-06-16T08:39:06-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/164.html 
+2012-06-16T08:51:45-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/serviceinfo.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-16T08:51:45-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-06-16T08:51:45-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/291.html 
+2012-06-16T09:35:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/serviceinfo.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-16T09:35:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-06-16T09:35:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/163.html 
+2012-06-16T09:35:55-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/serviceinfo.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-16T09:35:55-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-06-16T09:35:55-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/314.html 
+2012-06-16T09:36:17-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-16T09:36:17-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-16T09:36:17-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-big-boy-i-sao-paulo.html 

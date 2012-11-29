@@ -1,0 +1,8 @@
+ID;Nr;Mitarbeiter;Bestellart;Dienstleister;DienstleisterKundennummber;Bestellung_um;Lieferung_um;Budget;Privat_bezahlt;Netto_7;Netto_19;Netto_Summe;Steuern_7;Steuern_19;Steuern_Summe;Brutto_Summe;Pfand;PfandNetto;PfandSteuern;Discount;Projekt;Kostenstelle;Rechnungsnummer
+;;Jánamesa;Rechnungsposten;Jánamesa Restaurante;40050;16.03.2012;16.03.2012;0,00;0;0,00;0,00;0,00;0,00;0,00;0,00;0,00;0;0;0;0;;;R-1204-10032-000043
+196;23053032;Patricia Haddad;Lieferservice;Purpurina Oficina de Pizzas;40041;00:23 05.04.2012;sofort;20,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00;20,00;0,00;0,00;0,00;0,00; ;;R-1204-10032-000043
+196;23053032;Jörg Arntz;Lieferservice;Purpurina Oficina de Pizzas;40041;00:23 05.04.2012;sofort;20,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00;20,00;0,00;0,00;0,00;0,00; ;;R-1204-10032-000043
+196;23053032;Johannes Noebels;Lieferservice;Purpurina Oficina de Pizzas;40041;00:23 05.04.2012;sofort;20,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00;20,00;0,00;0,00;0,00;0,00; ;;R-1204-10032-000043
+196;23053032;Eric Küpper;Lieferservice;Purpurina Oficina de Pizzas;40041;00:23 05.04.2012;sofort;20,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00;20,00;0,00;0,00;0,00;0,00; ;;R-1204-10032-000043
+196;23053032;Antonis Schwarz;Lieferservice;Purpurina Oficina de Pizzas;40041;00:23 05.04.2012;sofort;20,00;0,00;0,00;0,00;0,00;0,00;0,00;0,00;20,00;0,00;0,00;0,00;0,00; ;;R-1204-10032-000043
+196;23053032;Anderson Bittencourt Santos;Lieferservice;Purpurina Oficina de Pizzas;40041;00:23 05.04.2012;sofort;9,40;0,00;0,00;0,00;0,00;0,00;0,00;0,00;9,40;0,00;0,00;0,00;0,00; ;;R-1204-10032-000043

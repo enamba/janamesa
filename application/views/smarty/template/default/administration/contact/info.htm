@@ -1,0 +1,106 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{if isset($contact)}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            <h1>{__b('Kontakt: ')}{$contact->getPrename()} {$contact->getName()} <a href="/administration_contact/edit/id/{$contact->getId()}/">{__b('[bearbeiten]')}</a></h1>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Kontaktinformationen')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab" width="50%">
+                <tr>
+                    <td width="20%"><strong>{__b('Vorname:')}</strong></td>
+                    <td width="80%">{$contact->getPrename()}</td>
+                </tr>
+                <tr>
+                    <td><strong>{__b('Nachname:')}</strong></td>
+                    <td>{$contact->getName()}</td>
+                </tr>
+                <tr>
+                    <td><strong>{__b('eMail:')}</strong></td>
+                    <td>{$contact->getEmail()}</td>
+                </tr>
+                <tr>
+                    <td><strong>{__b('Telefon:')}</strong></td>
+                    <td>{$contact->getTel()}</td>
+                </tr>
+                <tr>
+                    <td><strong>{__b('Fax:')}</strong></td>
+                    <td>{$contact->getFax()}</td>
+                </tr>
+                <tr>
+                    <td><strong>{__b('Position')}</strong></td>
+                    <td>{$contact->getPosition()}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Adressdaten')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab" width="50%">
+                <tr>
+                    <td width="20%"><strong>{__b('Straße:')}</strong></td>
+                    <td width="80%">{$contact->getStreet()}</td>
+                </tr>
+                <tr>
+                    <td><strong>{__b('HausNr:')}</strong></td>
+                    <td>{$contact->getHausnr()}</td>
+                </tr>
+                <tr>
+                    <td><strong>{__b('PLZ:')}</strong></td>
+                    <td>{$contact->getPlz()}</td>
+                </tr>
+                <tr>
+                    <td><strong>{__b('Stadt:')}</strong></td>
+                    <td>{$contact->getOrt()->getOrt()}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Zuordnungen')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab" width="100%">
+                <tr>
+                    <td width="20%"><strong>{__b('Firmen:')}</strong></td>
+                    <td width="80%">
+                        {foreach from=$companys item=cmp}
+                            <a href="/administration_company_edit/companyid/{$cmp->getId()}">{$cmp->getName()}</a><br/>
+                        {/foreach}
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>{__b('Restaurants:')}</strong></td>
+                    <td>
+                        {foreach from=$restaurants item=rest}
+                            <a href="/administration_service_edit/id/{$rest->getId()}">{$rest->getName()}</a><br/>
+                        {/foreach}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+{/if}
+{/block}

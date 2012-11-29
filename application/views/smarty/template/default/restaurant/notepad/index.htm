@@ -1,0 +1,54 @@
+{extends file="restaurant/base.htm"}
+{block name="content"}
+
+<div class="one-column-box">
+     <div class="item">
+        <div class="item-head">
+            {{__b('Kommentar')}}
+        </div>
+         <div class="item-content">
+            <form action="/restaurant_notepad/create" method="post" enctype="multipart/form-data">
+            <table class="user-tab">
+                <tr>
+                    <td width="40%"><textarea rows="8" style="width: 400px;" name="comment"></textarea></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="{{__b('Abschicken')}}"/>
+                    </td>
+                </tr>
+            </table>
+            </form>
+         </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+     <div class="item">
+        <div class="item-head">
+            {{__b('Kommentare')}}
+        </div>
+         <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <th width="15%">{{__b('Eingetragen am')}}</th>
+                    <th width="15%">{{__b('Author')}}</th>
+                    <th width="50%">{{__b('Kommentar')}}</th>
+                    <th width="10%">{{__b('Eingeloggt')}}</th>
+                    <th width="10%"></th>
+                </tr>
+                {foreach from=$comments item=comment}
+                <tr>
+                    <td>{$comment['time']}</td>
+                    <td>{if $comment['masterAdmin']}{$comment['aName']} ({$comment['aEmail']}){else}{$comment['cPrename']} {$comment['cName']} ({$comment['cEmail']}){/if} </td>
+                    <td>{$comment['comment']}</td>
+                    <td>{if $comment['masterAdmin']}{{__b('aus Admin-backend')}}{else}{{__b('direkt')}}{/if}</td>
+                    <td></td>
+                </tr>
+                {/foreach}
+            </table>
+         </div>
+    </div>
+</div>
+
+{/block}

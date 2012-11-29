@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="de" xml:lang="de" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="de" xml:lang="de" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="de" xml:lang="de" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="de" xml:lang="de" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="de" xml:lang="de">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="viewport" content="width=1100">
+
+        <link rel="stylesheet" type="text/css" href="/media/css/www.lieferando.de/yd-frontend-core.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/www.lieferando.de/yd-frontend-jquery.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/www.lieferando.de/yd-frontend-hidden.css" />
+
+        <script type="text/javascript" src="/media/javascript/compiled/frontend-test.js"></script>
+
+        <script>
+            $(document).ready(function(){
+
+                $(".yd-dialogs-comment-head").live("click", function(){
+                    $(".yd-dialogs-comment-body").slideToggle('fast');
+                });
+
+            });
+        </script>
+        
+        <style>
+            
+            .ui-dialog-titlebar, .ui-widget-header, .ui-corner-all, .ui-helper-clearfix {
+                display: none;
+            }
+            
+        </style>
+
+    </head>
+
+    <body class="de">
+        <div id="yd-nonfooter">
+
+            <div class="yd-header">
+                <div class="yd-inner">
+                    <a class="yd-logo" href="/"></a>
+
+                    <form name="login" action="/user/login" method="post" id="login">
+                        <input type="hidden" name="login" value="1" />
+                        <input type="text" name="user" value="E-Mail" />
+                        <input type="password" name="pass" value="Passwort" />
+                        <input class="button" type="submit" value="Login" />
+                        <a class="button" href="/user/register">Neu Anmelden</a>
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="yd-nav">
+                <ul>
+                    <li><a class="yd-nav-1" href="/">Lieferservices</a></li>
+                    <li><a class="yd-nav-2" href="/catering">Catering</a></li>
+                    <li><a class="yd-nav-3" href="/supermarkt">Supermarkt</a></li>
+                    <li><a class="yd-nav-4" href="http://iphoneapp.lieferando.de">iPhone App</a></li>
+                </ul>
+            </div>
+
+            <div id="yd-content" class="yd-clearfix">
+
+                <a href="#" onclick="openDialog('/test/testlightboxrequest'); return false;">testlightbox</a>
+
+            </div>
+
+        </div>
+
+        <div id="yd-footer"></div>
+
+    </body>
+</html>

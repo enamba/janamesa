@@ -1,0 +1,10 @@
+{if !$service or !$service->isOnlycash()}
+    <div style="margin: 0 0 20px; text-align: center;">
+        {if $config->domain->base == 'lieferando.de'}<img src="{$domain_static}/images/www.lieferando.de/payment.png" alt="paymentLogo" />{/if}
+        {if $config->domain->base == 'lieferando.at'}<img src="{$domain_static}/images/www.lieferando.at/payment.png" alt="paymentLogo" />{/if}
+        {if $config->domain->base == 'lieferando.ch'}<img src="{$domain_static}/images/www.lieferando.ch/payment.png" alt="paymentLogo" />{/if}
+        {if $config->domain->base == 'eat-star.de'}<img src="{$domain_static}/images/www.eat-star.de/payment.png" alt="paymentLogo" />{/if}
+        {if $config->domain->base == 'taxiresto.fr'}<img src="{$domain_static}/images/www.taxiresto.fr/payment-fr.png" alt="paymentLogo" />{/if}
+        {if $config->domain->base == 'pyszne.pl'}<img src="{$domain_static}/images/www.pyszne.pl/payment.png" alt="paymentLogo" />{/if}
+    </div>
+{/if}

@@ -1,0 +1,20 @@
+<div class="be-dialogs"><a class="be-dialogs-close yd-close-lightbox"></a>
+
+    <div class="be-dialogs-head">
+        <h2>{__('Hits')}</h2>
+    </div>
+
+    <div class="be-dialogs-body">
+        <ul>
+        {if $value instanceof Yourdelivery_Model_Support_Blacklist_Values}
+        {foreach $value->getMatchings() as $matching}
+            <li>
+                <a href="/administration_order/index/type/view_grid_orders/IDgrid/{$matching->getOrderId()}" target="_blank">#{$matching->getOrderId()}</a> 
+                {__b("am %s", $matching->getCreated()|date_format:__b('%d.%m.%Y %H:%M'))}
+            </li>
+        {/foreach}
+        {/if}
+        </ul>
+    </div>
+
+</div>

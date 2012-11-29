@@ -1,0 +1,21 @@
+<script type="text/javascript">
+
+    //this should be loaded via requests!
+    serviceIds.push({$r->getId()});
+
+    services.push({
+        id: {$r->getId()},
+        type: "{$r->getType()}",
+        alpha: "{$r->getName()|strtolower}",
+        name: "{$r->getName()}",
+        ratingcount: {if $r->getRating()->count(null, true, false, true) < 5}0{else}{$r->getRating()->count(null, true, false, true)|default:5}{/if},
+        ratingstars: "{if $r->getRating()->count(null, true, false, true) < 5}0{else}{round($r->getRating()->getAverage(),2)}{/if}",
+        ratingvotes: {if $r->getRating()->count(null, true, false, true) < 5}0{else}{round($r->getRating()->getAverageAdvise())}{/if},
+        mincost: {$r->getMincost()|default:0},
+        category: {$r->getCategory()->id|default:0},
+        premium: "{if $r->isPremium() || $r->isBloomsburys() || $r->isLieferblitz()}a{else}b{/if}{$r->getName()|strtolower}",
+        delivercost: {$r->getDeliverCost()|default:0},
+        openings: {$this->formatOpeningsAsJson($r->getOpening()->getIntervalOfDay())},
+        score: {$r->getSortingScore($time)}
+    });
+</script>

@@ -1,0 +1,204 @@
+{extends file="company/base.htm"}
+
+{block name="content"}
+<div id="admincase">
+
+    <ul id="main-nav">  <!-- Accordion Menu -->
+
+        <li>
+            <a href="/company" class="nav-top-item no-submenu"> <!-- Add the class "no-submenu" to menu items with no sub menu -->
+                {__('Übersicht')}
+            </a>
+        </li>
+
+        <li>
+            <a href="#" class="nav-top-item current"> <!-- Add the class "current" to current menu item -->
+            {__('Mitarbeiterverwaltung')}
+            </a>
+            <ul>
+                <li><a class="current" href="/company/employees">{__('Mitarbeiter')}</a></li>
+                <li><a href="/company/budgets">{__('Gruppen')}</a></li>
+                <li><a href="/company/addresses">{__('Adressen')}</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#" class="nav-top-item">
+                {__('Rechnungen und Einstellungen')}
+            </a>
+            <ul>
+                <li><a href="/company/settings">{__('Firmendetails')}</a></li>
+                <li><a href="/company/contact">{__('Kontaktperson')}</a></li>
+                <li><a href="/company/billingcontact">{__('Rechnungsadresse')}</a></li>
+                <li><a href="/company/billing">{__('Rechnungen')}</a></li>
+                <li><a href="/company/departments">{__('Projektnummern')}</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#" class="nav-top-item">
+                {__('Bestellungen')}
+            </a>
+            <ul>
+                <li><a href="/company/orders">{__('Alle Bestellungen')}</a></li>
+                <li><a href="#">{__('Statistiken')}</a></li>
+            </ul>
+        </li>
+
+    </ul> <!-- End #main-nav -->
+
+    <div class="clear"></div>
+
+    <div id="main-content">
+
+    <!-- Page Head -->
+
+        <ul class="shortcut-buttons-set">
+            <li><a class="shortcut-button" href="/company/employees"><span>
+                <img src="{$domain_static}/images/yd-icons/backend/group.png" alt="" /><br />
+                {__('Mitarbeiter Übersicht')}
+            </span></a></li>
+
+            <li><a class="shortcut-button" href="/company/addemployee"><span>
+                <img src="{$domain_static}/images/yd-icons/backend/user_add.png" alt="" /><br />
+                {__('Mitarbeiter hinzufügen')}
+            </span></a></li>
+
+			</ul><!-- End .shortcut-buttons-set -->
+
+    <div class="clear"></div>
+
+
+
+
+
+
+
+
+
+    <div class="content-box">
+
+        <div class="content-box-header">
+
+            <h3>{__('Mitarbeiter')} <b>{$employee->getPrename()} {$employee->getName()}</b> {__('bearbeiten')}</h3>
+
+            <div class="clear"></div>
+
+        </div>
+
+    <div id="content" class="right">
+		<!-- Anfang Meine Daten -->
+		<div class="mydata">
+			<div class="users">
+				<div class="set-content">
+                    <form action="/company/employee/id/{$employee->getId()}" method="post" class="fm yd-validation">
+					<div class="settings_group">
+						<div class="title">{__('Nutzerdaten')}</div>
+						<div class="user-content">
+							<label for="">{__('Vorname:')} <b class="red">*</b></label>
+                            <input type="text" id="prename" value="{$employee->getPrename()}" class="text-input medium-input validate[name]" name="prename"/>
+						</div>
+						<div class="user-content">
+							<label for="">{__('Name:')} <b class="red">*</b></label>
+							<input type="text" id="name" class="text-input medium-input validate[nachname]" name="name"  value="{$employee->getName()}" />
+						</div>
+						<div class="user-content">
+							<label for="">{__('E-Mail:')} <b class="red">*</b></label>
+							<input type="text" id="email" class="text-input medium-input validate[custom[email]]" name="email" value="{$employee->getEmail()}" />
+						</div>
+                        <div class="user-content">
+                            <label for="">{__('Personalnummer:')}</label>
+                            <input type="text" class="text-input medium-input" name="personalnumber" value="{if isset($post)}{$post.personalnumber}{else}{$employee->getPersonalnumber()}{/if}" />
+                        </div>
+                       <div class="user-content">
+                            <label for="">{__('Telefonnummer:')}</label>
+                            <input type="text" class="text-input medium-input" name="tel" value="{if isset($post)}{$post.personalnumber}{else}{$employee->getTel()}{/if}" />
+                        </div>
+                        <div class="user-content">
+                            <label for="">{__('Neues Passwort:')}</label>
+                            <input type="text" id="newpass" class="text-input medium-input validate[optional,length[5,20]]" name="newpass" value="" />
+                        </div>
+                        <div class="user-content">
+                            <label for="">{__('Kostenstelle:')}</label>
+                            <select name="costcenter">
+                                <option value=""></option>
+                                {foreach from=$company->getCostcenters() item=costcenter}
+                                    <option value="{$costcenter->getId()}" {if !is_null($employee->getCostcenter()) && $employee->getCostcenter()->getId() == $costcenter->getId()}selected="selected"{/if}>{$costcenter->getName()} {if $costcenter->getIdentNr() != ""}({$costcenter->getIdentNr()}){/if}</option>
+                                {/foreach}
+                            </select>
+                        </div>
+						<div class="user-content">
+							<label for="">{__('Administrator:')}</label>
+                            <div class="yd-inner-margin">
+							<input type="radio" name="admin" class="radio" value="1" {if $employee->isAdmin($company)}checked{/if} /> <span class="radio">{__('Ja')}</span>
+							<input type="radio" name="admin" class="radio" value="0" {if !$employee->isAdmin($company)}checked{/if} /> <span class="radio">{__('Nein')}</span>
+                            </div>
+						</div>
+                        <div class="user-content">
+							<label for="">{__('Gruppe:')}</label>
+                            <select name="budget" class="bg w280">
+                                {if $employee->getBudget()}
+                                    {foreach from=$company->getBudgets() item=budget}
+                                        <option value="{$budget->getId()}" {if $employee->getBudget()->getId()==$budget->getId()}selected{/if}>{$budget->getName()}</option>
+                                    {foreachelse}
+                                        <option value="0">{__('Kein Budgedt angelegt')}!</option>
+                                    {/foreach}
+                                {else}
+                                    <option value="0">{__('Kein Budget angelegt')}!</option>
+                                    {foreach from=$company->getBudgets() item=budget}
+                                        <option value="{$budget->getId()}">{$budget->getName()}</option>
+                                    {/foreach}
+                                {/if}
+                            </select>
+						</div>
+
+                        <div class="user-content">
+                            <label for="">{__('Benachrichtigen:')}</label>
+                            <div class="yd-inner-margin">
+                                <input type="checkbox" name="notify" value="1" checked /> {__('Benutzer über Änderungen der Zugangsdaten benachrichtigen')}!
+                                <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{__('(nur bei Änderung von Email-Adresse oder Passwort)')}
+                            </div>
+                        </div>
+
+
+                        
+                        <div class="user-content">
+                            <label for="">{__('Einkaufmöglichkeiten:')}</label>
+                            <div class="yd-inner-margin">
+                            <input type="checkbox" name="allowTabaco" value="1" {if $employee->allowTabaco()}checked{/if} /> {__('Tabak')} &nbsp;
+                            <input type="checkbox" name="allowAlcohol" value="1" {if $employee->allowAlcohol()}checked{/if} /> {__('Alkohol')} &nbsp;
+                            <input type="checkbox" name="allowCater" value="1" {if $employee->allowCater()}checked{/if} /> {__('Catering')} &nbsp;
+                            <input type="checkbox" name="allowGreat" value="1" {if $employee->allowGreat()}checked{/if} /> {__('Großhändler')} &nbsp;
+                            </div>
+                        </div>
+                        <br /><br />
+                        <div class="user-content submit">
+                            <input type="submit" class="button" name="add-acc" value="{__('Änderungen speichern')}"/>
+						</div>
+                        <input type="hidden" name="id" id="emplId" value="{$employee->getId()}" />
+                        <br />
+						
+                        
+					</div>
+					</form>
+                    <div class="settings_comp"><br />
+                        <div class="user-content">
+                            <label for="yd-resetEmployeePass"></label>
+                            <input type="button" class="button yd-resetEmployeePass" id="yd-resetEmployeePass" value="{__('Passwort zurücksetzen')}" ><br /><br />
+                            <div>{__('Das Passwort des Mitarbeiters wird automatisch neu generiert und an seine Email-Adresse gesendet')}.</div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+
+    	</div>
+    <!-- Ende Meine Daten -->
+	</div> <!-- content-box-content -->
+
+    </div> <!-- Content-Box -->
+
+        <div class="clear"></div>
+    </div> <!-- main Content -->
+</div> <!-- admincase -->
+
+{/block}

@@ -1,0 +1,149 @@
+SetEnv APPLICATION_ENV development
+AddDefaultCharset UTF-8
+
+RewriteEngine On
+
+# Multiple domains with static files, for usage in satellites
+# index
+RewriteCond %{HTTP_HOST} !^www\.janamesa\.com\.br$
+RewriteCond %{REQUEST_URI} ^/$
+RewriteCond %{DOCUMENT_ROOT}/../storage/satellites/%{HTTP_HOST}/index.html -f
+RewriteRule (.*) /storage/satellites/%{HTTP_HOST}/index.html [L]
+# all other html pages
+RewriteCond %{HTTP_HOST} !^www\.janamesa\.com\.br$
+RewriteCond %{DOCUMENT_ROOT}/../storage/satellites/%{HTTP_HOST}%{REQUEST_URI}\.html -f
+RewriteRule ^(.+) /storage/satellites/%{HTTP_HOST}/$1.html [L]
+# media content
+RewriteCond %{HTTP_HOST} !^www\.janamesa\.com\.br$
+RewriteCond %{DOCUMENT_ROOT}/../storage/satellites/%{HTTP_HOST}%{REQUEST_URI} -f
+RewriteRule ^(.+) /storage/satellites/%{HTTP_HOST}/$1 [L]
+
+#mobile redirect
+RewriteCond %{HTTP_HOST} ^www\.lieferando\.de$
+RewriteCond %{REQUEST_URI} ^/$
+RewriteCond %{HTTP_REFERER} !^http://m\.lieferando\.de
+RewriteCond %{HTTP_USER_AGENT} android|blackberry|iphone|ipod|iemobile|palmos|webos [NC]
+RewriteRule ^$ http://m.lieferando.de/ [L,R]
+
+#admin redirect
+#RewriteCond %{HTTP_HOST} ^(www\.)?yourdelivery\.test$
+#RewriteCond %{REQUEST_URI} ^/administration
+#RewriteRule ^(.*)$ http://admin.yourdelivery.test/administration [L,R=301,NC]
+
+# Maintenance
+#RewriteCond %{REMOTE_ADDR} !=93.219.166.165
+#RewriteCond %{REQUEST_URI} !=/wartung.html [NC]
+#RewriteRule ^(.*)$ /wartung.html [R=302,NC,L]
+
+# Define error documents
+ErrorDocument 500 /errors/janamesa.com.br/500.html
+ErrorDocument 503 /errors/janamesa.com.br/500.html
+
+# 480 weeks
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|woff|eot|ttf|svg)$">
+    Header set Cache-Control "max-age=290304000, public"
+</FilesMatch>
+ 
+# 2 days
+<FilesMatch "\.(xml|txt)$">
+    Header set Cache-Control "max-age=172800, public, must-revalidate"
+</FilesMatch>
+ 
+# 2 hours
+<FilesMatch "\.(html|htm|htmls)$">
+    ExpiresDefault "access plus 2 hours"
+    Header set Cache-Control "max-age=7200, public, must-revalidate"
+    Header set Pragma "no-cache"
+</FilesMatch>
+
+# Add p3p policy header
+Header set P3P "policyref=\"/w3c/p3p.xml\", CP=\"IDC DSP COR NID DEVi OUR BUS INT\""
+
+# Redirect all old urls
+# TODO: put in vhost
+RewriteCond %{HTTP_HOST} ^(.*\.)?janamesa\.com\.br$
+RewriteRule ^ordering / [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(.*\.)?janamesa\.com\.br$
+RewriteRule ^bewerten(.*) /rate$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(.*\.)?janamesa\.com\.br$
+RewriteRule ^abmelden(.*) /unsubscribe$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(.*\.)?janamesa\.com\.br$
+RewriteRule ^danke(.*) /thankyou$1 [R=301,L]
+
+# JS packager
+# comment the cond in development
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^media/javascript/compiled js-packager.php [L]
+
+# CSS packager
+# comment the cond in development
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^media/css/compiled css-packager.php [L]
+
+# Sitemap
+RewriteRule ^sitemap\.xml$ /storage/public/sitemap-%{HTTP_HOST}.xml [L]
+
+# JSON caching
+RewriteCond %{REQUEST_URI} ^/request/validation$
+RewriteCond %{DOCUMENT_ROOT}/cache/json/validation.json -f
+RewriteRule ^(.+) /cache/json/validation.json [L]
+
+# Different robots txt for ssl and subdomains
+RewriteCond %{REQUEST_URI} ^/robots.txt
+RewriteCond %{SERVER_PORT} 443
+RewriteRule (.*) /robots_ssl.txt
+
+# Different robots txt for all domains
+RewriteCond %{REQUEST_URI} ^/robots.txt
+RewriteCond %{SERVER_PORT} !443
+RewriteRule (.*) /robots_janamesa.com.br.txt
+
+# Internal links
+RewriteCond %{DOCUMENT_ROOT}/../storage/public/%{HTTP_HOST}%{REQUEST_URI}\.html -f
+RewriteRule ^(.+) /storage/public/%{HTTP_HOST}/$1.html [L]
+
+# SSI
+# /foo/bar => /foo/bar.html
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}\.html -f
+RewriteCond %{HTTP_HOST} janamesa\.com\.br
+RewriteRule ^(.+) $1.html [L]
+
+# /foo/bar => /foo/bar.shtml
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}\.shtml -f
+RewriteCond %{HTTP_HOST} janamesa\.com\.br
+RewriteRule ^(.+) $1.shtml [L]
+
+# Caching rules
+# /foo/bar => /foo/bar.html
+RewriteCond %{REQUEST_METHOD} ^GET$
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{DOCUMENT_ROOT}/cache/html/%{HTTP_HOST}/%{REQUEST_URI}\.html -f
+RewriteRule ^(.*) /cache/html/%{HTTP_HOST}/$1.html [L]
+
+#Caching for Redirects
+RewriteCond %{REQUEST_METHOD} ^GET$
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{DOCUMENT_ROOT}/cache/html/%{HTTP_HOST}/%{REQUEST_URI}\.php -f
+RewriteRule ^(.+) /cache/html/%{HTTP_HOST}/$1.php [L]
+
+
+# / => /index.html
+# /foo/bar => /foo/bar/index.html
+RewriteCond %{REQUEST_METHOD} ^GET$
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{DOCUMENT_ROOT}/cache/html/%{HTTP_HOST}/%{REQUEST_URI}/index\.html -f
+RewriteRule ^(.*) /cache/html/%{HTTP_HOST}/$1/index.html [L]
+
+# /foo/bar/ => /foo/bar
+RewriteCond %{REQUEST_METHOD} ^GET$
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule (.+)/$ /$1 [R=301,L]
+
+# Zend engine
+RewriteRule !\.(txt|js|ico|gif|jpg|png|css|html|shtml|htm|php|pdf|xml|swf|zip|woff|eot|ttf|svg|json|htc)$ index.php
+
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]

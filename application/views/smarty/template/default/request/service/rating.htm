@@ -1,0 +1,43 @@
+<div class="yd-dialogs"><a class="yd-dialogs-close"></a>
+
+    <div class="yd-dialogs-head">
+        <h2 id="yd-lb-ratinng-{$service->getId()}">{__('Bewertungen von %s', $service->getName())}</h2>
+    </div>
+
+    <div class="yd-lightbox-content-container">
+
+        {if $service->getRating()->count(null, true, false, true) < 5}
+
+        <br />
+        <p>{__('Bisher wurden für dieses Restaurant noch nicht genug Bewertungen abgegeben')}.</p>
+        <a href="/{$servicelink}" class="yd-button-280">{__('Speisekarte ansehen')}</a>
+
+        {else}
+
+        <div id="yd-ratinglightbox">
+
+            <strong class="yd-rating-people">
+                {__('<b>%s %%</b>
+                <br /><br /><br /><br />
+                aller Kunden empfehlen<br />
+                diesen Lieferservice!', round($service->getRating()->getAverageAdvise()))}
+            </strong>
+
+            <div class="yd-box">
+                <h2>{__('Bewertungen im Detail:')}</h2>
+                {__('Qualität des Essens:')}
+                <strong class="yd-rated-{round($service->getRating()->getAverageQuality()*2)|string_format:'%02d'}"></strong>
+                {__('Lieferung:')}
+                <strong class="yd-rated-{round($service->getRating()->getAverageDelivery()*2)|string_format:'%02d'}"></strong>
+                {_n('%s Bewertung insgesamt!', '%s Bewertungen insgesamt!', $service->getRating()->count(null, true, false, true), $service->getRating()->count(null, true, false, true))}
+            </div>
+
+        </div>
+
+        <a href="/{$servicelink}" class="yd-button-280 yd-lightbox-loading-on-click">{__('Speisekarte ansehen')}</a>
+
+        {/if}
+
+    </div>
+
+</div>

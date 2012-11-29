@@ -1,0 +1,42 @@
+{if $APPLICATION_ENV == "production"}
+
+    {if $uadomain == 'lieferando.de'}
+        <img src="http://altfarm.mediaplex.com/ad/bk/18421-129492-3840-0?step1={$step1}&amp;step2={$step2}&amp;step3={$step3}&amp;step4={$step4}&amp;mpuid={time()}" height="1" width="1" alt="Mediaplex_tag" />
+        
+        {if $order}
+            {if $order->getMode() == 'rest'}
+                <iframe src="http://img-cdn.mediaplex.com/0/18421/universal.html?page_name=orderfunnel_lieferdienst&Orderfunnel_Lieferdienst=1&amp;mpuid={time()}" height="1" width="1" frameborder="0"></iframe>
+            {elseif $order->getMode() == 'cater'}
+                <iframe src="http://img-cdn.mediaplex.com/0/18421/universal.html?page_name=orderfunnel_catering&Orderfunnel_Catering=1&amp;mpuid={time()}" height="1" width="1" frameborder="0"></iframe>
+            {elseif $order->getMode() == 'great'}
+                <iframe src="http://img-cdn.mediaplex.com/0/18421/universal.html?page_name=orderfunnel_supermarkt&Orderfunnel_Supermarkt=1&amp;mpuid={time()}" height="1" width="1" frameborder="0"></iframe>
+            {/if}
+        {/if}
+        
+    {elseif $uadomain == 'lieferando.at'}
+        <img src="http://altfarm.mediaplex.com/ad/bk/18589-131108-3840-0?at_step1={$step1}&amp;at_step2={$step2}&amp;at_step3={$step3}&amp;at_step4={$step4}&amp;mpuid={time()}" height="1" width="1" alt="Mediaplex_tag" />
+    {elseif $uadomain == 'lieferando.ch'}
+        <img src="http://altfarm.mediaplex.com/ad/bk/18590-131109-3840-0?ch_step1={$step1}&amp;ch_step2={$step2}&amp;ch_step3={$step3}&amp;ch_step4={$step4}&amp;mpuid={time()}" height="1" width="1" alt="Mediaplex_tag" />
+    {elseif $uadomain == 'taxiresto.fr'}  
+        <img src="http://altfarm.mediaplex.com/ad/bk/18591-131110-3840-0?fr_step1={$step1}&amp;fr_step2={$step2}&amp;fr_step3={$step3}&amp;fr_step4={$step4}&amp;mpuid={time()}" height="1" width="1" alt="Mediaplex_tag" />
+    {elseif $uadomain == 'elpedido.es'}
+    
+    {elseif $uadomain == 'appetitos.it'}
+
+    {elseif $uadomain == 'smakuje.pl'}
+    
+    {/if}
+    
+{else}
+
+    <img src="/null.php?step1={$step1}&amp;step2={$step2}&amp;step3={$step3}&amp;step4={$step4}&amp;mpuid={time()}" height="1" width="1" alt="Mediaplex_tag" />
+    {if $order}
+        {if $order->getMode() == 'rest'}
+            <iframe src="/null.php?page_name=orderfunnel_lieferdienst&amp;Orderfunnel_Lieferdienst=1&amp;mpuid={time()}" height="1" width="1" frameborder="0"></iframe>
+        {elseif $order->getMode() == 'cater'}
+            <iframe src="/null.php?page_name=orderfunnel_catering&amp;Orderfunnel_Catering=1&amp;mpuid={time()}" height="1" width="1" frameborder="0"></iframe>
+        {elseif $order->getMode() == 'great'}
+            <iframe src="/null.php?page_name=orderfunnel_supermarkt&amp;Orderfunnel_Supermarkt=1&amp;mpuid={time()}" height="1" width="1" frameborder="0"></iframe>
+        {/if}
+    {/if}
+{/if}

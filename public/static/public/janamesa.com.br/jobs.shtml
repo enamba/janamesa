@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="pt" xml:lang="pt" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="pt" xml:lang="pt" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="pt" xml:lang="pt" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="pt" xml:lang="pt" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="pt" xml:lang="pt">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="viewport" content="width=1100">
+        <link rel="SHORTCUT ICON" href="/media/css/www.janamesa.com.br/favicon.ico" type="image/x-icon">
+
+        <title>Trabalhe conosco - janamesa.com.br</title>
+
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-core.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-home.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-jquery.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-ie.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-infocenter.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-hidden.css" />
+            
+            <script type="text/javascript" src="/media/javascript/compiled/frontend-sem.js"></script>
+    </head>
+    <body class="br">
+
+        <!--#include virtual="_br_header.html" -->
+
+        <div id="yd-content" class="yd-clearfix post">
+
+            <div id="yd-ordering">
+
+                <h1 class="underlined">Trabalhe conosco</h1>
+
+                <p>
+                    Jánamesa é uma empresa que faz parte da Lieferando.de, uma das líderes do ramo no mercado europeu. Chegamos há pouco tempo no Brasil, e para continuar crescendo precisamos de profissionais talentosos e comprometidos com o nosso negócio.
+                </p>
+                <p>
+                    Queremos tornar o nosso time ainda mais forte, e no Jánamesa os profissionais encontram desafios, oportunidades de crescimento e um excelente ambiente de trabalho.
+                </p>
+                <p>
+                    No Jánamesa, são as pessoas que fazem a diferença! Mande seu currículo.
+                </p>
+
+            </div>
+
+            <div id="yd-sidebar">
+
+                <!-- Secondary navigation -->
+                <div id="nav-secondary" class="yd-box br-box">
+                    <ul>
+                        <li><a href="/about-customer">Jánamesa para consumidores</a></li>
+                        <li><a href="/about-restaurant">Jánamesa para restaurantes</a></li>
+                        <li><a href="/customer-terms">Termos para consumidores</a></li>
+                        <li><a href="/restaurant-terms">Termos para restaurantes</a></li>
+                        <li><a href="/jobs">Trabalhe conosco</a></li>
+                    </ul>
+                </div>
+                <!-- /Secondary navigation -->
+
+            </div>
+
+        </div>
+    </div>
+
+    <!--#include virtual="_br_footer.html" -->

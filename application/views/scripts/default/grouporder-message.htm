@@ -1,0 +1,16 @@
+{foreach from=$groupOrders item=go}
+    <div class="message">
+        <div class="mantel">
+            <div class="m-text">
+                {__('Du wurdest zu einer Gruppenbestellung eingeladen')}<br />
+                {__('Lieferung:')} {$go.orderdata.find.deltime|date_format:"%A"}, {$go.orderdata.find.deltime|date_format:"%H:%M"}; {$go.orderdata.find.tplz.street} {$go.orderdata.find.tplz.hausnr}, {$go.orderdata.find.plz} {$go.orderdata.find.ort} <br />
+                {__('Restaurant:')} {$go.orderdata.rest.name}<br />
+                {__('Bestellung möglich bis')} {$go.orderdata.find.deltime|date_format:"%A"}, {$go.orderdata.find.deltime|date_format:"%H:%M"}
+                <form action="http://www.{$config->domain->base}/menu.htm" method="post">
+                    <input type="submit" class="button" value="{__('Jetzt Gruppenbestellung starten')}" />
+                    <input type="hidden" name="group" value="{$go.orderdata.id}" />
+                </form>
+            </div>
+        </div>
+    </div>
+{/foreach}

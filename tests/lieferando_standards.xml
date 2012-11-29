@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ruleset name="Yourdelivery">
+    <description>Yourdelivery coding standard</description>
+    <rule ref="PEAR">
+        <exclude name="Generic.Files.LineLength" />
+
+
+        <exclude name="PEAR.WhiteSpace.ScopeIndent"/>
+        <exclude name="PEAR.WhiteSpace.ObjectOperatorIndent.Incorrect" />
+        <exclude name="PEAR.WhiteSpace.ScopeClosingBrace.Indent" />
+
+        <exclude name="PEAR.Functions.FunctionDeclaration.BraceOnSameLine" />
+        <exclude name="PEAR.Functions.FunctionCallSignature.Indent" />-
+        <exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine" />
+
+        <exclude name="PEAR.Classes.ClassDeclaration.OpenBraceNewLine" />
+
+        <exclude name="PEAR.Commenting.FileComment.Missing" />
+        <exclude name="PEAR.Commenting.ClassComment.MissingTag" />
+        <exclude name="PEAR.Commenting.FunctionComment.SpacingBeforeTags" />
+
+        <exclude name="PEAR.NamingConventions.ValidVariableName.PublicUnderscore" />
+        <exclude name="PEAR.NamingConventions.ValidFunctionName.PublicUnderscore" />
+    </rule>
+    <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie" />
+</ruleset>

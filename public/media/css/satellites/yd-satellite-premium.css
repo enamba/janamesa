@@ -1,0 +1,344 @@
+.premium-finish{
+    position: relative;
+}
+.premium-finish h2{
+    position: absolute;
+    border-bottom: 1px solid #CCCCCC;
+    font-family: FuturaCondensedMedium, arial, "nimbus sans l", sans-serif;
+    top: 50px;
+    z-index: 1;
+    width: 605px;
+    left: 49px;
+}
+.premium-finish .yd-bigbox-body {
+    margin: 60px 0 0 50px;
+    position: absolute;
+    z-index: 3;
+}
+.premium .yd-form .yd-form-wrapper{
+    width: auto;
+}
+.avanti .premium-finish .finish-background{
+    background: none repeat scroll 0 0 #dce9eb;
+    height: 295px;
+    left: 49px;
+    position: absolute;
+    top: 90px;
+    width: 605px;
+    z-index: 1;
+}
+.premium-finish .finish-background{
+    display: none;
+}
+
+.premium-finish .yd-box{
+    height: 700px;
+}
+.premium-finish ul.non-compulsory{
+    margin-top: 110px;
+}
+.premium-finish h2.non-compulsory{
+    top: 395px;
+}
+.premium-finish .yd-form-left input, .premium-finish  .yd-form-right input{
+    margin-left: 10px;
+    width: 200px;
+}
+.premium-finish textarea{
+    margin-left: 10px;
+}
+.premium-finish  .yd-form-right select{
+    margin-left: 10px;
+    width: 213px;
+}
+.premium-finish .yd-form li{
+    margin: 0 0 10px 30px;
+    width: 250px;
+}
+.premium-finish #yd-finish-deliver-time-day,.premium-finish #yd-finish-deliver-time{
+    width: 160px;
+    margin-left: 10px;
+}
+.premium-finish .yd-form-yquery img{
+    margin-left: 10px;
+}
+.avanti .premium-finish input, .avanti .premium-finish select,.avanti .premium-finish textarea {
+    border: none;
+    background: #fff;
+}
+.premium-finish .yd-form-middle{
+    width: auto !important;
+}
+.premium-finish #createuser, .premium-finish label[for="createuser"]{
+    display: none;
+}
+
+.premium .yd-menu-head span{
+    position: absolute;
+    right: 17px;
+    top: 15px;
+    color: #999;
+    font-size: 9px;
+}
+/*
+ * Avanti Menu
+ **********************************************************/
+
+.avanti-block .table, .avanti-block .tr,  .avanti-block .td,  .avanti-block .thead, .avanti-block .th{
+    display: block;
+}
+
+.avanti-block .table {
+    background: #fff;
+}
+
+.avanti-block .table:after {
+    content: ".";
+    display: block;
+    clear: both;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.avanti-block .thead {
+    background: #fcfcfc; 
+    background: -moz-linear-gradient(top, #fcfcfc 0%, #f5f5f5 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#f5f5f5)); 
+    background: -webkit-linear-gradient(top, #fcfcfc 0%,#f5f5f5 100%);
+    background: -o-linear-gradient(top, #fcfcfc 0%,#f5f5f5 100%); 
+    background: -ms-linear-gradient(top, #fcfcfc 0%,#f5f5f5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#f5f5f5',GradientType=0 ); 
+    background: linear-gradient(top, #fcfcfc 0%,#f5f5f5 100%); 
+}
+
+.avanti-block .thead .th:nth-child(1n+2) {
+    display: none;
+}
+.avanti .tr:nth-child(2n){
+    border-right: 1px solid #D9D9D9;
+}
+
+.avanti-block .th.nth-child-1 {
+    padding: 10px;
+    vertical-align: middle;
+    font-size: 24px;
+    text-align: left;
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+}
+
+.avanti-block .th span,.avanti-block .td span {
+    display: block;
+    font-family: "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 11px;
+    color: #777;
+}
+
+.avanti-block .tr {
+    position: relative;
+    float: left;
+    width: 349px;
+    height: 280px;
+
+}
+
+.avanti-block .tr:nth-child(2n+1) {
+    border-right: 0;
+}
+
+.avanti-block .td {
+    padding: 10px;
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 20px;
+}
+
+.avanti-block .td.nth-child-2,
+.avanti-block .td.nth-child-3,
+.avanti-block .td.nth-child-4,
+.avanti-block .td.nth-child-5 {
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    padding: 0;
+    width: 70px;
+    padding: 0 5px 0 0;
+    height: 50px;
+    text-align: right;
+    font-weight: bold;
+    font-family: "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #ffffff; 
+    background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); 
+    background: -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); 
+    background: -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); 
+    background: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 ); 
+    background: linear-gradient(top, #ffffff 0%,#eeeeee 100%); 
+}
+.avanti-mealsize{
+    font-size: 14px !important;
+    margin-bottom: 7px;
+    margin-top: 2px;
+}
+.avanti-block .td.nth-child-2 { left: 10px; }
+.avanti-block .td.nth-child-3 { left: 90px; }
+.avanti-block .td.nth-child-4 { left: 170px; }
+.avanti-block .td.nth-child-5 { left: 250px; }
+
+.avanti-block .td.nth-child-2:hover,
+.avanti-block .td.nth-child-3:hover,
+.avanti-block .td.nth-child-4:hover,
+.avanti-block .td.nth-child-5:hover {
+    background: #eeeeee; 
+    background: -moz-linear-gradient(top, #eeeeee 0%, #ffffff 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#ffffff)); 
+    background: -webkit-linear-gradient(top, #eeeeee 0%,#ffffff 100%); 
+    background: -o-linear-gradient(top, #eeeeee 0%,#ffffff 100%); 
+    background: -ms-linear-gradient(top, #eeeeee 0%,#ffffff 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 ); 
+    background: linear-gradient(top, #eeeeee 0%,#ffffff 100%);
+}
+.avanti-block .td a.add-to-card  {
+    font-size: 18px;
+}
+
+.netto{
+    display: none !important;
+}
+.avanti-block .td-has-img span{
+    margin: 0;
+}
+.avanti-block .td-has-img hr{
+    display: none !important;
+}
+.avanti-block .td div:first-child{
+    background: none;
+    float: none;
+    height: 0;
+    margin: 0;
+    position: absolute;
+    width: 0;
+}
+.avanti-block .td div img{
+    height: 300px;
+    left: 40px;
+    position: absolute;
+    top: 25px;
+    width: 300px;
+}
+.avanti #yd-expand-card-head{
+    background: #eee;
+    background: -moz-linear-gradient(center top , #E6E6E6, #D9D9D9) repeat scroll 0 0 transparent !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E6E6E6), color-stop(100%,#D9D9D9)); 
+    background: -webkit-linear-gradient(top, #E6E6E6 0%,#D9D9D9 100%);  
+
+}
+.avanti .yd-box .yd-box-head, 
+.avanti .yd-box .yd-box-title{
+    border-radius: 0px !important; 
+    padding: 8px 0 8px 20px;
+    font-family: FuturaCondensedMedium,"trebuchet ms",arial,"nimbus sans l",sans-serif !important;
+    font-size: 21px;
+}
+.avanti a.yd-option-trash {
+    background: url("/media/images/satellites/start/yd-sprites-icons.png") no-repeat scroll 0 -440px transparent !important;
+}
+.avanti a.yd-option-minus {
+    background: url("/media/images/satellites/start/yd-sprites-icons.png") no-repeat scroll 0 -520px transparent !important;
+}
+.avanti a.yd-option-plus {
+    background: url("/media/images/satellites/start/yd-sprites-icons.png") no-repeat scroll 0 -480px transparent !important;
+}
+.avanti #minamount div{
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-background-size: 20px 20px;
+    -moz-background-size: 20px 20px;
+    -ms-background-size: 20px 20px;
+    -o-background-size: 20px 20px;
+    background-size: 20px 20px;			
+    background-image: -webkit-gradient(linear, left top, right bottom,
+        color-stop(.25, rgba(255, 255, 255, .05)), color-stop(.25, transparent),
+        color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .05)),
+        color-stop(.75, rgba(255, 255, 255, .05)), color-stop(.75, transparent),
+        to(transparent));
+    background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,
+        transparent 75%, transparent);
+    background-image: -moz-linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,
+        transparent 75%, transparent);
+    background-image: -ms-linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,
+        transparent 75%, transparent);
+    background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,
+        transparent 75%, transparent);
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,
+        transparent 75%, transparent);
+    background-color: #de4343;
+    border-color: #c43d3d;
+}
+.avanti .backbutton{
+    background: url(/media/images/satellites/menu/AVANTI_backButton.png) no-repeat 0 0;
+    font-family: FuturaCondensedMedium, arial, "nimbus sans l", sans-serif;
+    border: medium none;
+    font-size: 21px;
+    height: 39px;
+    padding: 15px 0 0 17px;
+    text-align: center;
+    vertical-align: middle;
+    width: 245px;
+}
+.avanti .backbutton:hover{
+    background: url(/media/images/satellites/menu/AVANTI_backButton.png) no-repeat 0 -56px;
+}
+.avanti .yd-form input:focus,.avanti .yd-form textarea:focus{
+    border: 2px solid #0e8ea8;
+    height: 10px;
+}
+.avanti .yd-box{
+    border-radius: 0px;
+}
+.avanti #yd-menu .yd-menu-search  .td:first-child {
+    border-bottom: 1px dotted #EEEEEE !important;
+}  
+.avanti .yd-successarea-right, .avanti  .yd-successarea-left-4,.avanti yd-successarea-right{
+    display: none;
+}
+.avanti .yd-bigbox-head{
+    border-radius: 0; 
+}
+
+.avanti #paymentcontent .yd-bigbox-head{
+    padding-left: 40px;
+    background: url(/media/images/satellites/menu/AVANTI_payment.png) #E6E6E6; /* Old browsers */
+    background: url(/media/images/satellites/menu/AVANTI_payment.png) no-repeat 10px 10px, -moz-linear-gradient(top, #E6E6E6 0%, #D9D9D9 100%); /* FF3.6+ */
+    background: url(/media/images/satellites/menu/AVANTI_payment.png)  no-repeat 10px 10px, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E6E6E6), color-stop(100%,#D9D9D9)); /* Chrome,Safari4+ */
+    background: url(/media/images/satellites/menu/AVANTI_payment.png)  no-repeat 10px 10px, -webkit-linear-gradient(top, #E6E6E6 0%,#D9D9D9 100%); /* Chrome10+,Safari5.1+ */
+    background: url(/media/images/satellites/menu/AVANTI_payment.png)  no-repeat 10px 10px, -o-linear-gradient(top, #E6E6E6 0%,#D9D9D9 100%); /* Opera11.10+ */
+    background: url(/media/images/satellites/menu/AVANTI_payment.png)  no-repeat 10px 10px, -ms-linear-gradient(top, #E6E6E6 0%,#D9D9D9 100%); /* IE10+ */
+    background: url(/media/images/satellites/menu/AVANTI_payment.png)  no-repeat 10px 10px, linear-gradient(top, #E6E6E6 0%,#D9D9D9 100%); /* W3C */      
+}
+.avanti .premium-finish .yd-bigbox-head {
+    padding-left: 40px;
+    background: url(/media/images/satellites/menu/AVANTI_home.png) #E6E6E6; /* Old browsers */
+    background: url(/media/images/satellites/menu/AVANTI_home.png) no-repeat 10px 10px, -moz-linear-gradient(top, #E6E6E6 0%, #D9D9D9 100%); /* FF3.6+ */
+    background: url(/media/images/satellites/menu/AVANTI_home.png)  no-repeat 10px 10px, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E6E6E6), color-stop(100%,#D9D9D9)); /* Chrome,Safari4+ */
+    background: url(/media/images/satellites/menu/AVANTI_home.png)  no-repeat 10px 10px, -webkit-linear-gradient(top, #E6E6E6 0%,#D9D9D9 100%); /* Chrome10+,Safari5.1+ */
+    background: url(/media/images/satellites/menu/AVANTI_home.png)  no-repeat 10px 10px, -o-linear-gradient(top, #E6E6E6 0%,#D9D9D9 100%); /* Opera11.10+ */
+    background: url(/media/images/satellites/menu/AVANTI_home.png)  no-repeat 10px 10px, -ms-linear-gradient(top, #E6E6E6 0%,#D9D9D9 100%); /* IE10+ */
+    background: url(/media/images/satellites/menu/AVANTI_home.png)  no-repeat 10px 10px, linear-gradient(top, #E6E6E6 0%,#D9D9D9 100%); /* W3C */    
+
+}
+.avanti #yd-finish-deliver-time{
+    height: 22px!important;
+    width: 170px !important;
+}

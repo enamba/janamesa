@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-frontend-global.css" />
+        <style>
+            #wp-satellites {
+                width: 300px;
+                height: 250px;
+                margin: 10px 0 0 10px;
+                border: 1px solid #555;
+            }
+
+            #wp-satellites-white {
+                background: #fff;
+                padding: 10px 5px;
+                text-align: center;
+                width: 280px;
+                border: 1px solid #777;
+                float: left;
+                margin: 70px 0 0 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="post" action="/order_basis/plz" target="_parent">
+            <div id="wp-satellites" style="background:url({$domain_static}/images/yd-frame/blogs/{$picture});">
+                <div id="wp-satellites-white">
+                    <h1 style="font-size: 18px;">{$title|escape}</h1>
+                    <br />
+                    <input style="font-size:13px; width:100px;" type="text" name="plz" maxlength="5"  />
+                    <input style="font-size:13px; width:150px;" type="submit" class="button" value="Bestellung starten" />
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

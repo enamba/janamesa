@@ -1,0 +1,332 @@
+{extends file='administration/base.htm'}
+{block name="content"}
+
+<div class="be-1-column">
+
+    <h1 class="start">
+    {__b('Hallo')}
+    {if !is_null($smarty.session.Administration.admin)}
+    <strong>{$smarty.session.Administration.admin->getName()}</strong>
+    {else}
+    {__b('Unbekannt')}
+    {/if},<br />
+    {__b('herzlich willkommen im Backend von %s', $HOSTNAME)}
+    </h1>
+
+    <a class="road-to-heyho" href="/administration_ticketsystem/index">{__b('(ACHTUNG: NUR AUF ANWEISUNG BENUTZEN !!!)')}</a>
+
+</div>
+<!--
+<ul class="be-tabs">
+    <li><a href="">Meine Tickets</a></li>
+    <li><a href="">Offene Tickets von meiner Gruppe</a></li>
+    <li><a href="">Offene Tickets</a></li>
+    <li><a href="">Tickets suchen</a></li>
+</ul>
+
+<ul class="be-tabs">
+    <li><a href="">Von mir erstellte Tickets</a></li>
+    <li><a href="">Von mir geschlossene Tickets</a></li>
+    <li><a href="">Ticket erstellen</a></li>
+</ul>
+
+<div class="be-1-column">
+    <div class="be-box">
+        <h2>{__b('Ticket erstellen')}</h2>
+        <div class="be-box-in">
+            <form class="be-form">
+                <ul>
+                    <li>
+                        <label>Art:</label>
+                        <select>
+                            <option>Bitte auswählen:</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>Für wen:</label>
+                        <input type="text" value="Name des Bearbeiters oder der Gruppe" />
+                    </li>
+                    <li>
+                        <label>Kategorie:</label>
+                        <select>
+                            <option>Bitte auswählen:</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label></label>
+                        <select>
+                            <option>Unterkategorie wählen:</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>Priorität:</label>
+                        <select>
+                            <option>Priorität auswählen:</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>DueDate:</label>
+                        <input type="radio" /> Sofort oder Datum <input style="width: 100px" type="text" value="31/03/2012" />
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <strong>Assoziierte Daten:</strong><br /><br />
+                        <label>Dienstleister:</label>
+                        <input type="text" value="Name oder ID" />
+                    </li>
+                    <li>
+                        <label>Kunde:</label>
+                        <input type="text" value="E-Mail, ID, Handynummer" />
+                    </li>
+                    <li>
+                        <label>Bestell ID:</label>
+                        <input type="text" value="ID" />
+                    </li>
+                    <li>
+                        <label>Bewertung:</label>
+                        <input type="text" value="ID" />
+                    </li>
+                    <li>
+                        <label>OS Ticket Nr:</label>
+                        <input type="text" value="ID" />
+                    </li>
+                </ul>
+                <hr /><br /><br /><br />
+                <ul>
+                    <li>
+                        <label>Thema:</label>
+                        <input type="text" value="Worum geht es" />
+                    </li>
+                    <li>
+                        <label></label>
+                        <textarea></textarea>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="be-1-column">
+    <div class="be-box">
+        <h2>{__b('#312 Beschwere wegen schlechter Bewertung')}</h2>
+        <div class="be-box-in">
+            <form class="be-form">
+                <ul>
+                    <li>
+                        <label>Von:</label>
+                        <span>Christoph Gerber, 24.12.2011, 18:00 Uhr</span>
+                    </li>
+                </ul>
+                <hr />
+                <ul>
+                    <li>
+                        <label>Art:</label>
+                        <select>
+                            <option>Anruf muss gemacht werden</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>Für wen:</label>
+                        <input type="text" value="Christoph Gerber, Backoffice" />
+                    </li>
+                    <li>
+                        <label>Kategorie:</label>
+                        <select>
+                            <option>Dienstleister</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label></label>
+                        <select>
+                            <option>Bewertung auf lieferando.de</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>Priorität:</label>
+                        <select>
+                            <option>Mittel</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>DueDate:</label>
+                        <input type="radio" /> Sofort oder Datum <input style="width: 100px" type="text" value="31/03/2012" />
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <strong>Assoziierte Daten:</strong><br /><br />
+                        <label>Dienstleister:</label>
+                        <span>Da Rosa, ID 876543</span>
+                    </li>
+                    <li>
+                        <label>Kunde:</label>
+                        <span>Master Mustermann, 03054587965, test@test.de</span>
+                    </li>
+                    <li>
+                        <label>Bestell ID:</label>
+                        <span>#234234</span>
+                    </li>
+                    <li>
+                        <label>Bewertung:</label>
+                        <span>#34534534</span>
+                    </li>
+                    <li>
+                        <label>OS Ticket Nr:</label>
+                        <span>Kein OS Ticket</span>
+                    </li>
+                </ul>
+                <hr /><br /><br /><br />
+                <ul>
+                    <li>
+                        <label>Thema:</label>
+                        <input type="text" value="Worum geht es" />
+                    </li>
+                    <li>
+                        <label></label>
+                        <textarea></textarea>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+-->
+{if count($expiredTickets)>0}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head" style="color:red;">
+            {__b('Folgende Tickets sind längst fällig!')}
+        </div>
+        <div class="item-content">
+            <table>
+                <tr>
+                    <td>{__b('ID')}</td>
+                    <td>{__b('Referenz')}</td>
+                    <td>{__b('Betreff')}</td>
+                    <td>{__b('Grund')}</td>
+                    <td>{__b('Fällig')}</td>
+                </tr>
+                {foreach from=$expiredTickets item=t}
+                <tr>
+                    <td>{$t->getId()}</td>
+                    <td>{$t->getReference()->getEditlink()}</td>
+                    <td>{$t->getTopic()}</td>
+                    <td>{$t->getReason()}</td>
+                    <td>{date('Y.m.d H:i:s', $t->getScheduledAsTimestamp())}</td>
+                </tr>
+
+                {/foreach}
+            </table>
+        </div>
+    </div>
+</div>
+{/if}
+
+
+{if count($dueTodayTickets)>0}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Folgende Tickets sind heute fällig')}:
+        </div>
+        <div class="item-content">
+            <table>
+                <tr>
+                    <td>{__b('ID')}</td>
+                    <td>{__b('Referenz')}</td>
+                    <td>{__b('Betreff')}</td>
+                    <td>{__b('Grund')}</td>
+                </tr>
+                {foreach from=$dueTodayTickets item=t}
+                <tr>
+                    <td>{$t->getId()}</td>
+                    <td>{$t->getReference()->getEditlink()}</td>
+                    <td>{$t->getTopic()}</td>
+                    <td>{$t->getReason()}</td>
+                </tr>                        
+                {/foreach}
+            </table>
+        </div>
+    </div>
+</div>
+{/if}
+
+
+{if count(Yourdelivery_Model_DbTable_Restaurant::getOnlineRestaurantsWithoutMenu())>0}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head" style="color:red;">
+            {__b('Alarm! Folgende Restaurants ohne Speisekarte wurden online gestellt')}:
+        </div>
+        <div class="item-content">
+            {foreach from=Yourdelivery_Model_DbTable_Restaurant::getOnlineRestaurantsWithoutMenu() item=r}
+            <a href="/administration_service_edit/index/id/{$r.id}">{$r.name}, {$r.hausNr} {$r.street}, {$r.plz}</a><br/>
+            {/foreach}
+        </div>
+    </div>
+</div>
+{/if}
+
+{if count(Yourdelivery_Model_DbTable_Restaurant::getOnlineRestaurantsWithoutOpeningTimes())>0}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head" style="color:red;">
+            {__b('Alarm! Folgende Restaurants ohne eingetragene Öffnungszeiten wurden online gestellt')}:
+        </div>
+        <div class="item-content">
+            {foreach from=Yourdelivery_Model_DbTable_Restaurant::getOnlineRestaurantsWithoutOpeningTimes() item=r}
+            <a href="/administration_service_edit/index/id/{$r.id}">{$r.name}, {$r.hausNr} {$r.street}, {$r.plz}</a><br/>
+            {/foreach}
+        </div>
+    </div>
+</div>
+{/if}
+
+{if count(Yourdelivery_Model_DbTable_Restaurant::getOnlineRestaurantsWithoutDeliverPlz())>0}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head" style="color:red;">
+            {__b('Alarm! Folgende Restaurants ohne Liefergebiete wurden online gestellt')}:
+        </div>
+        <div class="item-content">
+            {foreach from=Yourdelivery_Model_DbTable_Restaurant::getOnlineRestaurantsWithoutDeliverPlz() item=r}
+            <a href="/administration_service_edit/index/id/{$r.id}">{$r.name}, {$r.hausNr} {$r.street}, {$r.plz}</a><br/>
+            {/foreach}
+        </div>
+    </div>
+</div>
+{/if}
+
+{if count(Yourdelivery_Model_DbTable_Restaurant::getOnlineRestaurantsWithoutServicetype())>0}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head" style="color:red;">
+            {__b('Alarm! Es wurden Restaurants gefunden, die online sind, die aber keinem Liefertyp zugewiesen sind. Bitte sofort IT kontaktieren!')}
+        </div>
+        <div class="item-content">
+            {foreach from=Yourdelivery_Model_DbTable_Restaurant::getOnlineRestaurantsWithoutServicetype() item=r}
+            <a href="/administration_service_edit/index/id/{$r.id}">{$r.name}, {$r.hausNr} {$r.street}, {$r.plz}</a><br/>
+            {/foreach}
+        </div>
+    </div>
+</div>
+{/if}
+
+{if (count(Yourdelivery_Model_DbTable_Restaurant::getOnlineRestaurantsWithoutCorrespondingMealCategories())>0) && (count(Yourdelivery_Model_DbTable_Restaurant::getOnlineRestaurantsWithoutServicetype())>0)}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head" style="color:red;">
+            {__b('Alarm! Es wurden Restaurants gefunden, die bestimmte Liefertypen anbieten, obwohl sie keine Speisekategorien von diesem Typ haben')}
+        </div>
+        <div class="item-content">
+            {foreach from=Yourdelivery_Model_DbTable_Restaurant::getOnlineRestaurantsWithoutCorrespondingMealCategories() item=r}
+            <a href="/administration_service_edit/index/id/{$r.id}">{$r.name}, {$r.hausNr} {$r.street}, {$r.plz}</a>. Problemtyp: {$r.servicename}<br/>
+            {/foreach}
+        </div>
+    </div>
+</div>
+{/if}
+
+{/block}

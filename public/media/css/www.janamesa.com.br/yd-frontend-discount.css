@@ -1,0 +1,375 @@
+.yd-discount {
+    display: block;
+    height: 520px;
+    padding: 130px 0 0;
+    text-align: center;
+}
+
+.yd-discount-2012 {	
+    -moz-border-radius: 8px !important;
+    -webkit-border-radius: 8px !important;
+    border-radius: 8px !important;
+    behavior: url(/media/css/www.janamesa.com.br/PIE.htc);	
+    background-color: #fff;
+    background: rgba(255,255,255,0.7);
+    width: 520px;
+    text-align: left;
+    display: inline-block;
+}
+
+.yd-discount-2012 .formError{
+    margin: -17px 0 0 -54px;
+}
+
+input.yd-discount-input {
+    padding: 6px;
+    display: inline-block;
+    width: 180px;
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 19px;
+}
+
+a.yd-discount-button {
+    display: inline-block;
+    height: 42px;
+    line-height: 41px;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 18px;
+    text-shadow: 0 1px 0 #000000;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 187px;
+    vertical-align: middle;
+    text-align: center;
+    border: 0 none;
+    filter: none!important;
+    float: left;
+    clear: none;
+    margin: 7px 0 0 10px;
+    background: url(/media/css/www.janamesa.com.br/images/btn-bg187.png) no-repeat scroll 0 0 transparent;
+}
+
+a.yd-discount-button:hover {
+    text-decoration: underline;
+}
+
+.yd-step3 a.yd-discount-button{
+    float: right;
+    margin: 7px 0 0 10px;
+    clear: none;
+}
+
+.yd-step1,
+.yd-step2,
+.yd-step3 {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+}
+
+.yd-step1 h2,
+.yd-step2 h2,
+.yd-step3 h2 {
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    color: #000000;
+    font-family: Museo300,Helvetica,Verdana,Arial,sans-serif;
+    font-weight: normal;
+    text-shadow: 0 2px 0 #FFFFFF;
+    font-size: 24px;
+}
+
+.yd-step1 .yd-step-inner,
+.yd-step2 .yd-step-inner,
+.yd-step3 .yd-step-inner {
+    padding: 0 0 10px 80px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.yd-step1 .yd-step-inner form,
+.yd-step2 .yd-step-inner form,
+.yd-step3 .yd-step-inner form{
+    display: inline-block;
+    width: 100%;
+}
+
+.yd-step1 .yd-step-inner form input[type="text"], .yd-step1 .yd-step-inner form input[type="password"],
+.yd-step2 .yd-step-inner form input[type="text"], .yd-step2 .yd-step-inner form input[type="password"],
+.yd-step3 .yd-step-inner form input[type="text"], .yd-step3 .yd-step-inner form input[type="password"]{
+    float: left;
+    clear: none;
+    margin: 10px 0 0 10px;
+    width: 185px;
+}
+
+.yd-step1 .yd-step-inner { min-height: 50px; }
+.yd-step2 .yd-step-inner { min-height: 95px; }
+.yd-step3 .yd-step-inner { min-height: 95px; }
+
+.yd-step1 .yd-step-inner { background: url(/media/images/yd-frontend-discount/yd-icon1.png) 0 5px no-repeat; }
+.yd-step2 .yd-step-inner { background: url(/media/images/yd-frontend-discount/yd-icon2.png) 0 5px no-repeat; }
+.yd-step3 .yd-step-inner { background: url(/media/images/yd-frontend-discount/yd-icon3.png) 10px 5px no-repeat; }
+
+.yd-step1 p,
+.yd-step2 p,
+.yd-step3 p {
+    font-size: 11px;
+    color: #777;
+    line-height: 13px;
+}
+
+.okay {
+    display: none;
+    float: left;
+    margin: 15px 0 0 10px;
+    padding: 6px 0 6px 45px;
+    background: url(/media/images/yd-frontend-discount/yd-icon1b.png) -2px -2px no-repeat
+}
+
+.okay a {
+    text-decoration: underline;
+}
+
+.yd-step1 .okay {
+    top: 54px;
+    left: 310px;
+}
+
+.yd-discount-progress-2 .yd-step1 .okay,
+.yd-discount-progress-3 .yd-step1 .okay,
+.yd-discount-progress-4 .yd-step1 .okay,
+.yd-discount-progress-5 .yd-step1 .okay,
+.yd-discount-progress-4 .yd-step2 .okay,
+.yd-discount-progress-5 .yd-step2 .okay {
+    display: block;
+}
+
+.question {
+    display: none;
+    /*    background: url(/media/images/yd-frontend-discount/yd-icon2b.png) -2px -2px no-repeat*/
+}
+
+.question a {
+    display: inline-block;
+    line-height: 34px;
+    margin: 10px 0 0 10px;
+    float: left;
+    text-decoration: underline;
+}
+
+/* Gutscheincode wird eingegeben */
+.yd-discount-progress-1 .yd-step2:after, 
+.yd-discount-progress-1 .yd-step3:after,
+.yd-discount-progress-2 .yd-step3:after,
+.yd-discount-progress-3 .yd-step3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.85;
+    display: inline-block;
+    z-index: 20;	
+    -moz-border-radius: 0 0 8px 8px !important;
+    -webkit-border-radius: 0 0 8px 8px !important;
+    border-radius: 0 0 8px 8px !important;
+}
+
+
+.ie7 .yd-discount-progress-1 .yd-step2:after, .ie8 .yd-discount-progress-1 .yd-step2:after,
+.ie7 .yd-discount-progress-1 .yd-step3:after, .ie8 .yd-discount-progress-1 .yd-step3:after,
+.ie7 .yd-discount-progress-2 .yd-step3:after, .ie8 .yd-discount-progress-2 .yd-step3:after,
+.ie7 .yd-discount-progress-3 .yd-step3:after, .ie8 .yd-discount-progress-3 .yd-step3:after{
+    display: none;
+}
+
+.yd-discount-progress-2 .yd-step1 input, /* Name und E-Mail werden eingegeben */
+.yd-discount-progress-3 .yd-step1 input,
+.yd-discount-progress-4 .yd-step1 input,
+.yd-discount-progress-5 .yd-step1 input,
+.yd-discount-progress-4 .yd-step2 input,
+.yd-discount-progress-5 .yd-step2 input {
+    border: 1px solid #bae8a8;
+    background: #bae8a8;
+    cursor: default;
+    pointer-events: none;
+}
+
+.yd-discount-progress-3 .yd-step2 input,
+.yd-discount-progress-5 .yd-step3 input.send-sms { /* E-Mail ist versendet und muss verifiziert werden */
+    border: 1px solid #eee;
+    background: #eee;
+    cursor: default;
+    pointer-events: none;
+}
+
+.send-new-sms {
+    display: none;
+    margin: 10px 0 0 10px !important;
+    float: right !important;
+    width: 187px;
+}
+
+.send-new-sms a {
+    text-decoration: underline;
+}
+
+.send-new-sms small {
+    display: block;
+    margin: 3px 0 0;
+    color: #777;
+    line-height: 1.2;
+}
+
+.send-new-sms small span{
+    float: none;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.yd-discount-progress-5 .send-new-sms {
+    display: block;
+}
+
+.yd-discount-progress-5 .yd-step3 a.send-sms {
+    display: none;
+}
+
+.yd-discount-progress-3 .question {
+    display: block;
+}
+
+.yd-discount-progress-2 .yd-step1 .yd-discount-button,
+.yd-discount-progress-3 .yd-step1 .yd-discount-button,
+.yd-discount-progress-4 .yd-step1 .yd-discount-button,
+.yd-discount-progress-5 .yd-step1 .yd-discount-button,
+.yd-discount-progress-3 .yd-step2 .yd-discount-button,
+.yd-discount-progress-4 .yd-step2 .yd-discount-button,
+.yd-discount-progress-5 .yd-step2 .yd-discount-button {
+    display: none;
+}
+
+.sms {
+    display: none;
+}
+
+.yd-discount-progress-5 .sms {
+    display: block;
+}
+
+p.vz-rules {
+    width: 980px;
+    margin: 20px auto 0;
+    font-size: 12px;
+    color: #999;
+}
+
+.yd-discount .yd-discount-faqs {
+    position: absolute;
+    top: 270px;
+    left: 30px;
+}
+
+.yd-discount .yd-discount-faqs a {
+    display: block;
+    width: 200px;
+    margin: 5px 0 0;
+    padding: 9px 0 9px 30px;
+    font: bold 12px arial, "nimbus sans l", sans-serif;
+    text-shadow: 0 1px 0 #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: url(/media/images/yd-icons/info.png) no-repeat 8px 9px #ffffff; /* Old browsers */
+    background: url(/media/images/yd-icons/info.png) no-repeat 8px 9px, -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+    background: url(/media/images/yd-icons/info.png) no-repeat 8px 9px, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: url(/media/images/yd-icons/info.png) no-repeat 8px 9px, -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: url(/media/images/yd-icons/info.png) no-repeat 8px 9px, -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Opera11.10+ */
+    background: url(/media/images/yd-icons/info.png) no-repeat 8px 9px, -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* IE10+ */
+    background: url(/media/images/yd-icons/info.png) no-repeat 8px 9px, linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* W3C */
+}
+
+.yd-discount .yd-discount-faqs span {
+    display: none;
+}
+
+#yd-discount-evaluation-wait {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.5;
+}
+
+.ie7 #yd-discount-evaluation-wait, .ie8 #yd-discount-evaluation-wait{
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+}
+
+#yd-discount-evaluation-wait img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -27px 0 0 -27px;
+}
+
+.sms-form{
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.sms-form span{
+    float: left;
+    line-height: 34px;
+    margin: 10px 0 0 0;
+}
+
+.ie7 .sms-form span{
+    margin: 27px 0 0 0;
+}
+
+.ie7 .yd-discount-2012 input{
+    behavior: none!important;
+}
+
+.sms-form .formError{
+    left: 90px !important;
+    top: -7px !important;
+}
+
+.codigo-form{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.codigo-form .formError{
+    left: 50px!important;
+    top: 22px!important;
+}
+
+.sms-form a.yd-discount-button,
+.codigo-form a.yd-discount-button{
+    float: right;
+    clear: none;
+    margin: 7px 0 0 10px;
+}
+
+.codigo-form input{
+    margin: 10px 0 0 0!important;
+    width: 197px!important;
+}

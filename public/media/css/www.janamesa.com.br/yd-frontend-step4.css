@@ -1,0 +1,501 @@
+#yd-finish-payment-debit-register {
+    float: left;
+    cursor: pointer;
+    display: block;
+    width: 454px;
+    height: 40px;
+    margin: 0 0 10px;
+    background: url(/media/images/yd-background/yd-debitregister.png) 0 0 no-repeat;
+}
+
+#yd-finish-payment-debit-register:hover {
+    background: url(/media/images/yd-background/yd-debitregister.png) 0 -40px no-repeat;
+}
+
+#yd-finish-remain {
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+
+#paymentDiv{
+	margin: 0;
+}
+
+#paymentDiv .yd-bigbox-payment{
+	display: inline-block;
+	width: 100%;
+	padding: 10px 0 34px 0;
+	position: relative;
+	top: 0;
+	left: 0;
+	background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) repeat-x scroll left bottom transparent;
+}
+
+#paymentDiv .yd-bigbox-payment .yd-finish-payment{
+	float: left;
+	clear: none;
+	width: 210px;
+	margin: 20px 0 0 0;
+	padding: 0 0 0 108px;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	min-height: 40px;
+}
+
+#paymentDiv .yd-bigbox-payment .yd-finish-payment *{
+	cursor: pointer;
+}
+
+#paymentDiv .yd-bigbox-payment .yd-finish-payment.yd-payment-cash{
+	background: url(/media/css/www.janamesa.com.br/images/payment1.png) 38px 0 no-repeat transparent;
+	padding-bottom: 32px;
+}
+
+#paymentDiv .yd-bigbox-payment .yd-finish-payment.yd-payment-card{
+	background: url(/media/css/www.janamesa.com.br/images/img-card2.png) 42px 0 no-repeat transparent;
+}
+
+#paymentDiv .yd-bigbox-payment .yd-finish-payment.yd-payment-card#yd-finish-payment-creditathome{
+	background: url(/media/css/www.janamesa.com.br/images/payment2.png) 38px 0 no-repeat transparent;
+}
+
+#paymentDiv .yd-bigbox-payment .yd-finish-payment.yd-payment-card#yd-finish-payment-vr{
+	background: url(/media/css/www.janamesa.com.br/images/payment3.png) 38px 0 no-repeat transparent;
+}
+
+#paymentDiv .yd-bigbox-payment .yd-finish-payment.yd-payment-payp#yd-finish-payment-paypal{
+	background: url(/media/css/www.janamesa.com.br/images/payment-paypal.png) 38px 0 no-repeat transparent;
+}
+
+#paymentDiv .yd-bigbox-payment .yd-finish-payment.yd-payment-card small{
+	padding: 0 0 32px 0;
+	background: url(/media/css/www.janamesa.com.br/images/payment-img3.png) left bottom no-repeat transparent;
+}
+
+#paymentDiv .yd-bigbox-payment .yd-finish-payment.yd-payment-card#yd-finish-payment-vr small{
+	background: none transparent;	
+}
+
+#paymentDiv .yd-bigbox-payment .yd-finish-payment:after{
+	content: '';
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	position: absolute;
+	top: 6px;
+	left: 10px;
+	background: url(/media/css/www.janamesa.com.br/images/radio12-img.png) 0 0 no-repeat transparent;
+}
+
+#paymentDiv .yd-bigbox-payment .yd-finish-payment.active:after{
+	content: '';
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	position: absolute;
+	top: 6px;
+	left: 10px;
+	background: url(/media/css/www.janamesa.com.br/images/radio12-checked-img.png) 0 0 no-repeat transparent;
+}
+
+#paymentDiv .yd-bigbox-payment .yd-finish-payment input[type="radio"]{
+	display: none;
+}
+
+.ie7 #paymentDiv .yd-bigbox-payment .yd-finish-payment input[type="radio"]{
+	float: left;
+	margin: 8px 0 0 6px;
+	max-width: 20px;
+	max-height: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+}
+
+#paymentDiv .yd-bigbox-payment .yd-finish-payment span{
+	width: 100%;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	color: #3E3935;
+	font-size: 22px;
+	font-family: Helvetica,Verdana,Arial,sans-serif;
+}
+#paymentDiv .yd-bigbox-payment .yd-finish-payment small{
+	width: 100%;
+	display: inline-block;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	color: #757372;
+	font-size: 16px;
+	font-family: Georgia,"Times New Roman",Times,serif;
+}
+
+.yd-opening-info {
+    display: block;
+    width: 100px;
+    margin: 5px 0 0 5px;
+    padding: 5px 5px 5px 30px;
+    font-size: 10px;
+    font-family: "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    line-height: 120%;
+    border-radius: 4px;
+    border: 1px solid red;
+    background: url(/media/images/yd-sprites-icons.png) -17px -717px no-repeat #fff;
+}
+
+#verteilerpunkte-desc {
+    position: absolute;
+    top: 0;
+    right: -115px;
+    width: 70px;
+    margin: 0 0 0 10px;
+    padding: 5px 5px 5px 30px;
+    font-size: 10px;
+    border: 1px solid red;
+    background: url(/media/images/yd-sprites-icons.png) -17px -717px no-repeat #fff;
+}
+
+.yd-form .yd-datepicker-info{
+    font-style: normal;
+	display: inline-block;
+    width: 171px;
+    margin: 0;
+    padding: 5px 5px 5px 30px;
+    font-size: 10px;
+    border: 2px solid red;
+    background: url(/media/images/yd-sprites-icons.png) -17px -717px no-repeat #fff;
+}
+
+/* Added Budget */
+
+#budtable span {
+    display: block;
+    padding: 5px;
+    margin: 10px 0 0;
+    font-size: 11px;
+    border: 1px solid blue;
+    background: #cfeaff;
+    width: 340px;
+    border-radius: 4px;
+}
+
+#budtable span b {
+    float: right;
+}
+
+.mail-erase {
+    float: left;
+    display: block;
+    width: 14px;
+    height: 14px;
+    margin: 0 5px 0 0;
+    background: url(/media/images/yd-sprites-icons.png) 0px -360px no-repeat;
+}
+
+/* //Added Budget */
+
+
+
+
+
+
+/* Discount */
+
+#discount-code {
+    width: 75px;
+    text-align: center;
+	float: left;
+	clear: none;
+	margin: 0 0 0 6px;
+	text-indent: 0;
+}
+
+#check-discount {
+	float: right;
+	clear: none;
+    display: inline-block;
+	height: 32px;
+	line-height: 34px;
+	vertical-align: middle;
+	text-decoration: none;
+	padding: 0 8px;
+	text-transform: uppercase;
+	color: #ffffff;
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+	font-size: 13px;
+	text-shadow: 1px 1px 0 #000000;
+	-moz-border-radius: 3px !important;
+	-webkit-border-radius: 3px !important;
+	border-radius: 3px !important;
+	behavior: url(/media/css/www.janamesa.com.br/PIE.htc);
+	border: 1px solid #f0e9de;
+	-webkit-box-shadow: 1px 1px 0 #beb7ad;
+	-moz-box-shadow: 1px 1px 0 #beb7ad;
+	box-shadow: 1px 1px 0 #beb7ad;
+	background: none #44acc2;
+}
+
+#check-discount *{
+	color: #ffffff;
+}
+
+#check-discount:hover {
+    text-decoration: underline;
+  	color: #ffffff;
+}
+
+#check-discount.discount-load:hover{
+	text-decoration: none;
+}
+
+#check-discount.discount-load {
+	background: url(/media/images/ajax-loader-16-blue.gif) center center no-repeat #44acc2;  
+}
+
+#check-discount.discount-load span {
+    visibility: hidden;
+}
+
+li#valid-discount {
+    padding: 10px !important;
+    text-align: center !important;
+}
+
+li#valid-discount strong {
+    display: block;
+    margin: 0 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+li#valid-discount a {
+    display: block;
+    margin: 10px 0 0;
+}
+
+.yd-nothing-in-card {
+    display: block;
+    text-align: center;
+    font-size: 12px !important;
+    font-weight: normal !important;
+}
+
+.message_error {
+    display: block;
+    height: 30px;
+    padding: 10px 20px;
+    border: 1px solid #c50020;
+    background: #fcc;
+}
+
+/* //Discount */
+
+
+
+
+
+
+
+
+
+
+.yd-company-form {
+    margin: 10px 0 0;
+}
+
+.yd-company-form li {
+    position: relative;
+    width: 350px;
+    margin: 0 0 5px;
+    text-align: right;
+}
+
+.yd-company-form li span {
+    float: left;
+    padding: 5px 0 0;
+}
+
+.yd-company-form li .input1 {
+    width: 200px;
+}
+
+.yd-company-form li .input2 {
+    width: 89px;
+}
+
+.yd-company-form li .input3 {
+    width: 52px;
+}
+
+
+.yd-finish-content-company #changeCityId,
+.yd-finish-content-company #company,
+.yd-finish-content-company #yd-finish-deliver-time-day{
+    background: #FFFFFF;
+}
+
+
+
+
+.discount-warn {
+    padding: 20px 40px 20px 140px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    background: url(/media/images/paypalwarning.png) 55px 25px no-repeat #ffffff; /* Old browsers */
+    background: url(/media/images/paypalwarning.png) 55px 25px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #fafafa 100%); /* FF3.6+ */
+    background: url(/media/images/paypalwarning.png) 55px 25px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#fafafa)); /* Chrome,Safari4+ */
+    background: url(/media/images/paypalwarning.png) 55px 25px no-repeat, -webkit-linear-gradient(top, #ffffff 0%,#fafafa 100%); /* Chrome10+,Safari5.1+ */
+    background: url(/media/images/paypalwarning.png) 55px 25px no-repeat, -o-linear-gradient(top, #ffffff 0%,#fafafa 100%); /* Opera11.10+ */
+    background: url(/media/images/paypalwarning.png) 55px 25px no-repeat, -ms-linear-gradient(top, #ffffff 0%,#fafafa 100%); /* IE10+ */
+    background: url(/media/images/paypalwarning.png) 55px 25px no-repeat, linear-gradient(top, #ffffff 0%,#fafafa 100%); /* W3C */
+}
+
+.br-cart-finish{
+	margin-top: -61px!important;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 15;
+}
+
+.br-cart-finish li.yd-shopping-input{
+	color: #3E3935;
+	font-size: 20px;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+#yd-discount-content .invalid-discount{
+	border: 0 none!important;
+	margin: 0!important;
+	width: 230px;
+	padding: 6px 0 0 35px!important;
+	min-height: 29px;
+	text-align: left!important;
+	color: #3E3935;
+	font-size: 14px;
+	font-family: Arial,Helvetica,sans-serif;
+	background: url(/media/css/www.janamesa.com.br/images/ico2-warning-j2.png) 0 8px no-repeat transparent;
+}
+#yd-discount-content .invalid-discount strong{
+    display: block;
+    margin: 0 0 10px;
+    font-weight: bold;
+}
+#yd-discount-content .invalid-discount a{
+	font-family: Helvetica-Bold,Helvetica,Verdana,Arial,sans-serif;
+	margin: 10px 0 0 0;
+	color: #3E3935;
+	display: inline-block;
+}
+#yd-discount-add, #yd-discount-content .yd-sidebar-list, #yd-discount-content .invalid-discount .yd-discount-msg{
+	display: inline-block;
+	width: 100%;
+}
+.br-cart-finish-bottom{
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	margin-top: -45px!important;
+	padding-top: 25px!important;
+}
+.br-cart-finish-bottom .finish-button{
+	display: inline-block;
+	color: #FFFFFF;
+	font-family: Museo700,Helvetica,Verdana,Arial,sans-serif;
+	font-size: 18px;
+	text-shadow: 0 1px 0 #000000;
+	width: 227px;
+	height: 49px;
+	line-height: 46px;
+	vertical-align: middle;
+	text-align: center!important;
+	margin: 10px 0 0 4px;
+	padding: 0 15px;
+	background: url(/media/css/www.janamesa.com.br/images/btns-bg.png) 0 0 no-repeat transparent;
+}
+.br-cart-finish-bottom .finish-button span{
+	display: block;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+.br-cart-finish li.yd-shopping-discount{
+	border: 0 none!important;
+	margin: 0!important;
+	display: inline-block;
+	width: 235px;
+	padding: 6px 0 0 30px!important;
+	position: relative;
+	top: 0;
+	left: 0;
+	min-height: 29px;	
+}
+.br-cart-finish li.yd-shopping-discount em{
+	padding: 0;
+	margin: 0;
+	width: 69px;
+	float: left;
+	clear: none;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 14px;
+	color: #3E3935;
+}
+.br-cart-finish li.yd-shopping-discount .yd-discount-faq-in-menu{
+	position: absolute;
+	top: 8px;
+	left: 0;
+	margin: 0;
+	height: 29px;
+	width: 28px;
+	background: url(/media/css/www.janamesa.com.br/images/ico2-warning-blue-j2.png) 0 0 no-repeat transparent;
+}
+
+.br-cart-finish .yd-box-title{
+	font-size: 34px;
+}
+
+.br-cart-finish .yd-box-title span{
+	display: none;
+}
+
+.yd-form .br-terms{
+	margin: 17px 0 0 0;
+	padding: 25px 0 0 0;
+	border-top: 1px solid #D1C8B5;
+}
+
+#paymentDiv .yd-bigbox-payment #yd-payment-form-bar{
+	left: 108px;
+    position: absolute;
+    top: 49px;
+    width: 199px;
+}
+
+#paymentDiv .yd-bigbox-payment #yd-payment-form-bar strong{
+	color: #575757;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+#paymentDiv .yd-bigbox-payment #yd-payment-form-bar input{
+	font-size: 14px!important;
+    height: 26px!important;
+    line-height: 26px!important;
+    width: 115px!important;
+}
+
+.ie7 #paymentDiv .yd-bigbox-payment #yd-payment-form-bar input{
+	top: 5px!important;
+}

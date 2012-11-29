@@ -1,0 +1,215 @@
+{if is_object($rating)}
+
+{assign var=service value=$rating->getService()}
+{assign var=order value=$rating->getOrder()}
+{assign var=customer value=$order->getCustomer()}
+
+<div class="be-dialogs"><a class="be-dialogs-close yd-close-lightbox"></a>
+
+    <div class="be-dialogs-head"><h2>{__b('CRM Email schreiben')}</h2></div>
+
+    <div class="be-dialogs-body">
+
+        <form method="post" action="/administration_request_service_rating/sorry">
+            <input type="hidden" name="id" value="{$rating->getId()}" />
+
+            <table>
+                {foreach $rating->getCrmLogs() as $crm}
+                <tr>
+                    <td colspan="2" style="font-weight:bold;">
+                        {__b("'%s' wurde am %s von %s gesendet", $calls[$crm->getCallName()], $crm->getCreated()|date_format:__b('d.m.Y H:i'), $crm->getAdmin()->getName())}
+                    </td>
+                </tr>
+                {/foreach}
+                <tr>
+                    <td colspan="2" id="yd-rating-sorry-notify" style="font-weight:bold; font-size:larger; color:red;"></td>
+                </tr>
+                <tr>
+                    <td>{__b('Qualität:')}</td>
+                    <td><span class='yd-rated-{$rating->getQualityZeroLeading()}'></span></td>
+                </tr>
+                <tr>
+                    <td>{__b('Lieferung')}</td>
+                    <td><span class='yd-rated-{$rating->getDeliveryZeroLeading()}'></span></td>
+                </tr>
+                <tr>
+                    <td>{__b('Status')}</td>
+                    <td>{if $rating->getStatus()}{__b('Online')}{else}{__b('Offline')}{/if}</td>
+                </tr>
+                <tr>
+                    <td>{__b('Dienstleister:')}</td>
+                    <td>{$service->getName()}</td>
+                </tr>
+                <tr>
+                    <td>{__b('Kunde:')}</td>
+                    <td>{$customer->getFullname()}</td>
+                </tr>
+                <tr>
+                    <td>{__b('Bestellt am:')}</td>
+                    <td>{$order->getTime()|date_format:__b('%d.%m.%Y %H:%M')}</td>
+                </tr>
+                <tr>
+                    <td>{__b('Bewertung:')}</td>
+                    <td>{$rating->getComment()|escape}</td>
+                </tr>
+                {if !$rating->getCrmEmail()}
+                <tr>
+                    <td>
+                        <input id="yd-rating-sorry-prename" type="text" name="prename" value="{$customer->getPrename()|escape}" />
+                        <input type="hidden" id="yd-rating-sorry-select" name="call" value="" />
+                    </td>                        
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        {foreach $calls as $name => $label}
+                        <input type="submit" name="{$name}" value="{$label}" class="yd-rating-sorry-select-call" />
+                        {/foreach}
+                    </td>
+                </tr>
+
+
+
+                <tr id="yd-rating-sorry-call-RATING_NO_COMMENT" class="yd-rating-sorry-call hidden">
+                    <td colspan="2">
+                        <div class="paper">
+                            {* please no translation here *}
+                            Hallo <span class="yd-rating-sorry-prename">{$customer->getPrename()}</span>,
+                            <br /><br />
+                            vielen Dank für deine Bewertung des Lieferservices
+                            {$service->getName()}. Uns würde allerdings interessieren, wieso du
+                            nicht zufrieden gewesen bist. Dies ist für uns wichtig, weil wir
+                            natürlich die Qualität nur sicherstellen können, wenn wir Feedback
+                            von euch, unseren Kunden, bekommen.
+                            <br /><br />
+                            Wenn du noch kurz zu der Bestellung Feedback geben würdest unter
+                            feedback@lieferando.de würden wir uns freuen. Natürlich kannst und
+                            sollst du auch sagen, was wir bei lieferando.de besser machen
+                            können.
+                            <br /><br />
+                            Bei vermehrten Beschwerden über {$service->getName()} werden wir
+                            reagieren und die Zusammenarbeit prüfen bzw. beenden.
+                            <br /><br />
+                            Vielen Dank für deine Zeit und viele Grüße aus Berlin
+                            <br /><br />
+                            Martin
+                        </div>
+                    </td>
+                </tr>
+                <tr id="yd-rating-sorry-call-RATING_LONG_DELIVERTIME" class="yd-rating-sorry-call hidden">
+                    <td colspan="2">
+                        <div class="paper">
+                            {* please no translation here *}
+                            Hallo <span class="yd-rating-sorry-prename">{$customer->getPrename()}</span>,
+                            <br /><br />
+                            vielen Dank für deine Bewertung und das Feedback zur Lieferzeit
+                            deiner Bestellung bei {$service->getName()}. So eine lange
+                            Lieferzeit sollte nicht der Fall sein. Wir werden das bei {$service->getName()} weiter beobachten und wenn sich das nicht
+                            bessert, die Zusammenarbeit beenden.
+                            <br /><br />
+                            Die Bestellung über lieferando.de sollte ja eine Erleichterung sein
+                            und keine Frust über die Lieferdauer.
+                            <br /><br />
+                            Wenn du noch weiteres Feedback geben willst, kannst du das unter
+                            feedback@lieferando.de gerne tun. Wir würden uns freuen. Natürlich
+                            kannst und sollst du auch sagen, was wir bei lieferando.de besser
+                            machen können.
+                            <br /><br />
+                            Vielen Dank für deine Zeit und viele Grüße aus Berlin
+                            <br /><br />
+                            Martin   
+                        </div>
+                    </td>
+                </tr>
+                <tr id="yd-rating-sorry-call-RATING_NO_DELIVERY" class="yd-rating-sorry-call hidden">
+                    <td colspan="2">
+                        <div class="paper">
+                            {* please no translation here *}
+                            Hallo <span class="yd-rating-sorry-prename">{$customer->getPrename()}</span>,
+                            <br /><br />
+                            vielen Dank für deine Bewertung und die Info, das deine Bestellung
+                            nicht geliefert wurde. Das ist natürlich unglücklich und sollte
+                            eigentlich nicht sein. Wir wollen, das die Bestellung eine
+                            Erleichterung für dich ist und kein Ärgernis. Unser Lieferservice
+                            Team hat den Vorgang jetzt bei sich und kümmert sich darum. Wir
+                            werden das Lieferverhalten bei {$service->getName()} in Zukunft
+                            genauer beobachten. Sollte sich die Zuverlässigkeit nicht erheblich
+                            verbessern, werden wir die Zusammenarbeit beenden.
+                            <br /><br />
+                            Wenn du noch weiteres Feedback geben willst, kannst du das unter
+                            feedback@lieferando.de gerne tun. Wir würden uns freuen. Natürlich
+                            kannst und sollst du auch sagen, was wir bei lieferando.de besser
+                            machen können.
+                            <br /><br />
+                            Vielen Dank für deine Zeit und viele Grüße aus Berlin
+                            <br /><br />
+                            Martin
+                        </div>
+                    </td>
+                </tr>
+                <tr id="yd-rating-sorry-call-RATING_BAD_FOOD" class="yd-rating-sorry-call hidden">
+                    <td colspan="2">
+                        <div class="paper">
+                            {* please no translation here *}
+                            Hallo <span class="yd-rating-sorry-prename">{$customer->getPrename()}</span>,
+                            <br /><br />
+                            vielen Dank für deine Bewertung und die Info, dass das Essen von
+                            {$service->getName()} nicht ganz der gewünschten Qualität
+                            entsprach. Das ist natürlich unglücklich und dürfte eigentlich nicht
+                            sein.
+                            <br /><br />
+                            Wir wollen, das die Bestellung eine Erleichterung für dich ist,
+                            schmeckt und kein Ärgernis. Unser Lieferservice Team hat den Vorgang
+                            jetzt bei sich und kümmert sich darum. Wir werden die Qualität des
+                            Essen bei {$service->getName()} in Zukunft genauer beobachten.
+                            Sollten sich die Beschwerden in Zukunft wiederholen, werden wir die
+                            Zusammenarbeit mit dem Lieferservice beenden.
+                            <br /><br />
+                            Wenn du noch weiteres Feedback geben willst, kannst du das unter
+                            feedback@lieferando.de gerne tun. Wir würden uns freuen. Natürlich
+                            kannst und sollst du auch sagen, was wir bei lieferando.de besser
+                            machen können.
+                            <br /><br />
+                            Vielen Dank für deine Zeit und viele Grüße aus Berlin
+                            <br /><br />
+                            Martin
+                        </div>
+                    </td>
+                </tr>
+                <tr id="yd-rating-sorry-call-RATING_SORRY" class="yd-rating-sorry-call hidden">
+                    <td colspan="2">
+                        <div class="paper">
+                            {* please no translation here *}
+                            Hallo <span class="yd-rating-sorry-prename">{$customer->getPrename()}</span>,
+                            <br /><br />
+                            vielen Dank für deine Bewertung und die Info, dass du nicht ganz
+                            zufrieden gewesen bist. So ein Feedback ist für uns immer hilfreich
+                            und wird bei uns vermerkt.
+                            <br /><br />
+                            Wir wollen, das die Bestellung eine Erleichterung für dich ist,
+                            schmeckt und kein Ärgernis. Unser Lieferservice Team hat den Vorgang
+                            jetzt bei sich und kümmert sich darum. Wir werden
+                            {$service->getName()} in Zukunft genauer beobachten. Sollten sich
+                            die Beschwerden in Zukunft wiederholen, werden wir die
+                            Zusammenarbeit mit dem Lieferservice beenden.
+                            <br /><br />
+                            Wenn du noch weiteres Feedback geben willst, kannst du das unter
+                            feedback@lieferando.de gerne tun. Wir würden uns freuen. Natürlich
+                            kannst und sollst du auch sagen, was wir bei lieferando.de besser
+                            machen können.
+                            <br /><br />
+                            Vielen Dank für deine Zeit und viele Grüße aus Berlin
+                            <br /><br />
+                            Martin
+                        </div>
+                    </td>
+                </tr>
+                {/if}
+            </table>
+        </form>
+
+    </div>
+
+</div>
+
+{/if}

@@ -1,0 +1,26 @@
+<li class="yd-form-right" id="floorfee-li">
+
+    {if $order->getService()->getFloorfee() > 0}
+        <span>
+            {__('Stockwerk')} <b class="red">*</b>
+            <input type="checkbox" value="1" name="lift" id="yd-finish-lift" {if $order->getLift()}checked="checked"{/if} /> {__('Aufzug?')}
+        </span>
+        <select id="etage-select" name="etage" class="validate[custom[floorfee]]" style="width:100px;">
+            <option value="">{__('Bitte wählen')}</option>
+            {section name=floor start=1 loop=31 step=1}
+                <option value="{$smarty.section.floor.index}" {if $order->getFloor()==$smarty.section.floor.index}selected{/if}>{$smarty.section.floor.index}</option>
+            {/section}
+        </select>
+    {else}
+        <span>
+            {__('Stockwerk')} <small class="green">{__('(optional)')}</small>
+        </span>
+        <input type="text"
+               name="etage"
+               id="etage"
+               value="{$order->getLocation()->getEtage()}"
+               class="validate[length[0,100]]" />
+    {/if}
+
+</li>
+

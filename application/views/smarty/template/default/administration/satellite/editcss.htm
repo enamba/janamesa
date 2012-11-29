@@ -1,0 +1,102 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/satellite/_editnavigation.htm'}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".heading").parent().next("td").next("td").contents(".yd-color-picker").css("display", "none");
+        $(".heading").css("color", "#000").parent().css("background","#68b7e5").css("font-weight","bold").next("td").css("background","#68b7e5").next("td").css("background","#68b7e5");
+        $("b").css("color", "#000");
+        $("b").css("font-size","13px");
+        $(".user-tab").css("width","700px");
+    });
+
+</script>
+
+
+<form action="/administration_satellite/settemplate/" method="post" name="form" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="{$satellite->getId()}" />
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Templates')}
+            </div>        
+            <div class="item-content">
+                <table class="user-tab">
+                    <tr>
+                        <td width="50%">
+                            <select name="selectedTemplate" style="width: 300px;">
+                                {foreach from=$templates item=t}
+                                <option value="{$t}">{$t}</option>
+                                {/foreach}            
+                            </select>
+                        </td>
+                        <td width="20%">
+                            <input type="submit" value="{__b('Template setzen')}" class="button rund_set" />
+                        </td>
+                        <td width="30%">
+                            {if strlen($satellite->getCssTemplate())>1}Aktuelles template: <b>{$satellite->getCssTemplate()}</b> {/if}
+                        </td>
+                    </tr>                    
+                </table>
+            </div>
+        </div>
+    </div>
+</form>
+
+<form action="/administration_satellite/editcss/" method="post" name="form" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="{$satellite->getId()}" />
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">{__b('CSS Editor')}</div>
+            <div class="item-content  clearfix">
+                <div>
+                    <table class="user-tab" style="float:left;">
+                        {foreach from=$satellite->getCssProperties() key=name item=value}
+                        <tr>
+                            <td width="62%">{$doc.$name} </td>
+                            <td width="5%">
+                                <div class="yd-color-picker-preview" style="background:{$value};">&nbsp;</div>
+                            </td>
+                            <td width="28%">
+                                <input type="text" name="css[{$name}]" readonly value="{$value}" class="yd-color-picker" />
+                            </td>
+                        </tr>
+                        {/foreach}
+                    </table>
+                    <div>  
+                        <img src="{$domain_static}/images/satellites/backend/menu.jpg" /><br />
+                        <img src="{$domain_static}/images/satellites/backend/lightbox.jpg" /><br />
+                        <img src="{$domain_static}/images/satellites/backend/minamount.jpg" /><br />
+                        <img src="{$domain_static}/images/satellites/backend/finish.jpg" /><br />
+                        <img src="{$domain_static}/images/satellites/backend/index.jpg" /><br />
+                        <img src="{$domain_static}/images/satellites/backend/success.jpg" />
+                    </div>     
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <table>
+                    <tr>
+                        <td width="50%">
+                            <input type="submit" value="{__b('Speichern')}" class="button rund_set" />
+                            <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+                        </td>
+                        <td width="50%">
+                            <input type="submit" name="saveTemplate" value="{__b('Als Template speicher')}n" class="button rund_set" onclick="javascript:return checkcsstemplatename('')"/>  &nbsp;&nbsp;&nbsp;
+                            {__b('Name')}: <input type="text" name="templateName" id="yd-css-template-name">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</form>
+{/block}    

@@ -1,0 +1,1668 @@
+
+
+
+
+
+
+.yd-index-page .wrapper-plz-br,
+.yd-index-page .wrapper-benefits-block{
+    display: inline-block!important;
+}
+
+#yd-ordering .wrapper-rw-block {
+    padding: 35px 0 0 0;
+    display: inline-block;
+    width: 100%;
+}
+#yd-ordering .wrapper-rw-block .rw-block {
+    padding: 0 0 35px 0;
+    display: inline-block;
+    width: 100%;
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) left bottom repeat-x transparent;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rhead {
+    display: inline-block;
+    width: 100%;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    padding: 0 0 15px 0;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rhead h3 {
+    float: left;
+    width: auto;
+    clear: none;
+    color: #6c584a;
+    font-size: 242.85%;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    line-height: 37px;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rhead div {
+    float: left;
+    margin: 7px 0 0 18px;
+    padding: 0 0 0 18px;
+    border-left: 2px solid #e8dccb;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rhead div a {
+    line-height: 26px;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody {
+    display: inline-block;
+    width: 100%;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .list-ci {
+    margin-top: 10px!important;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .list-ci li {
+    float: left;
+    clear: left;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 142.85%;
+    line-height: 1.6;
+    color: #73736a;
+    width: 100%;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .list-ci li a {
+    color: #73736a;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-list-block .col-item {
+    float: left;
+    margin: 0 0 0 10px;
+    width: 152.5px;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-list-block .col-item:first-child {
+    margin: 0;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block {
+    display: inline-block;
+    width: 100%;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .col-item {
+    float: left;
+    margin: 0 0 0 10px;
+    width: 315px;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .col-item:first-child {
+    margin: 0;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .col-item .col-item {
+    float: left;
+    margin: 0 0 0 10px;
+    width: 146px;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .col-item .col-item:first-child {
+    margin: 0;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .photo-block {
+    padding: 14px 22px 23px 18px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .photo-block .num-block {
+    position: absolute;
+    top: 24px;
+    left: -1px;
+    text-align: center;
+    color: #181406;
+    font-size: 214.28%;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    line-height: 40px;
+    height: 48px;
+    width: 45px;
+    background: url(/media/css/www.janamesa.com.br/images/bgs.png) -633px 0 no-repeat transparent;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .photo-block .num-block.red {
+    font-size: 207.14%;
+    color: #ffffff;
+    text-shadow: 0 2px 0 #000000;
+    background: url(/media/css/www.janamesa.com.br/images/bgs.png) -633px -48px no-repeat transparent;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .photo-block .inner-photo-block {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .photo-block .inner-photo-block img {
+    width: 100%;
+    height: auto;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .photo-block .inner-photo-block table {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 180px;
+    width: 100%;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .photo-block .inner-photo-block table td {
+    vertical-align: middle;
+    text-aling: center;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .photo-block .inner-photo-block table td div {
+    padding: 0 15px 3px 15px;
+    font-size: 257.14%;
+    color: #ffffff;
+    text-align: center;
+    font-family: KGLoveYouThroughItRegular, Helvetica, Verdana, Arial, sans-serif;
+    background: url(/media/css/www.janamesa.com.br/images/line-white.png) bottom center no-repeat transparent;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .description-block .col-item {
+    float: left;
+    margin: 0 0 0 10px;
+    width: 152.5px;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .description-block .col-item:first-child {
+    margin: 0;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .description-block .title h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 171.42%;
+    color: #3e3935;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .description-block .title p {
+    margin: 0;
+    padding: 0;
+    font-size: 128.57%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .description-block .rating .rating-star, #yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .description-block .rating .rating-text {
+    float: right;
+    clear: right;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .description-block .rating .rating-star {
+    margin: 5px 0 0 0;
+    padding: 0 0 7px 0;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .description-block .info-rw {
+    display: inline-block;
+    width: 100%;
+    margin: 23px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block .rw-block .inner-rw-block .rbody .wrapper-photo-block .description-block .info-rw p {
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+#yd-ordering .wrapper-rw-block.iphone-block {
+    margin: 40px 0 0 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#yd-ordering .wrapper-rw-block.iphone-block .iphone-block {
+    padding: 0 50px 0 80px;
+}
+#yd-ordering .wrapper-rw-block.iphone-block .iphone-block .star-ico.left {
+    left: 32px;
+}
+#yd-ordering .wrapper-rw-block.iphone-block .iphone-block .star-ico.right {
+    right: 21px;
+}
+#yd-ordering .wrapper-rw-block.iphone-block .iphone-block .inner-iphone-block {
+    display: inline-block;
+    width: 100%;
+}
+#yd-ordering .wrapper-rw-block.iphone-block .iphone-block .inner-iphone-block .col-1, #yd-ordering .wrapper-rw-block.iphone-block .iphone-block .inner-iphone-block .col-2, #yd-ordering .wrapper-rw-block.iphone-block .iphone-block .inner-iphone-block .col-3 {
+    float: left;
+    clear: none;
+}
+#yd-ordering .wrapper-rw-block.iphone-block .iphone-block .inner-iphone-block .col-1 {
+    margin: 40px 0 0 0;
+    color: #669da5;
+    font-family: KGLoveYouThroughItRegular, Helvetica, Verdana, Arial, sans-serif;
+}
+#yd-ordering .wrapper-rw-block.iphone-block .iphone-block .inner-iphone-block .col-1 .tp {
+    margin: 0;
+    padding: 0 0 0 38px;
+    font-size: 228.57%;
+}
+#yd-ordering .wrapper-rw-block.iphone-block .iphone-block .inner-iphone-block .col-1 .mp {
+    margin: 0;
+    padding: 11px 0 16px 0;
+    font-size: 457.14%;
+    line-height: 0.8;
+    background: url(/media/css/www.janamesa.com.br/images/line-iphone.png) 3px bottom no-repeat transparent;
+}
+#yd-ordering .wrapper-rw-block.iphone-block .iphone-block .inner-iphone-block .col-2 {
+    margin: 35px 0 0 17px;
+    width: 259px;
+    height: 110px;
+    background: url(/media/css/www.janamesa.com.br/images/bgs.png) -354px -152px no-repeat transparent;
+    font-size: 157.14%;
+    font-family: KGLoveYouThroughItRegular, Helvetica, Verdana, Arial, sans-serif;
+    color: #5a4b49;
+    text-transform: uppercase;
+}
+#yd-ordering .wrapper-rw-block.iphone-block .iphone-block .inner-iphone-block .col-2 p {
+    margin: 0;
+    padding: 28px 0 0 34px;
+}
+#yd-ordering .wrapper-rw-block.iphone-block .iphone-block .inner-iphone-block .col-3 {
+    margin: 0 0 0 -33px;
+}
+#yd-ordering .wrapper-rw-block.list-top-product {
+    padding: 25px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.list-top-product h3 {
+    color: #6c584a;
+    margin: 0;
+    padding: 0;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 242.85%;
+}
+#yd-ordering .wrapper-rw-block.list-top-product .list-product {
+    display: inline-block;
+    width: 100%;
+    border-top: 1px solid #d1c8b5;
+    margin: 10px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.list-top-product .list-product li {
+    float: left;
+    clear: none;
+    width: 100%;
+    padding: 33px 0 35px 0;
+    border-bottom: 1px solid #d1c8b5;
+}
+#yd-ordering .wrapper-rw-block.list-top-product .list-product li .item-content {
+    padding: 0 9px;
+    display: inline-block;
+    width: 622px;
+}
+#yd-ordering .wrapper-rw-block.list-top-product .list-product li .item-content .col-1, #yd-ordering .wrapper-rw-block.list-top-product .list-product li .item-content .col-2 {
+    float: left;
+    clear: none;
+}
+#yd-ordering .wrapper-rw-block.list-top-product .list-product li .item-content .col-2 {
+    width: 130px;
+    margin: 0 0 0 10px;
+    color: #127f00;
+    font-family: KGLoveYouThroughItRegular, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 257.14%;
+    text-align: right;
+}
+#yd-ordering .wrapper-rw-block.list-top-product .list-product li .item-content .col-2 p {
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+#yd-ordering .wrapper-rw-block.list-top-product .list-product li .item-content .col-2 p .title {
+    font-size: 50%;
+}
+#yd-ordering .wrapper-rw-block.list-top-product .list-product li .item-content .col-1 {
+    width: 482px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+#yd-ordering .wrapper-rw-block.list-top-product .list-product li .item-content .col-1 h4 {
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    font-size: 157.14%;
+    color: #3e3935;
+}
+#yd-ordering .wrapper-rw-block.list-top-product .list-product li .item-content .col-1 h4 a {
+    color: #3e3935;
+}
+#yd-ordering .wrapper-rw-block.list-top-product .list-product li .item-content .col-1 h4 a:hover {
+    color: #ad5146;
+    text-decoration: underline;
+}
+#yd-ordering .wrapper-rw-block.list-top-product .list-product li .item-content .col-1 p {
+    margin: 3px 0 0 0;
+    padding: 0;
+    color: #757372;
+    font-size: 114.28%;
+}
+#yd-ordering .wrapper-rw-block.list-top-product .list-product li:hover .item-content .col-1 h4 a {
+    color: #ad5146;
+}
+#yd-ordering .wrapper-rw-block.menu-list {
+    padding: 25px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.menu-list .col-item {
+    float: left;
+    margin: 0 0 0 10px;
+    width: 152.5px;
+}
+#yd-ordering .wrapper-rw-block.menu-list .col-item:first-child {
+    margin: 0;
+}
+#yd-ordering .wrapper-rw-block.menu-list ul {
+    width: 100%;
+    display: inline-block;
+}
+#yd-ordering .wrapper-rw-block.menu-list ul li {
+    width: 100%;
+    float: left;
+    clear: left;
+}
+#yd-ordering .wrapper-rw-block.menu-list ul li a {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 128.57%;
+    color: #757372;
+    line-height: 1.5;
+}
+#yd-ordering .wrapper-rw-block.menu-list ul li a:hover, #yd-ordering .wrapper-rw-block.menu-list ul li a.active {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+#yd-ordering .wrapper-rw-block.metodo-pagamento {
+    padding: 30px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.metodo-pagamento .col-item {
+    float: left;
+    margin: 0 0 0 26px;
+    width: 307px;
+}
+#yd-ordering .wrapper-rw-block.metodo-pagamento .col-item:first-child {
+    margin: 0;
+}
+#yd-ordering .wrapper-rw-block.metodo-pagamento .col-item label {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+}
+#yd-ordering .wrapper-rw-block.metodo-pagamento .col-item label .col-1, #yd-ordering .wrapper-rw-block.metodo-pagamento .col-item label .col-2, #yd-ordering .wrapper-rw-block.metodo-pagamento .col-item label .col-3 {
+    float: left;
+    clear: none;
+}
+#yd-ordering .wrapper-rw-block.metodo-pagamento .col-item label .col-1 {
+    margin: 0 0 0 5px;
+    width: 23px;
+    padding: 3px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.metodo-pagamento .col-item label .col-2 {
+    width: 60px;
+    margin: 0 0 0 10px;
+}
+#yd-ordering .wrapper-rw-block.metodo-pagamento .col-item label .col-2 img {
+    max-width: 60px;
+    height: auto;
+}
+#yd-ordering .wrapper-rw-block.metodo-pagamento .col-item label .col-3 {
+    width: 199px;
+    margin: 0 0 0 10px;
+}
+#yd-ordering .wrapper-rw-block.metodo-pagamento .col-item label .col-3 h3 {
+    color: #3e3935;
+    font-size: 157.14%;
+}
+#yd-ordering .wrapper-rw-block.metodo-pagamento .col-item label .col-3 p {
+    margin: 0;
+    padding: 0;
+    color: #757372;
+    font-size: 114.28%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+#yd-ordering .wrapper-rw-block.metodo-pagamento .col-item label .col-3 ul {
+    float: none;
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.content-form {
+    padding: 10px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.content-form.sac {
+    padding: 22px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.content-form.sac .required-text {
+    padding: 5px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.content-form.sac .tr-form .rw-block .cols-b {
+    width: 542px;
+    padding-right: 98px;
+}
+#yd-ordering .wrapper-rw-block.content-form.sac .tr-form .rw-block .cols-b .col-1 {
+    width: 115px;
+}
+#yd-ordering .wrapper-rw-block.content-form.sac .tr-form .rw-block .cols-b .col-2 {
+    width: 417px;
+}
+#yd-ordering .wrapper-rw-block.content-form.sac .tr-form .rw-block .cols-b .title {
+    padding-bottom: 0;
+    line-height: 34px;
+}
+#yd-ordering .wrapper-rw-block.content-form.delivery-address {
+    padding: 0;
+}
+#yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form, #yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form:first-child {
+    padding: 0;
+}
+#yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form ul, #yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form:first-child ul {
+    display: inline-block;
+    width: 100%;
+}
+#yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form ul li, #yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form:first-child ul li {
+    float: left;
+    clear: left;
+    width: 100%;
+    padding: 35px 0;
+    border-top: 1px solid #c7bfac;
+}
+#yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form ul li:first-child, #yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form:first-child ul li:first-child {
+    border: 0 none;
+}
+#yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form ul li .wrapper-item, #yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form:first-child ul li .wrapper-item {
+    padding: 0 5px;
+}
+#yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form ul li .wrapper-item .item, #yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form:first-child ul li .wrapper-item .item {
+    display: inline-block;
+    width: 100%;
+}
+#yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form ul li .wrapper-item .item .col-1,
+#yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form:first-child ul li .wrapper-item .item .col-1,
+#yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form ul li .wrapper-item .item .col-2,
+#yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form:first-child ul li .wrapper-item .item .col-2 {
+    float: left;
+    clear: none;
+}
+#yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form ul li .wrapper-item .item .col-1, #yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form:first-child ul li .wrapper-item .item .col-1 {
+    width: 490px;
+    cursor: pointer;
+}
+#yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form ul li .wrapper-item .item .col-1 *, #yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form:first-child ul li .wrapper-item .item .col-1 * {
+    cursor: pointer;
+}
+#yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form ul li .wrapper-item .item .col-1 .col-1, #yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form:first-child ul li .wrapper-item .item .col-1 .col-1 {
+    width: 23px;
+    margin: 0;
+    padding: 3px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form ul li .wrapper-item .item .col-1 .col-2, #yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form:first-child ul li .wrapper-item .item .col-1 .col-2 {
+    margin: 0 0 0 15px;
+    padding: 0;
+    width: 452px;
+}
+#yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form ul li .wrapper-item .item .col-1 .col-2 h3, #yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form:first-child ul li .wrapper-item .item .col-1 .col-2 h3 {
+    font-size: 157.14%;
+    color: #3e3935;
+}
+#yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form ul li .wrapper-item .item .col-1 .col-2 p, #yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form:first-child ul li .wrapper-item .item .col-1 .col-2 p {
+    padding: 0;
+    margin: 0;
+    font-size: 114.28%;
+    color: #757372;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+#yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form ul li .wrapper-item .item .col-2, #yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form:first-child ul li .wrapper-item .item .col-2 {
+    margin: 0 0 0 25px;
+    width: 115px;
+}
+#yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form ul li .wrapper-item .item .col-2 a, #yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form:first-child ul li .wrapper-item .item .col-2 a {
+    float: right;
+    padding: 0 0 0 43px;
+    margin: 5px 0 0 0;
+    height: 31px;
+    line-height: 33px;
+    vertical-align: middle;
+    background: url(/media/css/www.janamesa.com.br/images/edit2-img.png) left center no-repeat transparent;
+    color: #c76856;
+    font-size: 114.28%;
+}
+#yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form.submit, #yd-ordering .wrapper-rw-block.content-form.delivery-address .tr-form:first-child.submit {
+    padding: 37px 0 0 0;
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) left top repeat-x transparent;
+}
+#yd-ordering .wrapper-rw-block.content-form .required-text {
+    text-align: right;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #f41111;
+    margin: 0;
+    padding: 0;
+}
+#yd-ordering .wrapper-rw-block.content-form .tr-form {
+    display: inline-block;
+    width: 100%;
+    padding: 25px 0;
+    border-top: 1px solid #d1c8b5;
+}
+#yd-ordering .wrapper-rw-block.content-form .tr-form:first-child {
+    border: 0 none;
+    padding: 0 0 25px 0;
+}
+#yd-ordering .wrapper-rw-block.content-form .tr-form.submit {
+    padding: 25px 0;
+    border: 0 none;
+}
+#yd-ordering .wrapper-rw-block.content-form .tr-form .rw-block {
+    padding: 8px 0 0 0;
+    background: none transparent;
+}
+#yd-ordering .wrapper-rw-block.content-form .tr-form .rw-block:first-child {
+    padding: 0;
+}
+#yd-ordering .wrapper-rw-block.content-form .tr-form .rw-block.radios {
+    color: #484848;
+    font-size: 107.14%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+#yd-ordering .wrapper-rw-block.content-form .tr-form .rw-block.term-policy label {
+    color: #575757;
+    padding: 0 0 0 25px;
+}
+#yd-ordering .wrapper-rw-block.content-form .tr-form .rw-block.term-policy label a {
+    color: #4398f0;
+}
+#yd-ordering .wrapper-rw-block.content-form .tr-form .rw-block .cols-b {
+    display: inline-block;
+    width: 430px;
+    padding-right: 210px;
+}
+#yd-ordering .wrapper-rw-block.content-form .tr-form .rw-block .cols-b .col-item {
+    float: left;
+    margin: 0 0 0 10px;
+    width: 210px;
+}
+#yd-ordering .wrapper-rw-block.content-form .tr-form .rw-block .cols-b .col-item:first-child {
+    margin: 0;
+}
+#yd-ordering .wrapper-rw-block.content-form .tr-form .rw-block .cols-b .title {
+    font-size: 107.14%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #484848;
+    padding: 0 0 5px 5px;
+}
+#yd-ordering .wrapper-rw-block.content-form .tr-form .rw-block .cols-b .title .desc {
+    color: #8c8c8c;
+    font-size: 66.66%;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+#yd-ordering .wrapper-rw-block.content-form .tr-form .rw-block .cols-b .title .desc.green {
+    color: #219e00;
+}
+#yd-ordering .wrapper-rw-block.content-form .tr-form .rw-block .cols-b .col-numero, #yd-ordering .wrapper-rw-block.content-form .tr-form .rw-block .cols-b .col-complemento {
+    float: left;
+    clear: none;
+}
+#yd-ordering .wrapper-rw-block.content-form .tr-form .rw-block .cols-b .col-numero {
+    width: 82px;
+}
+#yd-ordering .wrapper-rw-block.content-form .tr-form .rw-block .cols-b .col-complemento {
+    margin: 0 0 0 10px;
+    width: 118px;
+}
+#yd-ordering .wrapper-rw-block.menu-criticas {
+    padding: 28px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.menu-criticas .col-1, #yd-ordering .wrapper-rw-block.menu-criticas .col-2 {
+    float: left;
+    clear: none;
+}
+#yd-ordering .wrapper-rw-block.menu-criticas .col-2 {
+    width: 205px;
+    margin: 0 0 0 10px;
+}
+#yd-ordering .wrapper-rw-block.menu-criticas .col-1 {
+    display: inline-block;
+    margin: -7px 0 0 0;
+    padding: 0;
+    width: 425px;
+}
+#yd-ordering .wrapper-rw-block.menu-criticas .col-1 li {
+    float: left;
+    clear: none;
+    margin: 0 0 0 38px;
+}
+#yd-ordering .wrapper-rw-block.menu-criticas .col-1 li:first-child {
+    margin: 0 0 0 -5px;
+}
+#yd-ordering .wrapper-rw-block.menu-criticas .col-1 li a {
+    display: inline-block;
+    padding: 0 0 13px 5px;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 242.85%;
+    color: #cac4c0;
+    min-width: 125px;
+}
+#yd-ordering .wrapper-rw-block.menu-criticas .col-1 li a:hover, #yd-ordering .wrapper-rw-block.menu-criticas .col-1 li a.active {
+    text-decoration: none;
+    color: #6c584a;
+}
+#yd-ordering .wrapper-rw-block.menu-criticas .col-1 li a.active {
+    background: url(/media/css/www.janamesa.com.br/images/menu-line.png) left bottom no-repeat transparent;
+}
+#yd-ordering .wrapper-rw-block.user-panel {
+    padding: 55px 0 75px 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block {
+    margin: 0 5px 0 2px;
+    background: none #ffffff;
+    -webkit-box-shadow: 0 0 9px #6eb5be;
+    -moz-box-shadow: 0 0 9px #6eb5be;
+    box-shadow: 0 0 9px #6eb5be;
+    behavior: url(/media/css/www.janamesa.com.br/PIE.htc);
+    -moz-border-radius: 8px !important;
+    -webkit-border-radius: 8px !important;
+    border-radius: 8px !important;
+    behavior: url(/media/css/www.janamesa.com.br/PIE.htc);
+    padding: 14px;
+    display: block;
+    width: auto;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block {
+    border: 2px solid #c5dde0;
+    -moz-border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    border-radius: 4px !important;
+    behavior: url(/media/css/www.janamesa.com.br/PIE.htc);
+    padding: 25px 15px 30px 10px;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rhead {
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rhead .col-item {
+    float: left;
+    margin: 0 0 0 10px;
+    width: 473px;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rhead .col-item:first-child {
+    margin: 0;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rhead div {
+    border-left: 0 none;
+    padding: 0;
+    float: none;
+    margin: 0;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rhead .col-item h3 {
+    padding: 0 0 0 10px;
+    float: none;
+    line-height: 1.2;
+    display: block;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rhead .col-item h3 span {
+    padding: 0 0 0 18px;
+    color: #575757;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    font-size: 52.94%;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rhead .col-item .wrapper-btn-2048 {
+    float: right;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-1, #yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 {
+    float: left;
+    clear: none;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-1 {
+    width: 295px;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 70px 0 11px 0;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-1 .bg-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 70px;
+    background: url(/media/css/www.janamesa.com.br/images/bgs.png) -582px -312px no-repeat transparent;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-1 .bg-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 11px;
+    background: url(/media/css/www.janamesa.com.br/images/bgs.png) -354px -295px no-repeat transparent;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-1 .wrapper-content-block {
+    display: inline-block;
+    width: 100%;
+    float: left;
+    background: url(/media/css/www.janamesa.com.br/images/bg-right-block.jpg) center center repeat transparent;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-1 .wrapper-content-block .content-block {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    margin: -70px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 {
+    margin: 0 0 0 25px;
+    width: 636px;
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) left top repeat-x transparent;
+    padding: 4px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item {
+    display: inline-block;
+    width: 100%;
+    padding: 18px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .photo {
+    width: 146px;
+    float: left;
+    clear: none;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .photo .paper-img {
+    padding: 11px 15px 14px 14px;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .photo .paper-img img {
+    width: 100%;
+    height: auto;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .info {
+    float: left;
+    clear: none;
+    margin: 0 0 0 17px;
+    width: 473px;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .info h4 {
+    padding: 8px 0 0 0;
+    margin: 0;
+    font-size: 157.14%;
+    color: #3e3935;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .info .address {
+    padding: 3px 0 17px 0;
+    margin: 0;
+    font-size: 114.28%;
+    color: #757372;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .info .email {
+    padding: 3px 0 0 0;
+    margin: 0;
+    font-size: 114.28%;
+    color: #c95841;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .info .tel {
+    padding: 3px 0 0 0;
+    margin: 0;
+    font-size: 128.57%;
+    color: #4d4d4d;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .descript-block {
+    padding: 0 5px;
+    display: block;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .descript-block li {
+    display: block;
+    width: auto;
+    padding: 20px 5px;
+    border-top: 1px solid #d1c8b5;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .descript-block li:first-child {
+    border: 0 none;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .descript-block li .inner {
+    display: inline-block;
+    width: 100%;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .descript-block li h5 {
+    font-size: 157.14%;
+    color: #3e3935;
+    padding: 0 0 15px 0;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .descript-block li.submit {
+    padding: 55px 0 0 0;
+    display: inline-block;
+    width: 100%;
+    border: 0 none;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .wrapper-line-info {
+    display: inline-block;
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .wrapper-line-info .line-info {
+    border-bottom: 1px solid #ffffff;
+    -moz-border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    border-radius: 4px !important;
+    behavior: url(/media/css/www.janamesa.com.br/PIE.htc);
+    -webkit-box-shadow: 0 2px 0 #cccccc;
+    -moz-box-shadow: 0 2px 0 #cccccc;
+    box-shadow: 0 2px 0 #cccccc;
+    behavior: url(/media/css/www.janamesa.com.br/PIE.htc);
+    padding: 0 15px;
+    background: none #f2ebdf;
+    height: 62px;
+    overflow: hidden;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .wrapper-line-info .line-info .inner-line-info {
+    display: inline-block;
+    width: 100%;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .wrapper-line-info .line-info .inner-line-info .item {
+    float: left;
+    clear: none;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .wrapper-line-info .line-info .inner-line-info .item.pedidos {
+    padding: 0 0 0 45px;
+    background: url(/media/css/www.janamesa.com.br/images/basket-img.png) left center no-repeat transparent;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .wrapper-line-info .line-info .inner-line-info .item.favoritos {
+    float: none;
+    display: inline-block;
+    height: 62px;
+    padding: 0 0 0 39px;
+    background: url(/media/css/www.janamesa.com.br/images/star-img.png) left center no-repeat transparent;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .wrapper-line-info .line-info .inner-line-info .item.points {
+    padding: 0 0 0 43px;
+    float: right;
+    background: url(/media/css/www.janamesa.com.br/images/point-img.png) left center no-repeat transparent;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .wrapper-line-info .line-info .inner-line-info .item .num {
+    float: left;
+    clear: none;
+    color: #ad5146;
+    font-size: 200%;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 62px;
+}
+#yd-ordering .wrapper-rw-block.user-panel .rw-block .inner-rw-block .rbody .col-2 .product-item .wrapper-line-info .line-info .inner-line-info .item .title {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #757372;
+    float: left;
+    clear: none;
+    font-size: 128.57%;
+    margin: 0 0 0 15px;
+    line-height: 62px;
+}
+#yd-ordering .wrapper-rw-block.wrong-password {
+    padding: 55px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password {
+    margin: 0 -20px;
+}
+#yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp {
+    display: inline-block;
+    width: 100%;
+    padding: 32px 0 0 0;
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) left top repeat-x transparent;
+}
+#yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp .wrapper-tbody {
+    padding: 27px 0 27px 150px;
+}
+#yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp .wrapper-tbody .tbody {
+    display: inline-block;
+    width: 100%;
+}
+#yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp .wrapper-tbody .tbody .rw-item, #yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp .wrapper-tbody .tbody .rw-item .title, #yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp .wrapper-tbody .tbody .rw-item.submit .bottom-link {
+    display: inline-block;
+    width: 100%;
+}
+#yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp .wrapper-tbody .tbody .rw-item {
+    padding: 10px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp .wrapper-tbody .tbody .rw-item:first-child {
+    padding: 0;
+}
+#yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp .wrapper-tbody .tbody .rw-item.submit {
+    padding: 42px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp .wrapper-tbody .tbody .rw-item.submit .bottom-link {
+    padding: 7px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp .wrapper-tbody .tbody .rw-item.submit .bottom-link a {
+    font-size: 114.28%;
+    color: #685e5a;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+#yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp .wrapper-tbody .tbody .rw-item .title {
+    padding: 0 0 7px 0;
+}
+#yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp .wrapper-tbody .tbody .rw-item .title label {
+    font-size: 107.14%;
+    color: #484848;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+#yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp .wrapper-thead {
+    padding: 0 12px 25px 12px;
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) left bottom repeat-x transparent;
+}
+#yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp .wrapper-thead .thead {
+    padding: 0 0 0 138px;
+    position: relative;
+    top: 0;
+    left: 0;
+    min-height: 92px;
+}
+#yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp .wrapper-thead .thead .inner-thead {
+    display: inline-block;
+    width: 100%;
+}
+#yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp .wrapper-thead .thead .inner-thead h2 {
+    color: #ad2c0e;
+    font-size: 242.85%;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    padding: 0 0 20px 0;
+}
+#yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp .wrapper-thead .thead .inner-thead h3 {
+    font-size: 157.14%;
+    color: #3e3935;
+}
+#yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp .wrapper-thead .thead .inner-thead p {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 114.28%;
+}
+#yd-ordering .wrapper-rw-block.wrong-password .inner-wrong-password .wrapper-content-wp .wrapper-thead .thead .mark {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 89px;
+    height: 82px;
+    background: url(/media/css/www.janamesa.com.br/images/bgs.png) -613px -201px no-repeat transparent;
+}
+#yd-ordering .wrapper-rw-block.title-form {
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) left top repeat-x transparent;
+    margin: 30px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.title-form.impressum .rw-block {
+    padding: 0 0 11px 7px;
+    margin: 0 0 0 -7px;
+    width: auto;
+    display: block;
+}
+#yd-ordering .wrapper-rw-block.title-form .rw-block {
+    padding: 0 0 25px 0;
+    background: none transparent;
+}
+#yd-ordering .wrapper-rw-block.title-form .rw-block h2 {
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 242.85%;
+    color: #6c584a;
+}
+#yd-ordering .wrapper-rw-block.title-form .rw-block p {
+    font-size: 128.57%;
+    color: #575757;
+    margin: 3px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.title-form .rw-block .bottom-link {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0 0 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#yd-ordering .wrapper-rw-block.title-form .rw-block .bottom-link a {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#yd-ordering .wrapper-rw-block.title-form:first-child {
+    margin: 0;
+    background: none transparent;
+}
+#yd-ordering .wrapper-rw-block.title-form:first-child .rw-block {
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) left bottom repeat-x transparent;
+}
+#yd-ordering .wrapper-rw-block.search-endereco .rw-block {
+    padding: 0 0 17px 0;
+}
+#yd-ordering .wrapper-rw-block.search-endereco .rw-block h3 {
+    float: left;
+    clear: none;
+    margin: 0;
+    padding: 0;
+    font-size: 128.57%;
+    color: #575757;
+    width: 127px;
+}
+#yd-ordering .wrapper-rw-block.search-endereco .rw-block p {
+    float: left;
+    clear: none;
+    margin: 0;
+    padding: 0;
+    width: 513px;
+}
+#yd-ordering .wrapper-rw-block.search-endereco .rw-block p span {
+    margin: 0 0 0 7px;
+    color: #000000;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+#yd-ordering .wrapper-rw-block.search-endereco .rw-block p span.number {
+    font-size: 128.57%;
+    font-weight: bold;
+}
+#yd-ordering .wrapper-rw-block.text-block .rw-block {
+    background: none transparent;
+}
+#yd-ordering .wrapper-rw-block.text-block .rw-block .inner-rw-block .rbody h3 {
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 242.85%;
+    color: #6c584a;
+    padding: 0 0 20px 0;
+}
+#yd-ordering .wrapper-rw-block.search-control .rw-block .col-item {
+    float: left;
+    margin: 0 0 0 20px;
+    width: 200px;
+}
+#yd-ordering .wrapper-rw-block.search-control .rw-block .col-item:first-child {
+    margin: 0;
+}
+#yd-ordering .wrapper-rw-block.search-control .rw-block .col-item h4 {
+    display: inline-block;
+    margin: 0;
+    padding: 0 0 10px 7px;
+    color: #575757;
+    font-size: 128.57%;
+}
+#yd-ordering .wrapper-rw-block.search-control .rw-block .col-item .seu-endereco input[type="text"], #yd-ordering .wrapper-rw-block.search-control .rw-block .col-item .seu-endereco input[type="password"] {
+    font-size: 120%;
+    font-weight: bold;
+    color: #000000;
+}
+#yd-ordering .wrapper-rw-block.search-control .rw-block .bottom-info {
+    display: inline-block;
+    width: 100%;
+    margin: 8px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.search-control .rw-block .bottom-info p {
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-indent: 7px;
+}
+#yd-ordering .wrapper-rw-block.restaurantes-block .rw-block {
+    background: none transparent;
+}
+#yd-ordering .wrapper-rw-block.restaurantes-block .rw-block .inner-rw-block .rbody .list-restaurantes {
+    display: inline-block;
+    width: 100%;
+    margin: 12px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.restaurantes-block .rw-block .inner-rw-block .rbody .list-restaurantes .col-item {
+    float: left;
+    margin: 0 0 0 10px;
+    width: 152.5px;
+}
+#yd-ordering .wrapper-rw-block.restaurantes-block .rw-block .inner-rw-block .rbody .list-restaurantes .col-item:first-child {
+    margin: 0;
+}
+#yd-ordering .wrapper-rw-block.restaurantes-block .rw-block .inner-rw-block .rbody .list-restaurantes .photo-block {
+    padding: 11px 15px 14px 14px;
+    margin: 0 0 0 4px;
+}
+#yd-ordering .wrapper-rw-block.restaurantes-block .rw-block .inner-rw-block .rbody .list-restaurantes .photo-block .num-block {
+    left: -5px;
+    top: 21px;
+}
+#yd-ordering .wrapper-rw-block.restaurantes-block .rw-block .inner-rw-block .rbody .list-restaurantes .description-block {
+    padding: 4px 0 0 7px;
+}
+#yd-ordering .wrapper-rw-block.restaurantes-block .rw-block .inner-rw-block .rbody .list-restaurantes .description-block .title {
+    font-size: 14px;
+}
+#yd-ordering .wrapper-rw-block.restaurantes-block .rw-block .inner-rw-block .rbody .list-restaurantes .description-block .title h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 128.57%;
+    color: #3e3935;
+}
+#yd-ordering .wrapper-rw-block.restaurantes-block .rw-block .inner-rw-block .rbody .list-restaurantes .description-block .title p {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+#yd-ordering .wrapper-rw-block.restaurantes-block .rw-block .inner-rw-block .rbody .list-restaurantes .description-block .rating {
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.restaurantes-block .rw-block .inner-rw-block .rbody .list-restaurantes .description-block .rating .rating-star {
+    float: left;
+    clear: none;
+    margin: 0;
+    padding: 0;
+}
+#yd-ordering .wrapper-rw-block.restaurantes-block .rw-block .inner-rw-block .rbody .list-restaurantes .description-block .rating .rating-text {
+    float: left;
+    clear: none;
+    margin: 0 0 0 6px;
+    line-height: 14px;
+}
+#yd-ordering .wrapper-rw-block.wider {
+    display: block;
+    padding: 5px 0 0 0;
+    width: auto;
+    margin: 0 -20px;
+}
+#yd-ordering .wrapper-rw-block.wider.big-image-block {
+    margin: 0 -8px;
+    padding: 20px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.wider.big-image-block .wrapper-image {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#yd-ordering .wrapper-rw-block.wider.big-image-block .wrapper-image img {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+#yd-ordering .wrapper-rw-block.wider.big-image-block .wrapper-image .corner-left-t,
+#yd-ordering .wrapper-rw-block.wider.big-image-block .wrapper-image .corner-right-t,
+#yd-ordering .wrapper-rw-block.wider.big-image-block .wrapper-image .corner-left-b,
+#yd-ordering .wrapper-rw-block.wider.big-image-block .wrapper-image .corner-right-b {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+}
+#yd-ordering .wrapper-rw-block.wider.big-image-block .wrapper-image .corner-left-t {
+    top: 0;
+    left: 0;
+    background: url(/media/css/www.janamesa.com.br/images/bgs.png) -376px -275px no-repeat transparent;
+}
+#yd-ordering .wrapper-rw-block.wider.big-image-block .wrapper-image .corner-right-t {
+    top: 0;
+    right: 0;
+    background: url(/media/css/www.janamesa.com.br/images/bgs.png) -386px -275px no-repeat transparent;
+}
+#yd-ordering .wrapper-rw-block.wider.big-image-block .wrapper-image .corner-left-b {
+    bottom: 0;
+    left: 0;
+    background: url(/media/css/www.janamesa.com.br/images/bgs.png) -376px -285px no-repeat transparent;
+}
+#yd-ordering .wrapper-rw-block.wider.big-image-block .wrapper-image .corner-right-b {
+    bottom: 0;
+    right: 0;
+    background: url(/media/css/www.janamesa.com.br/images/bgs.png) -386px -285px no-repeat transparent;
+}
+#yd-ordering .wrapper-rw-block.wider .block1728 {
+    width: 680px;
+}
+#yd-ordering .wrapper-rw-block.wider .block1728 .outras-info-block {
+    display: inline-block;
+    padding: 20px 20px 25px 20px;
+}
+#yd-ordering .wrapper-rw-block.wider .block1728 .outras-info-block .col-item {
+    float: left;
+    margin: 0 0 0 10px;
+    width: 315px;
+}
+#yd-ordering .wrapper-rw-block.wider .block1728 .outras-info-block .col-item:first-child {
+    margin: 0;
+}
+#yd-ordering .wrapper-rw-block.wider .block1728 .outras-info-block h4 {
+    color: #d49e92;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 171.42%;
+    margin: 0;
+    padding: 0;
+}
+#yd-ordering .wrapper-rw-block.wider .block1728 .outras-info-block .rw-item {
+    display: inline-block;
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+#yd-ordering .wrapper-rw-block.wider .block1728 .outras-info-block .rw-item .col-item .col-item {
+    float: left;
+    margin: 0 0 0 10px;
+    width: 152.5px;
+}
+#yd-ordering .wrapper-rw-block.wider .block1728 .outras-info-block .rw-item .col-item .col-item:first-child {
+    margin: 0;
+}
+#yd-ordering .wrapper-rw-block.wider .block1728 .outras-info-block .rw-item .col-item .photo-block {
+    margin: 0 0 0 4px;
+    padding: 11px 15px 14px 14px;
+}
+#yd-ordering .wrapper-rw-block.wider .block1728 .outras-info-block .rw-item .col-item .photo-block img {
+    width: 100%;
+    height: auto;
+}
+#yd-ordering .wrapper-rw-block.wider .block1728 .outras-info-block .rw-item .col-item h5 {
+    font-size: 128.57%;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+}
+#yd-ordering .wrapper-rw-block.wider .block1728 .outras-info-block .rw-item .col-item p {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #ffc600;
+    padding: 0;
+    margin: 5px 0 0 0;
+}
+#yd-ordering .list-restaurantes-result h3 {
+    font-size: 242.85%;
+    color: #6c584a;
+    margin: 0;
+    padding: 0;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+}
+#yd-ordering .list-restaurantes-result ul {
+    display: inline-block;
+    width: 100%;
+    margin: 15px 0 0 0;
+}
+#yd-ordering .list-restaurantes-result ul li {
+    float: left;
+    clear: left;
+    background: none transparent;
+}
+#yd-ordering .list-restaurantes-result ul li .lt-bord,
+#yd-ordering .list-restaurantes-result ul li .rt-bord,
+#yd-ordering .list-restaurantes-result ul li .lb-bord,
+#yd-ordering .list-restaurantes-result ul li .rb-bord,
+#yd-ordering .list-restaurantes-result ul li .t-bord,
+#yd-ordering .list-restaurantes-result ul li .b-bord,
+#yd-ordering .list-restaurantes-result ul li .l-bord,
+#yd-ordering .list-restaurantes-result ul li .r-bord {
+    background: none transparent;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 {
+    padding: 13px 16px 15px 16px;
+    display: inline-block;
+    width: 608px;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-1, #yd-ordering .list-restaurantes-result ul li .block1728 .col-2, #yd-ordering .list-restaurantes-result ul li .block1728 .col-3 {
+    float: left;
+    clear: none;
+    margin: 0 0 0 13px;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-1 {
+    margin: 0;
+    width: 141px;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-1 .paper-img {
+    padding: 11px 15px 14px 14px;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-1 .paper-img img {
+    width: 100%;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-2 {
+    width: 303px;
+    padding: 0 0 70px 0;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-2 h4 {
+    margin: 0;
+    padding: 8px 0 0 4px;
+    color: #3e3935;
+    font-size: 157.14%;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-2 .ingredients {
+    margin: 0;
+    padding: 0 0 0 4px;
+    font-size: 128.57%;
+    color: #757372;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-2 .bottom-info {
+    display: inline-block;
+    width: 303px;
+    position: absolute;
+    bottom: 20px;
+    left: auto;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-2 .bottom-info .time {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 78.57%;
+    color: #61a62b;
+    padding: 0 0 0 40px;
+    line-height: 22px;
+    vertical-align: middle;
+    background: url(/media/css/www.janamesa.com.br/images/clock-img.png) 4px 0 no-repeat transparent;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-2 .bottom-info .buy {
+    margin: 3px 0 0 0;
+    padding: 0 0 0 40px;
+    width: auto;
+    background: url(/media/css/www.janamesa.com.br/images/buy-img.png) 0 -4px no-repeat transparent;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-2 .bottom-info .buy li {
+    float: left;
+    clear: none;
+    width: 95px;
+    margin: 0 0 0 5px;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-2 .bottom-info .buy li:first-child {
+    margin: 0;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-2 .bottom-info .buy li p {
+    font-weight: bold;
+    color: #4d4d4d;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-2 .bottom-info .buy li p.title {
+    font-size: 78.57%;
+    font-weight: normal;
+    padding: 0 0 1px 0;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-3 {
+    width: 138px;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-3 .list-cards {
+    display: inline-block;
+    width: 100%;
+    margin: 15px 0 0 0;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-3 .list-cards li {
+    clear: none;
+    margin: 0 0 0 5px;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-3 .list-cards li:first-child {
+    margin: 0;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-3 .rating {
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0 0 4px;
+    padding: 0 0 12px 0;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-3 .rating .rating-star {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-3 .rating .rating-star li {
+    flaot: left;
+    clear: none;
+    margin: 0 0 0 3px;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-3 .rating .rating-star li:first-child {
+    margin: 0;
+}
+#yd-ordering .list-restaurantes-result ul li .block1728 .col-3 .rating .rating-text {
+    clear: none;
+    float: left;
+    line-height: 14px;
+    margin: 0 0 0 6px;
+    color: #ad5146;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#yd-ordering .list-restaurantes-result ul li:hover {
+    background: url("/media/css/www.janamesa.com.br/images/dark-grey-bg.png") 0 0 repeat transparent;
+}
+#yd-ordering .list-restaurantes-result ul li:hover .block1728 .col-2 h4 {
+    color: #ffffff;
+}
+#yd-ordering .list-restaurantes-result ul li:hover .block1728 .col-2 .ingredients {
+    color: #cdb628;
+}
+#yd-ordering .list-restaurantes-result ul li:hover .block1728 .col-2 .bottom-info .time {
+    background: url(/media/css/www.janamesa.com.br/images/clock-img.png) 4px -22px no-repeat transparent;
+    color: #5cec4f;
+}
+#yd-ordering .list-restaurantes-result ul li:hover .block1728 .col-2 .bottom-info .buy {
+    background: url(/media/css/www.janamesa.com.br/images/buy-img.png) 0 -44px no-repeat transparent;
+}
+#yd-ordering .list-restaurantes-result ul li:hover .block1728 .col-2 .bottom-info .buy li p {
+    color: #ffffff;
+}
+#yd-ordering .list-restaurantes-result ul li:hover .block1728 .col-3 .rating .rating-text {
+    color: #ffffff;
+}
+#yd-ordering .list-restaurantes-result ul li:hover .lt-bord {
+    background: url(/media/css/www.janamesa.com.br/images/bgs.png) -494px -306px no-repeat transparent;
+}
+#yd-ordering .list-restaurantes-result ul li:hover .rt-bord {
+    background: url(/media/css/www.janamesa.com.br/images/bgs.png) -539px -306px no-repeat transparent;
+}
+#yd-ordering .list-restaurantes-result ul li:hover .lb-bord {
+    background: url(/media/css/www.janamesa.com.br/images/bgs.png) -494px -342px no-repeat transparent;
+}
+#yd-ordering .list-restaurantes-result ul li:hover .rb-bord {
+    background: url(/media/css/www.janamesa.com.br/images/bgs.png) -539px -342px no-repeat transparent;
+}
+#yd-ordering .list-restaurantes-result ul li:hover .t-bord {
+    background: url(/media/css/www.janamesa.com.br/images/dark-grey-bg-tb.png) left top repeat-x transparent;
+}
+#yd-ordering .list-restaurantes-result ul li:hover .b-bord {
+    background: url(/media/css/www.janamesa.com.br/images/dark-grey-bg-tb.png) left bottom repeat-x transparent;
+}
+#yd-ordering .list-restaurantes-result ul li:hover .l-bord {
+    background: url(/media/css/www.janamesa.com.br/images/dark-grey-bg-lr.png) left top repeat-y transparent;
+}
+#yd-ordering .list-restaurantes-result ul li:hover .r-bord {
+    background: url(/media/css/www.janamesa.com.br/images/dark-grey-bg-lr.png) right top repeat-y transparent;
+}
+#yd-ordering .list-product-info {
+    margin: 0 0 -35px 0;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+}
+#yd-ordering .list-product-info .wrapper-rw-block {
+    background: url("/media/css/www.janamesa.com.br/images/strip-rw-block.png") left top repeat-x transparent;
+}
+#yd-ordering .list-product-info .wrapper-rw-block .rw-block {
+    background: none transparent;
+}
+#yd-ordering .list-product-info .wrapper-rw-block h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 157.14%;
+    color: #000000;
+    text-shadow: 0px 2px 0 #ffffff;
+}
+#yd-ordering .list-product-info li {
+    margin: 0;
+}
+#yd-ordering .list-product-info li:first-child {
+    background: none transparent!important;
+}
+#wrapper-bottom-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 35px 0 0 0;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+#wrapper-bottom-content .bottom-content {
+    padding: 0;
+}
+#wrapper-bottom-content .bottom-content .inner-bottom-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    display: inline-block;
+    width: 1020px;
+}
+#wrapper-bottom-content .bottom-content .inner-bottom-content .wrapper-right-sidebar {
+    float: right;
+    width: 360px;
+}
+#wrapper-bottom-content .bottom-content .inner-bottom-content .wrapper-left-sidebar .left-sidebar {
+    display: inline-block;
+    width: 100%;
+}
+#wrapper-bottom-content.right-side .wrapper-left-sidebar {
+    margin: 0 360px 0 0;
+}
+.wrapper-seo-block {
+    height: 355px;
+    width: 986px;
+    overflow: hidden;
+    float: left;
+    background: url(/media/css/www.janamesa.com.br/images/bgs.png) 0 -382px no-repeat transparent;
+}
+.wrapper-seo-block .seo-block {
+    padding: 30px 30px 30px 50px;
+}
+.wrapper-seo-block .seo-block .inner-seo-block {
+    display: inline-block;
+    width: 100%;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    font-size: 92.85%;
+    color: #ffffff;
+}
+.wrapper-seo-block .seo-block .inner-seo-block .rw-block {
+    display: inline-block;
+    width: 100%;
+    margin: 35px 0 0 0;
+}
+.wrapper-seo-block .seo-block .inner-seo-block .rw-block .col-item {
+    float: left;
+    margin: 0 0 0 20px;
+    width: 288.6666666666667px;
+}
+.wrapper-seo-block .seo-block .inner-seo-block .rw-block .col-item:first-child {
+    margin: 0;
+}
+.wrapper-seo-block .seo-block .inner-seo-block .rw-block:first-child {
+    margin: 0;
+}
+.wrapper-seo-block .seo-block .inner-seo-block .rw-block h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 171.42%;
+    font-weight: normal;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    color: #d49e92;
+    line-height: 1.0;
+}
+.wrapper-seo-block .seo-block .inner-seo-block .rw-block ul {
+    display: inline-block;
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+.wrapper-seo-block .seo-block .inner-seo-block .rw-block ul li {
+    float: left;
+    width: 100%;
+    line-height: 20px;
+}
+.wrapper-seo-block .seo-block .inner-seo-block .rw-block ul li a {
+    color: #ffffff;
+}
+.wrapper-seo2-block {
+    display: inline-block;
+    width: 100%;
+    margin: 25px 0 0 0;
+    padding: 0 0 20px 0;
+}
+.wrapper-seo2-block .seo2-block {
+    padding: 0 0 0 20px;
+}
+.wrapper-seo2-block .seo2-block .inner-seo2-block {
+    display: inline-block;
+    width: 100%;
+}
+.wrapper-seo2-block .seo2-block .inner-seo2-block .col-item {
+    float: left;
+    margin: 0 0 0 45px;
+    width: 450px;
+}
+.wrapper-seo2-block .seo2-block .inner-seo2-block .col-item:first-child {
+    margin: 0;
+}
+.wrapper-seo2-block .seo2-block .inner-seo2-block h4 {
+    font-weight: normal;
+    margin: 0;
+    padding: 10px 0 25px 0;
+    font-family: Museo300, Helvetica, Verdana, Arial, sans-serif;
+    color: #000000;
+    text-shadow: 0px 2px 0 #ffffff;
+    font-size: 24px;
+    line-height: 1.0;
+    min-height: 50px;
+}
+.yd-read-more-br{
+    width: 100%!important;
+    display: inline-block;
+}
+.yd-read-more-br h4{
+    min-height: 0!important;
+}
+.wrapper-seo2-block .seo2-block .inner-seo2-block p {
+    margin: 0 0 0 0;
+    padding: 0 0 15px 0;
+    text-align: left;
+}
+.wrapper-benefits-block {
+    float: right;
+    clear: none;
+    width: 279px;
+    height: 152px;
+    margin: -17px 33px 0 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    background: url(/media/css/www.janamesa.com.br/images/bgs.png) -354px 0 no-repeat transparent;
+}
+.wrapper-benefits-block .benefits-block {
+    padding: 20px 0 0 23px;
+}
+.wrapper-benefits-block .benefits-block .inner-benefits-block {
+    display: inline-block;
+    width: 100%;
+}
+.wrapper-benefits-block .benefits-block .inner-benefits-block p {
+    margin: 5px 0 0 0;
+    padding: 0 0 0 24px;
+    background: url(/media/css/www.janamesa.com.br/images/check.png) 0 2px no-repeat transparent;
+    color: #443b3b;
+    font-size: 114.28%;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+}
+.wrapper-benefits-block .benefits-block .benefits-districts p {
+    margin: 5px 0 0 0;
+    color: #443b3b;
+    font-size: 125%;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    width: 110px;
+    float: left;
+}
+.wrapper-benefits-block .benefits-block .benefits-districts .benefits-districts-header {
+    margin: 5px 0 5px 0;
+    color: #189401;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    width: 230px;
+    text-align: center;
+}
+.wrapper-benefits-header {
+    padding: 16px;
+    margin: 120px 60px 0 0;
+    float: right;
+    clear: none;
+    background-color:  #C6070C;
+    opacity: 0.8;
+    width: 200px;
+    overflow: hidden;
+    z-index: 6;
+    text-align: center;
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -khtml-border-radius:10px;
+}
+.wrapper-benefits-header a {
+    opacity: none;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 160%;
+    font-weight: bold;
+    color: white;
+}
+.yd-index-page .header-bg{
+    background: url(/media/css/www.janamesa.com.br/images/site-img/meat-header.png) no-repeat scroll center bottom transparent;
+    min-height: 560px;
+}
+.yd-index-page #yd-content{
+    margin-top: 0!important;
+}
+.yd-index-page .br-paypal{
+    margin-top: -37px!important;
+}
+.yd-index-page .yd-read-more-link-br{
+    margin: 10px 0 0 0;
+}
+.yd-lightbox-content-container form p{
+    text-align: center;
+}

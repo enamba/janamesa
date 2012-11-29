@@ -1,0 +1,33 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/stats/services/navigation.htm'}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Anzahl der online Dienstleister pro Provision')}
+        </div>
+          <div class="item-content">
+            <table width="100%" class="user-tab">
+                    <tr>                    
+                        <th width="15%">{__b('Provision')}</th>
+                        <th >{__b('Anzahl Restaurants (mit Vertrag)')}</th>
+                        <th >{__b('Anzahl Restaurants (ohne Vertrag)')}</th>
+                        <th >{__b('Anzahl Restaurants (gesamt)')}</th>
+                    </tr>
+                    {foreach from=$services key=city item=r}
+                    <tr>
+                        <td>{$r.provision} %</td>
+                        <td>{$r.countContract}</td>
+                        <td>{$r.countNoContract}</td>
+                        <td>{$r.count}</td>
+                    </tr>
+
+                    {/foreach}
+            </table>
+          </div>
+    </div>
+</div>
+
+
+{/block}

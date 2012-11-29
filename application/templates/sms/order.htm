@@ -1,0 +1,32 @@
+{$order->getCustomer()->getFullname()}, {$order->getLocation()->getStreet()} {$order->getLocation()->getHausnr()}, {$order->getLocation()->getPlz()} {$order->getLocation()->getOrt()->getOrt()}, {$order->getLocation()->getEtage()}, {$order->getLocation()->getTel()}, {$order->getLocation()->getComment()}
+{__('Kd.Nr.')} {$order->getService()->getCustomerNr()}
+{__('BestellNr:')} {$order->getNr()}
+{foreach from=$order->getCard() item=customerBucket}
+{foreach from=$customerBucket item=bucket}
+{foreach from=$bucket item=elem}      
+{assign var=meal value=$elem.meal}
+{assign var=mamount value=$meal->getAllCosts()}
+-{$elem.count}x {$meal->getName()} {$meal->getCurrentSizeName()|escape_latex} {$meal->getNr()} {__('%s EUR',($mamount*$elem.count)|inttoprice)}
+{if $meal->getCurrentExtrasCount() > 0}
+{__('Extras:')} {foreach item=x from=$meal->getCurrentExtras()}{$x->getName()} {__('%s EUR',$x->getCost()|inttoprice)},{/foreach}
+{/if}
+{if $meal->getCurrentOptionsCount() > 0}
+{__('Optionen:')} {foreach item=x from=$meal->getCurrentOptions()}{$x->getName()}{/foreach}
+{/if}
+{/foreach}
+{/foreach}
+{/foreach}
+{if $order->getDeliverCost() > 0}
+{__('Lieferkosten:')} {__('%s EUR',$order->getDeliverCost()|inttoprice)}
+{/if}
+{__('Gesamtbetrag:')} {__('%s EUR',$order->getAbsTotal(false,false,true,false,false,false,true)|inttoprice)}
+
+{if $order->getCashAmount() > 0}
+{__('Offener Betrag:')} {$order->getCashAmount()|inttoprice}
+{else}
+{__('!!!BEREITS ONLINE BEZAHLT!!!')}
+{/if}
+
+Lieferzeitpunkt: {$order->getDeliverTimeFormated()|date_format:__("%d.%m.%y um %H:%M")}
+
+Bei Fragen: {$config->locale->tel->support}

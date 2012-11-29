@@ -1,0 +1,1 @@
+ALTER TABLE restaurants DROP butler, DROP bloomsburys, DROP noContract, DROP eatstar, DROP premium;

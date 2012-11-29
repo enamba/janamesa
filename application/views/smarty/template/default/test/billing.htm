@@ -1,0 +1,9 @@
+<p>Total: {$order->getAbsTotal()|inttoprice}</p>
+<p>Netto 7: {$order->getItem7()|inttoprice}</p>
+<p>Steuern 7: {$order->getTax7()|inttoprice}</p>
+<p>Netto 19: {$order->getItem19()|inttoprice}</p>
+<p>Steuern 19: {$order->getTax19()|inttoprice}</p>
+
+{if $order->getKind() == "comp"}
+<p>Budget: {$order->getBudgetAmount()|inttoprice}</p>
+{/if}

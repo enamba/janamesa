@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="pt" xml:lang="pt" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="pt" xml:lang="pt" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="pt" xml:lang="pt" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="pt" xml:lang="pt" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="pt" xml:lang="pt">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="viewport" content="width=1100">
+        <link rel="SHORTCUT ICON" href="/media/css/www.janamesa.com.br/favicon.ico" type="image/x-icon" />
+
+        <title>Impressum - lieferando.de</title>
+
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-core.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-home.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-jquery.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-ie.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-infocenter.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-hidden.css" />
+            
+            <script type="text/javascript" src="/media/javascript/compiled/frontend-sem.js"></script>
+   </head>
+    <body class="br">
+
+        <!--#include virtual="_br_header.html" -->
+
+        <div id="yd-content" class="yd-clearfix">
+
+            <div id="yd-ordering" class="fright">
+
+            </div>
+
+            <div id="yd-sidebar" class="fleft">
+
+                <h1>Alguma dúvida?</h1>
+                <br />
+
+                <!-- Call us Box -->
+                <div class="yd-box br-box call-us">
+                    <strong>(11)4063-1731</strong>
+                </div>              
+                <!-- /Call us Box -->                  
+
+            </div>		
+
+        </div>
+    </div>
+
+    <!--#include virtual="_br_footer.html" -->

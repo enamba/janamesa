@@ -1,0 +1,61 @@
+{extends file='administration/base.htm'}
+{block name="content"}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Zeitrahmen und die Seite')}
+        </div>
+        <div class="item-content">
+            <form action="/administration_stats_accesslog" method="post" name="form">
+            <table class="user-tab">
+                <tr>
+                    <td width="5%">{__b('Von')}</td>
+                    <td width="25%"><input type="text" name="fromD" id="yd-statistics-start" value="{$from}"/></td>
+                    <td width="5%">{__b('Bis')}</td>
+                    <td width="25%"><input type="text" name="untilD" id="yd-statistics-end"  value="{$until}"/></td>
+                    <td width="50%"></td>
+                </tr>
+                <tr>
+                    <td>{__b('Seite')}:</td>
+                    <td colspan="4">www.lieferando.de/<input type="text" name="searched" class="rund_set text" value="{$searched}"/></td>
+                </tr>
+                <tr>
+                    <td colspan="5"><input value="{{__b('Daten anzeigen')}}" type="submit" class="button"/></td>
+                </tr>
+            </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Zugriffe auf eine Seite, nach Uhrzeit und Wochentagen')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <th></th>
+                    <th>{__b('Montag')}</th>
+                    <th>{__b('Dienstag')}</th>
+                    <th>{__b('Mittwoch')}</th>
+                    <th>{__b('Donnerstag')}</th>
+                    <th>{__b('Freitag')}</th>
+                    <th>{__b('Samstag')}</th>
+                    <th>{__b('Sonntag')}</th>                        
+                </tr>
+                {foreach from=$data key=hour item=hourValues}
+                <tr>
+                    <td>{$hour} - {$hour+1}</td>
+                    {foreach from=$hourValues key=day item=dayValue}
+                    <td>{$dayValue}</td>
+                    {/foreach}
+                </tr>
+                {/foreach}                    
+            </table>
+        </div>
+    </div>
+</div>
+{/block}

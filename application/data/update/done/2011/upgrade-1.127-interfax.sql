@@ -1,0 +1,1 @@
+alter table interfax_transactions drop column params;

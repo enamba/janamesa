@@ -1,0 +1,36 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Übersicht der Arbeitszeiten im Vertrieb')}
+        </div>
+    </div>
+</div>
+
+{foreach from=$salespersons item=person}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Vertrieb:')} {$person->getPrename()} {$person->getName()}  <a href="/administration_salesperson/info/id/{$person->getId()}">[{__b('Info')}]</a>
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <th width="30%">Tag</th>
+                    <th>{__b('Arbeitszeit (Stunden)')}</th>
+                </tr>
+                {foreach from=$person->getWorktimes() item=t}
+                <tr>
+                    <td>{$t.day}</td>
+                    <td>{$t.hours}</td>
+                </tr>
+                {/foreach}
+            </table>
+        </div>
+    </div>
+</div>
+{/foreach}
+
+{/block}

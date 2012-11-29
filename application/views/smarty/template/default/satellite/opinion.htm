@@ -1,0 +1,50 @@
+{extends file='satellite/_base_start.htm'}
+{block name="content"}
+<br/>
+<div id="info">
+    <h2>{__("Meinung von Kunden über %s.", $service->getName())}</h2>
+</div>
+
+<div class="yd-box yd-opinion">
+    <div id="yd-service-rating">
+        
+        <div id="yd-ratings-detail">
+            {foreach from=$service->getRating()->getList(null, true) item=rating}
+            <div class="hreview">
+                <span class="item">
+                    <span class="fn">{$service->getName()}</span>
+                </span>
+                <span class="q0">
+                    {__('Bewertet von %s%s%s am', '<span class="reviewer">', $rating.author, '</span>')}
+                    <span class="dtreviewed">
+                        {$rating.created|date_format:__('%d.%m.%Y')}<span class="value-title" title="{$rating.created|date_format:'Y-m-d'}"></span>
+                    </span>
+                </span>
+                <span class="summary">{$rating.title|escape|default:''}</span>
+                <span class="description">{$rating.comment|escape|default:''}</span>
+                <!--Rating: --><span class="rating">{($rating.delivery+$rating.quality)/2}</span>
+                <span class="q1">
+                    {__('Qualität des Essens:')} <strong class="yd-rated-{$rating.quality*2}"></strong>
+                    {__('Lieferung:')} <strong class="yd-rated-{$rating.delivery*2}"></strong>
+                </span>
+                {if $rating.advise == '1'}
+                    <i style="background: #dafdd8;">
+                        <img src="{$domain_static}/images/yd-icons/yd-ratings-thumb-up.png" alt="" />
+                    </i>
+                {/if}
+                {if $rating.advise == '0'}
+                    <i style="background: #fdd9d9;">
+                        <img src="{$domain_static}/images/yd-icons/yd-ratings-thumb-down.png" alt="" />
+                    </i>
+                {/if}
+            </div>
+            {foreachelse}
+            <p>{__('Bisher wurden für dieses Restaurant noch keine Bewertungen abgegeben.')}</p>    
+            {/foreach}
+        </div>
+        
+    </div>
+</div>
+
+{/block}
+

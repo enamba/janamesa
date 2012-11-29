@@ -1,0 +1,46 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+    <ul class="be-tabs">
+        <li><a href="/administration/emails">{__b('Zurück zur Übersicht')}</a></li>
+    </ul>
+
+    <form action="/administration_email/test" method="post">
+
+        <div class="one-column-box">
+            <div class="item">
+                <div class="item-content">
+                    <table>
+                        <tr>
+                            <td>{__b('Empfänger:')} </td>
+                            <td><input type="text" name="to" value="{$post.to|escape}" class="rund_set text" /></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Betreff:')} </td>
+                            <td><input type="text" name="subject" value="{$post.subject|escape}" class="rund_set text" /></td>
+                        </tr>
+                        <tr>
+                            <td valign="top">{__b('TEXT Nachricht:')} </td>
+                            <td><textarea name="text" class="rund_set text">{$post.text|escape}</textarea></td>
+                        </tr>
+                        <tr>
+                            <td valign="top">{__b('HTML Nachricht:')} </td>
+                            <td><textarea name="html" class="rund_set text">{$post.html|escape}</textarea></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- submit -->
+        <div class="one-column-box">
+            <div class="item">
+                <div class="item-content">
+                    <input type="submit" value="{__b('Senden')}" class="button rund_set" />
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+{/block}    

@@ -1,0 +1,95 @@
+2012-09-24T10:27:34+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T10:58:40+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T10:58:54+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T12:31:47+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T13:05:36+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T13:36:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T13:39:30+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T13:41:57+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T13:43:10+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T13:45:49+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T13:46:44+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T13:47:20+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T13:49:35+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T13:52:15+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T13:53:31+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T13:54:57+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T13:55:27+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T14:00:49+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T14:07:43+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T14:12:36+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T14:42:15+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template index/index.htm 
+2012-09-24T14:42:16+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/index.html 
+2012-09-24T14:42:23+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 61 online and 4 offline services in #744 
+2012-09-24T14:42:23+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/service.htm 
+2012-09-24T14:42:29+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/lieferservice-berlin-12437.html 
+2012-09-24T14:42:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/order/lastorder.htm 
+2012-09-24T14:42:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing don't show ratingLink for order #1299596, because state <= 0 - state = 0 
+2012-09-24T14:42:59+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-09-24T14:42:59+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/request_order/serviceinfo/id/16851.html 
+2012-09-24T14:43:01+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/menu.htm 
+2012-09-24T14:43:02+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/lieferservice-mistersubs-berlin.html 
+2012-09-24T14:43:21+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/order/callmeal.htm 
+2012-09-24T14:43:21+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/request_order/callmeal/id/823428/size/0/update/false.html 
+2012-09-24T14:53:25+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T15:02:04+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T15:02:30+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T15:07:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T15:14:34+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T15:17:09+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T15:20:40+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/order/callmeal.htm 
+2012-09-24T15:20:40+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/request_order/callmeal/id/823570/size/126798/update/false.html 
+2012-09-24T15:22:40+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T15:25:29+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T15:27:31+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T15:27:56+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T15:30:04+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/login.htm 
+2012-09-24T15:30:12+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Successfully loggged in admin #Supporter Jens Naie (417) 
+2012-09-24T15:30:12+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/dashboard.htm 
+2012-09-24T15:30:30+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-24T15:30:37+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/service/edit/index.htm 
+2012-09-24T15:30:43+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/service/edit/contacts.htm 
+2012-09-24T15:43:55+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/stats/services/index.htm 
+2012-09-24T15:44:17+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/stats/services/restaurantsperstatus.htm 
+2012-09-24T15:45:06+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-24T15:45:11+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/stats/services/restaurantsperstatus.htm 
+2012-09-24T15:45:16+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-24T15:45:22+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/stats/services/restaurantsperstatus.htm 
+2012-09-24T15:45:38+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-24T15:45:45+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-24T15:45:59+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-24T15:46:03+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/stats/services/restaurantsperstatus.htm 
+2012-09-24T15:46:08+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-24T15:46:12+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-24T15:46:23+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-24T15:46:31+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-24T15:46:33+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-24T15:46:35+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/stats/services/restaurantsperstatus.htm 
+2012-09-24T15:47:00+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-24T15:47:05+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/stats/services/restaurantsperstatus.htm 
+2012-09-24T16:54:13+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T16:57:41+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T16:58:43+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T17:02:25+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T17:02:48+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T17:10:49+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T17:12:09+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T17:37:17+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T17:38:30+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T17:41:19+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T17:42:04+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T18:20:48+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T18:21:47+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T18:23:38+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T18:28:22+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T18:28:48+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T18:30:00+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T18:30:49+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T18:33:11+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T18:33:35+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T18:33:40+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T18:35:01+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T18:35:17+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T18:35:36+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T18:40:44+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-24T18:47:06+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 

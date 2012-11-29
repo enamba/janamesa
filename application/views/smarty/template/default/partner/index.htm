@@ -1,0 +1,98 @@
+{extends file='partner/_base.htm'}
+{block name="content"}
+
+{include file='partner/_includes/nav.htm'}
+
+<div class="be-partner be-partner-index yd-clearfix">
+    <h1 class="icon01">{__p('Restaurant Status:')}  {if $restaurant->getIsOnline()} <span class="be-on">{__p('online')}</span> {else} <span class="be-off">{__p('offline')}</span> {/if}</h1>
+
+    <div class="be-partner-right">
+        {$restaurant->getName()} (#{$restaurant->getCustomerNr()})
+        <br /><br />
+        {$restaurant->getStreet()} {$restaurant->getHausnr()}
+        <br />
+        {$restaurant->getPlz()} {$restaurant->getCity()}
+        <br /><br />
+        {__p('Tel: ')} {$restaurant->getTel()}
+        <br />
+        {__p('Fax: ')} {$restaurant->getFax()}
+        <br /><br />
+        {__p('Kontobesitzer: ')} {if $restaurant->getKtoName()}{$restaurant->getKtoName()}{else} {__p('unbekannt')} {/if}
+        <br />
+        {__p('Kontonummer: ')} {if $restaurant->getKtoNr()} {$restaurant->getKtoNr()} {else} {__p('unbekannt')} {/if}
+        <br />
+        {__p('BLZ: ')} {if $restaurant->getktoBlz()} {$restaurant->getktoBlz()} {else} {__p('unbekannt')} {/if}
+    </div>
+
+    <div class="be-partner-left">
+        <table class="user-tab">
+            <tr>
+                <th colspan="2">{__p('Reguläre Öffnungszeiten')}</th>
+            </tr>
+            {$week = array(__p('Sonntag'), __p('Montag'), __p('Dienstag'), __p('Mittwoch'), __p('Donnerstag'), __p('Freitag'), __p('Samstag'))}
+            {section name=day start=1 loop=8}
+            <tr>
+                <td width="50%">{$week[$smarty.section.day.iteration%7]}</td>
+                <td width="50%">
+                    {foreach from=$openings[$smarty.section.day.iteration%7] item=o}
+                    {$o['from']|substr:0:5} - {$o['until']|substr:0:5}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    {foreachelse}
+                    <font color="#999">{__p('geschlossen')}</font>
+                    {/foreach}
+                </td>
+            </tr>
+            {/section}
+            <tr>
+                <td>{__p('Feiertage')}</td>
+                <td>
+                    {foreach from=$openings[10] item=o}
+                    {$o['from']|substr:0:5} - {$o['until']|substr:0:5}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    {foreachelse}
+                    <font color="#999">{__p('nicht gesetzt')}</font>
+                    {/foreach}
+                </td>
+            </tr>
+        </table>
+
+        <table class="user-tab">
+            <tr>
+                <th colspan="2">{__p('Spezielle Öffnungszeiten')}</th>
+            </tr>
+            {$specialOpenings = Yourdelivery_Model_Servicetype_OpeningsSpecial::getSpecialOpening($restaurant->getId(),true)}
+            {foreach from=$specialOpenings item=open}
+            <tr>
+                <td width="50%">
+                    {$open.specialDate|date_format:__p('%d.%m.%Y')}
+                </td>
+                <td width="50%">
+                    {if $open.closed == 1}
+                    <font color="#999">{__p('Geschlossen')}</font>
+                    {else}
+                    {$open.from|substr:0:5} - {$open.until|substr:0:5}
+                    {/if}
+                </td>
+            </tr>
+            {foreachelse}
+            <tr><td>{__p('keine speziellen Öffnungszeiten eingetragen')}</td></tr>
+            {/foreach}
+        </table>
+
+        <table class="user-tab">
+            <tr>
+                <th width="50%">{__p('Liefergebiete')}</th>
+                <th width="50%">{__p('Mindestbestellwert')}</th>
+            </tr>
+            {foreach from=$restaurant->getRanges() item=location}
+            <tr>
+                <td>{$location.cityname}</td>
+                <td>{$location.mincost|inttoprice} {__p("€")}</td>
+            </tr>
+            {foreachelse}
+            <tr><td colspan="2" style="color:red;">{__p('keine Liefergebiete eingetragen')}</td></tr>
+            {/foreach}
+        </table>
+    </div>
+
+</div>
+
+{/block}

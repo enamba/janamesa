@@ -1,0 +1,55 @@
+{if $config->domain->base == 'lieferando.de'}
+<script type="text/javascript">    
+    /*<![CDATA[*/
+    
+    
+    function track_criteo_in_menu() {
+        
+    
+        var CRITEO_TRACKING_DIVS = "";
+    
+        CRITEO_TRACKING_DIVS += '<div id=\"cto_ctg_7716404_ac\" style=\"display:none\">';
+        CRITEO_TRACKING_DIVS += '  <div class=\"ctoWidgetServer\">http:\/\/lieferandode.widget.criteo.com\/pjl\/<\/div>';
+        CRITEO_TRACKING_DIVS += '  <div class=\"ctoDataType\">catalog<\/div>';
+        CRITEO_TRACKING_DIVS += '  <div class=\"ctoParams\">wi=7716404&i={$service->getId()}<\/div>';
+        CRITEO_TRACKING_DIVS += '  <div class=\"ctoData\">';
+        CRITEO_TRACKING_DIVS += '    <div id=\"ctoName\">{$service->getName()|addslashes|addslashes}<\/div>';
+        CRITEO_TRACKING_DIVS += '    <div id=\"ctoProductUrl\">http://www.{$config->domain->base}/{$service->getRestUrl()}?utm_source=ret&utm_medium=dp&utm_campaign=dp_13&utm_content=dp_13<\/div>';
+        CRITEO_TRACKING_DIVS += '    <div id=\"ctoSmallImage\">{$service->getImg("small")}<\/div>';
+        CRITEO_TRACKING_DIVS += '    <div id=\"ctoDescription\">{$service->getTagsWithMaxStringlength(25)|implode:', '|addslashes|addslashes}<\/div>';
+        CRITEO_TRACKING_DIVS += '    <div id=\"ctoRecommendable\">TRUE<\/div>';
+        CRITEO_TRACKING_DIVS += '    <div id=\"ctoCategoryId1\">Lieferservice<\/div>';        
+        CRITEO_TRACKING_DIVS += '    <div id=\"ctoCategoryId2\">{round($service->getRating()->getAverage()*2,0)/2|string_format:"%.1f"} {__("Sterne")} {__("aus")} {_n("%s Bewertung", "%s Bewertungen", $service->getRating()->count(null, true, false, true), $service->getRating()->count(null, true, false, true))}<\/div>'; 
+        CRITEO_TRACKING_DIVS += '    <div id=\"ctoExtra_stars\">{round($service->getRating()->getAverage(),0)}<\/div>';
+        CRITEO_TRACKING_DIVS += '  <\/div>';
+        CRITEO_TRACKING_DIVS += '<\/div>';
+
+
+        CRITEO_TRACKING_DIVS += '<div id=\"cto_se_7716400_ac\" style=\"display:none\">';
+        CRITEO_TRACKING_DIVS +='<div class=\"ctoWidgetServer\">http:\/\/lieferandode.widget.criteo.com\/pjl\/<\/div>';
+        CRITEO_TRACKING_DIVS +='<div class=\"ctoDataType\">sendEvent<\/div>';
+        CRITEO_TRACKING_DIVS +='<div class=\"ctoParams\">wi=7716400&pt1=2&i={$service->getId()}&vurl=http://www.{$config->domain->base}/{$service->getRestUrl()}<\/div>';
+        CRITEO_TRACKING_DIVS +='<\/div>';
+     
+        $('body').append(CRITEO_TRACKING_DIVS);
+        CRITEO.N();
+    }
+   
+    /* ]]> */
+</script>
+{if $APPLICATION_ENV  == "production" || $HOSTNAME == "staging.lieferando.de"}
+<script type="text/javascript" src="/media/javascript/tracking/criteo/criteo_ld3-min.js"></script>
+{else}
+<script type="text/javascript" src="/media/javascript/tracking/criteo/criteo_ld3.js"></script>
+{/if}
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+ 
+        $(document).ready(function() {
+            track_criteo_in_menu();
+            
+        }); 
+    /* ]]> */
+</script>
+{/if}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <form name="adyenForm" action="{if $APPLICATION_ENV == 'production'}https://live.adyen.com/hpp/pay.shtml{else}https://test.adyen.com/hpp/pay.shtml{/if}" method="post" >
+            <input type="hidden" name="merchantReference" value="{$data.merchantReference}" />
+            <input type="hidden" name="paymentAmount"     value="{$data.paymentAmount}" />
+            <input type="hidden" name="currencyCode"      value="{$data.currencyCode}" />
+            <input type="hidden" name="shipBeforeDate"    value="{$data.shipBeforeDate}" />
+            <input type="hidden" name="skinCode"          value="{$data.skinCode}" />
+            <input type="hidden" name="merchantAccount"   value="{$data.merchantAccount}" />
+            <input type="hidden" name="shopperLocale"     value="{$data.shopperLocale}" />
+            <input type="hidden" name="orderData"         value="{$data.orderData}" />
+            <input type="hidden" name="sessionValidity"   value="{$data.sessionValidity}" />
+            <input type="hidden" name="merchantSig"       value="{$data.merchantSignature}" />
+            <input type="hidden" name="shopperEmail"      value="{$data.shopperEmail}" />
+            <input type="hidden" name="shopperReference"  value="{$data.shopperReference}" />
+            <input type="hidden" name="resURL"            value="{$data.resURL}" />
+            <input type="hidden" name="countryCode"            value="{$data.countryCode}" />
+        </form>
+        <script type="text/javascript">
+            document.adyenForm.submit();
+        </script>
+    </body>
+</html>

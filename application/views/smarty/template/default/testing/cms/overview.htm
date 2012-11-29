@@ -1,0 +1,62 @@
+{include file="testing/cms/_testingCmsHeader.htm"}
+
+<div id="content">
+
+    <div class="yd-box">
+
+        <h2 class="yd-icon-cms1">Overview</h2>
+
+        <strong>Overview for executor:</strong> <a href="/testing_cms/overviewexecutor/id/{$testCase->getId()}">LINK</a>
+
+        <br /><br />
+
+        <strong>Testcase:</strong> {$testCase->getTitle()}
+
+        <br /><br />
+
+        <strong>Author:</strong> {$testCase->getAuthor()}
+
+        <br /><br />
+
+        <strong>Description:</strong> {$testCase->getDescription()}
+
+        <br /><br /><br />
+
+        <a class="button" href="/testing_cms/add/id/{$testCase->getId()}">Add an expectation</a>
+
+        <br /><br /><br />
+
+        {assign var=myCounter value=0}
+        {foreach from=$missions item=mission}
+        {assign var=myCounter value=$myCounter+1}
+
+        <b>{$myCounter}.</b> <a href="/testing_cms/response/id/{$mission->getTestCaseId()}/eid/{$mission->getId()}">{$mission->getMission()} </a>
+
+        <br /><br />
+
+        <a class="button2" href="/testing_cms/deleteexpectation/id/{$mission->getId()}" onclick="javascript:return confirm('Willst Du wirklich löschen?');">Delete</a>
+        <a class="button" href="/testing_cms/editexpectation/id/{$mission->getTestCaseId()}/eid/{$mission->getId()}">Edit</a>
+
+        <br /><br /><br />
+
+        {/foreach}
+        
+        <hr />
+
+        <h4>Total: {$myCounter}</h4>
+
+        <!--
+        this crap doesn't work
+        <h4>Video:</h4>
+        {if not is_null($testCase->getVideoPath())}
+        <embed src="/storage/testing/{$testCase->getVideoPath()}" width="805" height="470"></embed>
+        {else}
+        <h5>Kein Video vorhanden</h5>
+        {/if}
+        -->
+
+    </div>
+
+</div>
+</body>
+</html>

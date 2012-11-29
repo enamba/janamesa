@@ -1,0 +1,56 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Gesetzliche Feiertage')}
+        </div>
+        <div class="item-content" id="yd-holidays-table">
+            {include file='request/administration/getholidays.htm'}
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Neuer Feiertag')}
+        </div>
+        <div class="item-content">
+            <form action="" method="post" id="yd-addholiday-form">
+            <table class="user-tab">
+                <tr>
+                    <td colspan="4" height="60px">
+                        {__b('Datum:')}<br/>
+                        <input type="text" name="day" id="yd-opening-holiday" /><br/><br/>
+                        {__b('Beschreibung:')}<br/>
+                        <input type="text" name="name" id="yd-opening-holiday-name" /><br/>
+                    </td>
+                </tr>
+                <tr>
+                    {$count=1}
+                    {foreach from=$states item=s}
+                    <td width="10%">
+                        <input class="yd-checkbox" type="checkbox" name="yd-state[{$s['stateId']}]" value="1"> {$s['state']}
+                    </td>
+                    {if ($count++)%4 == 0}</tr><tr>{/if}
+                    {/foreach}
+                </tr>
+                <tr>
+                    <td colspan="4" style="font-weight: bold;">
+                        <div id="yd-check-all-link"><input class="yd-check-all-checkboxes" type="checkbox" value="1"/> {__b('Alle')}</div><br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <input value="{__b('Hinzufügen')}" type="button" id="yd-add-holiday" class="button"/>
+                    </td>
+                </tr>
+            </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+{/block}

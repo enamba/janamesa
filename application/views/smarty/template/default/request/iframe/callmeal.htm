@@ -1,0 +1,79 @@
+{if is_object($meal)}
+    {assign var=sizeId value=$meal->getCurrentSize()}
+
+    <td colspan="{($meal->getCategory()->getSizes()|@count)+1}" id="yd-meal-{$meal->getId()}" class="foo">       
+        <form method="post" action="#" onsubmit="return false;">
+            {if $meal->hasExtras()}
+                <span class="yd-frame-format">{__('Extras (optional):')}</span>
+                <div class="yd-current-extras">
+                    <span class="yd-dbh-choise"></span>
+                </div>
+                <ul>
+                    {assign var=extras value=$meal->getExtrasFast($sizeId)}
+                        {foreach item=extraGroups from=$extras}
+                            {foreach item=extra from=$extraGroups.items}
+                            <li>
+                                <input type="hidden" name="extrasId" value="{$extra.id}" class="yd-extra-{$sizeId}" />
+                                <input type="hidden" name="extras_{$extra.id}-{$sizeId}_name" value="{$extra.name|escape}" />
+                                <input type="hidden" name="extras_{$extra.id}-{$sizeId}_cost" value="{$extra.cost}" />
+                                <input type="hidden" name="extras_{$extra.id}-{$sizeId}_count" value="{if $meal->hasCurrentExtraAppend($extra.id)}{$extra.count}{else}0{/if}" />
+                                <button href="#" id="meal-extras-{$extra.id}-{$sizeId}" class="yd-extras">{$extra.name} {if $extra.cost>0}({__('%s&nbsp;€', $extra.cost|inttoprice)}){/if}</button>
+                            </li>
+                            {/foreach}
+                        {/foreach}
+                </ul>
+            {/if}
+
+            {if $meal->hasOptions()}
+                {foreach item=optrow from=$meal->getOptions() name="options"}
+
+                    <!--{$optrow->getDescription()} <br />-->
+                    <span class="yd-frame-format yd-frame-number-{($smarty.foreach.options.index+1)}" id="yd-so-many-choices-{$optrow->getId()}">
+                        {if $optrow->getChoices() > 1}
+                            {__("Wähle Deine %s Optionen aus",$optrow->getChoices())}
+                        {else}
+                           {__("Wähle Deine %s Option aus",$optrow->getChoices())} 
+                        {/if}
+                    </span>
+                    <ul class="optrow" id="choices-{$optrow->getId()}-{$optrow->getChoices()}">
+                        {foreach item=optitem from=$optrow->getOptions() name="optrow"}
+                            <li>
+                                <input type="hidden" name="options_{$optrow->getId()}_{$optitem->getId()}_name" value="{$optitem->getName()}" />
+                                <input type="hidden" name="options_{$optrow->getId()}_{$optitem->getId()}_cost" value="{$optitem->getCost()}" />
+                                <input type="checkbox"
+                                       name="options[]"
+                                       value="{$optitem->getId()}"
+                                       id="row-{$optrow->getid()}-{$optitem->getId()}-{$optrow->getChoices()}-{$meal->getId()}"
+                                       rel="row-{$optrow->getId()}" class="yd-option-row-checkbox yd-check-option yd-option-row-checkbox-{$optrow->getId()}"
+                                       {if $meal->hasCurrentOptionAppend($optitem->getId())}checked{/if}
+                                />
+                                <label for="row-{$optrow->getid()}-{$optitem->getId()}-{$optrow->getChoices()}-{$meal->getId()}">
+                                    {$optitem->getName()}
+                                    {if $optitem->getCost()>0}<span class="price">({__('%s €',$optitem->getCost()|inttoprice)})</span>{/if}
+                                </label>
+                            </li>
+                        {/foreach}
+                    </ul>
+                {/foreach}
+            {/if}
+
+            <div class="yd-frame-format-submit">
+                    <input type="hidden" name="sizeId" value="{$sizeId}" />
+                    <input type="hidden" name="sizeCost" value="{$meal->getCost()}" />
+                    <input type="hidden" name="mealId" value="{$meal->getId()}" />
+                    <input type="hidden" name="mealName" value="{$meal->getName()|truncate:40:'...'}" />
+                    <input type="hidden" name="exMinCost" value="{$meal->getExcludeFromMinCost()}" />
+                    <input type="hidden" name="minCount" value="{$meal->getMinAmount()}" />
+                    <input type="text" value="1" class="yd-frame-meals" name="count" maxlength="3" /> <b>x</b>
+                    <input type="submit" value="{__('In den Einkaufswagen')}" class="yd-add-to-card yd-iframe-add-to-card" />
+                    <a class="show-special" id="show-special-{$meal->getId()}">{__('Sonderwünsche?')}</a>
+                    <textarea class="meal-special yd-clear-on-click" style="display:none;" id="special-{$meal->getId()}" name="special"></textarea>
+            </div>
+
+            <span id="yd-meal-error-{$meal->getId()}"></span>
+        </form>
+    </td>
+    
+{else}
+I am sorry, made a mistake :(
+{/if}

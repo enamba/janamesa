@@ -1,0 +1,58 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{if isset($courier)}
+{include file='administration/courier/editnavigation.htm'}
+
+<form action="/administration_courier/addcost" method="post">
+    <input type="hidden" name="courierId" value="{$courier->getId()}"/>
+     <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Dynamische Kosten')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td>{__b('Basispreis:')}</td>
+                            <td><input type="text" name="startCost" class="rund_set text" value="" /></td>
+                        </tr>
+                            <tr>
+                            <td>{__b('inkl. Kilometer:')}</td>
+                            <td><input type="text" name="kmInclusive" class="rund_set text" value="" /></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Kilometerpreis:')}</td>
+                            <td><input type="text" name="kmCost" class="rund_set text" value="" /></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Mehrwertsteuer:')}</td>
+                            <td><input type="text" name="tax" class="rund_set text" value="" /></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Mehrwertsteuer inklusive:')}</td>
+                            <td><input type="checkbox" name="taxInclusive" value="1" checked="checked"/></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="item-content">
+                <input type="submit" value="{__b('Speichern')}" class="button"/>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Übersicht')}
+        </div>
+        <div class="item-content">
+            {$grid}
+        </div>
+    </div>
+</div>
+
+{/if}
+{/block}    

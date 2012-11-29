@@ -1,0 +1,14 @@
+<html>
+<head>
+<script type="text/javascript">
+var req = new XMLHttpRequest();
+req.open('head', '/', false);
+req.send(null);
+var headers = req.getAllResponseHeaders().toLowerCase();
+alert(headers);
+</script>
+</head>
+<body>
+test
+</body>
+</html>

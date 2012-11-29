@@ -1,0 +1,49 @@
+{if ($lightboxstate == -1)}
+
+    <div style="text-align: center;">
+        <h1>{__b('Fehlerhafte Bestellung wurde angegeben')}</h1>
+    </div>
+
+{else if ($lightboxstate == 0)}
+
+    <h1>{__b('Gutschein Code')} {$code->getCode()} (#{$code->getId()})</h1>
+        <form id="discount">
+            <table class="noborder">
+                {if strlen($code->getTel()) > 0}
+                <tr>
+                    <td width="10%">{__b('Telefon')}</td>
+                    <td width="10%"><input type="text" name="code" value="{$code->getTel()}" id="yd-discountcode-resend-tel-value"/></td>
+                    <td width="10%">
+                        <select id="yd-discountcode-resend-tel-gateway">
+                            <option value="mobilant">{__b('Mobilant')}</option>
+                            <!--<option value="lox24">Lox24</option>-->
+                        </select>
+                    </td>
+                    <td width="60%">{__b('Verschicken und Nummer speichern')}</td>
+                    <td width="10%"><input type="button" class="yd-discountcode-resend" id="yd-discountcode-resend-tel-{$code->getId()}" value="{__b('Verschicken')}" style="width: 150px;"/></td>
+                </tr>
+                {/if}
+                <!--{if strlen($code->getEmail()) > 0}
+                <tr>
+                    <td colspan="5"><br/></td>
+                </tr>
+                <tr>
+                    <td width="10%"><hr/>E-Mail</td>
+                    <td width="20%"><input type="text" name="code" value="{$code->getEmail()}"  id="yd-discountcode-resend-email-value"/></a>
+                    <td width="60%" colspan="2">Verschicken und Email speichern</td>
+                    <td width="10%"><input type="button" class="yd-discountcode-resend" id="yd-discountcode-resend-email-{$code->getId()}" value="Verschicken" style="width: 150px;"/></td>
+                </tr>
+                {/if}-->
+            </table>
+            <br />
+        </form>
+
+{else if ($lightboxstate == 1)}
+    <div style="text-align: center;">
+        <br/><br/><br/><br/>
+        {$message}
+        <br/><br/><br/><br/>
+    </div>
+{else}
+
+{/if}

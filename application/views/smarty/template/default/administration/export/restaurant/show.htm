@@ -1,0 +1,8 @@
+{extends file='administration/base.htm'}
+{block name="content"}
+<h1 align="center">{__b('RESTAURANT LIST FOR GOOGLE EXPORT')}</h1>
+
+<div id="error"></div>
+    <div id="load"><div id="yd-lb-wait"></div></div><input type="button" class="google_export" id="google+all" value="{__b('Download All LBC')}"/><input type="button" class="sem_export" id="google+all" value="{__b('Download All SEM')}"/>
+<div id="restaurant_google_list">{$grid}</div>
+{/block}

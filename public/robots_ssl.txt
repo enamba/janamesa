@@ -1,0 +1,3 @@
+#robots.txt fuer https-Seiten
+User-agent: *
+Disallow: /

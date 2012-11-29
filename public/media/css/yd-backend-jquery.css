@@ -1,0 +1,298 @@
+/*
+ * jQuery UI CSS Framework 1.8.7
+ **********************************************************/
+
+.yd-jquerycss-prison .ui-helper-hidden { display: none; }
+.yd-jquerycss-prison .ui-helper-hidden-accessible { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); }
+.yd-jquerycss-prison .ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+.yd-jquerycss-prison .ui-helper-clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.yd-jquerycss-prison .ui-helper-clearfix { display: inline-block; } * html .yd-jquerycss-prison .ui-helper-clearfix { height:1%; }
+.yd-jquerycss-prison .ui-helper-clearfix { display:block; }
+.yd-jquerycss-prison .ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+.yd-jquerycss-prison .ui-state-disabled { cursor: default !important; }
+.yd-jquerycss-prison .ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+.yd-jquerycss-prison .ui-widget-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.yd-jquerycss-prison .ui-widget { font-family: Verdana,Arial,sans-serif; font-size: 1.1em; }
+.yd-jquerycss-prison .ui-widget .ui-widget { font-size: 1em; }
+.yd-jquerycss-prison .ui-widget input, .yd-jquerycss-prison .ui-widget select, .yd-jquerycss-prison .ui-widget textarea, .yd-jquerycss-prison .ui-widget button { font-family: Verdana,Arial,sans-serif; font-size: 1em; }
+.yd-jquerycss-prison .ui-widget-content { border: 1px solid #aaaaaa; background: #ffffff url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x; color: #222222; }
+.yd-jquerycss-prison .ui-widget-content a { color: #222222; }
+.yd-jquerycss-prison .ui-widget-header { border: 1px solid #aaaaaa; background: #cccccc url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x; color: #222222; font-weight: bold; }
+.yd-jquerycss-prison .ui-widget-header a { color: #222222; }
+.yd-jquerycss-prison .ui-state-default, .yd-jquerycss-prison .ui-widget-content .ui-state-default, .yd-jquerycss-prison .ui-widget-header .ui-state-default { border: 1px solid #d3d3d3; background: #e6e6e6 url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #555555; }
+.yd-jquerycss-prison .ui-state-default a, .yd-jquerycss-prison .ui-state-default a:link, .yd-jquerycss-prison .ui-state-default a:visited { color: #555555; text-decoration: none; }
+.yd-jquerycss-prison .ui-state-hover, .yd-jquerycss-prison .ui-widget-content .ui-state-hover, .yd-jquerycss-prison .ui-widget-header .ui-state-hover, .yd-jquerycss-prison .ui-state-focus, .yd-jquerycss-prison .ui-widget-content .ui-state-focus, .yd-jquerycss-prison .ui-widget-header .ui-state-focus { border: 1px solid #999999; background: #dadada url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #212121; }
+.yd-jquerycss-prison .ui-state-hover a, .yd-jquerycss-prison .ui-state-hover a:hover { color: #212121; text-decoration: none; }
+.yd-jquerycss-prison .ui-state-active, .yd-jquerycss-prison .ui-widget-content .ui-state-active, .yd-jquerycss-prison .ui-widget-header .ui-state-active { border: 1px solid #aaaaaa; background: #ffffff url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #212121; }
+.yd-jquerycss-prison .ui-state-active a, .yd-jquerycss-prison .ui-state-active a:link, .yd-jquerycss-prison .ui-state-active a:visited { color: #212121; text-decoration: none; }
+.yd-jquerycss-prison .ui-widget :active { outline: none; }
+.yd-jquerycss-prison .ui-state-highlight, .yd-jquerycss-prison .ui-widget-content .ui-state-highlight, .yd-jquerycss-prison .ui-widget-header .ui-state-highlight  {border: 1px solid #fcefa1; background: #fbf9ee url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_glass_55_fbf9ee_1x400.png) 50% 50% repeat-x; color: #363636; }
+.yd-jquerycss-prison .ui-state-highlight a, .yd-jquerycss-prison .ui-widget-content .ui-state-highlight a,.yd-jquerycss-prison .ui-widget-header .ui-state-highlight a { color: #363636; }
+.yd-jquerycss-prison .ui-state-error, .yd-jquerycss-prison .ui-widget-content .ui-state-error, .yd-jquerycss-prison .ui-widget-header .ui-state-error {border: 1px solid #cd0a0a; background: #fef1ec url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_glass_95_fef1ec_1x400.png) 50% 50% repeat-x; color: #cd0a0a; }
+.yd-jquerycss-prison .ui-state-error a, .yd-jquerycss-prison .ui-widget-content .ui-state-error a, .yd-jquerycss-prison .ui-widget-header .ui-state-error a { color: #cd0a0a; }
+.yd-jquerycss-prison .ui-state-error-text, .yd-jquerycss-prison .ui-widget-content .ui-state-error-text, .yd-jquerycss-prison .ui-widget-header .ui-state-error-text { color: #cd0a0a; }
+.yd-jquerycss-prison .ui-priority-primary, .yd-jquerycss-prison .ui-widget-content .ui-priority-primary, .yd-jquerycss-prison .ui-widget-header .ui-priority-primary { font-weight: bold; }
+.yd-jquerycss-prison .ui-priority-secondary, .yd-jquerycss-prison .ui-widget-content .ui-priority-secondary,  .yd-jquerycss-prison .ui-widget-header .ui-priority-secondary { opacity: .7; filter:Alpha(Opacity=70); font-weight: normal; }
+.yd-jquerycss-prison .ui-state-disabled, .yd-jquerycss-prison .ui-widget-content .ui-state-disabled, .yd-jquerycss-prison .ui-widget-header .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
+.yd-jquerycss-prison .ui-icon { width: 16px; height: 16px; background-image: url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-icons_222222_256x240.png); }
+.yd-jquerycss-prison .ui-widget-content .ui-icon {background-image: url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-icons_222222_256x240.png); }
+.yd-jquerycss-prison .ui-widget-header .ui-icon {background-image: url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-icons_222222_256x240.png); }
+.yd-jquerycss-prison .ui-state-default .ui-icon { background-image: url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-icons_888888_256x240.png); }
+.yd-jquerycss-prison .ui-state-hover .ui-icon, .yd-jquerycss-prison .ui-state-focus .ui-icon {background-image: url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-icons_454545_256x240.png); }
+.yd-jquerycss-prison .ui-state-active .ui-icon {background-image: url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-icons_454545_256x240.png); }
+.yd-jquerycss-prison .ui-state-highlight .ui-icon {background-image: url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-icons_2e83ff_256x240.png); }
+.yd-jquerycss-prison .ui-state-error .ui-icon, .yd-jquerycss-prison .ui-state-error-text .ui-icon {background-image: url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-icons_cd0a0a_256x240.png); }
+.yd-jquerycss-prison .ui-icon-circle-triangle-e { background-position: -48px -192px; }
+.yd-jquerycss-prison .ui-icon-circle-triangle-w { background-position: -80px -192px; }
+.yd-jquerycss-prison .ui-widget-overlay { background: #aaaaaa url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x; opacity: .30;filter:Alpha(Opacity=30); }
+.yd-jquerycss-prison .ui-widget-shadow { margin: -8px 0 0 -8px; padding: 8px; background: #aaaaaa url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x; opacity: .30;filter:Alpha(Opacity=30); -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; }
+.yd-jquerycss-prison .ui-datepicker { width: 17em; padding: .2em .2em 0; display: none; }
+.yd-jquerycss-prison .ui-datepicker .ui-datepicker-header { position:relative; padding:.2em 0; }
+.yd-jquerycss-prison .ui-datepicker .ui-datepicker-prev, .yd-jquerycss-prison .ui-datepicker .ui-datepicker-next { position:absolute; top: 2px; width: 1.8em; height: 1.8em; }
+.yd-jquerycss-prison .ui-datepicker .ui-datepicker-prev-hover, .yd-jquerycss-prison .ui-datepicker .ui-datepicker-next-hover { top: 1px; }
+.yd-jquerycss-prison .ui-datepicker .ui-datepicker-prev { left:2px; }
+.yd-jquerycss-prison .ui-datepicker .ui-datepicker-next { right:2px; }
+.yd-jquerycss-prison .ui-datepicker .ui-datepicker-prev-hover { left:1px; }
+.yd-jquerycss-prison .ui-datepicker .ui-datepicker-next-hover { right:1px; }
+.yd-jquerycss-prison .ui-datepicker .ui-datepicker-prev span, .yd-jquerycss-prison .ui-datepicker .ui-datepicker-next span { display: block; position: absolute; left: 50%; margin-left: -8px; top: 50%; margin-top: -8px;  }
+.yd-jquerycss-prison .ui-datepicker .ui-datepicker-title { margin: 0 2.3em; line-height: 1.8em; text-align: center; }
+.yd-jquerycss-prison .ui-datepicker .ui-datepicker-title select { font-size:1em; margin:1px 0; }
+.yd-jquerycss-prison .ui-datepicker select.ui-datepicker-month-year {width: 100%;}
+.yd-jquerycss-prison .ui-datepicker select.ui-datepicker-month, 
+.yd-jquerycss-prison .ui-datepicker select.ui-datepicker-year { width: 49%;}
+.yd-jquerycss-prison .ui-datepicker table {width: 100%; font-size: .9em; border-collapse: collapse; margin:0 0 .4em; }
+.yd-jquerycss-prison .ui-datepicker th { padding: .7em .3em; text-align: center; font-weight: bold; border: 0;  }
+.yd-jquerycss-prison .ui-datepicker td { border: 0; padding: 1px; }
+.yd-jquerycss-prison .ui-datepicker td span, .yd-jquerycss-prison .ui-datepicker td a { display: block; padding: .2em; text-align: right; text-decoration: none; }
+.yd-jquerycss-prison .ui-datepicker .ui-datepicker-buttonpane { background-image: none; margin: .7em 0 0 0; padding:0 .2em; border-left: 0; border-right: 0; border-bottom: 0; }
+.yd-jquerycss-prison .ui-datepicker .ui-datepicker-buttonpane button { float: right; margin: .5em .2em .4em; cursor: pointer; padding: .2em .6em .3em .6em; width:auto; overflow:visible; }
+.yd-jquerycss-prison .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current { float:left; }
+.yd-jquerycss-prison .ui-datepicker.ui-datepicker-multi { width:auto; }
+.yd-jquerycss-prison .ui-datepicker-multi .ui-datepicker-group { float:left; }
+.yd-jquerycss-prison .ui-datepicker-multi .ui-datepicker-group table { width:95%; margin:0 auto .4em; }
+.yd-jquerycss-prison .ui-datepicker-multi-2 .ui-datepicker-group { width:50%; }
+.yd-jquerycss-prison .ui-datepicker-multi-3 .ui-datepicker-group { width:33.3%; }
+.yd-jquerycss-prison .ui-datepicker-multi-4 .ui-datepicker-group { width:25%; }
+.yd-jquerycss-prison .ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header { border-left-width:0; }
+.yd-jquerycss-prison .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header { border-left-width:0; }
+.yd-jquerycss-prison .ui-datepicker-multi .ui-datepicker-buttonpane { clear:left; }
+.yd-jquerycss-prison .ui-datepicker-row-break { clear:both; width:100%; }
+.yd-jquerycss-prison .ui-datepicker-rtl { direction: rtl; }
+.yd-jquerycss-prison .ui-datepicker-rtl .ui-datepicker-prev { right: 2px; left: auto; }
+.yd-jquerycss-prison .ui-datepicker-rtl .ui-datepicker-next { left: 2px; right: auto; }
+.yd-jquerycss-prison .ui-datepicker-rtl .ui-datepicker-prev:hover { right: 1px; left: auto; }
+.yd-jquerycss-prison .ui-datepicker-rtl .ui-datepicker-next:hover { left: 1px; right: auto; }
+.yd-jquerycss-prison .ui-datepicker-rtl .ui-datepicker-buttonpane { clear:right; }
+.yd-jquerycss-prison .ui-datepicker-rtl .ui-datepicker-buttonpane button { float: left; }
+.yd-jquerycss-prison .ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current { float:right; }
+.yd-jquerycss-prison .ui-datepicker-rtl .ui-datepicker-group { float:right; }
+.yd-jquerycss-prison .ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+.yd-jquerycss-prison .ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+.yd-jquerycss-prison .ui-datepicker-cover {
+    display: none; /*sorry for IE5*/
+    display/**/: block; /*sorry for IE5*/
+    position: absolute; /*must have*/
+    z-index: -1; /*must have*/
+    filter: mask(); /*must have*/
+    top: -4px; /*must have*/
+    left: -4px; /*must have*/
+    width: 200px; /*must have*/
+    height: 200px; /*must have*/
+}
+.ticket .ui-helper-hidden { display: none; }
+.ticket .ui-helper-hidden-accessible { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); }
+.ticket .ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+.ticket .ui-helper-clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.ticket .ui-helper-clearfix { display: inline-block; }
+.ticket .ui-helper-clearfix { display:block; }
+.ticket .ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+.ticket .ui-state-disabled { cursor: default !important; }
+.ticket .ui-widget { font-family: Verdana,Arial,sans-serif; font-size: 1.1em; }
+.ticket .ui-widget .ui-widget { font-size: 1em; }
+.ticket .ui-widget input, .ticket .ui-widget select, .ticket .ui-widget textarea, .ticket .ui-widget button { font-family: Verdana,Arial,sans-serif; font-size: 1em; }
+.ticket .ui-widget-content { border: 1px solid #aaaaaa; background: #ffffff url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x; color: #222222; }
+.ticket .ui-widget-content a { color: #222222; }
+.ticket .ui-widget-header { border: 1px solid #aaaaaa; background: #cccccc url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x; color: #222222; font-weight: bold; }
+.ticket .ui-widget-header a { color: #222222; }
+.ticket .ui-state-default, .ticket .ui-widget-content .ui-state-default, .ticket .ui-widget-header .ui-state-default { border: 1px solid #d3d3d3; background: #e6e6e6 url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #555555; }
+.ticket .ui-state-default a, .ticket .ui-state-default a:link, .ticket .ui-state-default a:visited { color: #555555; text-decoration: none; }
+.ticket .ui-state-hover, .ticket .ui-widget-content .ui-state-hover, .ticket .ui-widget-header .ui-state-hover, .ticket .ui-state-focus, .ticket .ui-widget-content .ui-state-focus, .ticket .ui-widget-header .ui-state-focus { border: 1px solid #999999; background: #dadada url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #212121; }
+.ticket .ui-state-hover a, .ticket .ui-state-hover a:hover { color: #212121; text-decoration: none; }
+.ticket .ui-state-active, .ticket .ui-widget-content .ui-state-active, .ticket .ui-widget-header .ui-state-active { border: 1px solid #aaaaaa; background: #ffffff url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #212121; }
+.ticket .ui-state-active a, .ticket .ui-state-active a:link, .ticket .ui-state-active a:visited { color: #212121; text-decoration: none; }
+.ticket .ui-widget :active { outline: none; }
+.ticket .ui-state-highlight, .ticket .ui-widget-content .ui-state-highlight, .ticket .ui-widget-header .ui-state-highlight  {border: 1px solid #fcefa1; background: #fbf9ee url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_glass_55_fbf9ee_1x400.png) 50% 50% repeat-x; color: #363636; }
+.ticket .ui-state-highlight a, .ticket .ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a { color: #363636; }
+.ticket .ui-state-error, .ticket .ui-widget-content .ui-state-error, .ticket .ui-widget-header .ui-state-error {border: 1px solid #cd0a0a; background: #fef1ec url(http://cdn.yourdelivery.de/javascript/library/jquery/ui/1.8.7/themes/images/ui-bg_glass_95_fef1ec_1x400.png) 50% 50% repeat-x; color: #cd0a0a; }
+.ticket .ui-state-error a, .ticket .ui-widget-content .ui-state-error a, .ticket .ui-widget-header .ui-state-error a { color: #cd0a0a; }
+.ticket .ui-state-error-text, .ticket .ui-widget-content .ui-state-error-text, .ticket .ui-widget-header .ui-state-error-text { color: #cd0a0a; }
+.ticket .ui-priority-primary, .ticket .ui-widget-content .ui-priority-primary, .ticket .ui-widget-header .ui-priority-primary { font-weight: bold; }
+.ticket .ui-priority-secondary, .ticket .ui-widget-content .ui-priority-secondary,  .ui-widget-header .ui-priority-secondary { opacity: .7; filter:Alpha(Opacity=70); font-weight: normal; }
+.ticket .ui-state-disabled, .ticket .ui-widget-content .ui-state-disabled, .ticket .ui-widget-header .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
+.ticket .ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0; }
+.ticket .ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; }
+.ticket .ui-tabs .ui-tabs-nav li a { float: left; padding: .5em 1em; text-decoration: none; }
+.ticket .ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }
+.ticket .ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ticket .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ticket .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
+.ticket .ui-tabs .ui-tabs-nav li a, .ticket .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ticket .ui-tabs .ui-tabs-panel { display: block; border-width: 0; padding: 1em 1.4em; background: none; }
+.ticket .ui-tabs .ui-tabs-hide { display: none !important; }
+
+.ui-multiselect {margin:0}
+.ui-multiselect span.ui-icon { float:right }
+.ui-multiselect-single .ui-multiselect-checkboxes input { position:absolute !important; top: auto !important; left:-9999px; }
+.ui-multiselect-single .ui-multiselect-checkboxes label { padding:5px !important; }
+.ui-multiselect-header { margin-bottom:3px; padding:3px 0 3px 4px}
+.ui-multiselect-header ul { font-size:0.9em }
+.ui-multiselect-header ul li { float:left; padding:0 10px 0 0 }
+.ui-multiselect-header a { text-decoration:none }
+.ui-multiselect-header a:hover { text-decoration:underline }
+.ui-multiselect-header span.ui-icon { float:left }
+.ui-multiselect-header li.ui-multiselect-close { float:right; text-align:right; padding-right:0 }
+.ui-multiselect-menu { display:none; padding:3px; position:absolute; z-index:10000; background: #fff; border: 1px solid #000; }
+.ui-multiselect-checkboxes { position:relative /* fixes bug in IE6/7 */; overflow-y:scroll }
+.ui-multiselect-checkboxes label { cursor:default; display:block; border:1px solid transparent; padding:3px 1px }
+.ui-multiselect-checkboxes label input { position:relative; top:1px }
+.ui-multiselect-checkboxes li { clear:both; font-size:0.9em; padding-right:3px }
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-label { text-align:center; font-weight:bold; border-bottom:1px solid }
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-label a { display:block; padding:3px; margin:1px 0; text-decoration:none }
+
+/*
+ * Lightbox Reset
+ **********************************************************/
+
+.ui-dialog {
+    position: absolute;
+}
+
+.ui-dialog-titlebar {
+    display: none;
+}
+
+.ui-dialog-content {
+    height: auto !important;
+}
+
+.be-dialogs-close {
+    position: absolute;
+    top: -22px;
+    right: -22px;
+    z-index: 99;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(/media/images/yd-frontend-core/yd-sprite-core.png) 0 -520px;
+}
+
+.be-dialogs-close:hover {
+    background-position: -40px -520px;
+}
+
+.be-dialogs-close:focus,
+.be-dialogs-close:active {
+    background-position: -80px -520px;
+}
+
+.ui-dialog-buttonpane {
+    padding: 15px 0 !important;
+    text-align: center !important;
+    border: 0;
+    border-top: 1px solid #ccc !important;
+    background: #eee;
+}
+
+.ui-dialog-buttonset {
+    float: none !important;
+}
+
+.ui-dialog-buttonpane button, .ui-dialog-buttonpane .button {
+    margin: 0 10px;
+}
+
+/*
+ * Lightbox Overlay
+ **********************************************************/
+
+.ui-widget-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: .5;
+    filter:Alpha(Opacity=50);
+}
+
+* html .ui-widget-overlay {
+    display: none !important;
+}
+
+/*
+ * Lightbox Loading
+ **********************************************************/
+
+.yd-lightbox-loading {
+    height: 400px;
+    background: url(/media/images/ajax-loader-16-white.gif) 50% 50% no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Lightbox Style
+ **********************************************************/
+
+.be-dialogs {
+    position: relative;
+    background: #fff;
+    box-shadow: 0 0 0 20px rgba(0,0,0,0.5);
+    border-radius: 2px;
+}
+
+.be-dialogs-head {
+    padding: 15px 20px;
+    border-bottom: 1px solid #fff;
+    text-shadow: 0 1px 0 #fff;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* IE10+ */
+    background: linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* W3C */
+    box-shadow: 0 2px 2px #ccc;
+    border-radius: 2px 2px 0 0;
+}
+
+.be-dialogs-head h2 {
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 24px;
+    margin: 0;
+}
+
+.be-dialogs-body {
+    padding: 20px;
+}
+
+.be-dialogs-body form .paper {
+    padding: 20px;
+    box-shadow: 0 0 5px #555;
+    border-radius: 4px;
+    background: url(/media/images/yd-infocenter/faq-mail.png) no-repeat 300px 20px;
+}
+
+.be-dialogs-body form .yd-rating-sorry-select-call {
+    font-size: 12px;
+    margin: 5px;
+}

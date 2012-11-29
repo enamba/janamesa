@@ -1,0 +1,27 @@
+<ul class="yd-sidebar-list"> 
+    <li class="codes valid-user-discount" id="valid-discount" > 
+        <strong class="yd-valid-discount-code"> {$discount->getCode()} <br />            
+        </strong>        
+        {if $discount->getKind() == 0}
+        <span class="yd-valid-discount-kind">{__('%s &#37; - Gutschein',$discount->getParent()->getRabatt())}</span> 
+        {else}
+        <span class="yd-valid-discount-kind">{__('%s € - Gutschein',$discount->getParent()->getRabatt()|inttoprice )}</span> 
+        {/if}
+        <br /> 
+        <span class="yd-valid-discount-minamount">{__('Mindestbestellwert: %s €', $discount->getParent()->getMinAmount()|inttoprice)}</span><br /> 
+        <span class="yd-valid-discount-info"></span><br /> 
+        <input type="hidden" name="discount" value="{$discount->getCode()}" /> 
+        <input type="hidden" name="fidelity" value="0" /> 
+        <p>{__('Achtung: Neukunden Gutschein Ist nur gültig mit Paypal als Zahlungsmittel.')}</p> 
+        <p>{__('Jedes Paypal Konto wird von uns einzelner Kunde betrachet. d.h. du kannst nicht mit einem Paypal Konto zwei Gutscheine nutzen')}</p>     
+        <a href="#" class="yd-link-rabatt-delete">{__('Gutschein entfernen')}</a>
+    </li> 
+    <li class="valid-discount ">
+        <em>{__('Offener Betrag:')}</em>          
+          <strong class="yd-open-amount">{__('%s €',$order->getAbsTotal(false,true,true,false,false,false)|inttoprice )}</strong>         
+    </li>     
+    <li class="codes hidden invalid-discount" id="invalid-discount">
+            <span class="yd-discount-msg"></span>
+            <a id="code-0" class="yd-link-rabatt-delete tooltip" title="Entfernen" href="#">{__('Erneut eingeben')}</a>
+   </li> 
+</ul>

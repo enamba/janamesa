@@ -1,0 +1,108 @@
+{extends file="base.htm"}
+{block name="content"}
+
+<div id="yd-discount-evaluation-wait" style="display:none;"><img src="{$domain_static}/images/yd-backend/yd-back-load.gif" /></div>
+
+<div class="yd-discount {$referer}" style="background: url({$discount->getImg()}) repeat scroll 0 0 transparent;">
+
+    {include file='discount/_standard_text.htm'}
+    <div class="yd-discount-2012 yd-discount-progress-{$step}" id="step-{$step}-{$referer}">
+
+        {if $discountType != 1}
+        <div class="yd-step1">
+            <h2>{__('1. Gutscheincode eingeben')}</h2>
+
+            <div class="yd-step-inner">
+                <form action="/request_discount/code" method="post">
+                    <input name="code" class="yd-discount-input" type="text" value="{if $discountCode}{$discountCode}{/if}" />
+                    <div class="formError nameformError" style="display:none; top: 5px; left: 140px"></div>                   
+                    <a class="yd-discount-button yd-discount-submit">{__('Code senden')}</a>                  
+                    <span class="okay">
+                        {__('Gutscheincode ist verifiziert')}
+                    </span>
+                </form>
+            </div>
+
+            <p>
+                {__('Damit wir Dir Deinen Gutschein freischalten können, müssen wir Dich kurz als
+                Neukunde verifizieren. Dies ist leider wegen Missbrauch nötig und geht wirklich
+                ganz schnell.')}
+            </p>
+        </div>
+        {/if}
+        <div class="yd-step2">
+            <h2>{if $discountType != 1}{__('2. Name und E-Mail-Adresse verifizieren')}{else}{__('1. Name und E-Mail-Adresse verifizieren')}{/if}</h2>
+
+            <div class="yd-step-inner">
+                <form action="/request_discount/email" method="post">                   
+                    <input name="prename" class="yd-empty-text yd-discount-input" type="text" value="{if $prename}{$prename}{else}{__('Vorname')}{/if}" title="{if $prename}{$prename}{else}{__('Vorname')}{/if}" />
+                    <div class="formError nameformError" style="display:none; top: -5px; left: 140px"></div>
+                    <input name="name" class="yd-empty-text  yd-discount-input" type="text" value="{if $name}{$name}{else}{__('Nachname')}{/if}" title="{if $name}{$name}{else}{__('Nachname')}{/if}" />
+                    <div class="formError nameformError" style="display:none; top: -5px; left: 340px"></div>
+                    <div style="height:5px"></div>
+                    <input name="email" class="yd-empty-text  yd-discount-input" type="text" value="{if $email}{$email}{else}{__('E-Mail-Adresse')}{/if}" title="{if $email}{$email}{else}{__('E-Mail-Adresse')}{/if}" />
+                    <div class="formError nameformError" style="display:none; top: 45px; left: 140px"></div>
+                    <a class="yd-discount-button yd-discount-submit">{__('Abschicken')}</a>
+                    <span class="question" id="yd-discount-email-verification-data">
+                        <a class="yd-discount-reset" id="send-mail">{__('E-Mail erneut schicken')}</a>
+                    </span>
+                    <span class="okay">
+                        {__('Daten sind verifiziert')}
+                    </span>
+                </form>
+            </div>
+
+            <p>
+                {__('Du erhältst jetzt eine E-Mail mit einem Link, den Du bestätigen musst. Falls Du keine E-Mail erhältst, 
+                     bitte mal im Spam-Ordner nachsehen oder E-Mail neu zusenden lassen.')}
+            </p>
+        </div>
+
+        <div class="yd-step3">
+            <h2>{if $discountType != 1}{__('3. Handynummer verifizieren')}{else}{__('2. Handynummer verifizieren')}{/if}</h2>
+
+            <div class="yd-step-inner">
+                <form action="/request_discount/tel" method="post">                  
+                    {$config->locale->telcode}&nbsp;<input style="width:150px" name="tel" class="yd-empty-text yd-discount-input send-sms" type="text" value="{if $tel}{$tel}{else}{__('Telefonnummer')}{/if}" title="{__('Telefonnummer')}" />
+                    <div class="formError nameformError" style="display:none; top: 5px; left: 140px"></div>
+                    <a class="yd-discount-button send-sms yd-discount-submit">{__('SMS schicken')}</a>
+                    <span class="send-new-sms" id="yd-discount-tel-verification-data">
+                        <a class="yd-discount-reset" id="send-sms">{__('SMS erneut verschicken')}</a>
+                        <small><span id="timeout-sms">120</span> {__('Sekunden Wartezeit')}</small>
+                    </span>
+                </form>
+                <form action="/request_discount/telcode" method="post">
+                    <span class="sms">
+                        <br />
+                        <input name="referer" value="{$referer}" type="hidden" />
+                        <input name="codetel" class="yd-empty-text  yd-discount-input" type="text" value="{__('Bestätigungscode')}" title="{__('Bestätigungscode')}" />
+                        <div class="formError nameformError" style="display:none; top: 55px; left: 140px"></div>
+                        <a class="yd-discount-button yd-discount-submit">{__('Code eingeben')}</a>
+                    </span>
+                </form>
+            </div>
+
+            <p>
+                {__('Wir schicken Dir eine SMS mit einem sechsstelligen Code. Wenn du keine SMS bekommst,
+                warte bitte 2 Minuten, überprüfe Deine Nummer und lass Dir die SMS erneut schicken.')}
+            </p>
+            
+            <div id="yd-lang-telephone-not-valid" class="hidden">{__('Gib deine Telefonnummer bitte ohne führende 0 an')}</div>
+        </div>
+
+    </div>
+    
+    <div id="yd-discount-success">
+        
+    </div>
+    
+    
+</div>
+
+{include file='discount/_standard_rules.htm'}
+
+{if $referer == 'pizza'}
+{include file='discount/_pizza.htm'}
+{/if}
+
+{/block}

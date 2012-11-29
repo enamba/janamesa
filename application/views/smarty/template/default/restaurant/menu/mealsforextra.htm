@@ -1,0 +1,49 @@
+{extends file="restaurant/popupbase.htm"}
+{block name="content"}
+
+<div style="font-size: 16px; font-weight: bold;">Zuordnugnen für die Extra "{$extra->getName()}" (#{$extra->getId()})</div>
+<br/>
+
+{foreach from=$restaurant->getMealCategoriesSorted() item=category}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+            {$sizes=$category->getSizesByRank()}
+            <table width="100%" class="user-tab">
+                <tr>
+                    <th width="20%">{$category->getName()} <div style="font-size: 9px; color: #999;">(#{$category->getId()})</div></th>
+                    {foreach from=$sizes item=size}
+                    <th width="{80/count($sizes)}%">
+                        {$size['name']}<div style="font-size: 9px; color: #999;">(#{$size['id']})</div>
+                        {if ($category->getExtraCost($extra->getId(), $size['id'])==0)}
+                            <div style="color: #999;">{intToPrice($category->getExtraCost($extra->getId(), $size['id']))} <small>€</small>d</div>
+                        {else}
+                            {intToPrice($category->getExtraCost($extra->getId(), $size['id']))} <small>€</small>
+                        {/if}
+                    </th>
+                    {/foreach}                    
+                </tr>
+                {foreach from=$category->getMealsSorted() item=meal}
+                <tr>
+                    <td>
+                        {$meal->getName()} <div style="font-size: 9px; color: #999;">(#{$meal->getId()})</div>                        
+                    </td>
+                    {foreach from=$sizes item=size}
+                    <td>
+                        {if ($meal->getExtraCost($extra->getId(), $size['id'])==0)}
+                            <div style="color: #999;">{intToPrice($meal->getExtraCost($extra->getId(), $size['id']))}</div>
+                        {else}
+                            {intToPrice($meal->getExtraCost($extra->getId(), $size['id']))}
+                        {/if}
+                    </td>
+                    {/foreach}
+                </tr>
+                {/foreach}
+            </table>
+        </div>
+    </div>
+</div>
+<br/>
+{/foreach}
+
+{/block}

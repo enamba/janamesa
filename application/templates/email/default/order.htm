@@ -1,0 +1,121 @@
+<html lang="en">
+    <head>
+
+        <title>{__("Neue Bestellung")}</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="yourdelivery GmbH" />
+        <meta name="publisher" content="yourdelivery GmbH" />
+
+    </head>
+    <body marginheight="0" topmargin="0" marginwidth="0" bgcolor="#F0F0F0" offset="0" leftmargin="0">
+
+        <table cellspacing="0" style="margin-top: 20px; font-size: 13px; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444;" bgcolor="#F0F0F0" cellpadding="0" width="98%">
+            <tr>
+                <td>
+
+                    <table rules="none" cellspacing="0" bordercolor="#c2c2c2" border="1" frame="border" align="center" style="border-color: #c2c2c2 #c2c2c2 #c2c2c2 #c2c2c2; font-size: 13px; background: #ffffff; border-collapse: collapse; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444; border-spacing: 0px; border-style: solid solid solid solid; border-width: 1px 1px 1px 1px;" cellpadding="0" bgcolor="#FFFFFF" width="600">
+                        <tr>
+                            <td>
+                                <table cellspacing="0" align="center" width="600" cellpadding="0">
+                                    <tr>
+                                        <td>
+
+                                            <table cellspacing="0" align="center" width="600" cellpadding="0">
+                                                <tr>
+                                                    <td>
+                                                        <img src="http://www.{$config->domain->base}/media/images/yd-mail/{if $order->getDomain() == 'www.eat-star.de'}eat-star.de{else}{$config->domain->base}{/if}/yd-mail-logoheader.jpg" alt="" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" style="padding: 15px 0;">
+                                                        <img style="vertical-align:middle;" src="http://www.{$config->domain->base}/media/images/yd-icons/yd-check.png" alt="" /> <span style="vertical-align:middle;font-size: 20px;">{__("Deine Bestellung bei")} <span style="color: red;">{$order->getService()->getName()}:</span></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table cellspacing="0" align="center" width="600" cellpadding="0">
+                                                            <tr>
+                                                                <td>
+                                                                    <img src="http://www.{$config->domain->base}/media/images/yd-mail/{$config->domain->base}/yd-mail-neworder-chef.jpg" alt="" />
+                                                                </td>
+                                                                <td>
+                                                                    <img src="http://{$config->domain->timthumb}/{$config->domain->base}/service/{$order->getService()->getId()}/{$order->getService()->getName()|urlencode}-265-173.jpg" alt="" />
+                                                                    {if $order->getService()->isBloomsburys()}<br/><img src="http://www.lieferando.de/media/images/yd-mail/lieferando.de/yd-mail-bloomsburys-logo.jpg" alt="">{/if}
+                                                                    <div>
+                                                                        <br /><br />
+                                                                        {if $order->getService()->isBloomsburys()}
+                                                                        Bei Fragen zu Deiner Bestellung kannst Du bloomsburys direkt anrufen unter:
+                                                                        {else}
+                                                                        {__("Bei Fragen zur Bestellung wähle bitte folgende Telefonnummer:")}
+                                                                        {/if}
+                                                                        <br /><br />
+                                                                        {if $config->domain->base == 'janamesa.com.br'}
+                                                                            <div style="text-align: center; font-size:26px; color: blue;">{$config->locale->tel->support}</div>
+                                                                        {else}
+                                                                            <div style="text-align: center; font-size:26px; color: blue;">{if strlen($order->getService()->getTel())>5}{$order->getService()->getTel()}{else}{$config->locale->email->support}{/if}</div>
+                                                                        {/if}
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            {if $order->getService()->isBloomsburys()}
+                                            <table width="560" cellspacing="0" cellpadding="0" align="center" style="font-size: 13px; line-height: 21px; font-family: Helvetica, Arial, sans-serif; color: #555555;">
+                                                <tr>
+                                                    <td>
+                                                        Deine Bestellung wurde erfolgreich an bloomsburys weitergeleitet. bloomsburys kümmert sich ab jetzt um die Zustellung Deiner Bestellung:
+                                                        Regulär wird die Bestellung innerhalb von 60 Minuten bzw. zu dem von Dir gewählten Zeitpunkt ausgeliefert. 
+                                                        In Ausnahmefällen einer verlängerten Lieferzeit informiert Dich das bloomsburys Callcenter persönlich. 
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            {/if}
+                                            <br /><br />
+
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table cellspacing="0" align="center" style="font-size: 13px; line-height: 21px; font-family: Helvetica, Arial, sans-serif; color: #555555;" width="560" cellpadding="0">
+                                    <tr>
+                                        <td>
+
+                                            {include file="_email_order_base.htm"}
+
+                                            <!--
+                                            {if $config->domain->base=="lieferando.de"}
+                                                <div style="margin: 10px 0; padding: 10px 0; border-top: 1px dotted #ccc; border-bottom: 1px dotted #ccc;">
+
+                                                    <a href="#"><img src="http://www.lieferando.de/media/images/yd-mail/lieferando.de/yd-mail-newsletter-button.jpg" /></a>
+
+                                                    <p style="font-size: 10px; color: #aaa; text-align: center;">
+                                                        Sie müssen Ihre E-Mail-Adresse bestätigen um in den Newsletter-Verteiler aufgenommen zu werden.
+                                                    </p>
+
+                                                </div>
+                                            {/if}
+                                            -->                                         
+
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                {if $config->domain->base != 'janamesa.com.br'}
+                                    <br />
+                                    <div align="center">
+                                        <a href="http://www.{$config->domain->base}/user/billrequest/hash/{$order->getHashtag()}">{__('Jetzt signierte Rechnung anfordern!')}</a>
+                                    </div>
+                                    <br />
+                                {/if}
+                                
+                                {include file="_email_footer.htm"}
+                                {include file="_tracking.htm"}
+
+                            </td>
+                        </tr>
+                    </table>
+
+                    </body>
+                    </html>

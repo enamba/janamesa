@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="de" xml:lang="de" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="de" xml:lang="de" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="de" xml:lang="de" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="de" xml:lang="de" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="de" xml:lang="de">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="viewport" content="width=1100">
+
+        <title>Lieferando.de – Lieferservice, Pizzaservice, Sushi, Burger & mehr!</title>
+
+        <link rel="stylesheet" type="text/css" href="/media/css/www.lieferando.de/yd-frontend-core.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/www.lieferando.de/yd-frontend-infocenter.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/www.lieferando.de/yd-frontend-hidden.css" />
+
+        <script type="text/javascript" src="/media/javascript/compiled/frontend-infocenter.js"></script>
+
+        <!--#include virtual="_google_plus.html" -->
+
+        <!--#include virtual="_visual_website_optimizer.html" -->
+
+        <!--#include virtual="_google_analytics.html" -->
+
+    </head>
+    <body class="de">
+        <div id="yd-nonfooter">
+
+            <!--#include virtual="_de_header_only.html" -->
+
+            <div id="yd-content" class="yd-clearfix">
+
+                <ul class="yd-agbs-nav yd-clearfix">
+                    <li>
+                        <a href="/customer-terms"><span>AGB für Kunden</span> <small>(gültig ab 16.12.2011)</small></a>
+                    </li>
+                    <li class="active">
+                        <a href="/service-terms"><span>AGB für Dienstleister</span> <small>(gültig ab 16.12.2011)</small></a>
+                    </li>
+                </ul>
+
+                <div id="yd-sidebar">
+
+                    <div class="yd-infocenter-box">
+
+                        <h1>Navigation</h1>
+
+                        <ul>
+                            <li><a href="/ueber-uns">Über lieferando</a></li>
+                            <li><a href="/privatkunden">Privatkunden</a></li>
+                            <li><a href="/firmenloesungen.shtml">Firmenlösung</a></li>
+                            <li><a href="/lieferdienst-vorschlagen">Lieferdienst vorschlagen</a></li>
+                            <li><a href="/lieferdienst-anmelden">Lieferdienst anmelden</a></li>
+                            <li><a href="/partnerprogramm">Partnerprogramm</a></li>
+                            <li><a href="/jobs">Jobs</a></li>
+                            <li><a href="/presse">Presse</a></li>
+                            <li><a href="/kontakt">Kontakt</a></li>
+                            <li><a href="/about">Impressum</a></li>
+                            <li><a href="/customer-terms" class="active">AGB</a></li>
+                            <li><a href="/privacy">Datenschutz</a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div id="yd-ordering">
+
+                    <div class="yd-infocenter-box yd-agbs">
+
+                        <h1>
+                            Allgemeine Geschäftsbedingungen der yd. yourdelivery GmbH für die
+                            Online-Plattform www.lieferando.de für Dienstleister
+                        </h1>
+
+                        <p>
+                            Die nachfolgenden Allgemeinen Geschäftsbedingungen gelten für die Teilnahme von gewerblichen Dienstleistern an der von der yd. yourdelivery GmbH, Chausseestraße 86, 10115 Berlin (im Folgenden "Anbieter" genannt) bereitgestellten Online-Plattform auf der Website www.lieferando.de (im Folgenden "Lieferando" genannt) sowie für die für den Dienstleister durch den Anbieter betriebene eigene Online-Plattform.
+                        </p>
+
+                        <ol>
+                            <li>
+                                Vertragsgegenstand; Parteien
+                                <ol>
+                                    <li>
+                                        <p>
+                                            Lieferando ist ein vom Anbieter selbständig und unabhängig betriebener Online-Marktplatz für die von Unternehmen aus den Bereichen Lieferservices, Catering und Supermärkte angebotenen Produkte und Dienstleistungen (Speisen, Getränke, Lebensmittel und Mitarbeiterverpflegung), auf dem die registrierten gewerblichen Händler und Dienstleister (im Folgenden „Dienstleister“ genannt) die betreffenden Produkte und Dienstleistungen anbieten und an Verbraucher wie Unternehmer (im Folgenden „Abnehmer“ genannt) verkaufen können. Der Marktplatz dient dabei der Akquise einer Vielzahl neuer Kunden für die Dienstleister, der Vermittlung des Vertragsschlusses zwischen den Abnehmern und den Dienstleistern sowie der Abwicklung dieser Verkäufe.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Zudem errichtet und betreibt der Anbieter für den Dienstleister unter einer vom Anbieter nach Zweckmäßigkeitsgesichtspunkten und unter angemessener Berücksichtigung der Interessen des Dienstleisters festgelegten Domain eine Website, über die die Produkte und Dienstleistungen des Dienstleisters ohne Einbindung in Lieferando an die Endkunden vertrieben werden. Die Regelungen dieser AGB gelten für Lieferando sowie die für den Dienstleister gesondert betriebene Website und den Betrieb durch den Anbieter gleichermaßen. Lieferando und die für den Dienstleister gesondert betriebene Website werden nachfolgend die „Plattform“ genannt.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Anbieter ist nicht Vertragspartner bzgl. der auf der Plattform angebotenen Artikel und Dienstleistungen, sondern handelt lediglich im Namen und für Rechnung des Dienstleisters als Vermittler des zwischen Dienstleister und Abnehmer geschlossenen Vertrages. Verträge, die auf der Plattform geschlossen werden, berechtigen und verpflichten ausschließlich die beteiligten Abnehmer und Dienstleister. Hierbei übernimmt der Anbieter nur die Vermittlung des Vertragsschlusses durch Bereitstellung der Plattform, Präsentation und Bewerbung der Angebote der Dienstleister sowie Entgegennahme und Abgabe der für den Vertragsschluss maßgeblichen Erklärungen, ohne selbst eine eigene Erklärung abzugeben.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Anbieter nimmt an den vom Dienstleister gelieferten Inhalten ggf. Anpassungen an das Lieferando-Design und Formatierungen vor, prüft aber grundsätzlich nicht, ob die von den Dienstleistern auf der Plattform eingestellten Angebote und sonstigen Inhalte sowie von Abnehmern gemachte Angaben rechtmäßig, wahrheitsgemäß und vollständig sind. Die von den Dienstleistern und Abnehmern eingestellten Inhalte geben nicht die Meinung des Anbieters wieder.
+                                        </p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                Betrieb der Plattform durch den Anbieter
+                                <ol>
+                                    <li>
+                                        <p>
+                                            Der Anbieter wird sich bemühen, die Plattform mit einer Verfügbarkeit von 95 % im Jahresmittel zur Verfügung zu stellen. Hiervon sind solche Ausfallzeiten nicht umfasst, die zu Arbeiten zur Verbesserung der Sicherheit oder Integrität der Server oder zur Durchführung technischer Maßnahmen erforderlich sind und die der ordnungsgemäßen oder verbesserten Erbringung der Leistungen des Anbieters dienen (Wartungsarbeiten).
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Anbieter ist berechtigt, den Namen von Lieferando jederzeit zu ändern. Eine Änderung des Namens der gesondert für den Dienstleister betriebenen Website erfolgt nur in Abstimmung mit dem Dienstleister.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Anbieter hat das Recht, die auf der Plattform registrierten Dienstleister in Verzeichnisse anzulegen und zu verwalten.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Anbieter betreibt für die Plattform Suchmaschinenmarketing. In diesem Rahmen ist der Anbieter berechtigt, auch die Namen der auf der Plattform registrierten Dienstleister für dieses Suchmaschinenmarketing einzusetzen und auf diese Weise Suchmaschinenmarketing auch für die Dienstleister zu betreiben.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Anbieter ist berechtigt, die Angebote der Dienstleister auch auf den Seiten von Kooperationspartnern (z.B. White-Label-Kooperationspartner, Affiliate Partner etc.) einzubinden und auf diesen Seiten Vertragsschlüsse zwischen dem Dienstleister und Abnehmern zu vermitteln.
+                                        </p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                Registrierung, Vertragsschluss
+                                <ol>
+                                    <li>
+                                        <p>
+                                            Voraussetzung für die Teilnahme an der Plattform ist eine Registrierung des Dienstleisters. Mit der Registrierung für www.lieferando.de schließen der Anbieter und der Dienstleister einen Vertrag, der den Dienstleister berechtigt, den Online-Marktplatz zu nutzen und unter den in diesen Allgemeinen Geschäftsbedingungen festgelegten Voraussetzungen die eigenen Produkte und Dienstleistungen auf der Plattform anzubieten (nachfolgend "Vertrag" genannt).
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Teilnahmeberechtigt als Dienstleister sind nur solche natürlichen und juristischen Personen und Personengesellschaften, deren Teilnahme an der Plattform Teil ihrer gewerblichen Tätigkeit im Sinne des § 14 BGB ist. Private Verkäufe sind auf der Plattform ausgeschlossen.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Für Dienstleister sind folgende Schritte erforderlich, bevor der Dienstleister als registrierter Dienstleister auf der Plattform aktiv werden und Artikel zum Verkauf einstellen kann:
+                                        </p>
+                                        <ol>
+                                            <li>
+                                                <p>
+                                                    Zunächst nimmt der Anbieter über einen Vertriebsmitarbeiter und ein Dienstleister-Formblatt Kontakt zum Dienstleister auf.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Der Vertriebsmitarbeiter des Anbieters wird das Produktsortiment des Dienstleisters hinsichtlich dessen Inhalt, Qualität und Vereinbarkeit mit dem bereits vorhandenen Sortiment und den Lieferando-Qualitätskriterien überprüfen.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Der Dienstleister füllt das Formblatt mit dem Vertriebsmitarbeiter des Anbieters aus, bestätigt mit seiner Unterschrift die Angaben im Formblatt und akzeptiert damit auch die Geltung dieser Allgemeinen Geschäftsbedingungen.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Zusammen mit dem vom Dienstleister ausgefüllten Formblatt übersendet der Vertriebsmitarbeiter des Anbieters eine Übersicht über das Produktsortiment des Dienstleisters (z.B. seine Speisekarte) an den Anbieter.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Wenn der Anbieter den Dienstleister für die Plattform freischalten möchte, wird der Anbieter dem Dienstleister dies per Fax mitteilen, das Angebot des Dienstleisters auf Abschluss des Nutzungsvertrages für den Anbieter annehmen und den Dienstleister als Dienstleister freischalten. Der Vertrag über die Nutzung der Plattform kommt mit der Bestätigung des Anbieters an den Dienstleister zustande.
+                                                </p>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Ein Anspruch auf Registrierung und Teilnahme an der Plattform besteht nicht. Insbesondere behält sich der Anbieter vor, einen Dienstleister als Dienstleister abzulehnen. Dies gilt insbesondere für den Fall, dass das Sortiment des Dienstleisters den vom Anbieter für die Plattform aufgestellten inhaltlichen und qualitativen Kriterien nicht entspricht.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Dienstleister verpflichtet sich, dem Anbieter alle künftigen Änderungen seiner im Rahmen der Registrierung und der Teilnahme angegebenen Daten unaufgefordert und unverzüglich mitzuteilen. Hierzu zählen insbesondere auch Angaben über die Änderung des Sortiments und ähnliche für die gewerbliche Tätigkeit relevante Informationen. Der Anbieter bemüht sich, die Änderungen in den Angeboten des Dienstleisters schnellstmöglich auf der Plattform umzusetzen, weist jedoch ausdrücklich darauf hin, dass eine solche Umsetzung bis zu 14 Tage dauern kann. Der Anbieter übernimmt keine Haftung für den Eingang von Bestellungen, die ein noch nicht aktualisiertes Angebot zum Gegenstand haben.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Ein Dienstleister ist nicht berechtigt, sich mehrfach auf der Plattform zu registrieren. Ein Mitgliedskonto ist nicht übertragbar. Jeglicher Missbrauch der auf der Plattform angebotenen Dienstleistungen ist ausdrücklich untersagt.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Die Ausgestaltung und Bearbeitung der Angebote des Dienstleisters übernimmt grundsätzlich der Anbieter. Der Dienstleister hat keinen eigenen Zugang zu seinem Angebot auf der Plattform. Grundsätzlich verwendet der Anbieter eigene Materialien für die Ausgestaltung der Angebote des Dienstleisters. Nach entsprechender Vereinbarung im Einzelfall verwendet der Anbieter die vom Dienstleister zur Verfügung gestellten Materialien. In diesen Fällen garantiert der Dienstleister, dass die von ihm zur Verfügung gestellten Materialien frei von Rechten Dritter sind und der Dienstleister dazu berechtigt ist, dem Anbieter die zur Verwendung auf der Plattform erforderlichen Nutzungsrechte an den Materialien einzuräumen. Der Dienstleister stellt den Anbieter von allen Schäden und Ansprüchen frei, die gegen den Anbieter aufgrund der Verwendung der vom Dienstleister zur Verfügung gestellten Materialien geltend gemacht werden.
+                                        </p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                Pflichten des Dienstleisters
+                                <ol>
+                                    <li>
+                                        <p>
+                                            Der Dienstleister verpflichtet sich, Daten von Abnehmern oder anderen Teilnehmern der Plattform, die er im Rahmen der Nutzung der Plattform erlangt, nicht ohne ausdrückliche Einwilligung an Dritte weiterzugeben oder in irgendeiner Weise kommerziell zu verwenden. Insbesondere wird der Dienstleister nicht ohne ausdrückliche vorherige Einwilligung kommerzielle E-Mails an Abnehmer oder andere Teilnehmer versenden oder diese sonst über das für die Abwicklung der auf der Plattform getätigten Transaktionen notwendige Maß hinaus kontaktieren.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Anbieter erstellt die Menükarten und Logos für die Angebote des Dienstleisters. Der Dienstleister ist verpflichtet, ggf. auf Verlangen des Anbieters das hierzu erforderliche Bild- und Textmaterial zur Verfügung zu stellen. An allen Werken, Werkteilen, Datenbanken oder jedem anderen Katalog oder jeder anderen Produktinformation, die der Dienstleister zur Verwendung auf der Plattform an den Anbieter übermittelt (mit Ausnahme jeglicher Firmenzeichen, Marken oder anderen ähnlichen Schutzrechten), überträgt der Dienstleister - soweit er dazu berechtigt ist - dem Anbieter ein vergütungsfreies, einfaches, zeitlich unbefristetes, umfassendes Nutzungsrecht, insbesondere zur Vervielfältigung, Verbreitung, Überarbeitung einschließlich des Rechts, diese Inhalte online zu nutzen, auch zu Werbezwecken. Vor einer Verwendung außerhalb der Plattform wird der Anbieter den Dienstleister über die beabsichtigte Verwendung informieren, um sicherzustellen, dass durch diese Verwendung keine Rechte Dritter verletzt werden.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Dienstleister haben sich im Rahmen ihrer gesamten über die Plattform abgewickelten Geschäftstätigkeit rechtskonform zu verhalten und insbesondere gesetzliche und behördliche Vorgaben zu beachten. Insbesondere haben Dienstleister sämtliche verbraucherschutzrechtlichen Bestimmungen einzuhalten. Dies gilt vor allem für die ordnungsgemäße Einräumung eines Widerrufsrechts, soweit dieses gesetzlich gefordert wird.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Dienstleister garantiert, dass die von ihm auf der Plattform eingestellten Inhalte oder Angebote keine Rechte Dritter verletzen. Der Dienstleister verpflichtet sich, keine Produkte anzubieten, deren Anbieten bzw. Verkauf gegen gesetzliche Vorschriften, Rechte Dritter oder die guten Sitten verstößt. Der Dienstleister garantiert, dass die von ihm auf der Plattform eingestellten Angebote alle rechtlichen Anforderungen, insbesondere die verbraucherschutzrechtlichen Informationspflichten, erfüllen. Der Dienstleister stellt den Anbieter von allen Schäden frei, die aus einer Verletzung der vorgenannten Verpflichtungen resultieren.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Für den Fall, dass Dritte Ansprüche gegen den Anbieter wegen der Verletzung von gesetzlichen oder behördlichen Vorgaben geltend machen, wird der Dienstleister den Anbieter von allen geltend gemachten Ansprüchen freistellen und den Anbieter bestmöglich bei der Verteidigung gegen diese Ansprüche unterstützen.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Dienstleister ist nicht berechtigt, von ihm zu zahlende Gebühren oder Provisionen auf den Abnehmer umzulegen und von diesem zu verlangen.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Dienstleister muss für jeden Artikel den vollständigen vom Abnehmer zu entrichtenden Gesamtkaufpreis einschließlich Umsatzsteuer sowie die einzelnen Bestandteile dieses Gesamtpreises angeben.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Dienstleister ist nicht berechtigt, im Rahmen seines Angebots auf der Plattform Links auf externe Webseiten in irgendeiner Form anzubringen. Dies gilt nicht für Links zu anderen Angeboten auf der Plattform.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Dienstleister darf im Rahmen seines Angebots auf der Plattform lediglich den angebotenen Artikel sowie Informationen zu dem Artikel wiedergeben. Der Dienstleister ist nicht berechtigt, darüber hinausgehende Werbung in irgendeiner Form anzubringen.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Anbieter behält sich vor, auch bei zur Plattform zugelassenen Dienstleistern die Aufnahme einzelner Produkte in das Lieferando-Sortiment abzulehnen, sofern diese nicht den Anforderungen an das Sortiment oder den Lieferando-Qualitätskriterien entsprechen oder diese über die jeweils aktuelle Sortimentsbreite der Plattform hinaus gehen. Ebenso behält sich der Anbieter vor, die Produkte bestimmter Hersteller systematisch auszulisten, falls dies aus Gründen der Sicherung einer hohen Produktqualität angemessen erscheint.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Dienstleister ist verpflichtet, während der in seinem Angebot angegebenen Öffnungszeiten über die im Angebot enthaltenen Kommunikationsmittel erreichbar zu sein. Im Falle einer Nichterreichbarkeit hat der Dienstleister die Mehrkosten zu ersetzen, die dem Anbieter durch die Verarbeitung der Nichterreichbarkeit entstehen.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Dienstleister ist berechtigt, die Preise für sein Angebot auf der Plattform jederzeit durch Mitteilung gegenüber dem Anbieter zu ändern. Der Anbieter wird diese Änderungen schnellstmöglich umsetzen. Der Dienstleister ist nicht berechtigt, außerhalb der Plattform niedrigere Preise von seinen Kunden zu verlangen als von den Abnehmern auf der Plattform.
+                                        </p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                Kaufvertragsschluss und Abwicklung des Vertrages zwischen Abnehmer und Dienstleister
+                                <ol>
+                                    <li>
+                                        <p>
+                                            Das Einstellen des Artikels auf der Plattform stellt noch nicht das verbindliche Angebot des Dienstleisters dar. Das Angebot auf Abschluss des Kaufvertrages liegt im verbindlichen Absenden der Bestellung durch den Abnehmer, nachdem dieser die Waren in seinen Warenkorb gelegt und seine Auswahl durch Anklicken des „Bestellung abschicken“-Buttons auf der „Bestellen“-Seite beendet hat.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Vor dem verbindlichen Absenden der Bestellung hat der Abnehmer die Möglichkeit, alle von ihm eingegebenen Daten zu überprüfen und zu korrigieren.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Kaufvertrag zwischen Dienstleister und Abnehmer kommt zustande, wenn der Anbieter dem Abnehmer in Vertretung des Dienstleisters, d.h. in dessen Namen und für dessen Rechnung, eine Bestätigungs-E-Mail über den Erhalt der Bestellung samt Widerrufsbelehrung sowie AGB zusendet und in dieser Bestätigungs-E-Mail für den Dienstleister die Annahme des Angebots des Abnehmers erklärt.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Die auf der Plattform angebotenen Artikel werden von dem Dienstleister grundsätzlich an den Abnehmer versandt. Der Abnehmer ist nur berechtigt, die erworbenen Artikel beim Dienstleister abzuholen, wenn der Dienstleister ausdrücklich zustimmt.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Abnehmer zahlt den Kaufpreis an den Anbieter, der für den jeweiligen Dienstleister die Zahlungsabwicklung übernimmt, soweit der Abnehmer nicht im Einzelfall bei Lieferung direkt an den Dienstleister zahlt.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Es liegt im Ermessen des Anbieters, welche Zahlungsmethoden er zur Zahlungsabwicklung anbietet. Diese werden dem Dienstleister im Laufe des Bestellprozesses mitgeteilt und zur Auswahl gestellt.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            In den Fällen, in denen der Dienstleister nicht selbst die Lieferung zum Abnehmer übernimmt, beauftragt der Anbieter einen externen Lieferdienst mit der Lieferung. Die hierbei entstehenden Kosten für den Lieferdienst trägt der Dienstleister.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Dienstleister ermächtigt den Anbieter, für ihn die entsprechenden Vertragserklärungen (z.B. Angebot, Widerrufserklärung etc) des Abnehmers entgegenzunehmen und die entsprechenden Schritte zur Vertragsdurchführung und -abwicklung vorzunehmen.
+                                        </p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                Bewertung und Beschwerden
+                                <ol>
+                                    <li>
+                                        <p>
+                                            Der Anbieter bietet den Abnehmern auf der Plattform die Möglichkeit, die Leistungen des Dienstleisters bei der Abwicklung der vom Abnehmer getätigten Bestellung (z.B: durch Kommentare oder die Vergabe von Sternen) zu bewerten.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Anbieter ist berechtigt, aber nicht verpflichtet, diese Bewertungen auf der Plattform für alle Nutzer der Plattform sichtbar zu machen.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Anbieter behält sich das Recht vor, die von den Abnehmern abgegebenen Bewertungen eigenständig oder in Absprache mit dem betreffenden Dienstleister zu löschen.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Anbieter kann als Ansprechpartner für den Abnehmer Beschwerden im Zusammenhang mit der Leistungserbringung durch den Dienstleister entgegennehmen, bearbeiten und an den betreffenden Dienstleister weiterleiten. Hierzu ist der Anbieter aber nicht verpflichtet.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Anbieter kann den Abnehmer ebenso zur Klärung an den betreffenden Dienstleister verweisen, da der Anbieter lediglich als Vermittler des zwischen dem Dienstleister und dem Abnehmer geschlossenen Vertrages auftritt. Der Anbieter wird den Abnehmer insbesondere in den Fällen an den Dienstleister verweisen, in denen eine unmittelbare Klärung der Angelegenheit zwischen den Parteien eine schnellere und einfachere Lösung ermöglicht.
+                                        </p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                Vergütung
+                                <ol>
+                                    <li>
+                                        <p>
+                                            Für jeden über die Plattform mit einem Abnehmer geschlossenen Vertrag erhält der Anbieter eine Umsatzprovision und/oder Gebühr, die mit dem Dienstleister im Formblatt gesondert vereinbart wird.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Die Höhe der jeweils anfallenden Umsatzprovision/Gebühr kann dem Formblatt entnommen werden.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Die nach Ziff. 7.1 vereinbarte Vergütung für den Anbieter fällt für jeden über die Plattform wirksam abgeschlossenen Vertrag an. Dies gilt unabhängig davon, ob das Geschäft später tatsächlich durchgeführt oder z.B. aufgrund eines Rücktritts vor oder nach Lieferung rückabgewickelt wird. Ausgenommen davon sind vom Dienstleister nicht verschuldete Rücksendungen im Rahmen des gesetzlichen Widerrufsrechts der Abnehmer. Diese Gebühren werden dem Dienstleister spätestens am Ende eines jeden Monats gutgeschrieben.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Dienstleister trägt die Kosten für die Anbieter von Online-Bezahlmethoden, die bei Online-Zahlungen von Kunden des Dienstleisters bei der Bestellung über die Plattform anfallen. Diese werden in die dem Dienstleister vom Anbieter gestellte Rechnung einbezogen.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Anbieter wird dem Dienstleister am Ende jedes Monats eine Rechnung über die aufgrund der für den Dienstleister vermittelten Verträge zu zahlende Provision stellen. In diese Abrechnung werden auch diejenigen Umsätze einbezogen, die aus über die Plattform vermittelten Verträgen erzielt, aber vom Abnehmer in bar unmittelbar an den Dienstleister gezahlt wurden. Die über die Provision hinausgehenden Umsätze des Dienstleisters wird der Anbieter bis spätestens zum 15. des Folgemonats auf das bei der Registrierung angegebene Konto des Dienstleisters überweisen. Ist der Anteil der in bar unmittelbar an den Dienstleister gezahlten Umsätze so hoch, dass ein Guthaben zugunsten des Anbieters besteht, wird die oben genannte Rechnung dieses Guthaben ausweisen und der Dienstleister dieses Guthaben spätestens bis zum 15. des Folgemonats auf das in der Rechnung angegebene Konto des Anbieters überweisen.
+                                        </p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                Haftung
+                                <ol>
+                                    <li>
+                                        <p>
+                                            Sämtliche ggf. von Dienstleistern auf der Plattform eingestellten Inhalte oder Beiträge (insbesondere bei den Bewertungen und im Beratungsforum) sind ausschließlich solche des jeweiligen Dienstleisters. Der Anbieter macht sich diese nicht zu Eigen.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Dienstleister haftet bei der Verletzung von Rechten Dritter oder bei einem Verstoß gegen gesetzliche Vorschriften oder Anforderungen durch ihn selbst und unmittelbar. Der Dienstleister verpflichtet sich, den Anbieter von allen Schadensersatzforderungen Dritter freizustellen, die aus der Nichtbeachtung der sich aus diesen Allgemeinen Geschäftsbedingungen ergebenden Pflichten oder aus einem Verstoß des Dienstleisters gegen gesetzliche Vorschriften oder Anforderungen entstehen. Dies gilt insbesondere für den Fall, dass die bei der Bestellung mitgeteilte Belehrung über das Widerrufsrecht nicht den gesetzlichen Anforderungen entspricht.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Anbieter prüft die ggf. vom Dienstleister auf der Plattform eingestellten Inhalte nicht und haftet daher nicht für von Dienstleistern auf der Plattform eingestellte Inhalte jeglicher Art, seien es Bilder, Produktbeschreibungen, Bewertungen usw.. Der Dienstleister stellt den Anbieter von sämtlichen Ansprüchen frei, die andere Dienstleister oder sonstige Dritte wegen der Verletzung ihrer Rechte durch vom Dienstleister eingestellte Inhalte oder wegen der Verletzung sonstiger Pflichten gegenüber dem Anbieter geltend machen. Der Dienstleister übernimmt hierbei auch die Kosten der notwendigen Rechtsverteidigung des Anbieters einschließlich sämtlicher Gerichts- und Anwaltskosten und wird den Anbieter bestmöglich bei der Verteidigung gegen diese Ansprüche unterstützen. Dies gilt nicht, soweit die Rechtsverletzung von dem Dienstleister nicht zu vertreten ist.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Die Haftung des Anbieters, gleich aus welchem Rechtsgrund, sei es aus vertraglicher Pflichtverletzung oder unerlaubter Handlung bestimmt sich abschließend nach den folgenden Regelungen:
+                                        </p>
+                                        <ol>
+                                            <li>
+                                                <p>
+                                                    Der Anbieter haftet für Vorsatz und grobe Fahrlässigkeit sowie im Fall von Personenschäden uneingeschränkt, für leichte Fahrlässigkeit jedoch nur bei der Verletzung vertragswesentlicher Pflichten, bei vom Anbieter zu vertretendem Verzug und Unmöglichkeit. Die Haftung bei Verletzung einer solchen vertragswesentlichen Pflicht ist auf den vertragstypischen Schaden begrenzt, mit dem der Anbieter bei Vertragsabschluss auf Grund der zu diesem Zeitpunkt bekannten Umstände rechnen musste.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Vertragswesentliche Pflichten in diesem Sinne sind solche Pflichten, auf deren Erfüllung der Dienstleister regelmäßig vertrauen darf und deren Erfüllung für die Erreichung des Vertragszwecks wesentlich ist.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Für den Verlust von Daten haftet der Anbieter nach Maßgabe der vorstehenden Absätze nur, wenn ein solcher Verlust durch angemessene Datensicherungsmaßnahmen seitens des Dienstleisters nicht vermeidbar gewesen wäre.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Die vorstehenden Haftungsbeschränkungen gelten nicht im Fall der Übernahme ausdrücklicher Garantien durch den Anbieter und für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit sowie im Fall zwingender gesetzlicher Regelungen.
+                                                </p>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                Laufzeit, Sperrung und Kündigung
+                                <ol>
+                                    <li>
+                                        <p>
+                                            Dieser Vertrag hat eine Laufzeit von einem Jahr. Er verlängert sich um jeweils ein weiteres Jahr, wenn nicht eine Partei den Vertrag mit einer Frist von drei Monaten zum Ende der Laufzeit kündigt, maximal jedoch für eine Gesamtlaufzeit von fünf Jahren.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Ausstehende Gebühren werden mit Vertragsbeendigung fällig.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Das Recht zur fristlosen Kündigung aus wichtigem Grund bleibt unberührt. Der Anbieter kann den Vertrag insbesondere fristlos kündigen, wenn:
+                                        </p>
+                                        <p>
+                                            a) der Dienstleister unrichtige oder unvollständige Angaben bei der Registrierung gemacht hat,
+                                        </p>
+                                        <p>
+                                            b) der Dienstleister wiederholt negative Beurteilungen im Rahmen der Bewertungen erhält und diese nicht offensichtlich unberechtigt sind,
+                                        </p>
+                                        <p>
+                                            c) der Dienstleister gegen sonstige vertragliche Pflichten wiederholt verstößt und die Pflichtverletzung auch nach Aufforderung durch den Anbieter nicht unterlässt.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Soweit der Anbieter den Vertrag gekündigt hat, hat der Dienstleister keinen Anspruch auf Einrichtung eines neuen Accounts, auch nicht unter einem anderen Namen oder einer anderen Bezeichnung.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Jede Kündigung muss schriftlich erfolgen. Kündigungen per E-Mail wahren die Schriftform.
+                                        </p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                Exklusivität
+                                <ol>
+                                    <li>
+                                        <p>
+                                            Der Dienstleister wird - sofern er im Zeitpunkt des Vertragsschlusses nicht schon mit einem solchen Unternehmen zusammenarbeitet - für die Laufzeit dieses Vertrages und einen Zeitraum von zwei Jahren ab Ende dieses Vertrages nicht mit einem anderen Anbieter zusammenarbeiten, der ebenfalls eine Online-Plattform mit Angeboten aus den Bereichen Lieferservices, Catering und Supermärkte mit den entsprechenden Produkten und Dienstleistungen betreibt.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Dienstleister verpflichtet sich, für jeden Fall der Zuwiderhandlung gegen die Verpflichtung aus Ziff. 8.1 eine angemessene, vom Anbieter zu bestimmende und im Streitfall von einem Gericht festzusetzende Vertragsstrafe zu zahlen.
+                                        </p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                Sonstiges
+                                <ol>
+                                    <li>
+                                        <p>
+                                            Der Anbieter behält sich vor, diese Nutzungsbedingungen jederzeit und ohne Nennung von Gründen zu ändern. Die geänderten Bedingungen werden dem Dienstleister spätestens sechs Wochen vor ihrem Inkrafttreten mitgeteilt. Widerspricht der Dienstleister der Geltung der neuen Nutzungsbedingungen nicht innerhalb von vier Wochen nach Erhalt der oben genannten Mitteilung, gelten die geänderten Nutzungsbedingungen als angenommen. Der Anbieter wird den Dienstleister, auf die Bedeutung dieser Frist, das Widerspruchsrecht und die Rechtsfolgen des Schweigens gesondert hinweisen.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Gerichtsstand für alle Rechtsstreitigkeiten ist der Sitz des Anbieters. Der Anbieter ist daneben berechtigt, auch am allgemeinen Gerichtsstand des Dienstleisters zu klagen.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Der Dienstleister ist nur berechtigt, mit unbestrittenen oder rechtskräftig festgestellten Forderungen aufzurechnen.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Die Parteien können Rechte und Pflichten aus diesem Vertrag nur nach vorheriger schriftlicher Zustimmung der jeweils anderen Partei übertragen.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Allgemeine Geschäftsbedingungen oder sonstige Bestimmungen des Dienstleisters oder Dritter werden nicht Bestandteil dieses Vertrages, es sei denn, der Anbieter stimmt der Einbeziehung ausdrücklich schriftlich zu.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Sollten einzelne Bestimmungen dieser Nutzungsbedingungen unwirksam sein oder werden und/oder den gesetzlichen Regelungen widersprechen, so wird hierdurch die Wirksamkeit der Nutzungsbedingungen im Übrigen nicht berührt. Die unwirksame Bestimmung wird von den Parteien einvernehmlich durch eine solche Bestimmung ersetzt, welche dem wirtschaftlichen Sinn und Zweck der unwirksamen Bestimmung in rechtswirksamer Weise am nächsten kommt. Die vorstehende Regelung gilt entsprechend bei Regelungslücken.
+                                        </p>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+
+                        <p>
+                            Stand: November 2011
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--#include virtual="_de_footer.html" -->

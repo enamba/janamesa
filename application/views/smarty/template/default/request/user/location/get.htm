@@ -1,0 +1,28 @@
+<div class="yd-dialogs" style="min-width: 800px"><a class="yd-dialogs-close"></a>
+
+    <h1>{__('Firmenbestellung')}</h1>
+
+    <div class="yd-lightbox-content-container">
+        <div class="yd-box hidden" id="yd-repeat-order-errorCity">
+            <div class="yd-bigbox-body">
+                {__('Bestellung an diese Adresse ist nicht möglich')}
+            </div>
+        </div>
+        <div class="yd-box">
+             <div class="yd-bigbox-head">
+                    {__('Lieferadresse wählen')}
+             </div>
+            <div class="yd-bigbox-body">
+                {assign var=temp value=1}
+
+                {if (is_null($cust->getCompanyLocations())) || ($cust->getCompanyLocations()->count() == 0)}
+                <a class="cursor yd-adress yd-add-caddress">{__('Noch keine Adressen eingetragen.')}</a>
+                {else}
+                {include file="order/_includes/start/company_address.htm"}
+                {/if}
+            </div>
+        </div>
+          <a class="yd-button-280" id="yd-repeat-order-company" href="#" style="margin: 0 auto;">{__('Bestellung jetzt starten')}</a>
+    </div>
+
+</div>

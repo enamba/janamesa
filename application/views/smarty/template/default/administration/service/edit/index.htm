@@ -1,0 +1,501 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/service/edit/_navigation.htm'}
+
+<form action="/administration_service_edit/index/id/{$restaurant->getId()}" method="post" name="form" enctype="multipart/form-data" class="yd-form-toggle">
+
+    <div class="be-box-in">
+        <input type="submit" value="{__b('Speichern')}" class="butto yd-save-restaurant-button"/>
+        <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button"/>
+
+        <div class="yd-status-changed-missing-reason" style="display:none; font: bold;">
+            <br/><br/>
+            {__b('Restaurant kann nicht gespeichert werden. Bitte geben Sie den Grund an, warum der Status geändert wurde')}
+        </div>
+    </div>    
+
+    <div class="be-2-column">
+        <div class="be-box">
+            <h2>{__b('Interner Vermerk')} <a href="#" class="yd-form-toggle">{__b('bearbeiten')}</a></h2>
+            <div class="be-box-in yd-form1">
+                <label>{__b('Interner Vermerk')}</label><textarea style="vertical-align: middle; width: 200px;" name="statecomment">{$restaurant->getStatecomment()}</textarea>
+            </div>
+        </div>
+        
+        <div class="be-box">
+            <h2>{__b('Meta Angaben')} <a href="#" class="yd-form-toggle">{__b('bearbeiten')}</a></h2>
+            <div class="be-box-in yd-form1">
+                <label class="v8">{__b('Titel')} *</label>
+                <input class="yd-empty-text" type="text" name="metaTitle" {if $restaurant->getMetaTitle() == NULL} title="{$defaultTitle}" {/if} value="{$restaurant->getMetaTitle()|escape}" />
+
+                <hr />
+
+                <label class="v9">{__b('Stichwörter')} *</label>
+                <input class="yd-empty-text" type="text" name="metaKeywords" {if $restaurant->getMetaKeywords() == NULL} title="{$defaultKeywords}"{/if} value="{$restaurant->getMetaKeywords()|escape}" />
+
+                <hr />
+
+                <label class="v9">{__b('Beschreibung')} *</label>
+                <textarea class="yd-empty-text" name="metaDescription" {if $restaurant->getmetaDescription() == NULL} title="{$defaultDescription}"{/if}>{$restaurant->getMetaDescription()|escape}</textarea>
+
+                <hr />
+
+                <label class="v10">{__b('Robots')}</label>
+
+                <select name="metaRobots">
+                    {foreach from=$robots key=val item=robot}
+                    <option value="{$val}"{if $restaurant->getMetaRobots() eq $val} selected="selected"{/if}>{$robot}</option>
+                    {/foreach}
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <div class="be-2-column">
+        <div class="be-box">
+            <h2>{__b('Allgemein')} <a href="#" class="yd-form-toggle">{__b('bearbeiten')}</a></h2>
+            <div class="be-box-in yd-form1">
+                <label>{__b('Name')} *</label><input type="text" name="name" value="{$restaurant->getName()}" />
+
+                <hr />
+
+                <label>{__b('Franchise')} *</label>
+                <select name="franchiseTypeId" id="yd-select_franchise" class="rund_set text">
+                    <option value="-1" >{__b('Neues Franchise')}</option>
+                    {foreach from=$franchisetypes item=franchise}
+                    <option value="{$franchise->id}" {if $restaurant->getFranchiseTypeId() == $franchise->id}selected="selected"{/if}>{$franchise->name}</option>
+                    {/foreach}
+                </select>
+                <hr />
+                <div id='yd-create-franchise' class="hidden">
+                    <label>{__b('Neues Franchise')} *</label><input type="text" name="franchiseName" value="{$p.franchiseName}" />
+                    <hr />
+                </div>
+
+                <label>{__b('Direkter Link für Lieferservice')}: {$config->domain->base}/</label>
+                <input type="text" class="yd-check-directlink" id="restaurantLink-{$restaurant->getId()}" name="restUrl" value="{$restaurant->getRestUrl()}" />
+                <a href="/{$restaurant->getRestUrl()}" target="_blank">&oplus;</a>
+                <span id="restaurantLink-msg"></span><br />
+
+                <label>{__b('Direkter Link für Catering')} {$config->domain->base}/</label>
+                <input type="text" class="yd-check-directlink" id="cateringLink-{$restaurant->getId()}" name="caterUrl" value="{$restaurant->getCaterUrl()}" />
+                <a href="/{$restaurant->getCaterUrl()}" target="_blank">&oplus;</a>
+                <span id="cateringLink-msg"></span><br />
+
+                <label>{__b('Direkter Link für Großhandel')} {$config->domain->base}/</label>
+                <input type="text" class="yd-check-directlink" id="greatLink-{$restaurant->getId()}" name="greatUrl" value="{$restaurant->getGreatUrl()}" />
+                <a href="/{$restaurant->getGreatUrl()}" target="_blank">&oplus;</a>
+                <span id="greatLink-msg"></span><br />
+
+                <hr />
+
+                <label>{__b('Dienstleister nach oben stellen bis')}</label>
+                <input type="text" class="yd-datepicker-default" name="topUntil" value="{$restaurant->getTopUntil()}" />
+
+                <hr />
+
+                <label>{__b('Status')}</label>
+                <select name="isOnline" id="yd-status-changed" style="width: 200px;">
+                    <option value="0">{__b('deaktiviert')}</option>
+                    <option value="1" {if ($restaurant->getIsOnline()==1)}selected{/if}>{__b('aktiviert')}</option>
+                </select>
+
+                <div id="yd-offlinestatus" {if ($restaurant->getIsOnline()==1)}style="display:none;"{/if}>
+                     <hr />
+                    <label>{__b('Offline Status')}</label>
+                    <select name="status" id="yd-offline-reason" style="width: 200px;">
+                        {foreach from=Yourdelivery_Model_Servicetype_Abstract::getStati() key=ind item=s}
+                        <option value="{$ind}" {if $restaurant->getStatus() == $ind}selected="selected"{/if}>{$s}</option>
+                        {/foreach}
+                    </select>
+                    <br /><br />
+                </div>
+
+                <div id="yd-offline_change_reason" style="display:none;">
+                    <label>{__b('Status geändert weil')}:</label>
+                    <textarea name="offline-change-reason-text" id="yd-offline-change-reason-text" style="vertical-align:middle;width:200px;"></textarea>
+                    <br /><br />
+                </div>
+
+                <div id="yd-offlinestatus-until" style="display:none;">
+                    <label>{__b('Status bis')}:</label>
+                    <input type="text" name="offlineStatusUntil" id="yd-offline-status-until" value="{time()|timestampYMD}"/>
+                </div>
+
+                <hr />
+
+                <label>{__b('Satellit')}</label><a href="/administration_satellite/edit/restaurant/{$restaurant->getId()}">{__b('Satellit bearbeiten/erstellen')}</a>
+
+                <hr />
+
+                <label>{__b('Straße')} *</label><input type="text" name="street" value="{$restaurant->getStreet()}" />
+
+                <hr />
+
+                <label>{__b('Haus-Nr')} *</label><input type="text" name="hausnr" value="{$restaurant->getHausnr()}" />
+
+                <hr />
+
+                <label>{__b('PLZ')} *</label>
+                {if strpos($config->domain->base, "janamesa")!==false}
+                    <input type="text" name="plz" value="{$restaurant->getPlz()}" />
+                {else}
+                    {include file='administration/city_autocomplete.htm' city=$restaurant->getCity()}
+                {/if}
+
+                <hr />
+
+                <label>{__b('E-Mail')}</label><input type="text" name="email" value="{$restaurant->getEmail()}" />
+                <br />
+                <input id="yd-send-testemail" type="button" value="{__b('Testemail senden')}" />
+
+                <hr />
+
+                <label>{__b('Telefon')} *</label><input type="text" name="tel" value="{$restaurant->getTel()}" />
+
+                <hr />
+
+                <label>{__b('Telefon 2')}</label><input type="text" name="tel2" value="{$restaurant->getTel2()}" />
+
+                <hr />
+
+                <label>{__b('Telefon 3')}</label><input type="text" name="tel3" value="{$restaurant->getTel3()}" />
+
+                <hr />
+
+                <label>{__b('Fax')} *</label><input type="text" name="fax" value="{$restaurant->getFax()}" id="yd-create-restaurant-fax" />
+
+                <select name="faxService" id="yd-testfax-service">
+                    <option value="retarus" selected>{__b('retarus')}</option>
+                    <option value="interfax">{__b('interfax')}</option>
+                </select>
+                <input id="yd-send-testfax" type="button" value="{__b('Testfax senden')}" />
+                <br />
+                <span id="yd-testfax-status"></span>
+
+                <hr />
+
+                <label>{__b('Kategorie')}</label>
+                <select name="categoryId" class="rund_set text">
+                    <option value="-1" ></option>
+                    {foreach from=$categories item=cat}
+                    <option value="{$cat->id}" {if $restaurant->getCategoryId() == $cat->id}selected{/if}>{$cat->name}</option>
+                    {/foreach}
+                </select>
+
+                <hr />
+
+                <label>{__b('Akzeptiert Pfand bei Lieferung')}:</label><input type="checkbox" name="acceptsPfand" value="1" {if $restaurant->getAcceptsPfand()==1}checked{/if} />
+<hr>
+                                                                              <label>{__b('Qype ID')}</label>
+                <input type="text" id="yd-service-qype-id" name="qypeId" class="rund_set text" {if ($restaurant->getQypeId()==0) || (strlen($restaurant->getQypeId())==0)}disabled{/if} value="{if ($restaurant->getQypeId()!=0) && (strlen($restaurant->getQypeId())!=0)}{$restaurant->getQypeId()}{/if}" />
+                       <input type="checkbox" id="yd-service-qype-dontlist" value="1" {if ($restaurant->getQypeId()==0) || (strlen($restaurant->getQypeId())==0)}checked{/if}/> {__b('bei Qype nicht auflisten')}
+
+                       <hr />
+
+                <label>{__b('Beschreibung')}</label><div style="max-height: 120px; overflow-y:auto;"><textarea style="vertical-align: middle; width: 600px;" name="description">{$restaurant->getDescription()}</textarea></div>
+
+                <hr />
+
+                <label>{__b('Öffentlicher Vermerk')}</label><textarea style="vertical-align: middle; width: 200px;" name="specialComment">{$restaurant->getSpecialComment()}</textarea>
+
+                <hr />
+
+                <label>{__b('Versand')}</label>
+                <select name="notify">
+                    {foreach from=Yourdelivery_Model_Servicetype_Abstract::getNotificationKinds() key=ind item=s}
+                    <option value="{$ind}" {if $restaurant->getNotify() == $ind}selected="selected"{/if}>{$s}</option>
+                    {/foreach}
+                </select>
+
+                <hr />
+
+                <label>{__b('Faxdienstleister')}</label>
+                <select name="faxService" autocomplete="off">
+                    <option value="retarus" {if  $restaurant->getFaxService() == "retarus"}selected{/if}>{__b('retarus')}</option>
+                    <option value="interfax" {if $restaurant->getFaxService() == "interfax"}selected{/if}>{__b('interfax')}</option>
+                </select>
+
+                <hr />
+
+                <label>{__b('Aktuelles Bild')}</label>
+                <img src="/../storage/restaurants/{$restaurant->getId()}/default.jpg" alt="" width="115" height="75"/>
+
+                <hr />
+
+                <label>{__b('Das Bild ist Logo')}</label>
+                <input type="checkbox" name="isLogo" value="1" {if ($restaurant->getIsLogo()==1)}checked{/if}/>
+            </div>
+        </div>
+        
+        <div class="be-box">
+            <h2>{__b('Öffnungszeiten')}</h2>
+            <div class="be-box-in">
+                <table class="noborder">
+                    <tr>
+                        <th colspan="2">{__b('Reguläre Öffnungszeiten')}</th>
+                    </tr>
+                    {$week = array(__b('Sonntag'), __b('Montag'), __b('Dienstag'), __b('Mittwoch'), __b('Donnerstag'), __b('Freitag'), __b('Samstag'))}
+                    {section name=day start=1 loop=8}
+                    <tr>
+                        <td width="50%">{$week[$smarty.section.day.iteration % 7]}</td>
+                        <td width="50%">
+                            {foreach from=$restaurant->getRegularOpenings($smarty.section.day.iteration % 7) item=open}
+                            {$open->from|substr:0:5} - {$open->until|substr:0:5}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            {/foreach}
+                        </td>
+                    </tr>
+                    {/section}
+                    <tr>
+                        <td>{__b('Feiertage')}</td>
+                        <td>
+			                {foreach from=$openings[10] item=o}
+			                {$o['from']|substr:0:5} - {$o['until']|substr:0:5}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			                {/foreach}
+                        </td>
+                    </tr>
+                </table>
+
+                <br /><br />
+
+                <table class="noborder">
+                    <tr>
+                        <th colspan="2">{__b('Spezielle Öffnungszeiten')}</th>
+                    </tr>
+                    {$specialOpenings = Yourdelivery_Model_Servicetype_OpeningsSpecial::getSpecialOpening($restaurant->getId())}
+                    {if count($specialOpenings) > 0}
+                    {foreach from=$specialOpenings item=open}
+                    <tr>
+                        <td width="50%">
+                            {$open.specialDate}
+                        </td>
+                        <td width="50%">
+                            {if $open.closed == 1}
+                            <font color="#999">{__b('Geschlossen')}</font>
+                            {else}
+                            {$open.from|substr:0:5} - {$open.until|substr:0:5}
+                            {/if}
+                        </td>
+                    </tr>
+                    {/foreach}
+                    {else}
+                    <tr><td>{__b('keine speziellen Öffnungszeiten eingetragen')}</td></tr>
+                    {/if}
+                </table>
+
+
+                <br /><br />
+
+                <table class="noborder">
+                    <tr>
+                        <th>{__b('Liefergebiete')}</th>
+                        <th>{__b('Mindestbestellwert')}</th>
+                    </tr>
+                    {foreach from=$restaurant->getRanges() item=location}
+                    <tr>
+                        <td>{$location.cityname}</td>
+                        <td>{$location.mincost|inttoprice}</td>
+                    </tr>
+                    {foreachelse}
+                    <tr><td colspan="2" style="color:red;">{__b('keine Liefergebiete eingetragen')}</td></tr>
+                    {/foreach}
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="be-3-column">
+        <div class="be-box">
+            <h2>{__b('Zahlungsinformationen %sbearbeiten%s', '<a href="#" class="yd-form-toggle">', '</a>')}</h2>
+            <div class="be-box-in yd-form1">
+                {if $config->domain->base != "janamesa.com.br"}
+                <label>{__b('Kontobesitzer')}</label><input type="text" name="ktoName" value="{$restaurant->getKtoName()}" />
+
+                <hr />
+
+                <label>{__b('Kontonummer')}</label><input type="text" name="ktoNr" value="{$restaurant->getKtoNr()}" />
+
+                <hr />
+
+                <label>{__b('BLZ')}</label><input type="text" name="ktoBlz" value="{$restaurant->getKtoBlz()}" />
+
+                <hr />
+
+                <label>{__b('IBAN')}</label><input type="text" name="ktoIban" value="{$restaurant->getKtoIban()}" />
+
+                <hr />
+
+                <label>{__b('BIC(SWIFT)')}</label><input type="text" name="ktoSwift" value="{$restaurant->getKtoSwift()}" />
+
+                <hr />
+
+                <label>{__b('USt-ID-Nr')}</label><input type="text" name="ustIdNr" value="{$restaurant->getUstIdNr()}" />
+
+                <hr />
+                {else}
+                <label>{__b('Bank')}</label><input type="text" name="ktoBank" value="{$restaurant->getKtoBank()}" />
+
+                <hr />
+
+                <label>{__b('Agentur')}</label><input type="text" name="ktoAgentur" value="{$restaurant->getKtoAgentur()}" />
+
+                <hr />
+
+                <label>{__b('Kontonummer')}</label><input type="text" name="ktoNr" value="{$restaurant->getKtoNr()}" />
+
+                <hr />
+
+                <label>{__b('Ziffer')}</label><input type="text" name="ktoDigit" value="{$restaurant->getKtoDigit()}" />
+
+                <hr />
+
+                <label>{__b('Kontobesitzer')}</label><input type="text" name="ktoName" value="{$restaurant->getKtoName()}" />
+
+                <hr />
+
+                <label>{__b('CPF')}</label><input type="text" name="ustIdNr" value="{$restaurant->getUstIdNr()}" />
+
+                <hr />
+                {/if}
+
+                <label>{__b('Nur Barzahlung')}</label><input type="checkbox" name="onlycash" value="1" id="yd-service-onlycash" {if $restaurant->getOnlycash()==1}checked{/if} />
+
+                                                             <hr />
+
+                <label>{__b('Akzeptiert Barzahlung')}</label><input type="checkbox" name="paymentbar" value="1" id="yd-service-paymentbar" {if $restaurant->getPaymentbar()==1}checked{/if} {if $restaurant->getOnlycash()==1}disabled{/if} />
+
+                                                                    <hr />
+
+                <label>{__b('Akzeptiert Gutscheine')}</label>
+
+                <input type="checkbox" name="sodexo" value="1" {if $restaurant->getSodexo()==1}checked{/if} /> {__b('Sodexo')}
+
+                       <hr />
+
+                <label>{__b('Extras')}</label><input type="checkbox" name="express" value="1" {if $restaurant->getExpress()==1}checked{/if} /> {__b('Express')}
+
+                                                     <hr />
+
+                <label>{__b('Nur Abholung')}</label><input type="checkbox" name="onlyPickup" value="1" {if $restaurant->getOnlyPickup()==1}checked{/if}/>
+
+                                                           <hr />
+
+                <label>{__b('Provision für Lieferkosten')}</label><input type="checkbox" name="billDeliverCost" value="1" {if $restaurant->getBillDeliverCost()==1}checked{/if}/>
+
+                                                                         <hr />
+
+                <label>{__b('Etagenzuschlag')}</label><input type="text" name="floorfee" value="{$restaurant->getFloorfee()}" /> {__b('Cents')}
+
+                <hr />
+
+                <label>{__b('Akzeptiert Lastschrift')}</label><input type="checkbox" name="debit" value="1" {if $restaurant->getDebit()==1}checked{/if} />
+
+                                                                     <label>{__b('Kann jederzeit kündigen')}:</label><input type="checkbox" name="laxContract" value="1" {if $restaurant->getLaxContract()==1}checked{/if} />
+            </div>
+        </div>
+        <div class="be-box">
+            <h2>{__b('Kommission %sbearbeiten%s', '<a href="#" class="yd-form-toggle">', '</a>')}</h2>
+            <div class="be-box-in yd-form1">
+                <label>{__b('Provision')}</label><input type="text" name="komm" value="{$restaurant->getStaticCommission()}" />
+
+                <hr />
+
+                <label>{__b('Gebühr pro Bestellung')}</label><input type="text" name="fee" value="{$restaurant->getStaticFee()}" /> {__b('Cents')}
+
+                <hr />
+
+                <label>{__b('Gebühr pro Artikel')}</label><input type="text" name="item" value="{$restaurant->getStaticItem()}" /> {__b('Cents')}
+
+                <hr />
+
+                <label>{__b('Transaktions Gebühr pro Bestellung in Cent')}</label><input type="text" name="chargeFix" value="{$restaurant->getChargeFix()}" /> {__b('Cents')}
+
+                <hr />
+
+                <label>{__b('Transaktions Gebühr pro Bestellung in Prozent')}</label><input type="text" name="chargePercentage" value="{$restaurant->getChargePercentage()|default:0}" /> {__b('Cents')}
+
+                <hr />
+
+                <label>{__b('keine Transaktionsgebühren bis ')}</label><input type="text" id="yd-transaction-start" name="chargeStart" readonly value="{$restaurant->getChargeStart()|strtotime|timestampYMD}"/>
+            </div>
+        </div>
+        <div class="be-box">
+            <h2>{__b('Rechnung %sbearbeiten%s', '<a href="#" class="yd-form-toggle">', '</a>')}</h2>
+            <div class="be-box-in yd-form1">
+                <label>{__b('Rechnungsintervall')}</label>
+
+                <select name="billInterval" class="rund_set text">
+                    <option value="0" {if ($restaurant->getBillInterval() == '0')}selected="selected"{/if}>{__b('Monatlich')}</option>
+                    <option value="1" {if ($restaurant->getBillInterval() == '1')}selected="selected"{/if}>{__b('Alle 2 Wochen')}</option>
+                    <option value="2" {if ($restaurant->getBillInterval() == '2')}selected="selected"{/if}>{__b('Täglich')}</option>
+                </select>
+
+                <hr />
+
+                <label>{__b('Rechnungsversand')}</label>
+
+                <select name="billDeliver" class="rund_set text">
+                    {foreach from=Yourdelivery_Model_Servicetype_Abstract::getDeliverKinds() key=ind item=s}
+                    <option value="{$ind}" {if $restaurant->getBillDeliver() == $ind}selected="selected"{/if}>{$s}</option>
+                    {/foreach}
+                </select>
+                
+                <hr />
+                
+                <label>{__b('Umsätze im Partner-Konto inklusive eigener Domain anzeigen')}</label><input type="checkbox" name="partnerDetailedStats" value="1" {if $restaurant->isPartnerDetailedStats()}checked="checked"{/if} />
+            </div>
+        </div>
+    </div>
+
+
+    <div class="be-2-column">
+        <div class="be-box">
+            <h2>{__b('Benachrichtigung über eingegangene Bestellungen %sbearbeiten%s', '<a href="#" class="yd-form-toggle">', '</a>')}</h2>
+            <div class="be-box-in">
+                <label>{__b('Keine Benachrichtigung')}</label>
+
+                <input type="checkbox" name="noNotification" value="1" id="yd-service-noNotification" {if ($restaurant->getNotifyPayed() <= 0)}checked{/if}/>
+
+                       <table class="user-tab">
+                    <tr id="yd-service-notifyPayed" {if ($restaurant->getNotifyPayed() <= 0)}style="display:none;"{/if}>
+                        <td>{__b('Für bezahlte Bestellungen')}:</td>
+                        <td><input type="text" name="notifyPayed" value="{$restaurant->getNotifyPayed()}" /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="be-box">
+            <h2>{__b('Speichern')}</h2>
+            <div class="be-box-in">
+                <input type="submit" value="{__b('Speichern')}" class="button yd-save-restaurant-button"/>
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button"/>
+
+                <div class="yd-status-changed-missing-reason" style="display:none; font: bold;">
+                    <br/><br/>
+                    {__b('Restaurant kann nicht gespeichert werden. Bitte geben Sie den Grund an, warum der Status geändert wurde')}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="be-2-column">
+        <div class="be-box">
+            <h2>{__b('Rechnungen')}</h2>
+            <div class="be-box-in">
+                <a href='/administration_billing/service/ordergrid/b.id_DESC/RestaurantIdgrid/{$restaurant->getId()}' target='_blank'>{__b('Alle Rechnungen von %s ansehen', $restaurant->getName())}</a>
+            </div>
+        </div>
+        <div class="be-box">
+            <h2>{__b('Bestellungen')}</h2>
+            <div class="be-box-in">
+                <a href='/administration_order/index/type/view_grid_orders/Dienstleistergrid/{$restaurant->getId()}' target='_blank'>{__b('Alle Bestellungen von %s ansehen', $restaurant->getName())}</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</form>
+
+{/block}

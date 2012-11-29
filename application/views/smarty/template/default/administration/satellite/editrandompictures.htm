@@ -1,0 +1,61 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/satellite/_editnavigation.htm'}
+<form action="/administration_satellite/editrandompictures/" method="post" name="form" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="{$satellite->getId()}" />
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Zufallsbilder für Slide-Show über den Menü')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td></td>
+                        </tr>
+                        {foreach from=$satellite->getRandomPictures() item=pic}
+                        <tr>
+                            <td>
+                                <img src="{$pic}" alt="" width="200"/>
+                                <a href="/administration_satellite/deleterandompicture/id/{$satellite->getId()}?picture={$pic}"><img src="{$domain_static}/images/yd-backend/del-cat.gif" onclick="javascript:return confirm('{__b('Soll dieses Bild wirklich gelöscht werden?')}');" alt="{__b('Louml;schen')}" /></a>
+                            </td>
+                        </tr>
+                        {/foreach}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Neues Bild hochladen')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="20%">{__b('Bild')}</td>
+                            <td width="80%"><input type="file" name="_picture" /></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" />
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+
+</form>
+{/block}    

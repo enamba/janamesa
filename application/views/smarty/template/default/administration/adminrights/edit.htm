@@ -1,0 +1,51 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<form action="/administration_adminrights/edit" method="post">
+    <input type="hidden" name="id" value="{$admin->getId()}"/>
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Zugangsrechte')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="20%">{__b("Name")}</td>
+                            <td width="80%"><input type="text" name="name" class="rund_set text" value="{$admin->getName()}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b("Email:")}</td>
+                            <td><input type="text" name="email" class="rund_set text" value="{$admin->getEmail()}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b("Neues Passwort (optional)")}</td>
+                            <td><input type="text" name="password" class="rund_set text"/></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                {__b("Gruppe")}<br/>
+                                ({__b("Wenn der leere Eintrag als einziger ausgewählt wird, hat der Benutzer keine Zugangsrechte fürs Backend")})
+                            </td>
+                            <td>
+                                <select name="groupIds[]" size="20" multiple>
+                                    <option value="-1" ></option>
+                                    {foreach from=Yourdelivery_Model_DbTable_Admin_Access_Groups::getAllGroups() item=group}
+                                    <option value="{$group.id}" {if in_array($group.id, $assignedGroups)}selected{/if}>{$group.name}</option>
+                                    {/foreach}
+                                </select> *
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" />
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+</form>
+{/block}    

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="pt" xml:lang="pt" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="pt" xml:lang="pt" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="pt" xml:lang="pt" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="pt" xml:lang="pt" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="pt" xml:lang="pt">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="viewport" content="width=1100">
+        <link rel="SHORTCUT ICON" href="/media/css/www.janamesa.com.br/favicon.ico" type="image/x-icon">
+
+        <title>Jánamesa para consumidores - janamesa.com.br</title>
+
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-core.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-home.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-jquery.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-ie.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-infocenter.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-hidden.css" />
+            
+            <script type="text/javascript" src="/media/javascript/compiled/frontend-sem.js"></script>
+    </head>
+    <body class="br">
+
+        <!--#include virtual="_br_header.html" -->
+
+        <div id="yd-content" class="yd-clearfix post">
+
+            <div id="yd-ordering">
+
+                <h1 class="underlined">Jánamesa para consumidores</h1>
+
+                <p>
+                    Jánamesa chegou ao Brasil para mudar o conceito de Delivery. Fazemos parte da rede Lieferando, uma das líderes de mercado na Europa, com cinco anos de existência, mais de 6.500 restaurantes cadastrados.
+                </p>
+                <p>
+                    Evite transtornos na hora de pedir comida pelo telefone. Jánamesa coloca a sua disposição a maneira mais moderna possível de delivery pela internet,  poupando o seu tempo e dando fim ao estresse de pedir pelo telefone.  Com um design moderno e acessível, além de aplicativos para Iphone e Ipod, procuramos facilitar ao máximo sua vida. Aproveite as nossas diversas opções de restaurantes, escolha seu prato desejado e comece a pedir pelo Jánamesa. 
+                </p>
+                <p>
+                    Além disso, existem diferentes maneiras de conseguir pontos no site. Explore, junte os pontos e ganhe refeições grátis.
+                </p>
+            </div>
+
+            <div id="yd-sidebar">
+
+                <!-- Secondary navigation -->
+                <div id="nav-secondary" class="yd-box br-box">
+                    <ul>
+                        <li><a href="/about-customer">Jánamesa para consumidores</a></li>
+                        <li><a href="/about-restaurant">Jánamesa para restaurantes</a></li>
+                        <li><a href="/customer-terms">Termos para consumidores</a></li>
+                        <li><a href="/restaurant-terms">Termos para restaurantes</a></li>
+                        <li><a href="/jobs">Trabalhe conosco</a></li>
+                    </ul>
+                </div>
+                <!-- /Secondary navigation -->
+
+            </div>
+
+        </div>
+    </div>
+
+    <!--#include virtual="_br_footer.html" -->

@@ -1,0 +1,114 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+    <div class="edit-newsletter">
+        <div class="one-column-box">
+            <div class="item">
+                <div class="item-head">
+                    {__b('Newslettervorbereitung')}
+                </div>
+                <div class="item-content">
+                    <table class="user-tab">
+                        <tr>
+                            <th colspan="3">{__b('1. Schritt')}</th>
+                        </tr>
+                        <tr>
+                            <td width="30%">
+                                {__b('Vorhandene Vorlage auswählen')}
+                            </td>
+                            <td width="40%">
+                                <select id="yd-admin-newsletter-pattern" style="width: 250px;">
+                                    <option value="0">{__b('Vorlage wählen ...')}</option>
+                                    {foreach from=$patterns item=pattern}
+                                        <option value="{$pattern.0}">{$pattern.1}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                            <td width="30%">
+                                <input type="button" class="button" id="yd-admin-newsletter-pattern-submit" value="{__b('Vorschau laden')}"  style="width: 150px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">{__b('oder')}</td>
+                        </tr>
+                        <tr>
+                        <form action="/administration_email/newsletter" method="post" enctype="multipart/form-data">
+                            <td>
+                                {__b('Neue Vorlage hochladen (*.html oder *.htm')}
+                            </td>
+                            <td>
+                                <input name="patternupload" type="file" />
+                            </td>
+                            <td>
+                                <input type="submit" class="button" value="{__b('Hochladen')}"  style="width: 150px;"/>
+                            </td>
+                        </form>
+                        </tr>
+                    </table>
+                    
+                    <br/>
+
+                    <table class="user-tab">
+                        <tr>
+                            <th>{__b('2. Schritt:')}</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                {__b('Quelltext anpassen und Platzhalter einfügen')}<br/>
+                                {__b('Bsp: An die Stelle wo in der Email die Emailadresse platziert werden soll muss ein eindeutiger Text eingefügt werden.')}<br/>
+                                {__b('Zum Beispiel "--EMAIL--" Die Ersetzung erfolgt auf der letzen Seite. "__EMAIL__" wird automatisch mit der Email-Adresse des Empfängers ersetzt.')}
+                            </td>
+                        </tr>
+                    </table>
+
+                    <br/>
+
+                    <table class="user-tab">
+                        <tr>
+                            <th colspan="2">{__b('3. Schritt:')}</th>
+                        </tr>
+                        <tr>
+                            <td width="70%">
+                                {__b('Vorschau der fertigen eMail ansehen. Die fertige eMail wird einmal an die eigene Adresse verschickt. Daran befindet sich ein Link zum bestätigen des Erhalts. %sNur durch Bestätigen dieses Links gelangt man zum nächsten Schritt.', '<br/>')}
+                            </td>
+                            <td  width="30%">
+                                <input type="button" class="button" id="yd-admin-newsletterpreview-send" value="Vorschau senden" style="width: 150px;"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="one-column-box">
+            <div class="item" style="background:#f1f1f1;">
+                <div class="item-head">
+                    {__b('Vorschau')}
+                </div>
+                <div class="item-content">
+                    <div class="email-preview" id="yd-admin-newsletterpreview">
+                        <i>{__b('Vorschau wird hier hinein geladen')}</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="one-column-box">
+            <div class="item">
+                <div class="item-head">
+                    {__b('HTML Editor')}
+                </div>
+                <div class="item-content">
+                    <a class="cursor yd-admin-newsletterpreview-button">{__b('Vorschau')}</a>
+                    <div class="email-html">
+                        <!--<div class="res-header"></div>-->
+                        <textarea id="yd-admin-newsletterhtml">{$html|default:'keine Vorlage gewählt'}</textarea>
+                        <!--<div class="res-footer"></div>-->
+                    </div>
+                    <a class="cursor yd-admin-newsletterpreview-button">{__b('Vorschau')}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{/block}

@@ -1,0 +1,76 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<form method="post" action="/administration_satellite/linkcontrol">
+    <img src="{$domain_static}/images/yd-icons/add.png" alt="add" id="add_field"/>
+    <br />
+    <div id="main">
+    <div id="list">
+    <b>{__b('Restaurant')} : </b>
+    <select id="restaurant" name="restaurant[]">
+            <option value ="-1"></option>
+            {foreach from=$restoData item=rest}
+            <option value="{$rest.id}">{$rest.name}</option>
+            {/foreach}
+    </select>
+    
+    {__b('Website')} : 
+    <select id="website" name="website[]" style="width: 160px;">
+        <option value ="-1"></option>
+        <option value ="www.qype.com">www.qype.com</option>
+        <option value ="www.meinestadt.de">www.meinestadt.de</option>
+        <option value ="www.townster.de">www.townster.de</option>
+        <option value ="www.goyellow.de">www.GoYellow.de</option>
+        <option value ="www.stadtbranchenbuch.com">www.Stadtbranchenbuch.com</option>
+        <option value ="www.pointoo.de">www.Pointoo.de</option>
+        <option value ="www.gelbeseiten.de">www.Gelbeseiten.de</option>
+        <option value ="www.kennstdueinen.de">www.kennstdueinen.de</option>
+        <option value ="www.auskunft.de">www.auskunft.de</option>
+    </select>
+    
+        {__b('Url')} :
+        <input type="text" name="url[]" value ="" size="40"/>
+        {__b('Our Link')} :
+        <input type="text" name="ourlink[]" value="" size="40" />
+        <span id="result"></span>
+    </div>
+    </div>
+    <input type="submit" value="save" id="save_ourlink"/>
+</form>
+
+<div class="one-column-box">
+            <div class="item">
+                <div class="item-head">
+                    {__b('Result')}
+                    <br>
+                    <img src="{$domain_static}/images/yd-backend/grid/certo.png" alt="OK" /> : {__b('OK')} &nbsp;&nbsp;
+                    <img src="{$domain_static}/images/yd-backend/grid/fechar.png" alt="NOT OK" /> : {__b('Our link is gone')} &nbsp;&nbsp;
+                    <img src="{$domain_static}/images/yd-icons/icon-info.png" alt="INVALID" /> : {__b('Website link broken / not exist - Wrong website')} &nbsp;&nbsp;
+                </div>
+                <div class="item-content">
+                <div id="load"><div id="yd-lb-wait">{__b('Bitte warten...')}</div></div>
+                {foreach from=$data item=alldata}
+                {foreach from=$restoData item=rest}
+                {if $alldata.restaurant == $rest.id}
+                <select id="restaurant" name="restaurant" style="width: 140px;">
+                    <option value ="{$rest.id}">{$rest.name}</option>
+                </select>
+                {/if}
+                {/foreach}
+                 
+
+                {__b('Website')} :
+                <select id="website" name="website" style="width: 140px;">
+                    <option value ="{$alldata.website}">{$alldata.website}</option>
+                </select>
+
+                    {__b('Url')} :
+                    <input type="text" name=url" value ="http://{$alldata.url}" size="50" readonly/>
+                    {__b('Our Link')} :
+                    <input type="text" name="ourlink" value="http://{$alldata.ourlink}" size="50" readonly/>
+                    <span id="result">{if $alldata.status == 'ok'}<img src="{$domain_static}/images/yd-backend/grid/certo.png" alt="OK" />{/if}{if $alldata.status == 'not ok'}<a href="http://{$alldata.url}" target="_blank" ><img src="{$domain_static}/images/yd-backend/grid/fechar.png" alt="not OK"/></a>{/if}{if $alldata.status == 'unknown website'}<a href="http://{$alldata.url}" target="_blank"><img src="{$domain_static}/images/yd-icons/icon-info.png" alt="unknown" /></a>{/if}</span>
+                    <br />
+                    {/foreach}
+                </div>
+            </div>
+</div>
+{/block}

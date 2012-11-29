@@ -1,0 +1,2 @@
+ALTER TABLE `restaurant_status_history` ADD `delCount` MEDIUMINT NOT NULL  DEFAULT '0'  AFTER `count`;
+ALTER TABLE `restaurant_status_history` CHANGE `count` `addCount` MEDIUMINT( 9 ) NOT NULL DEFAULT '0';

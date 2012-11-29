@@ -1,0 +1,173 @@
+#yd-content p {
+    text-align: justify;
+}
+
+#yd-sidebar ul li a {
+    display: block;
+    padding: 5px 5px 5px 20px;
+    font-size: 13px;
+    text-align: left;
+    border-bottom: 1px dotted #ccc;
+    background: url(/media/images/yd-frontend-internallinks/yd-icons.png) 0px -44px no-repeat;
+}
+
+#yd-sidebar ul li a:hover {
+    background: url(/media/images/yd-frontend-internallinks/yd-icons.png) 1px -44px no-repeat #ffb;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    padding: 0 0 5px 30px;
+    border-bottom: 1px dotted #ccc;
+    background: url(/media/images/yd-frontend-internallinks/yd-icons.png) 5px -88px no-repeat;
+}
+
+.content p {
+    margin: 0 0 20px;
+}
+
+.content p:last-child {
+    margin: 0;
+}
+
+#yd-cms-footer {
+    clear: both;
+}
+
+#yd-cms-footer .yd-box-body {
+    padding: 20px;
+}
+
+#yd-cms-footer .yd-box-body div {
+    float: left;
+    width: 300px;
+    height: 100px;
+    margin: 5px;
+    padding: 0 0 12px;
+    border-bottom: 1px dotted #ccc;
+}
+
+#yd-cms-footer .yd-box-body a {
+    display: block;
+    margin: 20px 0 0 120px;
+}
+
+#yd-cms-footer .yd-box-body img {
+    float: left;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+}
+
+
+
+
+
+
+
+#yd-cms-teaser {
+    position: absolute;
+    left: 50%;
+    width: 1020px;
+    margin-left: -510px;
+}
+
+#yd-cms-teaser div {
+    position: absolute;
+    top: 115px;
+    left: 255px; /* middle center standard */
+    width: 500px;
+    height: 150px;
+}
+
+#yd-cms-teaser div.yd-cms-middle-left {
+    left: 30px !important;
+}
+
+#yd-cms-teaser div.yd-cms-middle-center {
+    left: 255px !important;
+}
+
+#yd-cms-teaser div.yd-cms-middle-right {
+    left: 500px !important;
+}
+
+#yd-cms-teaser div #yd-plz-search {
+    position: absolute;
+    top: 53px;
+    left: 5px;
+}
+
+#yd-cms-teaser div #yd-start-order {
+    position: absolute;
+    top: 50px;
+    left: 215px;
+}
+
+#yd-cms-teaser div strong {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 475px;
+    text-align: center;
+    font: 21px FuturaCondensedMedium,"trebuchet ms",arial,"nimbus sans l",sans-serif;
+}
+
+#yd-cms-teaser div small {
+    display: block;
+    vertical-align: middle;
+    position: absolute;
+    top: 112px;
+    left: 5px;
+    width: 490px;
+    height: 30px;
+    text-align: center;
+    font-size: 12px;
+}
+
+#yd-cms-teaser div small img {
+    vertical-align: middle;
+    margin: 0 0 0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#lexikon {
+    height: 40px;
+}
+
+#lexikon a {
+    float: left;
+    display: block;
+    margin: 0 3px 0 0;
+    padding: 3px 6px;
+    border: 1px solid #ccc;
+    background: #eee;
+}
+
+#lexikon a:hover {
+    background: #fff;
+}
+
+.content ul {
+    margin: 10px 0 30px;
+}
+
+.content ul li {
+    margin: 5px 0;
+    padding: 0 0 0 30px;
+}

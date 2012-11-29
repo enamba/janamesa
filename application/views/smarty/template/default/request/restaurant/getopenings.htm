@@ -1,0 +1,62 @@
+{if isset($restaurant)}
+    {section name=day start=1 loop=8}
+        {foreach from=$restaurant->getRegularOpenings($smarty.section.day.iteration % 7) item=open}
+            {assign var=from value=$open->from}
+            {assign var=until value=$open->until}
+            <table class="user-tab">
+                    <tr>
+                        <td width="30%">
+                            <select id="day-{$open->id}" style="width:120px;">
+                            <option value="1" {if $open->day == 1}selected{/if}>{{__b('Montag')}}</option>
+                            <option value="2" {if $open->day == 2}selected{/if}>{{__b('Dienstag')}}</option>
+                            <option value="3" {if $open->day == 3}selected{/if}>{{__b('Mittwoch')}}</option>
+                            <option value="4" {if $open->day == 4}selected{/if}>{{__b('Donnerstag')}}</option>
+                            <option value="5" {if $open->day == 5}selected{/if}>{{__b('Freitag')}}</option>
+                            <option value="6" {if $open->day == 6}selected{/if}>{{__b('Samstag')}}</option>
+                            <option value="0" {if $open->day == 0}selected{/if}>{{__b('Sonntag')}}</option>
+                            <option value="10"  {if $open->day == 10}selected{/if}>{{__b('Feiertage')}}</option>
+                            </select>
+                        </td>
+                        <td width="5%">{{__b('von')}}</td>
+                        <td width="15%">{include file='restaurant/timebit.htm' mode='from' submittable='1'}</td>
+                        <td width="5%">{{__b('bis')}}</td>
+                        <td width="15%">{include file='restaurant/timebit.htm' mode='until' submittable='1'}</td>
+                        <td align="center" width="30%">&nbsp;<a href="/restaurant_settings/deleteopening/id/{$open->id}" onclick="javascript:return confirm('Vorsicht!! Soll diese Lieferzeit wirklich gelöscht werden?')"><img src="{$domain_static}/images/yd-backend/del-cat.gif" alt="Lieferzeit löschen" /></a></td>
+                    </tr>
+                </table>
+        {/foreach}
+        <table>
+            <tr>
+                <td height="25"></td>
+            </tr>
+        </table>        
+    {/section}
+    
+        {foreach from=$restaurant->getRegularOpenings(10) item=open}
+            {assign var=from value=$open->from}
+            {assign var=until value=$open->until}
+            <table class="user-tab">
+                    <tr>
+                        <td width="30%">
+                            <select id="day-{$open->id}" style="width:120px;">
+                            <option value="1">{{__b('Montag')}}</option>
+                            <option value="2">{{__b('Dienstag')}}</option>
+                            <option value="3">{{__b('Mittwoch')}}</option>
+                            <option value="4">{{__b('Donnerstag')}}</option>
+                            <option value="5">{{__b('Freitag')}}</option>
+                            <option value="6">{{__b('Samstag')}}</option>
+                            <option value="0">{{__b('Sonntag')}}</option>
+                            <option value="10" selected>{{__b('Feiertage')}}</option>
+                            </select>
+                        </td>
+                        <td width="5%">{{__b('von')}}</td>
+                        <td width="15%">{include file='restaurant/timebit.htm' mode='from' submittable='1'}</td>
+                        <td width="5%">{{__b('bis')}}</td>
+                        <td width="15%">{include file='restaurant/timebit.htm' mode='until' submittable='1'}</td>
+                        <td align="center" width="30%">&nbsp;<a href="/restaurant_settings/deleteopening/id/{$open->id}" onclick="javascript:return confirm('Vorsicht!! Soll diese Lieferzeit wirklich gelöscht werden?')"><img src="{$domain_static}/images/yd-backend/del-cat.gif" alt="Lieferzeit löschen" /></a></td>
+                    </tr>
+                </table>
+        {/foreach}
+{/if}
+
+

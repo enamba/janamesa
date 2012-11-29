@@ -1,0 +1,21 @@
+{if $config->domain->base == 'lieferando.at'}
+<script id="sonar" type="text/javascript">
+    /*<![CDATA[*/
+    
+    // called by $(document).ready()    
+    var track_adlantic = function(){
+        var adm_s1 = document.createElement('script');
+        adm_s1.src = '//cache.ad-serverparc.nl/js/205_LieferandoAt.js';
+        adm_s1.setAttribute('async', 'true');
+        document.body.appendChild(adm_s1);
+    };  
+    
+    $(document).ready(function(){
+        if (typeof no_adlantic_auto_track == "undefined") {
+            track_adlantic();
+        }      
+    });
+    
+    /* ]]> */
+</script>
+{/if}

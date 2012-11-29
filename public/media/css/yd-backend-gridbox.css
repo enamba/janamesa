@@ -1,0 +1,125 @@
+/*
+ * Gridbox
+ **********************************************************/
+
+.yd-grid-trigger {
+    cursor: pointer;
+}
+
+.be-ordergrid .yd-grid-trigger {
+    display: block;
+    width: 80px;
+    word-wrap: break-word;
+}
+
+.yd-grid {
+    position: relative;
+}
+
+.yd-grid a:hover {
+    text-decoration: underline;
+}
+
+.yd-grid a:focus, .yd-grid a:active {
+    color: #000;
+}
+
+.yd-grid-box {
+    display: none;
+    z-index: 1000;
+    position: absolute;
+    width: 230px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 3px #000;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* IE10+ */
+    background: linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* W3C */
+}
+
+.be-dialogs .yd-grid-box {
+    z-index: 2000;
+}
+
+.ticket .yd-grid-box {
+    top: 30px; /* for heyho */
+    left: -15px; /* for heyho */
+}
+
+.yd-grid-box:after {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    width: 20px;
+    height: 12px;
+    background: url(/media/images/yd-backend/gridbox/arrow.png) no-repeat;
+}
+
+.yd-grid-box ul {
+    margin: 0; /* for heyho */
+    padding: 0; /* for heyho */
+}
+
+.yd-grid-box ul li {
+    margin: 0; /* for heyho */
+    padding: 5px 0;
+    font-size: 12px;
+    border-bottom: 1px dotted #aaa;
+}
+
+.yd-grid-box ul li:last-child {
+    border: 0;
+}
+
+.yd-grid-box ul li.yd-grid-box-loading {
+    height: 20px;
+    border: 0;
+    background: url(/media/images/yd-backend/gridbox/ajax-loader-16-white.gif) center center no-repeat;
+}
+
+.yd-grid-box ul li.yd-grid-box-separation {
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.yd-grid-box-close {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(/media/images/yd-frontend-core/yd-sprite-core.png) 0 -520px;
+}
+
+.yd-grid-box-close:hover {
+    background-position: -40px -520px;
+}
+
+.yd-grid-box-close:focus,
+.yd-grid-box-close:active {
+    background-position: -80px -520px;
+}
+
+a.yd-grid-box-icon-html {
+    margin: 0 10px 0 0;
+    padding: 2px 0 0 20px;
+    background: url(/media/images/yd-backend/gridbox/html.png) no-repeat;
+}
+
+a.yd-grid-box-icon-pdf {
+    padding: 2px 0 0 20px;
+    background: url(/media/images/yd-backend/gridbox/pdf.png) no-repeat;
+}
+
+a.yd-blacklist-lightbox {
+    display: block;
+    padding: 1px 0 0 15px;
+    background: url(/media/images/yd-backend/gridbox/blacklist.png) no-repeat;
+}

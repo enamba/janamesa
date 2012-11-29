@@ -1,0 +1,8 @@
+<div class="yd-voodoo-list">
+    <h2 class="yd-box-title">{__('Lieferservices in anderen Regionen')}</h2>
+    <ul class="yd-clearfix">
+        {foreach from=$location->getOtherRegions(4, 8) item=r}
+        <li><a href="{$r['restUrl']}" title="{__('Informationen für Lieferservice %s finden', $r['region3'])}">{$r['region3']}</a></li>
+        {/foreach}
+    </ul>
+</div>

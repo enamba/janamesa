@@ -1,0 +1,1 @@
+alter table rabatt add newCustomerCheck  TINYINT(4) default 1;

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+@author mlaug
+@since 23.10.2011
+
+Deployment of any version which has been created so far and deploy to the live system
+
+Examples:
+
+1. deploy all domain with a certian version (e.g. 1.4.3)
+phing -f deploy.xml deploy-all -Dversion=1.4.3
+
+2. deploy one domain (e.g. lieferando.de)
+phing -f deploy.xml deploy -Dcurrent_domain=lieferando.de -Dversion=1.4.3
+
+Optional:
+
+You may or may not update the views and deploy the update statements
+-Ddo_update=yes|no Default no
+
+You may or may not start/stop the topup server
+-Dstart_stop_topup=yes|no Default no
+
+-->
+
+<project name="yourdelivery" default="deploy-all" description="Build process for any yourdelivery system">  
+
+    <property file="properties.ini" />
+    
+    <tstamp>
+        <format property="build_time" pattern="%Y-%m-%d-%H-%I-%S" />
+    </tstamp>
+    
+    <!-- ============================================  -->
+    <!-- Target: deploy staging to live                -->
+    <!-- ============================================  -->       
+    <target name="deploy-all">
+        <!-- deploy yd software -->
+        <foreach list="${domains}" param="current_domain" target="deploy" />
+        
+        <!-- deploy timthumb -->
+        <if>
+            <equals arg1="${do_timthumb}" arg2="yes" />   
+            <then>
+                <foreach list="${servers}" param="server" target="timthumb" />
+            </then>
+        </if>
+            
+        <!-- deploy mobile app -->
+        <if>
+            <equals arg1="${do_mobile}" arg2="yes" />   
+            <then>
+                <foreach list="${servers}" param="server" target="mobile" />
+            </then>
+        </if>
+        
+        <!-- send out email to confirm build process -->
+        <mail tolist="it@lieferando.de" subject="Deployment of version ${version} completed" from="build@lieferando.de">System deployed for ${domains}</mail>
+        
+    </target> 
+    
+    <target name="deploy">
+        <echo msg="setting property to ${current_domain}" />
+        <property name="domain" value="${current_domain}" />
+        
+        <!-- check if property domain is set -->
+        <fail unless="domain" message="no value set for property domain" />
+        <fail unless="version" message="no version defined" />
+        
+        <!-- TODO: check if version exists, fail unless -->
+        
+        <!-- copy files to servers -->
+        <foreach list="${servers}" param="server" target="server_copy" />
+        
+        <!-- updating database -->
+        <if>
+            <and>
+                <equals arg1="${do_update}" arg2="yes" trim="true" />
+                <not>
+                    <equals arg1="${current_domain}" arg2="eat-star.de" trim="true" />
+                </not>
+                <not>
+                    <equals arg1="${current_domain}" arg2="pyszne.pl" trim="true" />
+                </not>
+            </and>  
+            <then>
+                <!-- get all updates from selected staging dir -->           
+                <exec command="rm -rf /tmp/yd_updates" />
+                <mkdir dir="/tmp/yd_updates" />  
+                
+                <exec command="rm -rf /tmp/yd_views" />
+                <mkdir dir="/tmp/yd_views" />
+                
+                <!-- copy all updates -->
+                <exec command="rsync --partial --progress --rsh=ssh --archive ydadmin@${sql.server}:/home/ydadmin/staging/${domain}/${version}/application/data/update/*.sql /tmp/yd_updates/ " />
+                
+                <!-- copy all views -->
+                <exec command="rsync --partial --progress --rsh=ssh --archive ydadmin@${sql.server}:/home/ydadmin/staging/${domain}/${version}/application/data/views/*.sql /tmp/yd_views/ " />
+                
+                <!-- deploy updates -->
+                <echo msg="updating database" />
+                <pdosqlexec
+                    onerror="continue"
+                    url="mysql:host=${mysql.live.ip};dbname=${current_domain}"
+                    userid="${mysql.live.user}"
+                    password="${mysql.live.pass}">
+                    <fileset dir="/tmp/yd_updates/">
+                        <include name="*.sql" />
+                    </fileset>
+                </pdosqlexec>
+                            
+                <!-- updating views -->
+                <echo msg="updating views" />
+                <pdosqlexec
+                    onerror="continue"
+                    url="mysql:host=${mysql.live.ip};dbname=${current_domain}"
+                    userid="${mysql.live.user}"
+                    password="${mysql.live.pass}">
+                    <fileset dir="/tmp/yd_views/">
+                        <include name="*.sql" />
+                    </fileset>
+                </pdosqlexec>
+            </then>
+        </if>
+        
+        <!-- switch servers to new version -->
+        <foreach list="${servers}" param="server" target="server_switch_live" />
+        
+        <!-- reset varnish cache -->
+        <if>
+            <equals arg1="${do_varnish}" arg2="yes" />   
+            <then>
+                <phingcall target="varnish" />
+            </then>
+        </if>
+        
+        <!-- reset memcache -->
+        <if>
+            <equals arg1="${do_memcache}" arg2="yes" />   
+            <then>
+                <phingcall target="memcache" />
+            </then>
+        </if>
+        
+    </target>
+    
+    <!-- purge varnish cache -->
+    <target name="varnish">
+        <echo msg="purging live varnish server" />
+        <ssh username="${varnish.live.username}" password="${varnish.live.password}" host="${varnish.live.server}" port="${varnish.live.port}" command="/usr/bin/varnishadm 'ban.url .'" />
+    </target>
+    
+    <!-- purge memcache -->
+    <target name="memcache">
+        <echo msg="clearing memcache on port 11212" />
+        <ssh username="${memcache.username}" password="${memcache.password}" host="${memcache.server}" command="echo 'flush_all' | nc ${memcache.ip} 11211" />
+    </target>
+   
+    <!-- copy release files to server -->
+    <target name="server_copy">   
+        <fail unless="server" message="no server defined" />
+        <echo msg="moving staging release to live directory of ${server}" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="mkdir -p /home/ydadmin/live/${domain}/" />
+        
+        <!-- copy and clear -->
+        <echo msg="removing TestController" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="rm -r /home/ydadmin/live/${domain}/${version}/application/controllers/TestController.php" />
+        <echo msg="copying /home/ydadmin/staging/${domain}/${version} to /home/ydadmin/live/${domain}/${version}" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="cp -r /home/ydadmin/staging/${domain}/${version} /home/ydadmin/live/${domain}/${version}" /> 
+        <echo msg="clearing template_c and compile folder" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="rm -r /home/ydadmin/live/${domain}/${version}/application/views/smarty/template_c/*" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="rm -r /home/ydadmin/live/${domain}/${version}/application/templates/latex/compile/*" />    
+        <echo msg="clearing css and javascript cache" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="rm -r /home/ydadmin/live/${domain}/${version}/public/media/javascript/compiled/*" /> 
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="rm -r /home/ydadmin/live/${domain}/${version}/public/media/css/compiled/*" />
+        
+        <echo msg="setting symlinks and setting htaccess to live" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="mv /home/ydadmin/live/${domain}/${version}/public/.htaccess_live /home/ydadmin/live/${domain}/${version}/public/.htaccess" /> 
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="ln -nfs /home/ydadmin/logs/system/${domain}/live /home/ydadmin/live/${domain}/${version}/application/logs" />   
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="ln -nfs /home/ydadmin/storage/${domain}/live /home/ydadmin/live/${domain}/${version}/storage" />       
+        
+        <!-- making keys for optivo accessible -->
+        <echo msg="fixing permissions for key files" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="chmod 0600 /home/ydadmin/live/${domain}/${version}/application/templates/keys/id_rsa" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="chmod 0600 /home/ydadmin/live/${domain}/${version}/application/templates/keys/id_rsa.pub" />      
+    </target>
+    
+    <!-- switch symlinks to new release -->
+    <target name="server_switch_live">
+        <fail unless="server" message="no server defined" />   
+        <echo msg="switching symlinks on ${server} to new version" />    
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="ln -nfs /home/ydadmin/live/${domain}/${version} /home/ydadmin/live/${domain}/current" />        
+    </target>
+    
+    <!-- ============================================  -->
+    <!-- Target: deploy timthumb                       -->
+    <!-- ============================================  -->   
+    <target name="timthumb">
+        <fail unless="server" message="no server defined" />
+        <echo msg="deploying image server to ${server}" />
+        
+        <exec command="rm -rf /tmp/timthumb" />
+        <mkdir dir="/tmp/timthumb" />
+        
+        <gitclone
+            repository="ssh://ydadmin@46.163.72.129/home/ydadmin/git/ydPicture"
+            targetPath="/tmp/timthumb" />
+
+        <gitcheckout
+            repository="/tmp/timthumb"
+            branchname="master" quiet="true" />
+            
+         
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="mkdir -p /home/ydadmin/logs/apache/timthumb" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="mkdir -p /home/ydadmin/htdocs/timthumb/public" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="ln -nfs /home/ydadmin/htdocs/timthumb/public /home/ydadmin/htdocs/timthumb/public_fcgi" />
+            
+        <exec command="rsync --partial --progress --rsh=ssh --archive /tmp/timthumb/ ydadmin@${server}:/home/ydadmin/htdocs/timthumb/public" />
+        
+    </target>
+    
+    <!-- deploy mobile version to all servers -->
+    <target name="mobile">
+        <fail unless="server" message="no server defined" />
+        <echo msg="deploying mobile app to ${server}" />
+        
+        <!-- create log dirs if not available -->
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="mkdir -p /home/ydadmin/logs/apache/mobile/live" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="mkdir -p /home/ydadmin/logs/system/mobile/live" />
+        
+        <!-- copy everything to live -->
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="mkdir -p /home/ydadmin/live/mobile" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="cp -r /home/ydadmin/staging/mobile/* /home/ydadmin/live/mobile/" /> 
+        
+        <!-- stop/start live process -->    
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="forever stop /home/ydadmin/live/mobile/index.js" />  
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="NODE_ENV=production forever start /home/ydadmin/live/mobile/index.js -l /home/ydadmin/logs/system/mobile/live" />       
+    </target>
+    
+    <!-- rollback -->
+    <target name="rollback-all">
+        <foreach list="${domains}" param="current_domain" target="rollback" />
+        <mail tolist="it@lieferando.de" subject="Rollback to version ${version} completed" from="build@lieferando.de">System deployed for ${domains}</mail>
+    </target> 
+    
+    <target name="rollback">
+        <echo msg="setting property to ${current_domain}" />
+        <property name="domain" value="${current_domain}" />
+        
+        <!-- check if property domain is set -->
+        <fail unless="domain" message="no value set for property domain" />
+        <fail unless="version" message="no version defined" />
+              
+        <foreach list="${servers}" param="server" target="server_switch_live" />
+    </target>
+    
+</project>

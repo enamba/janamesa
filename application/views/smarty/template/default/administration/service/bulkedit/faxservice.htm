@@ -1,0 +1,49 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="one-column-box">
+    <a name="courier"></a>
+    <div class="item">
+        <div class="item-head">
+            {__b('Faxservice umstellen')}
+        </div>
+        <div class="item-content">
+            <form action="" method="post">
+                <table>
+                    <tr>
+                        <td width="15%">{__b('Faxdienstleister')}</td>                      
+                        <td width="15%">{__b('zurückstellen')}</td>
+                        <td width="70%">&nbsp;</td>       
+                    </tr>
+                    <tr>
+                        <td>                            
+                            <select name="faxservice" {if $restore}disabled="disabled"{/if}>
+                                <option value="retarus" >{__b('Retarus')}</option>
+                                <option value="interfax" >{__b('Interfax')}</option>
+                            </select>
+                        </td>           
+                        <td>                            
+                            <input type="checkbox" name="restore" {if !$restore} disabled="disabled"{/if} {if $restore} checked="checked"{/if} />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                             <br/>
+                            {if $restore}
+                                {__b('Aktueller Faxdienstleister:')} {$currentService}                                
+                            {else}
+                            {__b('Alle Faxdienstleister werden umgestellt.')}
+                            {/if}
+                            
+                            <br/><br/>
+                            <input onclick="return confirm(' {__b("Wirklich Umstellen?")} ')" type="submit" value="{__b('umstellen')}" class="button" ></a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div class="item">
+    </div>
+</div>
+{/block}

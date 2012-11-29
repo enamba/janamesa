@@ -1,0 +1,28 @@
+<table class="user-tab">
+    <tr>
+        <td colspan="6">{__b('Transactions')}</td>
+    </tr>
+    <tr>
+        <td width="">{__b('Zeit')}</td>
+        <td width="">{__b('Punkte')}</td>
+        <td width="">{__b('Typ')}</td>
+        <td width="">{__b('Comment')}</td>
+        <td width="">{__b('Status')}</td>
+        <td width=""></td>
+    </tr>
+    {foreach from=$transactions item=ta}
+    <tr>
+        <td width="">{$ta.created|date_format:"d.m.Y H:i"} {__b('Uhr')}</td>
+        <td width="">{$ta.points}</td>
+        <td width="">{$ta.action}</td>
+        <td width="">{$ta.transactionData}</td>
+        <td width="">{if $ta.status >= 0}<span style="color:green"> {__b('online')}</span> {else}<span style="color:red"> {__b('offline')}</span> {/if}</td>
+        {if $ta.status >= 0}
+        <td width=""><a id="yd-fidelity-delete-{$customer->getId()}-{$ta.id}" class="yd-remove-fidelity-point"  href="#x"><img alt="{__b('Löschen')}" src="{$domain_static}/images/yd-backend/del-cat.gif" /></a></td>
+        {else}
+        <td></td>
+        {/if}
+    </tr>
+    {/foreach}
+
+</table>

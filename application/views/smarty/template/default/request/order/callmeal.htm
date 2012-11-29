@@ -1,0 +1,249 @@
+{counter start=0 print=false}
+{if is_object($meal)}
+<form method="post" action="#" onsubmit="return false;">
+
+    <!-- input fields with meal data -->
+    <input type="hidden" name="mealId" value="{$meal->getId()}" />
+    <input type="hidden" name="mealName" value="{$meal->getName()|truncate:40:'...'|escape}" />
+    <input type="hidden" name="exMinCost" value="{$meal->getExcludeFromMinCost() || $meal->getCategory()->getExcludeFromMinCost()}" />
+    <input type="hidden" name="minCount" value="{$meal->getMinAmount()}" />
+    <input type="hidden" class="yd-meal-cost" id="yd-meal-cost-base" value="{if $meal->getPriceType() == 'normal'}{$meal->getCost()}{else}0{/if}" />
+    <input type="hidden" class="yd-meal-price-type" id="yd-meal-price-type" value="{$meal->getPriceType()}" />
+
+    <div class="yd-dialogs yd-dialogs-green callmeal" style="width:800px;left:50%;margin-left:-400px;"><a class="yd-dialogs-close"></a>
+
+        <div class="yd-dialogs-head">
+
+            <div class="yd-clearfix">
+
+                <input type="text" value="1" name="count" id="yd-meal-count" class="yd-only-nr" maxlength="3" />
+
+                <span class="name">
+                    {$meal->getName()}
+                    {if $meal->isVegetarian()}<img title="{__('vegetarisch')}" src="{$config->domain->static}/images/yd-frontend-step3/menu-vegetarian.png" alt="" />{/if}
+                    {if $meal->isGarlic()}<img title="{__('mit Knoblauch')}" src="{$config->domain->static}/images/yd-frontend-step3/menu-garlic.png" alt="" />{/if}
+                    {if $meal->isBio()}<img title="{__('Bioware')}" src="{$config->domain->static}/images/yd-frontend-step3/menu-bio.png" alt="" />{/if}
+                    {if $meal->isSpicy()}<img title="{__('scharf gewürzt')}" src="{$config->domain->static}/images/yd-frontend-step3/menu-spicy.png" alt="" />{/if}
+                    {if $meal->isFish()}<img title="{__('mit Fisch')}" src="{$config->domain->static}/images/yd-frontend-step3/menu-fish.png" alt="" />{/if}
+                </span>
+
+                <span class="yd-dialogs-head-price">
+                    <span class="yd-current-meal-price">
+                        {if $meal->getPriceType() == 'normal'}
+                        {$meal->getCost()|inttoprice}
+                        {else}
+                        {0|inttoprice}
+                        {/if}
+                    </span>
+                    &nbsp;
+                    <sup>{__('€')}</sup>
+                </span>
+
+            </div>
+
+            <small>{$meal->getDescription()}</small>
+
+        </div>
+
+        <div class="yd-dialogs-body">
+
+            {assign var=mealSizes value=$meal->getSizes()}
+            {assign var=currentSize value=$meal->getCurrentSize()}
+            {if $mealSizes|@count > 1}
+            <div class="yd-dialogs-box yd-dialogs-green">
+
+
+                <div class="yd-dialogs-box-head">
+                    <span class="yd-dbh-number">{counter}.</span>
+                    <span class="yd-dbh-choose">{__('Wähle jetzt Deine Größe')}</span>
+                    <span class="yd-dbh-icon"></span>
+                    <span class="yd-dbh-choise"></span>
+                </div>
+
+                <div class="yd-dialogs-box-body">
+                    <ul class="yd-clearfix">
+                        {foreach $meal->getSizes() as $size}
+                        <input type="hidden" name="sizes_{$size.id}_name" value="{$size.name|escape}" />
+                        <input type="hidden" name="sizes_{$size.id}_cost" value="{if $meal->getPriceType() == 'normal'}{$size.cost}{else}0{/if}" />
+                        <li>
+                            <input type="radio" name="sizeId" value="{$size.id}" class="yd-change-size" id="yd-change-size-{$size.id}" {if $meal->getCurrentSize() == $size.id}checked="checked"{/if} />
+                            <label for="yd-change-size-{$size.id}">
+                                {if $meal->getPriceType() == 'normal'}
+                                &nbsp;&nbsp;{__('%s für %s €', $size.name, $size.cost|inttoprice)}
+                                {else}
+                                &nbsp;&nbsp;{$size.name}
+                                {/if}
+                            </label>
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+
+            </div>
+            {elseif $mealSizes}
+                {foreach $meal->getSizes() as $size}
+                <input type="hidden" name="sizes_{$size.id}_name" value="{$size.name}" />
+                <input type="hidden" name="sizes_{$size.id}_cost" value="{if $meal->getPriceType() == 'normal'}{$size.cost}{else}0{/if}" />
+                {/foreach}
+            {/if}
+
+            <input type="hidden" id="yd-meal-size-hidden" name="sizeId" value="{$currentSize}" />
+            <input type="hidden" id="yd-meal-cost-hidden" name="sizeCost" value="{if $meal->getPriceType() == 'normal'}{$meal->getCost()}{else}0{/if}" />
+            <input type="hidden" name="priceType" value="{$meal->getPriceType()}" />
+
+            {if $meal->hasOptions()}
+            {assign var=mealOptionsFast value=$meal->getOptionsFast()}
+            {foreach $mealOptionsFast as $optrow}
+            <div class="yd-dialogs-box optrow" id="choices-{$optrow.id}" data-min-choices="{$optrow.minChoices}" data-max-choices="{$optrow.choices}">
+
+                <div class="yd-dialogs-box-head yd-change-options" id="yd-change-options-{$optrow.id}">
+                    <span class="yd-dbh-number">{counter}.</span>
+                    <span class="yd-dbh-choose">{__('Wähle jetzt Dein/e %s', $optrow.name)}</span>
+                    <span class="yd-dbh-change yd-change-options hidden" id="yd-change-options-{$optrow.id}">{__('ändern')}</span>
+                    <span class="yd-dbh-price">
+                        <span class="yd-option-choices-selected">0</span>
+                        <span class="yd-option-choices-needed">{if $optrow.minChoices <= $optrow.choices} {__('gewählt von maximal')} {$optrow.choices}{else}{$optrow.choices}{/if}</span>
+                    </span>
+                    <span class="yd-dbh-icon"></span>
+                    <span class="yd-dbh-choise"></span>
+                </div>
+                {if $optrow.items}
+                <div class="yd-dialogs-box-body" id="yd-change-options-box-{$optrow.id}">
+                    <ul class="yd-clearfix">
+                        {foreach $optrow.items as $optitem}
+                        <input type="hidden" name="options_{$optrow.id}_{$optitem.oid}_name" value="{$optitem.name|escape}" />
+                        <input type="hidden" name="options_{$optrow.id}_{$optitem.oid}_cost" value="{$optitem.cost}" />
+                        <li>
+                            <input type="checkbox" name="options[]" value="{$optitem.oid}" id="row-{$optrow.id}-{$optitem.oid}" class="yd-option-row-checkbox yd-check-option yd-option-item-{$optitem.oid}" {if $meal->hasCurrentOptionAppend($optitem.oid)}checked="checked"{/if}/>
+                                   <label for="row-{$optrow.id}-{$optitem.oid}">
+                                {$optitem.name} {if $optitem.cost > 0}<span class="price">({__('%s €', $optitem.cost|inttoprice)})</span>{/if}
+                            </label>
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+                {elseif $optrow.mealOptionItems}
+                <div class="yd-dialogs-box-body" id="yd-change-options-box-{$optrow.id}">
+                    <ul class="yd-clearfix">
+                        <table>
+                            <tr>
+                                <th>
+                                    {$optrow.name}
+                                </th>
+                                {for $i=0; $i<$optrow.choices; $i++}
+                                <th>
+                                    #{$i+1}
+                                </th>
+                                {/for}
+                            </tr>
+                            {foreach $optrow.mealOptionItems as $optitem}
+                            <tr class="yd-current-mealoption-row yd-current-mealoption-row-size-{$optitem.sid}" {if $optitem.sid != $currentSize}style="display:none;"{/if}>
+                                <td>
+                                    <input type="hidden" name="options_{$optrow.id}_{$optitem.mid}_{$optitem.sid}_name" value="{$optitem.name|escape}" />
+                                    <input type="hidden" name="options_{$optrow.id}_{$optitem.mid}_{$optitem.sid}_cost" value="{$optitem.cost}" />
+                                    <label>{$optitem.name} {if $optitem.cost > 0}<span class="price">({__('%s €', $optitem.cost|inttoprice)})</span>{/if}</label>
+                                </td>
+                                {for $i=0; $i<$optrow.choices; $i++}
+                                <td>
+                                    <input type="radio" name="options[{$i}]" value="{$optitem.mid}" id="row-{$optrow.id}-{$optitem.mid}-{$optitem.sid}-{$i}" class="yd-option-row-checkbox yd-check-option yd-option-item-{$optitem.mid}-{$optitem.sid} yd-mealoption-item" {if ($meal->hasCurrentOptionAppend($optitem.mid, $optitem.sid))}checked="checked"{/if}/>
+                                </td>
+                                {/for}
+                            </tr>
+                            {/foreach}
+                        </table>
+                    </ul>
+                </div>
+                {/if}
+
+            </div>
+            {/foreach}
+            {/if}
+
+            {if $meal->hasAnyExtras()}
+            <h2>{__('Lust auf Extras?')}</h2>
+
+            {foreach $mealSizes as $size}
+            {if $meal->hasExtras($size.id)}
+            <div class="yd-dialogs-box yd-current-extras" id="yd-current-extras-{$size.id}" {if $size.id != $meal->getCurrentSize()}style="display:none;"{/if}>
+
+                 <div class="yd-dialogs-box-head">
+                    <span class="yd-dbh-choose">{__('Wähle jetzt Deine Extras')}</span>
+                    <span class="yd-dbh-extras"></span>
+                </div>
+                <div class="yd-dialogs-box-body">
+                    <div class="yd-extra-group">
+                        {assign var=extras value=$meal->getExtrasFast($size.id)}
+                        {foreach item=extraGroups from=$extras}
+                            <span>{$extraGroups.groupName}</span>
+                            <ul class="yd-clearfix">
+                            {foreach item=extra from=$extraGroups.items}
+                            <li>
+                                <input type="hidden" name="extrasId" value="{$extra.id}" class="yd-extra-{$size.id}" />
+                                <input type="hidden" name="extras_{$extra.id}-{$size.id}_name" value="{$extra.name|escape}" />
+                                <input type="hidden" name="extras_{$extra.id}-{$size.id}_cost" value="{$extra.cost}" />
+                                <input type="hidden" name="extras_{$extra.id}-{$size.id}_count" value="{if $meal->hasCurrentExtraAppend($extra.id)}{$extra.count}{else}0{/if}" />
+                                <button href="#" id="meal-extras-{$extra.id}-{$size.id}" class="yd-extras">{$extra.name} {if $extra.cost>0}({__('%s&nbsp;€', $extra.cost|inttoprice)}){/if}</button>
+                            </li>
+                            {/foreach}
+                            </ul>
+                        {/foreach}
+                    </div>
+                </div>
+            </div>
+            {/if}
+            {/foreach}
+
+            {/if}
+
+            <div class="yd-dialogs-comment">
+
+                <div class="yd-dialogs-comment-head">
+                    <span>{__('Bemerkung zur Bestellung schreiben')}</span>
+                </div>
+
+                <div class="yd-dialogs-comment-body hidden">
+                    <textarea name="special"></textarea>
+                </div>
+
+            </div>
+
+            <div class="yd-dialogs-price">
+
+                <strong>
+                    {__('Dein aktueller Preis für diese Speise:')}
+                    <em>
+                        <span class="yd-current-meal-price">
+                            {$meal->getCost()|inttoprice}
+                        </span>
+                        {__('€')}
+                    </em>
+                </strong>
+
+                {if $update}
+                <input type="button" value="{__('Aktualisieren')}" class="yd-button-190 yd-update-to-card" id="" />
+                <input type="hidden" value="{__('In den Warenkorb')}" class="yd-button-190 yd-add-to-card" />
+                {else}
+                <input type="button" value="{__('In den Warenkorb')}" class="yd-button-190 yd-add-to-card" />
+                {/if}
+            </div>
+
+        </div> <!-- /yd-dialogs-body -->
+
+        <div class="yd-dialogs-footer">
+
+            <div id="yd-error-mincount" class="hidden">
+                {__('Achtung, Mindestmenge! Von dieser Speise musst Du mindestens %s Portionen zum Warenkorb hinzufügen.', {$meal->getMinCount()})}
+            </div>
+
+        </div>
+
+    </div> <!-- /yd-dialogs -->
+</form>
+{else}
+<div class="yd-dialogs"><a class="yd-dialogs-close"></a>
+    <div class="yd-dialogs-body" style="font-size:18px;text-align:center;">
+        {__('Speise nicht gefunden.')}
+    </div>
+    <div class="yd-dialogs-footer" style="height:30px"></div>
+</div> <!-- /yd-dialogs -->
+{/if}

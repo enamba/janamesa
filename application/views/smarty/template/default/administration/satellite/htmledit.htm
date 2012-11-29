@@ -1,0 +1,81 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/media/css/satellites/start.css" type="text/css" rel="stylesheet" />
+        <link media="all" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/base/jquery-ui.css" rel="stylesheet"/>
+        <link media="all" type="text/css" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" rel="stylesheet"/>
+        <link media="all" type="text/css" href="/media/css/satellites/js/colorpicker/colorpicker.css" rel="stylesheet" />
+
+
+
+
+        <title>{__b('Baukasten')}</title>
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        {if $satellite->getCss()}
+        <style type="text/css">{$satellite->getCss()}</style>
+        {else}
+        <link rel="stylesheet" type="text/css" href="/media/css/satellites/color-default.css" />
+        {/if}
+
+        <script type="text/javascript">
+            var id = {$satellite->getId()};
+        </script>
+        <script type="text/javascript" src="/media/javascript/compiled/backend-02a689a39a7266710062621a0a3b137adb7f79e5.js"></script>
+        <script type="text/javascript" src="/media/javascript/external/tiny_mce/tiny_mce.js"></script>
+        <script type="text/javascript" src="/media/javascript/external/tiny_mce/jquery.tinymce.js"></script>
+        <style type="text/css">
+
+            #yd-satellite-content{
+                width:1020Px;
+                min-height: 200px;
+                margin: 0 auto;
+            }
+
+
+
+
+            #draggable { background: #000; color:#fff; width: 150px; height: 150px; padding: 0.5em;}
+        </style>
+    </head>
+
+    <body style="background:url({$satellite->getBackground()}) repeat-y center;">
+        <div id="yd-nonfooter">
+            <div id="page" class="clearfix">
+                <div id="header" class="yd-menu-head" style="background:url({$satellite->getLogo()});">
+                    <ul>
+
+                        
+                        
+                        <li><a {if $action == "index" || $action == ""}class="active"{/if} id="index">{__("Home")}</a></li>
+                        
+                        {if $satellite->getShowOpinions()}<li><a id="opinion" {if $action == "opinion"}class="active"{/if}">{__("Meinung")}</a></li>{/if}
+                        {if $satellite->getShowJobs()}<li><a {if $action == "jobs"}class="active"{/if} id="jobs">{__("Jobs")}</a></li>{/if}
+                     
+                     <li><a id="about">{__b('Impressum')}</a></li>  
+                    </ul>
+                </div>
+
+
+
+                <div id="yd-satellite-content"></div>
+            </div>
+        </div>
+        <div id="yd-menu-footer">
+
+            <div id="yd-menu-footer_content">
+
+                <p>
+                    <a>{__("Impressum")}</a>,
+                    
+                </p>
+
+            </div>
+        </div>
+    </body>
+</html>

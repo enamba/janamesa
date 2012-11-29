@@ -1,0 +1,265 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>
+		                Web Payment Frontend
+	                </title>
+<style type="text/css">
+			    html,body{
+			        width:100%;
+			        height:100%;
+			        margin:0px;
+			        padding:0px;
+			        overflow:hidden;
+			    }
+			    </style>
+<style type="text/css">
+/* frontend stylesheet */
+
+/* default settings for the page */
+html, body {
+	font-family: Tahoma, Arial, sans-serif;
+	font-size: 11px;
+	color: #222222;
+	background-color: #f6f6f6;
+	scrollbar-face-color: #E5E5E5;
+	scrollbar-shadow-color: #aaaaaa;
+	scrollbar-highlight-color: #B8CFE5;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-darkshadow-color: #F5F5F5;
+	scrollbar-track-color: #f7f7f7;
+	scrollbar-arrow-color: #3674B3;
+}
+
+/* default font settings in a table cell */
+td { font-family: Tahoma, Arial, sans-serif; font-size: 11px; color: #222222; }
+
+/* default settings for all links */
+a:link { color: #003F6B; text-decoration: none; }
+a:visited {	color: #A3A3A3;	text-decoration: none; }
+a:hover { color: #003F6B; text-decoration: underline; }
+a:active { color: #003F6B; text-decoration: none; }
+a.button {
+	font-weight: bold;
+	font-size: 9px;
+	font-family: font-family: Tahoma, Arial, sans-serif;
+	padding: 4px 8px;
+	border-top: 1px solid white;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	border-left: 1px solid white;
+	text-align: center;	min-width: 75px;
+	text-transform: uppercase;
+	}
+a.button:link {
+	background-color: #dddddd;
+	color: #004080;
+	text-decoration: none;
+	}
+a.button:visited {
+	background-color: #dddddd;
+	color: #004080;
+	text-decoration: none;
+}
+a.button:hover {
+	background-color: #dddddd;
+	color: white;
+	border-color: black white white black;
+	text-decoration: none;
+}
+a.button:active {
+	background-color: #dddddd;
+	color: #004080;
+	text-decoration: none;
+}
+
+/* bar styles*/
+.bar { font-family: Tahoma, Arial, sans-serif; font-size: 10px; background-color: #CCCCCC; color: #A3A3A3; }
+.bar a:link { color: #003F6B; text-decoration: none; }
+.bar a:visited { color: #A3A3A3; text-decoration: none; }
+.bar a:hover { color: #003F6B; text-decoration: underline; }
+.bar a:active { color: #003F6B; text-decoration: none; }
+
+/* default input fields */
+INPUT
+{
+    FONT-SIZE: 8pt;
+    COLOR: #284281;
+    FONT-FAMILY: Tahoma, Arial
+}
+SELECT
+{
+    FONT-SIZE: 8pt;
+    COLOR: #284281;
+    FONT-FAMILY: Tahoma, Arial
+}
+
+/* special text styles */
+.text_bold { font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #222222; }
+.text_small { font-family: Arial, Helvetica, sans-serif; font-size: 9px; color: #222222; }
+.error { font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: red; }
+
+/* forms */
+.frm_box { border-style:ridge; border-color:black; border-width:1; font-size: 13px; background-color: #f6f6f6;
+font-style:normal; font-variant:normal; font-weight:normal; color:#000000; margin-left:4px;margin-right:4px; padding-left:4px; padding-right:4px; padding-top:1; padding-bottom:1; }
+
+/* imput buttons */
+.btn { border:1px ridge #999999; font-size: 11px; color: #444444; background-color: #ffffff; font-style:normal; font-variant:normal; font-weight:normal; }
+
+/* done for links in 'WPF Light' */
+.btn_link { cursor: default; border:1px ridge #999999; font-size: 11px; color: #003F6B; background-color: #ffffff; font-style:normal; font-variant:normal; font-weight:normal; padding-right:6px; padding-left:6px; padding-top:1px; padding-bottom:1px; }
+.btn_link:link {
+	background-color: #ffffff;
+	color: #444444;
+	text-decoration: none;
+	cursor: default;
+	}
+.btn_link:visited {
+	background-color: #ffffff;
+	color: #444444;
+	text-decoration: none;
+	cursor: default;
+}
+.btn_link:hover {
+	background-color: #ffffff;
+	color: #444444;
+	text-decoration: none;
+	cursor: default;
+}
+.btn_link:active {
+	background-color: #ffffff;
+	color: #444444;
+	text-decoration: none;
+	cursor: default;
+}
+
+#verificationcode_mandatory{
+	display:none;
+}
+</style>
+<link type="text/css" rel="stylesheet" href="/media/css/yourdelivery-payment-de.css">
+</head>
+<body>
+<div class="maintable">
+<table align="center" border="0" cellpadding="0" cellspacing="0"  width="100%">
+<tr id="header_bar" height="1px">
+
+<td>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr height="15px">
+<td class="bar" valign="center" align="left">
+		                                   &nbsp;Web Payment Frontend
+										</td><td class="bar" align="right"><SELECT id="" NAME="" style="font-size:9px;width:80px;display:inline"><option selected="true" value="de">Deutsch</option>
+
+            &nbsp;
+        </SELECT>&nbsp;
+                                      &nbsp;
+                                            </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center" colspan="3">
+<form method="post" action="/payment/ok">
+<center>
+<table align="center" width="100%">
+<tr>
+<td>
+<table BORDER="0">
+<tr>
+<td>
+<table BORDER="0" id="defaultPaymentTable">
+<tr height="5px" id="spacer1">
+<td></td>
+</tr>
+<tr height="5px" id="spacer2">
+<td></td>
+</tr>
+<tr height="5px" id="spacer3">
+
+<td></td>
+</tr>
+<tr id="paymentBlock">
+<td>
+<table>
+<tr id="creditCard">
+<td class="frm_box">
+<div name="ccBlock" id="ccBlock">
+<table>
+<tr>
+<td>
+<table BORDER="0" id="cardPane">
+<tr id="cardTypeRow">
+<td style="width:170px;height:16px;">Kartentyp</td><td style="width:222px;"><SELECT id="accountBrandDropDown" NAME="accountBrandDropDown" style="width:120px"><option value="VISA">Visa</option><option value="MASTER">MasterCard</option><option value="AMEX">American Express</option>
+
+            &nbsp;
+        </SELECT></td>
+</tr>
+<tr id="cardNumberRow">
+<td style="width:170px;height:16px">Kartennr.&nbsp;
+							</td><td style="width:222px;"><INPUT autocomplete="off" value="" style="width:200px;" maxlength="20" TYPE="TEXT" id="cardNumber" NAME="cardNumber"></td>
+</tr>
+<tr id="cardOwnerRow">
+<td style="width:170px;height:16px;">Karteninhaber&nbsp;
+							</td><td style="width:222px;"><INPUT value="{$owner}" style="width:200px;" maxlength="50" TYPE="TEXT" id="ccHolder" NAME="ccHolder"></td>
+</tr>
+
+<tr id="expiryDateRow">
+<td style="width:170px;height:16px;">Ablaufdatum</td><td style="width:222px;">
+    <SELECT STYLE="width:100px;" id="accountExpiryMonth" NAME="accountExpiryMonth"><option value="-">-</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></SELECT>
+    <SELECT STYLE="width:100px;" id="accountExpiryYear" NAME="accountExpiryYear"><option value="-">-</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option></SELECT></td>
+
+</tr>
+<tr valign="top" id="cvdRow">
+<td style="width:170px;">Prüfnummer&nbsp;<span id="verificationcode_mandatory">*</span></td><td style="width:222px;"><INPUT autocomplete="off" value="" style="width:100px;" maxlength="4" TYPE="TEXT" id="accountVerification" NAME="accountVerification">
+<br>
+<a href="#">Wo finde ich die Prüfnummer?</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr height="5px" id="spacer4">
+<td></td>
+</tr>
+</table>
+<table width="100%" BORDER="0">
+<tr>
+<tr>
+<td align="center">
+<table width="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<tr>
+<td class="buttonarea" id="buttonarea"><input value="Abbrechen" type="submit" name="cancel" class="btn" id="cancel">
+							&nbsp;
+
+							<input value="Jetzt Bezahlen" type="submit" class="btn" id="send"></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</center>
+</form>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>
+

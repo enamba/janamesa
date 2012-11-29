@@ -1,0 +1,2 @@
+update restaurants set notifyPayed='1' where notifyPayed>999999999;
+ALTER TABLE `restaurants` CHANGE `notifyPayed` `notifyPayed` INT( 10 ) NULL DEFAULT '3' COMMENT 'Anzahl der Bestellung, wie oft Support noch hinterhertelefonieren muss';

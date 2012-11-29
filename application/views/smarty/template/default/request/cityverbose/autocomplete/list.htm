@@ -1,0 +1,38 @@
+<table>
+    <thead>
+        <tr>
+            <td>Logradouro</td>
+            <td>Bairro</td>
+            <td>CEP</td>
+            <td>&nbsp;</td>
+        </tr>
+    </thead>
+    <tbody>
+        {foreach from=$list item=item}
+        <tr>
+            <td>
+                {$item.street}
+            </td>
+            <td>
+                {$item.neighbour}
+            </td>
+            <td>
+                {$item.cep}
+            </td>
+            {if $process == 'order'}
+                <td>
+                    <a href="/{$item.url}">SELECIONAR</a>
+                </td>
+            {else}
+                <td>
+                    <a class="jm-select-cep" data-cep="{$item.cep}" data-id="{$item.cityId}" data-street="{$item.street}">SELECIONAR</a>
+                </td>
+            {/if}
+        </tr>
+        {foreachelse}
+        <tr>
+            <td colspan="3">{__('Keine Suchergebnisse')}</td>
+        </tr>
+        {/foreach}
+    </tbody>
+</table>

@@ -1,0 +1,11 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/company/edit/_navigation.htm'}
+
+<form action="/administration_company_edit/billing/companyid/{$company->getId()}" method="post">
+    {include file='administration/billing/default/customized_form.htm'}
+    {include file='administration/billing/default/customized_form_company.htm'}
+</form>
+
+{/block}

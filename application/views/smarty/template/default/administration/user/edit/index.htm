@@ -1,0 +1,100 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/user/edit/_navigation.htm'}
+
+<form action="/administration_user_edit/index/userid/{$customer->getId()}" method="post" class="yd-form-toggle" id="yd-admin-user-edit-form">
+
+    <div class="be-2-column">
+        <div class="be-box">
+            <h2>{__b('Benutzerinformationen %sbearbeiten%s', '<a class="yd-form-toggle">', '</a>')}</h2>
+            <div class="be-box-in yd-form1">
+                <label>{__b('Vorname')} *</label>
+                <input type="text" name="prename" id="prename" value="{$customer->getPrename()}"/>
+                <hr />
+                <label>{__b('Nachname')} *</label>
+                <input type="text" name="name" id="name" value="{$customer->getName()}" />
+                <hr />
+                <label>{__b('Geschlecht')}</label>
+                <select name="sex">
+                    <option value="n"></option>
+                    <option value="w" {if $customer->getSex() == 'w'}selected{/if}>{__b('weiblich')}</option>
+                    <option value="m" {if $customer->getSex() == 'm'}selected{/if}>{__b('männlich')}</option>
+                </select>
+                <hr />
+                <label>{__b('Geburtstag')}</label>
+                <input type="text" name="birthday" id="birthday" value="{$customer->getBirthday()}"/>
+                (YYYY-MM-DD)
+                <hr />
+                <label>{__b('E-Mail')} *</label>
+                <input type="text" name="email" class="rund_set text"  value="{$customer->getEmail()}"/>
+                <hr />
+                <label>{__b('Telefon')}</label>
+                <input type="text" name="tel" id="tel"  value="{$customer->getTel()}" />
+                <hr />
+                <label>{__b('Neues Passwort (optional)')}</label>
+                <input type="text" name="newpass" id="password" value="" />
+                <hr />
+                <label>{__b('Whitelist')}<br /> {__b('(Bestellungen werden nicht durch den Fraud Filter überprüft)')}</label>
+                <input autocomplete="off" type="checkbox" name="whitelist" id="whitelist" value="1" {if $customer->isWhitelist()} checked="checked" {/if} />
+            </div>
+        </div>
+        <div class="be-box">
+            <h2>{__b('Informationen')}</h2>
+            <div class="be-box-in yd-form1">
+                {__b('Registriert seit')}: {$customer->getCreated()|date_format:'%d.%m.%Y %H:%M'}
+                <hr />
+                {__b('Letzte Änderung')}: {$customer->getUpdated()|date_format:'%d.%m.%Y %H:%M'}
+                <hr />
+                {__b('Letzter Login')}: {$customer->getLastlogin()|date_format:'%d.%m.%Y %H:%M'}
+                <hr />
+                {__b('Anzahl Logins')}: {$customer->getCountLogin()}
+            </div>
+        </div>
+    </div>
+
+    <div class="be-2-column">
+        <div class="be-box">
+            <h2>{__b('Speichern')}</h2>
+            <div class="be-box-in">
+                <input type="submit" value="{__b('Bestätigen')}" class="button"/>
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button" />
+            </div>
+        </div>
+        {if count($orders) >= 1}
+        <div class="be-box">
+            <h2>{__b('Bestellungen')}</h2>
+            <div class="be-box-in">
+                <table>
+                    <tr>
+                        <td width="15%">{__b('Bestellnummer')}</td>
+                        <td width="20%">{__b('Zeit')}</td>
+                        <td width="20%">{__b('Status')}</td>
+                        <td width="30%">{__b('Kommentar')}</td>
+                        <td width="15%">{__b('Preis')}</td>                        
+                    </tr>
+                    {foreach item=order from=$orders}
+                    <tr>
+                        <td><a href="/administration_order/index/type/view_grid_orders/IDgrid/{$order.ID}">{$order.Bestellnummer}</a></td>
+                        <td colspan="3"><a href="/administration_service_edit/index/id/{$order.restaurantId}">{$order.Dienstleister}</a></td>
+                        <td>{__('%s €' ,$order.Preis|number_format:2:",":"." )}</td>                        
+                    </tr>
+                        {foreach item=history from=$order.History}
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>{$history.created|date_format:"%d.%m.%Y %H:%M"}</td>
+                            <td>{$history.status}</td>
+                            <td colspan="2">{$history->getStatusMessage()}</td>                        
+                        </tr>
+                        {/foreach}
+                    {/foreach}
+                </table>
+                <strong><a href='/administration_order/index/type/view_grid_orders/Emailgrid/{$customer->getEmail()}' target='_blank'>{__b('Alle Bestellungen von %s %s ansehen.', $customer->getPrename(), $customer->getName())}</a></strong>
+            </div>
+        </div>
+        {/if}
+    </div>
+
+</form>
+
+{/block}

@@ -1,0 +1,126 @@
+<form action="/administration_crm/createticket" method="post">
+
+    {if !is_null($restaurant)}
+    <input type="hidden" name="refId" value="{$restaurant->getId()}"/>
+    <input type="hidden" name="refType" value="service"/>
+    {elseif !is_null($company)}
+    <input type="hidden" name="refId" value="{$company->getId()}"/>
+    <input type="hidden" name="refType" value="company"/>
+    {elseif !is_null($customer)}
+    <input type="hidden" name="refId" value="{$customer->getId()}"/>
+    <input type="hidden" name="refType" value="customer"/>
+    {/if}
+
+    <div class="be-1-column">
+        <div class="be-box">
+            <h2>{__b('Batch Zuweisung')}</h2>
+            <div class="be-box-in yd-crmtool">
+                {if is_null($batch)}
+                <h1>{__b('Ticket erstellen')}</h1>
+                {else}
+                <h1>{__b('Dieses Ticket wird für alle Restaurant mit dem ausgewählten offline Status erstellt')}</h1>
+                <label>{__b('Offline Status:')}</label>
+                <select name="offlineStatus" style="width: 200px;">
+                    {foreach from=Yourdelivery_Model_Servicetype_Abstract::getStati() key=ind item=s}
+                    <option value="{$ind}" {if $ind>0}selected="selected"{/if}>{$s}</option>
+                    {/foreach}
+                </select>
+                <hr />
+                {/if}
+
+                <label>{__b('Betreff:')}</label>        
+                <input name="topic" type="text"/>
+
+                <hr />
+
+                <label>{__b('Abteilung:')}</label>        
+                <select id="yd-crm-department" style="width: 200px;">
+                    <option value=""></option>
+                    <option value="Back Office">{__b('Back Office')}</option>
+                    <option value="Vertrieb">{__b('Vertrieb')}</option>
+                    <option value="Upselling">{__b('Upselling')}</option>
+                    <option value="Buchhaltung">{__b('Buchhaltung')}</option>
+                    <option value="Graphik">{__b('Graphik')}</option>
+                    <option value="Support">{__b('Support')}</option>
+                </select>
+
+                <hr />
+
+                <label>{__b('Grund:')}</label>        
+                <select name="reasonId" id="yd-crm-reason-id" style="width: 200px;">
+                </select>
+
+                <hr />
+
+                {if !is_null($restaurant)}  
+                <label>{__b('Status')}</label>
+                <select name="isOnline" id="yd-status-changed" style="width: 200px;">
+                    <option value="0">{__b('deaktiviert')}</option>
+                    <option value="1" {if ($restaurant->getIsOnline()==1)}selected{/if}>{__b('aktiviert')}</option>
+                </select>
+
+                <hr />
+                <div id="yd-offlinestatus" {if ($restaurant->isOnline())}style="display:none;"{/if}>
+                     <label>{__b('Offline Status')}</label>
+                    <select id="yd-offline-reason" name="status" style="width: 200px;">
+                        {foreach from=Yourdelivery_Model_Servicetype_Abstract::getStati() key=ind item=s}
+                        <option value="{$ind}" {if $restaurant->getStatus() == $ind}selected="selected"{/if}>{$s}</option>
+                        {/foreach}
+                    </select>
+
+                    <hr/>
+                </div>
+                {/if}
+
+                <label>{__b('Genaue Erklärung der Aufgabe:')}</label>        
+                <textarea name="message">
+                </textarea> *
+
+                <hr />
+
+                <label>{__b('Telefon')}</label>
+                <input type="checkbox" name="tel" value="1" id="yd-crm-tel"/>
+
+                <hr />
+
+                <label>{__b('E-Mail')}</label>
+                <input type="checkbox" name="email" value="1" id="yd-crm-email"/>
+
+                <hr />
+
+                <label>{__b('Mit OS Ticket verbunden')}</label>
+                <input type="checkbox" name="ticket" value="1" id="yd-crm-bind-ticket-checkbox"/>
+
+                <hr />
+
+                <div id="yd-ticket-nr" style="display:none;">
+                    <label>{__b('OS Ticket Nr:')}</label>
+                    <input name="ticketNr" type="text"/>        
+                    <hr />
+                </div>
+
+                <br/><br/>
+                <label>{__b('Ticket schließen')}</label>
+                <input type="checkbox" name="closed" value="1" id="yd-crm-close-checkbox"/>
+
+                <hr />
+
+                <div id="yd-crm-reassign">
+                    <label>{__b('Zuweisen an:')}</label>
+                    <input type="hidden" name="assignedToId" id="yd-crm-assigned" value=""/>
+                    <input class="yd-crm-staff-autocomplete" id="yd-crm-staff-autocomplete-1" type="text"/>
+
+                    <hr />
+                </div>
+
+                <label>{__b('Zu erledigen bis:')}</label>        
+                <input type="text" name="scheduledD" id="yd-date" value="" readonly/> {include file='administration/timebit.htm' separator=':' value="" mode='scheduledT'}
+
+                <hr />
+
+                <input type="submit" value="{__b('Speichern')}" class="button"/>
+            </div>
+        </div>
+    </div>
+
+</form>

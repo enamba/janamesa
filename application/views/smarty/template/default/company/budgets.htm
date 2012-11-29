@@ -1,0 +1,62 @@
+{extends file="company/base.htm"}
+
+{block name="content"}
+
+<div id="admincase">
+
+    {include file='company/_left_nav.htm'}
+    
+    <div class="clear"></div>
+
+    <div id="main-content">
+
+    <!-- Page Head -->
+
+        <ul class="shortcut-buttons-set">
+
+				<li><a class="shortcut-button" href="/company/budgets"><span>
+					<img src="{$domain_static}/images/yd-icons/backend/group.png" alt="" /><br />
+					{__('Gruppen Übersicht')}
+				</span></a></li>
+
+				<li><a class="shortcut-button" href="/company/budget"><span>
+					<img src="{$domain_static}/images/yd-icons/backend/group_add.png" alt="" /><br />
+					{__('Gruppe hinzufügen')}
+				</span></a></li>
+
+        </ul><!-- End .shortcut-buttons-set -->
+
+        <div class="clear"></div>
+
+        <div class="content-box">
+
+            <div class="content-box-header">
+
+                <h3>{__('Gruppen')}</h3>
+                <p class="yd-title-margin">{__('Definiere Gruppen für Zeiteinstellungen, Lieferadressen und Budgetregulierungen')}</p>
+
+                <div class="clear"></div>
+
+            </div> <!-- End .content-box-header -->
+
+                <div id="content" class="right">
+                    <div class="mydata">
+                        <div class="users">
+                            <div class="set-content">
+                                <div class="settings_group">
+                                    
+                                     {$grid}
+                                    
+                                </div> <!-- settings_group -->
+                            </div> <!-- set-content-->
+                        </div> <!-- users -->
+                    </div>
+                </div> <!-- content class=right -->
+            </div> <!-- content-box-content -->
+        </div> <!-- content-box -->
+    </div> <!-- main Content -->
+    <div class="clear"></div>
+    </div> <!-- admincase -->
+    </div>
+
+{/block}

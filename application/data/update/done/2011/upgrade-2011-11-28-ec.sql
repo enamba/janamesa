@@ -1,0 +1,1 @@
+alter table orders add column ec tinyint(4) default 0 after payment;

@@ -1,0 +1,104 @@
+<!-- active menupage -->
+
+{assign var=ranges value=$service->getRanges()}
+<script type="text/javascript">
+    var ydCurrentRanges = { {foreach $ranges as $r}
+        '{$r.cityId}': { 
+            deliverTime: "{$r.deliverTime}",
+            deliverCost: "{$r.delcost}",
+            minCost: "{$r.mincost}"
+        }{if !$r@last},{/if} 
+    {/foreach} };
+
+    //store custom variable, how many sercies are available
+    log('logging custom variable services :: {$service->getCategory()->name}');
+    _paq.push(['setCustomVariable','2','ServiceCategory',"{$service->getCategory()->name}", "page"]); //concat, must be a string!
+
+    //alter order object
+    ydState.setCity(ydState.getCity());
+    
+</script>
+
+<ul class="frame-categorys">
+    {foreach name=o from=$menu key=catId item=category name=catsside}
+        <li>
+            <a class="food_side-iframe {if $smarty.foreach.catsside.first}active{/if}" id="cat-{$catId}-side-0">{$category.name}</a>   
+        </li>
+    {/foreach}
+</ul>
+
+
+{foreach name=o from=$menu key=catId item=category name=catsmiddle}
+
+    <div id="yd-category-{$catId}" class="framemenu {if !$smarty.foreach.catsmiddle.first}hidden{else}active_cat{/if}" style="cursor:pointer;" >
+
+        <!-- RANDOM -->
+        <img src="{$timthumb}/{$config->domain->base}/service/{$service->getId()}/categories/{$catId}/{($category.name|replace:'/':'_')|urlencode}-600-0.jpg" 
+             class="yd-menu-picture" 
+
+             {if $category_image_width > 0} width="{$category_image_width}"{/if} 
+             {if $category_image_height > 0} height="{$category_image_height}"{/if}
+        />
+
+        <table id="yd-category-table-{$catId}">
+
+            <thead>
+                <tr class="thead">
+                    <th width="{math equation='100-x' x=12*count($category.sizes)}">{__('Gericht')}</th>
+                    {foreach from=$category.sizes item=size}
+                        <th width="12%" class="right">{$size.name}</th>
+                    {/foreach}
+                </tr>
+            </thead>
+
+            <tbody>
+                {foreach from=$category.meals key=mealId item=mealSize}
+                    {cycle values="color," print=false assign=cycler}
+                    <tr>
+                        {foreach name=mealIter from=$mealSize key=sizeId item=meal}
+                            {if $smarty.foreach.mealIter.iteration == 1}
+                                <td id="yd-click-{$mealId}-{$sizeId}-0" class="click-no-size">
+                                    <a>{$meal.name}</a>
+                                    <small>{$meal.desc}</small>
+                                </td>
+                                {if not is_null($meal.cost)}
+                                    <td class="right click click-size" id="yd-click-{$mealId}-{$sizeId}">
+                                        <a>{__('%s €', $meal.cost|inttoprice)}</a>
+                                        <!-- pfand! -->
+                                    </td>
+                                {else}
+                                    <td></td>
+                                {/if}
+                            {else}
+                                {if not is_null($meal.cost)}
+                                    <td class="right click click-size" id="yd-click-{$mealId}-{$sizeId}">
+                                        <a>{__('%s €', $meal.cost|inttoprice)}</a>
+                                        <!-- pfand! -->
+                                    </td>
+                                {else}
+                                    <td></td>
+                                {/if}
+                            {/if}
+                        {/foreach}
+                    </tr>
+
+                    <tr class="yd-okicon-tr" id="yd-okicon-{$mealId}" style="display:none">
+                        <td colspan="{($category.sizes|@count)+1}">
+                            <div class="yd-okicon"></div>
+                        </td>
+                    </tr>
+                    
+                    {foreach name=mealIter from=$mealSize key=sizeId item=meal}
+                    <tr class="extras" id="yd-extras-{$mealId}-{$sizeId}">
+                        <td align="center" colspan="{($category.sizes|@count)+1}">
+                            <img src="{$domain_static}/images/yd-frame/qype/ajax-loader.gif" alt="" /> {__('Daten werden geladen')}
+                        </td>
+                    </tr>
+                    {/foreach}
+                    
+                {/foreach}
+            </tbody>
+        </table>
+
+    </div>
+{/foreach}

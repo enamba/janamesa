@@ -1,0 +1,56 @@
+<div class="yd-box-head yd-float-head cursor" id="expand-order-head">
+    <a id="expand-order-plus" class="yd-plus"></a>
+    <a id="expand-order-minus" class="yd-minus"></a>
+    {__('Letzte Bestellung')}<br />
+    <small>{__('Hier findest Du die Übersicht Deiner zuletzt getätigten Bestellung!')}</small>
+</div>
+
+{assign var=ord value=$cust->getLastOrder(1, $mode, $kind)}
+{if $ord|@count > 0}
+    <div id="expand-order">
+        <div class="yd-box-body yd-float-body">
+            <ul class="yd-sidebar-list">
+                <li><em>{$ord->getService()->getName()|truncate:20:"..."}</em><strong>{$ord->getTime()|date_format:__("%d.%m.%y um %H:%M")}</strong></li>
+                <li><em>{__('Art:')}</em><strong>{if $ord->getKind() == "comp"}{__('Firmenbestellung')}{else}{__('Privat')}{/if}</strong></li>
+                <li><em>{__('Lieferzeit:')}</em><strong class="{if $ord->getMode() == "great" && $ord->getState() == 0}red{else}green{/if}"> {$ord->getDeliverTime()|date_format:__("%d.%m.%y um %H:%M")}</strong></li>
+                <li><em>{__('Bestellwert:')}</em><strong>{__('%s €',$ord->getAbsTotal(false,false,true,false,false)|inttoprice)}</strong></li>
+                <li><em>{__('Bestellnummer:')}</em><strong> {$ord->getNr()}</strong></li>
+                {if $ord->getMode() == "great"}
+                    <li><em>{__('Status:')}</em><strong class="{if $ord->getState() == 0}red{else}green{/if}">{$ord->getStateName()}</strong></li>
+                {/if}
+                <li class="align-l"><a href="/ordercoupon/{$ord->getHash()}" class="yd-popup">« {__('Bestellzettel ansehen')}</a></li>
+
+                {if ($ord->getKind() == 'priv' || ($ord->getKind() == "comp" && $ord->getMode() == "rest") && $ord->isRepeatable())}
+                    <li class="align-l">
+                        <a href="#" id="yd-repeat-order-{$ord->getHash()}-{$ord->getService()->getId()}" class="yd-link-repeat-lastOrder">
+                            <span>« {__('Bestellung wiederholen')}</span>
+                        </a>
+                        <span class="yd-repeat-loading hidden">
+                            {__('Bitte warte, Du wirst weitergeleitet')}&nbsp;
+                            <img src="{$config->domain->static}/images/yd-background/yd-load-small.gif" alt="" />
+                        </span>
+                    </li>
+                {/if}
+                {if $ord->showRatingLink()}
+                    <li class="align-l"><a href="/rate/{$ord->getHash()}" class="cursor">« {__('Bestellung bewerten')}</a></li>
+                {/if}
+                {if $ord->getKind() == "priv"}
+                    {if $config->domain->base != 'janamesa.com.br'}
+                        <li class="align-l"><a href="/user/billrequest/hash/{$ord->getHashtag()}">« {__('verifizierte Rechnung')}</a></li>
+                    {/if}
+                {/if}
+            </ul>
+        </div>
+    </div>
+
+{else}
+    <div id="expand-order">
+        <div class="yd-box-body yd-float-body">
+            <ul>
+                <li class="align-l">
+                    {__('Hier findest Du die Daten Deiner letzten Bestellung vor, sobald Du zum ersten Mal bestellt hast.')}
+                </li>
+            </ul>
+        </div>
+    </div>
+{/if}

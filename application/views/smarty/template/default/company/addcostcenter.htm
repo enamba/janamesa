@@ -1,0 +1,81 @@
+{extends file="company/base.htm"}
+
+{block name="content"}
+
+<div id="admincase">
+
+    {include file='company/_left_nav.htm'}
+
+    <div class="clear"></div>
+
+    <div id="main-content">
+
+    <!-- Page Head -->
+
+            <ul class="shortcut-buttons-set">
+
+                <li><a class="shortcut-button" href="/company/costcenters"><span>
+                    <img src="{$domain_static}/images/yd-icons/backend/orders_overview.png" alt="" /><br />
+                    {__('Kostenstelle auflisten')}
+                </span></a></li>
+
+                <li><a class="shortcut-button" href="/company/addcostcenters"><span>
+                    <img src="{$domain_static}/images/yd-icons/backend/project_number.png" alt="" /><br />
+                    {__('Kostenstelle erstellen')}
+                </span></a></li>
+
+			</ul><!-- End .shortcut-buttons-set -->
+
+    <div class="clear"></div>
+
+    <div class="content-box">
+
+        <div class="content-box-header">
+
+            <h3>{__('Abteilung hinzufügen')}</h3>
+
+            <div class="clear"></div>
+
+        </div>
+
+
+<div id="content" class="right">
+    <!-- Anfang Meine Daten -->
+
+    <div class="right" id="content">
+        <div class="users"> <!-- Anfang Meine Daten -->
+            <div class="set-content">
+                <form action="/company/addcostcenter" method="post" class="fm yd-validation">
+                <div class="settings_group">
+                    <div class="title">{__('Abteilungsdaten')}</div>
+
+                    <div class="user-content">
+                        <label for="">{__('Name:')}</label>
+                        <input type="text" class="text-input medium-input validate[required]" name="name" id="name" value="{if isset($post)}{$post.name}{/if}" />
+                        <span class="checked"><img src="{$domain_static}/images/yd-icons/icon_checked.gif" width="18" height="19" /></span>
+                    </div>
+
+                    <div class="user-content" id="ident-number">
+                        <label for="">{__('Identifikationsnummer:')}</label>
+                        <input type="text" class="text-input medium-input" name="identNr" value="{if isset($post)}{$post.identNr}{/if}" />
+                        <span class="checked"><img src="{$domain_static}/images/yd-icons/icon_checked.gif" width="18" height="19" /></span>
+                    </div>
+
+                    <div class="user-content">
+                        <label for="">&nbsp;</label>
+                        <input type="submit" class="button" name="add-acc" value="{__('Kostenstelle einrichten')}"/>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+<!-- Ende Meine Daten -->
+</div> <!-- content-box-content -->
+ </div> <!-- Content-Box -->
+        <div class="clear"></div>
+    </div> <!-- main Content -->
+</div> <!-- admincase -->
+
+{/block}

@@ -1,0 +1,31 @@
+<!--
+{if $cust->isLoggedIn()}
+    <div class="yd-box">
+        <div class="yd-box-head" id="yd-expand-fav-meal-head">
+            <a href="#" id="yd-expand-fav-meal-plus" class="yd-plus"></a>
+            <a href="#" id="yd-expand-fav-meal-minus" class="yd-minus"></a>
+            <img src="{$domain_static}/images/yd-icons/thumb1.png" alt="" />
+            <span class="tooltip" title="Hier werden Ihre Lieblingsgerichte gezeigt.">Lieblingsgerichte</span>
+        </div>
+
+        <div class="yd-box-body" id="yd-expand-fav-meal">
+            <ul id="yd-fav-meal-sidebar-box">
+                {assign var=count value=0}
+                {foreach from=$cust->getFavouriteMeals() item=meal}
+                    {if $meal->producedBy() && $meal->producedBy()->getId() == $order->getService()->getId()}
+                        <li class="yd-fav-meal" id="yd-fav-{$meal->getId()}">
+                            <em>{$meal->getName()|truncate:25}</em>
+                            <a href="#" class="yd-add-meal-from-favourite" id="yd-add-meal-from-favourite-{$meal->getId()}" title="Fügen sie ihren Favoriten zur Bestellung hinzu">&gt;&gt;</a>
+                            <a href="#" class="fav-meal-erase yd-remove-fav-meal" id="yd-meal-{$meal->getId()}" title="Löschen sie ihren Favoriten aus der Liste"><img src="{$domain_static}/images/yd-icons/icon_user_delete.gif" alt="{$count++}" /></a>
+                        </li>
+                    {/if}
+                {/foreach}
+                <li id="yd-fav-meal-helper" class="{$count}" style="display:none;"></li>
+                <li class="yd-no-favourite-meals align-l" style="display: none;"">
+                    Sie haben bei diesem Lieferservice noch kein Lieblingsgericht ausgewählt, klicken Sie auf das Icon neben dem Gericht!
+                </li>
+            </ul>
+        </div>
+    </div>
+{/if}
+-->

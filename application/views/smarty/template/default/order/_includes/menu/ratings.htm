@@ -1,0 +1,83 @@
+{if $config->domain->base != 'eat-star.de'}
+
+    {if $service->getRating()->count(null, true, false, true) == 0}
+        <br /><br />
+        <p>{__('Bisher wurden für dieses Restaurant noch keine Bewertungen abgegeben.')}</p>
+    {else}
+        <div id="yd-ratings">
+            <div id="yd-ratings-all-wrapper" class="yd-box">
+                <div id="yd-ratings-all" class="yd-clearfix">
+
+                    <ul id="yd-ratings-social">
+                        <li style="max-width: 130px;">{__('<i>%s %%</i> aller Nutzer empfehlen<br />diesen Lieferservice.', round($service->getRating()->getAverageAdvise()))}</li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            {__('Qualität des Essens:')}
+                            <br />
+                            <strong class="yd-rated-{round($service->getRating()->getAverageQuality()*2)|string_format:'%02d'}"></strong>
+                            {_n('%s Bewertung', '%s Bewertungen', $service->getRating()->count(null, true, false, true), $service->getRating()->count(null, true, false, true))}
+                        </li>
+                        <li><strong>{__('Sehr gut')}</strong> <span><i style="width: {$service->getRating()->getPercentRating(5, 'quality')}%;"></i></span> {$service->getRating()->getPercentRating(5, 'quality')}</li>
+                        <li><strong>{__('Gut')}</strong> <span><i style="width: {$service->getRating()->getPercentRating(4, 'quality', true)}%;"></i></span> {$service->getRating()->getPercentRating(4, 'quality')}</li>
+                        <li><strong>{__('Befriedigend')}</strong> <span><i style="width: {$service->getRating()->getPercentRating(3, 'quality', true)}%;"></i></span> {$service->getRating()->getPercentRating(3, 'quality')}</li>
+                        <li><strong>{__('Mangelhaft')}</strong> <span><i style="width: {$service->getRating()->getPercentRating(2, 'quality', true)}%;"></i></span> {$service->getRating()->getPercentRating(2, 'quality')}</li>
+                        <li><strong>{__('Ungenügend')}</strong> <span><i style="width: {$service->getRating()->getPercentRating(1, 'quality', true)}%;"></i></span> {$service->getRating()->getPercentRating(1, 'quality')}</li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            {__('Lieferung:')}
+                            <br />
+                            <strong class="yd-rated-{round($service->getRating()->getAverageDelivery()*2)|string_format:'%02d'}"></strong>
+                            {_n('%s Bewertung', '%s Bewertungen', $service->getRating()->count(null, true, false, true), $service->getRating()->count(null, true, false, true))}
+                        </li>
+                        <li><strong>{__('Sehr gut')}</strong> <span><i style="width: {$service->getRating()->getPercentRating(5, 'delivery', true)}%;"></i></span> {$service->getRating()->getPercentRating(5, 'delivery')}</li>
+                        <li><strong>{__('Gut')}</strong> <span><i style="width: {$service->getRating()->getPercentRating(4, 'delivery', true)}%;"></i></span> {$service->getRating()->getPercentRating(4, 'delivery')}</li>
+                        <li><strong>{__('Befriedigend')}</strong> <span><i style="width: {$service->getRating()->getPercentRating(3, 'delivery', true)}%;"></i></span> {$service->getRating()->getPercentRating(3, 'delivery')}</li>
+                        <li><strong>{__('Mangelhaft')}</strong> <span><i style="width: {$service->getRating()->getPercentRating(2, 'delivery', true)}%;"></i></span> {$service->getRating()->getPercentRating(2, 'delivery')}</li>
+                        <li><strong>{__('Ungenügend')}</strong> <span><i style="width: {$service->getRating()->getPercentRating(1, 'delivery', true)}%;"></i></span> {$service->getRating()->getPercentRating(1, 'delivery')}</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div id="yd-ratings-detail">
+
+                {foreach from=$service->getRating()->getList(null, true) item=rating}
+                    <div class="hreview">
+                        <span class="item">
+                            <span class="fn">{$service->getName()}</span>
+                        </span>
+                        <span class="q0">
+                            {__('Bewertet von %s%s%s am', '<span class="reviewer">', $rating.author|escape|default:__('Unbekannt'), '</span>')}
+                            <span class="dtreviewed">
+                                {$rating.created|date_format:__('%d.%m.%Y')}<span class="value-title" title="{$rating.created|date_format:'Y-m-d'}"></span>
+                            </span>
+                        </span>
+                        <span class="summary">{$rating.title|escape|default:''}</span>
+                        <span class="description">{$rating.comment|escape|default:''}</span>
+                        <!--Rating: --><span class="rating">{($rating.quality+$rating.delivery)/2|string_format:'%02d'}</span>
+                        <span class="q1">
+                            <span class="blockleft">{__('Qualität des Essens:')}</span> <strong class="yd-rated-{($rating.quality*2)|string_format:'%02d'}"></strong>
+                            <span class="blockleft">{__('Lieferung:')}</span> <strong class="yd-rated-{($rating.delivery*2)|string_format:'%02d'}"></strong>
+                        </span>
+                        {if $rating.advise == '1'}
+                            <i style="background: #dafdd8;">
+                                <img src="{$domain_static}/images/yd-icons/yd-ratings-thumb-up.png" alt="" />
+                            </i>
+                        {/if}
+                        {if $rating.advise == '0'}
+                            <i style="background: #fdd9d9;">
+                                <img src="{$domain_static}/images/yd-icons/yd-ratings-thumb-down.png" alt="" />
+                            </i>
+                        {/if}
+                    </div>
+                {/foreach}
+
+            </div>
+        </div>
+
+    {/if}
+{/if}

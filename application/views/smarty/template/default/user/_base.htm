@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="de" xml:lang="de" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="de" xml:lang="de" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="de" xml:lang="de" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="de" xml:lang="de" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="de" xml:lang="de">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="viewport" content="width=1100">
+
+        <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57x57-precomposed.png" /> <!-- iPhone -->
+        <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-72x72-precomposed.png" sizes="72x72" /> <!-- iPad -->
+        <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-114x114-precomposed.png" sizes="114x114" /> <!-- iPhone 4+ -->
+        <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-144x144-precomposed.png" sizes="144x144" /> <!-- iPad 3+ -->
+        <link rel="SHORTCUT ICON" href="/favicon.ico" type="image/x-icon" />
+
+        <link rel="stylesheet" type="text/css" href="/media/css/compiled/frontend-{$extra_css|default:'no'}-{$REVISION}.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/www.lieferando.de/yd-frontend-step1.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/www.lieferando.de/yd-frontend-step2.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/www.lieferando.de/yd-frontend-user-uniform.css" />
+
+        <script type="text/javascript" src="/media/javascript/compiled/frontend-test.js"></script>
+
+        <title>
+            {if $cust->isLoggedIn()}
+            {__('Profil von %s bei %s', $cust->getFullname(), $config->domain->base)}
+            {else}
+            {__('Profil von %s bei %s', 'Gast', $config->domain->base)}
+            {/if}
+        </title>
+
+        <script>
+            $(function(){
+                $(".yd-profile-picture input, .yd-profile-picture textarea, .yd-profile-picture select, .yd-profile-picture button").uniform();
+            });
+        </script>
+
+        {include file='_cookies/monetate/global.htm'}
+        {include file='_cookies/google/analytics.htm'}
+        {if $trackGoogleEcomerce}
+        {include file='_cookies/google/ecommerce.htm'}
+        {/if}
+        {include file='_cookies/veinteractive/global.htm' journeycode=$config->veinteractive->code}
+
+    </head>
+
+    <body class="de yd-user-content">
+
+        <div id="fb-root"></div>
+        {literal}
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1&appId=APP_ID";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        {/literal}
+
+        <div id="yd-nonfooter">
+
+            {include file="notification.htm"}
+
+            {include file="base_header.htm"}
+
+            <div id="yd-content" class="yd-clearfix">
+
+                {block name="content"}{/block}
+
+            </div>
+
+        </div>
+
+        {include file="base_footer.htm"}
+
+        <script type="text/javascript">
+            <!--
+            {foreach from=$this->getDisabledElements() item=dis}
+            if ( $("#{$dis}").length > 0 ){
+                $("#{$dis}").hide();
+            }
+            {/foreach}
+            -->
+        </script>
+
+        {include file='_cookies/sociomatic/global.htm'}
+        {include file='_cookies/masterpixel/global.htm' uadomain=$domain_base}
+        {include file='_cookies/piwik/global.htm' uadomain=$domain_base}
+
+    </body>
+</html>

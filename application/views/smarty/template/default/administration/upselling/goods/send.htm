@@ -1,0 +1,40 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<form action="/administration_upselling_goods/send" method="post">
+    <input type="hidden" name="id" value="{$item->getId()}" />
+    
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Rechnung verschicken mit auf Zahlung')}
+            </div>
+
+            <div class="item-content">
+            {include file='administration/upselling/goods/_item.htm'}
+            </div>
+            
+            <div class="item-content">
+                <table>
+                    <tr>
+                        <td><input type="checkbox" name="via_fax" value="1" /></td>
+                        <td>{__b('Fax')}</td>
+                        <td><input type="text" name="fax" value="{$service->getFax()}" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="via_email" value="1" /></td>
+                        <td>{__b('Email')}</td>
+                        <td><input type="text" name="email" value="{$service->getEmail()}" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="via_post" value="1" checked="1" /></td>
+                        <td colspan="2">{__b('Post')}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <a href="/download/bill/{Default_Helpers_Crypt::hash($bill->getId())}/pdf" class="button">{__b('Rechnung angucken')}</a>
+    <input type="submit" value="{__b('Verschicken')}" />
+</form>
+{/block}

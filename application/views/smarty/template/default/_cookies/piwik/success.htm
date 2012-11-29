@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    
+    try{
+        {assign var=categoryname value=$order->getService()->getCategory()->name}
+        {assign var=card value=$order->getCard()}
+
+        {foreach from=$card.bucket item=custItems key=custId}
+            {foreach from=$custItems item=item key=hash name=meals}
+                {assign var=meal value=$item.meal}
+                {assign var=count value=$item.count}
+                _paq.push(["addEcommerceItem",
+                    "{$meal->getId()}", // SKU
+                    '{$meal->getName()|escape:'quotes'}', // Name
+                    '{$categoryname|escape:'quotes'}', // Kategoriename
+                    "{($meal->getAllCosts() * $count)|inttoprice:2:'.'}", // Preis
+                    "{$count}" // Menge
+                ]);
+            {/foreach}
+        {/foreach}
+
+        //add order data
+        _paq.push(["trackEcommerceOrder",
+            "{$order->getId()}",
+            "{$order->getAbsTotal()|inttoprice:2:'.'}",
+            "{$order->getAbsTotal(false)|inttoprice:2:'.'}",
+            "{$order->getTax()|inttoprice:2:'.'}",
+            "{$order->getDeliverCost()|inttoprice:2:'.'}",
+            "{$order->getDiscountAmount()|inttoprice:2:'.'}"
+        ]);
+        log('tracking ecommerce');
+    }
+    catch (err) {
+        log('failing to track ecommerce');
+    }
+
+</script>

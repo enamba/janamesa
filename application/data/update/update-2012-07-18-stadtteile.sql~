@@ -1,0 +1,15 @@
+ALTER TABLE city ADD district varchar(127) default null AFTER state, ADD lat float default null AFTER parentCityId, ADD lng float default null AFTER lat;
+
+DROP TABLE IF EXISTS `districts`;
+CREATE TABLE `districts` ( 
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+    `plz` varchar(15) NOT NULL,
+    `district` varchar(255) NOT NULL,
+    `lat` float default NULL,
+    `lng` float default NULL,
+     INDEX `plz` (`plz`)
+) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;
+INSERT into districts SELECT null as id, zipcode as plz, name as district, lat, lng FROM geo.district join geo.zipcode on district_id=district.id;
+
+
+UPDATE city c, districts d set c.district = d.district, c.lat = d.lat, c.lng = d.lng where c.plz=d.plz;

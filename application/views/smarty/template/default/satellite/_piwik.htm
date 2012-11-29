@@ -1,0 +1,9 @@
+<script type="text/javascript">
+    try{   
+        piwikTracker.setCustomVariable(5, "satellite", "{$satellite->getDomain()}", "visit");
+        log('logging custom variable for {$satellite->getDomain()}');      
+    }
+    catch ( err ){
+        log('error logging with piwik');
+    }
+</script>

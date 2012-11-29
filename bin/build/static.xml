@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="yourdelivery" default="static" description="Build process for any yourdelivery system">  
+
+    <property file="properties.ini" />
+    
+    <!-- ============================================  -->
+    <!-- Target: prepare a current repository          -->
+    <!-- ============================================  -->
+    <target name="prepare">       
+        <!-- get current master -->
+        <delete dir="${repo}" />
+        <mkdir dir="${repo}" />
+        <gitclone
+            repository="ssh://ydadmin@46.163.72.129/home/ydadmin/git/yd"
+            targetPath="${repo}" />       
+    </target>
+   
+    
+    <!-- ============================================  -->
+    <!-- Target: extern content                        -->
+    <!-- ============================================  -->
+    <target name="static">      
+        <phingcall target="prepare" />
+        
+        <scp username="www-data" password="" host="46.163.78.68" todir="/var/www/">
+            <fileset dir="${repo}/public/static/domains/">
+                <include name="**/*" />
+            </fileset>
+        </scp>
+        
+        <scp username="www-data" password="" host="46.163.78.108" todir="/var/www/">
+            <fileset dir="${repo}/public/static/domains/">
+                <include name="**/*" />
+            </fileset>
+        </scp>
+
+        <phingcall target="media-all" />
+        <phingcall target="widgets-all" />
+        <mail tolist="it@lieferando.de" subject="Static updatecompleted" from="build@lieferando.de">static domains deployed</mail>
+    </target>
+
+    
+    <!-- ============================================  -->
+    <!-- Target: deploy media                          -->
+    <!-- ============================================  -->
+    <target name="media-all">
+        <foreach list="${domains}" param="current_domain" target="media" />
+    </target>
+    
+    <target name="media">
+        <!-- check if property domain is set -->
+        <fail unless="current_domain" message="no value set for property domain" />
+        <echo msg="deploying media for ${current_domain}" />
+        
+        <scp username="www-data" password="" host="46.163.78.68" todir="/var/www/${current_domain}/media">
+            <fileset dir="${repo}/public/media/">
+                <include name="**/*" />
+            </fileset>
+        </scp>
+        
+        <scp username="www-data" password="" host="46.163.78.108" todir="/var/www/${current_domain}/media">
+            <fileset dir="${repo}/public/media/">
+                <include name="**/*" />
+            </fileset>
+        </scp>
+    </target>
+
+    <!-- ============================================  -->
+    <!-- Target: deploy all widgets                    -->
+    <!-- ============================================  -->
+    <target name="widgets-all">
+        <foreach list="${domains}" param="current_domain" target="widgets" />
+        <mail tolist="it@lieferando.de" subject="Staging completed" from="build@lieferando.de">widgets deployed ${domains}</mail>
+    </target>
+    
+    <target name="widgets">        
+        <!-- check if property domain is set -->
+        <fail unless="current_domain" message="no value set for property domain" />
+        <echo msg="deploying widget for ${current_domain}" />
+        <scp username="www-data" password="" host="46.163.78.68" todir="/var/www/${current_domain}/widgets">
+            <fileset dir="${repo}/public/widgets">
+                <include name="**/*" />
+            </fileset>
+        </scp>
+        
+        <scp username="www-data" password="" host="46.163.78.108" todir="/var/www/${current_domain}/widgets">
+            <fileset dir="${repo}/public/widgets">
+                <include name="**/*" />
+            </fileset>
+        </scp>
+    </target>
+
+</project>

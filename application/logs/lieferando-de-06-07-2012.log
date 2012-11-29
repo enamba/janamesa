@@ -1,0 +1,490 @@
+2012-07-06T04:44:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T04:44:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T04:44:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T04:48:01-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/newpass.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T04:48:01-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/newpass.htm 
+2012-07-06T05:01:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T05:01:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T05:01:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T05:01:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T05:01:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T05:01:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T05:07:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T05:07:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T05:07:11-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T05:08:04-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T05:08:04-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T05:08:05-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T05:18:13-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing User naie@lieferando.de failed while trying to log in 
+2012-07-06T05:18:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template user/loginfailed.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T05:18:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/loginfailed.htm 
+2012-07-06T05:37:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T05:37:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T05:37:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T05:38:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T05:38:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T05:38:17-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T05:38:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Customer with id #467 new data :: Array(    [name] => Naie    [prename] => Jens    [email] => jonz@kybernaut.de    [facebookId] => 690363597    [password] => 432d75ea509a2523e103d9c0d4857cd2) 
+2012-07-06T05:38:30-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing successfully created customer #467 Jens Naie via facebook-login - facebookId 690363597 
+2012-07-06T05:38:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 1341563910 
+2012-07-06T05:39:10-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing customer #467 Jens Naie already a facebook user - facebookId 690363597 
+2012-07-06T05:39:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 1341563950 
+2012-07-06T05:39:23-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing customer #467 Jens Naie already a facebook user - facebookId 690363597 
+2012-07-06T05:39:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 1341563963 
+2012-07-06T06:13:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T06:13:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T06:13:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T06:13:46-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing customer #467 Jens Naie already a facebook user - facebookId 690363597 
+2012-07-06T06:13:46-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing updating model Default_Model_Base #467 with modified data :: Array(    [title] => Herr/Frau    [name] => Naie    [prename] => Jens    [email] => jonz@kybernaut.de    [password] => 432d75ea509a2523e103d9c0d4857cd2    [lang] => de    [sex] => n    [tel] =>     [privmail] =>     [autologin] => 0    [start] => 1    [lastlogin] => 2012-07-06 06:13:46    [countLogin] => 1    [deleted] => 0    [permanentDiscountId] =>     [ktoName] =>     [ktoNr] =>     [ktoBlz] =>     [updated] => 2012-07-06 06:13:46    [birthday] => 0000-00-00    [source] =>     [addition] =>     [facebookId] => 690363597    [profileImage] =>     [nickname] =>     [whitelist] => 0    [anrede] => Senhor/senhora) 
+2012-07-06T06:13:46-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 467 
+2012-07-06T06:13:46-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing User  successfully logged in 
+2012-07-06T06:13:46-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 467 
+2012-07-06T06:13:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-07-06T06:13:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 5 - start 0) for customer #467 jonz@kybernaut.de - unratedOrderCount: 0 
+2012-07-06T06:13:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-07-06T06:13:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-07-06T06:13:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: could not store for id:  open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:13:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-06T06:13:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-06T06:13:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-06T06:14:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/index.htm 
+2012-07-06T06:14:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 5 - start 0) for customer #467 jonz@kybernaut.de - unratedOrderCount: 0 
+2012-07-06T06:14:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-07-06T06:14:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-07-06T06:14:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: could not store for id:  open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:14:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-06T06:14:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-07-06T06:14:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 5 - start 0) for customer #467 jonz@kybernaut.de - unratedOrderCount: 0 
+2012-07-06T06:14:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-07-06T06:14:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-07-06T06:14:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: could not store for id:  open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:14:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-06T06:15:15-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T06:15:15-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T06:15:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T06:15:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Customer with id #468 new data :: Array(    [name] => Naie    [prename] => Jens    [email] => jonz@kybernaut.de    [facebookId] => 690363597    [password] => 432d75ea509a2523e103d9c0d4857cd2) 
+2012-07-06T06:15:43-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing successfully created customer #468 Jens Naie via facebook-login - facebookId 690363597 
+2012-07-06T06:15:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing updating model Default_Model_Base #468 with modified data :: Array(    [title] => Herr/Frau    [name] => Naie    [prename] => Jens    [email] => jonz@kybernaut.de    [password] => 432d75ea509a2523e103d9c0d4857cd2    [lang] => de    [sex] => n    [tel] =>     [privmail] =>     [autologin] => 0    [start] => 1    [lastlogin] => 2012-07-06 06:15:43    [countLogin] => 1    [deleted] => 0    [permanentDiscountId] =>     [ktoName] =>     [ktoNr] =>     [ktoBlz] =>     [updated] => 2012-07-06 06:15:43    [birthday] => 0000-00-00    [source] =>     [addition] =>     [facebookId] => 690363597    [profileImage] =>     [nickname] =>     [whitelist] => 0    [anrede] => Senhor/senhora) 
+2012-07-06T06:15:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-06T06:15:43-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing User  successfully logged in 
+2012-07-06T06:15:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-06T06:15:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-07-06T06:15:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 5 - start 0) for customer #468 jonz@kybernaut.de - unratedOrderCount: 0 
+2012-07-06T06:15:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-07-06T06:15:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-07-06T06:15:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: could not store for id:  open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:15:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-06T06:15:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:15:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:15:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:15:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_5_0customer468 
+2012-07-06T06:15:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_10_0customer468 
+2012-07-06T06:15:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_25_0customer468 
+2012-07-06T06:15:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_50_0customer468 
+2012-07-06T06:15:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_100_0customer468 
+2012-07-06T06:15:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_5_0customer468 
+2012-07-06T06:15:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_10_0customer468 
+2012-07-06T06:15:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_25_0customer468 
+2012-07-06T06:15:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_50_0customer468 
+2012-07-06T06:15:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_100_0customer468 
+2012-07-06T06:15:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:15:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:15:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:15:59-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 0 
+2012-07-06T06:16:01-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value  
+2012-07-06T06:16:48-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing customer #468 Jens Naie already a facebook user - facebookId 690363597 
+2012-07-06T06:16:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing updating model Default_Model_Base #468 with modified data :: Array(    [title] => Herr/Frau    [name] => Naie    [prename] => Jens    [email] => jonz@kybernaut.de    [password] => 432d75ea509a2523e103d9c0d4857cd2    [lang] => de    [sex] => n    [tel] =>     [privmail] =>     [autologin] => 0    [start] => 1    [lastlogin] => 2012-07-06 06:16:48    [countLogin] => 2    [deleted] => 0    [permanentDiscountId] =>     [ktoName] =>     [ktoNr] =>     [ktoBlz] =>     [updated] => 2012-07-06 06:16:48    [birthday] => 0000-00-00    [source] =>     [addition] =>     [facebookId] => 690363597    [profileImage] =>     [nickname] =>     [whitelist] => 0    [anrede] => Senhor/senhora) 
+2012-07-06T06:16:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-06T06:16:49-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing User  successfully logged in 
+2012-07-06T06:16:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-06T06:16:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-07-06T06:16:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 5 - start 0) for customer #468 jonz@kybernaut.de - unratedOrderCount: 0 
+2012-07-06T06:16:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-07-06T06:16:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-07-06T06:16:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: could not store for id:  open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:16:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-06T06:24:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:24:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:24:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:24:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_5_0customer468 
+2012-07-06T06:24:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_10_0customer468 
+2012-07-06T06:24:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_25_0customer468 
+2012-07-06T06:24:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_50_0customer468 
+2012-07-06T06:24:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_100_0customer468 
+2012-07-06T06:24:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_5_0customer468 
+2012-07-06T06:24:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_10_0customer468 
+2012-07-06T06:24:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_25_0customer468 
+2012-07-06T06:24:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_50_0customer468 
+2012-07-06T06:24:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_100_0customer468 
+2012-07-06T06:24:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:24:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:24:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:24:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 0 
+2012-07-06T06:24:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value  
+2012-07-06T06:39:25-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T06:39:25-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T06:39:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T06:39:41-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing customer #468 Jens Naie already a facebook user - facebookId 690363597 
+2012-07-06T06:39:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing updating model Default_Model_Base #468 with modified data :: Array(    [title] => Herr/Frau    [name] => Naie    [prename] => Jens    [email] => jonz@kybernaut.de    [password] => 432d75ea509a2523e103d9c0d4857cd2    [lang] => de    [sex] => n    [tel] =>     [privmail] =>     [autologin] => 0    [start] => 1    [lastlogin] => 2012-07-06 06:39:41    [countLogin] => 3    [deleted] => 0    [permanentDiscountId] =>     [ktoName] =>     [ktoNr] =>     [ktoBlz] =>     [updated] => 2012-07-06 06:39:41    [birthday] => 0000-00-00    [source] =>     [addition] =>     [facebookId] => 690363597    [profileImage] =>     [nickname] =>     [whitelist] => 0    [anrede] => Senhor/senhora) 
+2012-07-06T06:39:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-06T06:39:41-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing User  successfully logged in 
+2012-07-06T06:39:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-06T06:39:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-07-06T06:39:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 5 - start 0) for customer #468 jonz@kybernaut.de - unratedOrderCount: 0 
+2012-07-06T06:39:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-07-06T06:39:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-07-06T06:39:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: could not store for id:  open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:39:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-06T06:39:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:39:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:39:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:39:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_5_0customer468 
+2012-07-06T06:39:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_10_0customer468 
+2012-07-06T06:39:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_25_0customer468 
+2012-07-06T06:39:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_50_0customer468 
+2012-07-06T06:39:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_100_0customer468 
+2012-07-06T06:39:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_5_0customer468 
+2012-07-06T06:39:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_10_0customer468 
+2012-07-06T06:39:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_25_0customer468 
+2012-07-06T06:39:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_50_0customer468 
+2012-07-06T06:39:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_100_0customer468 
+2012-07-06T06:39:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:39:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:39:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:39:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 0 
+2012-07-06T06:39:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value  
+2012-07-06T06:40:21-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing customer #468 Jens Naie already a facebook user - facebookId 690363597 
+2012-07-06T06:40:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing updating model Default_Model_Base #468 with modified data :: Array(    [title] => Herr/Frau    [name] => Naie    [prename] => Jens    [email] => jonz@kybernaut.de    [password] => 432d75ea509a2523e103d9c0d4857cd2    [lang] => de    [sex] => n    [tel] =>     [privmail] =>     [autologin] => 0    [start] => 1    [lastlogin] => 2012-07-06 06:40:21    [countLogin] => 4    [deleted] => 0    [permanentDiscountId] =>     [ktoName] =>     [ktoNr] =>     [ktoBlz] =>     [updated] => 2012-07-06 06:40:21    [birthday] => 0000-00-00    [source] =>     [addition] =>     [facebookId] => 690363597    [profileImage] =>     [nickname] =>     [whitelist] => 0    [anrede] => Senhor/senhora) 
+2012-07-06T06:40:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-06T06:40:21-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing User  successfully logged in 
+2012-07-06T06:40:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-06T06:40:22-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-07-06T06:40:22-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 5 - start 0) for customer #468 jonz@kybernaut.de - unratedOrderCount: 0 
+2012-07-06T06:40:22-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-07-06T06:40:22-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-07-06T06:40:22-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: could not store for id:  open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:40:22-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-06T06:40:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:40:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:40:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:40:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_5_0customer468 
+2012-07-06T06:40:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_10_0customer468 
+2012-07-06T06:40:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_25_0customer468 
+2012-07-06T06:40:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_50_0customer468 
+2012-07-06T06:40:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_100_0customer468 
+2012-07-06T06:40:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_5_0customer468 
+2012-07-06T06:40:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_10_0customer468 
+2012-07-06T06:40:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_25_0customer468 
+2012-07-06T06:40:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_50_0customer468 
+2012-07-06T06:40:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_100_0customer468 
+2012-07-06T06:40:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:40:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:40:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:40:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 0 
+2012-07-06T06:40:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value  
+2012-07-06T06:54:44-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T06:54:44-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T06:54:45-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T06:54:56-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing customer #468 Jens Naie already a facebook user - facebookId 690363597 
+2012-07-06T06:54:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing updating model Default_Model_Base #468 with modified data :: Array(    [title] => Herr/Frau    [name] => Naie    [prename] => Jens    [email] => jonz@kybernaut.de    [password] => 432d75ea509a2523e103d9c0d4857cd2    [lang] => de    [sex] => n    [tel] =>     [privmail] =>     [autologin] => 0    [start] => 1    [lastlogin] => 2012-07-06 06:54:56    [countLogin] => 5    [deleted] => 0    [permanentDiscountId] =>     [ktoName] =>     [ktoNr] =>     [ktoBlz] =>     [updated] => 2012-07-06 06:54:56    [birthday] => 0000-00-00    [source] =>     [addition] =>     [facebookId] => 690363597    [profileImage] =>     [nickname] =>     [whitelist] => 0    [anrede] => Senhor/senhora) 
+2012-07-06T06:54:57-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-06T06:54:57-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing User  successfully logged in 
+2012-07-06T06:54:57-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-06T06:54:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-07-06T06:54:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 5 - start 0) for customer #468 jonz@kybernaut.de - unratedOrderCount: 0 
+2012-07-06T06:54:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-07-06T06:54:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-07-06T06:54:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: could not store for id:  open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T06:54:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-06T07:01:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-07-06T07:01:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 5 - start 0) for customer #468 jonz@kybernaut.de - unratedOrderCount: 0 
+2012-07-06T07:01:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-07-06T07:01:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-07-06T07:01:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: could not store for id:  open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:01:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-06T07:01:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:01:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:01:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:01:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_5_0customer468 
+2012-07-06T07:01:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_10_0customer468 
+2012-07-06T07:01:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_25_0customer468 
+2012-07-06T07:01:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_50_0customer468 
+2012-07-06T07:01:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_100_0customer468 
+2012-07-06T07:01:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_5_0customer468 
+2012-07-06T07:01:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_10_0customer468 
+2012-07-06T07:01:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_25_0customer468 
+2012-07-06T07:01:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_50_0customer468 
+2012-07-06T07:01:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_100_0customer468 
+2012-07-06T07:01:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:01:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:01:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:01:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 0 
+2012-07-06T07:01:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value  
+2012-07-06T07:01:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T07:01:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T07:01:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T07:06:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T07:06:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T07:06:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T07:07:12-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T07:07:12-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T07:07:13-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T07:07:29-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing customer #468 Jens Naie already a facebook user - facebookId 690363597 
+2012-07-06T07:07:29-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing updating model Default_Model_Base #468 with modified data :: Array(    [title] => Herr/Frau    [name] => Naie    [prename] => Jens    [email] => jonz@kybernaut.de    [password] => 432d75ea509a2523e103d9c0d4857cd2    [lang] => de    [sex] => n    [tel] =>     [privmail] =>     [autologin] => 0    [start] => 1    [lastlogin] => 2012-07-06 07:07:29    [countLogin] => 6    [deleted] => 0    [permanentDiscountId] =>     [ktoName] =>     [ktoNr] =>     [ktoBlz] =>     [updated] => 2012-07-06 07:07:29    [birthday] => 0000-00-00    [source] =>     [addition] =>     [facebookId] => 690363597    [profileImage] =>     [nickname] =>     [whitelist] => 0    [anrede] => Senhor/senhora) 
+2012-07-06T07:07:29-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-06T07:07:29-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing User  successfully logged in 
+2012-07-06T07:07:29-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-06T07:07:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-07-06T07:07:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 5 - start 0) for customer #468 jonz@kybernaut.de - unratedOrderCount: 0 
+2012-07-06T07:07:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-07-06T07:07:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-07-06T07:07:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: could not store for id:  open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:07:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-06T07:07:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:07:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:07:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:07:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_5_0customer468 
+2012-07-06T07:07:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_10_0customer468 
+2012-07-06T07:07:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_25_0customer468 
+2012-07-06T07:07:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_50_0customer468 
+2012-07-06T07:07:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_100_0customer468 
+2012-07-06T07:07:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_5_0customer468 
+2012-07-06T07:07:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_10_0customer468 
+2012-07-06T07:07:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_25_0customer468 
+2012-07-06T07:07:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_50_0customer468 
+2012-07-06T07:07:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_100_0customer468 
+2012-07-06T07:07:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:07:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:07:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:07:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 0 
+2012-07-06T07:07:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value  
+2012-07-06T07:08:26-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing customer #468 Jens Naie already a facebook user - facebookId 690363597 
+2012-07-06T07:08:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing updating model Default_Model_Base #468 with modified data :: Array(    [title] => Herr/Frau    [name] => Naie    [prename] => Jens    [email] => jonz@kybernaut.de    [password] => 432d75ea509a2523e103d9c0d4857cd2    [lang] => de    [sex] => n    [tel] =>     [privmail] =>     [autologin] => 0    [start] => 1    [lastlogin] => 2012-07-06 07:08:26    [countLogin] => 7    [deleted] => 0    [permanentDiscountId] =>     [ktoName] =>     [ktoNr] =>     [ktoBlz] =>     [updated] => 2012-07-06 07:08:26    [birthday] => 0000-00-00    [source] =>     [addition] =>     [facebookId] => 690363597    [profileImage] =>     [nickname] =>     [whitelist] => 0    [anrede] => Senhor/senhora) 
+2012-07-06T07:08:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-06T07:08:26-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing User  successfully logged in 
+2012-07-06T07:08:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-06T07:08:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-07-06T07:08:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 5 - start 0) for customer #468 jonz@kybernaut.de - unratedOrderCount: 0 
+2012-07-06T07:08:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-07-06T07:08:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-07-06T07:08:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: could not store for id:  open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:08:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-06T07:14:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:14:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:14:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:14:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_5_0customer468 
+2012-07-06T07:14:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_10_0customer468 
+2012-07-06T07:14:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_25_0customer468 
+2012-07-06T07:14:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_50_0customer468 
+2012-07-06T07:14:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_100_0customer468 
+2012-07-06T07:14:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_5_0customer468 
+2012-07-06T07:14:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_10_0customer468 
+2012-07-06T07:14:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_25_0customer468 
+2012-07-06T07:14:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_50_0customer468 
+2012-07-06T07:14:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_100_0customer468 
+2012-07-06T07:14:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:14:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:14:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:14:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 0 
+2012-07-06T07:14:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value  
+2012-07-06T07:45:39-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T07:45:39-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T07:45:40-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T07:46:29-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing customer #468 Jens Naie already a facebook user - facebookId 690363597 
+2012-07-06T07:46:29-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing updating model Default_Model_Base #468 with modified data :: Array(    [title] => Herr/Frau    [name] => Naie    [prename] => Jens    [email] => jonz@kybernaut.de    [password] => 432d75ea509a2523e103d9c0d4857cd2    [lang] => de    [sex] => n    [tel] =>     [privmail] =>     [autologin] => 0    [start] => 1    [lastlogin] => 2012-07-06 07:46:29    [countLogin] => 8    [deleted] => 0    [permanentDiscountId] =>     [ktoName] =>     [ktoNr] =>     [ktoBlz] =>     [updated] => 2012-07-06 07:46:29    [birthday] => 0000-00-00    [source] =>     [addition] =>     [facebookId] => 690363597    [profileImage] =>     [nickname] =>     [whitelist] => 0    [anrede] => Senhor/senhora) 
+2012-07-06T07:46:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-06T07:46:30-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing User  successfully logged in 
+2012-07-06T07:46:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-06T07:46:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-07-06T07:46:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 5 - start 0) for customer #468 jonz@kybernaut.de - unratedOrderCount: 0 
+2012-07-06T07:46:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-07-06T07:46:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-07-06T07:46:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: could not store for id:  open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T07:46:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-06T09:32:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T09:32:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T09:32:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T09:32:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_5_0customer468 
+2012-07-06T09:32:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_10_0customer468 
+2012-07-06T09:32:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_25_0customer468 
+2012-07-06T09:32:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_50_0customer468 
+2012-07-06T09:32:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_100_0customer468 
+2012-07-06T09:32:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_5_0customer468 
+2012-07-06T09:32:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_10_0customer468 
+2012-07-06T09:32:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_25_0customer468 
+2012-07-06T09:32:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_50_0customer468 
+2012-07-06T09:32:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_100_0customer468 
+2012-07-06T09:32:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T09:32:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T09:32:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T09:32:54-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 0 
+2012-07-06T09:32:54-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value  
+2012-07-06T09:34:59-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T09:34:59-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T09:34:59-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T09:35:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: did not find template index/index.htm in lieferando.de layout, switching successfully back to default 
+2012-07-06T09:35:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template index/index.htm 
+2012-07-06T09:35:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T09:37:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: did not find template index/index.htm in lieferando.de layout, switching successfully back to default 
+2012-07-06T09:37:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template index/index.htm 
+2012-07-06T09:37:57-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T09:38:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: did not find template index/index.htm in lieferando.de layout, switching successfully back to default 
+2012-07-06T09:38:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template index/index.htm 
+2012-07-06T09:38:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T09:40:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T09:40:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T09:40:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T10:00:11-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T10:00:11-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T10:00:12-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T10:02:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T10:02:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T10:02:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T10:04:55-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T10:04:55-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T10:04:55-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T10:06:03-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T10:06:03-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T10:06:03-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T10:09:06-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T10:09:06-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T10:09:07-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T10:09:55-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T10:09:55-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T10:09:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T10:11:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T10:11:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T10:11:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T10:12:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T10:12:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T10:12:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T10:12:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T10:12:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T10:12:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T10:14:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T10:14:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T10:14:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T10:15:06-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T10:15:06-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T10:15:07-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T11:07:44-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 24 online and 1 offline services in #23261 
+2012-07-06T11:07:44-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-07-06T11:07:45-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-07-06T11:07:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/lastorder.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T11:07:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/lastorder.htm 
+2012-07-06T11:07:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing don't show ratingLink for order #819, because state <= 0 - state = 0 
+2012-07-06T11:07:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T11:07:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-07-06T11:07:55-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-07-06T11:34:45-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T11:34:45-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T11:34:45-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T11:34:51-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 24 online and 1 offline services in #23261 
+2012-07-06T11:34:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-07-06T11:34:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-07-06T11:34:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/lastorder.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T11:34:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/lastorder.htm 
+2012-07-06T11:34:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing don't show ratingLink for order #819, because state <= 0 - state = 0 
+2012-07-06T11:34:59-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/serviceinfo.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T11:34:59-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-07-06T11:34:59-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/66.html 
+2012-07-06T11:35:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/serviceinfo.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T11:35:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-07-06T11:35:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/288.html 
+2012-07-06T11:35:15-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T11:35:15-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-07-06T11:35:17-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-l-osteria-del-generale-i-sao-paulo.html 
+2012-07-06T11:35:53-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing appending fallback verbose information to order via cityId 23261 
+2012-07-06T11:35:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/private/finish.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T11:35:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/finish.htm 
+2012-07-06T11:35:57-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/service/openingtimeday.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T11:35:57-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/service/openingtimeday.htm 
+2012-07-06T11:36:25-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing appending fallback verbose information to order via cityId 23261 
+2012-07-06T11:36:25-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing switching back to bar, no valid payment selected 
+2012-07-06T11:36:25-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing setting deliver time to imediatamente based on day: 06.07.2012 time: imediatamente 
+2012-07-06T11:36:25-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing service #288 is open due to  openings 11:30 - 15:45 
+2012-07-06T11:36:25-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Order_Private with id #820 new data :: Array(    [customer] =>     [nr] => 41073987    [time] => 2012-07-06 11:36:25    [deliverTime] => 2012-07-06 11:36:25    [mode] => rest    [kind] => priv    [ident] => 2wvgtbFM1dDBjGCdVKbp    [domain] => www.yourdelivery.local    [cpf] =>     [serviceId] => 288    [restaurantId] => 288    [floor] => 0    [lift] =>     [currentPayment] => bar    [payment] => bar    [paymentAddition] => vr    [change] => 0    [total] => 4600    [courier] =>     [courierCost] => 0    [serviceDeliverCost] => 300    [charge] => 0    [contract] => 1    [ipAddr] => 127.0.0.1) 
+2012-07-06T11:36:25-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 10 points for action order 
+2012-07-06T11:36:25-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Customer_FidelityTransaction with id #1456 new data :: Array(    [email] => naie@lieferando.de    [action] => order    [status] => 0    [points] => 10    [transactionData] => 820) 
+2012-07-06T11:36:25-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing successfully added 0 points to customer naie@lieferando.de for action order 
+2012-07-06T11:36:25-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity65666812875e8232797613d8aa41808d 
+2012-07-06T11:36:25-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity65666812875e8232797613d8aa41808d 
+2012-07-06T11:36:25-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity65666812875e8232797613d8aa41808d 
+2012-07-06T11:36:26-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing customer #1341585385 reter tzrzutz sucessfully finished order #820 
+2012-07-06T11:36:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Status Wechsel in Order Tabelle: #820 - alter Status: 0 - neuer Status: 0 
+2012-07-06T11:36:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing New order status entry id: 820, status: 0 
+2012-07-06T11:36:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing updating model Default_Model_Base #1456 with modified data :: Array(    [email] => naie@lieferando.de    [transactionData] => 820    [status] => 0    [action] => order    [points] => 10    [updated] => 2012-07-06 11:36:26) 
+2012-07-06T11:36:26-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing successfully modifed transaction #1456 of customer naie@lieferando.de to status 0 
+2012-07-06T11:36:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity65666812875e8232797613d8aa41808d 
+2012-07-06T11:36:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity65666812875e8232797613d8aa41808d 
+2012-07-06T11:36:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity65666812875e8232797613d8aa41808d 
+2012-07-06T11:36:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Order_Sendby with id #712 new data :: Array(    [orderId] => 820    [sendBy] => fax) 
+2012-07-06T11:36:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing order pdf for order 820 does not exists yet, generating and returning 
+2012-07-06T11:36:26-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing RETARUS: succesfully send out fax 820-ordersheet-restaurant.pdf to 0123 
+2012-07-06T11:36:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/private/success.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T11:36:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/success.htm 
+2012-07-06T11:36:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 10 points for action order 
+2012-07-06T11:36:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 points for action register 
+2012-07-06T11:36:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action registeraftersale 
+2012-07-06T11:36:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 10 points for action order 
+2012-07-06T11:36:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 points for action register 
+2012-07-06T11:36:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action registeraftersale 
+2012-07-06T11:51:54-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/private/success.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T11:51:54-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/success.htm 
+2012-07-06T11:51:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 10 points for action order 
+2012-07-06T11:51:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 points for action register 
+2012-07-06T11:51:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action registeraftersale 
+2012-07-06T11:51:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 10 points for action order 
+2012-07-06T11:51:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 points for action register 
+2012-07-06T11:51:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action registeraftersale 
+2012-07-06T11:52:02-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T11:52:02-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T11:52:02-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T11:52:11-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/newpass.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T11:52:11-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/newpass.htm 
+2012-07-06T11:53:00-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T11:53:00-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T11:53:01-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T11:54:39-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing customer #468 Jens Naie already a facebook user - facebookId 690363597 
+2012-07-06T11:54:39-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing updating model Default_Model_Base #468 with modified data :: Array(    [title] => Herr/Frau    [name] => Naie    [prename] => Jens    [email] => jonz@kybernaut.de    [password] => 432d75ea509a2523e103d9c0d4857cd2    [lang] => de    [sex] => n    [tel] =>     [privmail] =>     [autologin] => 0    [start] => 1    [lastlogin] => 2012-07-06 11:54:39    [countLogin] => 9    [deleted] => 0    [permanentDiscountId] =>     [ktoName] =>     [ktoNr] =>     [ktoBlz] =>     [updated] => 2012-07-06 11:54:39    [birthday] => 0000-00-00    [source] =>     [addition] =>     [facebookId] => 690363597    [profileImage] =>     [nickname] =>     [whitelist] => 0    [anrede] => Senhor/senhora) 
+2012-07-06T11:54:39-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-06T11:54:39-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing User  successfully logged in 
+2012-07-06T11:54:40-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-06T11:54:40-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-07-06T11:54:40-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 5 - start 0) for customer #468 jonz@kybernaut.de - unratedOrderCount: 0 
+2012-07-06T11:54:40-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-07-06T11:54:40-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-07-06T11:54:40-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: could not store for id:  open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T11:54:40-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-06T11:54:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/locations.htm 
+2012-07-06T11:55:06-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/locations.htm 
+2012-07-06T11:55:15-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/favourites.htm 
+2012-07-06T11:55:20-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 25 - start 0) for customer #468 jonz@kybernaut.de - unratedOrderCount: 0 
+2012-07-06T11:55:20-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search RATED ORDERS (limit 10 - start 0) for customer #468 jonz@kybernaut.de - ratedOrderCount: 0 
+2012-07-06T11:55:20-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS COUNT for customer #468 jonz@kybernaut.de - unratedOrderCount: 0 
+2012-07-06T11:55:20-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search RATED ORDERS COUNT for customer #468 jonz@kybernaut.de - ratedOrderCount: 0 
+2012-07-06T11:55:20-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/ratings.htm 
+2012-07-06T11:56:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T11:56:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T11:56:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T11:56:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_5_0customer468 
+2012-07-06T11:56:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_10_0customer468 
+2012-07-06T11:56:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_25_0customer468 
+2012-07-06T11:56:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_50_0customer468 
+2012-07-06T11:56:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_100_0customer468 
+2012-07-06T11:56:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_5_0customer468 
+2012-07-06T11:56:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_10_0customer468 
+2012-07-06T11:56:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_25_0customer468 
+2012-07-06T11:56:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_50_0customer468 
+2012-07-06T11:56:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_100_0customer468 
+2012-07-06T11:56:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T11:56:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T11:56:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-06T11:56:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 0 
+2012-07-06T11:56:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value  
+2012-07-06T11:56:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T11:56:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T11:56:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-06T11:57:03-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-06T11:57:03-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-06T11:57:03-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 

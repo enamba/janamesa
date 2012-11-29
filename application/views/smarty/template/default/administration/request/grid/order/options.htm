@@ -1,0 +1,12 @@
+{if is_object($order)}
+    <li>
+        <a class="yd-grid-box-icon-html" href="#" title="{__b('Bestellzettel als HTML angucken')}" onclick="return popup('/order/bestellzettel/order/{$order->getId()}', 'Bestellzettel', 800, 600);">{__b("HTML")}</a>
+        <a class="yd-grid-box-icon-pdf" onclick="javascript:return popup('/download/order/{Default_Helpers_Crypt::hash($order->getId())}')" title="{__b('Bestellzettel als PDF ansehen')}">{__b("PDF")}</a>
+    </li>
+    <li><a href="#" class="yd-edit-order-options" data-id="{$order->getId()}">{__('Bearbeiten')}</a></li>
+
+    <li><a href="#" class="yd-order-comment" id="yd-order-comment-{$order->getId()}">{__('Status Log')}</a></li>
+    <li><a href="#" class="yd-help-order-options" data-id="{$order->getId()}">{__('Hilfe')}</a></li>
+{else}
+    <li>{__b('Fehler beim Laden der Bestellung')}</li>
+{/if}

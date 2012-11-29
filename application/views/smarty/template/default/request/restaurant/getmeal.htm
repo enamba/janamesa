@@ -1,0 +1,169 @@
+{if isset($category) && isset($meal)}
+{$catsizes = $category->getSizesByRank()}
+<tr id="yd-meal-row-{$meal->getId()}">
+    <td width="5%" align="center" class="right-line">
+        <font color="#999"><small>#{$meal->getId()}</small></font><br/>
+        <input type="checkbox" class="yd-check-online yd-meal-element" id="yd-meal-online-{$meal->getId()}-{$category->getId()}" name="yd-meal-online[{$meal->getId()}]" {if $meal->getStatus() == 1}checked{/if} value="1" />
+        <input type="hidden" name="yd-meal-id[{$meal->getId()}]"/>
+    </td>
+    <td width="20%" align="center" class="right-line"><input style="width: 180px;" class="yd-meal-element yd-meal-name" type="text" value="{$meal->getName()}" name="yd-meal-name[{$meal->getId()}]" id="yd-meal-name-{$meal->getId()}-{$category->getId()}"></td>
+    <td width="5%" align="center" class="right-line"><a href="#{$meal->getId()}" class="yd-meal-preview-lightbox" id="meal-{$meal->getId()}-0" ><small>{{__b('Vorschau-Lightbox')}}</small></a></td>
+    <td width="20%" align="center" class="right-line"><textarea rows="2" class="yd-meal-element" name="yd-meal-description[{$meal->getId()}]" id="yd-meal-description-{$meal->getId()}-{$category->getId()}">{$meal->getDescription()}</textarea></td>
+    <td width="10%" align="center"><a href="#x" class="yd-restaurant-options-meal" id="yd-restaurant-optionsmeal-{$meal->getId()}-{$category->getId()}-{$restaurant->getId()}">{{__b('Optionen')}}</a></td>
+    <td width="40%" align="left">
+        <table width="100%">
+            <tr>
+            {foreach from=$catsizes item=size}
+                <td align="left" width="{100/count($catsizes)}%">
+                    <table width="100%">
+                        <tr>
+                            <td width="10%" valign="top">
+                                <small>{$size['name']}</small>
+                                <input type="hidden" class="yd-size-for-meal-{$meal->getId()}" id="yd-size-for-meal-{$size['id']}" name="yd-meal-size-{$meal->getId()}[{$size['id']}]"/><br/>
+                            </td>
+                            {if $category->getHasPfand() == 1}
+                            <td  width="5%"></td>
+                            <td  width="10%" valign="top">
+                                <small>{{__b('Pfand')}}</small><br/>
+                            </td>
+                            {/if}
+                            <td width="75%"></td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <input type="text" class='yd-meal-element yd-value-size yd-cost-{$category->getId()}' id="yd-sizecost-{$size['id']}-{$meal->getId()}-{$category->getId()}" name="yd-meal-sizecost-{$meal->getId()}[{$size['id']}]" size="4" {if !is_null($meal->getCostForSize($size['id']))}value="{intToPrice($meal->getCostForSize($size['id']))}"{/if}/><br>
+                                <input type="hidden" name="yd-meal-size-{$meal->getId()}[{$size['id']}]"/>
+                            </td>
+                            {if $category->getHasPfand() == 1}
+                            <td></td>
+                            <td valign="top">
+                                <input type="text" class='yd-meal-element yd-value-pfand' id="yd-pfandcost-{$size['id']}-{$meal->getId()}-{$category->getId()}" name="yd-meal-pfandcost-{$meal->getId()}[{$size['id']}]" size="4" {if !is_null($meal->getPfandForSize($size['id']))}value="{intToPrice($meal->getPfandForSize($size['id']))}"{/if}/><br>
+                            </td>
+                            {/if}
+                            <td></td>
+                        </tr>
+                        <tr class="yd-value-nr">
+                            <td valign="top">
+                                {{__b('Nummer')}} 
+                                <input type="text" class='yd-meal-element' id="yd-mealsizenr-{$size['id']}-{$meal->getId()}-{$category->getId()}" name="yd-meal-mealsizenr-{$meal->getId()}[{$size['id']}]" size="7" value="{$meal->getNrForSize($size['id'])}"/><br>
+                            </td>
+                            {if $category->getHasPfand() == 1}
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            {/if}
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <a href="#x" class="yd-restaurant-addextra-meal" id="yd-restaurant-addextras-{$restaurant->getId()}-{$size['id']}-{$meal->getId()}-{$category->getId()}">{{__b('Extras')}}</a>
+                            </td>
+                            {if $category->getHasPfand() == 1}
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                            {/if}
+                            <td></td>
+                        </tr>
+                    </table>
+                </td>
+            {/foreach}
+            </tr>
+        </table>
+    </td>
+    <td width="5%" align="center" style="font-size: 20px; font-weight: bold;">
+        <table width="100%">
+            <tr>
+                <td colspan="2">
+                    <a href="#x" class="yd-move-meal" id="yd-move-meal-up-{$meal->getId()}-{$category->getId()}"><img src="{$domain_static}/images/yd-backend/icon-up.png" title="{{__b('Speise nach oben im Menü verschieben')}}"/></a>
+                    <a href="#x" class="yd-move-meal" id="yd-move-meal-down-{$meal->getId()}-{$category->getId()}"><img src="{$domain_static}/images/yd-backend/icon-down.png" title="{{__b('Speise nach unten im Menü verschieben')}}"/></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#x" class="yd-update-meal-link yd-update-meal-from-category-{$category->getId()}" id="yd-update-meal-link-{$meal->getId()}-{$category->getId()}" active="0"><img src="{$domain_static}/images/yd-backend/icon-save-grey.png"/></a>
+                </td>
+                <td>
+                    <a href="#x" class="yd-remove-meal" id="yd-remove-meal-{$meal->getId()}-{$category->getId()}"><img src="{$domain_static}/images/yd-backend/icon-delete.png" title="{{__b('Speise löschen')}}"/></a>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<tr class="yd-meal-data" id="yd-meal-data-{$meal->getId()}" style="background: #d3f0d5;">
+    <td colspan="6">
+        <table width="100%">
+            <tr>
+                <td width="10%"></td>
+                <td width="90%" style="text-align: left;">
+                    {{__b('Mwst. %:')}}
+                    <select class="yd-mwst yd-meal-element" name="yd-meal-mwst[{$meal->getId()}]" id="yd-meal-mwst-{$meal->getId()}-{$category->getId()}" style="width: 80px;">
+                        {foreach from=Default_Helpers_Money::getAllVats() item=v}
+                            <option value="{$v}" {if $meal->getMwst()==$v}selected{/if}>{$v}</option>
+                        {/foreach}
+                    </select>
+                    &nbsp;&nbsp;&nbsp;
+                    {{__b('Minimale Anzahl:')}}
+                    <input style="width: 20px;" class="yd-meal-element yd-meal-minAmount" type="text" value="{$meal->getMinAmount()}" name="yd-meal-minAmount[{$meal->getId()}]" id="yd-meal-minAmount-{$meal->getId()}-{$category->getId()}">
+                    &nbsp;&nbsp;&nbsp;
+                    {{__b('Vegetarisch')}}
+                    <input class="yd-meal-element" type="checkbox" name="yd-meal-vegetarian[{$meal->getId()}]" value="1" id="yd-meal-vegetarian-{$meal->getId()}-{$category->getId()}" {if $meal->hasAttribute('vegetarian')}checked{/if}/>
+                    &nbsp;&nbsp;&nbsp;
+                    {{__b('Bio')}}
+                    <input class="yd-meal-element" type="checkbox"  name="yd-meal-bio[{$meal->getId()}]" value="1" id="yd-meal-bio-{$meal->getId()}-{$category->getId()}" {if $meal->hasAttribute('bio')}checked{/if}/>
+                    &nbsp;&nbsp;&nbsp;
+                    {{__b('Scharf')}}
+                    <input class="yd-meal-element" type="checkbox"  name="yd-meal-spicy[{$meal->getId()}]" value="1" id="yd-meal-spicy-{$meal->getId()}-{$category->getId()}" {if $meal->hasAttribute('spicy')}checked{/if}/>
+                    &nbsp;&nbsp;&nbsp;
+                    {{__b('Knoblauch')}}
+                    <input class="yd-meal-element" type="checkbox"  name="yd-meal-garlic[{$meal->getId()}]" value="1" id="yd-meal-garlic-{$meal->getId()}-{$category->getId()}" {if $meal->hasAttribute('garlic')}checked{/if}/>
+                    &nbsp;&nbsp;&nbsp;
+                    {{__b('Fisch')}}
+                    <input class="yd-meal-element" type="checkbox"  name="yd-meal-fish[{$meal->getId()}]" value="1" id="yd-meal-fish-{$meal->getId()}-{$category->getId()}" {if $meal->hasAttribute('fish')}checked{/if}/>
+                    &nbsp;&nbsp;&nbsp;
+                    {{__b('Tabak')}}
+                    <input class="yd-meal-element" type="checkbox" name="yd-meal-tabaco[{$meal->getId()}]" value="1" id="yd-meal-tabaco-{$meal->getId()}-{$category->getId()}" {if $meal->getTabaco()==1}checked{/if}/>
+                    {if $category->getExcludeFromMinCost() != 1}
+                    &nbsp;&nbsp;&nbsp;
+                    {{__b('Nicht im Mindestbestellwert')}}
+                    <input class="yd-meal-element" type="checkbox" name="yd-meal-excludeFromMinCost[{$meal->getId()}]" value="1" id="yd-meal-excludeFromMinCost-{$meal->getId()}-{$category->getId()}" {if $meal->getExcludeFromMinCost()==1}checked{/if}/>
+                    {/if}
+                    &nbsp;&nbsp;&nbsp;
+                    {{__b('Preistyp:')}}
+                    <select class="yd-meal-element" name="yd-meal-priceType[{$meal->getId()}]" id="yd-meal-priceType-{$meal->getId()}-{$category->getId()}">
+                        <option value="normal">{__b('Normal')}</option>
+                        <option value="options_avg"{if $meal->getPriceType()=='options_avg'} selected{/if}>{__b('Durchschnittswert der Menüs als Optionen')}</option>
+                        <option value="options_max"{if $meal->getPriceType()=='options_max'} selected{/if}>{__b('Maximalwert der Menüs als Optionen')}</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+{if ($mealOptionRows && count($mealOptionRows)>0)}
+<tr class="yd-mealoption-data">
+    <th colspan="2">
+        {__b('Als Option in den Optionskategorien:')}
+    </th>
+    <td colspan="2" id="yd-meal-mealoption-rows-{$meal->getId()}">
+        {foreach from=$meal->getMealoptionRows() item=o}
+        <a id="yd-meal-{$meal->getId()}-mealoption-nn-{$o['id']}" class="yd-meal-mealoption-nn-button">{$o['name']}</a>
+        {/foreach}
+    </td>
+    <td colspan="2">
+        <select id="yd-add-mealoption-select-{$meal->getId()}">
+            <option value="0">{__b('Bitte wählen')}</option>
+            {foreach from=$mealOptionRows item=o}
+            <option value="{$o['id']}">{$o['name']}</option>
+            {/foreach}
+        </select>
+        <input type="button" id="yd-add-mealoption-button-{$meal->getId()}" class="yd-add-mealoption-button" value="{__b('Hinzufügen')}"/>
+    </td>
+</tr>
+{/if}
+<tr id="yd-meal-underline-{$meal->getId()}">
+    <td colspan="6"><hr/></td>
+</tr>
+{/if}

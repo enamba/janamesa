@@ -1,0 +1,70 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{if isset($salesperson)}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            <h1>{__b('Vertriebler')}: {$salesperson->getName()}, {$salesperson->getPrename()} <a href="/administration_salesperson/edit/id/{$salesperson->getId()}/">[{__b('bearbeiten')}]</a></h1>
+        </div>
+        <div class="item-content">
+            {__b('Hier sehen Sie alle möglichen Informationen zu dem angeforderten Vertriebler')}
+        </div>
+    </div>
+</div>
+
+<div class="two-column-box">
+    <div class="item">
+        <div class="item-head">
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tbody>
+                    <tr>
+                        <td width="60%"><strong>{__b('Name')}</strong></td>
+                        <td>
+                            {$salesperson->getName()}, {$salesperson->getPrename()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Email')}</strong></td>
+                        <td>
+                            <a href="mailto:{$salesperson->getEmail()}">{$salesperson->getEmail()}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Arbeitet in')}</strong></td>
+                        <td>
+                            {if $salesperson->getCallcenter()}{__b('Call Center')}{else}{__b('Aussendienst')}{/if}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="item-head">
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tbody>
+                    <tr>
+                        <td><strong>{__b('Verwantwortlich für Restaurants')}:</strong></td>
+                        <td></td>
+                    </tr>
+                    {foreach from=$salesperson->getRestaurants() item=r}
+                    <tr>
+                        <td colspan="2">
+                            <a href="/administration_service_edit/id/{$r->getId()}">{$r->getName()}</a>
+                        </td>
+                    </tr>
+                    {/foreach}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{/if}
+{/block}

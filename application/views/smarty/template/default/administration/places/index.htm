@@ -1,0 +1,19 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+    {include file="administration/places/_navigation.htm"}
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Dienstleister')}
+            </div>
+            <div class="item-content">
+                <form method="post">
+                    <input type="submit" value="{__b('speichern')}" />
+                    {$grid}
+                    <input type="submit" value="{__b('speichern')}" />
+                </form>
+            </div>
+        </div>
+
+    </div>
+{/block}

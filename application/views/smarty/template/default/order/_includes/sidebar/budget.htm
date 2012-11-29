@@ -1,0 +1,47 @@
+<div class="yd-box">
+    <div class="yd-box-head yd-float-head cursor" id="yd-expand-budget-head">
+        <a class="yd-plus cursor" id="yd-expand-budget-head-plus"></a>
+        <a class="yd-minus cursor hidden" id="yd-expand-budget-head-minus"></a>
+        <small>{$cust->getCompany()->getName()|truncate:35:" ...":true}</small><br />
+        {__('Ihr aktuelles Budget:')} {__('%s €',$cust->getCurrentBudget()|inttoprice)}<br />
+        <small>{__('Für Übersicht bitte klicken!')}</small>
+    </div>
+    <div class="yd-box-body yd-clearfix" id="yd-expand-budget-body">
+        <ul>
+            <li class="yd-budget-time">
+                {if not is_null($cust->getBudget())}
+                <em><b>{__('Ihre Budgetzeiten sind:')}</b></em><br />
+                    {foreach key=day from=$cust->getBudget()->getBudgetTimes() item=times}
+                            {foreach from=$times item=time}
+                                <em><b>{$day|date_weekday}</b>{$time.from|date_format:'%H:%M'} - {$time.until|date_format:'%H:%M'}</em> <strong>{__('%s €',$time.amount|inttoprice)}</strong><br />
+                            {/foreach}
+                    {foreachelse}
+                    <div style="text-align:left;">{__('Keine Budgetzeiten vorhanden!')}</div>
+                    {/foreach}
+                {else}
+                    <div style="text-align:left;">{__('Kein Budget vorhanden!')}</div>
+                {/if}
+            </li>
+            
+
+            <li class="yd-budget-yes-or-no">
+                <em>{__('Bestellungen beim Catering:')}</em>
+                {if $cust->allowCater()}
+                    <span class="yd-budget-yes"></span>
+                {else}
+                    <span class="yd-budget-no"></span>
+                {/if}
+            </li>
+
+            <li class="yd-budget-yes-or-no">
+                <em>{__('Bestellungen beim Supermarkt:')}</em>
+                {if $cust->allowGreat()}
+                    <span class="yd-budget-yes"></span>
+                {else}
+                    <span class="yd-budget-no"></span>
+                {/if}
+            </li>
+            
+        </ul>
+    </div>
+</div>

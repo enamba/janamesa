@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<search>
+    {foreach from=$list item=li key=serviceId}
+        <service id="service-{$serviceId}">
+            {foreach from=$li item=i}
+                {$i}
+            {/foreach}
+        </service>
+    {/foreach}
+</search>

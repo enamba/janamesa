@@ -1,0 +1,1 @@
+alter table restaurant_ratings add column topRating tinyint(4) default 0 after orderId;

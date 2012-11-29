@@ -1,0 +1,13 @@
+{extends file="restaurant/base.htm"}
+{block name="content"}
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {{__b('Übersicht der Bestellungen')}}
+            </div>
+            <div class="item-content" id="yd-order-grid">
+                {$grid}
+            </div>
+        </div>
+    </div>
+{/block}

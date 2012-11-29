@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+    <code>{$code}</code>
+    <result>
+        {foreach from=$result item=item key=key}
+            <s{$key}><![CDATA[{$item}]]></s{$key}>
+        {/foreach}
+    </result>
+</response>

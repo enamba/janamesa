@@ -1,0 +1,14 @@
+TIME: 08-08-2012 09:42:06 
+ MESSAGE: Uncaught ReferenceError: serviceIds is not defined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-ae6b8125d61797c72d888a2a24c9e83f1a84f166.js 
+ LINE: 18714 
+ PARENTURL: http://www.yourdelivery.local/lieferservice-wien 
+ USERAGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11 
+
+TIME: 08-08-2012 09:42:06 
+ MESSAGE: Uncaught SyntaxError: Unexpected number 
+ URL: http://www.yourdelivery.local/lieferservice-wien 
+ LINE: 1607 
+ PARENTURL: http://www.yourdelivery.local/lieferservice-wien 
+ USERAGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11 
+

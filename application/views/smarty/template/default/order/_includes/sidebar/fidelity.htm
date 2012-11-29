@@ -1,0 +1,74 @@
+{if $config->domain->base != 'eat-star.de' && $cust->isLoggedIn()}   
+<div class="yd-box" id="fidelity-box">
+	<div class="br-inner-box">
+        <div class="yd-box-title">
+            <span>{__('Treuepunkte')}</span>
+            
+            {if $config->domain->base == 'janamesa.com.br'}<h3><div>Seus Bônus</div></h3>{/if}
+            
+            <!--<a id="how-fidelity-works"></a>-->
+        </div>
+    
+        <div id="fidelity-content">
+            {assign var=countpoints value=$cust->getFidelityPoints()->getPoints()}
+            <div class="yd-box-body countpoints-{$countpoints}" id="valid-points">
+    
+                <div class="yd-100-container">
+                    <div class="yd-100-timeline">
+                        <div class="yd-100-current yd-100-{min($countpoints,100)}">
+                            <div class="yd-100-current-point">{$countpoints}</div>
+                        </div>
+                        <div class="yd-100-inactive-point">100</div>
+                    </div>
+                </div>
+    
+                <p class="current-point-text" style="text-align:center;font-size:12px;margin:0;">
+                    {__('Du hast bisher %d Treuepunkte gesammelt.', {$cust->getFidelity()->getPoints()})}
+                </p>
+    
+                {if $cust->isLoggedIn() && $cust->getFidelity()->isCashinReached() && is_object($order) && is_object($order->getService()) && !$order->getService()->isOnlycash()}
+                <div>
+                    <br /><br />
+                    <strong>
+                        <a class="yd-cash-fidelity-points">{__('Treuepunkte einlösen')}</a>
+                    </strong>
+                    <input type="hidden" id="yd-fidelity-no-meal-found" value="{__('In deinem Warenkorb befindet sich keine Ware für die Treuepunkte eingelöste werden können.')}" />
+                </div>
+                {/if}
+    
+                <div id="how-fidelity-works-content" class="hidden">
+                    <br />
+                    <p>
+                        {__('Für die erste Bestellung mit anschließender Registrierung erhältst Du 35 Punkte, für jede weitere Bestellung jeweils 10 Punkte. Registrierst Du Dich später, erhältst Du 20 Punkte. Wir freuen uns, wenn Du die Restaurants bewertest und uns sagst, wie zufrieden du warst. Dafür gibt es jeweils 5 Punkte. Weitere Treuepunkte-Aktionen sind in Vorbereitung, lass Dich überraschen.')}
+                    </p>
+                    <br />
+                </div>
+    
+                {if $propose && $cust->getFidelity()}
+                
+                    {if count($customer->getFidelity()->getOpenActions()) > 0}
+                        <span class="title-daisy-duck" style="display:block; border-bottom: 1px solid #aaa; margin: 0 0 5px; padding: 0 0 5px; text-align:center;">
+                            <br />
+                            {__('Sammel jetzt noch mehr Treuepunkte:')}
+                        </span>
+                    {/if}
+                
+                    <ul class="daisy-duck">
+                        <!-- propose -->
+                        {foreach from=$cust->getFidelity()->getOpenActions() item=openAction}
+                        {foreach from=$openAction item=action}
+                        <li class="daisy-duck-do-something yd-clearfix">
+                            <a href="{$action.call2action}" target="_blank">
+                                <span class="dd2">{$action.info}</span>
+                                <span class="dd3"><span class="yd-coin">{$action.points}</span></span>
+                            </a>
+                        </li>
+                        {/foreach}
+                        {/foreach}
+                    </ul>
+                {/if}
+            </div>
+        </div>
+    </div>
+</div>
+{/if}

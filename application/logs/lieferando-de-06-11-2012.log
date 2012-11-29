@@ -1,0 +1,100 @@
+2012-11-06T17:24:51+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template index/index.htm 
+2012-11-06T17:24:51+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/index.html 
+2012-11-06T17:25:06+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:26:37+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:27:38+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:27:57+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:29:37+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:31:12+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:33:48+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:34:15+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:35:21+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:42:41+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:49:17+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:50:11+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CSRF: Put token 28ae95b6f23c00e98522d643e859e13c to session 
+2012-11-06T17:50:11+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CSRF: Set token 28ae95b6f23c00e98522d643e859e13c to view 
+2012-11-06T17:50:11+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CSRF: Add token 28ae95b6f23c00e98522d643e859e13c to validator 
+2012-11-06T17:50:11+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PIWIK: tracking goal registerpage with revenue 0 
+2012-11-06T17:50:11+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/register.htm 
+2012-11-06T17:52:43+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:53:20+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:54:56+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:55:54+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:56:49+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:57:06+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:57:14+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:57:32+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:57:55+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:58:15+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:58:42+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:59:14+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T17:59:41+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T18:00:10+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T18:00:17+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T18:00:37+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T18:01:53+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T18:02:30+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T18:06:00+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T18:11:56+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template index/index.htm 
+2012-11-06T18:11:56+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/index.html 
+2012-11-06T18:12:01+01:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Run into error: Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.deleted' in 'where clause'
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Select.php(686): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select))
+#4 /home/ydadmin/htdocs/lieferando/application/models/Autocomplete.php(40): Zend_Db_Select->query()
+#5 /home/ydadmin/htdocs/lieferando/application/controllers/AutocompleteController.php(57): Yourdelivery_Model_Autocomplete::plz(0, NULL)
+#6 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): AutocompleteController->plzAction()
+#7 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('plzAction')
+#8 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#9 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#10 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#11 /home/ydadmin/htdocs/lieferando/public/index.php(118): Zend_Application->run()
+#12 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:73]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-11-06T18:12:01+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template error/error.htm 
+2012-11-06T18:12:07+01:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Run into error: Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.deleted' in 'where clause'
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Select.php(686): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select))
+#4 /home/ydadmin/htdocs/lieferando/application/models/Autocomplete.php(40): Zend_Db_Select->query()
+#5 /home/ydadmin/htdocs/lieferando/application/controllers/AutocompleteController.php(57): Yourdelivery_Model_Autocomplete::plz(0, NULL)
+#6 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): AutocompleteController->plzAction()
+#7 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('plzAction')
+#8 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#9 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#10 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#11 /home/ydadmin/htdocs/lieferando/public/index.php(118): Zend_Application->run()
+#12 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:73]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-11-06T18:12:07+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template error/error.htm 
+2012-11-06T18:12:11+01:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing User naie@lieferando.de failed while trying to log in 
+2012-11-06T18:12:11+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T18:19:02+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T18:24:43+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 
+2012-11-06T20:26:35+01:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/loginfailed.htm 

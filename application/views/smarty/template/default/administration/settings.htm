@@ -1,0 +1,26 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+    <div class="one-column-box">
+
+        <div class="item">
+            <div class="item-head">
+                {__b('Admin Backend Einstellungen')}
+            </div>
+            <div class="item-content">
+                <table width="100%">
+                    <tr>
+                        <td id="yd-show_edit_time" width="30%">
+                            {if $show_edit_time == 1}
+                                <a href="#" class="yd-show_edit_time-link" id="yd-settings-hidelink">{__b('Registriert/geändert Spalten verbergen')}</a>
+                            {else}
+                                <a href="#" class="yd-show_edit_time-link" id="yd-settings-showlink">{__b('Registriert/geändert Spalten anzeigen')}</a>
+                            {/if}
+                        </td>
+                        <td id="yd-settings-status"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+{/block}

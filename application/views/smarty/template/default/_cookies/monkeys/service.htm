@@ -1,0 +1,27 @@
+{if $config->domain->base == 'lieferando.de'}
+<script type="text/javascript">
+/*<![CDATA[*/
+(function(d){
+    var Mnky_product = {};
+    Mnky_product = {
+    adv:'LFD',
+    aid:'d2b0a11109f31bbde1239d4de71d61ac',
+    ref:d.location.protocol + '//' + d.domain + window.location.pathname
+    };
+    /*categories*/
+    Mnky_product.shop_id = '{$city->getPlz()}-{str_replace(" ","-",$city->getFullname())}';
+
+    var query = [];
+    for(key in Mnky_product){
+    query.push(key,Mnky_product[key].replace('|',''));
+    }
+    var scr = d.createElement('script');
+    scr.async = true;
+    scr.src = (d.location.protocol === 'https:' ? 'https:' : 'http:') + '//ad.12mnkys.com/js/retargeting:spu&product=' + escape(query.join('|'));
+    var elem = d.getElementsByTagName('script')[0];
+    elem.parentNode.insertBefore(scr, elem);
+}(document));
+/* ]]> */
+</script>
+
+{/if}

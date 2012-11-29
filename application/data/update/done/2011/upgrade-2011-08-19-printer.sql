@@ -1,0 +1,3 @@
+-- @author vpriem
+-- ALTER TABLE `printer_topup_queue` 
+--    ADD `state` TINYINT NOT NULL AFTER `orderId`;

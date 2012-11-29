@@ -1,0 +1,57 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="be-1-column">
+    <div class="be-box">
+        <h2>{__b(' Gutscheinaktion prüfen')}</h2>
+        <div class="be-box-in be-discount-formulars">
+            <form action="/administration_discount/checkdiscount/" method="post">
+                <label>{__b('Rabattaktion Id')} *</label>
+                <input type="text" name="rabattId" value="{if is_object($rabatt)}{$rabatt->getId()}{/if}"/>
+                <input type="submit" name="{__('prüfen')}" />
+            </form>
+
+            {if is_object($rabatt)}
+            <ul style="float:none;">
+                <li class="be-dc1"><label>{__b('Rabattaktion')}:</label>
+                    <div class="yd-grid" style="display:inline">
+                        <a href="#" class="yd-grid-trigger">{$rabatt->getName()}</a>
+                        <div class="yd-grid-box" style="left:0">
+                            <a class="yd-grid-box-close" href="#"></a>
+                            <ul class="yd-grid-box-content">    
+                                <li><a href="/administration_discount/edit/id/{$rabatt->getId()}" target="_blank">{__b('Rabattaktion editieren')}</a></li>
+                                <li><a href="/administration_order?type=view_grid_orders&amp;rabattId={$rabatt->getId()}" target="_blank">{__b('Alle Bestellungen dieser Rabattaktion')}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                <li class="be-dc7"><label>{__b('Betrag')}:</label>
+                    {if $rabatt->getKind() == Yourdelivery_Model_Rabatt::RELATIVE}
+                    {$rabatt->getRabatt()}%
+                    {else}
+                    {__b('%s €',$rabatt->getRabatt()|inttoprice)}
+                    {/if}
+                </li>
+                
+                <li><label>{__b('Gültigkeit')}:</label> {if $rabatt->getRrepeat() == 0}{__b('nur einmal')}{else}{__b('mehrfach')}{/if}</li>
+                <li class="be-dc8"><label>{__b('Gültig ab')}:</label> {$rabatt->getStart()|date_format:'%d.%m.%Y %H:%m'}</li>
+                <li class="be-dc9"><label>{__b('Gültig bis')}:</label> {$rabatt->getEnd()|date_format:'%d.%m.%Y %H:%m'}</li>
+                <li class="be-dc10"><label>{__b('Mindestbestellwert')}:</label> {__b('%s €',$rabatt->getMinAmount()|inttoprice)}</li>
+                <li class="be-dc3"><label>{__b('Typ')}:</label> {$types[$rabatt->getType()]['description']}</li>
+                
+                {if $rabatt->needsLandingpage()}
+                <li class="be-dc42"><label>{__b('Landing Page')}:</label> {__b('Ja')}</li>
+                <li class="be-dc42"><label>{__b('URL')}:</label> <a href="http://{$config->domain->base}/{$rabatt->getReferer()}" target="_blank">/{$rabatt->getReferer()}</a></li>
+                {/if}                
+            </ul>
+            {/if}
+        </div>
+
+        {if is_object($rabatt)}
+            <div>{$grid}</div>
+        {/if}
+
+    </div>
+</div>
+
+{/block}    

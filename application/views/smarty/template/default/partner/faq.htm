@@ -1,0 +1,285 @@
+{extends file='partner/_base.htm'}
+{block name="content"}
+
+{include file='partner/_includes/nav.htm'}
+
+<div class="be-partner be-partner-faq">
+
+    <h1 class="icon09">Hilfe</h1>
+
+    <div class="faq-box">
+
+        <ul class="accordion">
+          
+            <li>
+                <a class="accordion-toggle">Was kann ich hier tun?</a>
+                <div style="display: none;">
+                    <p>
+                        Das Partnerkonto ist eine Hilfe von {$config->domain->base} für unsere Dienstleister. Wir möchten damit Ihren Arbeitsablauf vereinfachen. Stellen Sie wichtige Sachen rund um Ihren Lieferservice schnell und sicher selbst ein! Im Partnerkonto können Sie:
+                    </p>
+                    <ul>
+                        <li>Die Bestellungen sehen, die bei {$config->domain->base} für Ihren Lieferservice eingingen</li>
+                        <li>Den von Ihnen erzielten Umsatz bei {$config->domain->base}</li>
+                        <li>Die Rechnungen von {$config->domain->base} einsehen</li>
+                        <li>Statistiken einsehen: wieviel Bestellungen gab es diesen Monat, und wieviele waren es letzten Monat?</li>
+                        <li>Rabatte selbständig auf Ihre Menükarte einstellen</li>
+                        <li>Einfach und schnell mit {$config->domain->base} in Kontakt treten</li>
+                    </ul>
+                </div>
+            </li>
+            
+            <li>
+                <a class="accordion-toggle">Wo sehe ich Bestellungen?</a>
+                <div style="display: none;">
+                    <p>
+                        Sie können folgende Bestellungen sehen:
+                    </p>
+                    <ul>
+                        <li>Bestellungen von heute</li>
+                        <li>Bestellungen der letzten 7 Tage</li>
+                        <li>Bestellungen dieser Woche</li>
+                        <li>Bestellungen diesen Monats</li>
+                        <li>Bestellungen des letzten Monats</li>
+                    </ul>
+                    <br/>
+                    <p>
+                    Es gibt zwei Möglichkeiten, diese Bestellungen zu sehen:
+                    </p>
+                    <ul>
+                        <li>Erstens können Sie jederzeit in der roten Kopfzeile auf jeder Seite einfach auf die Bestellungen klicken, die Sie sehen wollen</li>
+                        <li>Zweitens können Sie auch auf den Menüpunkt Bestellungen klicken, um Ihre Bestellungen zu sehen</li>
+                    </ul>
+                </div>
+            </li>
+            
+            <li>
+                <a class="accordion-toggle">Wieviel Geld verdiene ich mit Lieferando? - Rechnungen</a>
+                <div style="display: none;">
+                    <p>
+                        Unter „Rechnungen“ sehen Sie genau, wieviel Umsatz Sie im aktuellen Monat mit {$config->domain->base} gemacht haben. Außerdem sehen Sie den monatlichen Umsatz für das aktuelle und das letzte Jahr. So wissen Sie genau, wieviel Geld Sie jeden Monat mit {$config->domain->base} eingenommen haben. Sie können sich auch alle vorhandenen Rechnungen ansehen und diese ausdrucken.
+                        <br/><br/>
+                        Sie habe auch die Möglichkeit, sich zu entscheiden, wie {$config->domain->base} Ihnen die Rechnung zuschicken soll. 
+                    </p>
+                    <ul>
+                        <li>Entweder die Rechnung kommt kostenlos per E-Mail und per Partner-Konto</li>
+                        <li>Oder wir faxen die Rechnung (das kostet 2,50 € pro Rechnung)</li>
+                        <li>Oder wir schicken die Rechnung per Post (das kostet 5,00 € pro Rechnung).</li>
+                    </ul>
+                    <br/>
+                    <p>
+                        Unten auf der Seite finden Sie alle Rechnungen von {$config->domain->base} aus diesem und aus dem letzten Jahr.
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <a class="accordion-toggle">Statistiken</a>
+                <div style="display: none;">
+                    <p>
+                        In den Statistiken sehen Sie Ihre aktuellen Verkaufszahlen für den aktuellen Monat, nach Tag sortiert. Sie sehen:
+                    </p>
+                    <ul>
+                        <li>Die Anzahl der Bestellungen</li>
+                        <li>Den insgesamt über lieferando erzielten Umsatz</li>
+                        <li>Die Bestellungen, die online bezahlt wurden</li>
+                        <li>Die Bestellungen, die bar bezahlt wurden</li>
+                    </ul>
+                    <br/>
+                    <p>
+                        In der zweiten Tabelle „Eigene Domain gesamt“ sehen Sie alle Bestellungen über Ihre eigene Webseite (sofern sie bei lieferando eine Seite verwalten. Möchten Sie, dass lieferando den Internet-Auftritt Ihres Lieferservices übernimmt? Dann klicken Sie <span class="showfaq" id="faq-9">hier</span>.
+                        <br/><br/><br/>
+                        Im Graphen darunter sehen Sie die Umsätze und die Bestellungen jeder Kalenderwoche des aktuellen und des vergangenen Jahres. Unter den Graphen sehen Sie diese Zahl noch einmal in Tabellenform. In der ersten Tabelle sehen Sie die Umsätze des aktuellen und des vergangenen Jahres, in der zweiten Tabelle sehen Sie die Bestellungen des aktuellen und des vergangenen Jahres.
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <a class="accordion-toggle">Faxvorlagen</a>
+                <div style="display: none;">
+                    <p>
+                        <strong>Meine Telefonnummer/meine Adresse/meine Telefonnummer/meine E-Mail/meine Daten haben sich geändert!</strong>
+                        <br/>
+                        Bitte nutzen Sie unser Formular zur Änderung von Daten. Füllen Sie es aus und schicken Sie es bitte per Mail an <a href="mailto:backoffice@lieferando.de">backoffice@lieferando.de</a> oder per Fax an {$config->locale->fax->support}. Klicken Sie <a href="{$this->url(['action'=>'documents'],'partnerRoute',true)}" target="_blank">hier</a> fürs Formular.
+                    </p>
+                    <br/>
+                    
+                    <p>
+                        <strong>Ich bin der neue Inhaber / Es gibt einen neuen Inhaber.</strong>
+                        <br/>
+                        Bitte nutzen Sie unser Formular zum Inhaberwechsel. Füllen Sie es aus und schicken Sie es bitte per Mail an <a href="mailto:backoffice@lieferando.de">backoffice@lieferando.de</a> oder per Fax an {$config->locale->fax->support}. Klicken Sie <a href="{$this->url(['action'=>'documents'],'partnerRoute',true)}" target="_blank">hier</a> fürs Formular.
+                    </p>
+                    <br/>
+                    
+                    <p>
+                        <strong>Meine Kontodaten haben sich geändert!</strong>
+                        <br/>
+                        Bitte nutzen Sie unser Formular zur Änderung von Kontodaten. Füllen Sie es aus und schicken Sie es bitte per Mail an <a href="mailto:backoffice@lieferando.de">backoffice@lieferando.de</a> oder per Fax an {$config->locale->fax->support}. Klicken Sie <a href="{$this->url(['action'=>'documents'],'partnerRoute',true)}" target="_blank">hier</a> fürs Formular.
+                    </p>
+                    <br/>
+                    
+                    <p>
+                        <strong>Ich habe neue Öffnungszeiten! Was nun?</strong>
+                        <br/>
+                        Bitte nutzen Sie unser Formular zur Änderung von Öffnungszeiten. Füllen Sie es aus und schicken Sie es bitte per Mail an <a href="mailto:backoffice@lieferando.de">backoffice@lieferando.de</a> oder per Fax an {$config->locale->fax->support}. Klicken Sie <a href="{$this->url(['action'=>'documents'],'partnerRoute',true)}" target="_blank">hier</a> fürs Formular.
+                    </p>
+                    <br/>
+                    
+                    <p>
+                        <strong>Ich muss zeitweise schließen wegen Umbau / Umzug. Was nun?</strong>
+                        <br/>
+                        Bitte nutzen Sie unser Formular für Umbau / Umzug. Füllen Sie es aus und schicken Sie es bitte per Mail an <a href="mailto:backoffice@lieferando.de">backoffice@lieferando.de</a> oder per Fax an {$config->locale->fax->support}. Klicken Sie <a href="{$this->url(['action'=>'documents'],'partnerRoute',true)}" target="_blank">hier</a> fürs Formular.
+                    </p>
+                    <br/>
+                    
+                    <p>
+                        <strong>Meine Liefergebiete haben sich geändert.</strong>
+                        <br/>
+                        Bitte nutzen Sie unser Formular für Liefergebiete. Füllen Sie es aus und schicken Sie es bitte per Mail an <a href="mailto:backoffice@lieferando.de">backoffice@lieferando.de</a> oder per Fax an {$config->locale->fax->support}. Klicken Sie <a href="{$this->url(['action'=>'documents'],'partnerRoute',true)}" target="_blank">hier</a> fürs Formular.
+                    </p>
+                    <br/>
+                    
+                    <p>
+                        <strong>Ich habe eine neue Speisekarte.</strong>
+                        <br/>
+                        Bitte schicken Sie ein Exemplar per Mail an <a href="mailto:backoffice@lieferando.de">backoffice@lieferando.de</a> oder per Fax an {$config->locale->fax->support}.
+                    </p>
+                    <br/>
+                    
+                    <p>
+                        <strong>Ein paar Gerichte auf meiner Speisekarte haben sich geändert.</strong>
+                        <br/>
+                        Bitte nutzen Sie unser Formular für Änderungen in der Speisekarte. Füllen Sie es aus und schicken Sie es bitte per Mail an <a href="mailto:backoffice@lieferando.de">backoffice@lieferando.de</a> oder per Fax an {$config->locale->fax->support}. Klicken Sie <a href="{$this->url(['action'=>'documents'],'partnerRoute',true)}" target="_blank">hier</a> fürs Formular.
+                    </p>
+                    <br/>
+                    
+                    <p>
+                        <strong>Es gibt bei mir neue Extras.</strong>
+                        <br/>
+                        Bitte nutzen Sie unser Formular für Extras. Füllen Sie es aus und schicken Sie es bitte per Mail an <a href="mailto:backoffice@lieferando.de">backoffice@lieferando.de</a> oder per Fax an {$config->locale->fax->support}. Klicken Sie <a href="{$this->url(['action'=>'documents'],'partnerRoute',true)}" target="_blank">hier</a> fürs Formular.
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <a class="accordion-toggle">Konto</a>
+                <div style="display: none;">
+                    <p>
+                        Hier können Sie verschiedene Einstellungen rund um Ihr lieferando-Partner-Konto vornehmen.
+                    </p>
+                    <br/>
+                    
+                    <p>
+                        <strong>E-Mail-Adresse verwalten</strong>
+                        <br/>
+                        Hier können Sie eine Kontaktadresse hinterlegen. Haben sich andere Daten geändert, klicken Sie bitte <span class="showfaq" id="faq-5">hier</span>.
+                    </p>
+                    <br/>
+                    
+                    <p>
+                        <strong>Passwort ändern</strong>
+                        <br/>
+                        Hier können Sie Ihr Passwort für das lieferando-Partner-Konto ändern. Geben Sie zuerst Ihr altes Passwort ein. Danach müssen Sie nur noch zweimal Ihr neues Passwort eingeben.
+                    </p>
+                    <br/>
+                    
+                    <p>
+                        <strong>Einstellungen</strong>
+                        <br/>
+                        Sie können direkt eine Nachricht erhalten, wenn eine Bestellung eingeht, während Sie im Partner-Konto sind. Wählen Sie hier, ob Sie über eine neue Bestellung direkt informiert werden möchten. Wählen Sie außerdem, ob Sie einen Sound hören möchten, wenn eine Bestellung eingeht.
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <a class="accordion-toggle">Rabatt – Ich möchte einen Rabatt einstellen.</a>
+                <div style="display: none;">
+                    <p>
+                        Klicken Sie hierfür auf den Menüpunkt „Rabatt“ und danach auf „Rabatt hinzufügen“. Nun haben Sie folgende Möglichkeiten:
+                    </p>
+                    <ul>
+                        <li>Name: Wählen Sie einen Namen für Ihre Rabattaktion</li>
+                        <li>Zeitraum: Legen Sie einen Zeitraum fest, indem Sie auf die Felder hinter „Von“ und „Bis“ klicken. Soll der Rabatt immer gültig sein, klicken Sie auf „Täglich“</li>
+                        <li>Rabatt: Wählen Sie danach die Höhe des Rabatts. Stellen Sie ein, ob der Rabatt in € oder in % vom Gesamtpreis sein soll. Klicken Sie auf „Lieferkosten entfallen“, wenn vorhandene Lieferkosten entfallen sollen.</li>
+                        <li>Bestellwert: wenn Sie möchten, können Sie hiereinen Mindestbestellwert in € einstellen.</li>
+                        <li>Rabatt auf Kategorie: Sie können auch auf einzelne Kategorien Rabatte geben. Möchten Sie nur eine oder auch zwei Kategorien mit einem Rabatt versehen, wählen Sie bitte per Klick aus. Soll der Rabatt doch auf die ganze Karte sein, dann klicken Sie einfach auf „Alle“</li>
+                        <li>Wiederholung: hier können Sie einstellen, ob der Rabatt einmalig sein soll, oder ob er sich wiederholen soll. Ein Rabatt kann sich täglich, wöchentlich oder monatlich wiederholen.</li>
+                    </ul>
+                </div>
+            </li>
+            
+            <li>
+                <a class="accordion-toggle">Wie kann ich lieferando etwas mitteilen? - Kontakt</a>
+                <div style="display: none;">
+                    <p>
+                        Wenn Sie {$config->domain->base} etwas mitteilen möchten, gibt es folgende Möglichkeiten:
+                    </p>
+                    <ul>
+                        <li>Anrufen unter {$config->locale->tel->support}</li>
+                        <li>Faxen an {$config->locale->fax->support}</li>
+                        <li>Oder nutzen Sie das <a href="{$this->url(['action'=>'contact'],'partnerRoute',true)}" target="_blank">Kontaktformular</a></li>
+                    </ul>
+                    <br/>
+                    <p>
+                        Um das Kontaktformular zu nutzen, schreiben Sie im Partner-Konto unter Kontakt uns einfach eine Nachricht. Wählen Sie dann einen passenden Betreff. Sie können auch eine Datei anhängen. Mit einem Klick auf „Kontaktanfrage schicken“ ist Ihre Nachricht wenige Minuten später bei {$config->domain->base}.
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <a class="accordion-toggle">Ich möchte eine eigene Webseite.</a>
+                <div style="display: none;">
+                    <p>
+                        Bitte kontaktieren Sie uns, wir erstellen und pflegen Ihre Seite nach Ihren Wünschen!
+                    </p>
+                    <ul>
+                        <li>Rufen Sie uns an: {$config->locale->tel->support}</li>
+                        <li>Faxen Sie uns: {$config->locale->fax->support}</li>
+                        <li>Oder nutzen Sie das <a href="{$this->url(['action'=>'contact'],'partnerRoute',true)}" target="_blank">Kontaktformular</a></li>
+                    </ul>
+                </div>
+            </li>
+            
+            <li>
+                <a class="accordion-toggle">Ich möchte eine iPhone-App für meinen Lieferdienst.</a>
+                <div style="display: none;">
+                    <p>
+                        Sie erhalten automatisch eine App von uns, wenn Sie sich für unsere Premium-Webseite entscheiden. Mehr Infos unter:
+                    </p>
+                    <ul>
+                        <li>Rufen Sie uns an: {$config->locale->tel->support}</li>
+                        <li>Faxen Sie uns: {$config->locale->fax->support}</li>
+                        <li>Oder nutzen Sie das <a href="{$this->url(['action'=>'contact'],'partnerRoute',true)}" target="_blank">Kontaktformular</a></li>
+                    </ul>
+                </div>
+            </li>
+            
+            <li>
+                <a class="accordion-toggle">Ich bin an Produkten von {$config->domain->base} interessiert (Pizzakartons, Roller, usw. usf.)</a>
+                <div style="display: none;">
+                    <p>
+                        Wir haben viele Angebote für Ihren Lieferservice. Sparen Sie mit uns bares Geld! Lieferando übernimmt gern einen Teil des Kosten beim Erstellen von Werbemitteln für Sie. Mehr Infos unter:
+                    </p>
+                    <ul>
+                        <li>Rufen Sie uns an: {$config->locale->tel->support}</li>
+                        <li>Faxen Sie uns: {$config->locale->fax->support}</li>
+                        <li>Oder nutzen Sie das <a href="{$this->url(['action'=>'contact'],'partnerRoute',true)}" target="_blank">Kontaktformular</a></li>
+                    </ul>
+                </div>
+            </li>
+            
+            <li>
+                <a class="accordion-toggle">Mein Lieferdienst taucht in einem bestimmten PLZ-Bereich nicht auf, obwohl wir dorthin liefern.</a>
+                <div style="display: none;">
+                    <p>
+                        Bitte nutzen Sie unser Formular für Liefergebiete. Füllen Sie es aus und schicken Sie es bitte per Mail an <a href="mailto:backoffice@lieferando.de">backoffice@lieferando.de</a> oder per Fax an {$config->locale->fax->support}. Klicken Sie <a href="{$this->url(['action'=>'documents'],'partnerRoute',true)}" target="_blank">hier</a> fürs Formular.
+                    </p>
+                </div>
+            </li>            
+            
+        </ul>
+
+    </div>
+
+</div>
+
+{/block}

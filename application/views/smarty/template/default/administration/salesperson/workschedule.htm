@@ -1,0 +1,63 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+{if is_null($salesperson)}
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Sie sind nicht als Vertriebler eingetragen, also können sie keine Arbeitszeiten eintragen.')}
+            </div>
+            <div class="item-content">
+                {__b('Wenn sie wollen, können sie sich als Vertriebler %shier%s eintragen mit der gleichen E-Mail Adresse, die sie beim Einloggen ins Admin-Backend benutzen.','<b><a href="/administration_salesperson/create">', '</a></b>')}
+            </div>
+        </div>
+    </div>
+{else}
+<form action="/administration_salesperson/workschedule" method="post">
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Neue Arbeitszeit für %s %s eintragen', $salesperson->getPrename(), $salesperson->getName())}
+            </div>
+            <div class="item-content">
+                <table class="user-tab">
+                    <tr>
+                        <th width="20%">{__b('Tag')}</th>
+                        <th>{__b('Arbeitszeit')}</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="yd-salesperson-worktimes-openings" name="day" value="{date('d.m.Y')}"/></td>
+                        <td><input type="text" name="hours" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="{__b('Hinzufügen')}" class="button rund_set" /></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="two-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Arbeitszeiten')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <th width="30%">{__b('Tag')}</th>
+                    <th>{__b('Arbeitszeit (Stunden)')}</th>
+                </tr>
+                {foreach from=$salesperson->getWorktimes() item=t}
+                <tr>
+                    <td>{$t.day}</td>
+                    <td>{$t.hours}</td>
+                </tr>
+                {/foreach}
+            </table>
+        </div>
+    </div>
+</div>
+{/if}
+{/block}

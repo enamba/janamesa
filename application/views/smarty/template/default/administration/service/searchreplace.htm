@@ -1,0 +1,55 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+            <a href="/administration_service/searchreplaceoverview">{__b('Übersicht')}</a>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Suchen und Ersetzen')}
+        </div>
+        <div class="item-content">
+            <form id="yd-search-replace" method="post" action="/request_administration/searchreplace">
+                <table class="user-tab">
+                    <tr>
+                        <td colspan="2">{__b('Bitte Groß- und Kleinschreibung beachten!')}</td>
+                    </tr>
+                    <tr>
+                        <td width="20%"><input type="text" name="search" value=""></td>
+                        <td width="80%"><input type="submit" value="{__b('Suchen')}" style="width: 100px;" class="button"></td>
+                    </tr>
+                    <tr>
+                        <td width="20%"><input type="text" name="replace" value=""></td>
+                        <td width="80%"><input type="submit" name="_replace" value="{__b('Ersetzen')}" style="width: 100px;" class="button"><br /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="two-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Speisen')}
+        </div>
+        <div class="item-content" id="yd-search-meals">
+
+        </div>
+    </div>
+    <div class="item">
+        <div class="item-head">
+            {__b('Kategorien')}
+        </div>
+        <div class="item-content" id="yd-search-categories">
+
+        </div>
+    </div>
+</div>
+{/block}

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="de" xml:lang="de" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="de" xml:lang="de" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="de" xml:lang="de" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="de" xml:lang="de" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="de" xml:lang="de">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="viewport" content="width=1100">     
+
+        <title>{$satellite->getTitle()}</title>
+        
+        <link rel="stylesheet" type="text/css" href="/media/css/compiled/{$package_css|default:'satellite'}-{$extra_css|default:'no'}-{$REVISION}.css" />
+
+        <script type="text/javascript" src="/media/javascript/compiled/frontend-{$REVISION}-gelbeseiten.js"></script>
+     
+    </head>
+    <body>
+        
+        {include file="order/_includes/menu/top.htm"}
+        
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        
+        <div id="yd-container" class="yd-clearfix">
+            <div id="yd-partner-header">
+                <div class="yd-partner-logo"></div>
+                <div class="yd-partner-description">
+                    <div class="yd-partner-title">
+                        <h1>{$satellite->getTitle()}</h1>
+                        <div class="yd-partner-rating">
+                            <div class="yd-rated-{($service->getRating()->getAverage()*2)|string_format:'%02d'} tooltip yd-menu-toggle-2a" title="{__('Aktuelle Bewertung innerhalb der letzten 30 Tage')}"></div>
+                            <span class="ratingtext">ø {$service->getRating()->getAverage()|string_format:"%.2f"} Sterne aus {$service->getRating()->count(null, true, false, true)} Bewertungen</span>
+                        </div>
+                    </div>
+                    <div class="fb-like" data-href="http://de-de.facebook.com/lieferando" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="arial"></div>
+                    <br/>
+                    <p>{$service->getTagsWithMaxStringlength(200)|implode:', '}</p>
+                </div>
+                <div class="yd-partner-info">
+                    {$this->formatOpenings($service->getOpening()->getIntervalOfDay(time()))}<br/>
+                    Mindestbestellwert: <span class="yd-min-amount">{__('%s €', 0|inttoprice)}</span> Lieferkosten: <span class="yd-deliver-cost">{__('%s €', 0|inttoprice)}</span>
+                </div>
+                <div class="yd-partner-payment">
+                    <ul class="yd-sv3
+                        {if $service->isLieferblitz() || $service->isPremium()}
+                            pr
+                        {elseif $service->isBloomsburys()}
+                            bb
+                        {elseif $service->isNew()}
+                            new
+                        {/if}
+                        yd-service-select">
+                       
+                            {if $service->isOnlycash() || $service->isNoContract()}
+                            <li class="yd-sv3-6">
+                                <em>
+                                    <span>{__('Nur Barzahlung möglich')}</span>
+                                    <img src="{$domain_static}/images/yd-frontend-step2/payment-cash.png" alt="" />
+                                </em>
+                                {if $service->hasSmsNotify()}
+                                    <small>
+                                        <img src="{$domain_static}/images/yd-frontend-step2/yd-sv3-sms.png" alt="" />
+                                        <small>{__('Dieser Lieferservice schickt Dir eine E-Mail und SMS mit der Lieferzeit.')}</small>
+                                    </small>
+                                {/if}
+                            </li>
+                            {elseif !$service->isPaymentbar()}
+                            <li class="yd-sv3-6">
+                                <em>
+                                    <span>{__('Nur online Bezahlung möglich')}</span>
+                                    <img src="{$domain_static}/images/yd-frontend-step2/payment-paypal.png" alt="" />
+                                    <img src="{$domain_static}/images/yd-frontend-step2/payment-sofort.png" alt="" />
+                                    <img src="{$domain_static}/images/yd-frontend-step2/payment-visa.png" alt="" />
+                                    <img src="{$domain_static}/images/yd-frontend-step2/payment-mastercard.png" alt="" />
+                                    <img src="{$domain_static}/images/yd-frontend-step2/payment-amex.png" alt="" />
+                                    <img src="{$domain_static}/images/yd-frontend-step2/payment-discount.png" alt="" />
+                                </em>
+                                {if $service->hasSmsNotify()}
+                                    <small>
+                                        <img src="{$domain_static}/images/yd-frontend-step2/yd-sv3-sms.png" alt="" />
+                                        <small>{__('Dieser Lieferservice schickt Dir eine E-Mail und SMS mit der Lieferzeit.')}</small>
+                                    </small>
+                                {/if}
+                            </li>
+                            {else}
+                            <li class="yd-sv3-6">
+                                <em>
+                                    <span>{__('Bar oder online bezahlen')}</span>
+                                    <img src="{$domain_static}/images/yd-frontend-step2/payment-cash.png" alt="" />
+                                    <img src="{$domain_static}/images/yd-frontend-step2/payment-paypal.png" alt="" />
+                                    <img src="{$domain_static}/images/yd-frontend-step2/payment-sofort.png" alt="" />
+                                    <img src="{$domain_static}/images/yd-frontend-step2/payment-visa.png" alt="" />
+                                    <img src="{$domain_static}/images/yd-frontend-step2/payment-mastercard.png" alt="" />
+                                    <img src="{$domain_static}/images/yd-frontend-step2/payment-amex.png" alt="" />
+                                    <img src="{$domain_static}/images/yd-frontend-step2/payment-discount.png" alt="" />
+                                </em>
+                                {if $service->hasSmsNotify()}
+                                    <small>
+                                        <img src="{$domain_static}/images/yd-frontend-step2/yd-sv3-sms.png" alt="" />
+                                        <small>{__('Dieser Lieferservice schickt Dir eine E-Mail und SMS mit der Lieferzeit.')}</small>
+                                    </small>
+                                {/if}
+                            </li>
+                            {/if}
+                    </ul>
+                </div>
+            </div>
+            <div id="yd-menu-container">
+                <div id="yd-menu">
+                    
+                    <div id="yd-service-tabs">
+                        <div id="yd-menu-toggle-1">
+                            {include file='satellite/_menu.htm'}
+                        </div>
+
+                        <div id="yd-menu-toggle-2" class="hidden">           
+                            {assign var=serviceCacheId value=$service->getId()}
+                            {include file='order/_includes/menu/ratings.htm' caching=1 cache_lifetime=86400 cache_id="ratings.$serviceCacheId" max=0}
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="yd-menu-modern-footer">
+                    <span class="yd-mmf1">vegetarisch</span>
+                    <span class="yd-mmf2">scharf gewürzt</span>
+                    <span class="yd-mmf3">mit Knoblauch</span>
+                    <span class="yd-mmf4">mit Fisch</span>
+                </div>
+                <div id="yd-cart">
+                    <form action="{if $preview}/satellite/finish/id/{$satellite->getId()}{else}{$satellite->getUrl()}/finish{/if}" method="post" id="yd-finish-order-form">
+                        <!-- this will trigger the restoring of the ydOrder object with an update of the view -->
+                        <input type="hidden" name="serviceId" value="{$service->getId()}" id="yd-order-service-id" />       
+                        <input id="yd-order-restore-bucket" type="hidden" name="restore" />
+
+                        {include file="order/_includes/sidebar/cart-menu.htm"}
+                    </form>
+                    <div class="yd-toggle-categories">
+                        <a class="yd-toggle-categories-link arrow">Speisekarte</a>
+                        <div class="hidden">
+                            {include file="order/_includes/menu/category_list.htm" ul_classes="yd-sidebar" a_classes="yd-menu-toggle-1a" postfix="2" list_children=false}
+                        </div>
+                    </div>
+                    <ul class="yd-sidebar">
+                        <li><a href="#" class="yd-menu-toggle-2a">Bewertungen</a></li>
+                        <li><a href="#" class="ydicon yd-menu-toggle-1a">Bestellen</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="yd-partner-footer">
+                <div id="tab-container" class="tab-container">
+                    <ul class='etabs'>
+                        <li class='tab'><a href="#tab1">Über lieferando.de</a></li>
+                        <li class='tab'><a href="#tab2">Kontakt</a></li>
+                    </ul>
+                    <div id="tab1">
+                        <h3>lieferando.de – Deine Vorteile</h3>
+                        <ul class="yd-benefit">
+                            <li>6.500 Lieferservices in Deutschland</li>
+                            <li>Bequem bargeldlos bezahlen</li>
+                            <li>Treuepunkte sammeln und sparen</li>
+                        </ul>
+                        <hr>
+                        <p>
+                            lieferando.de bietet deutschlandweit eine Essens-Bestellplattform im Internet für Privatpersonen und Unternehmen an. Bei lieferando.de kann der 
+                            Kunde das gewünschte Essen per Mausklick bestellen und bequem via PayPal, Kreditkarte, Sofort-überweisung oder Bar bezahlen.<br/><br/>
+                        </p>
+                        <p>
+                            Kunden können auch über die neuen Android und iPhone-Apps Essen ordern und bezahlen. Gesammelte Treuepunkte kann der Privatkunde gegen kostenlose 
+                            Mahlzeiten einlösen. Im System sind aktuell die Speisekarten und Sortimente von einer Vielzahl von Restaurants, Lieferservices und anderen 
+                            gastronomischen Dienstleistern erfasst.<br/><br/>
+                        </p>
+                        <p>
+                            Unternehmen nutzen den kostenlosen Bestell- und Abrechnungsservice für Geschäftsessen, Catering, Getränke, Obst und Spätverpflegung und 
+                            decken damit den gesamten Bedarf an Office-Verpflegung ab. Der Vorteil für Unternehmen liegt in der deutlichen Reduzierung des 
+                            Buchhaltungsaufwandes, denn zahlreiche Spesenbelege der Mitarbeiter werden durch eine Sammelrechnung pro Monat ersetzt. Zu den Kunden 
+                            des lieferando.de Lieferservice gehören DAX30-Unternehmen genauso wie Werbeagenturen, Banken, IT-Firmen, Anwaltskanzleien und Notare.
+                        </p>
+                    </div>
+                    <div id="tab2">
+                        <div class="yd-faq-support">
+                            <h3>lieferando.de Support-Chat</h3>
+                            
+                            <p>
+                                Hast Du Fragen zu Deiner Bestellung, zur Verwendung von Gutscheinen oder anderen Themen? Dann helfen Dir unsere Mitarbeiter des Support-Teams sofort, per Chat, weiter.
+                                <br/><br/>
+                                Klicke einfach auf den Button und schon wird Dir geholfen.
+                            </p>
+                            
+                            <!-- BEGIN ProvideSupport.com Graphics Chat Button Code -->
+                                <div id="ci0MyQ" style="z-index:100;position:absolute"></div>
+                                <div id="sc0MyQ" style="display:inline"></div>
+                                <div id="sd0MyQ" style="display:none"></div>
+                                <script type="text/javascript">
+                                    var se0MyQ=document.createElement("script");se0MyQ.type="text/javascript";var se0MyQs=(location.protocol.indexOf("https")==0?"https":"http")+"://image.providesupport.com/js/yourdelivery/safe-standard.js?ps_h=0MyQ&ps_t="+new Date().getTime();
+                                    se0MyQs += "&online-image=" + escape('/media/images/gelbeseiten/online.gif');
+                                    se0MyQs += "&offline-image=" + escape('/media/images/gelbeseiten/offline.gif');
+                                    setTimeout("se0MyQ.src=se0MyQs;document.getElementById('sd0MyQ').appendChild(se0MyQ)",1)
+                                </script>
+                                <noscript>
+                                <div style="display:inline"><a href="http://www.providesupport.com?messenger=yourdelivery">Customer Service Help Desk</a></div>
+                            </noscript>
+                            <!-- END ProvideSupport.com Graphics Chat Button Code -->
+                            
+                        </div>
+                        
+                        <div class="yd-faq-mail">
+
+                            <h3>Oder schreib uns eine Nachricht:</h3>
+
+                            <form class="yd-faq-form">
+                                <ul>
+                                    <li>
+                                        <label>Name:*</label>
+                                        <input type="text" name="name" />
+                                    </li>
+                                    <li>
+                                        <label>E-Mail:*</label>
+                                        <input type="text" name="email" />
+                                    </li>
+                                    <li>
+                                        <label>Telefon:</label>
+                                        <input type="text" name="tel" />
+                                    </li>
+                                    <li>
+                                        <label>Deine Nachricht:*</label>
+                                        <textarea name="message" style="max-height:50px;"></textarea>
+                                    </li>
+                                    <li>
+                                        <a class="yd-button-140" id="infocenter-contact-submit">Abschicken</a>
+                                    </li>
+                                </ul>
+                            </form>
+
+                            <div class="hidden" id="yd-lang-contact-check-red">Bitte prüfen Sie die rot markierten Felder</div>   
+                            <div class="hidden" id="yd-lang-contact-could-not-send">Nachricht konnte nicht gesendet werden</div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="yd-controls">
+                    <a href="#" class="right" id="toTop">zum Seitenanfang</a>
+                </div>
+                <div class="yd-footlinks">
+                    <ul>
+                        <li><a href="/about" target="_blank">Impressum</a></li>
+                        <li><a href="/customer-term" target="_blank">Nutzungsbedingungen</a></li>
+                        <li><a href="/privacy" target="_blank">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+              
+        {include file='satellite/_piwik.htm'}
+        {include file='_cookies/piwik/global.htm' uadomain=$domain_base}
+        
+        {include file="order/_includes/menu/bottom.htm" tracking=false}
+        
+    </body>
+</html>

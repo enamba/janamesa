@@ -1,0 +1,26 @@
+{extends file="base.htm"}
+{block name="content"}
+
+<div class="yd-discount-dailydeal-sorry">
+
+    <h1>Sorry, leider kannst Du den Gutschein nicht einlösen!</h1>
+
+    <p>
+        Der Gutschein gilt leider nur für Neukunden (vgl. DailyDeal-Konditionen). Da du bereits als Kunde bei 
+        Lieferando registriert bist, kannst Du ihn nicht selbst nutzen. Der Gutschein behält seine Gültigkeit
+        bis zum 31.12.2011. Du kannst ihn gerne an Freunde oder Bekannte weitergeben. Wir bitten um Verständnis.
+    </p>
+
+    <a class="button b1" href="/">zur lieferando Startseite</a>
+
+    {if $config->domain->base == 'lieferando.de'}
+    <a class="button" href="http://dailydeal.de/gutschein-nat-dienstleistungen-lieferando-070711">Fragen zu den Gutschein-Konditionen?</a>
+    {/if}
+    
+    {if $config->domain->base == 'lieferando.at'}
+    <a class="button" href="http://dailydeal.at/gutschein-nat-at-dienstleistungen-lieferando-110711">Fragen zu den Gutschein-Konditionen?</a>
+    {/if}
+
+</div>
+
+{/block}

@@ -1,0 +1,48 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<ul class="be-tabs">
+    <li><a href="/administration_seo_backlinks/">{__b('Zurück zur Übersicht')}</a></li>
+</ul>
+
+<form action="/administration_seo_backlinks/edit" method="post">
+    <input type="hidden" name="id" value="{$backlink->id|escape}" />
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">{__b('Backlink erstellen')}</div>
+            <div class="item-content">
+                <div>
+                    <table>
+                        <tr>
+                            <td>{__b('Domain')}: </td>
+                            <td colspan="3">
+                                <input type="text" name="domain" value="{if $backlink->domain}{$backlink->domain|escape}{else}{$HOSTNAME}{/if}" class="rund_set text" /> *
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('URL')}: </td>
+                            <td colspan="3">
+                                <input type="text" name="url" value="{$backlink->url|escape}" class="rund_set text" /> *
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- submit -->
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" name="save" value="{__b('Speichern')}" class="button rund_set" />
+                <input type="submit" value="{__b('Übernehmen')}" class="button rund_set" />
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+
+</form>
+
+{/block}

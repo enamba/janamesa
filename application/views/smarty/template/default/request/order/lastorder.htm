@@ -1,0 +1,27 @@
+<div class="yd-box-title">{__('Deine letzte Bestellung')}</div>
+
+<form class="yd-top-plz" action="/{$service->getDirectLink($mode)}" method="GET">
+    <div class="yd-service-select-lastorder yd-clearfix" id="yd-repeat-lastorder-{$order->getHash()}-{$service->getId()}">
+        <span class="yd-top-plz-img">
+            <img src="{$order->getService()->getImg('tiny')}" alt="{$order->getService()->getName()}" />
+        </span>
+
+        <span class="yd-lastorder-name">{$service->getName()|truncate:18:"..."}</span>
+        <span class="yd-lastorder-time">{__('Bestellung, %s um %s',$order->getTime()|date_format:"%d.%m.%Y",$order->getTime()|date_format:"%H:%m")}</span>
+    </div>
+</form>
+
+<div class="yd-top-plz-sort-me">
+    {if $order->showRatingLink()}
+    <a href="/rate/{$order->getHash()}" class="cursor" target="_blank">{__('bewerten')}</a> |
+    {/if}
+    <a href="/ordercoupon/{$order->getHash()}" class="yd-popup">{__('Bestellzettel')}</a> 
+    {if $order->isRepeatable()}
+        |
+        <a href="#" id="yd-repeat-order-{$order->getHash()}-{$service->getId()}" class="yd-link-repeat-lastOrder">{__('wiederholen')}</a>
+        <span class="yd-repeat-loading hidden">
+            {__('Bitte warten')}&nbsp;
+            <img src="{$config->domain->static}/images/yd-background/yd-load-small.gif" alt="" />
+        </span>
+    {/if}
+</div>

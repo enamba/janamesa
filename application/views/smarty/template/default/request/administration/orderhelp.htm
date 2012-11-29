@@ -1,0 +1,192 @@
+<div class="be-dialogs"><a class="be-dialogs-close yd-close-lightbox"></a>
+
+    <div class="be-dialogs-head">
+        <h2>{__b('Hilfe')}</h2>
+    </div>
+
+    <div class="be-dialogs-body">
+        <form id="orderhelp">
+            <table width="100%">    
+                {if $order->getState()>0}
+                <tr>
+                    <td colspan="2" align="center">
+                        <b>{__b('Die Bestellung ist in Ordnung')}</b>
+                    </td>
+                </tr>
+                {/if}
+                {if $order->getState()==0}
+                <tr>
+                    <td>
+                        <b>{__b('Unbestätigte Bestellung')}</b>
+                    </td>
+                    <td>
+                        {__b('Diese Bestellung ist bisher nicht versendet. Daher bitte NICHTS machen und warten. In diesem Moment versucht das System die Bestellung zu verschicken. Nach einer Weile wird die Bestellung entweder grün und ist verschickt, oder gelb wenn sie fehlerhaft ist.<br/>
+                        Solange die Bestellung weiß ist - bitte NICHT auf "bestätigen" klicken!')}
+                    </td>
+                </tr>
+                {/if}
+                {if $order->getState()==-1}
+                <tr>
+                    <td>
+                        <b>{__b('Faxfehler')}</b>
+                    </td>
+                    <td>
+                        <b>"{__b('No Train')}"</b> {__b('oder')} <b>"NOFAX_DIS"</b>: {__b('Bei dieser Bestellung gab es bisher keine Rückmeldung vom Empfängerfaxgerät. Dies heißt NICHT dass das Fax nicht angekommen ist. Bitte Folgendes tun')}:<br/>
+                        - {__b('Restaurant anrufen und fragen ob Fax angekommen ist.')}<br/>
+                        - {__b('Falls nein: erneut senden, 3 Min warten, dann anrufen. Falls wieder nicht angekommen: die Bestellung per Telefon durchgeben! Wenn online bezahlt wurde, bitte unbedingt darauf hinweisen!')}<br/><br/>
+                        <b>"Rem_Dis"</b>: {__b('Das Fax ist mit hoher Wahrscheinlichkeit nicht angekommen. Folgendes tun:')}<br/>
+                        - {__b('Fax erneut senden!')}<br/>
+                        - {__b('3 Minuten warten')}<br/>
+                        - {__b('Anrufen und fragen ob das zweite Fax angekommen ist. Falls nein: noch einmal schicken, warten, anrufen – anschließend telefonisch durchgeben und Vorfall im Report vermerken.')}
+                    </td>
+                </tr>
+                {/if}
+                {if $order->getState()==-2}
+                <tr>
+                    <td colspan="2" align="center">
+                        <b>{__b('Stornierte Bestellung')}</b>
+                    </td>
+                </tr>
+                {/if}
+                {if $order->getState()==-3}
+                <tr>
+                    <td>
+                        <b>{__b('Fake Bestellung')}</b>
+                    </td>
+                    <td>
+                        {__b('Diese Bestellung ist möglicherweise eine Fake Bestellung. Daher wurde bisher KEIN Fax versand. Bitte den Bestellzettel prüfen oder im Zweifel den Kunden anrufen. Fake Bestellungen sind in den meisten Fällen Barzahlungen, es fast nie die reale Handynummer angegeben. Mögliche Fake Kriterien sind z.B.')}:<br/>
+                        {__b('Zu kurze Handynummer')}- <br/>
+                        {__b('Hausnummer ist "11", "66", o.ä. (Oft wird einfach schnell alles eingegeben)')}- <br/>
+                        {__b('Alle Angaben sind klein geschrieben')}- <br/>
+                        {__b('Handynummer besteht aus nur 3 verschiedenen Zahlen')}- <br/>
+                        {__b('Name, Straße machen kein Sinn oder erscheinen wie Fantasienamen')}- <br/>
+                        {__b('Nur Getränke bestellt')}- <br/>
+                        {__b('Falsche Telefonnummer für die jeweilige Stadt')}- <br/><br/>
+                        {__b('Sollte sich herausstellen dass die Bestellung kein Fake ist, bitte auf "Bestellzettel erneut versenden" klicken.')}
+                    </td>
+                </tr>
+                {/if}
+                {if $order->getState()==-4}
+                <tr>
+                    <td>
+                        <b>{__b('Unbestätigte Firmenbestellung')}</b>
+                    </td>
+                    <td>
+                        {__b('Diese Bestellung ist von einer bisher nicht registrierten Firma und wird daher nicht sofort durchgefaxt sondern erst nach manueller Bestätigung! Daher zunächst den Bestellzettel öffnen und die Firma verifizieren')}:<br/>
+                        <b>{__b('Positv:')}</b><br/>
+                        - {__b('Name der Firma hat Bezeichung: UG, GmbH, etc. im Namen')}<br/>
+                        - {__b('Googlen nach der Firma: stimmen Adresse, Bezeichnung überein?')}<br/>
+                        - {__b('Adresse der im Internet gemeldeten Firma ist gleich mit der Lieferadresse')}<br/>
+                        - {__b('Festnetznummer ist angeben')}<br/>
+                        - {__b('Email Adresse gehört zur Firma')}<br/>
+
+                        <b>{__b('Negativ')}</b>
+                        - {__b('Keine Firmenbezeichnung')}<br/>
+                        - {__b('Keine Ergebnisse bei Google')}<br/>
+                        - {__b('Keine Internetseite')}<br/>
+                        - {__b('Email stimmt nicht mit Unternehmen überein')}<br/>
+                        - {__b('Telefonnummer ist keine Festnetznummer und nicht der Firma zuzuordnen.')}<br/>
+
+                        {__b('Auf jeden Fall: IMMER ANRUFEN und mit dem Kunden sprechen.')}<br/>
+                        {__b('Wenn die Firma verifiziert werden kann dann auf "Firma bestätigen" klicken.')} {__b('Anschließend wird eine Firma im System angelegt und ihr nicht mehr tun (nicht noch zusätzlich bestätigen o.ä.)')}<br/>
+                        {__b('Wenn keine Internetseite vorhanden ist und keine Festnetznummer vorhanden, sowie keine Email Adresse dann nicht Firma anlegen.')} {__b('Falls der Kunde erreicht werden kann ihm Bescheid geben dass wir die Firma nicht verifizieren konnten und er bitte noch einmal bestellen und bar oder online zahlen soll.')}<br/>
+                        {__b('Vorgang im Support bemerken.')}
+                    </td>
+                </tr>
+                {/if}
+                {if $order->getDeliverTime()>$order->getTime()}
+                <tr>
+                    <td>
+                        <b>{__b('Vorbestellung (Bestellzeitpunkt ist nicht sofort)')}</b>
+                    </td>
+                    <td>
+                        {__b('Diese Bestellung soll nicht sofort ausgeliefert werden.')} {__b('Viele Lieferservices überlesen jedoch den Lieferzeitpunkt.')} {__b('Daher bitte sofort beim Lieferservice anrufen und diesen auf den späteren Lieferzeitpunkt hinweisen.')}
+                    </td>
+                </tr>
+                {/if}
+                {if $order->getMode()=='cater'}
+                <tr>
+                    <td>
+                        <b>{__b('Bestellung Catering')}</b>
+                    </td>
+                    <td>
+                        {__b('Dies ist eine Cateringbestellung.')} {__b('Viele Caterer sind nicht direkt bei Ihrem Faxgerät daher bitte folgendes tun')}: 
+                        {__b('bei dem Caterer anrufen und vergewissern dass er Fax bekommen und die Bestellung registriert hat.')}
+                    </td>
+                </tr>
+                {/if}
+                {if (($order->getKind()=='comp') && ($order->getPayment()=='bill'))}
+                <tr>
+                    <td>
+                        <b>{__b('Firmenbestellung auf Rechnung')}</b>
+                    </td>
+                    <td>
+                        {__b('Falls der Lieferservice noch nicht Bescheid weiß, es muss noch speziell auf die bargeldlose Bestellung hingewiesen werden. Bitte Folgendes tun')}:<br/>
+                        - {__b('Restaurant anrufen: "Hallo hier ist xy vom lieferando.de Support.')} {__b('Wir haben Ihnen gerade eine Bestellung für XY (Kundenname) vermittelt.')} {__b('Wir wollten nur kurz Bescheid geben dass diese Bestellung bereits online bezahlt ist und wir Ihnen das Geld überweisen.')} {__b('Der Fahrer braucht bei dem Kunden nicht zu kassieren.')}"<br/>
+                        - {__b('Wenn der Mitarbeiter noch nichts von dem online System weiß: Darauf hinweisen dass das Restaurant neuerdings bei yourdelivery gelistet ist und bei uns online Zahlungen möglich sind.')} ("{__b('Keine Sorge wir überweisen Ihnen das Geld')}").<br/>
+                        - {__b('Wenn der Mitarbeiter sich weigert die Bestellung auszuliefern dann darauf bestehen dass der "Chef" einen Vertrag mit uns geschlossenen hat und er diesen bricht falls nicht ausgeliefert wird.')}<br/>
+                        - {__b('Falls der Mitarbeiter nicht dazu bewegt werden kann auszuliefern, den Kunden anrufen, ihm sagen dass das Restaurant gerade nicht liefern kann und er wenn möglich bei einem anderen Restaurant bestellen soll.')} {__b('Anmerken, dass das Geld natürlich zurück überwiesen wird.')} {__b('Das Restaurant anschließend offline setzen und im Abendreport vermerken.')}
+                    </td>
+                </tr>
+                {/if}
+                {if (($order->getKind()=='priv') && ($order->getPayment()!='bar')) && ($order->getState()!=-4)}
+                <tr>
+                    <td>
+                        <b>{__b('Private Bestellung bargeldlos')}</b>
+                    </td>
+                    <td>
+                        {__b('Falls der Lieferservice noch nicht Bescheid weiß, es muss noch speziell auf die bargeldlose Bestellung hingewiesen werden. Bitte Folgendes tun:')}<br/>
+                        - {__b('Restaurant anrufen: "Hallo hier ist xy vom lieferando.de Support.')} {__b('Wir haben Ihnen gerade eine Bestellung für XY (Kundenname) vermittelt.')} {__b('Wir wollten nur kurz Bescheid geben dass diese Bestellung bereits online bezahlt ist und wir Ihnen das Geld überweisen.')} {__b('Der Fahrer braucht bei dem Kunden nicht zu kassieren.')}"<br/>
+                        - {__b('Wenn der Mitarbeiter noch nichts von dem online System weiß: Darauf hinweisen dass das Restaurant neuerdings bei yourdelivery gelistet ist und bei uns online Zahlungen möglich sind.')} ("{__b('Keine Sorge wir überweisen Ihnen das Geld')}").<br/>
+                        - {__b('Wenn der Mitarbeiter sich weigert die Bestellung auszuliefern dann darauf bestehen dass der "Chef" einen Vertrag mit uns geschlossenen hat und er diesen bricht falls nicht ausgeliefert wird.')}<br/>
+                        - {__b('Falls der Mitarbeiter nicht dazu bewegt werden kann auszuliefern, den Kunden anrufen, ihm sagen dass das Restaurant gerade nicht liefern kann und er wenn möglich bei einem anderen Restaurant bestellen soll.')} {__b('Anmerken, dass das Geld natürlich zurück überwiesen wird.')} {__b('Das Restaurant anschließend offline setzen und im Abendreport vermerken.')}
+                    </td>
+                </tr>
+                {/if}
+                {if strlen($order->getRabattCodeId())!=0}
+                <tr>
+                    <td>
+                        <b>{__b('Gutscheincode wurde verwendet bei Barbestellung')}</b>
+                    </td>
+                    <td>
+                        {__b('Für diese Bar-Bestellung wurde ein Gutschein verwendet. Bitte Folgendes tun:')}<br/>
+                        - {__b('Das Restaurant anrufen (GLEICHGÜLTIG ob dieses normalerweise online Zahlungen akzeptiert) und darauf hinweisen, dass nur der DIFFERENZBETRAG (diesen auch nennen) kassiert werden darf')}<br/>
+                        - {__b('Bei Fragen erzählen dass wir eine Gutscheinaktion auf eigene Kosten durchführen und dem Restaurant das Geld überweisen oder keine Provision kassieren')}
+                    </td>
+                </tr>
+                {/if}
+                {if $order->getService() && $order->getService()->isPremium() && $order->getService()->getOrt()->getOrt()=='Berlin'}
+                <tr>
+                    <td>
+                        <b>{__b('Premium Bestellung Berlin')}</b>
+                    </td>
+                    <td>
+                        {__b('Premium-Bestellungen in Berlin werden vorerst NUR per Telefon durchgegeben. Bitte folgendes tun:')}<br/>
+                        {__b('1. Restaurant anrufen und Bescheid geben, dass eine Bestellung angekommen ist.')} {__b('Die Restaurants sind unterschiedlich eingerichtet.')} {__b('Manche haben das Fax im Hinterzimmer – andere werden die Bestellung gleich telefonisch haben wollen.')} {__b('Bitte immer sicher gehen dass die Bestellung angekommen ist.')}<br/>
+                        {__b('2. WICHTIG: Fragen wann das Essen fertig sein wird und der Kurier kommen soll – hier bitte exakt sein und die Zeit genau notieren.')} {__b('Schon Fehler im Bereich von 5 min. können großen Ärger verursachen!!!')}<br/>
+                        {__b('3. Den Kurier anrufen und folgendes durchgeben (die Daten findet ihr in einem extra Kurierfax. Bitte UNBEDINGT beachten: die Lieferkosten auf dem Kurierfax sind höher als auf dem Restaurantfax. Der Grund ist dass wir einen Teil unserer Marge an den Kurier abgeben. Dem Kurier immer den höheren Betrag aus dem Kurierfax kommunizieren):')}<br/>
+                        - {__b('a. Restaurantname, Adresse, Tel. Nummer')}<br/>
+                        - {__b('b. Abholzeit beim Restaurant – hier bitte die genaue Uhrzeit geben lassen, nicht "30-40 Minuten". Der Kurier braucht eine exakte Abholzeit. Die Mindestzeit sollte bei 30 min. liegen (so lange braucht der Kurier bis er beim Restaurant ist).')}<br/>
+                        - {__b('c. Kundenname, Adresse, Telefonnummer plus spezielle Lieferanweisungen (Hinterhaus, Stockwerk, etc.)')}<br/>
+                        - {__b('d. Lieferkosten (siehe Fax für den Kurier)')}
+                    </td>
+                </tr>
+                {/if}
+                {if $order->getService() && $order->getService()->isPremium() && $order->getService()->getOrt()->getOrt()=='Frankfurt am Main'}
+                <tr>
+                    <td>
+                        <b>{__b('Premium Bestellung Frankfurt am Main')}</b>
+                    </td>
+                    <td>
+                        {__b('Dies ist eine Premiumbestellung in Frankfurt. Anders als bei Berliner Premiumbestellungen bitte folgendes tun:')}<br/>
+                        - {__b('Restaurant anrufen und fragen ob Fax / Bestellung angekommen ist. Ggf. telefonisch durchgeben. Bitte fragt auch, ob das Essen zur vorbestimmten Abholzeit fertig ist. Falls nicht – die Verzögerung notieren und sofort den Kurier anrufen (Prompt!)')}<br/>
+                        - {__b('Im Gegensatz zu Berlin erhält der Kurier eine Benachrichtigung über die Bestellung elektronisch! Das heißt ihr braucht nicht anzurufen.')}<br/>
+                        {__b('AUSSER: das Restaurant hat euch gesagt, dass die Zubereitung des Essens länger dauert als vereinbart oder ihr seht dass die Bestellung sehr groß ist (mehr als 3 Gerichte) dann unbedingt den Kurier anrufen und Bescheid geben.')}
+                    </td>
+                </tr>
+                {/if}
+            </table>
+        </form>
+    </div>
+</div>
+

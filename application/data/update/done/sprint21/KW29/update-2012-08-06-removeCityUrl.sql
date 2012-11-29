@@ -1,0 +1,1 @@
+ALTER TABLE `city` DROP cityUrl;

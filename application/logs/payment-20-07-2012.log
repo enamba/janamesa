@@ -1,0 +1,18 @@
+2012-07-20T07:57:15-03:00 INFO (6): webvm serving lieferando.de.testing PaymentHelper: OrderNr 71348896, ServiceId 12281, CustomerId 296170, Nachricht: Barzahlung zugestimmt 
+2012-07-20T07:57:15-03:00 INFO (6): webvm serving lieferando.de.testing PaymentHelper: OrderNr 71348896, ServiceId 12281, CustomerId 296170, Nachricht: Sofortüberweisung abgelehnt, weil systemweit deaktiviert 
+2012-07-20T07:57:15-03:00 INFO (6): webvm serving lieferando.de.testing PaymentHelper: OrderNr 71348896, ServiceId 12281, CustomerId 296170, Nachricht: Paypalbezahlung zugestimmt 
+2012-07-20T07:57:15-03:00 INFO (6): webvm serving lieferando.de.testing PaymentHelper: OrderNr 71348896, ServiceId 12281, CustomerId 296170, Nachricht: Kreditkartenzahlung zugestimmt 
+2012-07-20T07:57:15-03:00 INFO (6): webvm serving lieferando.de.testing PaymentHelper: OrderNr 71348896, ServiceId 12281, CustomerId 296170, Nachricht: Barzahlung zugestimmt 
+2012-07-20T07:57:15-03:00 INFO (6): webvm serving lieferando.de.testing PaymentHelper: OrderNr 71348896, ServiceId 12281, CustomerId 296170, Nachricht: Paypalbezahlung zugestimmt 
+2012-07-20T07:57:15-03:00 INFO (6): webvm serving lieferando.de.testing PaymentHelper: OrderNr 71348896, ServiceId 12281, CustomerId 296170, Nachricht: Kreditkartenzahlung zugestimmt 
+2012-07-20T07:57:40-03:00 INFO (6): webvm serving lieferando.de.testing PaymentHelper: OrderNr 79641436, ServiceId 12281, CustomerId 296170, Nachricht: Barzahlung zugestimmt 
+2012-07-20T07:57:46-03:00 INFO (6): webvm serving lieferando.de.testing PaymentHelper: OrderNr 95037568, ServiceId 12281, CustomerId 296170, Nachricht: Barzahlung zugestimmt 
+2012-07-20T08:02:12-03:00 INFO (6): webvm serving lieferando.de.testing PaymentHelper: OrderNr 95184256, ServiceId 12281, CustomerId 296170, Nachricht: Barzahlung zugestimmt 
+2012-07-20T08:02:12-03:00 INFO (6): webvm serving lieferando.de.testing PaymentHelper: OrderNr 95184256, ServiceId 12281, CustomerId 296170, Nachricht: Sofortüberweisung abgelehnt, weil systemweit deaktiviert 
+2012-07-20T08:02:12-03:00 INFO (6): webvm serving lieferando.de.testing PaymentHelper: OrderNr 95184256, ServiceId 12281, CustomerId 296170, Nachricht: Paypalbezahlung zugestimmt 
+2012-07-20T08:02:12-03:00 INFO (6): webvm serving lieferando.de.testing PaymentHelper: OrderNr 95184256, ServiceId 12281, CustomerId 296170, Nachricht: Kreditkartenzahlung zugestimmt 
+2012-07-20T08:02:13-03:00 INFO (6): webvm serving lieferando.de.testing PaymentHelper: OrderNr 95184256, ServiceId 12281, CustomerId 296170, Nachricht: Barzahlung zugestimmt 
+2012-07-20T08:02:13-03:00 INFO (6): webvm serving lieferando.de.testing PaymentHelper: OrderNr 95184256, ServiceId 12281, CustomerId 296170, Nachricht: Paypalbezahlung zugestimmt 
+2012-07-20T08:02:13-03:00 INFO (6): webvm serving lieferando.de.testing PaymentHelper: OrderNr 95184256, ServiceId 12281, CustomerId 296170, Nachricht: Kreditkartenzahlung zugestimmt 
+2012-07-20T08:02:22-03:00 INFO (6): webvm serving lieferando.de.testing PaymentHelper: OrderNr 49310797, ServiceId 12281, CustomerId 296170, Nachricht: Barzahlung zugestimmt 
+2012-07-20T08:02:28-03:00 INFO (6): webvm serving lieferando.de.testing PaymentHelper: OrderNr 25974782, ServiceId 12281, CustomerId 296170, Nachricht: Barzahlung zugestimmt 

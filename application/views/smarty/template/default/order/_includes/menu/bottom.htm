@@ -1,0 +1,63 @@
+{if isset($cityIds) && count($cityIds) == 1}
+
+{else}
+<div id="yd-select-plz-{$service->getId()}" class="yd-dialog-parent yd-select-plz hidden">
+    {include file='order/_includes/menu/plz.htm' caching=1 cache_lifetime=86400 cache_id="plzform.$serviceCacheId"}
+</div>
+{/if}
+
+{if !$service->isOnline()}
+<div id="yd-service-offline" class="yd-dialog-parent hidden">
+
+    <div class="yd-dialogs"><a class="yd-dialogs-close"></a>
+
+        <div class="yd-dialogs-head">
+            <h2>{__('Lieferservice geschlossen')}</h2>
+        </div>
+
+        <div class="yd-lightbox-content-container">
+            <p style="text-align:center; font-size: 16px;">
+                {__('Dieser Lieferservice hat im Moment leider nicht geöffnet.')}
+                <br />
+                {__('Bitte wähle einen anderen.')}
+            </p>
+            <a class="button yd-go-back" href="#">{__("Zurück")}</a>
+        </div>
+
+    </div>
+
+</div>
+{/if}
+
+<div id="yd-service-closing" class="yd-dialog-parent hidden">
+    <div class="yd-dialogs"><!--<a class="yd-dialogs-close"></a>-->
+
+        <div class="yd-dialogs-head">
+            <h2>{__('Lieferservice schließt bald!')}</h2>
+        </div>
+
+        <div class="yd-lightbox-content-container">
+            <p style="text-align:center; font-size: 16px;">
+                {__('Das richtige Essen zu finden braucht manchmal seine Zeit.')}
+                <br />
+                {__('Bitte beachte, dass dieser Lieferservice bald schließt.')}
+                <br /><br />
+                <a id="yd-service-closing-ok" class="button" href="#">{__("Ok")}</a>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+{*Tracking Part*}
+{if $tracking}
+    {include file='_cookies/masterpixel/orderflow.htm' uadomain=$domain_base step1=0 step2=0 step3=1 step4=0}
+    {include file='_cookies/sociomatic/menu.htm'}
+    {include file='_cookies/adlantic/menu.htm'}
+    {include file='_cookies/monkeys/menu.htm'}
+    {include file='_cookies/criteo/menu.htm'}
+    {include file='_cookies/nextPerformance/menu.htm'}
+    {if $domain_base == 'lieferando.de'}
+        {include file='_cookies/cadreon/menu.htm'}
+    {/if}
+{/if}

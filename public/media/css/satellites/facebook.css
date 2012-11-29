@@ -1,0 +1,21 @@
+.fan_box a:hover { text-decoration: none; }
+.fan_box .full_widget { border: 0 !important; background: none !important; position: relative; height: 250px !important;}
+.fan_box .connect_top { background: none !important; padding: 0 !important; }
+.fan_box .profileimage, .fan_box .name_block { display: none; }
+.fan_box .full_widget .grid_item .img{width: 40px !important;}
+.fan_box .connect_action{ padding: 0 !important; }
+.fan_box .connections{ padding: 0 !important; border: 0 !important; font: normal 12px Arial, Helvetica, sans-serif; color: #666; }
+.fan_box .connections .connections_grid { padding-top: 10px !important; padding-left: 20px; }
+.fan_box .connections_grid .grid_item{ padding: 0 5px 5px 0 !important; }
+.fan_box .connections_grid .grid_item:last-child{ display: none !important; }
+.fan_box .connections_grid .grid_item .name{ font: normal 11px Arial, Helvetica, sans-serif; color: #666 !important; padding-top: 1px !important; }
+.fan_box .connect_widget{ position: absolute; bottom: 0; right: 45px;; margin: 0 !important;  }
+.fan_box .connect_widget .connect_widget_interactive_area { margin: 0 !important; }
+.fan_box .connect_widget td.connect_widget_vertical_center { padding: 0 !important; }
+.fan_box span.total{ color: #666666; font-weight: bold; display: block !important; font-size: 10px; padding: 0 0 5px !important; width: 245px !important; }
+
+
+/* Premium Satellites //
+*/
+
+/* Piccolo Capriccio --> */ .piccolocapriccio .fan_box span.total{ border-bottom: 2px solid #CC091A !important; }

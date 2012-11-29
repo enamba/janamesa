@@ -1,0 +1,60 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="one-column-box">
+    <a name="courier"></a>
+    <div class="item">
+        <div class="item-head">
+            {__b('Bestellungen stornieren')}
+        </div>
+        <div class="item-content">
+            <form action="" method="post" id="">
+                <table>
+
+                    <tr>
+                        <td>
+                            {__b('Mögliche Eingaben, eine pro Zeile:<br/>Bestell-Id<br/>Bestell-Nr')}<br/><br/>
+                            {if $messageForOrdersWithDiscount>0}                                
+                            <b>{_n('%d Bestellung wurde mit einem Gutschein bezahlt.', '%d Bestellungen wurden mit einem Gutschein bezahlt.', $messageForOrdersWithDiscount, $messageForOrdersWithDiscount)}
+                                {__b('Trotzdem stornieren')}?</b>
+                            <br/>
+                            <br/>                              
+                            {/if}
+                            <textarea rows="3" name="searchfor" cols="80" style="height: 200px;">{$input}</textarea>
+                            <input type="hidden" id="cancel" name="cancel" value="{$checkbox['cancel']|default:0}" />       
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    <table>
+                        <tr>
+                        <td style="width: 5%">
+                            <input type="submit" value="{if $messageForOrdersWithDiscount>0}{__b('Trotzdem stornieren')}{else}{__b('Storno')}{/if}" class="button" >
+                        </td>
+                        <td>                            
+                            <input type="checkbox" name="notify_user" checked="checked" value="1"/>{__b('Kunden benachrichtigen')}<br />
+                            <input type="checkbox" name="notify_restaurant" checked="checked" value="1" />{__b('Restaurant benachrichtigen')}
+                        </td>
+                        </tr>
+                    </table>
+                    </tr>
+
+                    {if strlen($message)>0}
+                    <tr>
+                        <td>
+                            <br/>{__b('Ergebnis:')}<br/><br/>
+                            <textarea rows="3" name="names" cols="80" style="height: 200px;">{$message}</textarea>
+                        </td>                        
+                        <td></td>
+                    </tr>
+                    {/if}
+
+                </table>
+            </form>
+        </div>
+    </div>
+    <div class="item">
+    </div>
+</div>
+{/block}
+

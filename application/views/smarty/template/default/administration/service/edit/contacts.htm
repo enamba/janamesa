@@ -1,0 +1,230 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{if isset($restaurant)}
+{include file='administration/service/edit/_navigation.htm'}
+<div id="yd-admin-backend-wait" style="display:none;"><img src="{$domain_static}/images/yd-backend/yd-back-load.gif" /></div>
+
+<div class="two-column-box">
+    <form action="/administration_service/contact" method="post" class="yd-form-toggle">
+    <div class="item">
+        <div class="item-head">
+            {__b('Kontakt %sbearbeiten%s', '<a href="#" class="yd-form-toggle">', '</a>')}
+        </div>
+        <a name="contact"></a>
+        {$contact = $restaurant->getContact()}
+        <div class="item-content">
+                <input type="hidden" name="id" value="{$restaurant->getId()}"/>
+                <input type="hidden" id="restId" value="{$restaurant->getId()}"/>
+                <table class="user-tab">
+                    <tr>
+                        <td width="40%">{__b('Bestehenden Kontakt auswählen')}</td>
+                        <td>
+                            <select name="contactId" id="yd-select_contact">
+                                <option value="-1" >{__b('Neuer Kontakt')}</option>
+                                {foreach from=$contacts item=ci}
+                                    <option value="{$ci.id}" {if ($ci.id==$restaurant->getContactId())}selected{/if}>{$ci.name} {$ci.prename}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                        {if !is_null($contact)}
+                        <td>
+                        <div id="yd-show-contact">
+                            <table class="user-tab">
+                                <tr>
+                                    <td><a href="/administration_contact/edit/id/{$contact->getId()}">{$contact->getName()} {$contact->getPrename()}</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="mailto:{$contact->getEmail()}">{$contact->getEmail()}</a></td>
+                                </tr>
+                                {if strlen($contact->getTel()) > 0}
+                                <tr>
+                                    <td>{__b('Tel')}: {$contact->getTel()}</td>
+                                </tr>
+                                {/if}
+                                {if strlen($contact->getFax()) > 0}
+                                <tr>
+                                    <td>{__b('Fax')}: {$contact->getFax()}</td>
+                                </tr>
+                                {/if}
+                                {if strlen($contact->getStreet()) > 0}
+                                <tr>
+                                    <td height="40px;">{__b('Adresse')}:</td>
+                                </tr>
+                                <tr>
+                                    <td>{$contact->getStreet()} {$contact->getHausnr()}</td>
+                                </tr>
+                                <tr>
+                                    <td>{$contact->getPlz()} {$contact->getOrt()->getOrt()}</td>
+                                </tr>
+                                {/if}
+                            </table>
+                        </div>
+                        </td>
+                        {/if}
+                    </tr>
+                </table>
+                <div id="yd-create-contact" {if !is_null($restaurant->getContactId()) && ($restaurant->getContactId() != 0)}style="display:none;"{/if}>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="40%">{__b('Vorname')}:</td>
+                            <td><input type="text" name="prename"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Nachname')}:</td>
+                            <td><input type="text" name="name"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Position')}:</td>
+                            <td><input type="text" name="position"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Straße')}:</td>
+                            <td><input type="text" name="street"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('HausNr')}:</td>
+                            <td><input type="text" name="hausnr"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('PLZ')}:</td>
+                            <td>
+                                {include file='administration/city_autocomplete.htm'}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('eMail')}:</td>
+                            <td><input type="text" name="email"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Telefon')}:</td>
+                            <td><input type="text" name="tel"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Fax')}:</td>
+                            <td><input type="text" name="fax"/></td>
+                        </tr>
+                    </table>
+                </div>
+                 <table class="user-tab">
+                    <tr>
+                        <td width="40%"><input type="submit" name="editcontact" value="{__b('Speichern')}" class="button rund_set" /></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                 </table>
+            </div>
+        </div>
+    </form>
+
+    <form action="/administration_service/billingcontact" method="post" class="yd-form-toggle">
+    <div class="item">
+        <div class="item-head">
+            {__b('Rechungskontakt %sbearbeiten%s', '<a href="#" class="yd-form-toggle">', '</a>')}
+        </div>
+        <a name="contact"></a>
+        {$billingContact = $restaurant->getBillingContact()}
+        <div class="item-content">
+                <input type="hidden" name="id" value="{$restaurant->getId()}"/>
+                <table class="user-tab">
+                    <tr>
+                        <td width="40%">{__b('Bestehenden Kontakt auswählen')}</td>
+                        <td>
+                            <select name="billingContactId" id="yd-select_billcontact">
+                                <option value="-1" >{__b('Neuer Kontakt')}</option>
+                                {foreach from=$contacts item=ci}
+                                    <option value="{$ci.id}" {if ($ci.id==$restaurant->getBillingContactId())}selected{/if}>{$ci.name} {$ci.prename}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                        {if !is_null($billingContact)}
+                        <td>
+                        <div id="yd-show-billcontact">
+                            <table class="user-tab">
+                                <tr>
+                                    <td><a href="/administration_contact/edit/id/{$billingContact->getId()}">{$billingContact->getName()} {$billingContact->getPrename()}</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="mailto:{$billingContact->getEmail()}">{$billingContact->getEmail()}</a></td>
+                                </tr>
+                                {if strlen($billingContact->getTel()) > 0}
+                                <tr>
+                                    <td>{__b('Tel')}: {$billingContact->getTel()}</td>
+                                </tr>
+                                {/if}
+                                {if strlen($billingContact->getFax()) > 0}
+                                <tr>
+                                    <td>{__b('Fax')}: {$billingContact->getFax()}</td>
+                                </tr>
+                                {/if}
+                                {if strlen($billingContact->getStreet()) > 0}
+                                <tr>
+                                    <td height="40px;">{__b('Adresse')}:</td>
+                                </tr>
+                                <tr>
+                                    <td>{$billingContact->getStreet()} {$billingContact->getHausnr()}</td>
+                                </tr>
+                                <tr>
+                                    <td>{$billingContact->getPlz()} {$billingContact->getOrt()->getOrt()}</td>
+                                </tr>
+                                {/if}
+                            </table>
+                        </div>
+                        </td>
+                        {/if}
+                    </tr>
+                </table>
+                <div id="yd-create-billcontact" {if !is_null($restaurant->getBillingContactId()) && ($restaurant->getBillingContactId() != 0)}style="display:none;"{/if}>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="40%">{__b('Vorname')}:</td>
+                            <td><input type="text" name="prename"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Nachname')}:</td>
+                            <td><input type="text" name="name"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Position')}:</td>
+                            <td><input type="text" name="position"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Straße')}:</td>
+                            <td><input type="text" name="street"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('HausNr')}:</td>
+                            <td><input type="text" name="hausnr"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('PLZ')}:</td>
+                            <td>
+                                {include file='administration/city_autocomplete.htm'}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('eMail')}:</td>
+                            <td><input type="text" name="email"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Telefon')}:</td>
+                            <td><input type="text" name="tel"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Fax')}:</td>
+                            <td><input type="text" name="fax"/></td>
+                        </tr>
+                    </table>
+                </div>
+                 <table>
+                    <tr>
+                        <td width="40%"><input type="submit" name="editbillcontact" value="{__b('Speichern')}" class="button rund_set" /></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                 </table>
+            </div>
+        </div>
+    </form>
+</div>
+
+{/if}
+{/block}

@@ -1,0 +1,21 @@
+<h1>{__b('Details für TrackingCode')} "{$code->getName()}"</h1>
+    <form id="trackingcodedetails" action="" style="padding:5px;">
+        <table border="0" style="font-size:9px;">
+            <tr>
+                <th>{__b('Umsatz')}</th>
+                <th>{__b('Umsatz/Klick')}</th>
+                <th>{__b('Keywords')}</th>
+                <th>{__b('Engine')}</th>
+                <th>{__b('Klick(s)')}</th>
+            </tr>
+            {foreach from=$code->getCustomerTrackedOrdersSumPerKW() key=k item=v}
+                <tr>
+                    <td>{$v.sum|inttoprice} €</td>
+                    <td>{$v.sum/$v.count|inttoprice} €</td>
+                    <td>{$k}</td>
+                    <td>{$v.engine}</td>
+                    <td>{$v.count}</td>
+                </tr>
+            {/foreach}
+        </table>
+    </form>

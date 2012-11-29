@@ -1,0 +1,13 @@
+{if $config->domain->base == 'lieferando.de' && $mode == "rest"}
+<script type="text/javascript">    
+/*<![CDATA[*/
+
+var trackCriteoSuccess = "<img src='"+"https:"+"//"+'sslwidget'+".criteo.com/pjl/display.js?p1=" + escape("v=2&wi=7716401&t={$order->getNr()}&s=1&dout={date('Y-m-d')}&i1={$order->getService()->getId()}&p1={number_format(round(($order->getAbsTotal(false,false,true,false,false,false)/100),2), 2, '.', '')}&q1=1") + "&t1=transaction&resptype=gif' width='1' height='1' />";
+
+$(document).ready(function(){  
+    
+    $('body').append(trackCriteoSuccess);
+})
+/* ]]> */
+</script>
+{/if}

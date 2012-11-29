@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+
+    <title>{__("Rechnung und Gutschrift")}</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="yourdelivery GmbH" />
+    <meta name="publisher" content="yourdelivery GmbH" />
+
+</head>
+<body marginheight="0" topmargin="0" marginwidth="0" bgcolor="#F0F0F0" offset="0" leftmargin="0">
+
+<!-- wrapper table. needed as some readers strip the <html>, <head> and <body> tag -->
+<table cellspacing="0" style="margin-top: 20px; font-size: 13px; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444;" bgcolor="#F0F0F0" cellpadding="0" width="98%"><tr><td>
+
+<!-- /////////////////////////////////// Newsletter Content  /////////////////////////////////// -->
+
+		<table rules="none" cellspacing="0" bordercolor="#c2c2c2" border="1" frame="border" align="center" style="border-color: #c2c2c2 #c2c2c2 #c2c2c2 #c2c2c2; font-size: 13px; background: #ffffff; border-collapse: collapse; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444; border-spacing: 0px; border-style: solid solid solid solid; border-width: 1px 1px 1px 1px;" cellpadding="0" bgcolor="#FFFFFF" width="600">
+			<tr><td>
+			<!-- Main Newsletter Content Starts here. Add Modules below this line -->
+
+                <!-- Module: Header -->
+                <table width="600" align="center" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <img src="http://www.{$config->domain->base}/media/images/yd-mail/{$config->domain->base}/yd-mail-logoheader.jpg" alt="" />
+                        </td>
+                    </tr>
+                </table>
+                <!-- End Module -->
+
+                <img src="http://www.{$config->domain->base}/media/images/yd-mail/module-divider.jpg" height="70" width="600" />
+
+                <!-- Module: Content -->
+                <table cellspacing="0" align="center" style="font-size: 13px; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444;" width="520" cellpadding="0">
+                    <tr>
+                        <td>
+
+                            <h2 style="font-size: 16px; font-family: Arial, sans-serif; color: #000; letter-spacing: -1px;">
+                            {__("Sie haben eine neue Rechnung bei %s", $config->domain->base)}
+                            </h2>
+
+                            <p>
+                            {__("Sehr geehrte Damen und Herren, anbei finden sie die neue Rechnung/Gutschrift für den <strong>Zeitraum vom %s bis zum %s</strong>.", $from|date_format:__("%d.%m.%Y"), $until|date_format:__("%d.%m.%Y"))}
+                            </p>
+
+                        </td>
+                    </tr>
+                </table>
+                <!-- End Module -->
+             
+                <table cellspacing="0" border="0" align="center" style="font-size: 13px; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444;" cellpadding="0" width="550">
+                    <tr>
+                        <td align="center" style="font-size: 12px; line-height: 18px; font-family: Arial; color: #6f6f6f;">
+                            <p>
+                                {__("Dies ist eine automatisch versendete Nachricht.")}<br />
+                                {if $config->domain->base != 'janamesa.com.br'}
+                                    {__("Diese Adresse wurde nur zur Versendung von E-Mails eingerichtet.")}<br />
+                                    {__("Verschiedene Kontaktmöglichkeiten sind unter %sImpressum%s zu finden.", '<a style="color: #444444;" href="http://www.'|cat:$config->domain->base|cat:'/about">', '</a>')}
+                                {/if}
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+
+</td></tr></table><!-- end wrapper table-->
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<div class="yd-dialogs"><a class="yd-dialogs-close"></a>
+
+    <div class="yd-dialogs-head">
+        <h2>{__('Adresse editieren')}</h2>
+    </div>
+
+    <div class="yd-lightbox-content-container">
+
+        <form method="post" action="/request/editaddr">
+
+            <input type="hidden" name="id" value="{$location->getId()}" />
+
+            <div class="yd-form">
+
+                <strong class="yd-form-tease">{__('Bitte gib Deine Lieferadresse ein:')}</strong>
+
+                <div class="yd-form-wrapper">
+
+                    <ul class="yd-clearfix">
+                        <li class="yd-form-{if $domain_base != 'taxiresto.fr'}left{else}right{/if}">
+                            <span>{__('Straße')} <b class="red">*</b></span>
+                            <input type="text" value="{$location->getStreet()}" name="street" class="yd-form-invalid yd-form-input" />
+                        </li>
+                        <li class="yd-form-{if $domain_base != 'taxiresto.fr'}right{else}left{/if}">
+                            <span>{__('Hausnummer')} <b class="red">*</b></span>
+                            <input type="text" value="{$location->getHausnr()}" name="hausnr" class="yd-form-invalid yd-form-input" />
+                            <em class="yd-form-info hidden" {if $domain_base == 'taxiresto.fr'}style="right:-315px;"{/if}>{__('Bitte gib hier Deine Straße und Nr ein in die Du beliefert werden möchtest.')}</em>
+                        </li>
+                    </ul>
+
+                    <ul class="yd-clearfix yd-form-section">
+                        <li class="yd-form-left">
+                            <span>{__('Postleitzahl')} <b class="red">*</b></span>
+                            <input type="hidden" name="cityId" value="{$location->getCityId()}" />
+                            <input type="text" name="plz" value="{$location->getPlz()} {$location->getCity()->getCity()}" maxlength="5" class="yd-plz-autocomplete yd-only-nr yd-form-invalid yd-form-input" />
+                        </li>
+                        <li class="yd-form-right">
+                            <span>{__('Telefon')} <b class="red">*</b> <small>{__('Für evtl. Rückfragen')}</small></span>
+                            <input type="text" name="tel" value="{$location->getTel()}" class="yd-only-nr yd-form-invalid yd-form-input" />
+                            <em class="yd-form-info hidden" >{__('Bitte gib hier Deine Postleitzahl und Telefonnummer ein.')}</em>
+                        </li>
+                    </ul>
+
+                    <ul class="yd-clearfix">
+                        <li class="yd-form-left">
+                            <span>{__('Firma')} <small class="green">({__('optional')})</small></span>
+                            <input type="text" name="companyName" value="{$location->getCompanyName()}" />
+                        </li>
+                        <li class="yd-form-right">
+                            <span>{__('Stockwerk')} <small class="green">({__('optional')})</small></span>
+                            <input type="text" name="etage" value="{$location->getEtage()}" />
+                        </li>
+                    </ul>
+
+                    <ul class="yd-clearfix">
+                        <li class="yd-form-middle">
+                            <span>{__('Besondere Hinweise')} <small class="green">({__('optional')})</small></span>
+                            <textarea name="comment">{$location->getComment()}</textarea>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="yd-lightbox-buttons">
+                <input type="submit" value="{__('Speichern')}" class="button" />
+                <input type="button" value="{__('Schließen')}" class="button yd-close-lightbox" />
+            </div>
+
+        </form>
+
+    </div>
+
+</div>

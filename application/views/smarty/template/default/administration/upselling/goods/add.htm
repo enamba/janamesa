@@ -1,0 +1,258 @@
+{extends file="administration/_base_single.htm"}
+{block name="content"}
+
+<div class="be-1-column">
+    <div class="be-box">
+        <h2>{__b('Neues Produkt')}</h2>
+        <div class="be-box-in">
+            <form action="/administration_upselling_goods/add" method="post">
+
+                <br />
+
+                {__b('Lieferservice wählen')}
+
+                <input type="hidden" name="restaurantId" value="{$item->getRestaurantId()}" />
+                <input type="text" id="yd-upselling-restaurant" />
+
+                <br /><br /><br />
+
+                <table class="yd-inventory-border">
+                    <tr>
+                        <td class="yd-inventory-pizzacaselittle" style="width:200px;">{__b('Pizza Karton 26x26x4')}</td>
+                        <td>
+                            <br />
+                            <select name="countCanton2626" class="yd-upselling-goods-count">
+                                {section name=count loop=21001 start=0 step=Yourdelivery_Model_Upselling_Goods::CANTON2626}
+                                <option value="{$smarty.section.count.iteration-1}" {if $item->getCountCanton2626() == $smarty.section.count.iteration-1}selected="selected"{/if}>{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                        <td>
+                            {__b('Preis pro %s Stücke', Yourdelivery_Model_Upselling_Goods::CANTON2626)}:<br />
+                            <input type="text" name="costCanton2626" value="{$item->getCostCanton2626()|default:0}" class="yd-upselling-goods-cost yd-money" />
+                        </td>
+                        <td style="width:100px;">
+                            {__b('Geswünscht')}: <b>{Yourdelivery_Model_Upselling_Goods::CANTON2626_WISH_PRICE|inttoprice} {__b('€')}</b><br />
+                            {__b('Min.')}: <b>{Yourdelivery_Model_Upselling_Goods::CANTON2626_PRICE|inttoprice} {__b('€')}</b><br />
+                            {__b('Stückpreis')}: <b><span class="yd-upselling-goods-unit" id="yd-upselling-goods-unit-{Yourdelivery_Model_Upselling_Goods::CANTON2626}">0</span> {__b('€')}</b><br />
+                            {__b('Gesamt')}: <b><span class="yd-upselling-goods-total">0</span> {__b('€')}</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-pizzacaselittle" style="width:200px;">{__b('Pizza Karton 26x26x4 Notebooksbilliger')}</td>
+                        <td>
+                            <br />
+                            <select name="countCanton2626N" class="yd-upselling-goods-count">
+                                {section name=count loop=21001 start=0 step=Yourdelivery_Model_Upselling_Goods::CANTON2626N}
+                                <option value="{$smarty.section.count.iteration-1}" {if $item->getCountCanton2626N() == $smarty.section.count.iteration-1}selected="selected"{/if}>{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                        <td>
+                            {__b('Preis pro %s Stücke', Yourdelivery_Model_Upselling_Goods::CANTON2626N)}:<br />
+                            <input type="text" name="costCanton2626N" value="{$item->getCostCanton2626N()|default:0}" class="yd-upselling-goods-cost yd-money" />
+                        </td>
+                        <td style="width:100px;">
+                            {__b('Geswünscht')}: <b>{Yourdelivery_Model_Upselling_Goods::CANTON2626N_WISH_PRICE|inttoprice} {__b('€')}</b><br />
+                            {__b('Min.')}: <b>{Yourdelivery_Model_Upselling_Goods::CANTON2626N_PRICE|inttoprice} {__b('€')}</b><br />
+                            {__b('Stückpreis')}: <b><span class="yd-upselling-goods-unit" id="yd-upselling-goods-unit-{Yourdelivery_Model_Upselling_Goods::CANTON2626N}">0</span> {__b('€')}</b><br />
+                            {__b('Gesamt')}: <b><span class="yd-upselling-goods-total">0</span> {__b('€')}</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-pizzacaselittle" style="width:200px;">{__b('Pizza Karton 26x26x4 Discotel')}</td>
+                        <td>
+                            <br />
+                            <select name="countCanton2626D" class="yd-upselling-goods-count">
+                                {section name=count loop=21001 start=0 step=Yourdelivery_Model_Upselling_Goods::CANTON2626D}
+                                <option value="{$smarty.section.count.iteration-1}" {if $item->getCountCanton2626D() == $smarty.section.count.iteration-1}selected="selected"{/if}>{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                        <td>
+                            {__b('Preis pro %s Stücke', Yourdelivery_Model_Upselling_Goods::CANTON2626D)}:<br />
+                            <input type="text" name="costCanton2626D" value="{$item->getCostCanton2626D()|default:0}" class="yd-upselling-goods-cost yd-money" />
+                        </td>
+                        <td style="width:100px;">
+                            {__b('Geswünscht')}: <b>{Yourdelivery_Model_Upselling_Goods::CANTON2626D_WISH_PRICE|inttoprice} {__b('€')}</b><br />
+                            {__b('Min.')}: <b>{Yourdelivery_Model_Upselling_Goods::CANTON2626D_PRICE|inttoprice} {__b('€')}</b><br />
+                            {__b('Stückpreis')}: <b><span class="yd-upselling-goods-unit" id="yd-upselling-goods-unit-{Yourdelivery_Model_Upselling_Goods::CANTON2626D}">0</span> {__b('€')}</b><br />
+                            {__b('Gesamt')}: <b><span class="yd-upselling-goods-total">0</span> {__b('€')}</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-pizzacaselittle" style="width:200px;">{__b('Pizza Karton 26x26x4 DeutschlandSIM')}</td>
+                        <td>
+                            <br />
+                            <select name="countCanton2626S" class="yd-upselling-goods-count">
+                                {section name=count loop=21001 start=0 step=Yourdelivery_Model_Upselling_Goods::CANTON2626S}
+                                <option value="{$smarty.section.count.iteration-1}" {if $item->getCountCanton2626S() == $smarty.section.count.iteration-1}selected="selected"{/if}>{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                        <td>
+                            {__b('Preis pro %s Stücke', Yourdelivery_Model_Upselling_Goods::CANTON2626S)}:<br />
+                            <input type="text" name="costCanton2626S" value="{$item->getCostCanton2626S()|default:0}" class="yd-upselling-goods-cost yd-money" />
+                        </td>
+                        <td style="width:100px;">
+                            {__b('Geswünscht')}: <b>{Yourdelivery_Model_Upselling_Goods::CANTON2626S_WISH_PRICE|inttoprice} {__b('€')}</b><br />
+                            {__b('Min.')}: <b>{Yourdelivery_Model_Upselling_Goods::CANTON2626S_PRICE|inttoprice} {__b('€')}</b><br />
+                            {__b('Stückpreis')}: <b><span class="yd-upselling-goods-unit" id="yd-upselling-goods-unit-{Yourdelivery_Model_Upselling_Goods::CANTON2626S}">0</span> {__b('€')}</b><br />
+                            {__b('Gesamt')}: <b><span class="yd-upselling-goods-total">0</span> {__b('€')}</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-pizzacaselittle" style="width:200px;">{__b('Pizza Karton 26x26x4 Hannover')}</td>
+                        <td>
+                            <br />
+                            <select name="countCanton2626H" class="yd-upselling-goods-count">
+                                {section name=count loop=21001 start=0 step=Yourdelivery_Model_Upselling_Goods::CANTON2626H}
+                                <option value="{$smarty.section.count.iteration-1}" {if $item->getCountCanton2626H() == $smarty.section.count.iteration-1}selected="selected"{/if}>{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                        <td>
+                            {__b('Preis pro %s Stücke', Yourdelivery_Model_Upselling_Goods::CANTON2626H)}:<br />
+                            <input type="text" name="costCanton2626H" value="{$item->getCostCanton2626H()|default:0}" class="yd-upselling-goods-cost yd-money" />
+                        </td>
+                        <td style="width:100px;">
+                            {__b('Geswünscht')}: <b>{Yourdelivery_Model_Upselling_Goods::CANTON2626H_WISH_PRICE|inttoprice} {__b('€')}</b><br />
+                            {__b('Min.')}: <b>{Yourdelivery_Model_Upselling_Goods::CANTON2626H_PRICE|inttoprice} {__b('€')}</b><br />
+                            {__b('Stückpreis')}: <b><span class="yd-upselling-goods-unit" id="yd-upselling-goods-unit-{Yourdelivery_Model_Upselling_Goods::CANTON2626H}">0</span> {__b('€')}</b><br />
+                            {__b('Gesamt')}: <b><span class="yd-upselling-goods-total">0</span> {__b('€')}</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-pizzacaselittle">{__b('Pizza Karton 28x28x4')}</td>
+                        <td>
+                            <br />
+                            <select name="countCanton2828" class="yd-upselling-goods-count">
+                                {section name=count loop=21001 start=0 step=Yourdelivery_Model_Upselling_Goods::CANTON2828}
+                                <option value="{$smarty.section.count.iteration-1}" {if $item->getCountCanton2828() == $smarty.section.count.iteration-1}selected="selected"{/if}>{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                        <td>
+                            {__b('Preis pro %s Stücke', Yourdelivery_Model_Upselling_Goods::CANTON2828)}:<br />
+                            <input type="text" name="costCanton2828" value="{$item->getCostCanton2828()|default:0}" class="yd-upselling-goods-cost yd-money" />
+                        </td>
+                        <td>
+                            {__b('Geswünscht')}: <b>{Yourdelivery_Model_Upselling_Goods::CANTON2828_WISH_PRICE|inttoprice} {__b('€')}</b><br />
+                            {__b('Min.')}: <b>{Yourdelivery_Model_Upselling_Goods::CANTON2828_PRICE|inttoprice} {__b('€')}</b><br />
+                            {__b('Stückpreis')}: <b><span class="yd-upselling-goods-unit" id="yd-upselling-goods-unit-{Yourdelivery_Model_Upselling_Goods::CANTON2828}">0</span> {__b('€')}</b><br />
+                            {__b('Gesamt')}: <b><span class="yd-upselling-goods-total">0</span> {__b('€')}</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-pizzacase">{__b('Pizza Karton 32x32x4')}</td>
+                        <td>
+                            <br />
+                            <select name="countCanton3232" class="yd-upselling-goods-count">
+                                {section name=count loop=21001 start=0 step=Yourdelivery_Model_Upselling_Goods::CANTON3232}
+                                <option value="{$smarty.section.count.iteration-1}" {if $item->getCountCanton3232() == $smarty.section.count.iteration-1}selected="selected"{/if}>{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                        <td>
+                            {__b('Preis pro %s Stücke', Yourdelivery_Model_Upselling_Goods::CANTON3232)}:<br />
+                            <input type="text" name="costCanton3232" value="{$item->getCostCanton3232()|default:0}" class="yd-upselling-goods-cost yd-money" />
+                        </td>
+                        <td>
+                            {__b('Geswünscht')}: <b>{Yourdelivery_Model_Upselling_Goods::CANTON3232_WISH_PRICE|inttoprice} {__b('€')}</b><br />
+                            {__b('Min.')}: <b>{Yourdelivery_Model_Upselling_Goods::CANTON3232_PRICE|inttoprice} {__b('€')}</b><br />
+                            {__b('Stückpreis')}: <b><span class="yd-upselling-goods-unit" id="yd-upselling-goods-unit-{Yourdelivery_Model_Upselling_Goods::CANTON3232}">0</span> {__b('€')}</b><br />
+                            {__b('Gesamt:')} <b><span class="yd-upselling-goods-total">0</span> {__b('€')}</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-napkins">{__b('Servietten 2lagig, 33x33')}</td>
+                        <td>
+                            <br />
+                            <select name="countServicing" class="yd-upselling-goods-count">
+                                {section name=count loop=502001 start=0 step=Yourdelivery_Model_Upselling_Goods::SERVICING}
+                                <option value="{$smarty.section.count.iteration-1}" {if $item->getCountServicing() == $smarty.section.count.iteration-1}selected="selected"{/if}>{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                        <td>
+                            {__b('Preis pro %s Stücke', Yourdelivery_Model_Upselling_Goods::SERVICING)}:<br />
+                            <input type="text" name="costServicing" value="{$item->getCostServicing()|default:Yourdelivery_Model_Upselling_Goods::SERVICING_PRICE}" class="yd-upselling-goods-cost yd-money" />
+                        </td>
+                        <td>
+                            {__b('Gesamt')}: <b><span class="yd-upselling-goods-total">0</span> {__b('€')}</b>
+                        </td>    
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-plasticbag">{__b('Plastiktüten')}</td>
+                        <td>
+                            <br />
+                            <select name="countBags" class="yd-upselling-goods-count">
+                                {section name=count loop=1000001 start=0 step=Yourdelivery_Model_Upselling_Goods::BAGS}
+                                <option value="{$smarty.section.count.iteration-1}" {if $item->getCountBags() == $smarty.section.count.iteration-1}selected="selected"{/if}>{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                        <td>
+                            {__b('Preis pro %s Stücke', Yourdelivery_Model_Upselling_Goods::BAGS)}:<br />
+                            <input type="text" name="costBags" value="{$item->getCostBags()|default:Yourdelivery_Model_Upselling_Goods::BAGS_PRICE}" class="yd-upselling-goods-cost yd-money" />
+                        </td>
+                        <td>
+                            {__b('Gesamt')}: <b><span class="yd-upselling-goods-total">0</span> {__b('€')}</b>
+                        </td>  
+                    </tr>
+                    <tr>
+                        <td class="yd-inventory-chopsticks">{__b('Chopsticks')}</td>
+                        <td>
+                            <br />
+                            <select name="countSticks" class="yd-upselling-goods-count">
+                                {section name=count loop=1002001 start=0 step=Yourdelivery_Model_Upselling_Goods::CHOPSTICKS}
+                                <option value="{$smarty.section.count.iteration-1}" {if $item->getCountSticks() == $smarty.section.count.iteration-1}selected="selected"{/if}>{$smarty.section.count.index}</option>
+                                {/section}
+                            </select>
+                        </td>
+                        <td>
+                            {__b('Preis pro %s Stücke', Yourdelivery_Model_Upselling_Goods::CHOPSTICKS)}:<br />
+                            <input type="text" name="costSticks" value="{$item->getCostSticks()|default:Yourdelivery_Model_Upselling_Goods::CHOPSTICKS_PRICE}" class="yd-upselling-goods-cost yd-money" />
+                        </td>
+                        <td>
+                            {__b('Gesamt')}: <b><span class="yd-upselling-goods-total">0</span> {__b('€')}</b>
+                        </td>  
+                    </tr>
+                    <tr>
+                        <td>{__b('Interne Kommentare')}</td>
+                        <td colspan="2">
+                            <input type="text" name="comment" value="{$item->getComment()|escape}" style="width:350px;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>{__b('Netto')}: </td>
+                        <td>
+                            <b><span id="yd-upselling-goods-netto">0</span> {__b('€')}</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>{__b('Brutto')} </td>
+                        <td>
+                            <b><span id="yd-upselling-goods-brutto">0</span> {__b('€')}</b>
+                        </td>
+                    </tr>
+                </table>
+
+                <br /><br />
+
+                {__b('Gutschrift der letzte 2 Monate')}: <b><span id="yd-upselling-goods-voucher">0</span> {__b('€')}</b>
+
+                <br /><br /><br />
+
+                <input type="submit" name="sendWithVoucher" value="{__b('Auf Gutschrift verschicken')}" id="yd-upselling-goods-send-with" disabled="disabled" class="disabled" />
+                <input type="submit" name="sendWithoutVoucher" value="{__b('Rechnung verschicken mit auf Zahlung')}" id="yd-upselling-goods-send-without" disabled="disabled" class="disabled" />
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+{/block}

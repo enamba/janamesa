@@ -1,0 +1,43 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/satellite/_editnavigation.htm'}
+
+<form action="/administration_satellite/editjobs" method="post" name="form" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="{$satellite->getId()}" />
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">{__b('Jobs-Seite')} {if !$satellite->getShowJobs()}<br/><br/><font style="color: #ff0000;">{__b('Der Checkbox "Jobs anzeigen" ist nicht aktiviert, die Jobs-Seite wird nicht angezeigt')}</font>{/if}</div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="20%">{__b('Bild für Job Text (links)')}</td>
+                            <td width="30%"><input type="file" name="_jobTextImg" /></td>
+                            <td width="50%"><img src="{$satellite->getImg('jobTexImg')}" alt="" height="150"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Bild für Job Formular (rechts)')}</td>
+                            <td><input type="file" name="_jobFormularImg" /></td>
+                            <td><img src="{$satellite->getImg('jobFormularImg')}" alt="" height="150"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Text für Job Anzeige')}</td>
+                            <td colspan="2"><textarea name="jobText" style="width: 50%;">{$satellite->getJobText()}</textarea></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+
+</form>
+{/block}    

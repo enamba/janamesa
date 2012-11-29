@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="de" xml:lang="de" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="de" xml:lang="de" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="de" xml:lang="de" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="de" xml:lang="de" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="de" xml:lang="de">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="yourdelivery GmbH" />
+        <meta name="publisher" content="yourdelivery GmbH" />
+
+        <!-- custom meta tags -->
+        {foreach from=$additionalMetatags item=meta}
+        {$meta}
+        {/foreach}
+
+        <meta name="viewport" content="width=1100">
+
+        <!-- page title -->
+        <title>{$customTitle|default:'lieferando.de - Lieferservice, Catering, Getränke & Obstkisten ... Online bestellen - Bargeldlos bezahlen'}</title>
+
+        {if $canonical}
+        <link rel="canoncial" href="{$canonical}" />
+        {/if}
+
+        <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57x57-precomposed.png" /> <!-- iPhone -->
+        <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-72x72-precomposed.png" sizes="72x72" /> <!-- iPad -->
+        <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-114x114-precomposed.png" sizes="114x114" /> <!-- iPhone 4+ -->
+        <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-144x144-precomposed.png" sizes="144x144" /> <!-- iPad 3+ -->
+        <link rel="SHORTCUT ICON" href="/favicon.ico" type="image/x-icon" />
+
+        <link rel="stylesheet" type="text/css" href="/media/css/compiled/frontend-{$extra_css|default:'no'}-{$REVISION}.css" />
+
+        <script type="text/javascript" src="/media/javascript/compiled/frontend-{$REVISION}.js"></script>
+        <!-- define global state of this page -->
+        <script type="text/javascript">
+            YdMode = "{$mode|default:'rest'}";
+            log('CURRENT MODE: ' + YdMode);
+            var companyExceptions = [1443];
+        </script>
+
+        {if $grid}
+        <script type='text/javascript' charset='UTF-8'>
+            /* <![CDATA[ */
+            {$grid->getHeaderScript()}
+            /* ]]> */
+        </script>
+        {/if}
+
+        {include file='_cookies/monetate/global.htm'}
+
+        {if $jvm_brot_fuer_die_welt}
+        <script language="javascript">AC_FL_RunContent = 0;</script>
+        <script src="/media/extern/jvm/brot-fuer-die-welt/AC_RunActiveContent.js" language="javascript"></script>
+        {/if}
+
+        {if $APPLICATION_ENV == "production"}
+        {include file='_cookies/wingify/vwo.htm'}
+        {/if}
+        {include file='_cookies/google/analytics.htm'}
+        {if $trackGoogleEcomerce}
+        {include file='_cookies/google/ecommerce.htm'}
+        {/if}
+        {include file='_cookies/veinteractive/global.htm' journeycode=$config->veinteractive->code}
+
+        <link href="https://plus.google.com/114849467427479787318" rel="publisher" />
+
+        {literal}
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+            {lang: 'de'}
+        </script>
+        {/literal}
+
+    </head>
+
+    <body class="de" itemscope itemtype="http://schema.org/WebPage">
+
+        <div id="yd-group-fade" class="hidden"></div>
+        <a name="anchor-0"></a>
+        <div id="yd-nonfooter">
+
+            {include file='base_header.htm'}
+
+            <div id="yd-content" class="yd-clearfix">
+
+                {include file='notification.htm'}
+
+                {block name='content'}{/block}
+
+            </div>
+
+        </div>
+
+        {include file="base_footer.htm"}
+
+        <script type="text/javascript">
+            <!--
+            {foreach from=$this->getDisabledElements() item=dis}
+            if ( $("#{$dis}").length > 0 ){
+                $("#{$dis}").hide();
+            }
+            {/foreach}
+            -->
+        </script>
+
+        {include file='_cookies/sociomatic/global.htm'}
+        {include file='_cookies/masterpixel/global.htm' uadomain=$domain_base}
+        {include file='_cookies/piwik/global.htm' uadomain=$domain_base}
+        {include file='_cookies/avazu/global.htm'}
+
+    </body>
+</html>

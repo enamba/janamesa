@@ -1,0 +1,115 @@
+
+.yd-successarea-left-2 span{ border-radius: 5px;}
+.yd-successarea-right a {
+    background: none;
+    padding: 18px 0 0 50px;
+    color: #fff;
+}
+.yd-successarea-right a:hover{color: #ccc; background: none;}
+/*
+    9. ordering/success
+***********************************************************/
+#yd-success-page .yd-success-points{
+    text-align: center;
+
+}
+#yd-success-page .yd-success1 {
+    padding: 15px;
+}
+#yd-success-page .yd-success-points strong{
+    font-size: 20px;
+    line-height: 50px;
+}
+#yd-success-page .yd-success-points em{
+    display: block;
+    padding-top: 5px;
+}
+#yd-success-page .yd-success-points .yd-button-240 {
+    text-align: left;
+    margin-left: 5px;
+}
+
+#yd-success-page .yd-rest-info{
+    padding: 5px 5px 5px 180px;
+}
+#yd-success-page .yd-rest-info img{
+    position: absolute;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+#yd-success-page #yd-sidebar{
+    position: absolute;
+    top: 177px;
+    right: 10px;
+}
+#yd-success-page h1{
+    color: green;
+    font-size: 22px;
+    margin: 0 0 10px;
+    padding: 5px 0 5px 40px;
+    background: url(/media/images/satellites/menu/yd-check.png) no-repeat;
+}
+
+#yd-success-page .yd-rest-info strong{
+    display: block;
+    width: 421px;
+    height: 51px;
+    padding: 28px 0 0 0;
+    text-align: center;
+    font-size: 22px;
+    color: #777;
+    background: url(/media/images/satellites/menu/yd-successarea-phone.png);
+    text-shadow: 0 1px 0 #fff;
+}
+#yd-success-page .yd-rest-info small{
+    display: block;
+    line-height: 20px;
+}
+#yd-success-page .yd-rest-info span{
+    display: block;
+    margin-bottom: 15px;
+}
+#yd-menu-content-finish{
+    padding:  5px;
+}
+.yd-successarea-right {
+    background: url(/media/images/satellites/menu/success.png) no-repeat scroll 0 42px transparent;
+    width: 360px;
+    margin: -45px 0 0 0;
+}
+.yd-successarea-right a:hover{
+    color:eee;
+}
+.yd-successarea{
+    width: 1021px;
+}
+.yd-breadcrumbs-new{
+    display: none;
+}
+
+/*
+    *backbutton 
+*/
+.backbutton{
+    height: 20px;
+    padding: 5px 0 0 10px;
+    width: 230px;
+    font-size: 14px;
+    top: 20px;
+    left: 10px;
+    position: absolute;
+    text-align: center;
+    border-radius:5px;
+    text-shadow: 0 0 1px #000000;
+    font-weight: bold;
+    border: 1px solid;
+}
+.backbutton:hover{
+    border-radius:5px;
+    background: url(/media/images/satellites/menu/back_arrow.png) 5px 1px no-repeat;
+}
+
+.yd-success-points .yd-register-fidelity{
+    text-align: center; 
+}

@@ -1,0 +1,67 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+{include file='administration/user/edit/_navigation.htm'}
+
+<div class="two-column-box">    
+    <div class="item">
+        <div class="item-head">
+            {__b('Rabattzuordnung')}
+        </div>
+        <div class="item-content">
+            <form action="/administration_user_edit/discount" method="post">
+                <input type="hidden" name="userid" value="{$customer->getId()}"/>
+                <table class="user-tab">
+                    <tr>
+                        <td width="20%">{__b('Permanenter Rabatt')}:</td>
+                        {if isset($hasDiscount)}
+                        <td width="40%">
+                            <a href="/administration_discount/discountbycode/name/{$hasDiscount}">{$hasDiscount}</a>&nbsp;<a href="/administration_user_edit/discount/userid/{$customer->getId()}/deldiscount/{$hasDiscount}"><img src="{$domain_static}/images/yd-backend/del-cat.gif" alt="{__b('Löschen')}"/></a>
+                        </td>
+                        {else}
+                        <td width="30%">
+                            <select name="discountId" id="yd-discount-dropdown">
+                                <option value="-1"></option>
+                                {foreach from=$rabattIds item=ri}
+                                {if $ri.kind == 1}
+                                <option value="{$ri.id}">{$ri.name} ({$ri.code} / {$ri.rabatt/100} {__b('€')})</option>
+                                {else}
+                                <option value="{$ri.id}">{$ri.name} ({$ri.code} / {$ri.rabatt} %)</option>
+                                {/if}
+                                {/foreach}
+                            </select>
+                        </td>
+                        <td width="40%" id="yd-selected-discount-link" align="left"></td>
+                        <td width="10%">
+                            <input name="adddiscount" value="{__b('Hinzufügen')}" type="submit" class="button"/>
+                        </td>
+                        {/if}
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>    
+    <div class="item">
+        <div class="item-head">
+            {__b('Treuepunkte')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <td width="20%">{__b('Vorhandene Treuepunkte')}:</td>
+                    <td width="10%" id="yd-fidelity-count">{$customer->getFidelityPoints()->getPoints()|default: 0}</td>
+                    <td width="15%">{__b('Anzahl')}:<br/><input type="text" size="6" maxlength="5" id="yd-fidelity-point-count" value="1"/></td>
+                    <td width="25%">{__b('Kommentar')}:<br/><input type="text" id="yd-manage-fidelity-points-comment" class="rund_set text"/></td>
+                    <td>
+                        <a href="#x" id="yd-add-fidelity-point-count-submit" class="custId-{$customer->getId()}" >{__b('hinzufügen')}</a>&nbsp;&nbsp;&nbsp;                       
+                    </td>
+                </tr>
+            </table>
+            &nbsp;
+            <div id="fidelity-transactions">
+                {include file="request/administration/fidelitytransactions.htm"}
+            </div>
+        </div>
+    </div>
+</div>
+
+{/block}

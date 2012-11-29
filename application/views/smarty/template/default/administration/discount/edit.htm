@@ -1,0 +1,219 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<form action="/administration_discount/edit" method="post" enctype="multipart/form-data">
+    <div style="display:none;"><input type="file" name="img" class="rund_set text"/></div>    
+
+    <input type="hidden" name="type" value="{$discount->getType()}"/>
+    <input type="hidden" name="id" value="{$discount->getId()}"/>
+    <input type="hidden" name="referer" value="{$discount->getReferer()}"/>
+
+    <div class="be-1-column">
+        <div class="be-box">
+            <h2>{__b('Rabattaktion')} #{$discount->getId()}</h2>
+            <div class="be-box-in be-discount-formulars be-discount-create">
+
+                <ul>
+                    <li class="be-dc1">
+                        <label>{__b('Name:')}</label>
+                        <input type="text" name="name" value="{$discount->getName()|escape}"/> *
+                    </li>
+                    <li class="be-dc2">
+                        <label>{__b('Status')}</label>
+                        <select name="status">
+                            <option value="1" {if $discount->getStatus()=="1"}selected{/if} >{__b('aktiviert')}</option>
+                            <option value="0" {if $discount->getStatus()=="0"}selected{/if} >{__b('deaktiviert')}</option>
+                        </select>
+                    </li>
+                    <li class="be-dc3">
+                        <label>{__b('Typ')}</label>
+                        {if $discount->getType() <= count($types)}
+                        {$types[$discount->getType()]['name']} - {$types[$discount->getType()]['description']}
+                        {else}
+                        {__b('Unbekannt')}
+                        {/if}
+                    </li>
+                    {if in_array($discount->getType(), array(4,5,6,7))}
+                    <li class="be-dc32">
+                        <label>{__b('nur für bestimmte Dienstleister')}</label>
+                        <input id="yd-discount-restaurants-restriction" type="checkbox"  value="1" checked="checked" />
+                        <input id="yd-discount-add-restaurant"  type="text" value="" />                       
+                        <div class="yd-restaurants-list-container {if !$discount->getRestaurants()}hidden{/if}">
+                            <div id="yd-restaurants-list">
+                                {foreach from=$discount->getRestaurants() item=restaurant}
+                                <strong id="yd-discount-restaurant-{$restaurant->getId()}">{$restaurant->getId()} {$restaurant->getName()} (nr.{$restaurant->getCustomerNr()})<a class="yd-discount-restaurant-delete">x</a></strong>
+                                <input type="hidden" value="{$restaurant->getId()}" name="restaurantIds[]">
+                                {/foreach}
+                            </div>                                                        
+                            <a id="yd-restaurants-list-delete-all">alle entfernen</a>                         
+                        </div>                       
+                    </li>  
+                    {/if}
+                    {if in_array($discount->getType(), array(4,5,6,7))}
+                    <li class="be-dc32">
+                        <label>{__b('nur für bestimmte PLZ-Bereiche')}</label>
+                        <input id="yd-discount-citys-restriction" type="checkbox"  value="1" checked="checked" />
+                        <input id="yd-discount-add-city"  type="text" value="" />                     
+                        <div class="yd-restaurants-list-container {if !$discount->getCitys()}hidden{/if}">
+                            <div id="yd-discount-citys">
+                                {foreach from=$discount->getCitys() item=city}
+                                <strong id="yd-discount-city-{$city->getId()}">{$city->getPlz()} {$city->getFullname()}<a class="yd-discount-city-delete">x</a></strong>
+                                <input type="hidden" value="{$city->getId()}" name="cityIds[]">
+                                {/foreach}
+                            </div>                         
+                            <a id="yd-discount-citys-delete-all" >alle entfernen</a>                        
+                        </div>                      
+                    </li>
+                    {/if}
+                    {if  in_array($discount->getType(), array(0,4,5,6, 7))}
+                    <li class="be-dc41">
+                        <label>{__b('Nutzung')}</label>
+
+                        <select name="rrepeat" id="yd-admin-discount-create-usage">
+                            <option value="0" {if $discount->getRrepeat()=="0"}selected{/if} >{__b('einmalig')}</option>
+                            <option value="1" {if $discount->getRrepeat()=="1"}selected{/if} >{__b('wiederholt')}</option>
+                            <option value="2" {if $discount->getRrepeat()=="2"}selected{/if} >{__b('Anzahl')}</option>
+                        </select>
+
+                        <span id="yd-admin-discount-create-usage-count" class="hidden"><input type="text" value="{$discount->getCountUsage()}" name="countUsage"  /> ({__b('Anzahl der Nutzungen dieses Gutscheins')})</span>
+                    </li>
+                     {if $discount->getType()==6 || $discount->getType()==7}
+                    <li class="be-dc6">
+                        <label>{__b('Universeller Rabattcode')}</label>
+                        <input type="text" name="fakeCode" readonly="readonly" value="{$code}" id="yd-admin-discount-fakeCode" /> *
+                    </li>
+                    {/if}     
+                    {else}
+                    <li class="be-dc42">
+                        <label>{__b('Referer URL')}</label>
+                        {$discount->getReferer()}
+                    </li>
+                    <li class="be-dc5">
+                        <label>{__b('Bild')}</label>
+                        <input type="file" name="img" /><img src="/../storage/discounts/{$discount->getId()}/default.jpg" width="200" />
+                    </li>
+                    <li class="be-dc5">
+                        <label>{__b('aktuelles Bild')}</label>
+                        <img src="/../storage/discounts/{$discount->getId()}/default.jpg" width="200" />
+                    </li>
+                    {if $discount->getType()==3 || $discount->getType()==7}
+                    <li class="be-dc6">
+                        <label>{__b('Universeller Rabattcode')}</label>
+                        <input type="text" name="fakeCode" readonly="readonly" value="{$code}" id="yd-admin-discount-fakeCode" /> *
+                    </li>
+                    {/if}                    
+                    {/if}
+                    <li class="be-dc7">
+                        <label>{__b('Rabatt')}</label>
+                        <input style="width: 150px" type="text" name="rabatt"  {if $discount->getKind()=="0"}value="{$discount->getRabatt()}"{else}value="{intToPrice($discount->getRabatt())}"{/if}>&nbsp*
+                        <select style="width: 127px" name="kind">
+                            <option value="0" {if $discount->getKind()=="0"}selected{/if} >%</option>
+                            <option value="1" {if $discount->getKind()=="1"}selected{/if} >{__b('€')}</option>
+                        </select>
+                    </li>
+                    <li class="be-dc8">
+                        <label>{__b('Startzeitpunkt:')}</label>
+                        <input style="width: 205px" type="text" name="startTimeD"  id="yd-discount-create-start"  value="{$discount->getStart()|timestampYMD}" readonly/>&nbsp*
+                        {include file='administration/timebit.htm' separator=':' mode='startTimeT' value=$discount->getStart()|timestampHi}
+                    </li>
+                    <li class="be-dc9">
+                        <label>{__b('Endzeitpunkt:')}</label>
+                        <input style="width: 205px" type="text" name="endTimeD" id="yd-discount-create-end" value="{$discount->getEnd()|timestampYMD}" readonly/>&nbsp*
+                        {include file='administration/timebit.htm' separator=':' mode='endTimeT' value=$discount->getEnd()|timestampHi}
+                    </li>
+                    <li class="be-dc10">
+                        <label>{__b('Mindestbestellwert:')}</label>
+                        <input type="text" name="minAmount" value="{intToPrice($discount->getMinAmount())}"/>
+                    </li>
+                    <li class="be-dc11">
+                        <label>{__b('Anzahl Codes:')}</label>
+                        {$discount->getNumber()}
+                    </li>
+                    <li class="be-dc11">
+                        <label>{__b('Beschreibung:')}</label>
+                        <textarea name="info">{$discount->getInfo()}</textarea>
+                        <small>{__b('Für Nutzer sichtbar nach dem erfolgreichen Einlösen')}</small>
+                    </li>
+                    <li class="be-dc11">
+                        <label>{__b('Rabatt noch nicht gültig:')}</label>
+                        <textarea name="notStartedInfo">{$discount->getNotStartedInfo()}</textarea>
+                        <small>{__b('Für Nutzer sichtbar, wenn der Gutschein VOR seiner Gültigkeit eingelöst wird. (wenn leer, dann wird Standardtext gezeigt)')}</small>
+                    </li>
+                    <li class="be-dc11">
+                        <label>{__b('Rabatt beendet weil:')}</label>
+                        <textarea name="expirationInfo">{$discount->getExpirationInfo()}</textarea>
+                        <small>{__b('Für Nutzer sichtbar, wenn der Gutschein NACH seiner Gültigkeit eingelöst wird. (wenn leer, dann wird Standardtext gezeigt)')}</small>
+                    </li>
+                    {if in_array($discount->getType(), array(1,2,3))}
+                    <li class="be-dc13">
+                        <label>{__b('Verifizierung bei Payment:')}</label>
+                        <input type="checkbox" value="1" name="newCustomerCheck" {if $discount->getNewCustomerCheck() && $discount->getNewCustomerCheck() == 1}checked{/if} />
+                               <small>{__b('Neukundengutscheine werden standartmäßig mit Paypal/SÜ zusätzlich verifiziert. Im Einzelfall und in Absprache kann das deaktiviert werden.')}</small>
+                    </li>
+                    {else}
+                    <li class="be-dc13">
+                        <input type="hidden" name="newCustomerCheck" value="1" />
+                    </li>
+                    {/if}
+                    <li class="be-dc14">
+                        <label>{__b('Nur privat:')}</label>
+                        <input type="checkbox" value="1" name="onlyPrivate" {if $discount->getOnlyPrivate()=="1"}checked{/if}/>
+                    </li>
+                    <li class="be-dc15">
+                        <label>{__b('Nur Firmen:')}</label>
+                        <input type="checkbox" value="1" name="onlyCompany" {if $discount->getOnlyCompany()=="1"}checked{/if}/>
+                    </li>
+                    <li class="be-dc16">
+                        <label>{__b('Nur Restaurants:')}</label>
+                        <input type="checkbox" value="1" name="onlyRestaurant" {if $discount->getOnlyRestaurant()=="1"}checked{/if}/>
+                    </li>
+                    <li class="be-dc17">
+                        <label>{__b('Nur Kunden:')}</label>
+                        <input type="checkbox" value="1" name="onlyCustomer" {if $discount->getOnlyCustomer()=="1"}checked{/if}/>
+                    </li>
+                    <li class="be-dc18">
+                        <label>{__b('Nur Premium:')}</label>
+                        <input type="checkbox" value="1" name="onlyPremium" {if $discount->getOnlyPremium()=="1"}checked{/if}/>
+                               {__b('nur einlösbar bei Premiumbestellungen')}
+                    </li>
+                    <li class="be-dc19">
+                        <label>{__b('nur über Mobile Apps einlösbar')}</label>
+                        <input type="checkbox" value="1" name="onlyIphone" {if $discount->getOnlyIphone()=="1"}checked{/if}/>
+                               {__b('Nur über Android- oder iPhone-App einlösbar.')}
+                    </li>
+                </ul>
+
+                <hr />
+
+                <input type="submit" value="{__b('Bestätigen')}" class="button" />
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button cancel" />
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</form>
+{/block}

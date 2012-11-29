@@ -1,0 +1,141 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/service/meals/_navigation.htm'}
+
+<div class="be-1-column">
+    <div class="be-box">
+        <h2>{__b('Aktueller Stand')}</h2>
+        <div class="be-box-in">
+            <div id="yd-service-meals-state"></div>
+            <strong style="font-size: 18px;">
+                <a href="/administration_request_service_meals/state/q/ingredients" id="yd-service-meals-check-state">
+                    Aktuellen Stand abfragen
+                </a>
+            </strong>
+        </div>
+    </div>
+</div>
+
+{include file='administration/service/meals/_search.htm'}
+
+<form action="/administration_request_service_meals/ingredients" method="post"  id="yd-service-meals-ingredients-form">
+
+    {if is_object($grid)}
+    <div class="be-1-column">
+        <div class="be-box">
+            <h2>{__b('Speisen')}</h2>
+            
+            <div class="be-box-in">
+                <table>
+                    <tr>
+                        <td>
+                            <input class="yd-check-all-checkboxes" type="checkbox" id="yd-check-all-checkboxes-top" /><label for="yd-check-all-checkboxes-top">{__b('Alle Speisen auf dieser Seite auswählen')}</label>
+                        </td>
+                    </tr>
+                </table>
+                
+                {$grid}
+
+                <table>
+                    <tr>
+                        <td>
+                            <input class="yd-check-all-checkboxes" type="checkbox" id="yd-check-all-checkboxes-bottom" /><label for="yd-check-all-checkboxes-bottom">{__b('Alle Speisen auf dieser Seite auswählen')}</label>
+                        </td>
+                        <td style="text-align:right;">
+                            <input type="submit" name="deleteIngredients" value="{__b('Zutaten löschen')}" />
+                            <input type="submit" name="deleteAttributes" value="{__b('Attribute löschen')}" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="be-2-column">
+        <div class="be-box">
+            <h2>Zutaten zu den Speisen hinzufügen - quick modus</h2>
+            <div class="be-box-in">
+                <div>
+                    <input type="text" id="yd-service-meals-ingredients-autocomplete" style="width: 250px;"/>
+                </div>
+                <div class="yd-ingredients-list-container hidden">
+                    <div id="yd-ingredients-list">
+                    </div>
+                    <a id="yd-ingredients-list-delete-all" style="display:none">{__b('alle entfernen')}</a>
+                </div>
+                <br/><br/>
+                <div style="display: block;">
+                    <br/>
+                    <input type="submit" name="setIngredientsQuick" value="{__b('Hinzufügen')}" />
+                </div>
+                <br/>
+            </div>
+        </div>
+        
+        <div class="be-box">
+            <h2>Attribute bei den Speisen setzen</h2>
+            <div class="be-box-in">
+                <br/><br/>
+                {foreach from=Yourdelivery_Model_Meals::getAllAttributes() key=attributeKey item=attributeName}
+                    <input name="attributes[]" class="yd-attribute" type="checkbox" value="{$attributeKey}"/> {$attributeName}&nbsp;&nbsp;&nbsp;
+                {/foreach}
+                <br/><br/>
+                <input type="submit" name="setAttributes" value="{__b('Attribute setzen')}" />
+            </div>
+        </div>        
+    </div>
+    
+    <br/><br/><br/><br/>
+
+    <div class="be-1-column">
+        <div class="be-box">
+            <h2>Zutaten zu den Speisen hinzufügen</h2>
+            <div class="be-box-in" style="text-align: center;">
+                <input type="submit" name="setIngredients" value="{__b('Markierte Zutaten hinzufügen')}" />
+                <br/><br/>
+                <input class="yd-check-all-checkboxes-2" type="checkbox" /> {__b('Alle Zutaten auswählen')}
+            </div>
+        </div>
+    </div>    
+    {/if}
+    
+    <div class="be-3-column">
+    {foreach from=Yourdelivery_Model_Meal_Ingredients::getGroups() key=ind item=grName}
+        <div class="be-box">
+            <h2>{$grName}</h2>
+            <div class="be-box-in">
+                <div id="yd-ingredients-groupbox-{$ind}">
+                    {foreach from=Yourdelivery_Model_Meal_Ingredients::findByGroupId($ind) item=ingr}
+                        <div>
+                            <input name="ingredientsId[]" class="yd-ingredient yd-checkbox-2" id="yd-ingdredient-{$ingr['id']}" type="checkbox" value="{$ingr['id']}"/> {$ingr['name']}
+                        </div>
+                    {/foreach}
+                </div>
+                <div style="text-align: right;">
+                    <input type="text" class="yd-add-ingredient-togroup-input" id="yd-add-ingredient-togroup-input-{$ind}" style="width: 60px;"/><br/>
+                    <a href="#" class="yd-add-ingredient" id="yd-add-ingredient-togroup-{$ind}">{__b('Hinzufügen')}</a>
+                </div>
+            </div>
+        </div>    
+        {if $ind%3==0}
+        </div>
+        <div class="be-3-column">
+        {/if}    
+    {/foreach} 
+    </div>
+    
+    {if is_object($grid)}
+    <div class="be-1-column">
+        <div class="be-box">
+            <div class="be-box-in" style="text-align: center;">
+                <input type="submit" name="setIngredients" value="{__b('Markierte Zutaten hinzufügen')}" />                
+            </div>
+        </div>
+    </div>
+    {/if}
+    
+    </form>
+
+
+{/block}

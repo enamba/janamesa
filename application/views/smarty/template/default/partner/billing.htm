@@ -1,0 +1,73 @@
+{extends file='partner/_base.htm'}
+{block name="content"}
+
+{include file='partner/_includes/nav.htm'}
+
+{assign var=dateNames value=Default_Helpers_Date::getMonthNames()}
+<div class="be-partner be-partner-billing">
+
+    <h1 class="icon03">{__p('Kontostand')}</h1>
+
+    <div class="yd-clearfix">
+
+        <ul class="data">
+            <li>
+                <em>{__p('Umsatz %s:', $dateNames[date('n')-1])}</em>
+                {__p('%s €', intToPrice($salesVolume))}
+            </li>
+            <li>
+                <em>{__p('davon Bar gezahlt %s:', $dateNames[date('n')-1])}</em>
+                {__p('%s €', intToPrice($salesVolumeBar))}
+            </li>
+            <li>
+                <em>{__p('davon Online gezahlt %s:', $dateNames[date('n')-1])}</em>
+                {__p('%s €', intToPrice($salesVolumeOnline))}
+            </li>
+        </ul>
+
+        <div id="yd-bill-deliver">
+            <h2>{__p('Übermittlung der Rechnungen')}</h2>
+            
+            {$form}
+        </div>
+    </div>
+
+    <ul class="be-nav small">     
+        {foreach from=$years item=year name=billLoop}
+            <li data-tab="{$smarty.foreach.billLoop.iteration}" class="yd-billing-tab icon07 {if $smarty.foreach.billLoop.first}active{/if}"><a><span>{__p('Rechnungsübersicht %s', $year)}</span></a></li>
+        {/foreach}
+    </ul>
+
+    <div id="balance-div">
+
+        {foreach from=$billsPerMonth item=bills name=billLoop}
+        <table class="user-tab yd-billing-table" id="yd-billing-table-{$smarty.foreach.billLoop.iteration}" {if !$smarty.foreach.billLoop.first}style="display: none;"{/if}>
+            
+            <thead>
+                <th>{__p('Zeitraum')}</th>
+                <th>{__p('Rechnungsbetrag')}</th>
+                <th>{__p('Gutschriftbetrag')}</th>
+                <th>{__p('Status')}</th>
+                <th>{__p('Typ')}</th>
+            </thead>
+
+            <!-- list all billings -->
+            {foreach from=$bills item=bill}
+            <tr>
+                <td>{$bill->getFrom()|dateYmd} - {$bill->getUntil()|dateYmd}</td>
+                <td>{if $bill->getAmount() != 0}{__p('%s €' ,$bill->getAmount()|inttoprice)}{else} - {/if}</td>
+                <td>{if $bill->getVoucher() != 0}{__p('%s €' ,$bill->getVoucher()|inttoprice)}{else} - {/if}</td>
+                <td>{$bill->getStatusWording()}</td>
+                <td><a class="yd-icon-pdf" href="/download/bill/{Default_Helpers_Crypt::hash($bill->getId())}/pdf">{__p('PDF')}</a></td>
+            </tr>
+            {foreachelse}
+            <tr><td colspan="6">{__p('keine Rechnungen vorhanden')}</td></tr>
+            {/foreach}
+
+        </table>
+        {/foreach}
+    </div>
+
+</div>
+
+{/block}

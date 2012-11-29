@@ -1,0 +1,40 @@
+{extends file="base.htm"}
+
+{block name="content"}
+
+<!-- ZUR ZEIT INAKTIV -->
+
+{assign var=inviterData value=$inviterData}
+
+    <div id="account">
+
+        <span class="name">{$cust->getFullname()}</span>{if $cust->isEmployee()}<span class="firma">{$cust->getCompany()->getName()}</span>{/if}
+
+        <div id="account-nav">
+            <ul>
+                {if $cust->isLoggedIn()}
+                    <li><a id="account-nav_01" href="/user/settings">{__('Meine Daten')}</a></li>
+                    <li><a id="account-nav_02" href="/user/locations">{__('Lieferadressen')}</a></li>
+                    <li><a id="account-nav_06" class="active" href="/user/invite">{__('Freunde einladen')}</a></li>
+                    <li><a id="account-nav_03" href="/user/favourites">{__('Favoriten')}</a></li>
+                    <li><a id="account-nav_04" href="/user/orders">{__('Vorherige Bestellungen')}</a></li>
+                    {if $cust->isEmployee()}
+                        <!--<li><a id="account-nav_05" href="/user/repeat">{__('Wiederholende Bestellungen')}</a></li>-->
+                    {/if}
+                {else}
+                    <li><a id="account-nav_01" href="/user/invite">{__('Freunde einladen')}</a></li>
+                {/if}
+            </ul>
+        </div>
+
+        <div class="accountcontent">
+
+            <img id="yd-link-invite-friends" src="{$domain_static}/images/banner_einladen2.png" alt="" style="cursor:pointer; margin: 0 0 20px 0;" />
+
+            {$inviterData}
+
+        </div>
+
+    </div>
+</div>
+{/block}

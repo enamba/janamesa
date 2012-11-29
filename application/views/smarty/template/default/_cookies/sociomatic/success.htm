@@ -1,0 +1,19 @@
+{if $config->domain->base == 'lieferando.de'}
+<script type="text/javascript">
+    /*<![CDATA[*/
+    
+    var sonar_basket = {
+        products: [
+            { identifier: "{$order->getService()->getId()}", 
+               amount: {number_format(round(($order->getAbsTotal(false,false,true,false,false,false)/100),2), 2, '.', '')}, 
+               currency: "EUR",
+               quantity: 1 }
+        ],
+        transaction: "{$order->getNr()}",
+        amount: {number_format(round(($order->getAbsTotal(false,false,true,false,false,false)/100),2), 2, '.', '')},
+        currency: "EUR"
+    };
+           
+    /* ]]> */
+</script>
+{/if}

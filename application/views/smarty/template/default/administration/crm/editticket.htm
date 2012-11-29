@@ -1,0 +1,100 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+
+<form action="/administration_crm/editticket" method="post">
+    <input type="hidden" name="ticketId" value="{$ticket->getId()}"/>
+
+    <div class="be-1-column">
+        <div class="be-box">
+            <h2>{__b('Ticket')} #{$ticket->getId()} {__b('bearbeiten')}</h2>
+            <div class="be-box-in">
+                <label>{__b('Betreff:')}</label>        
+                <input name="topic" type="text" value="{$ticket->getTopic()}"/>
+
+                <hr />
+
+                <label>{__b('Abteilung:')}</label>        
+                <select id="yd-crm-department" style="width: 200px;">
+                    <option value=""></option>
+                    <option value="Back Office">{__b('Back Office')}</option>
+                    <option value="Vertrieb">{__b('Vertrieb')}</option>
+                    <option value="Upselling">{__b('Upselling')}</option>
+                    <option value="Buchhaltung">{__b('Buchhaltung')}</option>
+                    <option value="Graphik">{__b('Graphik')}</option>
+                    <option value="Support">{__b('Support')}</option>
+                </select>
+
+                <hr />
+
+                <label>{__b('Grund:')}</label>        
+                <select name="reasonId" id="yd-crm-reason-id" style="width: 200px;">
+                    <option value="{$ticket->getReasonId()}">{Yourdelivery_Model_Crm_Ticket::getReasonAsText($ticket->getReasonId())}</option>            
+                </select>
+
+                <hr />
+
+                <label>{__b('Genaue Erklärung der Aufgabe:')}</label>        
+                <textarea name="message">
+            {$ticket->getMessage()}
+                </textarea> *
+
+                <hr />
+
+                <label>{__b('Grund für Bearbeitung:')}</label>        
+                <textarea name="editor_message">            
+                </textarea>
+
+                <hr />
+
+                <label>{__b('Telefon')}</label>
+                <input type="checkbox" name="tel" value="1" {if $ticket->getTel()==1}checked{/if}/>
+
+                       <hr />
+
+                <label>{__b('E-Mail')}</label>
+                <input type="checkbox" name="email" value="1" {if $ticket->getEmail()==1}checked{/if}/>
+
+                       <hr />
+
+                <label>{__b('Ticket')}</label>
+                <input type="checkbox" name="ticket" value="1" id="yd-crm-bind-ticket-checkbox" {if $ticket->getTicket()==1}checked{/if}/>
+
+                       <hr />
+
+                <div id="yd-ticket-nr"  {if $ticket->getTicket()==0}style="display:none;"{/if}>
+                     <label>{__b('TicketNr:')}</label>
+                    <input name="ticketNr" type="text"  value="{$ticket->getTicketNr()}"/>        
+                    <hr />
+                </div>
+
+                <br/><br/>
+                <label>{__b('Ticket geschlossen')}</label>
+                <input type="checkbox" name="closed" value="1" id="yd-crm-close-checkbox" {if $ticket->getClosed()==1}checked{/if}/>
+
+                       <hr />
+
+                <div id="yd-crm-reassign"  {if $ticket->getClosed()==1}style="display:none;"{/if}>
+                     <label>{__b('Zuweisen an:')}</label>
+                    <input type="hidden" id="assignedToIdOld" value="{if !is_null($assignedAdmin)}{$assignedAdmin->getId()}{/if}"/>
+                    <input type="hidden" id="assignedToValueOld" value="{if !is_null($assignedAdmin)}{$assignedAdmin->getId()} {$assignedAdmin->getName()} ({$assignedAdmin->getEmail()}){/if}"/>
+                    <input type="hidden" id="assignedToId" name="assignedToId" value="{if !is_null($assignedAdmin)}{$assignedAdmin->getId()}{/if}"/>
+                    <input class="yd-crm-staff-autocomplete" id="yd-crm-staff-autocomplete-1" type="text" value="{if !is_null($assignedAdmin)}{$assignedAdmin->getId()} {$assignedAdmin->getName()} ({$assignedAdmin->getEmail()}){/if}"/>
+
+                    <hr />
+                </div>
+
+                <label>{__b('Zu erledigen bis:')}</label>                
+                <input type="text" name="scheduledD" id="yd-date" value="{if intval($ticket->getScheduled())!=0}{$ticket->getScheduledAsTimestamp()|timestampYMD}{/if}"  readonly/> {include file='administration/timebit.htm' separator=':' value="{if intval($ticket->getScheduled())!=0}{$ticket->getScheduledAsTimestamp()|timestampRounded}{/if}" mode='scheduledT'}
+
+                <hr />
+
+                <input type="submit" value="{__b('Speichern')}" class="button"/>
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button"/>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+{/block}

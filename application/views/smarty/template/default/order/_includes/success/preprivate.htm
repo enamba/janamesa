@@ -1,0 +1,11 @@
+<div class="yd-finish-presuccess">
+
+    <!-- this will trigger the restoring of the ydOrder object withOUT an update of the view -->
+    <input id="yd-order-service-id" type="hidden" name="serviceId" value="{$order->getService()->getId()}" />
+    <input id="yd-order-restore-bucket" class="yd-no-update" type="hidden" name="restore" />
+
+    <p>
+        {__("Deine Bestellung wird übermittelt, %s bitte habe einen Moment Geduld...%s", "<span>", "</span>")}
+    </p>
+
+</div>

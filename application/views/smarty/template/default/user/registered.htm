@@ -1,0 +1,14 @@
+{extends file="base.htm"}
+{block name="content"}
+
+    <div class="yd-registerthx yd-box">
+        <span></span>
+        <h1>{__('Vielen Dank für Deine Registrierung!')}</h1>
+        <h2>{__('Du wirst nun zu Deinem Account weitergeleitet...')}</h2>
+    </div>
+
+    {include file='_cookies/masterpixel/register.htm' uadomain=$domain_base}
+    {if $domain_base == 'lieferando.de'}
+     {include file='_cookies/avazu/register.htm'}
+    {/If}
+{/block}

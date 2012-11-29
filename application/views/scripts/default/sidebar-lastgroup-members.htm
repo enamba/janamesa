@@ -1,0 +1,53 @@
+{assign var=lastGroupMembers value=$cust->getLastGroupMembers()}
+{if $lastGroupMembers->count() > 0}
+    <div class="yd-box">
+        <div class="yd-box-head" id="expand-group-head">
+            <a href="#" id="expand-group-plus" class="yd-plus"></a>
+            <a href="#" id="expand-group-minus" class="yd-minus"></a>
+            <img alt="" src="{$domain_static}/images/yd-icons/icon-recent-member.png"/>
+            <span class="tooltip" title="{__('Hier werden die Mitglieder Ihrer bisherigen Gruppenbestellungen aufgelistet.')}" id="rec">{__('Gruppenmitglieder')}</span>
+        </div>
+        <div class="yd-box-body" id="expand-group">
+            <ul>
+                {foreach from=$lastGroupMembers item=lg name=groupmembers}
+
+                    {if is_object($order)}
+                        {if $order->getKind() == "comp"}
+                            {if $lg->isEmployee() && $cust->isEmployee() && $cust->getCompany()->getId() == $lg->getCompany()->getId()}
+                                <li>{$lg->getEmail()} {if $lg->isLoggedIn()}<br />({$lg->getFullname()}){/if}
+                                    <strong>
+                                        <input type="hidden" name="invite" id="yd-invite-email-input-{$smarty.foreach.groupmembers.iteration}" value="{$lg->getEmail()}" />
+                                        <a href="#" id="member-{$lg->getEmail()}" class="add-former-member">
+                                            <img src="{$domain_static}/images/yd-icons/add.png" title="Hinzuf&uuml;gen" id="yd-invite-email-{$smarty.foreach.groupmembers.iteration}" alt="{__('Hinzufügen')}" />
+                                        </a>
+                                    </strong>
+                                </li>
+                            {/if}
+                        {else}
+                            <li>{$lg->getEmail()} {if $lg->isLoggedIn()}<br />({$lg->getFullname()}){/if}
+                                <strong>
+                                    <input type="hidden" name="invite" id="yd-invite-email-input-{$smarty.foreach.groupmembers.iteration}" value="{$lg->getEmail()}" />
+                                    <a href="#" id="member-{$lg->getEmail()}" class="add-former-member">
+                                        <img src="{$domain_static}/images/yd-icons/add.png" title="Hinzuf&uuml;gen" id="yd-invite-email-{$smarty.foreach.groupmembers.iteration}" alt="{__('Hinzufügen')}" />
+                                    </a>
+                                </strong>
+                            </li>
+                        {/if}
+                    {else}
+                        <li>{$lg->getEmail()} {if $lg->isLoggedIn()}<br />({$lg->getFullname()}){/if}
+                            <strong>
+                                <input type="hidden" name="invite" id="yd-invite-email-input-{$smarty.foreach.groupmembers.iteration}" value="{$lg->getEmail()}" />
+                                <a href="#" id="member-{$lg->getId()}" class="add-former-member">
+                                    <img src="{$domain_static}/images/yd-icons/add.png" title="Hinzuf&uuml;gen" id="yd-invite-email-{$smarty.foreach.groupmembers.iteration}" alt="{__('Hinzufügen')}" />
+                                </a>
+                            </strong>
+                        </li>
+                    {/if}
+
+                {foreachelse}
+                    <li>{__('Keine Gruppenteilnehmer')}</li>
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+{/if}

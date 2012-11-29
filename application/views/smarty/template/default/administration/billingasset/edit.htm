@@ -1,0 +1,135 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div id="yd-admin-backend-wait" style="display:none;"><img src="{$domain_static}/images/yd-backend/yd-back-load.gif" /></div>
+
+<form action="/administration_billingasset/edit" method="post">
+    <input type="hidden" name="id" id="yd-billingasset-id" value="{$asset->getId()}"/>
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Rechnungsposten #')}{$asset->getId()}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="20%">{__b('Firma ')}{$asset->getBillCompany()}</td>
+                            <td width="30%" valign="top">
+                                {if $asset->getBillCompany() == 0}
+                                <select name="companyId" style="width: 300px;" id="yd-billingasset-company">
+                                    {foreach from=$compIds item=ci}
+                                    <option value="{$ci.id}" {if $asset->getCompanyId() == $ci.id}selected{/if}>{$ci.name} (#{$ci.id})</option>
+                                    {/foreach}
+                                </select>
+                                {else}
+                                {if !is_null($asset->getCompany())}<a href="/administration_company_edit/companyid/{$asset->getCompany()->getId()}">{$asset->getCompany()->getName()}</a>{/if}
+                                {/if}
+                            </td>
+                            <td width="20%">
+                                <div id="yd-billingasset-departments">
+                                {if ($asset->getBillCompany()!=0) && !is_null($asset->getDepartmentId()) && ($asset->getDepartmentId()!=0)}
+                                    {__b('Kostenstelle: ')}{if !is_null($asset->getDepartment())} {$asset->getDepartment()->getName()} (#{$asset->getDepartment()->getId()}) {/if}
+                                {else if ($asset->getBillCompany()==0) && (count($departments) > 0)}
+                                    {__b('Kostenstellen:')}
+                                    <select name="departmentId" style="width: 300px;">
+                                        <option value=""></option>
+                                        {foreach from=$departments item=dept}
+                                        <option value="{$dept->getId()}" {if $asset->getDepartmentId()==$dept->getId()}selected{/if}>{$dept->getName()} ({$dept->getIdentNr()}) (#{$dept->getId()})</option>
+                                        {/foreach}
+                                    </select>
+                                <br/><br/>
+                                {/if}
+                                </div>
+                                <div id="yd-billingasset-projectnumbers">
+                                {if ($asset->getBillCompany()!=0) && !is_null($asset->getProjectnumberId())}
+                                    {__b('Projektcode:')}{if !is_null($asset->getProjectnumber())} {$asset->getProjectnumber()->getNumber()} (#{$asset->getProjectnumber()->getId()}) {/if}
+                                {else if ($asset->getBillCompany()==0) && (count($projectnumbers) > 0)}
+                                    {__b('Projektcodes:')}
+                                    <select name="projectnumberId" style="width: 300px;">
+                                        <option value=""></option>
+                                        {foreach from=$projectnumbers item=prn}
+                                        <option value="{$prn->getId()}" {if $asset->getProjectnumberId()==$prn->getId()}selected{/if}>{$prn->getNumber()} (#{$prn->getId()})</option>
+                                        {/foreach}
+                                    </select>
+                                {/if}
+                                </div>
+                            </td>
+                            <td width="30%">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Restaurant')}</td>
+                            <td>
+                                <select name="restaurantId" style="width: 300px;">
+                                    {foreach from=$restIds item=ri}
+                                    <option value="{$ri.id}" {if $asset->getRestaurantId() == $ri.id}selected{/if}>{$ri.name} ({$ri.street} {$ri.hausnr}, {$ri.plz}) (#{$ri.id})</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                            <td>{__b('Betrag (Netto): ')}<input type="text" name="total" class="rund_set text" value="{intToPriceWithNegative($asset->getTotal())}" style="width: 100px;"/> *</td>
+                            <td>
+                                {__b('Mwst, %')}
+                                <select name="mwst" style="width: 110px;">
+                                    {foreach from=Default_Helpers_Money::getAllVats() item=v}
+                                        <option value="{$v}" {if $asset->getMwst() == $v}selected{/if}>{$v}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Kurierdienst')}</td>
+                            <td>
+                                <select name="courierId" style="width: 300px;">
+                                    <option value="0"></option>
+                                    {foreach from=$courierIds item=cu}
+                                        <option value="{$cu.id}" {if $asset->getCourierId() == $cu.id}selected{/if}>{$cu.id}: {$cu.name}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                            <td>{__b('Betrag (Netto): ')}<input type="text" name="couriertotal" class="rund_set text" value="{intToPriceWithNegative($asset->getCouriertotal())}" style="width: 100px;"/></td>
+                            <td>
+                                {__b('Mwst, %')}
+                                <select name="couriermwst" style="width: 110px;">
+                                    {foreach from=Default_Helpers_Money::getAllVats() item=v}
+                                        <option value="{$v}" {if $asset->getCouriermwst() == $v}selected{/if}>{$v}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Von')}</td>
+                            <td colspan="3"><input  name="timeFrom" type="text" value="{if ($asset->getTimeFrom() != 0) && !is_null($asset->getTimeFrom())}{$asset->getTimeFrom()|date_format:'%d.%m.%Y'}{/if}" id="yd-billingasset-create-start" style="width: 100px;"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Bis')}</td>
+                            <td colspan="3"><input  name="timeUntil" type="text" value="{if ($asset->getTimeUntil() != 0) && !is_null($asset->getTimeUntil())}{$asset->getTimeUntil()|date_format:'%d.%m.%Y'}{/if}" id="yd-billingasset-create-end" style="width: 100px;"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Provision, %')}</td>
+                            <td colspan="3">
+                                <select name="fee" style="width: 110px;">
+                                    {section name=fee start=0 loop=51}
+                                        <option value="{$smarty.section.fee.index}" {if $asset->getFee() == $smarty.section.fee.index}selected{/if}>{$smarty.section.fee.index}</option>
+                                    {/section}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Beschreibung')}</td>
+                            <td colspan="3"><textarea class="rund_set text" name="description" style="width: 300px;">{$asset->getDescription()}</textarea></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" />
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+
+</form>
+{/block}    

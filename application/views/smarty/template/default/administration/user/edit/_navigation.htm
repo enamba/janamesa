@@ -1,0 +1,18 @@
+
+<div class="be-1-column">
+    <div class="be-box">
+        <h2>
+            {__b('Kunde')}: {$customer->getPrename()} {$customer->getName()} (#{$customer->getId()})
+            &nbsp;&nbsp;&nbsp;
+            <a href="/administration/userlogin/id/{$customer->getId()}">{__b('Login')}</a>
+        </h2>
+        <div class="be-box-in">
+            <ul class="be-tabs">
+                <li><a href="/administration_user_edit/index/userid/{$customer->getId()}">{__b('Informationen')}</a></li>
+                <li><a href="/administration_user_edit/location/userid/{$customer->getId()}">{__b('Adressen')}</a></li>
+                <li><a href="/administration_user_edit/assoc/userid/{$customer->getId()}">{__b('Zuordnungen')}</a></li>
+                <li><a href="/administration_user_edit/fidelity/userid/{$customer->getId()}">{__b('Treuepunkte')}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

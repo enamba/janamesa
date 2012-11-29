@@ -1,0 +1,20 @@
+<form method="post" action="/request_administration_ticketsystem_message/changerestaurantnotification" class="yd-message-callback-post">
+    <input type="hidden" name="mid" value="{$message->getId()}" />
+    <input type="hidden" name="pid" value="{$printer->getId()}" />
+    
+    {foreach $printer->getRestaurants() as $restaurant} 
+    <br />
+    {__b('Versand von')} <a href="/administration_service_edit/index/id/{$restaurant->getId()}" target="_blank">{$restaurant->getName()}</a> {__b('auf')} 
+    <select name="restaurants[{$restaurant->getId()}]">
+        <option value="all" {if $restaurant->getNotify() == "all"}selected="selected"{/if}>{__b('Fax, eMail und Drucker')}</option>
+        <option value="fax" {if $restaurant->getNotify() == "fax"}selected="selected"{/if}>{__b('Faxgerät')}</option>
+        <option value="sms" {if $restaurant->getNotify() == "sms"}selected="selected"{/if}>{__b('SMS Drucker')}</option>
+        <option value="email" {if $restaurant->getNotify() == "email"}selected="selected"{/if}>{__b('eMail')}</option>
+        <option value="acom" {if $restaurant->getNotify() == "acom"}selected="selected"{/if}>{__b('Acom Kassensystem')}</option>
+    </select>
+    {__b('umstellen.')}
+    {/foreach}
+    
+    <br /><br />
+    <input type="submit" value="{__b('Speichern')}" class="button" />
+</form>

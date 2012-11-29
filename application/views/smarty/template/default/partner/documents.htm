@@ -1,0 +1,56 @@
+{extends file='partner/_base.htm'}
+{block name="content"}
+
+{include file='partner/_includes/nav.htm'}
+
+<div class="be-partner be-partner-documents">
+    
+    <div class="be-partner-right">
+        {$restaurant->getName()} (#{$restaurant->getCustomerNr()})
+        <br /><br />
+        {$restaurant->getStreet()} {$restaurant->getHausnr()}
+        <br />
+        {$restaurant->getPlz()} {$restaurant->getCity()}
+        <br /><br />
+        {__p('Tel: ')} {$restaurant->getTel()}
+        <br />
+        {__p('Fax: ')} {$restaurant->getFax()}
+        <br /><br />
+        {__p('Kontobesitzer: ')} {if $restaurant->getKtoName()}{$restaurant->getKtoName()}{else} {__p('unbekannt')} {/if}
+        <br />
+        {__p('Kontonummer: ')} {if $restaurant->getKtoNr()} {$restaurant->getKtoNr()} {else} {__p('unbekannt')} {/if}
+        <br />
+        {__p('BLZ: ')} {if $restaurant->getktoBlz()} {$restaurant->getktoBlz()} {else} {__p('unbekannt')} {/if}
+    </div>
+
+    <div class="be-partner-left">
+        {if $contract || $ownership || $bankDetails}
+        <h1 class="icon10">{__p('Faxvorlagen zur Änderung meiner Daten:')}  </h1>
+        <ul>
+            {if $contract}<li><a href="{$contract}">{__p('Datenänderung')}</a></li>{/if}
+            {if $ownership}<li><a href="{$ownership}">{__p('Inhaberwechsel')}</a></li>{/if}
+            {if $bankDetails}<li><a href="{$bankDetails}">{__p('Kontodatenänderung')}</a></li>{/if}
+        </ul>
+        {/if}
+
+        {if $openings || $move || $deliveryArea}
+        <h1 class="icon10">{__p('Faxvorlagen zur Änderung der Öffnungszeiten:')}  </h1>
+        <ul>
+            {if $openings}<li><a href="{$openings}">{__p('Öffnungszeiten')}</a></li>{/if}
+            {if $move}<li><a href="{$move}">{__p('Umbau - Umzug')}</a></li>{/if}
+            {if $deliveryArea}<li><a href="{$deliveryArea}">{__p('Liefergebiete')}</a></li>{/if}
+        </ul>
+        {/if}
+
+        {if $menu || $extraIngredients}
+        <h1 class="icon10">{__p('Faxvorlagen zur Kartenänderung:')}  </h1>
+        <ul>
+            {if $menu}<li><a href="{$menu}">{__p('Kartenänderung')}</a></li>{/if}
+            {if $extraIngredients}<li><a href="{$extraIngredients}">{__p('Extrazutaten')}</a></li>{/if}
+        </ul>
+        {/if}
+    </div>
+
+</div>
+
+{/block}

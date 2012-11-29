@@ -1,0 +1,12 @@
+{if $service}   
+    <li><a href="/administration_order/index/type/view_grid_orders_this_day/Dienstleistergrid/{$service->getId()}/" target="_blank">{__b('DL Bestellungen heute')}</a></li>
+    <li><a href="/administration_order/index/type/view_grid_orders_last_seven/Dienstleistergrid/{$service->getId()}/" target="_blank">{__b('DL Bestellungen letzte 7 Tage')}</a></li>
+    <li><a href="/administration_order/index/type/view_grid_orders/Dienstleistergrid/{$service->getId()}/" target="_blank">{__b('DL Bestellungen gesamt')}</a></li>
+    <li><a href="/administration/partnerlogin/id/{$service->getId()}" target="_blank">{__b('Einloggen im Partner Konto')}</a></li>
+    <li><a href="/administration/servicelogin/id/{$service->getId()}" target="_blank">{__b('Einloggen im Restaurant Backend')}</a></li>
+    <li><a href="/administration_service_edit/index/id/{$service->getId()}" target="_blank">{__b('Info Ansicht des DL anzeigen')}</a></li>
+    <!-- <li>{__b('Internen Vermerk schreiben')}</li>
+    <li>{__b('Notizblock öffnen')}</li> -->
+{else}
+    <li>{__b('Nicht gefunden')}</li>
+{/if}

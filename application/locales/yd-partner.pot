@@ -1,0 +1,1134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-31 17:07+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/dad2df7b37e858e1764c262560d4b489e9f592b8.file.standard.tpl.php:167
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:194
+msgid "Gesamt"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/Partner/CustomerController.php:143
+msgid "Dieses Restaurant gibt es nicht!"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/Partner/CustomerController.php:152
+msgid "Unbekannter Fehler"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/Partner/CustomerController.php:158
+#, php-format
+msgid ""
+"Ihr Passwort wurde kürzlich zurückgesetzt. Bitte legen Sie über die Webseite "
+"http://%s/partner zuerst ihr eigenes Passwort fest"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/Partner/CustomerController.php:170
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:128
+msgid "Das Passwort ist falsch!"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/Partner/CustomerController.php:179
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:150
+msgid "Unbekannter Fehler!"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/Partner/OrderController.php:367
+msgid "Es wurde kein Fahrer für diese Bestellung angegeben"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/Partner/OrderController.php:403
+#, php-format
+msgid "Diese Bestellung ist schon vom Fahrer \"%s\" in der Auslieferung"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/Partner/OrderController.php:408
+msgid "Konnte Bestellung nicht finden"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Partner/Request/BillingController.php:38
+msgid "Der Rechungsversand wurde erfolgreich umgestellt."
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Partner/Request/BillingController.php:44
+msgid "Ein Fehler ist aufgetreten"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/CompanyController.php:1003
+msgid "Projektnummer"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/CompanyController.php:1004
+msgid "Kommentar"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:107
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:888
+msgid "Benutzerdaten sind fehlerhaft!"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:124
+msgid "Diesen Account gibt es nicht!"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:267
+msgid "BestellNr"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:268
+msgid "Kundenname"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:269
+msgid "Ort"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:274
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:351
+msgid "€"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:275
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:263
+msgid "Status"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:280
+msgid "Storno"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:281
+msgid "Bestätigt"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:282
+msgid "Alle"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:300
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/7a10a7343c6b45a973468bfac0e06d260c4f535a.file.nav.htm.php:25
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:162
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:158
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:157
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:156
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:156
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:185
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/3344144de372404510fd5ff2761bfe2b1701274a.file.faq.htm.php:156
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:157
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:202
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:219
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:229
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:248
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:258
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:156
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:156
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:156
+msgid "Bestellungen"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:301
+msgid "Als Webseite ansehen"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:302
+msgid "Als pdf speichern"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:302
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:286
+msgid "PDF"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:445
+msgid "Dienstleister Nr."
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:459
+msgid "Ihre Anfrage wurde erfolgreich versandt"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:462
+msgid "Ein Fehler ist aufgetreten!"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:521
+msgid "Email wurde erfolgreich gesetzt"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:524
+msgid "Email wurde erfolgreich geändert"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:529
+msgid ""
+"Ihre Email konnte nicht gesetzt werden. Bitte kontaktieren Sie unseren "
+"Support!"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:552
+msgid "Mobilnummer wurde erfolgreich gesetzt"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:555
+msgid "Mobilnummer wurde erfolgreich geändert"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:560
+msgid ""
+"Ihre Mobilnummer konnte nicht gesetzt werden. Bitte kontaktieren Sie unseren "
+"Support!"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:569
+msgid "Das alte Passwort ist nicht korrekt"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:590
+msgid "Passwort wurde erfolgreich geändert"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:602
+msgid "Ihre Einstellungen wurden gespeichert"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:631
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:263
+msgid "Extrazutaten"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:632
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:244
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Contact.php:21
+msgid "Öffnungszeiten"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:633
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:228
+msgid "Datenänderung"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:634
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:231
+msgid "Inhaberwechsel"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:635
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:234
+msgid "Kontodatenänderung"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:636
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:260
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Contact.php:21
+msgid "Kartenänderung"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:637
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:247
+msgid "Umbau - Umzug"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:638
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:337
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:250
+msgid "Liefergebiete"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:737
+msgid ""
+"Vielen Dank! Du kannst deine Email, Telefonnummer und das Passwort jederzeit "
+"unter \"Konto\" ändern."
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:740
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:787
+msgid ""
+"Ihre Daten konnten nicht gesetzt werden. Bitte kontaktieren Sie unseren "
+"Support!"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:784
+msgid "Vielen Dank! Ihr neues Passwort wurde gesetzt!"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:820
+msgid "Bitte geben Sie Ihre E-Mail oder Ihre Mobilnummer ein!"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:841
+msgid ""
+"Sie haben bereits ein Passwort angefordert! Bitte warten Sie bis zum "
+"nächsten Versuch!"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:891
+msgid "Diese Kundennummer wurde nicht gefunden!"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5a6496db10471cb8933f9649587acbbc6a8f56ad.file._base.htm.php:55
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:73
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/cfaf9a0c883d8a2f9f1dcb875f9e434008c94837.file.login.htm.php:61
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/cfaf9a0c883d8a2f9f1dcb875f9e434008c94837.file.login.htm.php:142
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:69
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:68
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:67
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:67
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/e95055c9b7ba40e20fa7ba3d7630f52b998b0955.file.requestpassword.htm.php:61
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/3344144de372404510fd5ff2761bfe2b1701274a.file.faq.htm.php:67
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:68
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:67
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:67
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:67
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/pyszne.pl/c9c50d5244bef65d088bad3589d1bd3bf4c5b7b7.file._base.htm.php:55
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/taxiresto.fr/8049ef03292306236e6b4497e3ce26a7dcd3162c.file._base.htm.php:55
+msgid "Partner-Konto"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5a6496db10471cb8933f9649587acbbc6a8f56ad.file._base.htm.php:89
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:107
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/cfaf9a0c883d8a2f9f1dcb875f9e434008c94837.file.login.htm.php:95
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:103
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:102
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:101
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:101
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/e95055c9b7ba40e20fa7ba3d7630f52b998b0955.file.requestpassword.htm.php:95
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/3344144de372404510fd5ff2761bfe2b1701274a.file.faq.htm.php:101
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:102
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:101
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:101
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:101
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/pyszne.pl/c9c50d5244bef65d088bad3589d1bd3bf4c5b7b7.file._base.htm.php:89
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/taxiresto.fr/8049ef03292306236e6b4497e3ce26a7dcd3162c.file._base.htm.php:89
+#, php-format
+msgid "Eingeloggt als: %s"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5a6496db10471cb8933f9649587acbbc6a8f56ad.file._base.htm.php:93
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:111
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/cfaf9a0c883d8a2f9f1dcb875f9e434008c94837.file.login.htm.php:99
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:107
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:106
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:105
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:105
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/e95055c9b7ba40e20fa7ba3d7630f52b998b0955.file.requestpassword.htm.php:99
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/3344144de372404510fd5ff2761bfe2b1701274a.file.faq.htm.php:105
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:106
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:105
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:105
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:105
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/pyszne.pl/c9c50d5244bef65d088bad3589d1bd3bf4c5b7b7.file._base.htm.php:93
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/taxiresto.fr/8049ef03292306236e6b4497e3ce26a7dcd3162c.file._base.htm.php:93
+msgid "Logout"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5a6496db10471cb8933f9649587acbbc6a8f56ad.file._base.htm.php:98
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:116
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/cfaf9a0c883d8a2f9f1dcb875f9e434008c94837.file.login.htm.php:104
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:112
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:111
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:110
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:110
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/e95055c9b7ba40e20fa7ba3d7630f52b998b0955.file.requestpassword.htm.php:104
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/3344144de372404510fd5ff2761bfe2b1701274a.file.faq.htm.php:110
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:111
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:110
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:110
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:110
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/pyszne.pl/c9c50d5244bef65d088bad3589d1bd3bf4c5b7b7.file._base.htm.php:98
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/taxiresto.fr/8049ef03292306236e6b4497e3ce26a7dcd3162c.file._base.htm.php:98
+msgid "Eine neue Bestellung ist eingetroffen!"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5a6496db10471cb8933f9649587acbbc6a8f56ad.file._base.htm.php:106
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:124
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/cfaf9a0c883d8a2f9f1dcb875f9e434008c94837.file.login.htm.php:112
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:120
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:119
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:118
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:118
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/e95055c9b7ba40e20fa7ba3d7630f52b998b0955.file.requestpassword.htm.php:112
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/3344144de372404510fd5ff2761bfe2b1701274a.file.faq.htm.php:118
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:119
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:118
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:118
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:118
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/pyszne.pl/c9c50d5244bef65d088bad3589d1bd3bf4c5b7b7.file._base.htm.php:106
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/taxiresto.fr/8049ef03292306236e6b4497e3ce26a7dcd3162c.file._base.htm.php:106
+#, php-format
+msgid "Bestellungen Heute: %s"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5a6496db10471cb8933f9649587acbbc6a8f56ad.file._base.htm.php:109
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:127
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/cfaf9a0c883d8a2f9f1dcb875f9e434008c94837.file.login.htm.php:115
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:123
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:122
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:121
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:121
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/e95055c9b7ba40e20fa7ba3d7630f52b998b0955.file.requestpassword.htm.php:115
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/3344144de372404510fd5ff2761bfe2b1701274a.file.faq.htm.php:121
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:122
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:121
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:121
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:121
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/pyszne.pl/c9c50d5244bef65d088bad3589d1bd3bf4c5b7b7.file._base.htm.php:109
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/taxiresto.fr/8049ef03292306236e6b4497e3ce26a7dcd3162c.file._base.htm.php:109
+#, php-format
+msgid "Bestellungen letzten 7 Tage: %s"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5a6496db10471cb8933f9649587acbbc6a8f56ad.file._base.htm.php:112
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:130
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/cfaf9a0c883d8a2f9f1dcb875f9e434008c94837.file.login.htm.php:118
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:126
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:125
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:124
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:124
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/e95055c9b7ba40e20fa7ba3d7630f52b998b0955.file.requestpassword.htm.php:118
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/3344144de372404510fd5ff2761bfe2b1701274a.file.faq.htm.php:124
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:125
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:124
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:124
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:124
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/pyszne.pl/c9c50d5244bef65d088bad3589d1bd3bf4c5b7b7.file._base.htm.php:112
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/taxiresto.fr/8049ef03292306236e6b4497e3ce26a7dcd3162c.file._base.htm.php:112
+#, php-format
+msgid "Bestellungen diese Woche: %s"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5a6496db10471cb8933f9649587acbbc6a8f56ad.file._base.htm.php:115
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:133
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/cfaf9a0c883d8a2f9f1dcb875f9e434008c94837.file.login.htm.php:121
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:129
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:128
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:127
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:127
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/e95055c9b7ba40e20fa7ba3d7630f52b998b0955.file.requestpassword.htm.php:121
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/3344144de372404510fd5ff2761bfe2b1701274a.file.faq.htm.php:127
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:128
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:127
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:127
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:127
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/pyszne.pl/c9c50d5244bef65d088bad3589d1bd3bf4c5b7b7.file._base.htm.php:115
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/taxiresto.fr/8049ef03292306236e6b4497e3ce26a7dcd3162c.file._base.htm.php:115
+#, php-format
+msgid "Bestellungen diesen Monat: %s"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5a6496db10471cb8933f9649587acbbc6a8f56ad.file._base.htm.php:118
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:136
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/cfaf9a0c883d8a2f9f1dcb875f9e434008c94837.file.login.htm.php:124
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:132
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:131
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:130
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:130
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/e95055c9b7ba40e20fa7ba3d7630f52b998b0955.file.requestpassword.htm.php:124
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/3344144de372404510fd5ff2761bfe2b1701274a.file.faq.htm.php:130
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:131
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:130
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:130
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:130
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/pyszne.pl/c9c50d5244bef65d088bad3589d1bd3bf4c5b7b7.file._base.htm.php:118
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/taxiresto.fr/8049ef03292306236e6b4497e3ce26a7dcd3162c.file._base.htm.php:118
+#, php-format
+msgid "Bestellungen letzter Monat: %s"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/7a10a7343c6b45a973468bfac0e06d260c4f535a.file.nav.htm.php:22
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:159
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:155
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:154
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:153
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:153
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/3344144de372404510fd5ff2761bfe2b1701274a.file.faq.htm.php:153
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:154
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:153
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:153
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:153
+msgid "Übersicht"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/7a10a7343c6b45a973468bfac0e06d260c4f535a.file.nav.htm.php:28
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:165
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:161
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:160
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:159
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:159
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/3344144de372404510fd5ff2761bfe2b1701274a.file.faq.htm.php:159
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:160
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:159
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:159
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:159
+msgid "Rechnungen"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/7a10a7343c6b45a973468bfac0e06d260c4f535a.file.nav.htm.php:31
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:168
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:164
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:163
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:162
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:162
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/3344144de372404510fd5ff2761bfe2b1701274a.file.faq.htm.php:162
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:163
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:162
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:162
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:162
+msgid "Statistiken"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/7a10a7343c6b45a973468bfac0e06d260c4f535a.file.nav.htm.php:34
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:171
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:167
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:166
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:165
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:165
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/3344144de372404510fd5ff2761bfe2b1701274a.file.faq.htm.php:165
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:166
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:165
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:165
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:165
+msgid "Faxvorlagen"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/7a10a7343c6b45a973468bfac0e06d260c4f535a.file.nav.htm.php:37
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:174
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:170
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:169
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:168
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:168
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/3344144de372404510fd5ff2761bfe2b1701274a.file.faq.htm.php:168
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:169
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:168
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:168
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:168
+msgid "Konto"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/7a10a7343c6b45a973468bfac0e06d260c4f535a.file.nav.htm.php:39
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:176
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:172
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:171
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:170
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:170
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/3344144de372404510fd5ff2761bfe2b1701274a.file.faq.htm.php:170
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:171
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:170
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:170
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:170
+msgid "Rabatte"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/7a10a7343c6b45a973468bfac0e06d260c4f535a.file.nav.htm.php:40
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:177
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:173
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:172
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:171
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:171
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/3344144de372404510fd5ff2761bfe2b1701274a.file.faq.htm.php:171
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:172
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:171
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:171
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:171
+msgid "bald verfügbar"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/7a10a7343c6b45a973468bfac0e06d260c4f535a.file.nav.htm.php:43
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:180
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:196
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:176
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:175
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/4271876a1a05fc7eada3d3b3728bf3a30d4a4989.file.contactlight.htm.php:31
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:174
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:174
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/3344144de372404510fd5ff2761bfe2b1701274a.file.faq.htm.php:174
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:175
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:174
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/fe824adf36f17fe609e26ff985320bc2d2e9cc85.file.contact_form.htm.php:22
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:174
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:174
+msgid "Kontakt"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/7a10a7343c6b45a973468bfac0e06d260c4f535a.file.nav.htm.php:46
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:183
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:179
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:178
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:177
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:177
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/3344144de372404510fd5ff2761bfe2b1701274a.file.faq.htm.php:177
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:178
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:177
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:177
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:177
+msgid "Hilfe"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:203
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/fe824adf36f17fe609e26ff985320bc2d2e9cc85.file.contact_form.htm.php:29
+msgid "Weitere Kontaktmöglichkeiten:"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:207
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/fe824adf36f17fe609e26ff985320bc2d2e9cc85.file.contact_form.htm.php:33
+msgid "Täglich zwischen 9 und 18 Uhr"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:209
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/fe824adf36f17fe609e26ff985320bc2d2e9cc85.file.contact_form.htm.php:35
+#, php-format
+msgid "Telefon: %s"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:211
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/fe824adf36f17fe609e26ff985320bc2d2e9cc85.file.contact_form.htm.php:37
+#, php-format
+msgid "Fax: %s"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:225
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:226
+msgid "Kontaktformular"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/cfaf9a0c883d8a2f9f1dcb875f9e434008c94837.file.login.htm.php:148
+msgid "Passwort vergessen?"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:186
+msgid "Restaurant Status:"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:187
+msgid "online"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:188
+msgid "offline"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:204
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:198
+msgid "Tel: "
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:208
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:202
+msgid "Fax: "
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:212
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:206
+msgid "Kontobesitzer: "
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:214
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:219
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:224
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:208
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:213
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:218
+msgid "unbekannt"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:217
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:211
+msgid "Kontonummer: "
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:222
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:216
+msgid "BLZ: "
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:231
+msgid "Reguläre Öffnungszeiten"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:234
+msgid "Sonntag"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:234
+msgid "Montag"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:234
+msgid "Dienstag"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:234
+msgid "Mittwoch"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:234
+msgid "Donnerstag"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:234
+msgid "Freitag"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:234
+msgid "Samstag"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:276
+msgid "geschlossen"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:283
+msgid "Feiertage"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:295
+msgid "nicht gesetzt"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:304
+msgid "Spezielle Öffnungszeiten"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:315
+msgid "%d.%m.%Y"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:320
+msgid "Geschlossen"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:330
+msgid "keine speziellen Öffnungszeiten eingetragen"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:339
+msgid "Mindestbestellwert"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:355
+msgid "keine Liefergebiete eingetragen"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:187
+msgid "Kontostand"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:194
+#, php-format
+msgid "Umsatz %s:"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:196
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:202
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:208
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:279
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:281
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:283
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:309
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:329
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:356
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:376
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:693
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:705
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:717
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:729
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:741
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:753
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:765
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:778
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:790
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:802
+#, php-format
+msgid "%s €"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:200
+#, php-format
+msgid "davon Bar gezahlt %s:"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:206
+#, php-format
+msgid "davon Online gezahlt %s:"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:214
+msgid "Übermittlung der Rechnungen"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:235
+#, php-format
+msgid "Rechnungsübersicht %s"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:257
+msgid "Zeitraum"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:259
+msgid "Rechnungsbetrag"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:261
+msgid "Gutschriftbetrag"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:265
+msgid "Typ"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:290
+msgid "keine Rechnungen vorhanden"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:186
+msgid "E-Mail-Adresse ändern"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:194
+msgid "Mobilnummer ändern"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:204
+msgid "Passwort ändern"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c2c3c3a360e9bde94e2c1395549f99d9d64a9866.file.account.htm.php:212
+msgid "Einstellungen"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:190
+msgid "nur heute"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:193
+msgid "diese Woche"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:196
+msgid "diesen Monat"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/008c0d3edb49ab242fa6720e6a2084416e15038c.file.orders.htm.php:199
+msgid "alle"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/e95055c9b7ba40e20fa7ba3d7630f52b998b0955.file.requestpassword.htm.php:141
+msgid "Passwort zurücksetzen"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/e95055c9b7ba40e20fa7ba3d7630f52b998b0955.file.requestpassword.htm.php:145
+msgid ""
+"Tragen Sie Ihre hinterlegte E-Mail-Adresse oder Handynummer ein, um Ihr "
+"Passwort zurückzusetzen. Wir schicken Ihnen dann ein neues Passwort zu."
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:188
+#, php-format
+msgid "Statistik des aktuellen Monats %s"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:198
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:215
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:225
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:244
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:254
+msgid "Umsatz"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:209
+msgid "Nach Zahlungsmittel"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:213
+msgid "Online"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:223
+msgid "Barzahlung"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:237
+msgid "Nach Plattform"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:241
+msgid "Auf"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:252
+msgid "Auf eigener Domain"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:410
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:619
+#, php-format
+msgid "Umsätze %s"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:430
+#, php-format
+msgid "Entwicklung der Umsätze %s in € pro Kalenderwoche"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:505
+#, php-format
+msgid "Entwicklung der Bestellungen %s pro Kalenderwoche"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:594
+#, php-format
+msgid "Übersicht %s"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:624
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:653
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:820
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:849
+#, php-format
+msgid "%s | Online Zahlung"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:628
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:657
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:824
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:853
+#, php-format
+msgid "%s | Bar Zahlung"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:632
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:661
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:828
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:857
+#, php-format
+msgid "%s | Gesamt"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:636
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:836
+msgid "Eigene Domain | Bar Zahlung"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:640
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:832
+msgid "Eigene Domain | Online Zahlung"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:644
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:840
+msgid "Eigene Domain | Gesamt"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:648
+msgid "Gesamtumsatz"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:815
+#, php-format
+msgid "Bestellungen %s"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:844
+msgid "Gesamtbestellungen"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:1010
+msgid "Kalenderwoche"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f963626e0e3760600a0af96657e0e480ef15fd2b.file.data.htm.php:185
+msgid "Daten"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/2c3baaaa9f585d75b088c71ebfc27651a97f0dee.file.resetpassword.htm.php:185
+msgid "Bitte ein neues Passwort eingeben"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:224
+msgid "Faxvorlagen zur Änderung meiner Daten:"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:240
+msgid "Faxvorlagen zur Änderung der Öffnungszeiten:"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:256
+msgid "Faxvorlagen zur Kartenänderung:"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Login.php:9
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Requestpassword.php:19
+msgid "Kundennummer"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Login.php:18
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Requestpassword.php:28
+msgid "Bitte geben Sie Ihre Kundennummer ein."
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Login.php:21
+msgid "Passwort"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Login.php:30
+msgid "Bitte geben Sie Ihr Passwort ein."
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Login.php:32
+msgid "Anmelden"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Requestpassword.php:33
+msgid "E-Mail"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Requestpassword.php:41
+msgid "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Requestpassword.php:44
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Mobile.php:18
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Data.php:24
+msgid "Mobilnummer"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Requestpassword.php:52
+msgid "Anfordern"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Contact.php:20
+msgid "Betreff"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Contact.php:21
+msgid "Bitte um Rückruf"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Contact.php:21
+msgid "Änderung meiner Daten"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Contact.php:21
+msgid "Sonstiges"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Contact.php:25
+msgid "Bitte wählen Sie den Betreff aus"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Contact.php:33
+msgid "Nachricht"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Contact.php:37
+msgid "Bitte geben Sie eine Nachricht ein"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Contact.php:46
+msgid "Anhang"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Contact.php:55
+msgid "Kontaktanfrage abschicken"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Mobile.php:20
+msgid "Bitte geben Sie eine Mobilnummer ein."
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Mobile.php:24
+msgid "Neue Mobilnummer wiederholen"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Mobile.php:28
+msgid "Bitte bestätigen Sie Ihre Mobilnummer."
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Mobile.php:32
+msgid "Die Mobilnummern stimmen nicht überein."
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Mobile.php:43
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Email.php:42
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Config.php:31
+msgid "Ändern"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Email.php:19
+msgid "E-Mail-Adresse"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Email.php:23
+msgid "Neue E-Mail-Adresse wiederholen"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Email.php:27
+msgid "Bitte bestätigen Sie Ihre E-Mail-Adresse."
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Email.php:31
+msgid "Die E-Mail-Adressen stimmen nicht überein."
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Config.php:14
+msgid "Benachrichtigung bei neuer Bestellung"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Config.php:20
+msgid "Sound an"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Data.php:20
+msgid "Email"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Data.php:28
+msgid "Speichern"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Billing/Deliver.php:16
+msgid "E-Mail und Partner-Konto (gratis)"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Billing/Deliver.php:22
+msgid "Fax (2,50 € pro Rechung)"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Billing/Deliver.php:28
+msgid "Post (6 € pro Rechnung)"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Administration/Service/Edit.php:196
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Administration/Service/Create.php:283
+#, php-format
+msgid "%s Lieferservice %s %s, %s bestellen"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Administration/Service/Edit.php:206
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Administration/Service/Create.php:293
+#, php-format
+msgid ""
+"%s Lieferservice %s %s essen bestellen Kreditkarte bargeldlos Heimservice "
+"Bringdienst"
+msgstr ""
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Administration/Service/Edit.php:216
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Administration/Service/Create.php:303
+#, php-format
+msgid ""
+"%s %s Lieferservice %s im Überblick. Alle Informationen auf einen Blick. "
+"Bequem %s bestellen, bargeldlos zahlen bei %s."
+msgstr ""

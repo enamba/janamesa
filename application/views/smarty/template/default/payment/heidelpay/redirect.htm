@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script type="text/javascript" src="/media/javascript/library/jquery/1.7/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("form").submit();
+            });
+        </script>
+    </head>
+    <body>
+        <div>
+            <p>{__("Wenn Du nicht automatisch weitergeleitet wirst klick bitte auf senden.")}</p>
+            
+            <form action="{$url}" method="post">
+                {foreach from=$params item=value key=name}
+                <input type="hidden" name="{$name}" value="{$value}" />
+                {/foreach}
+                
+                <input type="submit" value="{__('Senden')}" />
+            </form>
+        </div>
+    </body>
+</html>

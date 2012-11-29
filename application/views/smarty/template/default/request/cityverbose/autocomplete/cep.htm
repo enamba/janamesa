@@ -1,0 +1,42 @@
+<div class="yd-dialogs cep">
+    <a class="yd-dialogs-close"></a>
+    <div class="yd-dialogs-head"><h2>CEP Autocomplete</h2></div>
+    <div class="yd-dialogs-body">
+        <form id="ym-start-order-form">
+            <ul>
+                <li class="br-col-1">
+                	<label for="br-estado">Estado</label>              
+                    <select name="estado" id="br-estado" class="select-sb">
+                        <option>SP</option>
+                    </select>
+                </li>
+                <li class="br-col-2">
+                    <label for="br-cidade">Cidade</label>
+                    <select name="cidade" id="br-cidade" class="select-sb">
+                        {foreach from=$cidades item=cidade}
+                        <option {if $cidade.city == 'São Paulo'}selected="selected"{/if}>{$cidade.city}</option>
+                        {/foreach}
+                    </select>
+                </li>
+                <li class="br-col-1">
+                    <label for="br-endereco">Endereço</label>              
+                    <select name="endereco" id="br-endereco" class="select-sb">
+                        {foreach from=$enderecos item=endereco}
+                        <option {if $endereco.tp_street == 'Rua'}selected="selected"{/if}>{$endereco.tp_street}</option>
+                        {/foreach}
+                    </select>
+                </li>
+                <li class="br-col-2"><label></label><input type="text" name="logradouro" id="br-logradouro" /></li>
+                <li class="br-results"></li>
+                <li class="br-submit">
+                    <input class="button" type="submit" value="OK" id="ym-start-order" />
+                    <img src="{$domain_static}/images/ajax-loader-16-white.gif" class="hidden" id="br-results-loading" />
+                </li>
+            </ul>
+
+            <input type="hidden" name="process" value="{$process}" />
+        </form>
+
+    </div>
+
+</div>

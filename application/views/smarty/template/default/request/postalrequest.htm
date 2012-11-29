@@ -1,0 +1,20 @@
+
+<div class="yd-dialogs" style="width: 700px; left: 50%; margin-left: -350px;"><a class="yd-dialogs-close"></a>
+
+    <div class="yd-dialogs-head">
+        <h2>{__('Gib jetzt Deine Postleitzahl ein')}</h2>
+    </div>
+
+    <div class="yd-dialogs-body yd-dialogs-postalrequest">
+
+        {include file="order/_includes/error.htm"}
+        <form name="plzAutocomplete" id="yd-start-order-form" method="get" action="/order_basis/plz">
+            <strong>{__('Bestelle bei Deinem Lieblingslieferservice in Deiner Umgebung!')}</strong>
+            <input type="hidden" name="cityId" value="" />
+            <input id="yd-plz-search" class="yd-only-nr yd-empty-text" type="text" name="plz" value="" title="Postleitzahl" />
+            <a id="yd-start-order" name="yd-start-order" href="">{__('weiter')}</a>
+        </form>
+
+    </div>
+
+</div>

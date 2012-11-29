@@ -1,0 +1,70 @@
+{extends file='user/_base.htm'}
+
+{block name="content"}
+
+<div class="yd-profile yd-clearfix">
+
+    {include file='user/_header.htm' active=7 active_title=__('Soziale Netzwerke')}
+
+    <div class="yd-profile-body">
+        {if $cust->getFacebookId()}
+        <form action="/user/socialnetworks" class="yd-profile-form yd-clearfix fm yd-validation yd-profile-social" method="post" id="yd-user-settings-form" enctype="multipart/form-data">
+
+            <h2>{__('Deine aktuellen Facebook-Einstellungen:')}</h2>
+
+            <table>
+                <tr>
+                    <td>
+                        <label for="facebookId"><div class="facebookIcon"></div>{__('Account mit Facebook verbunden')}:</label>&nbsp;&nbsp;
+                        <input type="checkbox" value="1" id="facebookId" name="facebookId" checked="checked" />
+                        <div id="yd-lang-confirm-facebook-id-delete" class="hidden">
+                            {__('Bist Du Dir sicher, dass Du Deinen Account von Facebook trennen möchtest?\nDu verlierst die 15 Treuepunkte, die Du zur Verknüpfung bekommen hast.')}{if !$cust->getPassword()}
+                            {__('Bitte gib Dir im nächsten Schritt ein Passwort, um lieferando.de weiter nutzen zu können.')}{/if}
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <label for="facebookPost">{__('Meine Bestellungen auf meiner Pinnwand posten')}:</label>&nbsp;&nbsp;
+                            <input type="checkbox" value="1" id="facebookPost" name="facebookPost" {if $cust->getFacebookPost()}checked="checked"{/if} />
+                            <div id="yd-lang-confirm-facebook-post-delete" class="hidden">{__('Bist Du Dir sicher, dass Du keine Posts mehr senden möchtest?')}</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="hover">
+                            <a>{__('Vorschau')}</a>
+                            <div class="muster">
+                                <strong>{__('So sieht Dein Post auf Facebook aus:')}</strong>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+        {else}
+        <div class="yd-profile-social">
+
+            <h2>{__('Dein %s-Account ist noch nicht mit Facebook verbunden.', $config->domain->base)}</h2>
+
+            <a class="yd-facebook-login" id="fb-connect">{__('Mit Facebook verbinden')}</a>
+
+            <ul>
+                <li>
+                    {__('Teile Deinen Freunden mit, was Du bestellst! Sieh, was sie bestellen!')}
+                </li>
+                <li>
+                    {__('Erhalte 15 Treuepunkte für die Verknüpfung Deines Facebook-Profils mit %s!', $config->domain->base)}
+                </li>
+                <li>
+                    {__('Bestell Essen mit Deinem Facebook-Account!')}
+                </li>
+            </ul>
+            <br />
+
+            <h3>{__("Noch Fragen zum Facebook-Login?")} <a href=\"/faq#facebook\"> {__("Dann klicke hier!")}</a></h3>
+
+        </div>
+        {/if}
+    </div>
+</div>
+{/block}

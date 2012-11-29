@@ -1,0 +1,32 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <a href="/administration_seo_links/crawler">{__b('Zurück')}</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">{__b('schlechtes Wording')}</div>
+            <div class="item-content">
+                <table>
+                    {foreach from=$links item=link}
+                    <tr>
+                        <td>{$link.0}: </td>
+                        <td><a href="http://{$link.1->getAbsoluteUrl()}" target="_blank">{$link.1->getAbsoluteUrl()}</a></td>
+                    </tr>
+                    {foreachelse}
+                    <tr>
+                        <td>{__b('Alles klar')}</td>
+                    </tr>
+                    {/foreach}
+                </table>
+            </div>
+        </div>
+    </div>
+
+{/block}

@@ -1,0 +1,55 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<form action="/administration_adminrights/creategroup" method="post">
+    <input type="hidden" id="yd_editgroup_rescount" value="{count($resources)}"/>
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" />
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+                {__b("Neue Gruppe für Zugangsrechte")}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="20%"><b>{__b("Name")}</b></td>
+                            <td width="80%"><input type="text" name="name" class="rund_set text" value="{$p.name}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><b>{__b("Resourcen")}</b></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input value="1" type="checkbox" class="yd_editgroup_selectall" name="select_all"/><b>{__b(" check/uncheck all")}</b>
+                            </td>
+                        </tr>
+                        {foreach from=$resources item=rc}
+                        <tr>
+                            <td colspan="2">
+                                <input value="1" type="checkbox" class="yd_resource" id="yd_resource_{$rc.id}" name="resource{$rc.id}"/> {$rc.action}
+                            </td>
+                        </tr>
+                        {/foreach}
+                        <tr>
+                            <td colspan="2">
+                                <input value="1" type="checkbox" class="yd_editgroup_selectall"  name="select_all"/><b>{__b(" check/uncheck all")}</b>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" />
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+</form>
+{/block}

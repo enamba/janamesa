@@ -1,0 +1,28 @@
+{extends file='partner/_base.htm'}
+{block name="content"}
+
+{include file='partner/_includes/nav.htm'}
+
+<div class="be-partner be-partner-data">
+
+    <h1 class="icon05">{__p('Daten')}</h1>
+    
+    <table>
+        <tr>
+            <td style="vertical-align: top;">
+                Hallo {$restaurant->getName()},<br/><br/>
+                Falls Dein Passwort mal verloren geht,<br/>
+                können wir es Dir per Email oder auch<br/>
+                per SMS schicken.    
+            </td> 
+            <td>
+                <img src="{$restaurant->getImg()}" alt="" />
+            </td> 
+        </tr>
+    </table>
+
+    {$form}
+    
+</div>
+
+{/block}

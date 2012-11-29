@@ -1,0 +1,112 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/company/edit/_navigation.htm'}
+
+<div id="yd-admin-backend-wait" style="display:none;"><img src="{$domain_static}/images/yd-backend/yd-back-load.gif" /></div>
+
+<form action="/administration_company_edit/index/companyid/{$company->getId()}" method="post" class="yd-form-toggle">
+
+    <div class="be-2-column">
+        <div class="be-box">
+            <h2>{__b('Allgemein ')}<a class="yd-form-toggle">{__b('bearbeiten')}</a></h2>
+            <div class="be-box-in yd-form1">
+                <label>{__b('Name *')}</label>
+                <input type="text" name="name" value="{$company->getName()}"/>
+                <hr />
+                <label>{__b('Status')}</label>
+                <select name="status">
+                    <option value="1" {if ($company->getStatus() == '1')}selected="selected"{/if}>{__b('aktiviert')}</option>
+                    <option value="0" {if ($company->getStatus() == '0')}selected="selected"{/if}>{__b('deaktiviert')}</option>
+                </select>
+                <hr />
+                <label>{__b('Branche')}</label>
+                <input type="text" name="industry" value="{$company->getIndustry()}" />
+                <hr />
+                <label>{__b('Webseite')}</label>
+                <input type="text" name="website" value="{$company->getWebsite()}" />
+                <hr />
+                <label>{__b('AGB akzeptiert')}</label>
+                <input type="checkbox" id="agb" value="1" name="agb" {if $company->getAgb()==1}checked{/if} />
+            </div>
+        </div>
+        <div class="be-box">
+            <h2>{__b('Zahlungsinformationen ')}<a class="yd-form-toggle">{__b('bearbeiten')}</a></h2>
+            <div class="be-box-in yd-form1">
+                <label>{__b('Kontobesitzer')}</label>
+                <input type="text" name="ktoName" value="{$company->getKtoName()}" class="rund_set text"/>
+                <hr />
+                <label>{__b('Kontonummer')}</label>
+                <input type="text" name="ktoNr" value="{$company->getKtoNr()}" class="rund_set text"/>
+                <hr />
+                <label>{__b('BLZ')}</label>
+                <input type="text" name="ktoBlz" value="{$company->getKtoBlz()}" class="rund_set text"/>
+                <hr />
+                <label>{__b('Steuernummer')}</label>
+                <input type="text" name="steuerNr" value="{$company->getSteuerNr()}" class="rund_set text"/>
+                <hr />
+                <label>{__b('Akzeptiert Lastschrift')}</label>
+                <input type="checkbox" name="debit" value="1" {if $company->getDebit()==1}checked{/if} class="rund_set text"/>
+                       <hr />
+                <label>{__b('Rechnungsintervall')}</label>
+                <select name="billInterval">
+                    <option value="0">{__b('Monatlich')}</option>
+                    <option value="1" {if ($company->getBillInterval() == '1')}selected="selected"{/if}>{__b('Alle 2 Wochen')}</option>
+                    <option value="2" {if ($company->getBillInterval() == '2')}selected="selected"{/if}>{__b('Täglich')}</option>
+                    <option value="3" {if ($company->getBillInterval() == '3')}selected="selected"{/if}>{__b('pro Bestellung')}</option>
+                </select>
+                <hr />
+                <label>{__b('Rechnungsversand')}</label>
+                <select name="billDeliver" class="rund_set text">
+                    <option value="">{__b('Kein')}</option>
+                    <option value="fax" {if $company->getBillDeliver() == "fax"}selected="selected"{/if}>{__b('Faxgerät')}</option>
+                    <option value="email" {if $company->getBillDeliver() == "email"}selected="selected"{/if}>{__b('E-Mail')}</option>
+                    <option value="post" {if $company->getBillDeliver() == "post"}selected="selected"{/if}>{__b('Post')}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="be-2-column">
+        <div class="be-box">
+            <h2>{__b('Adressdaten ')}<a class="yd-form-toggle">{__b('bearbeiten')}</a></h2>
+            <div class="be-box-in yd-form1">
+                <label>{__b('Straße *')}</label>
+                <input type="text" name="street" class="rund_set text"  value="{$company->getStreet()}"/>
+                <hr />
+                <label>{__b('Haus-Nr. *')}</label>
+                <input type="text" name="hausnr" class="rund_set text"  value="{$company->getHausnr()}"/>
+                <hr />
+                <label>{__b('PLZ *')}</label>
+                {if strpos($config->domain->base, "janamesa")!==false}
+                    <input type="text" name="plz" value="{$company->getPlz()}" />
+                {else}
+                    {include file='administration/city_autocomplete.htm' city=$company->getCity()}
+                {/if}                
+                <hr />
+                <label>{__b('Hinweis')}</label>
+                <input type="text" name="comment" class="rund_set text"  value="{$company->getComment()}"/>
+                <hr />
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" />
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+
+    <div class="be-2-column">
+        <div class="be-box">
+            <h2>{__b('Rechnungen')}</h2>
+            <div class="be-box-in">
+                <a href='/administration_billing/company/CIDgrid/{$company->getId()}' target='_blank'>{__b('Alle Rechnungen von %s ansehen', $company->getName())}</a>
+            </div>
+        </div>
+        <div class="be-box">
+            <h2>{__b('Bestellungen')}</h2>
+            <div class="be-box-in">
+                <a href='/administration_order/index/type/view_grid_orders/Firmagrid/{$company->getName()}' target='_blank'>{__b('Alle Bestellungen von %s ansehen', $company->getName())}</a>
+            </div>
+        </div>
+    </div>
+
+</form>
+{/block}

@@ -1,0 +1,40 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{if 0}
+<form action="/administration_service/broadcastfax" method="post" enctype="multipart/form-data">
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Rundfax')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table>
+                        <tr>
+                            <td>{__b('Pdf Datei')}:</td>
+                            <td><input name="pdf" type="file" class="inp w160" id="pdf" />*</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Senden an')}:</td>
+                            <td>
+                                <input type="radio" checked id="send-to-active" value="0" name="sendto" />&nbsp;{__b('aktivierten')}
+                                <input type="radio" id="send-to-inactive" value="1" name="sendto" />&nbsp;{__b('deaktivierten')}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <input name="load_pdf" value="{__b('Senden')}" type="submit"  class="button"/>
+            </div>
+        </div>
+    </div>
+
+</form>
+{else}
+{__b('Deaktiviert')}
+{/if}
+{/block}    

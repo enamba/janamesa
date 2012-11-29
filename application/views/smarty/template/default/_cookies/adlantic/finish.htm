@@ -1,0 +1,16 @@
+{if $config->domain->base == 'lieferando.at'}
+<script type="text/javascript">
+    /*<![CDATA[*/
+    
+    var adlantic_basket = {
+        products: [
+            { identifier: {$service->getId()}, 
+               amount: {number_format(round(($order->getAbsTotal(false,false,true,false,false,false) + $order->getDeliverCost())/100,2), 2, '.', '')}, 
+               currency: "EUR", 
+               quantity: 1 }
+        ]
+    };
+            
+    /* ]]> */ 
+</script>
+{/if}

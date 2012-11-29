@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE reports SYSTEM "rep.dtd">
+<reports>
+	<job-ref-id>XR-b1a130b5-6f26-4183-a849-c46a11c2a95f-4CED0FA5684A3A9435CA</job-ref-id>
+	<reference>81524</reference>
+	<fax>
+		<job-id>XF4CED0FA5684A3A955F79</job-id>
+		<job-reference>81524-2</job-reference>
+		<fax-file-list>
+			<fax-file>
+				<file-name>compile_1290604451_6W7TbrfO.pdf</file-name>
+				<file-status>available</file-status>
+			</fax-file>
+		</fax-file-list>
+		<fax-options>
+			<resolution>low</resolution>
+			<csid>yourdelivery</csid>
+			<header>%0f    %d.%m.%Y %H:%M:%S    %C    %P/%T</header>
+			<blacklist>no</blacklist>
+			<express>yes</express>
+			<schedule>now</schedule>
+		</fax-options>
+		<distribution-list>
+			<fax-address>
+				<addr-id>XA4CED0FA5684A3A96F887</addr-id>
+				<fax-number>030 495 00 529</fax-number>
+				<status>SOMETHING ELSE THAN OK</status>
+				<remote-csid>0308513427</remote-csid>
+				<duration>50</duration>
+				<timestamp>2010-11-24-14.15.34</timestamp>
+			</fax-address>
+		</distribution-list>
+	</fax>
+</reports>

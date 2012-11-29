@@ -1,0 +1,44 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+    <ul class="be-tabs">
+        <li><a href="/administration_seo_links/">{__b('Zurück zur Übersicht')}</a></li>
+        <li><a href="/administration_seo_links/blacklist">{__b('Blacklist')}</a></li>
+        <li><a href="/administration_seo_links/crawling">{__b('Jetzt crawlen!')}</a></li>
+    </ul>
+
+    {foreach from=$links item=link}
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-head"><a href="http://{$link->getAbsoluteUrl()}" target="_blank">{$link->getAbsoluteUrl()}</a>: {__b('Ausgehende Links')} ({$link->linksTo})</div>
+            <div class="item-content">
+                <div style="height:150px;overflow-y:auto;">
+                    <ul>
+                    {foreach from=$link->getLinksTo() key=i item=l}
+                        <li style="margin:5px 0px 5px 0px;">
+                            {$i + 1}. <a href="http://{$l.url}" target="_blank">{$l.url}</a>
+                        </li>
+                    {/foreach}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-head">{__b('Eingehende Links')} ({$link->linksFrom})</div>
+            <div class="item-content">
+                <div style="height:150px;overflow-y:auto;">
+                    <ul>
+                    {foreach from=$link->getLinksFrom() key=i item=l}
+                        <li style="margin:5px 0px 5px 0px;">
+                            {$i + 1}. <a href="http://{$l.url}" target="_blank">{$l.url}</a>
+                        <li>
+                    {/foreach}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {/foreach}
+    
+{/block}

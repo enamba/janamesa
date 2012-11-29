@@ -1,0 +1,545 @@
+2012-06-19T03:59:44-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/login.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T03:59:44-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/login.htm 
+2012-06-19T04:06:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T04:06:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T04:06:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T04:13:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T04:13:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T04:13:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T05:43:01-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Run into error: Message: Method "_json" does not exist and was not trapped in __call()
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(17): Zend_Controller_Action->__call('_json', Array)
+#1 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(17): TestController->_json(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): TestController->testAction()
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('testAction')
+#4 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#5 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#6 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#7 /home/ydadmin/htdocs/lieferando/public/index.php(111): Zend_Application->run()
+#8 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-06-19T05:43:01-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/error.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T05:43:01-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/error.htm 
+2012-06-19T05:44:19-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Run into error: Message: Method "_json" does not exist and was not trapped in __call()
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(11): Zend_Controller_Action->__call('_json', Array)
+#1 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(11): TestController->_json(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): TestController->testAction()
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('testAction')
+#4 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#5 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#6 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#7 /home/ydadmin/htdocs/lieferando/public/index.php(111): Zend_Application->run()
+#8 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-06-19T05:44:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/error.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T05:44:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/error.htm 
+2012-06-19T05:44:50-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Run into error: Message: Method "_json" does not exist and was not trapped in __call()
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(11): Zend_Controller_Action->__call('_json', Array)
+#1 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(11): TestController->_json(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): TestController->testAction()
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('testAction')
+#4 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#5 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#6 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#7 /home/ydadmin/htdocs/lieferando/public/index.php(111): Zend_Application->run()
+#8 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-06-19T05:44:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/error.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T05:44:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/error.htm 
+2012-06-19T05:45:50-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Run into error: Message: Method "_json" does not exist and was not trapped in __call()
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(11): Zend_Controller_Action->__call('_json', Array)
+#1 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(11): TestController->_json(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): TestController->testAction()
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('testAction')
+#4 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#5 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#6 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#7 /home/ydadmin/htdocs/lieferando/public/index.php(111): Zend_Application->run()
+#8 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-06-19T05:45:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/error.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T05:45:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/error.htm 
+2012-06-19T05:47:13-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Run into error: Message: Method "_json" does not exist and was not trapped in __call()
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(11): Zend_Controller_Action->__call('_json', Array)
+#1 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(11): TestController->_json(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): TestController->testAction()
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('testAction')
+#4 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#5 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#6 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#7 /home/ydadmin/htdocs/lieferando/public/index.php(111): Zend_Application->run()
+#8 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-06-19T05:47:13-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/error.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T05:47:13-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/error.htm 
+2012-06-19T05:47:35-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Run into error: Message: Method "_json" does not exist and was not trapped in __call()
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(11): Zend_Controller_Action->__call('_json', Array)
+#1 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(11): TestController->_json(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): TestController->testAction()
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('testAction')
+#4 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#5 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#6 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#7 /home/ydadmin/htdocs/lieferando/public/index.php(111): Zend_Application->run()
+#8 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-06-19T05:47:35-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/error.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T05:47:35-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/error.htm 
+2012-06-19T05:52:04-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Run into error: Message: Method "_json" does not exist and was not trapped in __call()
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(11): Zend_Controller_Action->__call('_json', Array)
+#1 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(11): TestController->_json(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): TestController->testAction()
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('testAction')
+#4 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#5 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#6 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#7 /home/ydadmin/htdocs/lieferando/public/index.php(111): Zend_Application->run()
+#8 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-06-19T05:52:04-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/error.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T05:52:04-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/error.htm 
+2012-06-19T05:57:15-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Run into error: Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')= 0, CONCAT(c.plz, ' ', c.city), CONCAT(c.plz, ' ', parent.city, ' (', c.city, ' at line 1
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Select.php(686): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select))
+#4 /home/ydadmin/htdocs/lieferando/application/models/Autocomplete.php(43): Zend_Db_Select->query()
+#5 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(10): Yourdelivery_Model_Autocomplete::plz(0, 10)
+#6 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): TestController->testAction()
+#7 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('testAction')
+#8 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#9 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#10 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#11 /home/ydadmin/htdocs/lieferando/public/index.php(111): Zend_Application->run()
+#12 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-06-19T05:57:15-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/error.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T05:57:15-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/error.htm 
+2012-06-19T05:59:45-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Run into error: Message: Method "_json" does not exist and was not trapped in __call()
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(11): Zend_Controller_Action->__call('_json', Array)
+#1 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(11): TestController->_json(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): TestController->testAction()
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('testAction')
+#4 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#5 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#6 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#7 /home/ydadmin/htdocs/lieferando/public/index.php(111): Zend_Application->run()
+#8 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-06-19T05:59:45-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/error.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T05:59:45-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/error.htm 
+2012-06-19T06:03:12-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T06:03:12-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-06-19T06:03:13-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-06-19T06:27:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/login.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T06:27:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/login.htm 
+2012-06-19T06:30:15-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T06:30:15-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-06-19T06:30:15-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-06-19T06:30:23-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T06:30:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T06:30:25-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T06:33:06-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/serviceinfo.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T06:33:06-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-06-19T06:33:06-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/77.html 
+2012-06-19T06:35:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T06:35:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-06-19T06:35:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-06-19T06:42:01-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/serviceinfo.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T06:42:01-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-06-19T06:42:01-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/77.html 
+2012-06-19T06:42:16-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T06:42:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T06:42:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T06:44:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T06:44:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-06-19T06:44:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-06-19T07:01:33-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T07:01:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T07:01:35-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T07:02:55-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T07:02:55-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T07:02:57-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T07:05:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T07:05:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T07:05:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T07:05:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/service/preorder.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T07:05:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/service/preorder.htm 
+2012-06-19T07:05:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_service/preorder/type/rest.html 
+2012-06-19T07:09:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T07:09:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-06-19T07:09:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-06-19T07:11:40-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T07:11:40-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T07:11:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T07:14:04-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T07:14:04-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T07:14:06-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T07:14:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T07:14:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T07:14:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T07:34:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T07:34:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T07:34:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T09:26:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T09:26:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T09:26:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T09:27:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T09:27:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T09:27:45-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T09:28:25-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T09:28:25-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T09:28:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T09:29:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T09:29:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T09:30:00-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T09:31:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T09:31:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T09:31:37-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T09:31:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T09:31:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T09:32:00-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T09:32:37-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T09:32:37-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-06-19T09:32:37-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-06-19T09:38:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T09:38:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T09:38:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T09:41:45-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T09:41:45-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T09:41:46-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T09:46:44-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/service/preorder.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T09:46:44-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/service/preorder.htm 
+2012-06-19T09:46:44-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_service/preorder/type/rest.html 
+2012-06-19T10:07:04-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T10:07:04-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T10:07:06-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T10:09:20-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T10:09:20-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T10:09:22-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T10:10:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T10:10:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T10:10:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T10:11:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T10:11:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T10:11:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T10:12:45-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T10:12:45-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T10:12:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T10:13:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T10:13:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T10:13:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T10:14:59-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T10:14:59-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T10:15:01-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T10:19:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T10:19:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T10:19:44-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T10:24:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T10:24:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-06-19T10:24:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-06-19T10:25:15-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T10:25:15-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T10:25:17-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T10:38:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T10:38:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T10:38:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T10:44:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T10:44:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T10:44:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T10:46:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T10:46:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T10:46:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T10:54:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T10:54:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T10:54:29-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T10:56:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T10:56:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T10:56:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T11:00:12-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T11:00:12-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T11:00:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T11:01:27-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T11:01:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T11:01:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T11:02:09-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T11:02:09-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T11:02:11-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T11:02:17-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/serviceinfo.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T11:02:17-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-06-19T11:02:17-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/111.html 
+2012-06-19T11:02:40-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T11:02:40-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T11:02:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T11:02:49-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PAGE NOT FOUND: /servico-de-entrega-sao-paulo #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-06-19T11:02:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/notfound.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T11:02:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/notfound.htm 
+2012-06-19T11:02:59-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T11:02:59-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-06-19T11:03:00-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-06-19T11:04:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T11:04:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T11:04:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T11:04:54-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T11:04:54-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T11:04:55-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T11:05:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T11:05:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-06-19T11:05:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-06-19T11:05:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T11:05:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T11:05:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T11:26:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T11:26:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T11:26:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T11:29:40-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T11:29:40-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-06-19T11:29:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-06-19T11:29:46-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T11:29:46-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T11:29:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T11:29:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/serviceinfo.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T11:29:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-06-19T11:29:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/207.html 
+2012-06-19T11:32:37-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PAGE NOT FOUND: /servico-de-entega-bio-menu #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-06-19T11:32:37-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/notfound.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T11:32:37-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/notfound.htm 
+2012-06-19T11:36:37-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T11:36:37-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T11:36:39-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T11:39:13-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T11:39:13-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T11:39:15-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T11:59:00-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T11:59:00-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T11:59:02-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T12:28:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T12:28:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T12:28:44-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T12:35:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T12:35:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T12:35:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T14:03:05-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:03:05-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T14:03:07-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T14:03:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:03:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T14:03:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T14:04:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:04:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T14:04:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T14:05:05-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:05:05-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T14:05:07-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T14:07:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:07:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T14:07:35-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T14:09:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:09:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T14:09:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T14:10:12-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:10:12-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T14:10:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T14:11:13-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:11:13-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T14:11:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T14:12:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:12:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T14:12:54-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T14:14:37-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:14:37-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T14:14:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T14:15:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:15:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T14:15:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T14:16:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:16:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-06-19T14:17:00-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-bio-menu-sao-paulo.html 
+2012-06-19T14:17:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:17:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-06-19T14:17:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-06-19T14:17:37-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T14:17:37-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T14:17:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T14:17:39-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/serviceinfo.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:17:39-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-06-19T14:17:39-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/288.html 
+2012-06-19T14:19:09-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T14:19:09-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T14:19:11-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T14:19:49-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T14:19:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T14:19:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T14:20:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/serviceinfo.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:20:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-06-19T14:20:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/66.html 
+2012-06-19T14:20:25-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T14:20:25-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T14:20:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T14:22:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/serviceinfo.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:22:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-06-19T14:22:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/66.html 
+2012-06-19T14:22:24-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T14:22:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T14:22:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T14:25:24-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T14:25:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T14:25:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T14:25:54-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/serviceinfo.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:25:54-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-06-19T14:25:54-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/66.html 
+2012-06-19T14:25:56-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T14:25:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T14:25:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T14:27:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/serviceinfo.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:27:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-06-19T14:27:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/111.html 
+2012-06-19T14:27:21-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T14:27:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T14:27:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T14:28:02-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T14:28:02-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T14:28:02-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/serviceinfo.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:28:02-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-06-19T14:28:02-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/66.html 
+2012-06-19T14:28:04-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T14:28:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/serviceinfo.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:28:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-06-19T14:28:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/66.html 
+2012-06-19T14:28:36-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T14:28:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T14:28:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T14:29:46-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T14:29:46-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T14:29:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 
+2012-06-19T14:29:57-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/serviceinfo.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-19T14:29:57-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-06-19T14:29:57-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/66.html 
+2012-06-19T14:30:12-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 20 online and 3 offline services in #23261 
+2012-06-19T14:30:12-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-06-19T14:30:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01305-000.html 

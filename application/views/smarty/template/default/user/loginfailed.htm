@@ -1,0 +1,34 @@
+{extends file='base.htm'}
+{block name="content"}
+
+<div class="yd-login-failed yd-box">
+
+    <strong>{__('Ungültige E-Mail / Passwort Kombination')}</strong>
+    <p>{__('Unsere Passwörter beachten die Groß- und Kleinschreibung. Bitte überprüfe auch die Shifttaste/Feststelltaste.')}</p>
+    
+    <form class="fo" action="/user/login" method="post" name="login" >
+        <input type="hidden" name="login" value="1" />
+        <ul>
+            <li>
+                <a class="yd-facebook-login" id="fb-login">{__('Mit Facebook anmelden')}</a>
+            </li>
+            <li>
+                <label>{__('E-Mail-Adresse:')}</label>
+                <input id="email" type="text" value="" name="user" />
+            </li>
+            <li>
+                <label>{__('Passwort:')}</label>
+                <input id="pass" type="password" value="" name="pass" />
+            </li>
+            <li>
+                <input class="yd-button-280" type="submit" value="{__('Einloggen')}" />
+            </li>
+            <li>
+                <a class="yd-forgotten-pass">{__('Passwort vergessen?')}</a>
+            </li>
+        </ul>
+    </form>
+
+</div>
+
+{/block}

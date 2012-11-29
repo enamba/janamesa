@@ -1,0 +1,106 @@
+{* THIS IS THE COMPANY ORDERING TEMPLATE FOR A SINGLE CUSTOMER *}
+
+{extends file='base.htm'}
+
+{block name="content"}
+
+    <div id="yd-sidebar">
+        {include file="order/_includes/sidebar/budget.htm"}
+        {include file="order/_includes/sidebar/lastorder.htm"}
+        {include file="order/_includes/sidebar/favorites.htm"}
+        {include file="order/_includes/sidebar/payment.htm"}
+    </div>
+
+    <div id="yd-ordering">
+
+        <div class="yd-box">
+
+            <div class="yd-bigbox-head">
+                {__('Account wählen')}
+            </div>
+
+            <div class="yd-bigbox-body yd-clearfix">
+                <a href="/order_private/start" id="nav_order_01" class="yd-account-priv yd-set-kind-priv">
+                    {__('Privataccount')}
+                </a>
+                <a id="nav_order_02" class="yd-account-comp yd-set-kind-comp active">
+                    {__('Firmenaccount')}<br />
+                    <i>{$cust->getCompany()->getName()|truncate:20:" ...":true}</i>
+                </a>
+            </div>
+
+        </div>
+
+        {if $cust->getCurrentBudget() > 0 || $cust->allowCater() || $cust->allowGreat()}
+
+            <div class="yd-box">
+
+                <div class="yd-bigbox-head">
+                    {__('Lieferadresse wählen')}
+
+                    <br />
+                    {if $cust->isCompanyAdmin()}
+                        <a class="yd-add-caddress yd-start-adress-icon">{__('Adresse hinzufügen')}</a>
+                    {/if}
+                </div>
+
+                <div class="yd-bigbox-body">
+                    {assign var=temp value=1}
+                    
+                    {if $cust->getCompanyLocations()->count() == 0}
+                        <a class="cursor yd-adress yd-add-caddress">{__('Noch keine Adressen eingetragen.')}</a>
+                    {else}
+                        {include file="order/_includes/start/company_address.htm"}
+                    {/if}
+                </div>
+            </div>
+
+            <a class="yd-button-280" id="yd-start-order-from-address" href="#" style="margin: 0 auto;">{__('Bestellung jetzt starten')}</a>
+        {else}
+            <div class="yd-box">
+                <div class="yd-bigbox-head">
+                    {__('Information')}
+                </div>
+
+                <div class="yd-bigbox-body">
+                    <ul>
+                        <li>{__('Du hast zur Zeit kein Budget oder Bestellrechte und kannst daher <b>keine</b> Firmenbestellung bei einem Bringdienst durchführen. <br /><br />Deine Budgetzeiten sind wie folgt:')}<br /><br /></li>
+                    </ul>
+                    <ul>
+                        {if $cust->getBudget()}
+                            {foreach key=key from=$cust->getBudget()->getBudgetTimes() item=times}
+                                {foreach from=$times item=ab}
+                                    <li>{__('%s €',$ab.amount|inttoprice)} {__('am')} {$key|date_weekday} {__('von')} {$ab.from|date_format:'%H:%M'} {__('bis')} {$ab.until|date_format:'%H:%M'} {__('Uhr')}<br /><br /></li>
+                                {/foreach}
+                            {foreachelse}
+                                <li><strong>{__('Keine Budgetzeiten für Deine Gruppe eingetragen!')}</strong></li>
+                            {/foreach}
+                        {else}
+                            <li><strong>{__('Du bist keiner Budgetgruppe zugeordnet!')}</strong></li>
+                        {/if}
+                        
+                        <li>
+                            <strong>
+                            {if !$cust->allowCater()}
+                                {__('Du hast keine Rechte eine Cateringbestellung für deine Firma zu starten')}
+                            {/if}
+                            </strong>
+                        </li>
+                        
+                        <li>
+                            <strong>
+                            {if !$cust->allowGreat()}
+                                {__('Du hast keine Rechte eine Großhandelbestellung für deine Firma zu starten')}
+                            {/if}
+                            </strong>
+                        </li>
+                        
+                        <li><a href="/order_private/start">« {__('Hier klicken und eine private Bestellung aufgeben')}</a></li>
+                    </ul>
+                </div>
+            </div>
+        {/if}
+
+    </div>
+
+{/block}

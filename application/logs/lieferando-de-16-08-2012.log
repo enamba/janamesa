@@ -1,0 +1,231 @@
+2012-08-16T04:54:46-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template index/index.htm 
+2012-08-16T04:54:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-08-16T04:54:52-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 57 online and 5 offline services in #19943 
+2012-08-16T04:54:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/service.htm 
+2012-08-16T04:54:53-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 57 online and 5 offline services in #19943 
+2012-08-16T04:54:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/service.htm 
+2012-08-16T04:55:07-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/lieferservice-berlin-baumschulenweg-12437.html 
+2012-08-16T04:59:18-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 129 online and 12 offline services in #644 
+2012-08-16T04:59:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/service.htm 
+2012-08-16T04:59:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/lieferservice-berlin-10115.html 
+2012-08-16T05:04:33-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing customer #258467 Jens Naie already a facebook user - facebookId 690363597 
+2012-08-16T05:04:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing updating model Default_Model_Base #258467 with modified data :: Array(    [title] => Herr/Frau    [name] => Naie    [prename] => Jens    [email] => jonz@kybernaut.de    [password] =>     [lang] => de    [sex] => m    [tel] =>     [privmail] =>     [autologin] => 0    [start] => 1    [lastlogin] => 2012-08-15 12:51:19    [countLogin] => 19    [deleted] => 0    [permanentDiscountId] =>     [ktoName] =>     [ktoNr] =>     [ktoBlz] =>     [updated] => 2012-08-16 05:04:33    [birthday] => 1971-09-03    [source] =>     [addition] =>     [facebookId] => 690363597    [facebookPost] => 1    [profileImage] => 1344438876.jpg    [nickname] =>     [whitelist] => 0    [anrede] => Herr) 
+2012-08-16T05:04:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing updating model Default_Model_Base #258467 with modified data :: Array(    [title] => Herr/Frau    [name] => Naie    [prename] => Jens    [email] => jonz@kybernaut.de    [password] =>     [lang] => de    [sex] => m    [tel] =>     [privmail] =>     [autologin] => 0    [start] => 1    [lastlogin] => 2012-08-16 05:04:33    [countLogin] => 20    [deleted] => 0    [permanentDiscountId] =>     [ktoName] =>     [ktoNr] =>     [ktoBlz] =>     [updated] => 2012-08-16 05:04:33    [birthday] => 1971-09-03    [source] =>     [addition] =>     [facebookId] => 690363597    [facebookPost] => 1    [profileImage] => 1344438876.jpg    [nickname] =>     [whitelist] => 0    [anrede] => Herr) 
+2012-08-16T05:04:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PIWIK: tracking customer variable customerId at value 258467 
+2012-08-16T05:04:33-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing User  successfully logged in 
+2012-08-16T05:04:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PIWIK: tracking customer variable customerId at value 258467 
+2012-08-16T05:04:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/settings.htm 
+2012-08-16T05:09:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CUSTOMER FIDELITY - cache cleared for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-08-16T05:09:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CUSTOMER FIDELITY - cache cleared for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-08-16T05:09:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CUSTOMER FIDELITY - cache cleared for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-08-16T05:09:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CUSTOMER - Cache cleared for limit 1 id: rated_5_0customer258467 
+2012-08-16T05:09:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CUSTOMER - Cache cleared for limit 1 id: rated_10_0customer258467 
+2012-08-16T05:09:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CUSTOMER - Cache cleared for limit 1 id: rated_25_0customer258467 
+2012-08-16T05:09:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CUSTOMER - Cache cleared for limit 1 id: rated_50_0customer258467 
+2012-08-16T05:09:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CUSTOMER - Cache cleared for limit 1 id: rated_100_0customer258467 
+2012-08-16T05:09:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CUSTOMER - Cache cleared for limit 1 id: unrated_5_0customer258467 
+2012-08-16T05:09:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CUSTOMER - Cache cleared for limit 1 id: unrated_10_0customer258467 
+2012-08-16T05:09:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CUSTOMER - Cache cleared for limit 1 id: unrated_25_0customer258467 
+2012-08-16T05:09:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CUSTOMER - Cache cleared for limit 1 id: unrated_50_0customer258467 
+2012-08-16T05:09:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CUSTOMER - Cache cleared for limit 1 id: unrated_100_0customer258467 
+2012-08-16T05:09:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CUSTOMER FIDELITY - cache cleared for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-08-16T05:09:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CUSTOMER FIDELITY - cache cleared for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-08-16T05:09:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CUSTOMER FIDELITY - cache cleared for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-08-16T05:09:25-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PIWIK: tracking customer variable customerId at value 0 
+2012-08-16T05:09:25-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PIWIK: tracking customer variable customerId at value  
+2012-08-16T05:09:32-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PAGE NOT FOUND: www.yourdelivery.local//lieferservice-au #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-16T05:09:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template error/notfound.htm 
+2012-08-16T05:14:18-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PAGE NOT FOUND: www.yourdelivery.local//lieferservice-au #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-16T05:14:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template error/notfound.htm 
+2012-08-16T05:14:31-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PAGE NOT FOUND: www.yourdelivery.local//lieferservice-au #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-16T05:14:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template error/notfound.htm 
+2012-08-16T05:15:05-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing getting 1 cityIds for url /lieferservice-au 
+2012-08-16T05:15:05-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 7 online and 0 offline services in #5803 
+2012-08-16T05:15:05-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/service.htm 
+2012-08-16T05:15:07-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/lieferservice-au.html 
+2012-08-16T05:15:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/service/preorder.htm 
+2012-08-16T05:15:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_service/preorder/back/0/type/rest.html 
+2012-08-16T05:15:44-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-08-16T05:15:44-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/14234.html 
+2012-08-16T05:15:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/menu.htm 
+2012-08-16T05:15:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/lieferservice-pizza-lucky-freiburg-im-breisgau.html 
+2012-08-16T05:16:11-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/order/callmeal.htm 
+2012-08-16T05:16:11-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/callmeal/id/369384/size/56568/update/false.html 
+2012-08-16T05:17:07-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/private/finish.htm 
+2012-08-16T05:17:11-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/service/openingtimeday.htm 
+2012-08-16T05:17:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/private/finish.htm 
+2012-08-16T05:17:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/service/openingtimeday.htm 
+2012-08-16T05:18:11-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing getting 34 cityIds for url /lieferservice-cottbus 
+2012-08-16T05:18:12-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 5 online and 1 offline services in #146,147,148,149,150,151,152,153,154,155,26160,26161,26162,26163,26164,26165,26166,26167,26169,26186,26190,26195,26196,26197,26198,30660,30661,30662,30663,30664,30665,33692,33693,33694 
+2012-08-16T05:18:12-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/service.htm 
+2012-08-16T05:18:12-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/lieferservice-cottbus.html 
+2012-08-16T05:18:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-08-16T05:18:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/17455.html 
+2012-08-16T05:18:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/menu.htm 
+2012-08-16T05:18:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/lieferservice-freddy-fresh-cottbus.html 
+2012-08-16T07:41:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-08-16T07:41:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/13026.html 
+2012-08-16T07:45:15-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template index/index.htm 
+2012-08-16T07:45:15-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-08-16T08:15:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/login.htm 
+2012-08-16T08:15:46-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Successfully loggged in admin #Supporter Jens Naie (417) 
+2012-08-16T08:15:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/dashboard.htm 
+2012-08-16T08:16:01-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-08-16T08:16:17-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/service/edit/index.htm 
+2012-08-16T08:16:46-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/service/edit/assoc.htm 
+2012-08-16T08:17:01-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/service/edit/logo.htm 
+2012-08-16T08:17:05-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/service/ratings/index.htm 
+2012-08-16T08:17:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/service/edit/logo.htm 
+2012-08-16T08:17:15-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/service/edit/index.htm 
+2012-08-16T08:17:28-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Logged to the restaurant Colonia Haus Steakhaus und Pizzeria (20439) #Supporter Jens Naie (417) 
+2012-08-16T08:17:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/index.htm 
+2012-08-16T08:17:37-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/settings/index.htm 
+2012-08-16T08:17:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/index.htm 
+2012-08-16T08:17:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/service/edit/index.htm 
+2012-08-16T08:18:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/satellite/edit.htm 
+2012-08-16T08:18:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/service/edit/index.htm 
+2012-08-16T08:38:56-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Logged to the restaurant Colonia Haus Steakhaus und Pizzeria (20439) #Supporter Jens Naie (417) 
+2012-08-16T08:38:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/index.htm 
+2012-08-16T08:39:04-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/menu.htm 
+2012-08-16T08:39:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-16T08:39:17-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-16T08:39:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/restaurant/mealpreviewlightbox.htm 
+2012-08-16T08:40:05-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/menu/optionsformeal.htm 
+2012-08-16T08:41:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing saved model Yourdelivery_Model_Meal_Sizes with id #223333 new data :: Array(    [rank] => 2    [name] => grande    [categoryId] => 177143) 
+2012-08-16T08:41:41-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Neue Speisegröße "grande" (223333) wurde der Kategorie 177143 hinzugefügt #Supporter Jens Naie (417) 
+2012-08-16T08:41:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/restaurant/addsize.htm 
+2012-08-16T08:41:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/restaurant/showcategorytable.htm 
+2012-08-16T08:42:13-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/menu/extrasforsize.htm 
+2012-08-16T08:42:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/menu/optionsformeal.htm 
+2012-08-16T08:43:22-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-16T08:43:22-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-16T08:44:28-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Run into error: Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.main' in 'field list'
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Select.php(686): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select))
+#4 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid/Source/Zend/Select.php(297): Zend_Db_Select->query(2)
+#5 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid.php(2641): Bvb_Grid_Source_Zend_Select->execute()
+#6 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid/Deploy/Table.php(1873): Bvb_Grid->deploy()
+#7 /home/ydadmin/htdocs/lieferando/application/controllers/RestaurantController.php(108): Bvb_Grid_Deploy_Table->deploy()
+#8 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): RestaurantController->mealcategoriesAction()
+#9 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('mealcategoriesA...')
+#10 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#13 /home/ydadmin/htdocs/lieferando/public/index.php(116): Zend_Application->run()
+#14 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-16T08:44:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template error/error.htm 
+2012-08-16T08:44:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/menu.htm 
+2012-08-16T08:44:35-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/mealsizes.htm 
+2012-08-16T08:44:46-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/meals.htm 
+2012-08-16T08:45:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/menupreview.htm 
+2012-08-16T08:45:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/menu.htm 
+2012-08-16T08:45:39-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-16T08:45:39-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-16T08:46:08-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/mealoptionrows.htm 
+2012-08-16T08:46:44-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/options/edit.htm 
+2012-08-16T08:47:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/options/edit.htm 
+2012-08-16T08:47:37-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/mealoptions.htm 
+2012-08-16T08:53:00-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/mealoptionrows.htm 
+2012-08-16T08:54:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/mealoptions.htm 
+2012-08-16T09:01:20-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/mealoptionrows.htm 
+2012-08-16T12:15:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/dashboard.htm 
+2012-08-16T12:15:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/discounts.htm 
+2012-08-16T12:15:59-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/discount/edit.htm 
+2012-08-16T12:16:04-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/discounts.htm 
+2012-08-16T12:16:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/discount/create.htm 
+2012-08-16T12:16:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/discounts.htm 
+2012-08-16T12:16:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/administration/discount.htm 
+2012-08-16T12:17:11-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/discounts.htm 
+2012-08-16T12:17:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/discounts.htm 
+2012-08-16T12:17:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/discounts.htm 
+2012-08-16T12:17:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/discounts.htm 
+2012-08-16T12:17:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/discounts.htm 
+2012-08-16T12:17:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/administration/discount.htm 
+2012-08-16T12:20:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/discount/create.htm 
+2012-08-16T12:22:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/discounts.htm 
+2012-08-16T12:25:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/discount/create.htm 
+2012-08-16T12:27:20-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing could not validate form Yourdelivery_Form_Administration_Discount_Create with data Array
+(
+    [name] => sauerkraut
+    [status] => 1
+    [rrepeat] => 1
+    [countUsage] => 
+    [onlyPrivate] => 0
+    [onlyCompany] => 0
+    [onlyRestaurant] => 0
+    [onlyCustomer] => 0
+    [onlyPremium] => 0
+    [onlyIphone] => 0
+    [newCustomerCheck] => 1
+    [noCash] => 0
+    [kind] => 0
+    [rabatt] => 
+    [minAmount] => 0
+    [info] => 
+    [notStartedInfo] => 
+    [expirationInfo] => 
+    [startTimeD] => 16.08.2012
+    [startTimeT] => 00:00
+    [endTimeD] => 01.08.2013
+    [endTimeT] => 23:45
+    [type] => 0
+    [img] => 
+    [email] => 
+    [restaurantIds] => 
+    [cityIds] => 
+    [number] => 1
+    [fakeCode] => 
+    [referer] => 
+)
+form input field "rabatt" failed with message: Bitte geben Sie einen Rabatt ein 
+2012-08-16T12:27:20-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/discount/create.htm 
+2012-08-16T12:27:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing saved model Yourdelivery_Model_Rabatt with id #46732 new data :: Array(    [name] => sauerkraut    [status] => 1    [rrepeat] => 1    [countUsage] => 0    [onlyPrivate] => 0    [onlyCompany] => 0    [onlyRestaurant] => 0    [onlyCustomer] => 0    [onlyPremium] => 0    [onlyIphone] => 0    [newCustomerCheck] => 1    [noCash] => 1    [kind] => 0    [rabatt] => 10    [minAmount] => 0    [info] =>     [notStartedInfo] =>     [expirationInfo] =>     [startTimeD] => 16.08.2012    [startTimeT] => 00:00    [endTimeD] => 01.08.2013    [endTimeT] => 23:45    [type] => 0    [img] =>     [email] =>     [number] => 1    [fakeCode] =>     [referer] => 1345130854-sauerkraut    [start] => 2012-08-16 00:00:00    [end] => 2013-08-01 23:45:00) 
+2012-08-16T12:27:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing updating model Default_Model_Base #46732 with modified data :: Array(    [name] => sauerkraut    [status] => 1    [rrepeat] => 1    [countUsage] => 0    [onlyPrivate] => 0    [onlyCompany] => 0    [onlyRestaurant] => 0    [onlyCustomer] => 0    [onlyPremium] => 0    [onlyIphone] => 0    [newCustomerCheck] => 1    [noCash] => 1    [kind] => 0    [rabatt] => 10    [minAmount] => 0    [info] =>     [notStartedInfo] =>     [expirationInfo] =>     [startTimeD] => 16.08.2012    [startTimeT] => 00:00    [endTimeD] => 01.08.2013    [endTimeT] => 23:45    [type] => 0    [img] =>     [email] =>     [number] => 1    [fakeCode] =>     [referer] => 1345130854-sauerkraut    [start] => 2012-08-16 00:00:00    [end] => 2013-08-01 23:45:00    [onlyCanteen] => 0    [updated] => 2012-08-16 12:27:34    [fidelity] => 0    [hash] => 549853ecf166558b50e6f3973eeeea16) 
+2012-08-16T12:27:34-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing New discount sauerkraut (#46732) was created #Supporter Jens Naie (417) 
+2012-08-16T12:27:35-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/discounts.htm 
+2012-08-16T12:27:39-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/discounts.htm 
+2012-08-16T12:27:44-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/administration/discount.htm 
+2012-08-16T12:27:55-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/administration/discount.htm 
+2012-08-16T12:28:02-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/discount/checkdiscountcode.htm 

@@ -1,0 +1,29 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/service/edit/_navigation.htm'}
+
+<form action="/administration_service_edit/logo/id/{$restaurant->getId()}" method="post" name="form" enctype="multipart/form-data">
+
+    <div class="be-1-column">
+        <div class="be-box yd-form1">
+            <h2>{__b('Logo')}</h2>
+            <div class="be-box-in">
+                <label>{__b('Logo')}</label>
+                <input type="file" name="img" />
+
+                <hr />
+
+                <label>{__b('Aktuelles Bild')}</label>
+                <img src="/../storage/restaurants/{$restaurant->getId()}/default.jpg" alt="" width="115" height="75"/>
+
+                <br /><br /><br />
+                <input type="submit" value="{__b('Speichern')}" class="button" id="yd-save-restaurant-button"/>
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button"/>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+{/block}

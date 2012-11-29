@@ -1,0 +1,5 @@
+2012-06-04T18:28:48+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-04T18:28:48+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-06-04T18:28:49+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-06-04T18:33:11+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/cityverbose/autocomplete/cep.htm in janamesa.com.br layout, switching successfully back to default 
+2012-06-04T18:33:11+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/cityverbose/autocomplete/cep.htm 

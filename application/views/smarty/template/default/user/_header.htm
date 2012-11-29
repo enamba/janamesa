@@ -1,0 +1,46 @@
+<div class="yd-profile-head">
+
+    <a href="/order_private/start" class="yd-button-140 yd-button-order-now" >{__('Essen bestellen')}</a>
+
+    <ul>
+        <li><a class="{if $active==0}active{/if}" href="/user/index">{$cust->getFullname()}</a></li>
+        <li>
+            <a class="active">
+                {$active_title}
+                <span class="hidden yd-user-form-error">{__('Bitte klicke in die rot markierten Felder und überprüfe sie.')}</span>
+            </a>
+        </li>
+    </ul>
+
+</div>
+
+<div class="yd-profile-nav">
+
+    <ul>
+        <li><a href="/user/settings" class="yd-pn1 {if $active==1}active{/if}"><span>{__('Meine Daten')}</span></a></li>
+        <li><a href="/user/socialnetworks" class="yd-pn7 {if $active==7}active{/if}"><span>{__('Soziale Netzwerke')}</span></a></li>
+        <li><a href="/user/locations" class="yd-pn2 {if $active==2}active{/if}"><span>{__('Lieferadressen')}</span></a></li>
+        <li><a href="/user/favourites" class="yd-pn3 {if $active==3}active{/if}"><span>{__('Favoriten')}</span></a></li>
+        <li><a href="/user/orders/perPageuser_orders/25" class="yd-pn4 {if $active==4}active{/if}"><span>{__('Vorherige Bestellungen')}</span></a></li>
+        <li><a href="/user/ratings" class="yd-pn5 {if $active==5}active{/if}"><span>{__('Restaurant bewerten')}</span></a></li>
+        <li><a href="/user/fidelity" class="yd-pn6 {if $active==6}active{/if}"><span>{__('Treuepunkte')}</span></a></li>
+        <!--
+        <li><a href="/test/account7" class="yd-pn7 {if $active==7}active{/if}"><span>{__('Exklusive Gutscheine')}</span></a></li>
+        -->
+        {if $domain_base == 'lieferando.de' || $domain_base == 'lieferando.at'}
+        <li id="sc0MyQ">
+            <div id="ci0MyQ" style="z-index:100;position:absolute"></div>
+            <div id="sd0MyQ" style="display:none"></div>
+            <script type="text/javascript">
+                var se0MyQ=document.createElement("script");se0MyQ.type="text/javascript";var se0MyQs=(location.protocol.indexOf("https")==0?"https":"http")+"://image.providesupport.com/js/yourdelivery/safe-standard.js?ps_h=0MyQ&ps_t="+new Date().getTime();
+                se0MyQs += "&online-image=" + escape('/media/images/yd-chat/de/account/online.png');
+                se0MyQs += "&offline-image=" + escape('/media/images/yd-chat/de/account/offline.png');
+                setTimeout("se0MyQ.src=se0MyQs;document.getElementById('sd0MyQ').appendChild(se0MyQ)",1)
+            </script>
+        </li>
+        {/if}
+    </ul>
+
+    <!-- <a class="yd-profile-button">{__('Jetzt Freunde einladen')}</a> -->
+
+</div>

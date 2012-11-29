@@ -1,0 +1,161 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/stats/sales/navigation.htm'}
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Detalierte Statistik')}
+            </div>
+            <div class="item-content">
+                <input id="yd-toggle-show-changes" type="checkbox" value="1"/> {__b('Veränderungen in % anzeigen')}
+                <div class="be-tabs">
+                    <br />
+                    <ul>
+                        {foreach from=$years item=y}
+                        <li><a href="/administration_stats_sales/detail/year/{$y}" {if $y eq $year}class="active"{/if}>{$y}</a></li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+            <div class="item-content">
+                <a href="/administration_stats_sales/detail/year/{$year}"{if $plz eq -1}style="font-weight:bold;"{/if}>Alle</a>
+                {foreach from=$plzs key=mode item=p}
+                | <a href="/administration_stats_sales/detail/year/{$year}/plz/{$p}" {if $p eq $plz}style="font-weight:bold;"{/if}>{$p}xxxx</a>
+                {/foreach}
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Bestellungen')}
+            </div>
+            <div class="item-content">
+                <table class="user-tab">
+                    <tr>
+                        <td width="5%" align="center"></td>
+                        <td width="5%" align="center">{__b('Januar')}</td>
+                        <td width="5%" align="center">{__b('Februar')}</td>
+                        <td width="5%" align="center">{__b('März')}</td>
+                        <td width="5%" align="center">{__b('April')}</td>
+                        <td width="5%" align="center">{__b('Mai')}</td>
+                        <td width="5%" align="center">{__b('Juni')}</td>
+                        <td width="5%" align="center">{__b('Juli')}</td>
+                        <td width="5%" align="center">{__b('August')}</td>
+                        <td width="5%" align="center">{__b('September')}</td>
+                        <td width="5%" align="center">{__b('Oktober')}</td>
+                        <td width="5%" align="center">{__b('November')}</td>
+                        <td width="5%" align="center">{__b('Dezember')}</td>
+                        <td width="5%" align="center">{__b('Gesamt')}</td>
+                    </tr>
+                    {foreach from=array_reverse($orders, true) key=mode item=o}
+                    <tr>
+                        <td>{$modes.$mode}</td>
+                        {section name=month start=1 loop=13}
+                            {$monthval = intval($o[$smarty.section.month.iteration])}
+                            {$premonthval = intval($o[$smarty.section.month.iteration-1])}
+                            {if $premonthval != 0}{$change = ($monthval - $premonthval)*100/$premonthval}{else}{$change=0}{/if}
+                            <td align="center">
+                                {if $monthval}{$monthval}
+                                    {if $monthval>0 and $premonthval>0 and $smarty.section.month.iteration!=13 and $change!=0}
+                                    <div class="yd-stats-change" style="display:none;"><small>({if $change>0}+{/if}{round($change,1)}%)</small>{/if}{/if}</div>
+                            </td>
+                        {/section}
+                        <td align="center">{$o.count|intval}</td>
+                    </tr>
+                    {/foreach}
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Umsatz')}
+            </div>
+            <div class="item-content">
+                <table class="user-tab">
+                    <tr>
+                        <td width="5%" align="center"></td>
+                        <td width="5%" align="center">{__b('Januar')}</td>
+                        <td width="5%" align="center">{__b('Februar')}</td>
+                        <td width="5%" align="center">{__b('März')}</td>
+                        <td width="5%" align="center">{__b('April')}</td>
+                        <td width="5%" align="center">{__b('Mai')}</td>
+                        <td width="5%" align="center">{__b('Juni')}</td>
+                        <td width="5%" align="center">{__b('Juli')}</td>
+                        <td width="5%" align="center">{__b('August')}</td>
+                        <td width="5%" align="center">{__b('September')}</td>
+                        <td width="5%" align="center">{__b('Oktober')}</td>
+                        <td width="5%" align="center">{__b('November')}</td>
+                        <td width="5%" align="center">{__b('Dezember')}</td>
+                        <td width="5%" align="center">{__b('Gesamt')}</td>
+                    </tr>
+                    {foreach from=array_reverse($sales, true) key=mode item=o}
+                    <tr>
+                        <td>{$modes.$mode}</td>
+                        {section name=month start=1 loop=13}
+                            {$monthval = intval($o[$smarty.section.month.iteration])}
+                            {$premonthval = intval($o[$smarty.section.month.iteration-1])}
+                            {if $premonthval != 0}{$change = ($monthval - $premonthval)*100/$premonthval}{else}{$change=0}{/if}
+                            <td align="center">
+                                {if $monthval}{$monthval|inttoprice} {if $monthval>0 and $premonthval>0 and $smarty.section.month.iteration!=13 and $change!=0}
+                                <div class="yd-stats-change" style="display:none;"><small>({if $change>0}+{/if}{round($change,1)}%)</small>{/if}{/if}</div>
+                            </td>
+                        {/section}
+                        <td align="center">{$o.count|inttoprice}</td>
+                    </tr>
+                    {/foreach}
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Provision')}
+            </div>
+            <div class="item-content">
+                <table class="user-tab">
+                    <tr>
+                        <td width="5%" align="center"></td>
+                        <td width="5%" align="center">{__b('Januar')}</td>
+                        <td width="5%" align="center">{__b('Februar')}</td>
+                        <td width="5%" align="center">{__b('März')}</td>
+                        <td width="5%" align="center">{__b('April')}</td>
+                        <td width="5%" align="center">{__b('Mai')}</td>
+                        <td width="5%" align="center">{__b('Juni')}</td>
+                        <td width="5%" align="center">{__b('Juli')}</td>
+                        <td width="5%" align="center">{__b('August')}</td>
+                        <td width="5%" align="center">{__b('September')}</td>
+                        <td width="5%" align="center">{__b('Oktober')}</td>
+                        <td width="5%" align="center">{__b('November')}</td>
+                        <td width="5%" align="center">{__b('Dezember')}</td>
+                        <td width="5%" align="center">{__b('Gesamt')}</td>
+                    </tr>
+                    {foreach from=array_reverse($commissions, true) key=mode item=o}
+                    <tr>
+                        <td>{$modes.$mode}</td>
+                        {section name=month start=1 loop=13}
+                            {$monthval = floatval($o[$smarty.section.month.iteration])}
+                            {$premonthval = floatval($o[$smarty.section.month.iteration-1])}
+                            {if $premonthval != 0}{$change = ($monthval - $premonthval)*100/$premonthval}{else}{$change=0}{/if}
+                            <td align="center">
+                                {if $monthval}{$monthval|inttoprice} {if $monthval>0 and $premonthval>0 and $smarty.section.month.iteration!=13 and $change!=0}
+                                <div class="yd-stats-change" style="display:none;"><small>({if $change>0}+{/if}{round($change,1)}%)</small>{/if}{/if}</div>
+                            </td>
+                        {/section}
+                        <td align="center">{$o.count|inttoprice}</td>
+                    </tr>
+                    {/foreach}
+                </table>
+            </div>
+        </div>
+    </div>
+
+{/block}

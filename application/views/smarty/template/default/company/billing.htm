@@ -1,0 +1,51 @@
+{extends file="company/base.htm"}
+
+{block name="content"}
+
+<div id="admincase">
+
+    {include file='company/_left_nav.htm'}
+
+    <div class="clear"></div>
+
+    <div id="main-content">
+
+    <!-- Page Head -->
+
+        <ul class="shortcut-buttons-set">
+
+            <li><a class="shortcut-button" href="/company/billing"><span>
+                <img src="{$domain_static}/images/yd-icons/backend/billing.png" alt="" /><br />
+                {__('Rechnungen Übersicht')}
+            </span></a></li>
+
+        </ul><!-- End .shortcut-buttons-set -->
+
+    <div class="clear"></div>
+
+    <div class="content-box">
+    <div class="content-box-header">
+        <h3>{__('Rechnungen')}</h3>
+        <div class="clear"></div>
+    </div>
+
+    <div class="right" id="content">
+		<!-- {__('Anfang Meine Daten')} -->
+		<div class="mydata">
+
+            <div class="users">
+                <div class="set-content">
+                    <div class="settings_group">                       
+                           {$grid}                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Ende Meine Daten -->
+	</div> <!-- content-box-content -->
+    </div> <!-- content-box-->
+<div class="clear"></div>
+    </div> <!-- main Content -->
+</div> <!-- admincase -->
+
+{/block}

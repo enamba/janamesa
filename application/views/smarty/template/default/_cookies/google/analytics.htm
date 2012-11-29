@@ -1,0 +1,36 @@
+<!-- Google Analytics -->
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    
+    {if $GADocumentReady}$(document).ready(function() { {/if}
+    
+    {foreach from=$googleAccounts item=ua}
+        log('adding analytics for {$ua}');
+        
+        {if $config->domain->base == 'eat-star.de'}
+            _gaq.push(['_setDomainName', '.eat-star.de']);
+        {/if}
+        
+        _gaq.push(['_setAccount', '{$ua}']);
+        
+        {if is_object($cust) && $cust->isLoggedIn()}
+            _gaq.push(['_setCustomVar', 4, 'has_logged_in', 'yes', 1]);
+        {/if}
+        
+        if(typeof(ydABTestGroup) != 'undefined' && typeof(ydABTestGroupName) != 'undefined') {
+            _gaq.push(['_setCustomVar', 5, ydABTestGroupName, ydABTestGroup, 2]);
+        }
+        
+        _gaq.push(['_trackPageview'{if isset($GATrackPageview)}, '{$GATrackPageview}'{/if}]);
+    {/foreach}
+    
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    
+    {if $GADocumentReady} } ); {/if}
+</script>
+
+

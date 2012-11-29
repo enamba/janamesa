@@ -1,0 +1,49 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/stats/services/navigation.htm'}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Anzahl der Dienstleister pro Städte')}
+            <small>{__b('Gesamt (Online / Offline | Gekündigt )')}</small>
+        </div>
+        <div class="item-content">
+            <table width="100%" class="user-tab">
+                <tr>
+                    <th></th>
+                    <th width="15%">pizza.de</th>
+                    <th width="15%">{__b('Restaurant')}</th>
+                    <th width="15%">{__b('Caterer')}</th>
+                    <th width="15%">{__b('Großhändler')}</th>
+                    <th width="15%">{__b('Gesamt')}</th>
+                </tr>
+                {foreach from=$cities key=city item=r}
+                <tr>
+                    <td>{$city} </td>
+                    <td>
+                        <span class="yd-stats-benchmark" style="cursor: pointer; color: #05a;">{$r.restaurants|intval}</span>
+                        <form action="/administration_request_stats_services/benchmark" method="post" class="yd-stats-benchmark" style="display:none;">
+                            <input type="hidden" name="city" value="{$city}" />
+                            <input type="text" name="restaurants" value="" />
+                            <input type="submit" value="{__b('Speichern')}" class="button rund_set" />
+                        </form>
+                    </td>
+
+                    <td><b>{$r.Restaurant.count|intval}</b> ({$r.Restaurant.online|intval} / {$r.Restaurant.offline|intval} | {$r.Restaurant.canceled|intval})</td>
+                    <td><b>{$r.Cater.count|intval}</b> ({$r.Cater.online|intval} / {$r.Cater.offline|intval} | {$r.Cater.canceled|intval})</td>
+                    <td><b>{$r.Great.count|intval}</b> ({$r.Great.online|intval} / {$r.Great.offline|intval} | {$r.Great.canceled|intval})</td>
+                    <td>
+                        <b>{$r.Restaurant.count + $r.Cater.count + $r.Great.count}</b>
+                        (   {$r.Restaurant.online + $r.Cater.online + $r.Great.online} /
+                            {$r.Restaurant.offline + $r.Cater.offline + $r.Great.offline}
+                            | {$r.Restaurant.canceled + $r.Cater.canceled + $r.Great.canceled})
+                    </td>
+                </tr>
+                {/foreach}
+            </table>
+        </div>
+    </div>
+</div>
+
+{/block}

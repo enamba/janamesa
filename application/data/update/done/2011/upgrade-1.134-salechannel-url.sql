@@ -1,0 +1,13 @@
+-- mlaug
+-- 10.05.2011
+
+DROP TABLE IF EXISTS `marketing_url`;
+CREATE TABLE `marketing_url` (
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `saleChannel` VARCHAR(255) NOT NULL,
+    `subSaleChannel` VARCHAR(255) DEFAULT NULL,
+    `saleChannelValue` VARCHAR(255) DEFAULT NULL,
+    `pixel` TEXT DEFAULT NULL,
+    `created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated` TIMESTAMP NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;

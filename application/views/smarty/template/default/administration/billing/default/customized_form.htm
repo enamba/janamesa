@@ -1,0 +1,88 @@
+<div class="two-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Adresse')}            
+        </div>
+        <div class="content">
+            <div class="item-content">
+                {__b('Die Standard Daten werden überschrieben')}<br/><br/>
+                <table class="user-tab">
+                    <tr>
+                        <td width="20%">{__b('Empfänger')}</td>
+                        <td width="80%"><input type="text" name="heading" value="{$customized.heading}" /></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Straße')}</td>
+                        <td><input type="text" name="street" value="{$customized.street}" /></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('HausNr')}</td>
+                        <td><input type="text" name="hausnr" value="{$customized.hausnr}" /> </td>
+                    </tr>
+                    <tr>
+                        <td>{__b('PLZ')}</td>
+                        <td><input type="text" name="plz" value="{$customized.plz}" /></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Stadt')}</td>
+                        <td><input type="text" name="city" value="{$customized.city}" /></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Zusatz')}</td>
+                        <td><input type="text" name="addition" value="{$customized.addition}" /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="item-head">
+                {__b('Wann soll diese Rechnung abgemahnt werden.')}
+            </div>
+            <div class="item-content">
+                {__b('Standardmäßig gibt es eine Zahlungserinnerung alle 14 Tage.')}<br/><br/>
+                <table class="user-tab">
+                    <tr>
+                        <td>
+                            <select name="reminder">
+                                <option value="7" {if $customized.reminder == 7}selected="selected"{/if}>{__b('Nach 1 Woche')}</option>
+                                <option value="14" {if $customized.reminder == 14}selected="selected"{/if}>{__b('Nach 2 Wochen')}</option>
+                                <option value="21" {if $customized.reminder == 21}selected="selected"{/if}>{__b('Nach 3 Wochen')}</option>
+                                <option value="28" {if $customized.reminder == 28}selected="selected"{/if}>{__b('Nach 4 Wochen')}</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="item">
+        <div class="item-head">
+            {__b('Anschreiben')}
+        </div>
+        <div class="item-content">            
+            <table width="100%"  class="user-tab">
+                <tr>
+                    <td width="10%">{__b('Präambel')}</td>
+                    <td width="90%"><input type="text" name="preamble" value="{$customized.preamble}" style="width: 350px;"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><br/>{__b('Zusätzlicher Text unter der Betreffzeile')}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea style="width: 500px;" cols="85" rows="14" name="content">{$customized.content}</textarea></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+            <input type="submit" value="{__b('speichern')}" class="button" />
+        </div>
+    </div>
+</div>
+

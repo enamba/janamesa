@@ -1,0 +1,11 @@
+        {include file="testing/cms/_testingCmsHeader.htm"}
+
+        <div id="content">
+            <input class="button" type='button' value='back' onClick='history.back()'/>
+            <br />
+            <img alt="{$testCaseExp->getImagePath()}"  src="/storage/testing/{$testCaseExp->getTestCaseId()}/{$testCaseExp->getImagePath()}" border="1" onclick='history.back()' />
+
+        </div>
+
+    </body>
+</html>

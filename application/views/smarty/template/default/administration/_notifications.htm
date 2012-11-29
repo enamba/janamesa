@@ -1,0 +1,18 @@
+<div id="yd-notifications">
+    {if $notifications}
+        {foreach from=$notifications item=notification key=type}
+            <div class="notification rund {$type}">
+                <a href="#" class="closeNotification" id="notification-{$type}">
+                    <img src="{$domain_static}/images/yd-background/notification-close.png" alt="{__b('close')}" />
+                </a>
+                <ul>
+                {foreach from=$notification item=item name=noteIter}
+                    <li id="notification-{$type}-{$smarty.foreach.noteIter.iteration}">
+                        {$item}
+                    </li>
+                {/foreach}
+                </ul>
+            </div>
+        {/foreach}
+    {/if}
+</div>

@@ -1,0 +1,16 @@
+{if $customer->isLoggedIn()}
+    <li><a href="/administration_user_edit/index/userid/{$customer->getId()}" target="_blank">{__b('Account anzeigen')}</a></li>
+    <li><a href="/administration/userlogin/id/{$customer->getId()}" target="_blank">{__b('Einloggen im Frontend')}</a></li>
+{else}
+    <li>{__b('kein registrierter Account')}
+{/if}
+
+<li><a href='/administration_order/index/type/view_grid_orders/Namegrid/{$name}' target='_blank'>{__('Alle Bestellungen dieser Person')}</a></li>
+
+<!--        
+<li class="copy-on-click">{__b('Vor- & Nachname kopieren')}</li>
+<li class="copy-on-click">{__b('Vorname kopieren')}</li>
+<li class="copy-on-click">{__b('Nachname kopieren')}</li>
+-->
+<li class="yd-grid-box-separation"><a href='/administration_order/index/type/view_grid_orders/Namegrid/{$name}/Gutscheingrid/1/' target='_blank'>{__b('Verwendete Gutscheine anzeigen')}</a></li>
+<li><a href="/administration_request_blacklist/keyword/customer/{$name|urlencode}/orderId/{$orderId}" class="yd-blacklist-lightbox">{__b('Account blacklisten')}</a></li>

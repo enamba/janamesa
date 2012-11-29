@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="pt" xml:lang="pt" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="pt" xml:lang="pt" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="pt" xml:lang="pt" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="pt" xml:lang="pt" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="pt" xml:lang="pt">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="viewport" content="width=1100">
+        <link rel="SHORTCUT ICON" href="/media/css/www.janamesa.com.br/favicon.ico" type="image/x-icon">
+
+        <title>Jánamesa para restaurantes - janamesa.com.br</title>
+
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-core.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-home.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-jquery.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-ie.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-infocenter.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-hidden.css" />
+            
+            <script type="text/javascript" src="/media/javascript/compiled/frontend-sem.js"></script>
+    </head>
+    <body class="br">
+
+        <!--#include virtual="_br_header.html" -->
+
+        <div id="yd-content" class="yd-clearfix post">
+
+            <div id="yd-ordering">
+
+                <h1 class="underlined">Jánamesa para restaurantes</h1>
+
+                <p>
+                    Sendo parceiro do Jánamesa, os clientes de seu estabelecimento possuem uma maneira rápida e fácil de pedir comida pela internet. Em nosso site, existirá um cardápio on-line de seu restaurante, atualizado e interativo.  O pagamento do pedido poderá ser realizado direto no site ou na hora da entrega.
+                </p>
+                <p>
+                    Através dos nossos canais de divulgação, os restaurantes possuem maiores possibilidades de alcançar clientes e consequentemente aumentar as vendas. Nosso marketing trabalhará para você, com forte presença nas redes sociais.
+                </p>
+                <p>
+                    É importante deixar claro que não existem riscos, nada de custos inicias ou de manutenção para você estar com o Jánamesa. Além disso, faremos o processo de pedido e agendamento, deixando os funcionários que prestavam este serviço livres para realizar outras funções, gerando maior lucro para seu negócio.
+                </p>
+                <p>
+                    Oferecemos ainda um feedback de seu estabelecimento. Após cada pedido solicitado no nosso site, nós estimulamos o cliente a preencher uma avaliação sobre a qualidade da comida e do serviço de entrega de seu restaurante, os ajudando a melhorar ainda mais.
+                </p>
+            </div>
+
+            <div id="yd-sidebar">
+
+                <!-- Secondary navigation -->
+                <div id="nav-secondary" class="yd-box br-box">
+                    <ul>
+                        <li><a href="/about-customer">Jánamesa para consumidores</a></li>
+                        <li><a href="/about-restaurant">Jánamesa para restaurantes</a></li>
+                        <li><a href="/customer-terms">Termos para consumidores</a></li>
+                        <li><a href="/restaurant-terms">Termos para restaurantes</a></li>
+                        <li><a href="/jobs">Trabalhe conosco</a></li>
+                    </ul>
+                </div>
+                <!-- /Secondary navigation -->
+
+            </div>
+
+        </div>
+    </div>
+
+    <!--#include virtual="_br_footer.html" -->

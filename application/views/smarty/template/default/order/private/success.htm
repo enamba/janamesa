@@ -1,0 +1,15 @@
+{extends file='base.htm'}
+{block name="content"}
+    {include file='order/_includes/success.htm'}
+    {include file='_cookies/sociomatic/success.htm'}
+    {include file='_cookies/adlantic/success.htm'}
+    {include file='_cookies/masterpixel/success.htm' uadomain=$domain_base}
+    {include file='_cookies/piwik/success.htm' uadomain=$domain_base}
+    {include file='_cookies/monkeys/success.htm'}
+    {include file='_cookies/criteo/success.htm'}
+    {include file='_cookies/nextPerformance/success.htm'}   
+    {if $domain_base == 'lieferando.de'}
+     {include file='_cookies/avazu/success.htm'}
+     {include file='_cookies/cadreon/success.htm'}
+    {/if}
+{/block}

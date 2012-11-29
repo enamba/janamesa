@@ -1,0 +1,1201 @@
+[09-Jul-2012 17:13:03 UTC] Notice: Undefined variable: additionalMetatags in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/janamesa.com.br/fad2b6257915d9ddaa3d6c37692e49ff32e3d7e7.file.start.htm.php:88
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/start
+Referer: http://www.yourdelivery.local/error/throw
+[09-Jul-2012 17:13:03 UTC] Notice: Undefined variable: GADocumentReady in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/a8158007f2b45cd4729fc9111c2bd1621e73a8f5.file.analytics.htm.php:24
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/janamesa.com.br/fad2b6257915d9ddaa3d6c37692e49ff32e3d7e7.file.start.htm.php:158
+ 5. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 6. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 7. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 8. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 9. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 10. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 11. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 12. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 13. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 14. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 15. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 16. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 17. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 18. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/start
+Referer: http://www.yourdelivery.local/error/throw
+[09-Jul-2012 17:13:03 UTC] Notice: Undefined variable: GADocumentReady in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/a8158007f2b45cd4729fc9111c2bd1621e73a8f5.file.analytics.htm.php:55
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/janamesa.com.br/fad2b6257915d9ddaa3d6c37692e49ff32e3d7e7.file.start.htm.php:158
+ 5. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 6. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 7. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 8. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 9. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 10. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 11. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 12. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 13. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 14. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 15. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 16. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 17. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 18. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/start
+Referer: http://www.yourdelivery.local/error/throw
+[09-Jul-2012 17:13:03 UTC] Notice: Undefined variable: trackGoogleEcomerce in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/janamesa.com.br/fad2b6257915d9ddaa3d6c37692e49ff32e3d7e7.file.start.htm.php:159
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/start
+Referer: http://www.yourdelivery.local/error/throw
+[09-Jul-2012 17:13:03 UTC] Notice: Undefined variable: newCustomerDiscountError in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/95d06f10ef6938c1459865387824278d9b27fa1d.file.form_order.htm.php:20
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/1b555a8babb5486899fb3d9eebeda2b4627107c5.file.login.htm.php:37
+ 5. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 6. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 7. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/5fc73a72a27638a289f8e75f49c6ec7fd225a80a.file.janamesa.com.br.htm.php:28
+ 8. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 9. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 10. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/d89bc824c5aecb8146286aeaa38c5288a456af14.file.base_header.htm.php:25
+ 11. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 12. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 13. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/janamesa.com.br/fad2b6257915d9ddaa3d6c37692e49ff32e3d7e7.file.start.htm.php:172
+ 14. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 15. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 16. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 17. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 18. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 19. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 20. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 21. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 22. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 23. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 24. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 25. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 26. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 27. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/start
+Referer: http://www.yourdelivery.local/error/throw
+[09-Jul-2012 17:13:09 UTC] Strict: Declaration of Yourdelivery_Model_Order::setDeliverTime() should be compatible with that of Yourdelivery_Model_Order_Abstract::setDeliverTime() in /home/ydadmin/htdocs/lieferando/application/models/Order.php on line 8
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/models/Order.php:8
+ 1. include() /home/ydadmin/htdocs/lieferando/library/Zend/Loader/Autoloader/Resource.php:195
+ 2. Zend_Loader_Autoloader_Resource->autoload() /home/ydadmin/htdocs/lieferando/library/Zend/Loader/Autoloader.php:120
+ 3. Zend_Loader_Autoloader::autoload() 
+ 4. spl_autoload_call() /home/ydadmin/htdocs/lieferando/application/controllers/Request/OrderController.php:742
+ 5. Request_OrderController->lastorderAction() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513
+ 6. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 7. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 8. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 9. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 10. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /request_order/lastorder?hash=d16b3d54b1a2e868b339d99f4a847e53&mode=rest&kind=priv
+Referer: http://www.yourdelivery.local/servico-de-entrega-sao-paulo-01451-001
+[09-Jul-2012 17:13:09 UTC] Strict: Declaration of Yourdelivery_Model_Order::setPayment() should be compatible with that of Yourdelivery_Model_Order_Abstract::setPayment() in /home/ydadmin/htdocs/lieferando/application/models/Order.php on line 8
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/models/Order.php:8
+ 1. include() /home/ydadmin/htdocs/lieferando/library/Zend/Loader/Autoloader/Resource.php:195
+ 2. Zend_Loader_Autoloader_Resource->autoload() /home/ydadmin/htdocs/lieferando/library/Zend/Loader/Autoloader.php:120
+ 3. Zend_Loader_Autoloader::autoload() 
+ 4. spl_autoload_call() /home/ydadmin/htdocs/lieferando/application/controllers/Request/OrderController.php:742
+ 5. Request_OrderController->lastorderAction() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513
+ 6. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 7. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 8. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 9. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 10. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /request_order/lastorder?hash=d16b3d54b1a2e868b339d99f4a847e53&mode=rest&kind=priv
+Referer: http://www.yourdelivery.local/servico-de-entrega-sao-paulo-01451-001
+[09-Jul-2012 17:13:10 UTC] Notice: Trying to get property of non-object in /home/ydadmin/htdocs/lieferando/application/models/Servicetype/Abstract.php on line 1367
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/models/Servicetype/Abstract.php:1367
+ 1. Yourdelivery_Model_Servicetype_Abstract->getImg() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/d26713f7bed3de85c15535f9e254af3ddaa35c0c.file.lastorder.htm.php:30
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /request_order/lastorder?hash=d16b3d54b1a2e868b339d99f4a847e53&mode=rest&kind=priv
+Referer: http://www.yourdelivery.local/servico-de-entrega-sao-paulo-01451-001
+[09-Jul-2012 17:13:10 UTC] Notice: Trying to get property of non-object in /home/ydadmin/htdocs/lieferando/application/models/Servicetype/Abstract.php on line 1367
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/models/Servicetype/Abstract.php:1367
+ 1. Yourdelivery_Model_Servicetype_Abstract->getImg() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/d26713f7bed3de85c15535f9e254af3ddaa35c0c.file.lastorder.htm.php:30
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /request_order/lastorder?hash=d16b3d54b1a2e868b339d99f4a847e53&mode=rest&kind=priv
+Referer: http://www.yourdelivery.local/servico-de-entrega-sao-paulo-01451-001
+[09-Jul-2012 17:13:10 UTC] Notice: Trying to get property of non-object in /home/ydadmin/htdocs/lieferando/application/models/Servicetype/Abstract.php on line 1367
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/models/Servicetype/Abstract.php:1367
+ 1. Yourdelivery_Model_Servicetype_Abstract->getImg() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/d26713f7bed3de85c15535f9e254af3ddaa35c0c.file.lastorder.htm.php:30
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /request_order/lastorder?hash=d16b3d54b1a2e868b339d99f4a847e53&mode=rest&kind=priv
+Referer: http://www.yourdelivery.local/servico-de-entrega-sao-paulo-01451-001
+[09-Jul-2012 17:13:10 UTC] Notice: Trying to get property of non-object in /home/ydadmin/htdocs/lieferando/application/models/Servicetype/Abstract.php on line 1368
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/models/Servicetype/Abstract.php:1368
+ 1. Yourdelivery_Model_Servicetype_Abstract->getImg() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/d26713f7bed3de85c15535f9e254af3ddaa35c0c.file.lastorder.htm.php:30
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /request_order/lastorder?hash=d16b3d54b1a2e868b339d99f4a847e53&mode=rest&kind=priv
+Referer: http://www.yourdelivery.local/servico-de-entrega-sao-paulo-01451-001
+[09-Jul-2012 17:13:10 UTC] Notice: Trying to get property of non-object in /home/ydadmin/htdocs/lieferando/application/models/Servicetype/Abstract.php on line 1368
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/models/Servicetype/Abstract.php:1368
+ 1. Yourdelivery_Model_Servicetype_Abstract->getImg() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/d26713f7bed3de85c15535f9e254af3ddaa35c0c.file.lastorder.htm.php:30
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /request_order/lastorder?hash=d16b3d54b1a2e868b339d99f4a847e53&mode=rest&kind=priv
+Referer: http://www.yourdelivery.local/servico-de-entrega-sao-paulo-01451-001
+[09-Jul-2012 17:13:10 UTC] Notice: Trying to get property of non-object in /home/ydadmin/htdocs/lieferando/application/models/Servicetype/Abstract.php on line 1368
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/models/Servicetype/Abstract.php:1368
+ 1. Yourdelivery_Model_Servicetype_Abstract->getImg() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/d26713f7bed3de85c15535f9e254af3ddaa35c0c.file.lastorder.htm.php:30
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /request_order/lastorder?hash=d16b3d54b1a2e868b339d99f4a847e53&mode=rest&kind=priv
+Referer: http://www.yourdelivery.local/servico-de-entrega-sao-paulo-01451-001
+[09-Jul-2012 17:13:24 UTC] User Notice: function call 'load_filter' is unknown or deprecated. in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_wrapper.php on line 57
+ 0. handle_error() 
+ 1. trigger_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_wrapper.php:57
+ 2. Smarty_Internal_Wrapper->convert() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:765
+ 3. Smarty->__call() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:222
+ 4. Default_View_SmartyClass->load_filter() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:222
+ 5. Default_View_Smarty->enableCache() /home/ydadmin/htdocs/lieferando/application/controllers/Request/OrderController.php:526
+ 6. Request_OrderController->callmealAction() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513
+ 7. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 8. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 9. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 10. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 11. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /request_order/callmeal/id/7819/size/1120/update/false
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:24 UTC] Notice: Undefined offset: 1120 in /home/ydadmin/htdocs/lieferando/application/models/Meals.php on line 645
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/models/Meals.php:645
+ 1. Yourdelivery_Model_Meals->hasExtras() /home/ydadmin/htdocs/lieferando/application/models/Meals.php:630
+ 2. Yourdelivery_Model_Meals->hasAnyExtras() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/janamesa.com.br/56f1afe9b8021abb0e7dfcd646dd8f9dc38d801b.file.callmeal.htm.php:216
+ 3. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 4. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 5. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 6. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 7. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 8. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 9. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 10. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 11. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 12. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 13. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 14. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 15. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 16. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /request_order/callmeal/id/7819/size/1120/update/false
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:24 UTC] Notice: Undefined offset: 1120 in /home/ydadmin/htdocs/lieferando/application/models/Meals.php on line 645
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/models/Meals.php:645
+ 1. Yourdelivery_Model_Meals->hasExtras() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/janamesa.com.br/56f1afe9b8021abb0e7dfcd646dd8f9dc38d801b.file.callmeal.htm.php:225
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /request_order/callmeal/id/7819/size/1120/update/false
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:24 UTC] Notice: Undefined offset: 1123 in /home/ydadmin/htdocs/lieferando/application/models/Meals.php on line 645
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/models/Meals.php:645
+ 1. Yourdelivery_Model_Meals->hasExtras() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/janamesa.com.br/56f1afe9b8021abb0e7dfcd646dd8f9dc38d801b.file.callmeal.htm.php:225
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /request_order/callmeal/id/7819/size/1120/update/false
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:31 UTC] Notice: Undefined index: comment in /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php on line 554
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:554
+ 1. Order_BasisController->finishAction() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513
+ 2. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 3. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 4. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 5. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 6. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:31 UTC] Notice: Undefined index: etage in /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php on line 557
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:557
+ 1. Order_BasisController->finishAction() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513
+ 2. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 3. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 4. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 5. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 6. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:31 UTC] Notice: Undefined index: cpf in /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php on line 562
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:562
+ 1. Order_BasisController->finishAction() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513
+ 2. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 3. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 4. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 5. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 6. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:31 UTC] Notice: Undefined index: fidelity in /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php on line 671
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:671
+ 1. Order_BasisController->finishAction() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513
+ 2. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 3. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 4. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 5. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 6. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:31 UTC] Notice: Undefined index: floor in /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php on line 701
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:701
+ 1. Order_BasisController->finishAction() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513
+ 2. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 3. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 4. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 5. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 6. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:31 UTC] Notice: Undefined index: floor in /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php on line 704
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:704
+ 1. Order_BasisController->finishAction() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513
+ 2. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 3. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 4. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 5. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 6. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined variable: GADocumentReady in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/a8158007f2b45cd4729fc9111c2bd1621e73a8f5.file.analytics.htm.php:24
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:211
+ 5. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 6. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 7. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 8. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 9. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 10. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 11. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 12. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 13. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 14. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 15. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 16. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 17. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 18. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined variable: GADocumentReady in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/a8158007f2b45cd4729fc9111c2bd1621e73a8f5.file.analytics.htm.php:55
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:211
+ 5. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 6. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 7. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 8. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 9. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 10. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 11. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 12. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 13. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 14. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 15. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 16. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 17. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 18. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined variable: trackGoogleEcomerce in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:212
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined variable: cityId in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:517
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined variable: cityId in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:520
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined variable: discount in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:537
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined variable: discount in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:560
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined variable: discount in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:562
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined variable: discount in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:577
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined variable: newCustomer in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:581
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined variable: newCustomer in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:584
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined variable: type in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:589
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined variable: discount in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:595
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined variable: newCustomerDiscountError in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:767
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined variable: newCustomerDiscountError in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:800
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined index: hausnr in /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php on line 945
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:945
+ 1. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 2. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 3. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 4. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 5. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 6. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 7. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 8. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 9. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 10. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 11. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 12. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 13. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 14. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined index: street in /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php on line 946
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:946
+ 1. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 2. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 3. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 4. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 5. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 6. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 7. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 8. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 9. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 10. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 11. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 12. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 13. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 14. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined index: telefon in /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php on line 975
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:975
+ 1. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 2. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 3. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 4. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 5. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 6. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 7. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 8. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 9. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 10. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 11. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 12. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 13. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 14. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined offset: 0 in /home/ydadmin/htdocs/lieferando/application/models/DbTable/Restaurant.php on line 2556
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/models/DbTable/Restaurant.php:2556
+ 1. Yourdelivery_Model_DbTable_Restaurant->getNextDeliverTime() /home/ydadmin/htdocs/lieferando/application/models/Servicetype/Abstract.php:2828
+ 2. Yourdelivery_Model_Servicetype_Abstract->getNextDeliverTime() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:1094
+ 3. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 4. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 5. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 6. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 7. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 8. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 9. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 10. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 11. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 12. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 13. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 14. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 15. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 16. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined index: cpf in /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php on line 1106
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:1106
+ 1. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 2. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 3. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 4. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 5. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 6. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 7. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 8. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 9. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 10. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 11. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 12. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 13. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 14. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined variable: postfix in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:1204
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:32 UTC] Notice: Undefined variable: postfix in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/e88af5dbf67872665bdf9d61a9ed60b65d30b3ab.file.finish.htm.php:1225
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/servico-de-entega-arabie-sao-paulo
+[09-Jul-2012 17:13:34 UTC] Notice: Use of undefined constant day - assumed 'day' in /home/ydadmin/htdocs/lieferando/application/models/DbTable/Restaurant/Openings.php on line 179
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/models/DbTable/Restaurant/Openings.php:179
+ 1. Yourdelivery_Model_DbTable_Restaurant_Openings->getOpenings() /home/ydadmin/htdocs/lieferando/application/models/Servicetype/Openings.php:194
+ 2. Yourdelivery_Model_Servicetype_Openings->_getOpeningsFromDatabase() /home/ydadmin/htdocs/lieferando/application/models/Servicetype/Openings.php:154
+ 3. Yourdelivery_Model_Servicetype_Openings->getIntervalOfDay() /home/ydadmin/htdocs/lieferando/application/controllers/Request/ServiceController.php:112
+ 4. Request_ServiceController->openingtimedayAction() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513
+ 5. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 6. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 7. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 8. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 9. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /request_service/openingtimeday
+Referer: http://www.yourdelivery.local/order_private/finish
+[09-Jul-2012 17:13:50 UTC] Notice: Undefined index: create_user in /home/ydadmin/htdocs/lieferando/application/controllers/Order/PrivateController.php on line 77
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/controllers/Order/PrivateController.php:77
+ 1. Order_PrivateController->_finish() /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:727
+ 2. Order_BasisController->finishAction() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513
+ 3. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 4. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 5. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 6. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 7. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/order_private/finish
+[09-Jul-2012 17:13:50 UTC] Notice: Undefined index: newsletter in /home/ydadmin/htdocs/lieferando/application/controllers/Order/PrivateController.php on line 103
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/application/controllers/Order/PrivateController.php:103
+ 1. Order_PrivateController->_finish() /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:727
+ 2. Order_BasisController->finishAction() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513
+ 3. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 4. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 5. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 6. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 7. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/order_private/finish
+[09-Jul-2012 17:13:50 UTC] Notice: Undefined index: courier in /home/ydadmin/htdocs/lieferando/library/Default/Model/Base.php on line 531
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Default/Model/Base.php:531
+ 1. Default_Model_Base->save() /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php:176
+ 2. Yourdelivery_Model_Order_Abstract->save() /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php:1140
+ 3. Yourdelivery_Model_Order_Abstract->postFinish() /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php:1069
+ 4. Yourdelivery_Model_Order_Abstract->finish() /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:770
+ 5. Order_BasisController->finishAction() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513
+ 6. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 7. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 8. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 9. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 10. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/order_private/finish
+[09-Jul-2012 17:13:50 UTC] Notice: Undefined index: courier in /home/ydadmin/htdocs/lieferando/library/Default/Model/Base.php on line 532
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Default/Model/Base.php:532
+ 1. Default_Model_Base->save() /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php:176
+ 2. Yourdelivery_Model_Order_Abstract->save() /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php:1140
+ 3. Yourdelivery_Model_Order_Abstract->postFinish() /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php:1069
+ 4. Yourdelivery_Model_Order_Abstract->finish() /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:770
+ 5. Order_BasisController->finishAction() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513
+ 6. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 7. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 8. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 9. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 10. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /order_private/finish
+Referer: http://www.yourdelivery.local/order_private/finish
+[09-Jul-2012 17:13:50 UTC] Notice: Undefined variable: newCustomerDiscountError in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/95d06f10ef6938c1459865387824278d9b27fa1d.file.form_order.htm.php:20
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/1b555a8babb5486899fb3d9eebeda2b4627107c5.file.login.htm.php:37
+ 5. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 6. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 7. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/5fc73a72a27638a289f8e75f49c6ec7fd225a80a.file.janamesa.com.br.htm.php:28
+ 8. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 9. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 10. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/d89bc824c5aecb8146286aeaa38c5288a456af14.file.base_header.htm.php:25
+ 11. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 12. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 13. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/cfb18d7de107474025a9ff84e43ab45e7827c30b.file.throw.htm.php:145
+ 14. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 15. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 16. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 17. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 18. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 19. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 20. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 21. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 22. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 23. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 24. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 25. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 26. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 27. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /error/throw
+Referer: http://www.yourdelivery.local/order_private/finish
+[09-Jul-2012 17:16:31 UTC] Notice: Undefined variable: GADocumentReady in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/a8158007f2b45cd4729fc9111c2bd1621e73a8f5.file.analytics.htm.php:24
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/13e17b1192aeee8ab19deaba7ff187f6f200495f.file.notfound.htm.php:141
+ 5. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 6. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 7. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 8. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 9. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 10. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 11. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 12. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 13. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 14. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 15. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 16. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 17. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 18. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /delivery-jardins
+[09-Jul-2012 17:16:31 UTC] Notice: Undefined variable: GADocumentReady in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/a8158007f2b45cd4729fc9111c2bd1621e73a8f5.file.analytics.htm.php:55
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/13e17b1192aeee8ab19deaba7ff187f6f200495f.file.notfound.htm.php:141
+ 5. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 6. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 7. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 8. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 9. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 10. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 11. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 12. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 13. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 14. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 15. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 16. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 17. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 18. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /delivery-jardins
+[09-Jul-2012 17:16:31 UTC] Notice: Undefined variable: trackGoogleEcomerce in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/13e17b1192aeee8ab19deaba7ff187f6f200495f.file.notfound.htm.php:142
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /delivery-jardins
+[09-Jul-2012 17:16:31 UTC] Notice: Undefined variable: newCustomerDiscountError in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/95d06f10ef6938c1459865387824278d9b27fa1d.file.form_order.htm.php:20
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/1b555a8babb5486899fb3d9eebeda2b4627107c5.file.login.htm.php:37
+ 5. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 6. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 7. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/5fc73a72a27638a289f8e75f49c6ec7fd225a80a.file.janamesa.com.br.htm.php:28
+ 8. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 9. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 10. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/d89bc824c5aecb8146286aeaa38c5288a456af14.file.base_header.htm.php:25
+ 11. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 12. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 13. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/13e17b1192aeee8ab19deaba7ff187f6f200495f.file.notfound.htm.php:152
+ 14. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 15. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 16. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 17. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 18. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 19. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 20. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 21. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 22. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 23. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 24. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 25. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 26. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 27. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /delivery-jardins
+[09-Jul-2012 17:16:36 UTC] Notice: Undefined variable: GADocumentReady in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/a8158007f2b45cd4729fc9111c2bd1621e73a8f5.file.analytics.htm.php:24
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/13e17b1192aeee8ab19deaba7ff187f6f200495f.file.notfound.htm.php:141
+ 5. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 6. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 7. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 8. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 9. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 10. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 11. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 12. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 13. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 14. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 15. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 16. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 17. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 18. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /delivery-jardins-sp
+[09-Jul-2012 17:16:36 UTC] Notice: Undefined variable: GADocumentReady in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/a8158007f2b45cd4729fc9111c2bd1621e73a8f5.file.analytics.htm.php:55
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/13e17b1192aeee8ab19deaba7ff187f6f200495f.file.notfound.htm.php:141
+ 5. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 6. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 7. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 8. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 9. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 10. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 11. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 12. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 13. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 14. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 15. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 16. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 17. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 18. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /delivery-jardins-sp
+[09-Jul-2012 17:16:36 UTC] Notice: Undefined variable: trackGoogleEcomerce in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/13e17b1192aeee8ab19deaba7ff187f6f200495f.file.notfound.htm.php:142
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 5. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 6. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 7. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 8. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 9. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 10. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 11. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 12. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 13. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 14. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 15. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /delivery-jardins-sp
+[09-Jul-2012 17:16:36 UTC] Notice: Undefined variable: newCustomerDiscountError in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php on line 291
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_data.php:291
+ 1. Smarty_Internal_Data->getVariable() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/95d06f10ef6938c1459865387824278d9b27fa1d.file.form_order.htm.php:20
+ 2. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 3. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 4. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/1b555a8babb5486899fb3d9eebeda2b4627107c5.file.login.htm.php:37
+ 5. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 6. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 7. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/5fc73a72a27638a289f8e75f49c6ec7fd225a80a.file.janamesa.com.br.htm.php:28
+ 8. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 9. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 10. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/d89bc824c5aecb8146286aeaa38c5288a456af14.file.base_header.htm.php:25
+ 11. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 12. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 13. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/application/views/smarty/template_c/default/13e17b1192aeee8ab19deaba7ff187f6f200495f.file.notfound.htm.php:152
+ 14. include() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:432
+ 15. Smarty_Internal_Template->renderTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php:567
+ 16. Smarty_Internal_Template->getRenderedTemplate() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:336
+ 17. Smarty->fetch() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:465
+ 18. Default_View_Smarty->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:897
+ 19. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:918
+ 20. Zend_Controller_Action_Helper_ViewRenderer->render() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/Helper/ViewRenderer.php:957
+ 21. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action/HelperBroker.php:277
+ 22. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:523
+ 23. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 24. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 25. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 26. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 27. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:111
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+Url: /delivery-jardins-sp

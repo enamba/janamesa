@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="yourdelivery GmbH" />
+        <meta name="publisher" content="yourdelivery GmbH" />
+
+        <meta name="robots" content="noindex, nofollow" />
+
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-core.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-admin.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-gridbox.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-zendform.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-jquery.css" />
+
+        <script type="text/javascript" src="/media/javascript/compiled/backend-{$REVISION}.js"></script>
+
+        <title>{__b('Admin backend')}</title>
+    </head>
+
+    <body>
+        <div id="page">
+            <div id="content">
+                {include file='administration/_notifications.htm'}
+
+                {block name="content"}{/block}
+            </div>
+        </div>
+    </body>
+</html>

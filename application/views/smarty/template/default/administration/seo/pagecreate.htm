@@ -1,0 +1,83 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<form action="/administration_seo/pagecreate" method="post" name="form" enctype="multipart/form-data">
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Landing Page')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="20%">{__b('Name')}:</td>
+                            <td width="80%"><input type="text" name="name" class="rund_set text" value="{$p.name}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Stadt')}:</td>
+                            <td>
+                                <select name="city">
+                                    <option value="">{__b('keine Stadtzuordnung')}</option>
+                                    {foreach from=$lpcity item=city key=cval}
+                                        <option value="{$cval}" {if $p.city == $cval}selected{/if}>{$city}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Keywords')}</td>
+                            <td><input type="text" name="keywords" class="rund_set text" value="{$p.keywords}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('H1:')}</td>
+                            <td><input type="text" name="h1" class="rund_set text" value="{$p.h1}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('H2:')}</td>
+                            <td><input type="text" name="h2" class="rund_set text" value="{$p.h2}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('H3:')}</td>
+                            <td><input type="text" name="h3" class="rund_set text" value="{$p.h3}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Bild Auswahl')}:</td>
+                            <td>
+                                <select name="select_img">
+                                    <option value="">{__b('Eigens Bild hochladen')}</option>
+                                    {foreach from=$img_select item=opt}
+                                        <option value="{$opt}" {if $p.select_img == $opt}selected{/if}>{$opt}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Bild')}:</td>
+                            <td><input type="file" class="inp w160" name="img" id="file" /></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Rabatt')}</td>
+                            <td>
+                                <select name="rabattCodeId">
+                                    <option value="">{__b('Kein Rabatt Code')}</option>
+                                    {foreach from=$codes item=code}
+                                        {foreach from=$code->getCodes() item=c}
+                                            <option value="{$c->id}">{$c->code}</option>
+                                        {/foreach}
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" name="createpage" value="{__b('Bestätigen')}" class="button rund_set" />
+                <input type="submit" name="createpage" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+</form>
+{/block}    

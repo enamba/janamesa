@@ -1,0 +1,103 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Bewertung erstellen')}
+        </div>
+        <div class="item-content">
+            <div>
+            <form action="/administration_service_ratings/create" method="post" name="form">
+                <table class="user-tab" style="width: 700px">
+                    <tr>
+                        <td width="10%">{__b('Restaurant')}:</td>
+                        <td width="90%">
+                            <select name="restaurantId" style="width:250px;">
+                                {foreach from=$restIds item=ri}
+                                <option value="{$ri.id}">{$ri.name} ({$ri.street} {$ri.hausNr},{$ri.plz}) #{$ri.id}</option>
+                                {/foreach}
+                            </select>                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Autor')}</td>
+                        <td><input type="text" name="author"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Titel')}</td>
+                        <td><input type="text" name="title"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Kommentar')}</td>
+                        <td><textarea rows="8" style="width: 400px;" name="comment"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Qualität')}</td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td width="20%"><span class="yd-rated-02"></span></td>
+                                    <td width="20%"><span class="yd-rated-04"></span></td>
+                                    <td width="20%"><span class="yd-rated-06"></span></td>
+                                    <td width="20%"><span class="yd-rated-08"></span></td>
+                                    <td width="20%"><span class="yd-rated-10"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" value="1" name="quality"/></td>
+                                    <td><input type="radio" value="2" name="quality"/></td>
+                                    <td><input type="radio" value="3" name="quality"/></td>
+                                    <td><input type="radio" value="4" name="quality"/></td>
+                                    <td><input type="radio" value="5" name="quality" checked="checked"/></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Lieferung')}</td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td width="20%"><span class="yd-rated-02"></span></td>
+                                    <td width="20%"><span class="yd-rated-04"></span></td>
+                                    <td width="20%"><span class="yd-rated-06"></span></td>
+                                    <td width="20%"><span class="yd-rated-08"></span></td>
+                                    <td width="20%"><span class="yd-rated-10"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" value="1" name="delivery"/></td>
+                                    <td><input type="radio" value="2" name="delivery"/></td>
+                                    <td><input type="radio" value="3" name="delivery"/></td>
+                                    <td><input type="radio" value="4" name="delivery"/></td>
+                                    <td><input type="radio" value="5" name="delivery" checked="checked"/></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Empfehlung')}</td>
+                        <td>
+                            <table style="width: 200px">
+                                <tr>
+                                    <td width="20%"><img src= "{$domain_static}/images/yd-icons/yd-ratings-thumb.png"></td>
+                                    <td width="20%"><img src= "{$domain_static}/images/yd-icons/yd-ratings-thumb-down.png"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" value="1" name="advise" checked="checked"/></td>
+                                    <td><input type="radio" value="0" name="advise"/></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="{__b('Speichern')}">
+                        </td>
+                    </tr>
+                </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}

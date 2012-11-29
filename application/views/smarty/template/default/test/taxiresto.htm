@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="de" xml:lang="de" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="de" xml:lang="de" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="de" xml:lang="de" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="de" xml:lang="de" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="de" xml:lang="de">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="viewport" content="width=1100">
+
+        <link rel="stylesheet" type="text/css" href="/media/css/www.taxiresto.fr/taxiresto.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/www.taxiresto.fr/yd-frontend-jquery.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/www.taxiresto.fr/yd-frontend-hidden.css" />
+
+        <script type="text/javascript" src="/media/javascript/compiled/frontend-test.js"></script>
+        <script type="text/javascript" src="/media/javascript/www.taxiresto.fr/000-base.js"></script>
+
+        <script type="text/javascript" src="http://www.taxiresto.fr/js/EventHelpers.js"></script>
+        <script type="text/javascript" src="http://www.taxiresto.fr/js/cssQuery-p.js"></script>
+        <script type="text/javascript" src="http://www.taxiresto.fr/js/sylvester.js"></script>
+        <script type="text/javascript" src="http://www.taxiresto.fr/js/cssSandpaper.js"></script>
+
+        <script>
+
+            $(document).ready(function() {
+                $('#slides').slides();
+                
+                $('#slides-lb').slides({
+                    play: 5000,
+                    fadeSpeed: 1000,
+                    effect: 'fade',
+                    crossfade: true
+                });
+            });
+
+        </script>
+
+        <style>
+
+            #yd-plz-search {
+                -sand-transform: rotate(-6deg);
+            }
+
+        </style>
+
+    </head>
+
+    <body class="fr">
+
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+        <div id="yd-nonfooter">
+
+            {include file='base_header.htm'}
+
+            <div id="yd-content" class="yd-clearfix" style="padding-bottom: 250px;">
+
+                <div class="fr-conversion yd-clearfix">
+                    <ul class="fr-social">
+                        <li class="frs1"><a href="" rel="nofollow" target="_blank"></a></li>
+                        <li class="frs2"><a href="" rel="nofollow" target="_blank"></a></li>
+                        <li class="frs3"><a href="" rel="nofollow" target="_blank"></a></li>
+                    </ul>
+                    <div class="fr-begins">
+                        <form name="plzAutocomplete" id="yd-start-order-form" method="get" action="/order_basis/plz">
+                            <input type="hidden" name="cityId" value="" />
+                            <input id="yd-plz-search" class="yd-only-nr yd-empty-text" type="text" name="plz" value="" title="code postal" />
+                            <a id="yd-start-order" name="yd-start-order" href=""></a>
+                        </form>
+                    </div>
+                    <div class="fr-slider">
+                        <div class="fr-slider-window"></div>
+                        <div id="slides">
+                            <div class="slides_container">
+                                <img src="{$domain_static}/images/www.taxiresto.fr/slider1.jpg" />
+                                <img src="{$domain_static}/images/www.taxiresto.fr/slider2.jpg" />
+                                <img src="{$domain_static}/images/www.taxiresto.fr/slider3.jpg" />
+                                <img src="{$domain_static}/images/www.taxiresto.fr/slider4.jpg" />
+                                <img src="{$domain_static}/images/www.taxiresto.fr/slider5.jpg" />
+                            </div>
+                            <a href="#" class="prev">prev</a>
+                            <a href="#" class="next">next</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fr-stuff yd-clearfix">
+                    <div class="fr-stuff-1">
+                        <div class="fr-stuff-title">Comment ça marche ?</div>
+                        <a id="yd-taxislider"></a>
+                    </div>
+                    <div class="fr-stuff-2">
+                        <div class="fr-stuff-title">Lettre d'information</div>
+                        <span>Toujours être au courant avec la lettre d'information.</span>
+                        <a href="/user/register"></a>
+                    </div>
+                    <div class="fr-stuff-3">
+                        <div class="fr-stuff-title">taxiResto iPhone App!</div>
+                        <p>Avec la nouvelle application iPhone taxiresto, commandez vos repas enligne, quand vous voulez, où que vous soyez.</p>
+                        <span>Télécharger gratuitement</span>
+                        <a href="http://iphoneapp.taxiresto.fr/" target="_blank"></a>
+                    </div>
+                    <div class="fr-stuff-4"></div>
+                    <div class="fr-stuff-5">
+                        <div class="fr-stuff-title">Les dernières entrées</div>
+                        <div class="fr-posts">
+                            {foreach from=Default_Helpers_Web::getBlogNews($config->domain->base) item=news}
+                            <a href="{$news.link}">{$news.title}</a>
+                            {/foreach}
+                        </div>
+
+                    </div>
+                    <div class="fr-stuff-6">
+                        <div class="fr-stuff-title">Le chat</div>
+                        <p>
+                            Le chat support de Taxiresto est à votre disposition 7 jours sur 7 de 9 heures  à minuit en semaine et de 11 heures à minuit le weekend. Si vous ne trouvez pas de réponse à votre question sur la page FAQ, connectez-vous sans plus tarder au chat support. Vous pourrez y poser toutes vos questions et vous recevrez rapidement une réponse. Notre service sera ravi de trouver des solutions pour vous. Contrairement au contact par téléphone, cette fois, c’est gratuit ! Alors n’hésitez plus !
+                        </p>
+                        <!-- BEGIN ProvideSupport.com Graphics Chat Button Code -->
+                        <div id="ci0MyQ" style="z-index:100;position:absolute"></div>
+                        <div id="sc0MyQ" style="display:inline"></div>
+                        <div id="sd0MyQ" style="display:none"></div>
+                        <script type="text/javascript">
+                        var se0MyQ=document.createElement("script");se0MyQ.type="text/javascript";var se0MyQs=(location.protocol.indexOf("https")==0?"https":"http")+"://image.providesupport.com/js/taxiresto/safe-standard.js?ps_h=0MyQ&ps_t="+new Date().getTime();
+                        se0MyQs += "&online-image=" + escape('');
+                        se0MyQs += "&offline-image=" + escape('');
+                        setTimeout("se0MyQ.src=se0MyQs;document.getElementById('sd0MyQ').appendChild(se0MyQ)",1)
+                        </script>
+                        <noscript>
+                        <div style="display:inline"><a href="http://www.providesupport.com?messenger=yourdelivery">Customer Service Help Desk</a></div>
+                        </noscript>
+                        <!-- END ProvideSupport.com Graphics Chat Button Code -->
+                    </div>
+                    <div class="fr-stuff-7">
+                        <div class="fb-like-box" data-href="http://www.facebook.com/taxiresto" data-width="270" data-height="185" data-show-faces="true" data-border-color="#e5f2f9" data-stream="false" data-header="false"></div>
+                    </div>
+                </div>
+
+                <div id="yd-texting">
+
+                    <div id="tabs">
+                        <ul class="yd-clearfix">
+                            <li><a class="tab1" href="#tabs-1">Aperçu</a></li>
+                            <li><a class="tab2" href="#tabs-2">Livraison à domicile</a></li>
+                            <li><a class="tab3" href="#tabs-3">Livraison pizza</a></li>
+                        </ul>
+                        <div id="tabs-1">
+
+                            <div>
+                                <h1>Une soirée détente avec Taxiresto</h1>
+                                <p>
+                                    Vous rentrez du travail tard le soir et vous êtes très fatigué. La journée a été dure et vous avez dû déjeuner sur le pouce donc vous avez faim. L’idée de devoir faire la cuisine pendant une heure ne vous tente pas tellement. Vous avez plutôt envie de vous faire plaisir en optant pour un repas déjà préparé. Seulement voilà, votre <a href="/canapes" title="canapé">canapé</a> est très confortable et l’idée de remettre vos chaussures et votre manteau pour aller chercher quelque chose à manger ne vous tente pas du tout… Alors comment faire ? La solution est si simple : rendez-vous sur le site taxiresto.fr. Saisissez votre code postal et le tour est joué. Vous trouverez une sélection de restaurants en coopération avec Taxiresto qui livrent dans votre quartier. Cliquez sur le menu pour faire votre choix. Vous avez envie de nems ? Optez-donc pour <a href="/livraison-repas-chinois" title="la livraison d’un repas chinois">la livraison d’un repas chinois</a>. Vous pouvez aussi vous laisser tenter par la cuisine française, italienne, asiatique, <a href="/indien-livraison-paris" title="indienne">indienne</a>, japonaise ou bien orientale avec un délicieux <a href="/couscous"title="couscous">couscous</a>. Les menus sont accessibles en ligne et vous pouvez les regarder tranquillement et faire votre choix. Il est également possible de donner des indications ou précisions aux cuisiniers, si vous avez un souhait particulier pour votre plat. Indiquez ensuite de quelle manière vous souhaitez payer. Soit en ligne par carte de crédit ou PayPal ou en espèces à la livraison.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h2>Taxiresto: pour les cuisiniers du dimanche et les célibataires…</h2>
+                                <p>
+                                    30 à 45 minutes plus tard, votre plat arrivera. Finalement vous avez choisi les <a href="/meze" title="meze">meze</a>, fraîchement cuisinés et encore tout chauds. Vous pouvez les déguster sur votre canapé  - désormais vous n’avez plus besoin de quitter la maison pour chercher de quoi à manger grâce à Taxiresto. Vous êtes célibataire et vous n’avez pas envie de cuisiner pour une seule personne ? Vous ne savez pas cuisiner ou vous n’avez tout simplement pas envie ? Vous avez souvent recours à la <a href="/livraison-pizza-par-internet" title="livraison de pizza par internet"> livraison de pizza par internet</a>. Grâce à taxiresto.fr, fini les pizzas tous les soirs, à vous les petits plats variés tous les jours ; Lundi <a href="/livraison-pates" title="livraison pâtes">livraison pâtes</a>, mardi <a href="/thai-food" title="thai food">thai food</a>, mercredi indien, jeudi cuisine traditionnelle française et vendredi <a href="/japonais-livraison" title="japonais">japonais</a>, mexicain le samedi et dimanche chez vos parents ! Avec Taxiresto, inutile de changer vos habitudes ou d’aller contre les tendances, au contraire. Vous êtes très branché en utilisant Taxiresto ! Par ailleurs, vous pouvez en savoir plus sur les aliments avec notre <a href="/lexique"  title="lexique">lexique</a>.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3>...mais aussi pour les familles: avec Taxiresto il y en a pour tout le monde !</h3>
+                                <p>
+                                    Taxiresto n’est pas un service réservé aux célibataires. Pour les familles, ça peut être pratique aussi - pourquoi ne pas se faire livrer pour une soirée en famille ? Comme ça, tout le monde se détend, y compris le bouc-émissaire chargé du ravitaillement collectif pendant que le reste s’amuse, en bavardant et en prenant l’apéro. Fini aussi de préparer un menu pour chaque membre de la famille : votre fille veut des <a href="/sushi" title="sushi">sushi</a>, votre mari des <a href="/tapas" title="tapas">tapas</a>  et votre fils préfère la <a href="/livraison-hamburger" title="livraison hamburger">livraison hamburger</a> ? C’est possible avec Taxiresto, et toute la famille est contente. Vous êtes (encore) à deux et vous en avez assez de vous battre pour qui cuisine et qui fait la vaisselle ? Passez une soirée paisible en amoureux avec un menu commandé sur Taxiresto !                        
+                                </p>
+                            </div>
+
+                        </div>
+                        <div id="tabs-2">
+                            <h3>Soyez trendy, pensez food delivery</h3>
+                            <p>
+                                Mettez vous au " <a href="/food-delivery" title="food delivery">food delivery</a> ” ! Taxiresto vous propose un service de <a href="/livraison-de-repas-a-domicile" title="livraison de repas a domicile">livraison de repas a domicile</a>. En quelques clics, commandez des plats et menus aussi bons que variés directement depuis chez vous grâce au service de livraison. Ainsi, moins de 45 minutes plus tard, vous profiterez pleinement d’un excellent <a href="/repas-a-domicile" title=" repas a domicile">repas a domicile</a>.
+                                <br /><br />
+                                Après le travail, peu d’entres nous ont encore envie d’enfiler leurs tabliers et de se casser la tête pour concocter un menu qui plaira à tout le monde. La solution ? Optez pour une <a href="/livraison-restaurant" title="livraison restaurant">livraison restaurant</a>. Taxiresto est là pour ça ! Il vous offre la possibilité de déguster un bon plat sans faire trop d’efforts. Que vous ayez des enfants ou que vous mangiez en amoureux, vous trouverez toujours des <a href="/livraison-a-domicile" title="livraison à domicile repas">livraison à domicile </a> adaptées à toutes les situations.
+                            </p>
+                            <p class="yd-read-more-fr">
+                                Grâce aux <a href="/livraisons-de-repas" title="livraisons de repas">livraisons de repas</a> pour une soirée entre amis, quelques que soient les goûts de chacun, vous pourrez les satisfaire, puisque Taxiresto vous propose toute sorte de <a href="/restaurant-a-domicile" title="restaurant à domicile">restaurant a domicile</a> avec des spécialités et des plats du monde entier. Les amateurs de plats raffinés trouveront leur bonheur tout autant que les adeptes de fast-foods. <a href="/chez-vous-livraison-a-domicile" title="chez vous livraison à domicile">chez vous livraison à domicile</a> rime avec pratique ; rapide et sans prise de tête avec <a href="/restauration-a-domicile" title="restauration à domicile">restauration à domicile</a>. Succès garanti ! Epatez vos invités en leur suggérant des plats originaux, biens présentés et appétissants comme si vous aviez un chef de <a href="/resto-a-domicile" title="resto à domicile">resto à domicile</a>. Ils n’en croiront pas leurs yeux ! C’est simple ! Vous n’avez qu’à entrer le code postal de votre ville pour définir le lieu de <a href="/livraison-de-repas-a-domicile" title="livraison de repas à domicile">livraison de repas à domicile</a>. Ceci fait, vous aurez accès à une liste de restaurants près de chez vous et n’aurez plus qu’à sélectionner celuide votre choix ! A présent, juste un peu de patience, si on sonne à votre porte, c’est que votre <a href="/livraison-resto " title="livraison resto">livraison resto</a> est arrivée ! Pourquoi se compliquer la vie quand on peut faire simple ? Osez la <a href="/resto-livraison" title="resto livraison">resto livraison</a>, tous les habitués de la <a href="/livraison-a-domicile" title="livraison à domicile">livraison à domicile</a> vous le diront, il n’y a rien de plus agréable que de s’occuper de la préparation du repas depuis son canapé et devant son ordinateur. Un <a href="/restaurant-livraison-a-domicile" title="restaurant livraison domicile">restaurant livraison domicile</a> sert à cela ! A vous simplifier la vie tout simplement ! Vous n’aurez même pas à faire la vaisselle ! Un autre avantage non négligeable de la <a href="/livraison-repas-domicile" title="livraison repas domicile">livraison repas domicile</a>. Adaptez vos repas à toutes vos envies sans contraintes ! Pizzas, burgers ou pâtes pour les soirées télévision ou entre amis ; il y a la <a href="/livraison-a-domicile-repas" title="livraison à domicile repas">livraison à domicile repas</a>, comme des salades ou des plats orientaux pour une soirée à deux. Les enfants aussi seront comblés grâce au très large éventail de plats que le service de <a href="/livraison-repas-domicile" title="livraison repas domicile ">livraison repas domicile</a> vous offre. Mais Taxiresto ne vous propose pas seulement à manger ! Il met aussi à votre disposition, au travers des <a href="/livraisons-a-domicile" title="livraisons à domicile">livraisons à domicile</a>, un grand nombre de boissons avec ou sans alcool, mais aussi des glaces et un grand choix de desserts. C’est ça aussi la <a href="/restauration-livraison" title="restauration livraison">restauration livraison</a>. N’attendez plus pour commander et vous régaler ! Taxiresto est fait pour satisfaire vos moindres envies et celles de vos proches avec la <a href="/livraison-repas" title="livraison repas">livraison repas</a> ! Dès à présent et sans plus attendre, régalez vous sans vous déplacer en profitant du service <a href="/livraison" title="livraison">livraison</a> !
+                                <br /><br />
+                                Bon appétit !
+                            </p>
+                        </div>
+                        <div id="tabs-3">
+                            <h3>Livraison pizza</h3>
+                            <p>
+                                Qui n’a jamais mangé de <a href="/pizza" title="pizza">pizza</a> ? Un soir, tranquillement on se fait une <a href="/telepizza" title="telepizza">telepizza</a> qui consiste à allumer l’écran et à se jeter sur le canapé, ou alors il est tout à fait possible de faire la <a href="/commande-pizza" title="commande d'une simple pizza">commande d'une simple pizza</a>, par envie ou par facilité. Les Français sont les premiers mangeurs de pizza en Europe, on le sait tous mais connaissons nous seulement les différents moyens de préparer la pizza ? Quand on parle pizza on pense tout de suite à « <a href="/italian-pizza" title="italian pizza">italian pizza</a> ». L’Italie, la fameuse terre d’origine de la pizza ! Mais aujourd’hui que ce plat s’est répandu à travers le monde, on trouve toutes sortes de variantes.
+                                <br /><br />
+                                L’<a href="/american-pizza" title="american pizza">american pizza</a>, mythe de la pizza américaine avec ses variantes diverses et variées très caractéristiques de nos amis américains comme la fameuse <a href="/pizza-ut" title="pizza ut">pizza ut</a>, pizza tendre qui est généralement agrémentée de fromage dans sa croûte. Découvrez la culture culinaire américaine avec une délicieuse <a href="/big-pizza" title="big pizza">big pizza</a>.
+                                Connaissez-vous aussi la <a href="/pizza-burger" title="pizza burger">pizza burger</a> ? Cette drôle de pizza, croisement étrange d’un hamburger et d’une pizza. Pour faire plus léger privilégiez donc une <a href="/pizza-capri" title="pizza capri">pizza capri</a>, qui est en fait une <a href="/margarita-pizza" title="margarita pizza">margarita pizza</a> avec du jambon. 
+                                Cependant quitte à piocher vos idées dans les grands classiques de la cuisine italienne pour une « <a href="/family-pizza" title="family pizza">family pizza</a>  », pourquoi ne pas privilégier le goût pour une fois ? Prenez donc une <a href="/pepperoni-pizza" title="pepperoni pizza">pepperoni pizza</a> ou une pizza au saumon. Mais pour être sûr de faire dans le vrai repas italien avec certitude, prenez une <a href="/pizza-pasta" title="pizza pasta">pizza pasta</a> qui vous permet de manger deux mets italien en une fois.
+                            </p>
+                            <p class="yd-read-more-fr">
+                                Enfin, peu importe la pizza, car la « <a href="/best-pizza" title="best pizza">best pizza</a>  ever » c’est bien la <a href="/pizza-a-domicile" title="pizza à domicile">pizza à domicile</a>, ! Celle que l’on peut manger comme on veut, avec qui on veut et surtout quand on veut. On commande une <a href="/pizza-a-livrer" title="pizza à livrer">pizza à livrer</a> et dans l’heure qui suit la <a href="/boite-a-pizza" title="boite a pizza">boite a pizza</a> tant attendue arrive. C’est tellement agréable! Et il faut dire qu’avec Taxiresto, la pizza c’est vraiment <a href="/pizza-express" title="pizza express">pizza express</a>. Après le fast-food voici venir la <a href="/fast-pizza" title="fast pizza">fast pizza</a>.
+                                <br /><br />
+                                Taxiresto est vraiment pratique pour tous les fondus de <a href="/pizza-pizza" title="pizza pizza">pizza pizza</a> ! Avec nous vous cherchez et trouvez votre <a href="/pizza-online" title="pizza online">pizza online</a>. Et c’est très simple ensuite. Chacun de nos partenaires a son propre service de <a href="/pizza-delivery" title="pizza delivery">pizza delivery</a> qui vous apportera votre commande où vous le souhaitez y compris si vous avez envie d’une <a href="/pizza-nuit" title="pizza de nuit">pizza de nuit</a>. N’oubliez pas que nous sommes à votre service et que la <a href="/pizza-livraison" title="pizza livraison">pizza livraison</a>  c’est notre métier.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="fr-voodoo yd-clearfix">
+                    <div class="fr-voodoo-1">
+
+                        <ul>
+                            <li><strong>Livraison Île de France</strong></li>
+                            <li><a href="/livraison-alfortville" title="Livraison Alfortville">Livraison Alfortville</a></li>
+                            <li><a href="/livraison-antony" title="Livraison Antony">Livraison Antony</a></li>
+                            <li><a href="/livraison-argenteuil" title="Livraison Argenteuil">Livraison Argenteuil</a></li>
+                            <li><a href="/livraison-aubervilliers" title="Livraison Aubervilliers">Livraison Aubervilliers</a></li>
+                            <li><a href="/livraison-bagneux" title="Livraison Bagneux">Livraison Bagneux</a></li>
+                            <li><a href="/liste-livraison-ile-de-france" title="Livraison Île de France">&raquo; plus</a></li>
+                        </ul>
+
+                        <ul>
+                            <li><strong>Livraison pizza Île de France</strong></li>
+                            <li><a href="/livraison-pizza-alfortville" title="Livraison pizza Alfortville">Livraison pizza Alfortville</a></li>
+                            <li><a href="/livraison-pizza-argenteuil" title="Livraison pizza Argenteuil">Livraison pizza Argenteuil</a></li>
+                            <li><a href="/livraison-pizza-asnieres-sur-seine" title="Livraison pizza Asnieres sur Seine">Livraison pizza Asnieres sur Seine</a></li>
+                            <li><a href="/livraison-pizza-aulnay-sous-bois" title="Livraison pizza Aulnay sous Bois">Livraison pizza Aulnay sous Bois</a></li>
+                            <li><a href="/livraison-pizza-bondy" title="Livraison pizza Bondy">Livraison pizza Bondy</a></li>
+                            <li><a href="/liste-livraison-pizza" title="Livraison pizza">&raquo; plus</a></li>
+                        </ul>
+
+                        <ul>
+                            <li><strong>Livraison sushi Île de France</strong></li>
+                            <li><a href="/livraison-sushi-antony" title="Livraison sushi Antony">Livraison sushi Antony</a></li>
+                            <li><a href="/livraison-sushi-asnieres" title="Livraison sushi Asnieres">Livraison sushi Asnieres</a></li>
+                            <li><a href="/livraison-sushi-bois-colombes" title="Livraison sushi Bois Colombes">Livraison sushi Bois Colombes</a></li>
+                            <li><a href="/livraison-sushi-boulogne-billancourt" title="Livraison sushi Boulogne Billancourt">Livraison sushi Boulogne Billancourt</a></li>
+                            <li><a href="/livraison-sushi-cergy" title="Livraison sushi Cergy">Livraison sushi Cergy</a></li>
+                            <li><a href="/liste-livraison-sushi" title="Livraison sushi">&raquo; plus</a></li>
+                        </ul>
+
+                        <ul>
+                            <li><strong>Livraison Paris</strong></li>
+                            <li><a href="/livraison-paris-1" title="Livraison Paris 1">Livraison Paris 1</a></li>
+                            <li><a href="/livraison-paris-2" title="Livraison Paris 2">Livraison Paris 2</a></li>
+                            <li><a href="/livraison-paris-3" title="Livraison Paris 3">Livraison Paris 3</a></li>
+                            <li><a href="/livraison-paris-4" title="Livraison Paris 4">Livraison Paris 4</a></li>
+                            <li><a href="/livraison-paris-5" title="Livraison Paris 5">Livraison Paris 5</a></li>
+                            <li><a href="/liste-livraison" title="Livraison">&raquo; plus</a></li>
+                        </ul>
+
+                        <ul>
+                            <li><strong>Livraison pizza Paris</strong></li>
+                            <li><a href="/livraison-pizza-paris-1" title="Livraison pizza Paris 1">Livraison pizza Paris 1</a></li>
+                            <li><a href="/livraison-pizza-paris-2" title="Livraison pizza Paris 2">Livraison pizza Paris 2</a></li>
+                            <li><a href="/livraison-pizza-paris-3" title="Livraison pizza Paris 3">Livraison pizza Paris 3</a></li>
+                            <li><a href="/livraison-pizza-paris-4" title="Livraison pizza Paris 4">Livraison pizza Paris 4</a></li>
+                            <li><a href="/livraison-pizza-paris-5" title="Livraison pizza Paris 5">Livraison pizza Paris 5</a></li>
+                            <li><a href="/liste-livraison-pizza-paris" title="Livraison pizza">&raquo; plus</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="fr-voodoo-2">
+
+                        <ul>
+                            <li><strong>Livraison sushi Paris</strong></li>
+                            <li><a href="/livraison-sushi-paris-1" title="Livraison sushi Paris 1">Livraison sushi Paris 1</a></li>
+                            <li><a href="/livraison-sushi-paris-2" title="Livraison sushi Paris 2">Livraison sushi Paris 2</a></li>
+                            <li><a href="/livraison-sushi-paris-3" title="Livraison sushi Paris 3">Livraison sushi Paris 3</a></li>
+                            <li><a href="/livraison-sushi-paris-4" title="Livraison sushi Paris 4">Livraison sushi Paris 4</a></li>
+                            <li><a href="/livraison-sushi-paris-5" title="Livraison sushi Paris 5">Livraison sushi Paris 5</a></li>
+                            <li><a href="/liste-livraison-sushi-paris" title="Livraison sushi">&raquo; plus</a></li>
+                        </ul>
+
+                        <ul>
+                            <li><strong>Cuisines du monde</strong></li>
+                            <li><a href="/cuisine-marocaine" title="Cuisine marocaine">Cuisine marocaine</a></li>
+                            <li><a href="/cuisine-italienne" title="Cuisine italienne">Cuisine italienne</a></li>
+                            <li><a href="/cuisine-indienne" title="Cuisine indienne">Cuisine indienne</a></li>
+                            <li><a href="/cuisine-tunisienne" title="Cuisine tunisienne">Cuisine tunisienne</a></li>
+                            <li><a href="/cuisine-chinoise" title="Cuisine chinoise">Cuisine chinoise</a></li>
+                            <li><a href="/liste-cuisines1" title="Toutes les cuisines de A à M"><em>Toutes les cuisines de A à M</em></a></li>
+                            <li><a href="/liste-cuisines2" title="Toutes les cuisines de N à Z"><em>Toutes les cuisines de N à Z</em></a></li>
+                        </ul>
+
+                        <ul>
+                            <li><strong>Plats de A à Z</strong></li>
+                            <li><a href="/brownie" title="Brownie">Brownie</a></li>
+                            <li><a href="/mousse-au-chocolat" title="Mousse au chocolat">Mousse au chocolat</a></li>
+                            <li><a href="/nan" title="Nan">Nan</a></li>
+                            <li><a href="/potatoes" title="Potatoes">Potatoes</a></li>
+                            <li><a href="/tiramisu" title="Tiramisu">Tiramisu</a></li>
+                            <li><a href="/liste-plats1" title="Tous les plats de A à H"><em>Tous les plats de A à H</em></a></li>
+                            <li><a href="/liste-plats2" title="Tous les plats I à P"><em>Tous les plats I à P</em></a></li>
+                            <li><a href="/liste-plats3" title="Tous les plats Q à Z"><em>Tous les plats Q à Z</em></a></li>
+                        </ul>
+
+                        <ul>
+                            <li><strong>Plats selon catégorie</strong></li>
+                            <li><a href="/pain" title="Pain et sandwich">Pain et sandwich</a></li>
+                            <li><a href="/poisson" title="Poisson et fruits de mer">Poisson et fruits de mer</a></li>
+                            <li><a href="/pates" title="Nouilles et pâtes">Nouilles et pâtes</a></li>
+                            <li><a href="/salade" title="Salade">Salade</a></li>
+                            <li><a href="/soupe" title="Soupe">Soupe</a></li>
+                            <li><a href="/liste-categories1" title="Toutes les catégories de A à P"><em>Toutes les catégories de A à P</em></a></li>
+                            <li><a href="/liste-categories2" title="Toutes les catégories de Q à Z"><em>Toutes les catégories de Q à Z</em></a></li>
+                        </ul>
+
+                        <ul>
+                            <li><strong>Plats préférés selon catégorie</strong></li>
+                            <li><a href="/nan-fromage" title="Nan fromage">Nan fromage</a></li>
+                            <li><a href="/sushi-saumon" title="Sushi saumon">Sushi saumon</a></li>
+                            <li><a href="/lasagne-bolognaise" title="Lasagne bolognaise">Lasagne bolognaise</a></li>
+                            <li><a href="/salade-de-choux" title="Salade de choux">Salade de choux</a></li>
+                            <li><a href="/soupe-miso" title="Soupe miso">Soupe miso</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="fr-voodoo-3">
+
+                        <ul>
+                            <li><strong>Plats préférés selon cuisine</strong></li>
+                            <li><a href="/tajine" title="Tajine">Tajine</a></li>
+                            <li><a href="/pizza-au-thon" title="Pizza au thon">Pizza au thon</a></li>
+                            <li><a href="/poulet-vindaloo" title="Poulet vindaloo">Poulet vindaloo</a></li>
+                            <li><a href="/nems" title="Nems">Nems</a></li>
+                            <li><a href="/couscous" title="Couscous">Couscous</a></li>
+                        </ul>
+
+                        <ul>
+                            <li><strong>Bestseller</strong></li>
+                            <li><a href="/brick-thon" title="Brick thon">Brick thon</a></li>
+                            <li><a href="/cheese-nan" title="Cheese nan">Cheese nan</a></li>
+                            <li><a href="/menu-solo" title="Menu solo">Menu solo</a></li>
+                            <li><a href="/pizza-4-fromages" title="Pizza 4 fromages">Pizza 4 fromages</a></li>
+                            <li><a href="/pizza-reine" title="Pizza Reine">Pizza Reine</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="yd-footer">
+            <div id="yd-footer-content">
+
+                <img src="{$domain_static}/images/www.taxiresto.fr/footer-pic1.jpg" class="fr-footer-pic1"/>
+                <img src="{$domain_static}/images/www.taxiresto.fr/footer-pic2.png" class="fr-footer-pic2"/>
+
+                <div class="yd-footer-column">
+                    <ul>
+                        <li><a rel="follow" href="/about">Mentions légales</a></li>
+                        <li><a rel="follow" href="/customer-terms">CGV</a></li>
+                        <li><a rel="follow" href="/privacy">Protection des données</a></li>
+                    </ul>
+                </div>
+
+                <div class="yd-footer-column">
+                    <ul>
+                        <li><a rel="follow" href="/a-propos">A propos de taxiResto</a></li>
+                        <li><a rel="follow" onClick="location.href='/inscrire-son-restaurant'">Inscrire son restaurant</a></li>
+                        <li><a rel="follow" href="/programme-affiliation">Programme d’affiliation</a></li>
+                    </ul>
+                </div>
+
+                <div class="yd-footer-column">
+                    <ul>
+                        <li><a rel="follow" href="/faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="yd-footer-column last">
+                    <ul>
+                        <li><a href="http://blog.taxiresto.fr/" target="_blank">Blog</a></li>
+                        <li><a href="http://news.taxiresto.fr/" target="_blank">News</a></li>
+                    </ul>
+                    <a rel="nofollow" target="_blank" class="yd-footer-facebook" href="http://www.facebook.com/taxiresto"></a>
+                    <a rel="nofollow" target="_blank" class="yd-footer-twitter" href="http://twitter.com/taxiresto"></a>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="yd-taxislider-dialog" class="yd-dialog-parent hidden">
+            <div class="yd-dialogs"><a class="yd-dialogs-close"></a>
+
+                <div class="yd-dialogs-head">
+                    <h2>Comment ça marche ?</h2>
+                </div>
+
+                <div class="yd-dialogs-body">
+
+                    <div id="slides-lb">
+                        <div class="slides_container">
+                            <img src="/media/images/www.taxiresto.fr//slider/1.jpg" />
+                            <img src="/media/images/www.taxiresto.fr//slider/2.jpg" />
+                            <img src="/media/images/www.taxiresto.fr//slider/3.jpg" />
+                            <img src="/media/images/www.taxiresto.fr//slider/4.jpg" />
+                            <img src="/media/images/www.taxiresto.fr//slider/5.jpg" />
+                            <img src="/media/images/www.taxiresto.fr//slider/6.jpg" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="yd-dialogs-footer"></div>
+
+            </div>
+        </div>
+
+
+    </body>
+</html>

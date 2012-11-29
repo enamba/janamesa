@@ -1,0 +1,74 @@
+<div class="yd-box">
+
+    <div class="yd-bigbox-head">
+        {__('Budget teilen')}
+    </div>
+
+    <div class="yd-bigbox-body" id="yd-budget-box">
+
+        <ul class="yd-company-form">
+
+            <li>
+                <span>{__('E-Mail-Adresse:')}</span>
+                <input id="check_email" type="text" value="" class="input1 yd-clear-on-click" />
+            </li>
+            <li>
+                <span>{__('Betrag:')}</span>
+                <input id="check_amount_euro" size="4" type="text" name="price2" class="input2 yd-only-nr tooltip budget-input" title="Wähle einen Euro Betrag mit dem sich der Arbeitskollege beteiligen soll!" />
+                ,
+                <input id="check_amount_cent" size="2" maxlength="2" type="text" name="price2" class="input2 yd-only-nr tooltip budget-input" title="Wähle einen Cent Betrag mit dem sich der Arbeitskollege beteiligen soll!" />
+            </li>
+            <li>
+                {if $order->getCustomer()->getCompany()->getCodeVariant() != 0}
+                <span>{__('Projektcode:')}</span>
+                <input size="4" type="text" name="project_code" value="" id="projectcode" class="input3 project-code-input-budget tooltip yd-clear-on-click budget-input" title="Bitte gib den Projektcode der eingeladenen Person ein" />
+                <input type="hidden" id="check_project_addition_for" value="bbdo" />
+                /
+                <input type="text" value="" maxlength="2" name="check_project_addition" id="check_project_addition" class="input3 budget-input" />
+                /
+                <input type="text" value="" maxlength="4" name="check_project_addition2" id="check_project_addition2" class="input3 budget-input" />
+                {/if}
+                <input type="button" value="hinzufügen" id="yd-add-budget" class="button" style="position: absolute; right: -80px; top: 0;" />
+                <img src="{$domain_static}/images/yd-background/yd-load-small.gif" alt="Bitte warten" class="yd-loading" id="yd-loading-budget" />
+
+                <script type="text/javascript">
+                    <!--
+                    $("#check_email").autocomplete({
+                        source: "/autocomplete/employees",
+                        focus: function (event, ui) {
+                            this.value = ui.item.email;
+                            return false;
+                        },
+                        select: function (event, ui) {
+                            this.value = ui.item.email;
+                            return false;
+                        }
+                    });
+                    -->
+                </script>
+            </li>
+
+        </ul>
+
+        <div id="budtable">
+            {foreach from=$order->getBudget() item=budget}
+            {assign var=c value=$budget.0}
+            {assign var=amount value=$budget.1}
+            {assign var=project value=$budget.2}
+
+            <span id="budget-user-1-{$c->getId()}">
+                <a class="mail-erase yd-budget-erase" id="budget-erase-{$c->getId()}-1"></a>
+                Budget von {$c->getFullname()}: {__('%s €',$amount|inttoprice)}
+                {if $order->getCustomer()->getCompany()->getCodeVariant() != 0}
+                {if is_object($project)}
+                {__('Projekt:')} {$project->getNumber()|default:__('k.A.')}
+                {else}
+                {__('Projekt: k.A')}
+                {/if}
+                {/if}
+            </span>
+            {/foreach}
+        </div>
+    </div>
+
+</div>

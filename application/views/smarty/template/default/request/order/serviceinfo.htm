@@ -1,0 +1,11 @@
+<ul>
+    <li class="yd-sv3-21">{$service->getName()}</li>
+    {if $config->domain->base != 'taxiresto.fr'}
+        <li class="yd-sv3-22">{$service->getStreet()} {$service->getHausnr()}, {$service->getPlz()} {$service->getOrt()->getOrt()}</li>
+    {/if}
+    <li class="yd-sv3-23">
+        {$this->formatOpeningsMerged($service->getOpening()->getIntervals(strtotime('today'), strtotime('+7 days')))}
+    </li>
+    <li class="yd-sv3-24">{$service->getTagsWithMaxStringlength(80)|implode:', '}</li>
+    <li class="yd-sv3-25">{__('<b>%s%%</b> Empfehlungsrate', round($service->getRating()->getAverageAdvise()))}</li>
+</ul>

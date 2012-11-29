@@ -1,0 +1,86 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div id="yd-admin-backend-wait" style="display:none;"><img src="{$domain_static}/images/yd-backend/yd-back-load.gif" /></div>
+
+<form action="/administration_contact/create" method="post">
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Kontaktinformationen')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="20%">{__b('Vorname:')}</td>
+                            <td width="80%" colspan="2"><input type="text" name="prename" class="rund_set text" value="{$p.prename}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Nachname:')}</td>
+                            <td colspan="2"><input type="text" name="name" class="rund_set text" value="{$p.name}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('eMail:')}</td>
+                            <td><input type="text" name="email" class="rund_set text" value="{$p.email}" id="yd-create-contact-email"/></td>
+                            <td id="yd-create-contact-email-status"></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Telefon:')}</td>
+                            <td colspan="2"><input type="text" name="tel" class="rund_set text" value="{$p.tel}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Fax:')}</td>
+                            <td colspan="2"><input type="text" name="fax" class="rund_set text" value="{$p.fax}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Position')}</td>
+                            <td colspan="2"><input type="text" name="position" class="rund_set text" value="{$p.position}"/></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Adressdaten')}
+            </div>
+            <div class="item-content">
+                <table>
+                    <tr>
+                        <td width="20%">{__b('Straße:')}</td>
+                        <td width="80%"><input type="text" name="street" class="rund_set text" value="{$p.street}"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('HausNr:')}</td>
+                        <td><input type="text" name="hausnr" class="rund_set text" value="{$p.hausnr}"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('PLZ:')}</td>
+                        <td>
+                            {if strpos($config->domain->base, "janamesa")!==false}
+                            <input type="text" name="plz"/> *
+                            {else}
+                            {include file='administration/city_autocomplete.htm'} *
+                            {/if}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" id="yd-create-contact-button"/>
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+
+</form>
+{/block}

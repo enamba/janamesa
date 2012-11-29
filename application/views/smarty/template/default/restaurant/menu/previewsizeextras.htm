@@ -1,0 +1,31 @@
+{extends file="restaurant/popupbase.htm"}
+{block name="content"}
+
+<div style="font-size: 22px; font-weight: bold;">Extras</div>
+für die Größe <b>{$category->getName()} &rarr; {$size->getName()}</b> <font color="#999"><small>(#{$size->getId()})</small></font>
+<br/><br/>
+
+
+{$extrasGroups = $restaurant->getMealExtrasGroups()}
+
+{if $extrasGroups|@count}
+<table>
+    <tr>
+        <th width="50%" height="50">Extra</th>
+        <th width="25%">Preis</th>
+        <th width="25%">Gruppe</th>
+    </tr>
+    {foreach from=$extrasGroups key=name item=extrasGroup}
+        {foreach from=$extrasGroup->getExtras() item=e}
+            {if ($category->getExtraCost($e->getId(), $size->getId()) != '')}
+            <tr class="extras-group-preview">
+                <td>{$e->getName()}</td>
+                <td>{intToPrice($category->getExtraCost($e->getId(), $size->getId()))} € </td>
+                <td><small>{$extrasGroup->getName()}</small></td>
+            </tr>
+            {/if}
+        {/foreach}
+    {/foreach}
+</table>
+{/if}
+{/block}

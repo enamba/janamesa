@@ -1,0 +1,7 @@
+<div class="pl-select-city-list hidden">
+    <ul class="yd-clearfix">
+        {foreach from=Yourdelivery_Model_DbTable_City::getAllCitiesByPriority(10) item=city}
+        <li><a data-city="{$city.city}" data-city-id="{if $city.count == 0}{$city.id}{else}0{/if}" class="pl-select-city">{$city.city}</a></li>
+        {/foreach}
+    </ul>
+</div>

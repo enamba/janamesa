@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html>         <!--<![endif]-->
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="Jánamesa Delivery On-line" />
+        <meta name="description" content="Entrega rápida da sua comida favorita. Peça pizza, sushi, temaki, bebidas e tudo o que você quiser e pague on-line ou em dinheiro." />
+        <meta name="robots" content="noindex, follow" />
+        <link rel="SHORTCUT ICON" href="/media/css/www.janamesa.com.br/favicon.ico" type="image/x-icon">
+
+            <title> Jánamesa Delivery online </title>
+
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-static.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-core.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-home.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-jquery.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-ie.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-infocenter.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-hidden.css" />
+            
+            <script type="text/javascript" src="/media/javascript/compiled/frontend-sem.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function(){	
+                       $("#slides").slides({
+                           'effect': 'slide',
+                           'play': 10000
+                       });
+                });
+            </script>
+    </head>
+    <body class="br">
+        <div class="br-red">
+            <!--#include virtual="_br_header.html" -->
+                <div id="yd-content" class="yd-clearfix post" style="margin-top:-10px; padding-top:10px;">
+                    <div>
+                        <!--#include virtual="_br_cepbox.html" -->
+                    </div>
+                    <div class="yd-top-image">
+                        <img src="/media/images/www.janamesa.com.br/passoapasso.png"/>
+                    </div>
+                    <div id="slides" class="yd-slider-image">
+                        <ul class="slides_container">				
+                            <li><a href=""><img src="/media/images/www.janamesa.com.br/slide_img_01.jpg" alt="" /></a></li>
+                            <li><a href=""><img src="/media/images/www.janamesa.com.br/slide_img_02.jpg" alt="" /></a></li>
+                            <li><a href=""><img src="/media/images/www.janamesa.com.br/slide_img_03.jpg" alt="" /></a></li>
+                            <li><a href=""><img src="/media/images/www.janamesa.com.br/slide_img_04.jpg" alt="" /></a></li>
+                            <li><a href=""><img src="/media/images/www.janamesa.com.br/slide_img_05.jpg" alt="" /></a></li>			
+                        </ul>
+                    </div>
+                </div>
+                <div class="yd-br-border"></div>
+            </div>
+        </div>
+        <div id="yd-footer-red">
+            <div id="yd-footer-content">
+                <div class="yd-sidebar-box">
+                    <div>
+                        <img alt="paymentLogo" src="/media/css/www.janamesa.com.br/images/sidebar-payment.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+

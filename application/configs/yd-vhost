@@ -1,0 +1,309 @@
+NameVirtualHost 80.237.210.48:80
+NameVirtualHost 80.237.210.48:443
+
+
+Listen 443
+<VirtualHost 80.237.210.48:80>
+
+        ServerAdmin vait@yourdelivery.de
+
+        ServerName www.yourdelivery.de:80
+        ServerAlias www.yourdelivery.de
+        DocumentRoot /home/ydadmin/htdocs/live/public/
+
+        ErrorLog /var/log/yourdelivery/apache-error.log
+        CustomLog /var/log/yourdelivery/apache-access.log combined
+        ServerSignature On
+
+        <Directory /home/ydadmin/htdocs/live/public/>
+            Options -Indexes FollowSymLinks
+            AllowOverride FileInfo
+        </Directory>
+
+        Alias /phpmyadmin /var/www/phpmyadmin
+        <Directory /var/www/phpmyadnin/>
+            AuthType Basic
+            AuthName "Yourdelivery Private Sector"
+            AuthUserFile "/etc/apache2/dav_svn.passwd
+            Require valid-user
+        </Directory>
+
+        Alias /info /home/ydadmin/htdocs/blog/
+        <Directory /home/ydadmin/htdocs/blog/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /storage /home/ydadmin/htdcos/live/storage/
+        <Directory /home/ydadmin/htdocs/live/storage/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /bit/ /home/ydadmin/htdocs/live/application/views/scripts/bit/
+        Alias /viewscripts/ /home/ydadmin/htdocs/live/application/views/scripts/
+        <Directory /home/ydadmin/htdocs/live/application/views/scripts/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /media/ /home/ydadmin/htdocs/live/public/media/
+        <Directory /home/ydadmin/htdocs/live/public/media/>
+            Options All -Indexes
+        </Directory>
+
+
+        Alias /lieferservice-berlin/pizza /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-bochum/pizza /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-bremen/pizza /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-duisburg/pizza /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-duesseldorf/pizza /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-essen/pizza /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-frankfurt/pizza /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-hamburg/pizza /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-koeln/pizza /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-muenchen/pizza /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-nuernberg/pizza /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-offenbach/pizza /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-stuttgart/pizza /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+
+
+
+
+        Alias /lieferservice-berlin/salat /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-bochum/salat /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-bremen/salat /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-duisburg/salat /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-duesseldorf/salat /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-essen/salat /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-frankfurt/salat /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-hamburg/salat /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-koeln/salat /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-muenchen/salat /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-nuernberg/salat /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-offenbach/salat /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-stuttgart/salat /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+
+
+
+        Alias /lieferservice-berlin/sushi /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-bochum/sushi /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-bremen/sushi /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-duisburg/sushi /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-duesseldorf/sushi /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-essen/sushi /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-frankfurt/sushi /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-hamburg/sushi /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-koeln/sushi /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-muenchen/sushi /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-nuernberg/sushi /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-offenbach/sushi /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /lieferservice-stuttgart/sushi /home/ydadmin/htdocs/blog_seo/
+        <Directory /home/ydadmin/htdocs/blog_seo/>
+            Options All -Indexes
+        </Directory>
+
+</VirtualHost>
+
+
+
+
+<VirtualHost 80.237.210.48:443>
+        ServerAdmin laug@yourdelivery.de
+        ServerName www.yourdelivery.de:443
+        DocumentRoot /home/ydadmin/htdocs/live/public/
+
+        ErrorLog /var/log/yourdelivery/apache-error.log
+        CustomLog /var/log/yourdelivery/apache-access.log combined
+        ServerSignature On
+
+        # SSL
+        SSLEngine On
+        SSLCertificateFile /etc/ssl/verisign/cert.crt
+        SSLCertificateKeyFile /etc/ssl/verisign/private.key
+        SSLCACertificateFile /etc/ssl/verisign/ca.crt
+
+        <Directory /home/ydadmin/htdocs/live/public/>
+                Options -Indexes FollowSymLinks
+                AllowOverride FileInfo
+        </Directory>
+
+        Alias /phpmyadmin /var/www/phpmyadmin
+        <Directory /var/www/phpmyadnin/>
+            AuthType Basic
+            AuthName "Yourdelivery Private Sector"
+            AuthUserFile "/etc/apache2/dav_svn.passwd
+            Require valid-user
+        </Directory>
+
+        Alias /info /home/ydadmin/htdocs/blog/
+        <Directory /home/ydadmin/htdocs/blog/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /storage /home/ydadmin/htdcos/live/storage/
+        <Directory /home/ydadmin/htdocs/live/storage/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /bit/ /home/ydadmin/htdocs/live/application/views/scripts/bit/
+        Alias /viewscripts/ /home/ydadmin/htdocs/live/application/views/scripts/
+        <Directory /home/ydadmin/htdocs/live/application/views/scripts/>
+            Options All -Indexes
+        </Directory>
+
+        Alias /media/ /home/ydadmin/htdocs/live/public/media/
+        <Directory /home/ydadmin/htdocs/live/public/media/>
+            Options All -Indexes
+        </Directory>
+</VirtualHost>
+

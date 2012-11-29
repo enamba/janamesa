@@ -1,0 +1,196 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+
+            </div>
+        </div>
+    </div>
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Übersicht Bestellung')} #{$order->getId()}
+
+            </div>
+            <div class="item-content">
+                <form action="" method="post" id="">
+                    <div class="yd-box-head">
+                        <div>
+                            <input type="submit" value="{__b('Speichern')}" class="button" > | <a href="#">{__b('Alles in die Tonne kloppen')}</a>
+                        </div>
+                    </div>
+                    <div class="yd-box-body">
+                        <table>
+                            <tr>
+                                <th width="10%">{__b('Anzahl')}</th>
+                                <th width="10%">{__b('Nr')}</th>
+                                <th width="10%">{__b('Gericht')}</th>
+                                <th width="10%">{__b('Größe')}</th>
+                                <th width="10%">{__b('Kommentar')}</th>
+                                <th width="10%">{__b('MwSt.')}</th>
+                                <th width="10%">{__b('Einzelpreis')}</th>
+                                <th width="10%">{__b('Gesamtpreis')}</th>
+                                <th width="10%">&nbsp;</th>
+                            </tr>
+                            {foreach from=$order->getCard() item=customerBucket}
+                                {foreach from=$customerBucket item=bucket}
+                                    {foreach from=$bucket item=elem}
+                                        {assign var=meal value=$elem.meal}
+                                        <tr>
+                                            
+                                            <td colspan="9" style="border-bottom: 1px solid grey">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center"><input type="text" size="4" name="count[{$elem.bucketId}]" class="yd-only-nr" value="{$elem.count}" /></td>
+                                            <td class="nr">{$meal->getNr()}</td>
+                                            <td class="food">
+                                                <select name="food[{$elem.bucketId}]">
+                                                    <option value="0">{__b('keine Speise gewählt')}</option>
+                                                    {foreach from=$order->getService()->getMeals() item=serviceMeal}
+                                                        <option value="{$serviceMeal->id}" {if $serviceMeal->id==$meal->getId()}selected{/if}>{$serviceMeal->name} (#{$serviceMeal->id})</option>
+                                                    {foreachelse}
+                                                        <option value="0">{__b('keine Speise gefunden')}</option>
+                                                    {/foreach}
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select name="size[{$elem.bucketId}]">
+                                                    <option value="0">{__b('keine Größe gewählt')}</option>
+                                                    {foreach from=$meal->getSizes() item=size}
+                                                        <option value="{$size.id}" {if $meal->getCurrentSize()==$size.id}selected{/if}>{$size.name} (#{$size.id})</option>
+                                                    {foreachelse}
+                                                        <option value="0">{__b('keine Größe gefunden')}</option>
+                                                    {/foreach}
+                                                </select>
+                                            </td>
+                                            <!--
+                                            <td>
+                                                <ul>
+                                                    {foreach item=x from=$meal->getCurrentOptions()}
+                                                        <li><input type="hidden" name="oldoption[{$elem.bucketId}]" value="{$x->getId()}" />
+                                                            <select name="option[{$elem.bucketId}]">
+                                                                <option value="0">{__b('keine Option gewählt')}</option>
+                                                                {foreach from=$meal->getOptions() item=opt}
+                                                                    {foreach from=$opt->getOptions() item=o}
+                                                                        <option value="{$o->getId()}" {if $o->getId()==$x->getId()}selected{/if}>{$o->getName()} (#{$o->getId()})</option>
+                                                                    {foreachelse}
+                                                                        <option value="0">{__b('keine Option gefunden')}</option>
+                                                                    {/foreach}
+                                                                {/foreach}
+                                                            </select>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" title="{$x->getName()} entfernen" class="yd-editorder-deleteoption tooltip" id="orderId-{$order->getId()}-bucketId-{$elem.bucketId}-optionId-{$x->getId()}"><img src="{$domain_static}/images/yd-icons/yd-minus.gif" /></a>
+                                                        </li>
+                                                    {foreachelse}
+                                                        <li>{__b('Keine Optionen')}</li>
+                                                    {/foreach}
+                                                    <li>
+                                                        <a href="#" title="{__b('Option hinzufügen')}" class="yd-editorder-addoption tooltip" id="orderId-{$order->getId()}-bucketId-{$elem.bucketId}"><img src="{$domain_static}/images/yd-icons/yd-plus.gif" /></a>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul>
+                                                    {foreach item=x from=$meal->getCurrentExtras()}
+                                                        <li>
+                                                            <select name="extra[{$elem.bucketId}]">
+                                                                <option value="0">{__b('kein Extra gewählt')}</option>
+                                                                {foreach from=$meal->getExtrasFast() item=extragroup}
+                                                                    {foreach from=$extragroup item=e}
+                                                                        <option value="{$e.id}" {if $e.id==$x->getId()}selected{/if}>{$e.name} (#{$e.id})</option>
+                                                                    {foreachelse}
+                                                                        <option value="0">{__b('kein Extra gefunden')}</option>
+                                                                    {/foreach}
+                                                                {/foreach}
+                                                            </select>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" title="{__b('%s entfernen', $x->getName())}" class="yd-editorder-deleteextra tooltip" id="orderId-{$order->getId()}-bucketId-{$elem.bucketId}-extraId-{$x->getId()}"><img src="{$domain_static}/images/yd-icons/yd-minus.gif" /></a>
+                                                        </li>
+                                                    {foreachelse}
+                                                        <li>Keine Extras</li>
+                                                    {/foreach}
+                                                    <li>
+                                                        <a href="#" title="{__b('Extra hinzufügen')}" class="yd-editorder-addextra tooltip" id="orderId-{$order->getId()}-bucketId-{$elem.bucketId}"><img src="{$domain_static}/images/yd-icons/yd-plus.gif" /></a>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                            -->
+                                            <td>
+                                                <input type="text" name="special[{$elem.bucketId}]" value="{$meal->getSpecial()}" />
+                                            </td>
+                                            
+                                            <td>
+                                                <select name="tax[{$elem.bucketId}]" style="width:70px;">
+                                                    <option value="0">{__b('keine MwSt gewählt')}</option>
+                                                    <option value="19" {if $meal->getCurrentTax()==19}selected{/if}>19%</option>
+                                                    <option value="7" {if $meal->getCurrentTax()==7}selected{/if}>7%</option>
+                                                </select>
+                                            </td>
+                                            
+                                            <td class="right"><input type="text" value="{$elem.cost|inttoprice}" size="4" />&nbsp;{__b('€')}                                             
+                                                {if $meal->getCurrentExtras()|@count > 0}
+                                                    <ul>
+                                                        {foreach item=x from=$meal->getCurrentExtras()}
+                                                            <li>{__b('€')} {$x->getCost()|inttoprice}</li>
+                                                        {/foreach}
+                                                    </ul>
+                                                {/if}
+                                                {if $meal->getCurrentOptions()|@count > 0}
+                                                    <ul>
+                                                        {foreach item=x from=$meal->getCurrentOptions()}
+                                                            {if $x->getCost() > 0}
+                                                                <li>{__b('€')} {$x->getCost()|inttoprice}</li>
+                                                            {/if}
+                                                        {/foreach}
+                                                    </ul>
+                                                {/if}
+                                            </td>
+
+
+                                            <td class="right">€&nbsp;{($elem.count*$meal->getAllCosts())|inttoprice}</td>
+                                            <td><a href="#" class="yd-editorder-deletemeal" id="bucketId-{$elem.bucketId}-orderId-{$order->getId()}">{__b('entfernen')}</a></td>
+                                        </tr>
+                                        
+                                        <input type="hidden" name="ids[]" value="{$elem.bucketId}" />
+                                    {/foreach}
+                                {/foreach}
+                            {/foreach}
+                            <tr>
+                                <td colspan="9" style="border-bottom: 2px dotted black;">
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">&nbsp;</td>
+                                <td>{__b('Lieferanweisung:')}<br />
+                                    <input type="text" value="{$order->getLocation()->getComment()}" name="comment">
+                                </td>
+                                <td>&nbsp;</td>
+                                <td colspan="2">
+                                    <div class="left">{__b('Netto:')} </div>
+                                    <div class="left">{__b('MwSt')} 19%: </div>
+                                    <div class="left">{__b('MwSt')} 7%: </div>
+                                    <div class="left">{__b('Lieferkosten:')} </div>
+                                    <div class="left" style="border-top: 1px dotted black;">{__b('Gesamt:')}</div>
+                                </td>
+                                <td>
+                                    <div class="right">{__b('€')} {$order->getTotalNoTax()|inttoprice}</div>
+                                    <div class="right">{__b('€')} {$order->getTax19()|inttoprice}</div>
+                                    <div class="right">{__b('€')} {$order->getTax7()|inttoprice}</div>
+                                    <div class="right">{__b('€')} {$order->getServiceDeliverCost()|inttoprice}</div>
+                                    <div class="right" style="border-top: 1px dotted black;">{__b('€')} {$order->getAbsTotal()|inttoprice}</div>
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="foo"></div>
+    </div>
+{/block}
+

@@ -1,0 +1,47 @@
+{extends file="company/base.htm"}
+
+{block name="content"}
+<div id="admincase">
+
+    {include file='company/_left_nav.htm'}
+
+    <div class="clear"></div>
+
+    <div id="main-content">
+
+
+        <ul class="shortcut-buttons-set">
+            <li><a class="shortcut-button" href="/company/employees"><span>
+                <img src="{$domain_static}/images/yd-icons/backend/group.png" alt="" /><br />
+                {__('Mitarbeiter Übersicht')}
+            </span></a></li>
+
+            <li><a class="shortcut-button" href="/company/addemployee"><span>
+                <img src="{$domain_static}/images/yd-icons/backend/user_add.png" alt="" /><br />
+                {__('Mitarbeiter hinzufügen')}
+            </span></a></li>
+        </ul>
+
+        <div class="clear"></div>
+
+		<div class="content-box">
+            <div class="content-box-header">
+                <h3>{__('Mitarbeiterübersicht')}</h3>
+                <div class="clear"></div>
+            </div>
+
+            {$grid}
+
+            <div class="settings_comp"><br />
+                <div class="user-content">
+                    <label for="yd-budget-active"></label>
+                    <input type="hidden" name="yd-resetCompanyPasses-id" id="yd-resetCompanyPasses-id" value="{$company->getId()}">
+                    <input type="button" class="button" id="yd-resetCompanyPasses" value="{__('Alle Passwörter zurücksetzen')}" title="{__('Sollen wirklich ALLE Passwörter dieser Firma zurückgesetzt werden?')}"><br /><br />
+                    <div><span>{__('Die Passwörter aller Mitarbeiter dieser Firma werden zurückgesetzt und an die jeweilige Email-Adresse gesendet')}.</span></div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End #main-content -->
+</div> <!-- admincase -->
+
+{/block}

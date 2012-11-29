@@ -1,0 +1,8 @@
+{foreach from=$codes item=c}
+{$c->code},
+{if $c->used > 0}
+{__('genutzt')}
+{else}
+{__('ungenutzt')}
+{/if}<br />
+{/foreach}

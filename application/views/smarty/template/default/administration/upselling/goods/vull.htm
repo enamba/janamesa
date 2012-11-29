@@ -1,0 +1,42 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<form action="/administration_upselling_goods/vull" method="post">
+    <input type="hidden" name="id" value="{$item->getId()}" />
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Auf Gutschrift verschicken')}
+            </div>    
+            
+            <div class="item-content">
+            {include file='administration/upselling/goods/_item.htm'}
+            </div>
+
+            <div class="item-content">
+                <table>
+                    <tr>
+                        <td>{__b('Strasse')}:</td>
+                        <td><input type="text" value="{$service->getStreet()}" /></td>
+                        <td>{__b('Hausnr')}</td>
+                        <td><input type="text" value="{$service->getHausnr()}" /></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('PLZ')}:</td>
+                        <td><input type="text" value="{$service->getPlz()}" /></td>
+                        <td>{__b('Ort')}:</td>
+                        <td><input type="text" value="{$service->getCity()->getCity()}" /></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Besondere Hinweise')}:</td>
+                        <td colspan="3"><textarea name="infos"></textarea></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <a href="/download/bill/{Default_Helpers_Crypt::hash($bill->getId())}/pdf" class="button">{__b('Rechnung angucken')}</a>
+    <input type="submit" value="{__b('Verschicken')}" />
+</form>
+{/block}

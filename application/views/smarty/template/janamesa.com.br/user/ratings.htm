@@ -1,0 +1,158 @@
+{extends file='user/_base.htm'}
+
+{block name="content"}
+
+<div class="yd-profile yd-clearfix ratings">
+
+	{if $config->domain->base == 'janamesa.com.br'}<div class="br-inner-box">{/if}
+
+    {include file='user/_header.htm' active=5 active_title=__('Restaurant bewerten')}
+
+    <div class="yd-profile-body yd-profile-body-ratings"> 
+        <h1 class="display-none">{__('Offene Bewertungen')} <strong>{$unratedCount}</strong></h1>
+
+        {if $config->domain->base == 'janamesa.com.br'}
+        	<h1><span>{$unratedCount}</span> {__('Offene Bewertungen')}</h1>
+        
+	        <p class="yd-profile-fidelity">
+	            {__('Für eine Bewertung erhältst Du bis zu %s Treuepunkte. Sag uns innerhalb von 30 Tagen nach einer Bestellung, wie Dir Dein Essen geschmeckt hat und wie zufrieden Du mit dem Service warst.', 5)}
+	        </p>
+        	
+	        <div class="table yd-profile-table">
+	            <div class="thead">
+	                <div class="th"><div class="display-none">{__('Bestellung bewerten')}</div></div>
+	                <div class="th">{__('Datum')}</div>
+	                <div class="th">{__('Lieferservice')}</div>
+	                <div class="th">{__('Lieferadresse')}</div>
+	                <div class="th">{__('Preis €')}</div>
+	            </div>
+				{foreach from=$unrated item=order}
+	            <div class="tr">
+	                <div class="td"><a href="/rate/{Default_Helpers_Crypt::hash($order.order_id)}" class="yd-profile-blue-button">{__('Jetzt bewerten')}Jetzt bewerten</a></div>
+	                <div class="td">{$order.time|date_format:"%d.%m.%Y %H:%m"}</div>
+	                <div class="td">{$order.name}</div>
+	                <div class="td">{$order.street} {$order.hausnr}</div>
+	                <div class="td">{intToPrice($order.total + $order.serviceDeliverCost)}</div>
+	            </div>
+	           {/foreach}
+    	       {if count($unrated) > 24}
+	           <div class="tr display-none">
+	                <div class="td"></div>
+	                <div class="td"></div>
+	                <div class="td"></div>
+	                <div class="td"></div>
+	                <div class="td">{__('anzeigen')} <a name="unrated" href="/user/ratings/limitunrated/25#unrated">25</a>, <a href="/user/ratings/limitunrated/50#unrated">50</a> ,<a href="/user/ratings/limitunrated/100#unrated">100</a> </div>
+			  </div>
+			  {/if}
+	        </div>
+	        
+	        <h1><span>{$ratedCount}</span> {__('Abgegebene Bewertungen')}</h1>
+	        <div class="table yd-profile-table rate-count">
+	            <div class="thead"  style="display:table-row;">
+	                <div class="th">{__('Deine letzte Bewertung')}</div>
+	                <div class="th">{__('Datum')}</div>
+	                <div class="th">{__('Lieferservice')}</div>
+	                <div class="th">{__('Lieferadresse')}</div>
+	                <div class="th">{__('Preis €')}</div>
+	            </div>
+	           {foreach from=$rated item=order}
+	            <div class="tr {if $order.status == -1} warning {/if}"  >
+	                {if $order.status == -1}
+	                 <div class="td">{__('Deine Bewertung entspricht leider nicht unseren Richtlinien und wurde deshalb gelöscht.')}</div>                
+	                {elseif $order.delivery + $order.quality == 10}
+	                <div class="td"><span class="yd-rated-10"></span></div>
+	                {else}
+	                <div class="td"><span class="yd-rated-0{$order.delivery + $order.quality}"></span></div>
+	                {/if}
+	                <div class="td">{$order.time|date_format:"%d.%m.%Y %H:%m"} Uhr</div>
+	                <div class="td">{$order.name}</div>
+	                <div class="td">{$order.street} {$order.hausnr}</div>
+	                <div class="td">{intToPrice($order.total + $order.serviceDeliverCost)} </div>
+	            </div>
+	           {/foreach}
+	           
+	           <div class="tr display-none">
+	                <div class="td"></div>
+	                <div class="td"></div>
+	                <div class="td"></div>
+	                <div class="td"></div>
+	                <div class="td">{__('anzeigen')} <a name="rated" href="/user/ratings/limitrated/10#rated">10</a>, <a href="/user/ratings/limitrated/50#rated">50</a> ,<a href="/user/ratings/limitrated/100#rated">100</a> </div>
+	           </div>
+	        </div>
+
+        
+        {/if}
+        
+
+        <div class="table yd-profile-table display-none">
+            <div class="thead">
+                <div class="th">{__('Bestellung bewerten')}</div>
+                <div class="th">{__('Datum')}</div>
+                <div class="th">{__('Lieferservice')}</div>
+                <div class="th">{__('Lieferadresse')}</div>
+                <div class="th">{__('Preis €')}</div>
+            </div>
+           {foreach from=$unrated item=order}
+            <div class="tr">
+                <div class="td"><a href="/rate/{Default_Helpers_Crypt::hash($order.order_id)}" class="yd-profile-blue-button">{__('Jetzt bewerten')}</a></div>
+                <div class="td">{$order.time|date_format:"%d.%m.%Y %H:%m"} Uhr</div>
+                <div class="td">{$order.name}</div>
+                <div class="td">{$order.street} {$order.hausnr}</div>
+                <div class="td">{intToPrice($order.total + $order.serviceDeliverCost)} </div>
+            </div>
+           {/foreach}
+           {if count($unrated) > 24}
+           <div class="tr">
+                <div class="td"></div>
+                <div class="td"></div>
+                <div class="td"></div>
+                <div class="td"></div>
+                <div class="td">{__('anzeigen')} <a name="unrated" href="/user/ratings/limitunrated/25#unrated">25</a>, <a href="/user/ratings/limitunrated/50#unrated">50</a> ,<a href="/user/ratings/limitunrated/100#unrated">100</a> </div>
+           </div>
+           {/if}
+        </div> 
+
+        <p class="yd-profile-fidelity display-none">
+            {__('Für eine Bewertung erhältst Du bis zu %s Treuepunkte. Sag uns innerhalb von 30 Tagen nach einer Bestellung, wie Dir Dein Essen geschmeckt hat und wie zufrieden Du mit dem Service warst.', 5)}
+        </p>
+
+        <h1 class="display-none">{__('Abgegebene Bewertungen')} <strong>{$ratedCount}</strong></h1>
+
+        <div class="table yd-profile-table display-none">
+            <div class="thead">
+                <div class="th">{__('Deine letzte Bewertung')}</div>
+                <div class="th">{__('Datum')}</div>
+                <div class="th">{__('Lieferservice')}</div>
+                <div class="th">{__('Lieferadresse')}</div>
+                <div class="th">{__('Preis €')}</div>
+            </div>
+           {foreach from=$rated item=order}
+            <div class="tr {if $order.status == -1} warning {/if}"  >
+                {if $order.status == -1}
+                 <div class="td">{__('Deine Bewertung entspricht leider nicht unseren Richtlinien und wurde deshalb gelöscht.')}</div>                
+                {elseif $order.delivery + $order.quality == 10}
+                <div class="td"><span class="yd-rated-10"></span></div>
+                {else}
+                <div class="td"><span class="yd-rated-0{$order.delivery + $order.quality}"></span></div>
+                {/if}
+                <div class="td">{$order.time|date_format:"%d.%m.%Y %H:%m"} Uhr</div>
+                <div class="td">{$order.name}</div>
+                <div class="td">{$order.street} {$order.hausnr}</div>
+                <div class="td">{intToPrice($order.total + $order.serviceDeliverCost)} </div>
+            </div>
+           {/foreach}
+           
+           <div class="tr">
+                <div class="td"></div>
+                <div class="td"></div>
+                <div class="td"></div>
+                <div class="td"></div>
+                <div class="td">{__('anzeigen')} <a name="rated" href="/user/ratings/limitrated/10#rated">10</a>, <a href="/user/ratings/limitrated/50#rated">50</a> ,<a href="/user/ratings/limitrated/100#rated">100</a> </div>
+           </div>
+        </div>
+
+    {if $config->domain->base == 'janamesa.com.br'}</div>{/if}
+    
+</div>
+
+{/block}

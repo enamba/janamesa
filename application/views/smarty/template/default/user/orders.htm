@@ -1,0 +1,45 @@
+{extends file='user/_base.htm'}
+
+{block name="content"}
+
+<div class="yd-profile yd-clearfix">
+
+    {include file='user/_header.htm' active=4 active_title=__('Vorherige Bestellungen')}
+
+    <div class="yd-profile-body">
+
+        <h1>
+            <span>
+                {__('Suche')}
+                <input class="yd-empty-text" id="yd-order-search" type="text" value="z.B. Sushi" title="z.B. Sushi" />
+            </span>
+            {__('Meine letzten')}
+            <select id="limit" onchange="window.location='/user/orders/perPageuser_orders/'+this.value;">
+                
+                {section name=pages start=1  loop=4 step=1}
+                     <option {if $pagination == ($smarty.section.pages.index * 25)} selected="selected" {/if} value="{$smarty.section.pages.index*25}">{$smarty.section.pages.index * 25} </option> 
+                {/section}
+                <option {if $pagination == '1000'}selected="selected"{/if}  value="1000">Alle</option>
+                <!--
+                <option>25</option> 
+                <option>50</option>
+                <option>75</option>
+                <option>100</option>
+                -->
+            </select>
+            {__('Bestellungen anzeigen')}
+        </h1>
+        
+        <div class="table yd-profile-table">
+
+            {$grid}
+
+        </div>
+        <div class="hidden" id="yd-lang-favourites-delete-text">{__('Favorit wirklich löschen?')}</div>
+        <div class="hidden" id="yd-lang-favourites-delete-tooltip">{__('Favorit löschen')}</div>
+        <div class="hidden" id="yd-lang-favourites-add-tooltip">{__('Lieferservice als Favorit hinzufügen')}</div>
+    </div>
+
+</div>            
+
+{/block}

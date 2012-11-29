@@ -1,0 +1,749 @@
+2012-08-14T07:45:07-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 57 online and 5 offline services in #19943 
+2012-08-14T07:45:07-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: did not find template order/basis/service.htm in lieferando.de layout, switching successfully back to default 
+2012-08-14T07:45:07-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/service.htm 
+2012-08-14T07:45:08-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 57 online and 5 offline services in #19943 
+2012-08-14T07:45:08-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: did not find template order/basis/service.htm in lieferando.de layout, switching successfully back to default 
+2012-08-14T07:45:08-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/service.htm 
+2012-08-14T07:45:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/lieferservice-berlin-baumschulenweg-12437.html 
+2012-08-14T07:46:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: did not find template request/order/serviceinfo.htm in lieferando.de layout, switching successfully back to default 
+2012-08-14T07:46:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-08-14T07:46:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/12492.html 
+2012-08-14T08:25:26-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PAGE NOT FOUND: www.yourdelivery.local//lieferservice-berlin-baumschulenweg #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-14T08:25:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: did not find template error/notfound.htm in lieferando.de layout, switching successfully back to default 
+2012-08-14T08:25:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template error/notfound.htm 
+2012-08-14T08:25:39-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 114 online and 8 offline services in #718 
+2012-08-14T08:25:39-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: did not find template order/basis/service.htm in lieferando.de layout, switching successfully back to default 
+2012-08-14T08:25:39-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/service.htm 
+2012-08-14T08:25:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/lieferservice-berlin-12157.html 
+2012-08-14T08:58:00-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CRONJOB : sending csv with restaurants count per city for all countries 
+2012-08-14T08:58:00-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CRONJOB : Email was send 
+2012-08-14T09:09:21-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CRONJOB : sending csv with restaurants count per city for all countries 
+2012-08-14T09:09:22-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CRONJOB : Email was send 
+2012-08-14T09:10:48-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CRONJOB : sending csv with restaurants count per city for all countries 
+2012-08-14T09:10:49-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CRONJOB : Email was send 
+2012-08-14T11:27:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-08-14T11:27:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-08-14T11:28:02-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/loginfailed.htm 
+2012-08-14T11:28:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/loginfailed.htm 
+2012-08-14T11:28:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing updating model Default_Model_Base #432 with modified data :: Array(    [title] => Herr/Frau    [name] => Jens    [prename] => Naie    [email] => naie@lieferando.de    [password] => 9a8626a84a351341b0c09a37e5bf71fa    [lang] => de    [sex] => m    [tel] => 1111111111    [privmail] =>     [autologin] => 0    [start] => 1    [lastlogin] => 2012-08-14 11:28:50    [countLogin] => 7    [deleted] => 0    [permanentDiscountId] =>     [ktoName] =>     [ktoNr] =>     [ktoBlz] =>     [updated] => 2012-08-14 11:28:50    [birthday] => 1971-09-03    [source] =>     [addition] =>     [facebookId] =>     [facebookPost] => 1    [profileImage] => 1342084828.jpg    [nickname] =>     [whitelist] => 0    [anrede] => Sr.) 
+2012-08-14T11:28:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 432 
+2012-08-14T11:28:50-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing User naie@lieferando.de successfully logged in 
+2012-08-14T11:28:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 432 
+2012-08-14T11:28:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-08-14T11:28:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 5 - start 0) for customer #432 naie@lieferando.de - unratedOrderCount: 0 
+2012-08-14T11:28:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-08-14T11:28:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-08-14T11:28:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: Cache stored for id:  open0fidelity65666812875e8232797613d8aa41808d 
+2012-08-14T11:28:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing get UNRATED ORDERS (limit 5 - start 0) for customer #432 naie@lieferando.de from cache with id: unrated_5_0customer432 - unratedOrderCount: Array 
+2012-08-14T11:28:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-08-14T11:28:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-08-14T11:28:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: Cache stored for id:  open0fidelity65666812875e8232797613d8aa41808d 
+2012-08-14T11:28:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing don't show ratingLink for order #820, because state <= 0 - state = 0 
+2012-08-14T11:28:59-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/index.htm 
+2012-08-14T11:28:59-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing get UNRATED ORDERS (limit 5 - start 0) for customer #432 naie@lieferando.de from cache with id: unrated_5_0customer432 - unratedOrderCount: Array 
+2012-08-14T11:28:59-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-08-14T11:28:59-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-08-14T11:28:59-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: Cache stored for id:  open0fidelity65666812875e8232797613d8aa41808d 
+2012-08-14T11:29:04-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/favourites.htm 
+2012-08-14T11:29:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/settings.htm 
+2012-08-14T11:29:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/favourites.htm 
+2012-08-14T11:29:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-08-14T11:29:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing get UNRATED ORDERS (limit 5 - start 0) for customer #432 naie@lieferando.de from cache with id: unrated_5_0customer432 - unratedOrderCount: Array 
+2012-08-14T11:29:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-08-14T11:29:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-08-14T11:29:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: Cache stored for id:  open0fidelity65666812875e8232797613d8aa41808d 
+2012-08-14T11:29:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing get UNRATED ORDERS (limit 5 - start 0) for customer #432 naie@lieferando.de from cache with id: unrated_5_0customer432 - unratedOrderCount: Array 
+2012-08-14T11:29:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-08-14T11:29:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-08-14T11:29:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: Cache stored for id:  open0fidelity65666812875e8232797613d8aa41808d 
+2012-08-14T11:29:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing don't show ratingLink for order #820, because state <= 0 - state = 0 
+2012-08-14T11:29:52-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 1 online and 0 offline services in #177256 
+2012-08-14T11:29:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-08-14T11:29:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-04963-140.html 
+2012-08-14T11:29:55-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-08-14T11:29:55-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/314.html 
+2012-08-14T11:29:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-08-14T11:29:59-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-delicias-congelados-sao-paulo.html 
+2012-08-14T11:30:29-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/callmeal.htm 
+2012-08-14T11:30:29-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/callmeal/id/31611/size/3824/update/false.html 
+2012-08-14T11:30:45-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing appending fallback verbose information to order via cityId 3574 
+2012-08-14T11:30:46-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/finish.htm 
+2012-08-14T11:30:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/service/openingtimeday.htm 
+2012-08-14T11:31:40-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing appending fallback verbose information to order via cityId 3574 
+2012-08-14T11:31:41-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing switching back to bar, no valid payment selected 
+2012-08-14T11:31:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing setting deliver time to 1344954701 based on day: 14.08.2012 time: imediatamente 
+2012-08-14T11:31:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Order_Private with id #840 new data :: Array(    [customerId] => 432    [nr] => 60968691    [time] => 2012-08-14 11:31:41    [deliverTime] => 2012-08-14 11:31:41    [mode] => rest    [kind] => priv    [ident] => wQm9zJDDskNQFvoRvQ26    [locationId] => 454    [cpf] =>     [serviceId] => 314    [restaurantId] => 314    [floor] => 0    [lift] =>     [currentPayment] => bar    [payment] => bar    [paymentAddition] => creditCardAtHome    [change] => 0    [total] => 9300    [courier] =>     [courierCost] => 0    [serviceDeliverCost] => 1000    [charge] => 0    [contract] => 1    [ipAddr] => 127.0.0.1    [domain] => www.yourdelivery.local) 
+2012-08-14T11:31:41-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Could not finish order: Could not store order data: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'janamesa.com.br.order_deliverdelay' doesn't exist#0 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('DESCRIBE `order...', Array)
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Mysql.php(156): Zend_Db_Adapter_Pdo_Abstract->query('DESCRIBE `order...')
+#4 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(823): Zend_Db_Adapter_Pdo_Mysql->describeTable('order_deliverde...', NULL)
+#5 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(845): Zend_Db_Table_Abstract->_setupMetadata()
+#6 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(885): Zend_Db_Table_Abstract->_getCols()
+#7 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(969): Zend_Db_Table_Abstract->_setupPrimaryKey()
+#8 /home/ydadmin/htdocs/lieferando/library/Default/Model/Base.php(510): Zend_Db_Table_Abstract->info('metadata')
+#9 /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php(1187): Default_Model_Base->save()
+#10 /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php(1005): Yourdelivery_Model_Order_Abstract->postFinish()
+#11 /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php(786): Yourdelivery_Model_Order_Abstract->finish()
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): Order_BasisController->finishAction()
+#13 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('finishAction')
+#14 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#15 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#16 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#17 /home/ydadmin/htdocs/lieferando/public/index.php(116): Zend_Application->run()
+#18 {main} #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:788]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:788]
+#3 finishAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-14T11:35:12-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/throw.htm 
+2012-08-14T11:35:17-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing appending fallback verbose information to order via cityId 3574 
+2012-08-14T11:35:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/finish.htm 
+2012-08-14T11:35:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/service/openingtimeday.htm 
+2012-08-14T11:35:34-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing appending fallback verbose information to order via cityId 3574 
+2012-08-14T11:35:35-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing switching back to bar, no valid payment selected 
+2012-08-14T11:35:35-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing setting deliver time to 1344954935 based on day: 14.08.2012 time: imediatamente 
+2012-08-14T11:35:35-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Order_Private with id #841 new data :: Array(    [customerId] => 432    [nr] => 18144166    [time] => 2012-08-14 11:35:35    [deliverTime] => 2012-08-14 11:35:35    [mode] => rest    [kind] => priv    [ident] => uwrDdgLjDxzQhz7aGDuu    [locationId] => 454    [cpf] =>     [serviceId] => 314    [restaurantId] => 314    [floor] => 0    [lift] =>     [currentPayment] => bar    [payment] => bar    [paymentAddition] => creditCardAtHome    [change] => 0    [total] => 9300    [courier] =>     [courierCost] => 0    [serviceDeliverCost] => 1000    [charge] => 0    [contract] => 1    [ipAddr] => 127.0.0.1    [domain] => www.yourdelivery.local) 
+2012-08-14T11:35:35-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Could not finish order: Could not store order data: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'janamesa.com.br.order_deliverdelay' doesn't exist#0 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('DESCRIBE `order...', Array)
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Mysql.php(156): Zend_Db_Adapter_Pdo_Abstract->query('DESCRIBE `order...')
+#4 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(823): Zend_Db_Adapter_Pdo_Mysql->describeTable('order_deliverde...', NULL)
+#5 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(845): Zend_Db_Table_Abstract->_setupMetadata()
+#6 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(885): Zend_Db_Table_Abstract->_getCols()
+#7 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(969): Zend_Db_Table_Abstract->_setupPrimaryKey()
+#8 /home/ydadmin/htdocs/lieferando/library/Default/Model/Base.php(510): Zend_Db_Table_Abstract->info('metadata')
+#9 /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php(1187): Default_Model_Base->save()
+#10 /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php(1005): Yourdelivery_Model_Order_Abstract->postFinish()
+#11 /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php(786): Yourdelivery_Model_Order_Abstract->finish()
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): Order_BasisController->finishAction()
+#13 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('finishAction')
+#14 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#15 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#16 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#17 /home/ydadmin/htdocs/lieferando/public/index.php(116): Zend_Application->run()
+#18 {main} #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:788]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:788]
+#3 finishAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-14T11:35:35-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/throw.htm 
+2012-08-14T11:43:27-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing appending fallback verbose information to order via cityId 3574 
+2012-08-14T11:43:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/finish.htm 
+2012-08-14T11:43:29-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/service/openingtimeday.htm 
+2012-08-14T11:43:35-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing appending fallback verbose information to order via cityId 3574 
+2012-08-14T11:43:36-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing switching back to bar, no valid payment selected 
+2012-08-14T11:43:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing setting deliver time to 1344955416 based on day: 14.08.2012 time: imediatamente 
+2012-08-14T11:43:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Order_Private with id #842 new data :: Array(    [customerId] => 432    [nr] => 14290581    [time] => 2012-08-14 11:43:36    [deliverTime] => 2012-08-14 11:43:36    [mode] => rest    [kind] => priv    [ident] => mjxzuJXES3wuUGfTheUw    [locationId] => 454    [cpf] =>     [serviceId] => 314    [restaurantId] => 314    [floor] => 0    [lift] =>     [currentPayment] => bar    [payment] => bar    [paymentAddition] => creditCardAtHome    [change] => 0    [total] => 9300    [courier] =>     [courierCost] => 0    [serviceDeliverCost] => 1000    [charge] => 0    [contract] => 1    [ipAddr] => 127.0.0.1    [domain] => www.yourdelivery.local) 
+2012-08-14T11:43:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Order_Deliverdelay with id #1 new data :: Array(    [serviceDeliverDelay] => 2700    [courierDeliverDelay] => 0    [orderId] => 842) 
+2012-08-14T11:43:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 10 points for action order 
+2012-08-14T11:43:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Customer_FidelityTransaction with id #1503 new data :: Array(    [email] => naie@lieferando.de    [action] => order    [status] => 0    [points] => 10    [transactionData] => 842) 
+2012-08-14T11:43:36-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing successfully added 10 points to customer naie@lieferando.de for action order 
+2012-08-14T11:43:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - cache cleared for transactionsfidelity65666812875e8232797613d8aa41808d 
+2012-08-14T11:43:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - cache cleared for open1fidelity65666812875e8232797613d8aa41808d 
+2012-08-14T11:43:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - cache cleared for open0fidelity65666812875e8232797613d8aa41808d 
+2012-08-14T11:43:38-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing customer #432 Naie Jens sucessfully finished order #842 
+2012-08-14T11:43:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Status Wechsel in Order Tabelle: #842 - alter Status: 0 - neuer Status: 0 
+2012-08-14T11:43:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing New order status entry id: 842, status: 0 
+2012-08-14T11:43:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing updating model Default_Model_Base #1503 with modified data :: Array(    [email] => naie@lieferando.de    [transactionData] => 842    [status] => 0    [action] => order    [points] => 10    [updated] => 2012-08-14 11:43:38) 
+2012-08-14T11:43:38-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing successfully modifed transaction #1503 of customer naie@lieferando.de to status 0 
+2012-08-14T11:43:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - cache cleared for transactionsfidelity65666812875e8232797613d8aa41808d 
+2012-08-14T11:43:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - cache cleared for open1fidelity65666812875e8232797613d8aa41808d 
+2012-08-14T11:43:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - cache cleared for open0fidelity65666812875e8232797613d8aa41808d 
+2012-08-14T11:43:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Order_Sendby with id #720 new data :: Array(    [orderId] => 842    [sendBy] => fax) 
+2012-08-14T11:43:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Status Wechsel in Order Tabelle: #842 - alter Status: 0 - neuer Status: 0 
+2012-08-14T11:43:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing New order status entry id: 842, status: 0 
+2012-08-14T11:43:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing updating model Default_Model_Base #1503 with modified data :: Array(    [email] => naie@lieferando.de    [transactionData] => 842    [status] => 0    [action] => order    [points] => 10    [updated] => 2012-08-14 11:43:38) 
+2012-08-14T11:43:38-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing successfully modifed transaction #1503 of customer naie@lieferando.de to status 0 
+2012-08-14T11:43:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - cache cleared for transactionsfidelity65666812875e8232797613d8aa41808d 
+2012-08-14T11:43:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - cache cleared for open1fidelity65666812875e8232797613d8aa41808d 
+2012-08-14T11:43:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - cache cleared for open0fidelity65666812875e8232797613d8aa41808d 
+2012-08-14T11:43:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing order pdf for order 842 does not exists yet, generating and returning 
+2012-08-14T11:43:38-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing RETARUS: succesfully send out fax 842-ordersheet-restaurant.pdf to 0123 
+2012-08-14T11:43:39-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/success.htm 
+2012-08-14T11:43:40-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 10 points for action order 
+2012-08-14T11:43:40-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 10 points for action order 
+2012-08-14T11:43:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/index.htm 
+2012-08-14T11:43:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing get UNRATED ORDERS (limit 5 - start 0) for customer #432 naie@lieferando.de from cache with id: unrated_5_0customer432 - unratedOrderCount: Array 
+2012-08-14T11:43:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-08-14T11:43:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-08-14T11:43:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: Cache stored for id:  open0fidelity65666812875e8232797613d8aa41808d 
+2012-08-14T11:43:54-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/favourites.htm 
+2012-08-14T11:44:01-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/orders.htm 
+2012-08-14T11:44:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Order_Favorite with id #1 new data :: Array(    [orderId] => 842    [customerId] => 432    [name] => Delícias Congeladas Vila Mascote 14.08.2012) 
+2012-08-14T11:44:10-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing customer #432 Naie Jens successfully added order #842 to favourite 
+2012-08-14T11:44:12-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/favourites.htm 
+2012-08-14T11:44:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/service/preorder.htm 
+2012-08-14T11:44:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_service/preorder/back/0/type/rest.html 
+2012-08-14T11:44:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/favourites.htm 
+2012-08-14T11:45:01-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 25 - start 0) for customer #432 naie@lieferando.de - unratedOrderCount: 0 
+2012-08-14T11:45:01-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search RATED ORDERS (limit 10 - start 0) for customer #432 naie@lieferando.de - ratedOrderCount: 0 
+2012-08-14T11:45:01-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS COUNT for customer #432 naie@lieferando.de - unratedOrderCount: 0 
+2012-08-14T11:45:01-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search RATED ORDERS COUNT for customer #432 naie@lieferando.de - ratedOrderCount: 0 
+2012-08-14T11:45:01-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/ratings.htm 
+2012-08-14T11:45:06-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/orders.htm 
+2012-08-14T11:45:25-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/favourites.htm 
+2012-08-14T11:46:55-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/orders.htm 
+2012-08-14T11:47:40-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing appending fallback verbose information to order via cityId 3574 
+2012-08-14T11:47:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/finish.htm 
+2012-08-14T11:47:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/service/openingtimeday.htm 
+2012-08-14T11:47:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/orders.htm 
+2012-08-14T11:49:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-08-14T11:49:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing get UNRATED ORDERS (limit 5 - start 0) for customer #432 naie@lieferando.de from cache with id: unrated_5_0customer432 - unratedOrderCount: Array 
+2012-08-14T11:49:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-08-14T11:49:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-08-14T11:49:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: Cache stored for id:  open0fidelity65666812875e8232797613d8aa41808d 
+2012-08-14T11:49:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing get UNRATED ORDERS (limit 5 - start 0) for customer #432 naie@lieferando.de from cache with id: unrated_5_0customer432 - unratedOrderCount: Array 
+2012-08-14T11:49:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-08-14T11:49:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-08-14T11:49:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: Cache stored for id:  open0fidelity65666812875e8232797613d8aa41808d 
+2012-08-14T11:49:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing don't show ratingLink for order #842, because state <= 0 - state = 0 
+2012-08-14T11:49:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing don't show ratingLink for order #842, because state <= 0 - state = 0 
+2012-08-14T11:50:20-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing appending fallback verbose information to order via cityId 3574 
+2012-08-14T11:50:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/finish.htm 
+2012-08-14T11:50:22-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/service/openingtimeday.htm 
+2012-08-14T11:50:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-08-14T11:50:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing get UNRATED ORDERS (limit 5 - start 0) for customer #432 naie@lieferando.de from cache with id: unrated_5_0customer432 - unratedOrderCount: Array 
+2012-08-14T11:50:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-08-14T11:50:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-08-14T11:50:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: Cache stored for id:  open0fidelity65666812875e8232797613d8aa41808d 
+2012-08-14T11:50:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing get UNRATED ORDERS (limit 5 - start 0) for customer #432 naie@lieferando.de from cache with id: unrated_5_0customer432 - unratedOrderCount: Array 
+2012-08-14T11:50:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-08-14T11:50:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-08-14T11:50:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: Cache stored for id:  open0fidelity65666812875e8232797613d8aa41808d 
+2012-08-14T11:50:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing don't show ratingLink for order #842, because state <= 0 - state = 0 
+2012-08-14T11:50:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing don't show ratingLink for order #842, because state <= 0 - state = 0 
+2012-08-14T11:53:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/bestellzettel.htm 
+2012-08-14T12:08:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/index.htm 
+2012-08-14T12:08:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing get UNRATED ORDERS (limit 5 - start 0) for customer #432 naie@lieferando.de from cache with id: unrated_5_0customer432 - unratedOrderCount: Array 
+2012-08-14T12:08:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-08-14T12:08:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-08-14T12:08:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: Cache stored for id:  open0fidelity65666812875e8232797613d8aa41808d 
+2012-08-14T12:08:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/favourites.htm 
+2012-08-14T12:15:35-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/favourites.htm 
+2012-08-14T12:16:13-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/favourites.htm 
+2012-08-14T12:16:20-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/favourites.htm 
+2012-08-14T12:16:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/favourites.htm 
+2012-08-14T12:17:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/favourites.htm 
+2012-08-14T12:19:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/favourites.htm 
+2012-08-14T12:51:02-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/login.htm 
+2012-08-14T12:51:07-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Successfully loggged in admin #Supporter Jens Naie (417) 
+2012-08-14T12:51:07-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/dashboard.htm 
+2012-08-14T12:51:15-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-08-14T12:51:27-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Logged to the restaurant Pizza Piccante (20466) #Supporter Jens Naie (417) 
+2012-08-14T12:51:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template restaurant/index.htm 
+2012-08-14T12:51:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/service/edit/index.htm 
+2012-08-14T12:51:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/service.htm 
+2012-08-14T12:52:00-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/service.htm 
+2012-08-14T12:52:09-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Run into error: Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'bs.billingId' in 'where clause'
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(706): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#4 /home/ydadmin/htdocs/lieferando/application/models/DbTable/Billing.php(431): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 /home/ydadmin/htdocs/lieferando/application/models/Billing/Abstract.php(479): Yourdelivery_Model_DbTable_Billing->getStateHistory()
+#6 /home/ydadmin/htdocs/lieferando/application/functions/grid.function.php(234): Yourdelivery_Model_Billing_Abstract->getStateHistory()
+#7 [internal function]: billingStatusDropdown('47599', 'service', '/administration...')
+#8 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid.php(1942): call_user_func_array('billingStatusDr...', Array)
+#9 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid.php(2139): Bvb_Grid->_applyFieldCallback('2', Array, Array, Array)
+#10 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid/Deploy/Table.php(2201): Bvb_Grid->_buildGrid()
+#11 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid/Deploy/Table.php(2129): Bvb_Grid_Deploy_Table->_buildGridRender()
+#12 /home/ydadmin/htdocs/lieferando/application/controllers/Administration/BillingController.php(683): Bvb_Grid_Deploy_Table->deploy()
+#13 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): Administration_BillingController->serviceAction()
+#14 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('serviceAction')
+#15 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#16 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#17 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#18 /home/ydadmin/htdocs/lieferando/public/index.php(116): Zend_Application->run()
+#19 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-14T12:52:09-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template error/error.htm 
+2012-08-14T12:55:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/service.htm 
+2012-08-14T12:55:39-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/service.htm 
+2012-08-14T12:56:13-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/edit.htm 
+2012-08-14T12:56:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Creating bill for service PIZZA AVANTI 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 575690 is not matching numbers Real:2320 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 575751 is not matching numbers Real:3720 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 575778 is not matching numbers Real:4115 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 576776 is not matching numbers Real:1175 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 577523 is not matching numbers Real:2060 Consolidated:240 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 577590 is not matching numbers Real:1950 Consolidated:240 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 577683 is not matching numbers Real:2280 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 578778 is not matching numbers Real:1370 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 578940 is not matching numbers Real:1990 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 579074 is not matching numbers Real:3160 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 579111 is not matching numbers Real:3665 Consolidated:480 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 579598 is not matching numbers Real:1520 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 579853 is not matching numbers Real:1720 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 580589 is not matching numbers Real:995 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 580892 is not matching numbers Real:2740 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 581328 is not matching numbers Real:2290 Consolidated:890 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 581492 is not matching numbers Real:2400 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 581497 is not matching numbers Real:1385 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 581541 is not matching numbers Real:1175 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 581545 is not matching numbers Real:1175 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 581590 is not matching numbers Real:1175 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 582497 is not matching numbers Real:995 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 582507 is not matching numbers Real:1015 Consolidated:720 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 583309 is not matching numbers Real:2890 Consolidated:1300 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 583392 is not matching numbers Real:3845 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 583419 is not matching numbers Real:2460 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 583506 is not matching numbers Real:1940 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 583515 is not matching numbers Real:2110 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 583933 is not matching numbers Real:1590 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 584175 is not matching numbers Real:1200 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 584949 is not matching numbers Real:1175 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 585009 is not matching numbers Real:2285 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 586210 is not matching numbers Real:1520 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 586528 is not matching numbers Real:1390 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 586822 is not matching numbers Real:1590 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 587040 is not matching numbers Real:3440 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 588268 is not matching numbers Real:4755 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 588426 is not matching numbers Real:1445 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 589775 is not matching numbers Real:2120 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 589856 is not matching numbers Real:1190 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 590295 is not matching numbers Real:2995 Consolidated:590 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 590325 is not matching numbers Real:1485 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 591102 is not matching numbers Real:4045 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 591568 is not matching numbers Real:940 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 591743 is not matching numbers Real:2520 Consolidated:410 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 591801 is not matching numbers Real:1620 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 592723 is not matching numbers Real:1465 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 592804 is not matching numbers Real:3180 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 592981 is not matching numbers Real:1745 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 593358 is not matching numbers Real:1995 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 593374 is not matching numbers Real:3770 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 593609 is not matching numbers Real:2585 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 593616 is not matching numbers Real:1490 Consolidated:915 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 593995 is not matching numbers Real:3110 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 594048 is not matching numbers Real:1295 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 594141 is not matching numbers Real:1560 Consolidated:250 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 594165 is not matching numbers Real:1015 Consolidated:720 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 594166 is not matching numbers Real:3510 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 594183 is not matching numbers Real:2215 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 594851 is not matching numbers Real:2025 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 595215 is not matching numbers Real:1575 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 596589 is not matching numbers Real:4175 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 596720 is not matching numbers Real:3110 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 597230 is not matching numbers Real:4245 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 597360 is not matching numbers Real:990 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 597495 is not matching numbers Real:1395 Consolidated:500 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 598157 is not matching numbers Real:1570 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 598464 is not matching numbers Real:1355 Consolidated:360 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 598786 is not matching numbers Real:2885 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 598885 is not matching numbers Real:3520 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 599580 is not matching numbers Real:1175 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 599583 is not matching numbers Real:3180 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 600144 is not matching numbers Real:2095 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 600356 is not matching numbers Real:1520 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 600602 is not matching numbers Real:940 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 600958 is not matching numbers Real:995 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 601177 is not matching numbers Real:3910 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 601770 is not matching numbers Real:1885 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 602206 is not matching numbers Real:4020 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 602282 is not matching numbers Real:6695 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 602546 is not matching numbers Real:965 Consolidated:170 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 603004 is not matching numbers Real:1430 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 603139 is not matching numbers Real:3345 Consolidated:650 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 603406 is not matching numbers Real:1770 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 603412 is not matching numbers Real:1300 Consolidated:675 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 603699 is not matching numbers Real:1090 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 604095 is not matching numbers Real:1690 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 604100 is not matching numbers Real:2865 Consolidated:650 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 604269 is not matching numbers Real:1440 Consolidated:540 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 604445 is not matching numbers Real:1490 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 604610 is not matching numbers Real:1750 Consolidated:360 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 604767 is not matching numbers Real:1490 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 605049 is not matching numbers Real:1410 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 605313 is not matching numbers Real:2690 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 605405 is not matching numbers Real:4160 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 605429 is not matching numbers Real:1000 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 606976 is not matching numbers Real:1915 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 607803 is not matching numbers Real:2840 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 607851 is not matching numbers Real:2565 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 608227 is not matching numbers Real:995 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 608516 is not matching numbers Real:2065 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 608603 is not matching numbers Real:1665 Consolidated:540 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 608713 is not matching numbers Real:1695 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 610638 is not matching numbers Real:975 Consolidated:180 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 610792 is not matching numbers Real:1940 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 610804 is not matching numbers Real:1470 Consolidated:675 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 610983 is not matching numbers Real:1470 Consolidated:295 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 611399 is not matching numbers Real:2440 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 611549 is not matching numbers Real:1250 Consolidated:650 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 611891 is not matching numbers Real:2580 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 611945 is not matching numbers Real:1090 Consolidated:240 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 613048 is not matching numbers Real:4075 Consolidated:650 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 613329 is not matching numbers Real:1590 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 613716 is not matching numbers Real:2010 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 613963 is not matching numbers Real:1245 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 615033 is not matching numbers Real:1005 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 615127 is not matching numbers Real:2020 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 615135 is not matching numbers Real:2875 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 616365 is not matching numbers Real:1985 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 616972 is not matching numbers Real:1590 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 617186 is not matching numbers Real:1590 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 617398 is not matching numbers Real:2230 Consolidated:470 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 617568 is not matching numbers Real:1590 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 617721 is not matching numbers Real:1200 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 618088 is not matching numbers Real:2345 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 618221 is not matching numbers Real:1985 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 618411 is not matching numbers Real:2290 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 618477 is not matching numbers Real:2790 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 618544 is not matching numbers Real:2620 Consolidated:295 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 618852 is not matching numbers Real:1845 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 618882 is not matching numbers Real:3485 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 619528 is not matching numbers Real:1320 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 619726 is not matching numbers Real:2120 Consolidated:250 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 620459 is not matching numbers Real:1315 Consolidated:240 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 620596 is not matching numbers Real:2435 Consolidated:250 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 620619 is not matching numbers Real:2765 Consolidated:295 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 620652 is not matching numbers Real:1445 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 621039 is not matching numbers Real:1620 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 621234 is not matching numbers Real:1990 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 621538 is not matching numbers Real:2090 Consolidated:720 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 622066 is not matching numbers Real:3235 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 622112 is not matching numbers Real:3635 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 622300 is not matching numbers Real:1410 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 622389 is not matching numbers Real:1590 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 623073 is not matching numbers Real:2095 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 624130 is not matching numbers Real:3160 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 624491 is not matching numbers Real:1420 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 624682 is not matching numbers Real:1250 Consolidated:650 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 624906 is not matching numbers Real:1300 Consolidated:675 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 626059 is not matching numbers Real:4435 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 627855 is not matching numbers Real:2895 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 628264 is not matching numbers Real:1975 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 629482 is not matching numbers Real:995 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 629549 is not matching numbers Real:1085 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 629650 is not matching numbers Real:1995 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 629954 is not matching numbers Real:1285 Consolidated:490 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 629974 is not matching numbers Real:2330 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 630631 is not matching numbers Real:1540 Consolidated:650 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 631023 is not matching numbers Real:2030 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 631252 is not matching numbers Real:1400 Consolidated:650 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 632250 is not matching numbers Real:1595 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 632453 is not matching numbers Real:995 Consolidated:0 
+2012-08-14T12:56:39-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 633060 is not matching numbers Real:4630 Consolidated:295 
+2012-08-14T12:56:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/service.htm 
+2012-08-14T12:57:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/companys.htm 
+2012-08-14T12:58:04-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/company/edit/index.htm 
+2012-08-14T12:58:09-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/company/edit/billing.htm 
+2012-08-14T12:58:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/company/edit/index.htm 
+2012-08-14T12:58:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T12:58:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T12:58:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 52312, payment is not bill 
+2012-08-14T12:58:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 52387, payment is not bill 
+2012-08-14T12:58:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 52392, payment is not bill 
+2012-08-14T12:58:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 66709, payment is not bill 
+2012-08-14T12:58:44-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Creating bill for company BBDO Proximity Berlin GmbH #1235 
+2012-08-14T12:58:44-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 52312, this has not been in this bill before 
+2012-08-14T12:58:44-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 52387, this has not been in this bill before 
+2012-08-14T12:58:44-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 52392, this has not been in this bill before 
+2012-08-14T12:58:44-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 66709, this has not been in this bill before 
+2012-08-14T12:58:44-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1299026 is not matching numbers Real:1602 Consolidated:0 
+2012-08-14T12:58:46-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T12:59:12-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T12:59:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/company/edit/billing.htm 
+2012-08-14T12:59:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/company/edit/index.htm 
+2012-08-14T12:59:30-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/companys.htm 
+2012-08-14T12:59:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/companys.htm 
+2012-08-14T12:59:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/companys.htm 
+2012-08-14T12:59:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/companys.htm 
+2012-08-14T13:00:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/companys.htm 
+2012-08-14T13:00:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/company/edit/index.htm 
+2012-08-14T13:00:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T13:00:39-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T13:01:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/company/edit/billing.htm 
+2012-08-14T13:01:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/company/edit/index.htm 
+2012-08-14T13:01:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T13:01:45-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T13:02:00-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T13:02:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1282240, wrong time 
+2012-08-14T13:02:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1282512, wrong time 
+2012-08-14T13:02:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1289785, wrong time 
+2012-08-14T13:02:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1290822, wrong time 
+2012-08-14T13:02:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1298106, wrong time 
+2012-08-14T13:02:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Creating bill for company yd. yourdelivery GmbH #1097 
+2012-08-14T13:02:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1282240, this has not been in this bill before 
+2012-08-14T13:02:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1282512, this has not been in this bill before 
+2012-08-14T13:02:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1289785, this has not been in this bill before 
+2012-08-14T13:02:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1290822, this has not been in this bill before 
+2012-08-14T13:02:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1298106, this has not been in this bill before 
+2012-08-14T13:02:16-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1108823 is not matching numbers Real:800 Consolidated:0 
+2012-08-14T13:02:16-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1110585 is not matching numbers Real:790 Consolidated:0 
+2012-08-14T13:02:16-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1144532 is not matching numbers Real:800 Consolidated:0 
+2012-08-14T13:02:16-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1144539 is not matching numbers Real:800 Consolidated:0 
+2012-08-14T13:02:16-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1148571 is not matching numbers Real:990 Consolidated:0 
+2012-08-14T13:02:16-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1153543 is not matching numbers Real:790 Consolidated:0 
+2012-08-14T13:02:16-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1153546 is not matching numbers Real:700 Consolidated:0 
+2012-08-14T13:02:16-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1168192 is not matching numbers Real:790 Consolidated:0 
+2012-08-14T13:02:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T13:03:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T13:03:59-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T13:04:18-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T13:04:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T13:04:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T13:04:56-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 235137 because of state 1 and need no pfand yet set 
+2012-08-14T13:04:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1292101, wrong time 
+2012-08-14T13:04:56-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1297722, wrong time 
+2012-08-14T13:04:57-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1297837, wrong time 
+2012-08-14T13:04:57-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1298252, wrong time 
+2012-08-14T13:04:57-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1298863, wrong time 
+2012-08-14T13:04:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Creating bill for company NIBC Bank N.V. #1601 
+2012-08-14T13:04:58-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 235137, this has not been in this bill before 
+2012-08-14T13:05:00-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1292101, this has not been in this bill before 
+2012-08-14T13:05:00-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1297722, this has not been in this bill before 
+2012-08-14T13:05:00-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1297837, this has not been in this bill before 
+2012-08-14T13:05:00-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1298252, this has not been in this bill before 
+2012-08-14T13:05:00-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1298863, this has not been in this bill before 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 944820 is not matching numbers Real:2870 Consolidated:590 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 960068 is not matching numbers Real:3680 Consolidated:590 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 960097 is not matching numbers Real:1450 Consolidated:400 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 960117 is not matching numbers Real:6765 Consolidated:590 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 963419 is not matching numbers Real:2940 Consolidated:590 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 963510 is not matching numbers Real:2950 Consolidated:150 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 964178 is not matching numbers Real:750 Consolidated:0 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 967087 is not matching numbers Real:1480 Consolidated:590 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 967112 is not matching numbers Real:4542 Consolidated:1542 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 967494 is not matching numbers Real:1160 Consolidated:0 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 970322 is not matching numbers Real:7250 Consolidated:1000 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 973973 is not matching numbers Real:2990 Consolidated:590 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 974297 is not matching numbers Real:2840 Consolidated:590 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 974706 is not matching numbers Real:1240 Consolidated:0 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 991804 is not matching numbers Real:2940 Consolidated:590 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 992205 is not matching numbers Real:1660 Consolidated:0 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 995215 is not matching numbers Real:3060 Consolidated:590 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 996277 is not matching numbers Real:1850 Consolidated:850 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1003051 is not matching numbers Real:1600 Consolidated:0 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1003747 is not matching numbers Real:5760 Consolidated:1360 
+2012-08-14T13:05:00-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1014789 is not matching numbers Real:1390 Consolidated:250 
+2012-08-14T13:05:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T13:08:14-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 235137 because of state 1 and need no pfand yet set 
+2012-08-14T13:08:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1292101, wrong time 
+2012-08-14T13:08:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1297722, wrong time 
+2012-08-14T13:08:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1297837, wrong time 
+2012-08-14T13:08:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1298252, wrong time 
+2012-08-14T13:08:14-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1298863, wrong time 
+2012-08-14T13:08:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Creating bill for company NIBC Bank N.V. #1601 
+2012-08-14T13:08:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 235137, this has not been in this bill before 
+2012-08-14T13:08:17-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1292101, this has not been in this bill before 
+2012-08-14T13:08:17-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1297722, this has not been in this bill before 
+2012-08-14T13:08:17-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1297837, this has not been in this bill before 
+2012-08-14T13:08:17-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1298252, this has not been in this bill before 
+2012-08-14T13:08:17-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1298863, this has not been in this bill before 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 944820 is not matching numbers Real:2870 Consolidated:590 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 960068 is not matching numbers Real:3680 Consolidated:590 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 960097 is not matching numbers Real:1450 Consolidated:400 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 960117 is not matching numbers Real:6765 Consolidated:590 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 963419 is not matching numbers Real:2940 Consolidated:590 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 963510 is not matching numbers Real:2950 Consolidated:150 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 964178 is not matching numbers Real:750 Consolidated:0 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 967087 is not matching numbers Real:1480 Consolidated:590 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 967112 is not matching numbers Real:4542 Consolidated:1542 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 967494 is not matching numbers Real:1160 Consolidated:0 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 970322 is not matching numbers Real:7250 Consolidated:1000 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 973973 is not matching numbers Real:2990 Consolidated:590 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 974297 is not matching numbers Real:2840 Consolidated:590 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 974706 is not matching numbers Real:1240 Consolidated:0 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 991804 is not matching numbers Real:2940 Consolidated:590 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 992205 is not matching numbers Real:1660 Consolidated:0 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 995215 is not matching numbers Real:3060 Consolidated:590 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 996277 is not matching numbers Real:1850 Consolidated:850 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1003051 is not matching numbers Real:1600 Consolidated:0 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1003747 is not matching numbers Real:5760 Consolidated:1360 
+2012-08-14T13:08:18-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1014789 is not matching numbers Real:1390 Consolidated:250 
+2012-08-14T13:08:28-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Konnte PDF nicht erstellt werden! Texfile korrupt: /home/ydadmin/htdocs/lieferando/application/templates/latex/compile/compile_1344960507_I2dObPXW.tex #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Pdf/Latex.php:256]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Pdf/Latex.php:256]
+#3 compile() called at [/home/ydadmin/htdocs/lieferando/application/models/Billing/Company.php:1006]
+#4 create() called at [/home/ydadmin/htdocs/lieferando/application/models/Billing.php:219]
+#5 rebuild() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Administration/BillingController.php:906]
+#6 resetbillAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#7 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#8 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#9 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#10 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#11 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-14T13:08:28-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Could not create pdf #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/models/Billing/Company.php:1019]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/models/Billing/Company.php:1019]
+#3 create() called at [/home/ydadmin/htdocs/lieferando/application/models/Billing.php:219]
+#4 rebuild() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Administration/BillingController.php:906]
+#5 resetbillAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#7 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#8 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#9 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#10 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-14T13:08:28-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing could not reset bill 72720, failed to create #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/models/Billing.php:221]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/models/Billing.php:221]
+#3 rebuild() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Administration/BillingController.php:906]
+#4 resetbillAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#7 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#9 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-14T13:08:29-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T13:09:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 390794, payment is not bill 
+2012-08-14T13:09:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1263779, wrong time 
+2012-08-14T13:09:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1264267, wrong time 
+2012-08-14T13:09:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1296471, wrong time 
+2012-08-14T13:09:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Creating bill for company Monster Worldwide Deutschland GmbH #1265 
+2012-08-14T13:09:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 390794, this has not been in this bill before 
+2012-08-14T13:09:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1263779, this has not been in this bill before 
+2012-08-14T13:09:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1264267, this has not been in this bill before 
+2012-08-14T13:09:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1296471, this has not been in this bill before 
+2012-08-14T13:09:24-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 915167 is not matching numbers Real:54698 Consolidated:0 
+2012-08-14T13:09:24-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 958870 is not matching numbers Real:1740 Consolidated:0 
+2012-08-14T13:09:24-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 962079 is not matching numbers Real:1250 Consolidated:0 
+2012-08-14T13:09:24-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 965587 is not matching numbers Real:3785 Consolidated:0 
+2012-08-14T13:09:24-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 972405 is not matching numbers Real:2905 Consolidated:0 
+2012-08-14T13:09:24-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 986548 is not matching numbers Real:2720 Consolidated:0 
+2012-08-14T13:09:24-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 989912 is not matching numbers Real:1720 Consolidated:120 
+2012-08-14T13:09:24-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 993343 is not matching numbers Real:2990 Consolidated:0 
+2012-08-14T13:09:24-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1008056 is not matching numbers Real:1720 Consolidated:340 
+2012-08-14T13:09:26-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Konnte PDF nicht erstellt werden! Texfile korrupt: /home/ydadmin/htdocs/lieferando/application/templates/latex/compile/compile_1344960566_gKF0vj1R.tex #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Pdf/Latex.php:256]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Pdf/Latex.php:256]
+#3 compile() called at [/home/ydadmin/htdocs/lieferando/application/models/Billing/Company.php:1006]
+#4 create() called at [/home/ydadmin/htdocs/lieferando/application/models/Billing.php:219]
+#5 rebuild() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Administration/BillingController.php:906]
+#6 resetbillAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#7 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#8 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#9 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#10 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#11 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-14T13:09:26-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Could not create pdf #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/models/Billing/Company.php:1019]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/models/Billing/Company.php:1019]
+#3 create() called at [/home/ydadmin/htdocs/lieferando/application/models/Billing.php:219]
+#4 rebuild() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Administration/BillingController.php:906]
+#5 resetbillAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#7 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#8 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#9 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#10 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-14T13:09:26-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing could not reset bill 72708, failed to create #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/models/Billing.php:221]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/models/Billing.php:221]
+#3 rebuild() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Administration/BillingController.php:906]
+#4 resetbillAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#7 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#9 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-14T13:09:27-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T13:18:21-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 235137 because of state 1 and need no pfand yet set 
+2012-08-14T13:18:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1292101, wrong time 
+2012-08-14T13:18:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1297722, wrong time 
+2012-08-14T13:18:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1297837, wrong time 
+2012-08-14T13:18:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1298252, wrong time 
+2012-08-14T13:18:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1298863, wrong time 
+2012-08-14T13:18:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Creating bill for company NIBC Bank N.V. #1601 
+2012-08-14T13:18:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 235137, this has not been in this bill before 
+2012-08-14T13:18:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1292101, this has not been in this bill before 
+2012-08-14T13:18:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1297722, this has not been in this bill before 
+2012-08-14T13:18:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1297837, this has not been in this bill before 
+2012-08-14T13:18:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1298252, this has not been in this bill before 
+2012-08-14T13:18:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1298863, this has not been in this bill before 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 944820 is not matching numbers Real:2870 Consolidated:590 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 960068 is not matching numbers Real:3680 Consolidated:590 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 960097 is not matching numbers Real:1450 Consolidated:400 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 960117 is not matching numbers Real:6765 Consolidated:590 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 963419 is not matching numbers Real:2940 Consolidated:590 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 963510 is not matching numbers Real:2950 Consolidated:150 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 964178 is not matching numbers Real:750 Consolidated:0 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 967087 is not matching numbers Real:1480 Consolidated:590 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 967112 is not matching numbers Real:4542 Consolidated:1542 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 967494 is not matching numbers Real:1160 Consolidated:0 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 970322 is not matching numbers Real:7250 Consolidated:1000 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 973973 is not matching numbers Real:2990 Consolidated:590 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 974297 is not matching numbers Real:2840 Consolidated:590 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 974706 is not matching numbers Real:1240 Consolidated:0 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 991804 is not matching numbers Real:2940 Consolidated:590 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 992205 is not matching numbers Real:1660 Consolidated:0 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 995215 is not matching numbers Real:3060 Consolidated:590 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 996277 is not matching numbers Real:1850 Consolidated:850 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1003051 is not matching numbers Real:1600 Consolidated:0 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1003747 is not matching numbers Real:5760 Consolidated:1360 
+2012-08-14T13:18:25-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1014789 is not matching numbers Real:1390 Consolidated:250 
+2012-08-14T13:18:40-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T13:23:46-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 235137 because of state 1 and need no pfand yet set 
+2012-08-14T13:23:46-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1292101, wrong time 
+2012-08-14T13:23:46-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1297722, wrong time 
+2012-08-14T13:23:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1297837, wrong time 
+2012-08-14T13:23:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1298252, wrong time 
+2012-08-14T13:23:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1298863, wrong time 
+2012-08-14T13:23:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Creating bill for company NIBC Bank N.V. #1601 
+2012-08-14T13:23:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 235137, this has not been in this bill before 
+2012-08-14T13:23:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1292101, this has not been in this bill before 
+2012-08-14T13:23:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1297722, this has not been in this bill before 
+2012-08-14T13:23:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1297837, this has not been in this bill before 
+2012-08-14T13:23:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1298252, this has not been in this bill before 
+2012-08-14T13:23:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Ignoring order 1298863, this has not been in this bill before 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 944820 is not matching numbers Real:2870 Consolidated:590 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 960068 is not matching numbers Real:3680 Consolidated:590 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 960097 is not matching numbers Real:1450 Consolidated:400 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 960117 is not matching numbers Real:6765 Consolidated:590 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 963419 is not matching numbers Real:2940 Consolidated:590 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 963510 is not matching numbers Real:2950 Consolidated:150 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 964178 is not matching numbers Real:750 Consolidated:0 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 967087 is not matching numbers Real:1480 Consolidated:590 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 967112 is not matching numbers Real:4542 Consolidated:1542 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 967494 is not matching numbers Real:1160 Consolidated:0 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 970322 is not matching numbers Real:7250 Consolidated:1000 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 973973 is not matching numbers Real:2990 Consolidated:590 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 974297 is not matching numbers Real:2840 Consolidated:590 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 974706 is not matching numbers Real:1240 Consolidated:0 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 991804 is not matching numbers Real:2940 Consolidated:590 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 992205 is not matching numbers Real:1660 Consolidated:0 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 995215 is not matching numbers Real:3060 Consolidated:590 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 996277 is not matching numbers Real:1850 Consolidated:850 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1003051 is not matching numbers Real:1600 Consolidated:0 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1003747 is not matching numbers Real:5760 Consolidated:1360 
+2012-08-14T13:23:50-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Order 1014789 is not matching numbers Real:1390 Consolidated:250 
+2012-08-14T13:24:05-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/company.htm 
+2012-08-14T13:26:02-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/company/edit/billing.htm 

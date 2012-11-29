@@ -1,0 +1,90 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{if isset($contact)}
+<div id="yd-admin-backend-wait" style="display:none;"><img src="{$domain_static}/images/yd-backend/yd-back-load.gif" /></div>
+
+<form action="/administration_contact/edit" method="post" class="yd-form-toggle">
+<input type="hidden" name="id" value="{$contact->getId()}"/>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Kontaktinformationen ')} {$contact->getPrename()} {$contact->getName()} <a href="#" class="yd-form-toggle">{__b('bearbeiten')}</a>
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="30%">{__b('Vorname:')}</td>
+                            <td width="70%" colspan="2"><input type="text" name="prename" class="rund_set text" value="{$contact->getPrename()}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Nachname:')}</td>
+                            <td colspan="2"><input type="text" name="name" class="rund_set text" value="{$contact->getName()}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('eMail:')}</td>
+                            <td><input type="text" name="email" value="{$contact->getEmail()}" class="rund_set text" id="yd-create-contact-email"/></td>
+                            <td id="yd-create-contact-email-status"></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Telefon:')}</td>
+                            <td colspan="2"><input type="text" class="rund_set text" name="tel" value="{$contact->getTel()}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Fax:')}</td>
+                            <td colspan="2"><input type="text" class="rund_set text" name="fax" value="{$contact->getFax()}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Position')}</td>
+                            <td colspan="2"><input type="text" class="rund_set text" name="position" value="{$contact->getPosition()}"/></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Adressdaten')}
+            </div>
+            <div class="item-content">
+                <table>
+                    <tr>
+                        <td width="30%">{__b('Straße:')}</td>
+                        <td width="80%"><input type="text" name="street" class="rund_set text" value="{$contact->getStreet()}"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('HausNr:')}</td>
+                        <td><input type="text" name="hausnr" class="rund_set text" value="{$contact->getHausnr()}"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('PLZ:')}</td>
+                        <td>
+                            {assign var=city value=$contact->getCity()}
+                            {if strpos($config->domain->base, "janamesa")!==false}
+                                <input type="text" name="plz" value="{$contact->getPlz()}" />
+                            {else}
+                                {include file='administration/city_autocomplete.htm'}
+                            {/if}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" id="yd-create-contact-button"/>
+                <input type="button" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+</form>
+{/if}
+{/block}

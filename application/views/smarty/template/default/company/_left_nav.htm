@@ -1,0 +1,44 @@
+<ul id="main-nav">  <!-- Accordion Menu -->
+
+        <li>
+            <a href="/company" class="nav-top-item no-submenu {$comp_nav_index}"> <!-- Add the class "no-submenu" to menu items with no sub menu -->
+                {__('Übersicht')}
+            </a>
+        </li>
+
+        <li>
+            <a href="#" class="nav-top-item {$comp_nav_employees_top}" > <!-- Add the class "current" to current menu item -->
+            {__('Mitarbeiterverwaltung')}
+            </a>
+            <ul>
+                <li><a class="{$comp_nav_employees}" href="/company/employees">{__('Mitarbeiter')}</a></li>
+                <li><a class="{$comp_nav_budgets}" href="/company/budgets">{__('Gruppen')}</a></li>
+                <li><a class="{$comp_nav_addresses}" href="/company/addresses">{__('Adressen')}</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#" class="nav-top-item {$comp_nav_settings_top}">
+                {__('Rechnungen und Einstellungen')}
+            </a>
+            <ul>
+                <li><a class="{$comp_nav_settings}" href="/company/settings">{__('Firmendetails')}</a></li>
+                <li><a class="{$comp_nav_contact}" href="/company/contact" >{__('Kontaktperson')}</a></li>
+                <li><a class="{$comp_nav_billingcontact}" href="/company/billingcontact">{__('Rechnungsadresse')}</a></li>
+                <li><a class="{$comp_nav_billing}" href="/company/billing">{__('Rechnungen')}</a></li>
+                <li><a class="{$comp_nav_projectnumbers}" href="/company/projectnumbers">{__('Projektnummern')}</a></li>
+                <li><a class="{$comp_nav_costcenter}" href="/company/costcenters">{__('Kostenstelle')}</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#" class="nav-top-item {$comp_nav_orders_top}">
+                {__('Bestellungen')}
+            </a>
+            <ul>
+                <li><a class="{$comp_nav_orders}" href="/company/orders">{__('Alle Bestellungen')}</a></li>
+                <!--<li><a class="{$comp_nav_orders}" href="/company/statistics">Statistiken</a></li>-->
+            </ul>
+        </li>
+
+    </ul> <!-- End #main-nav -->

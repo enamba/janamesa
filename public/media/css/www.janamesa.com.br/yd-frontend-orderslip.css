@@ -1,0 +1,105 @@
+/*
+ * Bestellzettel
+ **********************************************************/
+
+body {
+    width: auto !important;
+}
+
+.yd-header {
+    text-align:left;
+}
+
+.yd-slip {
+    margin: 0 0 50px;
+}
+
+.yd-inner {
+    width: 550px;
+}
+
+.yd-box {
+    width: 550px;
+}
+
+.br-box:before, .br-box:after {
+    left: -9999em;
+}
+
+.yd-header span {
+    position: absolute;
+    top: 28px;
+    left: 40px;
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 38px;
+    color: #fff;
+    text-shadow: 1px 1px 0 rgba(0,0,0,1);
+}
+
+.yd-header a {
+    position: absolute;
+    top: 10px;
+    font-size: 11px;
+    color: #fff;
+    padding: 3px 0 0 20px;
+}
+
+.yd-header a.yd-sliplink1 {
+    right: 250px;
+    background: url(/media/images/yd-sprites-icons.png) 0px -1841px no-repeat;
+}
+
+.yd-header a.yd-sliplink2 {
+    right: 135px;
+    background: url(/media/images/yd-sprites-icons.png) 0px -1801px no-repeat;
+}
+
+.yd-header a.yd-sliplink3 {
+    padding: 5px 0 5px 30px;
+    top: 60px;
+    right: 10px;
+    background: url(/media/images/yd-sprites-icons.png) 0px -2139px no-repeat;
+}
+
+.yd-header a.yd-sliplink4 {
+    right: 10px;
+    background: url(/media/images/yd-sprites-icons.png) 0px -679px no-repeat;
+}
+
+.yd-slip-content {
+    padding: 25px;
+}
+
+.yd-slip-content ul li {
+    padding: 5px 0;
+}
+
+
+.yd-slip-content-center table tr td {
+    padding: 5px;
+    border-bottom: 1px dotted #ccc;
+    vertical-align: top;
+    text-align: right;
+}
+
+.yd-slip-content-center table tr td.left {
+    text-align: left;
+}
+
+.yd-slip-content-center table tr td.no {
+    border-bottom: 0;
+}
+
+.yd-slip-content-center table tr td.green {
+    color: green !important;
+    font-weight: bold;
+    border-top: 1px solid green;
+    border-bottom: 3px double green;
+}
+
+.yd-slip-content-center table tr td small {
+    display: block;
+    font-size: 11px;
+    padding: 5px 0 0;
+    color: #aaa;
+}

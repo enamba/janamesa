@@ -1,0 +1,1 @@
+alter table orders_location add index(`cityId`);

@@ -1,0 +1,1 @@
+alter table restaurants add column topUntil DATE DEFAULT NULL;

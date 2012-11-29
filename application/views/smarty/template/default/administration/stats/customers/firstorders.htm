@@ -1,0 +1,123 @@
+{extends file='administration/base.htm'}
+{block name="content"}
+{include file='administration/stats/customers/navigation.htm'}
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                {__b('Hier wird angezeigt, wie viele Erstbestellungen wurden von Kunden gemacht.%s
+                Ein Kunde wird durch seine E-Mail Adresse bestimmt.%s
+                Eine Erstbestellung ist die allererste Bestellung von allen,%s
+                die von dem jeweiligen Kunden gemacht wurden.', '<br/>', '<br/>', '<br/>')}
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <form action="/administration_stats_customers/firstorders" method="post" name="form">
+                    {__b('Zusätzliche Statistik über einen Zeitinterval.')}<br/><br/>
+                <table width="100%" class="user-tab">
+                    <tr>
+                        <td width="5%">{__b('Von')}</td>
+                        <td width="15%"><input type="text" readonly name="fromD" id="yd-statistics-start" value="{$from}"/></td>
+                        <td width="5%">{__b('Bis')}</td>
+                        <td width="15%"><input type="text" readonly name="untilD" id="yd-statistics-end"  value="{$until}"/></td>
+                        <td width="50%"><input value="{__b('Zeitrahmen festlegen')}" type="submit" /></td>
+                    </tr>
+                </table>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {if isset($firstorders_registered_timeslot)}
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <table width="100%" class="user-tab">
+                    <tr>
+                        <td><b>{__b('Tag')}</b></td>
+                        {foreach from=$days item=d}
+                        <td>{$d}</td>
+                        {/foreach}
+                    </tr>
+                    <tr>
+                        <td><b>{__b('Registrierte Privatbestellungen')}</b></td>
+                        {foreach from=$days item=d}
+                        <td>{$firstorders_registered_timeslot[$d]}</td>
+                        {/foreach}
+                    </tr>
+                    <tr>
+                        <td><b>{__b('Nicht registrierte Privatbestellungen')}</b></td>
+                        {foreach from=$days item=d}
+                        <td>{$firstorders_nonregistered_timeslot[$d]}</td>
+                        {/foreach}
+                    </tr>
+                    <tr>
+                        <td><b>{__b('Firmenbestellungen')}</b></td>
+                        {foreach from=$days item=d}
+                        <td>{$firstorders_company_timeslot[$d]}</td>
+                        {/foreach}
+                    </tr>
+                </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    {/if}
+
+
+    {section name=year start=2009 loop=2013}
+        <div class="one-column-box">
+            <div class="item">
+                <div class="item-head">
+                    {$smarty.section.year.index}
+                </div>
+                <div class="item-content">
+                    <table class="user-tab">
+                        <tr>
+                            <td width="16%"></td>
+                            <td width="7%" align="center"><b>{__b('Januar')}</b></td>
+                            <td width="7%" align="center"><b>{__b('Februar')}</b></td>
+                            <td width="7%" align="center"><b>{__b('März')}</b></td>
+                            <td width="7%" align="center"><b>{__b('April')}</b></td>
+                            <td width="7%" align="center"><b>{__b('Mai')}</b></td>
+                            <td width="7%" align="center"><b>{__b('Juni')}</b></td>
+                            <td width="7%" align="center"><b>{__b('Juli')}</b></td>
+                            <td width="7%" align="center"><b>{__b('August')}</b></td>
+                            <td width="7%" align="center"><b>{__b('September')}</b></td>
+                            <td width="7%" align="center"><b>{__b('Oktober')}</b></td>
+                            <td width="7%" align="center"><b>{__b('November')}</b></td>
+                            <td width="7%" align="center"><b>{__b('Dezember')}</b></td>
+                        </tr>
+                        <tr>
+                            <td align="center"><b>{__b('Registrierte Privatbestellungen')}</b></td>
+                            {section name=month start=1 loop=13}
+                            <td align="center">{$firstorders_registered[$smarty.section.year.index][$smarty.section.month.iteration]}</td>
+                            {/section}
+                        </tr>
+                        <tr>
+                            <td align="center"><b>{__b('Nicht registrierte Privatbestellungen')}</b></td>
+                            {section name=month start=1 loop=13}
+                            <td align="center">{$firstorders_nonregistered[$smarty.section.year.index][$smarty.section.month.iteration]}</td>
+                            {/section}
+                        </tr>
+                        <tr>
+                            <td align="center"><b>{__b('Firmenbestellungen')}</b></td>
+                            {section name=month start=1 loop=13}
+                            <td align="center">{$firstorders_company[$smarty.section.year.index][$smarty.section.month.iteration]}</td>
+                            {/section}
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    {/section}    
+    
+
+    
+
+    
+{/block}

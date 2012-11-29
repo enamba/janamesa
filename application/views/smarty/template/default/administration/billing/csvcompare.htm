@@ -1,0 +1,40 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Optionen')}
+            </div>
+            <div class="item-content">
+                <form method="post" action="/administration_billing/csvcompare" enctype="multipart/form-data">
+                    <p>{__b('CSV Datei hochladen zum Vergleich: ')}<input type="file" name="csv" /></p>
+                    <p><input type="submit" value="{__b('Vergleichen')}" class="button"/></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('In Arbeit')}
+            </div>
+            <div class="item-content">
+                {foreach from=$in item=file}
+                    <a target="_blank" href="/administration_billing/csvcompare?file={$file|urlencode}">{$file|basename}</a><br /><br />
+                {/foreach}
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+                {__b('Bereits eingelesene Daten')}
+            </div>
+            <div class="item-content">
+                {foreach from=$out item=file}
+                    <a target="_blank" href="/administration_billing/csvcompare?file={$file|urlencode}">{$file|basename}</a><br /><br />
+                {/foreach}
+            </div>
+        </div>
+    </div>
+
+{/block}

@@ -1,0 +1,147 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+                <h1>{__b('Vertriebler: %s, %s', $salesperson->getName(), $salesperson->getPrename())} <a href="/administration_salesperson/info/id/{$salesperson->getId()}/">[{__b('info')}]</a></h1>
+        </div>
+    </div>
+</div>
+
+
+{if !Yourdelivery_Model_Salesperson::registeredAsAdmin($salesperson->getEmail())}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-warning">
+            {__b('Der Vertriebler hat keinen Zuganz zum Admin-Backed!')}
+        </div>
+        <div class="item-content">
+            <div>
+                <form action="/administration_salesperson/registeradmin" method="post">
+                    <input type="hidden" name="id" value="{$salesperson->getId()}"/>
+                    <table class="user-tab">
+                        <tr>
+                            <td>{__b('Jetzt Zugang zum Admin-Backed für %s %s erstellen', $salesperson->getPrename(), $salesperson->getName())}</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td width="10%">{__b('Passwort:')}</td>
+                            <td width="40%"><input type="text" name="password" class="rund_set text" value="{$p.password}"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" value="{__b('Erstellen')}" class="button rund_set" />
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/if}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Vertriebler')}
+        </div>
+        <div class="item-content">
+            <div>
+            <form action="/administration_salesperson/edit" method="post">
+                <input type="hidden" name="id" value="{$salesperson->getId()}"/>
+                <table class="user-tab">
+                    <tr>
+                        <td width="20%">{__b('Vorname:')}</td>
+                        <td width="20%"><input type="text" name="prename" class="rund_set text" value="{$salesperson->getPrename()}"/> *</td>
+                        <td width="60%"></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Nachname:')}</td>
+                        <td><input type="text" name="name" class="rund_set text" value="{$salesperson->getName()}"/> *</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Email:')}</td>
+                        <td>{$salesperson->getEmail()}</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Arbeitet in:')}</td>
+                        <td>
+                            <select name="callcenter" id="yd-salesperson-type">
+                                <option value="0">{__b('Aussendienst')}</option>
+                                <option value="1"  {if ($salesperson->getCallcenter()==1)}selected{/if}>{__b('Call Center')}</option>
+                            </select>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Gehalt')}</td>
+                        <td><input type="text" name="salary" class="rund_set text" value="{$salesperson->getSalary()}"/></td>
+                        <td id="yd-salesperson-salary-type">{__b('€')} {if ($salesperson->getCallcenter()==1)} {__b('pro Stunde')} {else} {__b('pro Vertrag')} {/if}</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Anmerkung:')}</td>
+                        <td><textarea rows="3" name="description" class="inp">{$salesperson->getDescription()}</textarea></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" />
+                            <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Restaurants')}
+        </div>
+        <div class="item-content">
+            <div>
+            <form action="/administration_salesperson/addrestaurant" method="post">
+                <input type="hidden" name="id" value="{$salesperson->getId()}"/>
+                <table class="user-tab">
+                    {foreach from=$salesperson->getRestaurants() item=restaurant}
+                    <tr>
+                        <td><a href="/administration_service_edit/id/{$restaurant->getId()}">{$restaurant->getName()}</a></td>
+                        <td colspan="2">
+                            <a href="/administration_salesperson/removerestaurant/id/{$salesperson->getId()}/restaurantId/{$restaurant->getId()}">
+                                <img src="{$domain_static}/images/yd-backend/del-cat.gif" alt="{__b('Löschen')}" />
+                            </a>
+                        </td>
+                    </tr>
+                    {/foreach}
+                    <tr>
+                        <td width="30%">{__b('Dienstleister')}</td>
+                        <td>
+                            <select name="restaurantId">
+                                    <option value="-1"></option>
+                                {foreach from=$restIds item=ri}
+                                    <option value="{$ri.id}">{$ri.name} (#{$ri.id})</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                        <td>
+                            <input type="submit" value="{__b('Hinzufügen')}" class="button rund_set"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}    

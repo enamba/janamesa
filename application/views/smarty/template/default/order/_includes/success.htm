@@ -1,0 +1,104 @@
+
+<div id="yd-success-page" class="yd-success">
+
+    <div class="yd-breadcrumbs-new">
+        <a href="/">{__('Startseite')}</a>
+        <a href="/{$order->getCityUrl()}">{__('Lieferservices in %s %s', $order->getLocation()->getPLz(), $order->getLocation()->getCity()->getCity())}</a>
+        <a href="/{$order->getServiceUrl()}">{__('Speisekarte %s', $order->getService()->getName())}</a>
+        <a class="active_payment">{__('Bezahlmethode wählen')}</a>
+        <a class="active">{__('Bestellung abgeschlossen')}</a>
+    </div>
+
+    <!-- this will trigger the restoring of the ydOrder object withOUT an update of the view -->
+    <input id="yd-order-service-id" type="hidden" name="serviceId" value="{$order->getService()->getId()}" />
+    <input id="yd-order-restore-bucket" class="yd-no-update" type="hidden" name="restore" />
+
+    <div id="yd-ordering">
+
+        {if $order->getService()->hasSmsNotify()}
+            <div id="yd-order-notify-{$order->getHashtag()}" class="yd-order-notify">
+                {include file="request/order/checknotify.htm"}
+            </div>
+        {else}
+            <h1>
+                {__("Vielen Dank, Deine Bestellung wurde erfolgreich übermittelt!")}
+            </h1>
+
+            <div class="yd-success1 yd-box">
+                {if $order->getPayment() == 'ebanking'}
+                    {if $order->hasNewCustomerDiscount()}
+                        {if (($order->getDiscount()->getParent()->getType()!=4) && ($order->getDiscount()->getParent()->getType()!=6) )}
+                            {__('Dein eingelöster Neukunden-Gutschein wird noch überprüft.')}
+                        {else}
+                            {__('Dein eingelöster Gutschein wird noch überprüft.')}
+                        {/if}
+                    {/if}
+                    {__('Die Bestellbestätigung erhältst Du in den nächsten Minuten.')}
+                {else}
+                    {__("Eine Bestellbestätigung wurde an Deine E-Mail-Adresse %s gesendet.", $order->getCustomer()->getEmail())}
+                {/if}
+            </div>
+        {/if}
+
+        <div class="yd-rest-info yd-box yd-clearfix">
+            <h2>{__("Restaurant %s", $order->getService()->getName())}</h2>
+            <small>{$order->getService()->getStreet()} {$order->getService()->getHausnr()}, {$order->getService()->getPlz()} {$order->getService()->getOrt()->getOrt()}</small>
+            <span>
+                {__("Bei Fragen zur Bestellung, Lieferzeit oder den Produkten wende Dich bitte an:")}
+            </span>
+            <img class="yd-rest-logo" src="{$timthumb}/{$config->domain->base}/service/{$order->getService()->getId()}/{$order->getService()->getName()|urlencode}-155-100.jpg" alt="{$order->getService()->getName()}" />
+            {if $config->domain->base == 'janamesa.com.br'}
+                <strong>{$config->locale->tel->support}</strong>
+            {else}
+                <strong id="yd-rest-info-tel">{$order->getService()->getTel()}</strong>
+            {/if}
+        </div>
+
+        {if $config->domain->base == 'lieferando.de' && $order->getDomain() != 'gelbeseiten.lieferando.de'}
+        {include file="_cookies/d-l-a/success.htm"}
+        <div>
+            <script type="text/javascript" src="http://altfarm.mediaplex.com/ad/js/20602-149381-44940-0?mpt={time()}&mpvc="></script>
+        </div>
+        {/if}
+    </div>
+
+    <div id="yd-sidebar">
+
+        {include file="order/_includes/chat/supportchat.htm"}
+
+        {if $order->getKind() == 'priv' && $order->getMode() == 'rest' && not is_object($order->getDiscount()) && $loggedInCustomer && $config->domain->base != 'eat-star.de'}
+
+        <div class="yd-success-points yd-box">
+            <em>{__("Für Deine Bestellung erhältst Du:")}</em>
+
+            <strong>{_n("%d Treuepunkt", "%d Treuepunkte", $order->getCustomer()->getFidelity()->getPointsForAction('order'), $order->getCustomer()->getFidelity()->getPointsForAction('order'))}</strong>
+        </div>
+
+        {elseif $order->getKind() == 'priv' && $order->getMode() == 'rest' && not $loggedInCustomer && $config->domain->base != 'eat-star.de'}
+
+        <div class="yd-success-points yd-box">
+            <em>{__("Für Deine Bestellung erhältst Du:")}</em>
+
+            <strong>{_n("%d Treuepunkt", "%d Treuepunkte", ($order->getCustomer()->getFidelity()->getPointsForAction('order')+$order->getCustomer()->getFidelity()->getPointsForAction('register')+$order->getCustomer()->getFidelity()->getPointsForAction('registeraftersale')),($order->getCustomer()->getFidelity()->getPointsForAction('order')+$order->getCustomer()->getFidelity()->getPointsForAction('register')+$order->getCustomer()->getFidelity()->getPointsForAction('registeraftersale')))}</strong>
+
+            {if $order->isSatellite()}
+                <a href="http://www.{$config->domain->base}/user/register" class="yd-button-240 yd-logged-out">
+                    {__("Treuepunkte sichern")}
+                </a>
+            {else}
+                <a class="yd-button-240 yd-register-fidelity yd-logged-out" id="yd-register-fidelity-{$order->getId()}">
+                    {__("Treuepunkte sichern")}
+                </a>
+            {/if}
+        </div>
+
+        {/if}
+
+        {if $config->domain->base == 'janamesa.com.br'}
+        {include file="order/_includes/livechat.htm"}
+        {/if}
+        
+        
+    </div>
+
+</div>

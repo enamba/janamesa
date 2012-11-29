@@ -1,0 +1,62 @@
+<h1>{__b('Promptdaten')}</h1>
+{if $msg}
+    <p>{$msg}</p>
+{/if}
+
+<table class="user-tab" width="100%">
+    {foreach from=$transactions item=t}
+    <tr>
+        <td>{$t->created|date_format:'d.m.Y H:i'}</td>
+        <td>{$t->action}</td>
+        <td>{if $t->success eq 1}Ok{else}{__b('Fehler')}{/if}</td>
+        <td>{$t->getResultMsg()}</td>
+    </tr>
+    {/foreach}
+    {foreach from=$trackings item=t}
+    <tr>
+        <td>{$t->created|date_format:'d.m.Y H:i'}</td>
+        <td>{__b('Tracking')}</td>
+        <td colspan="2">{$t->trackingId}</td>
+    </tr>
+    {/foreach}
+</table>
+
+{if (!count($trackings))}
+<p>
+    {__b('Kunden Anschrift korrigieren und Bestellung an Prompt neu übermitteln')}
+</p>
+<form method="post" action="/request_administration/prompt">
+    <input type="hidden" name="orderId" class="rund rund_set" value="{$order->getId()}"/>
+    <table class="user-tab" width="100%">
+        <tr>
+            <td width="50%" align="center">
+                {__b('Strasse')}
+            </td>
+            <td width="50%" align="center">
+                <input type="text" name="street" class="rund rund_set" value="{$order->getLocation()->getStreet()}"/>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" align="center">
+                {__b('Hsnr.')}
+            </td>
+            <td width="50%" align="center">
+                <input type="text" name="hausnr" class="rund rund_set" value="{$order->getLocation()->getHausnr()}"/>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" align="center">
+                {__b('Plz')}
+            </td>
+            <td width="50%" align="center">
+                <input type="text" name="plz" class="rund rund_set" value="{$order->getLocation()->getPlz()}"/>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" align="center" colspan="2">
+                <input type="submit" value="{__b('Speichern')}" /><br>
+            </td>
+        </tr>
+    </table>
+</form>
+{/if}

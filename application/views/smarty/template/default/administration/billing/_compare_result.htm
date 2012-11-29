@@ -1,0 +1,62 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<form action="/administration_billing/confirmbills/" method="POST">
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('CSV Vergleich')}
+            </div>
+            <div class="item-content">
+                <table class="csvcompare-css">
+                    <thead>
+                        <tr>
+                            <th width="10%">{__b('Rechnung')}</th>
+                            <th width="80%" colspan="{$resultLength}" style="text-align:center">{__b('Suche')}</th>
+                            <th width="10%">{__b('Auswahl')}</th>
+                        </tr>
+                        <tr>
+                            <th colspan="0">
+                                <input type="submit" value="{__b('ausgewählte Rechnungen auf bezahlt setzen')}" />
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {foreach from=$result item=r}
+
+                        {assign var=bill value=$r.0}
+                        {assign var=found value=$r.1}
+
+                        <tr class="yd-select-csvrow">
+                            <td style="border-right:2px solid black;padding-right:10px;">{$bill.number}</td>
+                            <td style="border-right:2px solid black;padding-right:10px;">{$bill.amount}</td>
+                            {foreach from=$found key=needle item=haystack}
+                            {if $haystack.2 === true}
+                            <td style="text-align:center">
+                                <a href="#" class="yd-show-haystack">{$haystack.0}</a>
+                                <span class="yd-haystack">{__b('gefunden in ')}{$haystack.1}</span>
+                                <div class="entire-row hidden">
+                                    <p>{__b('Die gesamte Zeile')}</p>
+                                    <ol>
+                                        {foreach from=$haystack.3 item=col}
+                                        <li>{$col}</li>
+                                        {/foreach}
+                                    </ol>
+                                </div>
+                            </td>
+                            {else}
+                            <td style="text-align:center"> --- </td>
+                            {/if}                                   
+                            {/foreach}
+                            <td colspan="0">
+                                <input style="float:right;margin-right:100px"  type="checkbox" checked="checked" value="{$bill.id}" name="billId[]" />
+                            </td>
+                        </tr>
+
+                        {/foreach}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>
+{/block}

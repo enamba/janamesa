@@ -1,0 +1,51 @@
+{include file="testing/cms/_testingCmsHeader.htm"}
+
+<div id="content">
+
+    <div class="yd-box">
+
+        <h2 class="yd-icon-cms1">Overview
+            <div class="yd-testcase-right">
+                TestCaseId: {$testCase->getId()}
+            </div>
+        </h2>
+
+        Testcase: {$testCase->getTitle()}
+
+        <br /><br />
+
+        Author: {$testCase->getAuthor()}
+
+        <br /><br />
+
+        Description: {$testCase->getDescription()}
+
+        <br /><br />
+
+        {assign var=myCounter value=0}
+        {foreach from=$missions item=mission}
+        {assign var=myCounter value=$myCounter+1}
+
+        <b>{$myCounter}.</b> <a href="/testing_cms/response/id/{$mission->getTestCaseId()}/eid/{$mission->getId()}">{$mission->getMission()}</a>
+
+        {/foreach}
+
+        <hr />
+
+        <h4>Insgesamt: {$myCounter}</h4>
+
+        <!--
+        this crap doesn't work
+        <h4>Video:</h4>
+        {if not is_null($testCase->getVideoPath())}
+        <embed src="/storage/testing/{$testCase->getVideoPath()}" width="805" height="470" autostart=0 ></embed>
+        {else}
+        <h5>Kein Video vorhanden</h5>
+        {/if}
+        -->
+    </div>
+
+</div>
+
+</body>
+</html>

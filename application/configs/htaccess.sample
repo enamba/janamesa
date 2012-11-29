@@ -1,0 +1,91 @@
+SetEnv APPLICATION_ENV development
+AddDefaultCharset UTF-8
+
+RewriteEngine On
+
+# Caching
+RewriteCond %{REQUEST_METHOD} ^GET$
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{DOCUMENT_ROOT}/cache/html/%{HTTP_HOST}/%{REQUEST_URI}\.html -s
+RewriteRule ^(.+) /cache/html/%{HTTP_HOST}/$1.html [L]
+
+Header set P3P "policyref=\"/w3c/p3p.xml\", CP=\"IDC DSP COR NID DEVi OUR BUS INT\""
+
+# javascript packager
+# comment the cond in development
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^media/javascript/compiled js-packager.php [L]
+
+# AB test
+RewriteRule ^lieferservice_muenchen2$ /ab/lieferservice_muenchen_v02.html [L]
+RewriteRule ^lieferservice_muenchen3$ /ab/lieferservice_muenchen_v03.html [L]
+RewriteRule ^lieferservice_berlin2$ /ab/lieferservice_berlin_v02.html [L]
+RewriteRule ^lieferservice_berlin3$ /ab/lieferservice_berlin_v03.html [L]
+RewriteRule ^lieferservice_hamburg2$ /ab/lieferservice_hamburg_v02.html [L]
+RewriteRule ^lieferservice_hamburg3$ /ab/lieferservice_hamburg_v03.html [L]
+RewriteRule ^lieferservice_frankfurt2$ /ab/lieferservice_frankfurt_v02.html [L]
+RewriteRule ^lieferservice_frankfurt3$ /ab/lieferservice_frankfurt_v03.html [L]
+RewriteRule ^lieferservice_koeln2$ /ab/lieferservice_koeln_v02.html [L]
+RewriteRule ^lieferservice_koeln3$ /ab/lieferservice_koeln_v03.html [L]
+
+# Sitemap
+RewriteRule ^sitemap\.xml$ /storage/public/sitemap-%{HTTP_HOST}.xml [L]
+#different robots txt for ssl and subdomains
+RewriteCond %{REQUEST_URI} ^/robots.txt
+RewriteCond %{SERVER_PORT} 443
+RewriteRule (.*) /robots_ssl.txt
+
+#if cookie exists we redirect to start page in logged in areay
+RewriteCond %{REQUEST_METHOD} ^GET$
+RewriteCond %{HTTP_COOKIE} YD_UID
+RewriteCond %{REQUEST_URI} ^/$
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{HTTP_HOST} ^www\.lieferando\.de
+RewriteRule (.*) /ordering_private_single_restaurant/start [R=302,L]
+
+# Timthumb
+RewriteCond %{DOCUMENT_ROOT}/cache/images/%{REQUEST_URI} -f
+RewriteRule ^(.+) /cache/images/%{REQUEST_URI} [L]
+
+RewriteCond %{DOCUMENT_ROOT}/cache/images/%{REQUEST_URI} !-f
+RewriteRule ^service-image/(.*)-(.*).jpg$ /timthumb.php?serviceId=$1&name=$1-$2 [L]
+
+RewriteCond %{DOCUMENT_ROOT}/cache/images/%{REQUEST_URI} !-f
+RewriteRule ^meal-image/(.*)/(.*)/(.*).jpg$ /timthumb.php?mealId=$1&serviceId=$2&name=$1-$3 [L]
+
+RewriteCond %{DOCUMENT_ROOT}/cache/images/%{REQUEST_URI} !-f
+RewriteRule ^category-image/(.*)-(.*).jpg$ /timthumb.php?categoryId=$1&name=$1-$2 [L]
+
+RewriteCond %{DOCUMENT_ROOT}/cache/images/%{REQUEST_URI} !-f
+RewriteRule ^service-image-email/(.*)-(.*).jpg$ /timthumb.php?serviceId=$1&name=$1-$2&email=1 [L]
+
+RewriteCond %{DOCUMENT_ROOT}/cache/images/%{REQUEST_URI} !-f
+RewriteRule ^service-image-mobile/(.*)-(.*).jpg$ /timthumb.php?serviceId=$1&name=$1-$2&mobile=1 [L]
+
+RewriteCond %{DOCUMENT_ROOT}/cache/images/%{REQUEST_URI} !-f
+RewriteRule ^customer-image/(.*)-(.*).jpg$ /timthumb.php?customerId=$1&name=$2 [L]
+
+# Internal links
+RewriteCond %{DOCUMENT_ROOT}/../storage/public/%{HTTP_HOST}%{REQUEST_URI}\.html -s
+RewriteRule ^(.+) /storage/public/%{HTTP_HOST}/$1.html [L]
+
+RewriteCond %{REQUEST_FILENAME}\.html -s
+RewriteCond %{HTTP_HOST} ^www\.lieferando\.de
+RewriteRule ^(.+) $1.html [L]
+
+RewriteCond %{REQUEST_FILENAME}\.shtml -s
+RewriteCond %{HTTP_HOST} ^www\.lieferando\.de
+RewriteRule ^(.+) $1.html [L]
+
+RewriteCond %{REQUEST_FILENAME}\.shtml -s
+RewriteCond %{HTTP_HOST} ^www\.lieferando\.de
+RewriteRule ^(.+) $1.shtml [L]
+
+#RewriteCond %{REMOTE_ADDR} !=93.219.177.97
+#RewriteCond %{REQUEST_URI} !=/wartung.html [NC]
+#RewriteRule ^(.*)$ /wartung.html [R=302,NC,L]
+
+# Zend engine
+RewriteRule !\.(txt|js|ico|gif|jpg|png|css|html|shtml|php|pdf|xml|swf|zip)$ index.php
+
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]

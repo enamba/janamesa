@@ -1,0 +1,59 @@
+{extends file='administration/base.htm'}
+{block name="content"}
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Bestellungen nach SaleChannels')}
+            </div>
+            <div class="item-content">
+                <ul class="be-tabs">
+                    <li><a href="/administration_stats_marketing/index">{__b('zurück')}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">             
+            <div class="item-content">
+
+                <form action="/administration_stats_marketing/link" method="post">                       
+                    {__b('SaleChannel:')}
+                    <select name="saleChannel">
+                        <option>AFFILIATE</option>
+                        <option>DISPLAY</option>
+                        <option>SEM</option>
+                        <option>SEO</option>
+                        <option>EMAIL</option>
+                        <option>SOCIAL MEDIA</option>
+                        <option>COOP</option>
+                        <option>SATELLITEN</option>
+                        <option>APP</option>
+                        <option>MOBILE</option>
+                        <option>PRINT</option>
+                        <option>TV</option>
+                    </select>
+                    {__b('SubSaleChannel:')} <input type="text" name="subSaleChannel" value="{$post.subSaleChannel}" />
+                    {__b('SubSaleChannelValue:')} <input type="text" name="saleChannelValue" value="{$post.saleChannelValue}" />
+
+                    <br /><br />
+                    {__b('Pixel (wird bei Erreichen der Seite über die generierte URL auf der Successeite eingebunden)')}
+                    <br /><br />
+                    <textarea name="pixel">
+
+                    </textarea>
+                    <br /><br />
+                    <input type="submit" value="generieren" />
+                </form>
+
+                {if $link}
+                    <br /><br />
+                    <h2 class="copy-on-click">{$link}</h2>
+                {/if}
+
+            </div>
+        </div>
+    </div>
+
+{/block}

@@ -1,0 +1,143 @@
+{extends file="base.htm"}
+{block name="content"}
+
+<div class="yd-register yd-clearfix">
+
+    <div class="yd-register-sidebar">
+
+    </div>
+
+    <div class="yd-box yd-register-form" id="yd-form-register">
+        <form method="post" action="/user/all-settings" class="yd-validation">
+            <input type="hidden" name="action" value="register" />
+            {$fidelity}
+            <div class="yd-form">
+                <strong class="yd-form-tease">
+                    {__('Danke für Deine Anmeldung.')}
+                    <span>{__('Bitte vervollständige nun Deine Angaben!')}</span>
+                </strong>
+                <div class="yd-form-wrapper">
+                    <ul class="yd-clearfix br-sex">
+                        <li class="br-radios-rw">
+                            <input type="radio" name="sex" {if $cust->getSex() == "w"}checked="checked"{/if} id="sex" value="w" class="validate[minCheckbox,1]" /> {__('Frau')}
+                            <input type="radio" name="sex" {if $cust->getSex() == "m"}checked="checked"{/if} id="sex2" value="m" /> {__('Herr')}
+                        </li>
+                    </ul>
+                    <ul class="yd-clearfix">
+                        <li class="yd-form-left">
+                            <span>{__('Vorname')} <b class="red">*</b></span>
+                            <input type="text" id="prename" name="prename" value="{$cust->getPrename()}" maxlength="30" class="yd-form-input yd-form-invalid validate[prename]" />
+                        </li>
+                        <li class="yd-form-right">
+                            <span>{__('Nachname')} <b class="red">*</b></span>
+                            <input type="text" id="name" name="name" value="{$cust->getName()}" maxlength="30" class="yd-form-input yd-form-invalid validate[name]" />
+                            <em class="yd-form-info hidden" >{__('Bitte gib hier Deinen Vor- und Nachnamen ein.')}</em>
+                        </li>
+                    </ul>
+                    <ul class="yd-clearfix">
+                        <li class="yd-form-{if $domain_base != 'taxiresto.fr'}left{else}right{/if}">
+                            <span>{__('Straße')} <b class="red">*</b></span>
+                            <input type="text" id="street" name="street" value="{$cust->getStreet()}" class="yd-form-input yd-form-invalid validate[street]" />
+                        </li>
+                        <li class="yd-form-{if $domain_base != 'taxiresto.fr'}right{else}left{/if}">
+                            <span>{__('Hausnummer')} <b class="red">*</b></span>
+                            <input type="text" name="hausnr" id="hausnr" maxlength="{$config->locale->housenumber->max}" value="{$cust->getHausnr()}" class="yd-form-input yd-form-invalid validate[hausnr]" />
+                            <em class="yd-form-info hidden" {if $domain_base == 'taxiresto.fr'}style="right:-315px;"{/if}>{__('Bitte gib hier Straße und Hausnummer ein.')}</em>
+                        </li>
+                    </ul>
+                    <ul class="yd-clearfix">
+                        <li class="yd-form-left">
+                            <span>{__('Postleitzahl')} <b class="red">*</b></span>
+                            {if $config->domain->base == 'janamesa.com.br'}
+                                <a id="br-cep-autocomplete" class="br-cep-location">Não sabe seu CEP? Clique aqui</a>
+                            {/if}
+                            <input type="hidden" id="cityId" name="cityId" value="{$cust->getCityId()}" />
+                            <input type="text" id="plz" name="plz" value="{$cust->getPlz()}" class="yd-form-plz-required yd-form-input yd-form-invalid yd-plz-autocomplete yd-only-nr" />
+                        </li>
+                    </ul>
+                    <ul class="yd-clearfix">
+                        <li class="yd-form-left">
+                            <span>{__('Telefon')} <b class="red">*</b> <small>{__('Für evtl. Rückfragen')}</small></span>
+                            <input type="text" id="tel" name="tel" value="{$cust->getTel()}" maxlength="20" class="yd-form-input yd-form-invalid{if $config->domain->base != 'janamesa.com.br'} yd-only-nr validate[telefon]{/if}" />
+                        </li>
+                        <li class="yd-form-right">
+                            <span>{__('E-Mail')} <b class="red">*</b> <small>{__('Für Ihre Bestellbestätigung')}</small></span>
+                            <input type="text" id="email" name="email" value="{$cust->getEmail()}" maxlength="50" class="yd-form-input yd-form-invalid validate[custom[email]]" />
+                            <em class="yd-form-info hidden" >{__('Bitte gib hier Deine Telefonummer & E-Mail-Adresse ein.')}</em>
+                        </li>
+                    </ul>
+                    <ul class="yd-clearfix" >
+                        <li class="yd-form-left" >
+                            <span>{__('Geburtstag')} <small class="green" >{__('(optional)')}</small></span>
+                            <select name="birthday_day">
+                                {if $cust->getBirthday() == '0000-00-00'}
+                                <option value="0" selected="selected">-</option>
+                                {/if}
+                                {section name=day start=1 loop=32 step=1}
+                                <option {if $cust->getBirthday() != '0000-00-00' && date('d',strtotime($cust->getBirthday())) == $smarty.section.day.index}selected="selected"{/if}>
+                                    {$smarty.section.day.index}
+                            </option>
+                            {/section}
+                            </select>
+                            <select name="birthday_month">
+                                {if $cust->getBirthday() == '0000-00-00'}
+                                <option value="0" selected="selected">-</option>
+                                {/if}
+                                {section name=month start=1 loop=13 step=1}
+                                <option {if $cust->getBirthday() != '0000-00-00' && date('m',strtotime($cust->getBirthday())) == $smarty.section.month.index}selected="selected"{/if}>
+                                    {$smarty.section.month.index}
+                            </option>
+                            {/section}
+                            </select>
+                            <select name="birthday_year">
+                                {if $cust->getBirthday() == '0000-00-00'}
+                                <option value="0" selected="selected">--</option>
+                                {/if}
+                                {section name=year start=(date('Y')-90) loop=(date('Y')+1) step=1}
+                                <option {if $cust->getBirthday() != '0000-00-00' && date('Y',strtotime($cust->getBirthday())) == $smarty.section.year.index}selected="selected"{/if}>
+                                    {$smarty.section.year.index}
+                                </option>
+                                {/section}
+                            </select>
+                        </li>
+                        <li class="yd-form-right">
+                            <em class="yd-form-info hidden" >{__('Hier kannst Du Deinen Geburtstag angeben.')}<br /><br />z.B. 05.06.1983</em>
+                        </li>
+                    </ul>
+                    <ul class="yd-clearfix">
+                        <li class="yd-form-left">
+                            <span>{__('Firma')} <small class="green">{__('(optional)')}</small></span>
+                            <input type="text" id="company" name="companyName" value="{$cust->getCompanyName()}" class="yd-form-input" />
+                        </li>
+                        <li class="yd-form-right">
+                            <span>{__('Stockwerk')} <small class="green">{__('(optional)')}</small></span>
+                            <input type="text" id="etage" name="etage" value="{$cust->getEtage()}" class="yd-form-input" />
+                            <em class="yd-form-info hidden" >{__('Hier kannst Du Deine Firma & Stockwerk/Etage angeben')}</em>
+                        </li>
+                    </ul>
+                    <ul class="yd-clearfix yd-form-section">
+                        <li class="yd-form-middle">
+                            <span>{__('Besondere Hinweise')} <small class="green">{__('(optional)')}</small></span>
+                            <textarea name="comment" id="comment" class="yd-form-input">{$cust->getComment()}</textarea>
+                            <em class="yd-form-info hidden" >{__('Hier kannst Du ergänzende Angaben machen (z.B. "bitte bei Mustermann klingeln" etc.)')}</em>
+                        </li>
+                    </ul>
+                    <div class="br-terms">
+                        <ul class="yd-clearfix">
+                            <li class="yd-form-middle">
+                                <input style="float:left;" {if ($cust->getAgb() == null || $cust->getAgb() == "1")}checked="checked"{/if} type="checkbox" id="agb" name="agb" value="1" class="validate[agb]" />
+                                       <span style="margin-left:24px;"><label for="agb">{__('Ich bin mit den %sAGB%s und %sDatenschutzbestimmungen%s einverstanden.', '<a href="/customer-terms" target="_blank">', '</a>','<a href="/privacy" target="_blank">', '</a>')}</label></span>
+                            </li>                        
+                        </ul>  
+                    </div>          
+                    <br /><br />
+                    <a class="button yd-submit-on-click">{__('Anmeldung abschließen')}</a>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+{/block}

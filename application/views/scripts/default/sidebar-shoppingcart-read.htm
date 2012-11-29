@@ -1,0 +1,111 @@
+<div class="yd-box">
+    <div class="yd-box-title yd-bucket-title" id="yd-expand-card-head">
+        {__('Einkaufswagen')}
+        {if is_object($order) && is_object($order->getService())}
+            <span title="{$order->getService()->getName()}">
+                {{$order->getService()->getName()|truncate:14:" ...":true}}
+            </span>
+        {/if}
+        <img src="{$domain_static}/images/yd-background/yd-load-small.gif" alt="{__('Bitte warten')}" class="yd-loading" id="yd-loading-card" />
+    </div>
+    <div class="yd-box-body">
+
+            {assign var=card value=$order->getCard()}
+            <ul id="yd-shopping-positions" class="yd-card-items">
+            {foreach from=$card.bucket item=custItems key=custId}
+                {foreach from=$custItems item=item key=hash name=position}
+                    {assign var=meal value=$item.meal}
+                    {assign var=count value=$item.count}
+                    {assign var=size value=$item.size}
+                    <li id="{$hash}" class="yd-shopping-input" id="yd-meal-input-{$hash}">
+                        <!-- count -->
+                        {$count} x
+                    </li>
+                    <li class="yd-shopping-article readonly" id="yd-shopping-article-{$hash}">
+                        <!-- name -->
+                        {$meal->getName()}
+                    </li>
+                    <li class="yd-shopping-extra" id="yd-shopping-extra-{$hash}">
+                        <!-- size / extras / options -->
+                        <span class="yd-clearfix"><em>{__('Größe: %s', $meal->getCurrentSizeName())}</em>&nbsp;</span>
+                        {if $meal->getCurrentOptionsCount() > 0}
+                            {foreach name=bo from=$meal->getCurrentOptions() item=option}
+                                <span class="yd-clearfix"><em>{$option->getName()}</em>{if $option->getCost() > 0}+&nbsp;{__('%s €',($option->getCost()*$count)|inttoprice)}{/if}</span>
+                            {/foreach}
+                        {/if}
+
+                        {if $meal->getCurrentExtrasCount() > 0}
+                            {foreach name=be from=$meal->getCurrentExtras() item=extra}
+                                <span class="yd-clearfix"><em>{$extra->getName()}</em>{if $extra->getCost() > 0}+&nbsp;{__('%s €',($extra->getCost()*$count)|inttoprice)}{/if}</span>
+                            {/foreach}
+                        {/if}
+                    </li>
+                    <li class="yd-shopping-price" id="yd-shopping-price-{$hash}">
+                        {__('%s €',($count*$meal->getAllCosts())|inttoprice)}
+                    </li>
+                {/foreach}
+            {foreachelse}
+                <li class="yd-shopping-empty">
+                    {__('Der Einkaufswagen ist leer.')}
+                </li>
+            {/foreach}
+            </ul>
+            <ul class="yd-sidebar-list">
+            {if $order->getDeliverCost() > 0}
+                <li>
+                    <em>{__('Lieferkosten:')}</em> <span>{__('%s €',$order->getDeliverCost()|inttoprice)}</span>
+                </li>
+            {/if}
+            {if $order->getFloorFeeCost() > 0}
+                <li>
+                    <em>{__('Etagenzuschlag:')}</em> <span>{__('%s €',$order->getFloorFeeCost()|inttoprice)}</span>
+                </li>
+            {/if}
+
+            {if is_null($order->getCustomer()->getDiscount()) || $order->getMode() != "rest"}
+                <span id="enteredCodes">
+                    {if is_object($order->getDiscount())}
+                        <li class="code-{$order->getDiscount()->getId()} codes" id="valid-discount">
+                            <strong>{$order->getDiscount()->getCode()}</strong>
+                            {if $order->getDiscount()->getMinAmount() > 0}
+                                {__('Mindestbestellwert:')} {__('%s €',$order->getDiscount()->getMinAmount()|inttoprice)}<br /><br />
+                            {/if}
+                            {$order->getDiscount()->getInfo()}
+                        </li>
+                    {/if}
+                </span>
+            {else}
+                {if is_object($order->getCustomer()->getDiscount()) && $order->getCustomer()->getDiscount()->isUsable()}
+                    <span id="enteredCodes">
+                        <li id="valid-discount">
+                        <b>{__('Ihr Benutzeraccount verfügt über einen permanenten')} <span style="color:red;">{__('Rabatt von')}
+                        {if $order->getCustomer()->getDiscount()->getKind() == 0}
+                            {$order->getCustomer()->getDiscount()->getParent()->getRabatt()}%
+                        {else}
+                            {__('%s €',$order->getCustomer()->getDiscount()->getParent()->getRabatt()|inttoprice)}
+                            {/if}</span></b>
+                        </li>
+                        <li id="valid-discount" >{__('Sie haben daher nicht die Möglichkeit weitere Gutscheincodes hinzuzufügen!')}</li>
+                    </span>
+                {/if}
+            {/if}
+            <li id="yd-rabatt-info" {if not $order->getDiscount()}style="display:none;"{/if}>
+                {if $order->getDiscount()}
+                    <em>{__('Rabatt:')}</em>
+                    <span id="discount">
+                        {if $order->getDiscount()->getKind() == 0}
+                            {$order->getDiscount()->getParent()->getRabatt()}&nbsp;%
+                        {else}
+                            {__('%s €',$order->getDiscount()->getParent()->getRabatt()|inttoprice)}
+                        {/if}
+                    </span>
+                {/if}
+            </li>
+        </ul>
+        <ul>
+            <li class="yd-shopping-endprice">
+                <em>{__('Bestellwert:')}</em> <strong id="fullprice">{__('%s €',$order->getAbsTotal(false,true,true,false,false,false)|inttoprice)}</strong>
+            </li>
+        </ul>
+    </div>
+</div>

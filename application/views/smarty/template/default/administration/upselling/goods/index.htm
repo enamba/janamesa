@@ -1,0 +1,54 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                <a href="/administration_upselling_storage/add">{__b('neuen Posten zum Lager hinzufügen')}</a>
+            </div>
+            
+            <div class="item-content">
+                <table>
+                    <tr>
+                        <th>{__b('Produkt')}</th>
+                        <th>{__b('Gesendet')}</th>
+                        <th>{__b('Anzahl auf Lager')}</th>
+                        <th>{__b('auf Hold')}</th>
+                        <th>{__b('Frei')}</th>
+                    </tr>
+                    {foreach from=$products item=product}
+                    <tr>
+                        <td>{$product->getReadableName()}</td>
+                        <td>{$product->getSend()}</td>
+                        <td>{$product->getCount()}</td>
+                        <td>{$product->getHold()}</td>
+                        <td>{$product->getFree()}</td>
+                    </tr>
+                    {foreachelse}
+                    <tr>
+                        <td colspan="4">{__b('Lager ist leer')}</td>
+                    </tr>
+                    {/foreach}
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                <a href="/administration_upselling_goods/add" target="_blank">{__b('Produkte für Dienstleister vorbereiten')}</a>
+            </div>
+            
+            <div class="item-content">
+                <ul class="be-tabs">
+                    <li><a href="/administration_upselling_goods/index/s/off">{__b('Alle')}</a></li>
+                    <li><a href="/administration_upselling_goods/index/s/2">{__b('Bezahlt')}</a></li>
+                    <li><a href="/administration_upselling_goods/index/s/1">{__b('Unbezahlt')}</a></li>
+                    <li><a href="/administration_upselling_goods/index/s/4">{__b('Storniert')}</a></li>
+                </ul>
+                
+                <div id="yd-upselling-goods-grid">{$grid}</div>
+            </div>
+        </div>
+    </div>
+{/block}

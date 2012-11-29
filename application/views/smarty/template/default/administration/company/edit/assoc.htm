@@ -1,0 +1,110 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/company/edit/_navigation.htm'}
+
+<div class="two-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Zuordnungen zu Restaurants')}
+        </div>
+        <div class="item-content">
+            <form action="/administration_company_edit/addrestaurant/companyid/{$company->getId()}" method="post">
+                    <table class="user-tab">
+                        <tr>
+                            <td>{__b('Anzeige Dienstleister')}</td>
+                            <td>
+                                <select name="serviceListMode">
+                                    <option value="0" {if $company->getServiceListMode() == 0}selected="selected"{/if}>{__b('Alle Dienstleister')}</option>
+                                    <option value="1" {if $company->getServiceListMode() == 1}selected="selected"{/if}>{__b('Nur zugeordnete Dienstleister *')}</option>
+                                </select>
+                                <br />
+                                {__b('* allen Mitarbeitern werden nur Dienstleister angezeigt, die explizit zugeordnet sind')}
+                            </td>
+                            <td><input type="button" value="{__b('Speichern')}" name="yd-company-edit-assoc-type" id="yd-company-edit-assoc-type-{$company->getId()}"/></td>
+                        </tr>
+                            <tr>
+                                <td width="20%">{__b('Dienstleister')}</td>
+                                <td width="60%">
+                                    <select name="restaurantId">
+                                        {foreach from=$restIds item=ri}
+                                        <option value="{$ri.id}">{$ri.name} (#{$ri.id})</option>
+                                        {/foreach}
+                                    </select>
+                                    &nbsp;&nbsp;
+                                    <select name="exclusive">
+                                        <option value="0">{__b('Privat für alle')}</option>
+                                        <option value="1">{__b('Exklusive für ')}{$company->getName()}</option>
+                                    </select>
+                                </td>
+                                <td width="10%">
+                                    <input type="submit" value="{__b('Hinzufügen')}" class="button rund_set"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" height="30"></td>
+                            </tr>
+                    </table>
+            </form>
+
+            <table width="100%" class="user-tab">
+                {foreach from=$company->getRestaurantsAssociations() item=assoc}
+                <tr>
+                    <td width="10%">
+                        {$assoc.name}
+                    </td>
+                    <td width="10%">
+                        <a href="/administration_company_edit/removerestaurant/companyid/{$company->getId()}/restaurantId/{$assoc.restaurantId}"><img src="{$domain_static}/images/yd-backend/del-cat.gif" alt="{__b('Löschen')}"/></a>
+                    </td>
+                    <td width="30%">
+                        {if $assoc.exclusive == 1}
+                        {__b('Exklusive für ')}{$company->getName()}
+                        {else}
+                        {__b('Privat verfügbar')}
+                        {/if}
+                    </td>
+                </tr>
+                {foreachelse}
+                <tr>
+                    <td colspan="3">{__b('keine Dienstleister zugeordnet')}</td>
+                </tr>
+                {/foreach}
+            </table>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="item-head">
+            {__b('Rabattzuordnung')}
+        </div>
+        <div class="item-content">
+            <form action="/administration_company_edit/adddiscount/companyid/{$company->getId()}" method="post">
+                <table class="user-tab">
+                    <tr>
+                        <td width="20%">{__b('Permanenter Rabatt:')}</td>
+                        <td width="30%">
+                            <select name="discountId" id="yd-discount-dropdown">
+                                <option value="-1"></option>
+                                {foreach from=$rabattIds item=ri}
+                                {if $ri.kind == 1}
+                                <option value="{$ri.id}">{$ri.name} ({$ri.code} / {$ri.rabatt/100} {__b('€')})</option>
+                                {else}
+                                <option value="{$ri.id}">{$ri.name} ({$ri.code} / {$ri.rabatt} %)</option>
+                                {/if}
+                                {/foreach}
+                            </select>
+                        </td>
+                        <td width="40%" id="yd-selected-discount-link" align="left"></td>
+                        <td width="10%">
+                            <input value="{__b('Hinzufügen')}" type="submit" class="button rund_set"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><small>{__b('Der Rabattcode wird allen Mitarbeitern der Firma zugeordnet. Die frühere Rabatte werden bei den Mitarbeitern überschrieben. %sDie Rabatte müssen dann über die jeweiligen Mitarbeiter verwaltet werden', '<br/>')}</small></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+{/block}

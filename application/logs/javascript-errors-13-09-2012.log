@@ -1,0 +1,259 @@
+TIME: 13-09-2012 10:09:36 
+ MESSAGE: TypeError: list.sort is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 66 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 10:31:51 
+ MESSAGE: ReferenceError: steal is not defined 
+ URL: http://www.yourdelivery.local/media/javascript/library/can/plugins/sort.js 
+ LINE: 1 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 10:39:50 
+ MESSAGE: ReferenceError: list is not defined 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 57 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 10:45:15 
+ MESSAGE: ReferenceError: list is not defined 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 57 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 10:45:44 
+ MESSAGE: ReferenceError: list is not defined 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 57 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 10:45:57 
+ MESSAGE: TypeError: Meals.list is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 56 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 10:49:49 
+ MESSAGE: ReferenceError: list is not defined 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 57 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 10:50:45 
+ MESSAGE: TypeError: Meals.data is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 56 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 10:55:28 
+ MESSAGE: ReferenceError: list is not defined 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 57 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 11:00:38 
+ MESSAGE: ReferenceError: list is not defined 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 57 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 11:19:08 
+ MESSAGE: TypeError: Meals.attr is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 56 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 11:19:24 
+ MESSAGE: TypeError: meals.attr is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 56 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 11:30:58 
+ MESSAGE: TypeError: $("#all-meals").models is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 56 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 11:31:29 
+ MESSAGE: TypeError: $("#all-meals").data("meals").models is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 56 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 11:35:58 
+ MESSAGE: TypeError: Meals.List.models is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 56 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 11:57:23 
+ MESSAGE: TypeError: Meals.List.sort is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 56 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 11:57:37 
+ MESSAGE: TypeError: Meals.sort is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 56 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 11:58:30 
+ MESSAGE: TypeError: Meals.sort is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 56 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 11:58:47 
+ MESSAGE: TypeError: Meals.List.sort is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 56 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 12:38:48 
+ MESSAGE: TypeError: item.attr is not a function 
+ URL: http://www.yourdelivery.local/media/javascript/library/can/plugins/sort.js 
+ LINE: 185 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 12:39:06 
+ MESSAGE: TypeError: meal is null 
+ URL: http://www.yourdelivery.local/media/javascript/library/can/can.jquery-1.0.7.min.js 
+ LINE: 42 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 12:44:14 
+ MESSAGE: TypeError: mealsStore.save is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 58 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 12:44:28 
+ MESSAGE: TypeError: mealsStore.update is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 58 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 13:00:40 
+ MESSAGE: TypeError: Meal.save is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 58 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 13:01:02 
+ MESSAGE: TypeError: mealsStore.save is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 58 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 13:12:52 
+ MESSAGE: TypeError: mealsStore is undefined 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 62 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 13:24:33 
+ MESSAGE: TypeError: this.options.meals.init is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 64 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 13:40:11 
+ MESSAGE: TypeError: this.options.meals.completed is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 65 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 15:24:33 
+ MESSAGE: TypeError: this.each is not a function 
+ URL: http://www.yourdelivery.local/media/javascript/library/can/can.jquery-1.0.7.min.js 
+ LINE: 42 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 15:27:39 
+ MESSAGE: TypeError: this.options.meals.trigger is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 64 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 15:28:22 
+ MESSAGE: TypeError: this.element is undefined 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 60 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 15:38:14 
+ MESSAGE: TypeError: ev.currentTarget.attr is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 69 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 15:38:30 
+ MESSAGE: TypeError: ev.currentTarget.attributes is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 69 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 16:00:38 
+ MESSAGE: SyntaxError: missing } after property list 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 72 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 16:00:50 
+ MESSAGE: ReferenceError: todo is not defined 
+ URL: http://www.yourdelivery.local/media/javascript/library/can/can.jquery-1.0.7.min.js 
+ LINE: 42 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 16:10:18 
+ MESSAGE: TypeError: this.name.test is not a function 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 34 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+
+TIME: 13-09-2012 16:26:47 
+ MESSAGE: TypeError: self.options is undefined 
+ URL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ LINE: 81 
+ PARENTURL: http://www.yourdelivery.local/phoneorder#!1198/2349 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1 
+

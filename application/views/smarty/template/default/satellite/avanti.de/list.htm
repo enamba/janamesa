@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="de" xml:lang="de" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="de" xml:lang="de" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="de" xml:lang="de" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="de" xml:lang="de" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="de" xml:lang="de">         <!--<![endif]-->
+    <head>
+        <title>Avanti Pizza München Augsburg Lieferservice Pizzaservice Heimservice</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="verify-v1" content="8FkQKoLGBaYuIR6TefpycUGdFpQKEg/TqVO+fFIIVL4=" />
+        <meta name="language" content="deutsch, de">
+        <meta name="keywords" content="avanti, pizza, München, Augsburg, Lieferservice, Pizzaservice, heimservice, Lieferservice">
+        <meta name="description" content="avanti pizza heimservice münchen  Augsburg online bestellen Liefervice Pizzaserivce">
+         <link rel="shortcut icon" type="image/png" href="/storage/satellites/www.avanti.de/img/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="/style.css">
+    </head>
+    <body>
+        <div id="non-footer" class="yd-clearfix">
+            <div id="avanti-header">
+                <ul class="social">
+                    <li>Folge uns auf</li>
+                    <li>
+                        <a href="http://www.facebook.com/PizzaAvanti" class="facebook_icon" target="_blank" title="PIZZA AVANTI"></a>
+                    </li>
+                    <li>
+                        <a href="http://twitter.com/pizzaavanti/" class="twitter_icon" target="_blank" title="PIZZA AVANTI (pizzaavanti) on Twitter"></a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li class="active"><a href="deutschland">Online bestellen</a></li>
+                    <li><a href="http://www.avanti-franchise.de">Franchise</a></li>
+                    <!-- <li><a href="/newsletter">Newsletter</a></li>-->
+                    <li><a href="/qualitaet">Qualität</a></li>
+                   <li><a href="/jobs.html">Jobs</a></li>
+                    <li><a href="/bewerten">Bewertung</a></li>
+                    <li><a href="/sponsoring">Sponsoring</a></li>
+                    <li><a href="/video">Video</a></li>
+                </ul>
+                <a href="/impr" class="impress">Impressum</a>
+            </div>
+            <div id="avanti-content" class="bestellen">
+                <div class="content-header">
+                    <img class="kart_navigation" width="742" height="460" usemap="#blmap" alt="" src="/img/avanti-map_2.png" />
+                    <map id="blmap" name="blmap">
+                        <area shape="rect" coords="58,34,145,59" href="/avanti/7" alt="" title=""    />
+                        <area shape="rect" coords="527,47,614,72" href="/avanti/9" alt="" title=""    />
+                        <area shape="rect" coords="624,38,711,63" href="/avanti/6" alt="" title=""    />
+                        <area shape="rect" coords="396,123,483,148" href="/avanti/20" alt="" title=""    />
+                        <area shape="rect" coords="506,181,653,206" href="/avanti/2" alt="" title=""    />
+                        <area shape="rect" coords="57,204,204,229" href="/avanti/4" alt="" title=""    />
+                        <area shape="rect" coords="307,167,440,192" href="/avanti/14" alt="" title=""    />
+                        <area shape="rect" coords="213,107,346,132" href="/avanti/15" alt="" title=""    />
+                        <area shape="rect" coords="417,407,550,432" href="/avanti/21" alt="" title=""    />
+                        <area shape="rect" coords="304,215,437,240" href="/avanti/13" alt="" title=""    />
+                        <area shape="rect" coords="58,298,148,323" href="/avanti/3" alt="" title=""    />
+                        <area shape="rect" coords="101,366,191,391" href="/avanti/5" alt="" title=""    />
+                        <area shape="rect" coords="190,137,280,162" href="/avanti/12" alt="" title=""    />
+                        <area shape="rect" coords="487,344,577,369" href="/avanti/17" alt="" title=""    />
+                        <area shape="rect" coords="591,349,681,374" href="/avanti/24" alt="" title=""    />
+                        <area shape="rect" coords="396,249,517,274" href="/avanti/18" alt="" title=""    />
+                        <area shape="rect" coords="286,352,374,377" href="/avanti/10" alt="" title=""    />
+                        <area shape="rect" coords="159,333,247,358" href="/avanti/22" alt="" title=""    />
+                        <area shape="rect" coords="104,68,192,93" href="/avanti/23" alt="" title=""    />
+                        <area shape="rect" coords="480,283,568,308" href="/avanti/19" alt="" title=""    />
+                        <area shape="rect" coords="343,275,431,300" href="/avanti/11" alt="" title=""    />
+                        <area title="" alt="" href="/avanti/1" coords="219,275,301,300" shape="rect" />
+                        <area shape="rect" coords="210,196,298,221" href="/avanti/16" alt="" title=""    />
+                    </map>
+                    <h1>Online Bestellen</h1>
+                </div>
+                <div class="subnav">
+                    {foreach from=$satelliteList item=satellite}
+                    {assign var=service value=$satellite->getService()}
+                        {if $service}
+                            <a href="#{$service->getCity()->getPlz()}{$service->getCity()->getCity()}">{$service->getCity()->getPlz()} {$service->getCity()->getCity()}</a>
+                        {/if}
+                    {/foreach}
+                </div>
+                <div class="text">
+
+                    {foreach from=$satelliteList item=satellite}
+                    {assign var=service value=$satellite->getService()}
+                        {if $service}
+                            <div class="shop yd-clearfix">
+                                <div class="left">
+                                    <a name="{$service->getCity()->getPlz()}{$service->getCity()->getCity()}"></a>
+                                    <strong>{$service->getCity()->getPlz()} {$service->getCity()->getCity()}</strong>
+                                    <br/>
+
+                                    <br/>
+                                    Tel. {$service->getTel()}
+                                    <br/><br/>
+
+                                    <a class="onlineorder" href="{$satellite->getUrl()}">Online bestellen</a>
+                                </div>
+
+                                <div class="right">
+                                    Öffnungszeiten:<br />
+                                    {$this->formatOpeningsMerged($service->getOpening()->getIntervals(strtotime('today'), strtotime('+7 days')))}
+                                    <br/><br/>
+                                    Liefergebiet:<br/>
+                                    {foreach from=$service->getRanges() item=range}
+                                    {$range.cityname}
+                                    {/foreach}
+                                    <br/><br/>
+                                    <a class="pdf" href="/storage/satellites/www.avanti.de/pdf/{if $service->getCity()->getCity() == 'Augsburg'}avanti-flyer-2011-augsburg.pdf{else}avanti-flyer-2011-muenchen.pdf{/if}" titel="AVANTI Speisekarte 2011">Pdf-Speisekarte</a>
+                                </div>
+                            </div>
+                        {/if}
+                    {/foreach}
+
+                </div>
+            </div>
+            <div id="avanti-sidebar">
+                <div>
+                    <script type="text/javascript">
+                        (function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)){
+                                return;
+                            }
+                            js = d.createElement(s); js.id = id;
+                            js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                        (document, 'script', 'facebook-jssdk')
+                    );
+                    </script>
+                    <fb:fan profile_id="117273638296456" stream="0" width="190" height="250px" logobar="0" css="http://staging.lieferando.de/storage/satellites/www.zaboos-bringdienst.de/facebook.css?4"></fb:fan>
+                    <!--<div class="fb-like-box" data-href="http://www.facebook.com/PizzaAvanti" data-width="190" data-show-faces="true" data-stream="false" data-header="true"></div>-->
+                </div>
+                <!-- <div class="iphone">
+                     <h3>PIZZA AVANTI iphone APP</h3>
+                     <p>Geschmack und Qualiät jetzt mobil bestellen!</p>
+                     <a href="http://itunes.apple.com/de/app/pizza-avanti/id381706861?mt=8" title="iphone APP">mehr...</a>
+                 </div>-->
+                <div class="sponsor">
+                    <h3>Sponsoring</h3>
+                    <p>Jetzt aber schnell!</p>
+                    <p>Münchens neue Liebe EHC München Eishockey ist in den Herzen angekommen</p>
+                    <a href="/sponsoring.html" title="Sponsoring">mehr...</a>
+                </div>
+                <div class="quali">
+                    <h3>PIZZA AVANTI Qualität</h3>
+                    <p>Geschmack und Qualiät bei Pizza Avanti - Hierfür stehen wir ein!</p>
+                    <a href="/qualitaet.html" title="Qualität">mehr...</a>
+                </div>
+               <div class="rating" >
+                    <h3>Bewerte uns</h3>
+                    <p>Wir wollen noch besser werden, dafür ist uns Ihre Meinung wichtig.</p>
+                    <a href="/bewerten.html" title="Bewerten">mehr...</a>
+                </div>
+
+                <div class="video">
+                    <h3>PIZZA AVANTI Video</h3>
+                    <p>So kommt die Pizza zu Ihnen nach Hause!</p>
+                    <a href="/video.html" title="Bewerten">Jetzt ansehen...</a>
+                </div>
+
+               <div class="jobs">
+                    <h3>Jobs bei Avanti</h3>
+                    <p>Vom Pizzafahrer zum Millionär!</p>
+                    <p>Jobs und Stellenangebote bei Pizza Avanti.</p>
+                    <a href="/jobs.html" title="Jobs">mehr...</a>
+                </div>
+
+                <div class="franchise">
+                    <h3>Franchisenehmer werden</h3>
+                    <p>Erfolgreich selbständig, natürlich mit System.</p>
+                    <a href="http://www.avanti-franchise.de" title="Franchise">mehr...</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

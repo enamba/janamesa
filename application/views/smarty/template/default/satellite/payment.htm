@@ -1,0 +1,31 @@
+{extends file='satellite/_base_menu.htm'}
+{block name="content"}
+<div id="nonFooter">
+    <div id="yd-content" class="yd-clearfix finish">
+        <form action="/order_basis/payment" method="post" name="finishForm" id="paymentForm">
+
+            <div id="yd-sidebar">
+
+                {include file="order/_includes/sidebar/cart-read.htm"}         
+
+                {if $config->domain->base == 'lieferando.de'}
+                    <a href="#" class="yd-button-280 finish-button yd-submit-on-click">{__('Jetzt kaufen')}</a>
+                {else}
+                    <a href="#" class="yd-button-280 finish-button yd-submit-on-click">{__('Bestellung abschicken')}</a>
+                {/if}
+            
+            </div>
+
+            <div id="yd-ordering">
+                <span id="paymentcontent">
+                    {include file='order/_includes/finish/payment.htm'}
+                </span>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+{include file='_cookies/masterpixel/orderflow.htm' uadomain=$domain_base step1=0 step2=0 step3=0 step4=1}
+
+{/block}

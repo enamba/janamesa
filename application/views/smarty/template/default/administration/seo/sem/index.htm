@@ -1,0 +1,25 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <a href="/administration_seo_sem/create">{__b('Seite erstellen')}</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">{__b('Seiten')}</div>
+            <div class="item-content">
+                <ul>
+                {foreach from=$pages item=page}
+                    <li style="margin:5px 0px 5px 0px;">
+                        <a href="/sem/{$page}" target="_blank">/sem/{$page}</a>
+                    </li>
+                {/foreach}
+                </ul>
+            </div>
+        </div>
+    </div>
+{/block}

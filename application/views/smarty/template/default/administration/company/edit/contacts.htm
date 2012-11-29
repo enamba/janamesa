@@ -1,0 +1,206 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/company/edit/_navigation.htm'}
+
+<div id="yd-admin-backend-wait" style="display:none;"><img src="{$domain_static}/images/yd-backend/yd-back-load.gif" /></div>
+
+<div class="two-column-box">
+    <div class="item">
+        <a name="contact"></a>
+        <div class="item-head">
+            {__b('Kontakt')}
+        </div>
+        <div class="item-content">
+            <form action="/administration_company_edit/contact/companyid/{$company->getId()}" method="post">
+            <input type="hidden" name="contactId" {if !is_null($company->getContactId())}value="{$company->getContactId()}"{/if}/>
+            <table class="user-tab">
+                <tr>
+                    <td width="30%">{__b('Kontakt auswählen')}</td>
+                    <td>
+                        <select name="selContactId" id="yd-select_contact">
+                            <option value="-1" >{__b('Neuer Kontakt')}</option>
+                            {foreach from=$contacts item=ci}
+                            <option value="{$ci.id}" {if ($ci.id==$company->getContactId())}selected{/if}>{$ci.name} {$ci.prename}</option>
+                            {/foreach}
+                        </select>
+                    </td>
+                    {if !is_null($contact)}
+                    <td>
+                    <div id="yd-show-contact">
+                        <table>
+                            <tr>
+                                <td><a href="/administration_contact/edit/id/{$contact->getId()}">{$contact->getName()} {$contact->getPrename()}</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="mailto:{$contact->getEmail()}">{$contact->getEmail()}</a></td>
+                            </tr>
+                            <tr>
+                                <td>{$contact->getStreet()} {$contact->getHausnr()}</td>
+                            </tr>
+                            <tr>
+                                <td>{if ($contact->getPlz() !=0)}{$contact->getPlz()} {$contact->getOrt()->getOrt()}{/if}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    </td>
+                    {/if}
+                </tr>
+            </table>
+            <div id="yd-create-contact" {if !is_null($company->getContactId())}style="display:none;"{/if}>
+                <table>
+                    <tr>
+                        <td width="30%">{__b('Vorname:')}</td>
+                        <td><input type="text" name="prename" class="rund_set text yd-duplicate" id="yd-contact-prename" /> *</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Nachname:')}</td>
+                        <td><input type="text" name="name" class="rund_set text yd-duplicate" id="yd-contact-name" /> *</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Position:')}</td>
+                        <td><input type="text" name="position" class="rund_set text yd-duplicate" id="yd-contact-position" /></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Straße:')}</td>
+                        <td><input type="text" name="street" class="rund_set text yd-duplicate" id="yd-contact-street" /> *</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('HausNr:')}</td>
+                        <td><input type="text" name="hausnr" class="rund_set text yd-duplicate" id="yd-contact-hausnr" /> *</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('PLZ:')}</td>
+                        <td>
+                            {if strpos($config->domain->base, "janamesa")!==false}
+                                <input type="text" name="plz" value="{$company->getPlz()}" />
+                            {else}
+                                {include file='administration/city_autocomplete.htm' city=$contact->getCity()}
+                            {/if}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{__b('eMail:')}</td>
+                        <td><input type="text" name="email" class="rund_set text yd-duplicate" id="yd-contact-email" /> *</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Telefon:')}</td>
+                        <td><input type="text" name="tel" class="rund_set text yd-duplicate" id="yd-contact-tel" /></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Fax:')}</td>
+                        <td><input type="text" name="fax" class="rund_set text yd-duplicate" id="yd-contact-fax" /></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="item-content">
+                <input type="submit" value="{__b('Speichern')}" class="button rund_set"/>
+            </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="item">
+        <a name="billingContact"></a>
+        <div class="item-head">
+            {__b('Rechnungsadresse')}
+        </div>
+        <div class="item-content">
+
+            {if (($company->getBillingContactId()==$company->getContactId()) || ($company->getBillingContactId() == 0))}
+                <div>
+                    {__b('Rechnungsadresse ist die selbe wie Kontakt ')}<input type="checkbox" name="bill_as_contact" value="1" id="yd-bill-as-contact" checked="checked" />
+                </div>
+            {/if}
+
+            <div id="yd-other-bill"  {if (($company->getBillingContactId()==$company->getContactId()) || ($company->getBillingContactId() == 0))}style="display:none;"{/if}>
+                <form action="/administration_company_edit/contact/companyid/{$company->getId()}" method="post">
+                    <input type="hidden" name="contactId" value="{$company->getBillingContactId()}"/>
+                    <input type="hidden" name="billingContact" value="1"/>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="30%">{__b('Kontakt auswählen')}</td>
+                            <td>
+                                <select name="selBillingContactId" id="yd-select_billcontact">
+                                    <option value="-1" >{__b('Neuer Kontakt')}</option>
+                                    {foreach from=$contacts item=ci}
+                                    <option value="{$ci.id}" {if ($ci.id==$company->getBillingContactId())}selected{/if}>{$ci.name} {$ci.prename}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                            {if !is_null($billingContact)}
+                            <td>
+                            <div id="yd-show-billcontact">
+                                <table>
+                                    <tr>
+                                        <td><a href="/administration_contact/edit/id/{$billingContact->getId()}">{$billingContact->getName()} {$billingContact->getPrename()}</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="mailto:{$billingContact->getEmail()}">{$billingContact->getEmail()}</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>{$billingContact->getStreet()} {$billingContact->getHausnr()}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{if ($billingContact->getPlz()!=0)} {$billingContact->getPlz()} {$billingContact->getOrt()->getOrt()}{/if}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </td>
+                            {/if}
+                        </tr>
+                    </table>
+                    <div id="yd-create-billcontact" {if ($company->getBillingContactId() != 0)}style="display:none;"{/if}>
+                        <table>
+                            <tr>
+                                <td width="30%">{__b('Vorname:')}</td>
+                                <td><input type="text" name="prename" class="rund_set text" id="yd-bill-prename" /> *</td>
+                            </tr>
+                            <tr>
+                                <td>{__b('Nachname:')}</td>
+                                <td><input type="text" name="name" class="rund_set text" id="yd-bill-name" /> *</td>
+                            </tr>
+                            <tr>
+                                <td>{__b('Position:')}</td>
+                                <td><input type="text" name="position" class="rund_set text" id="yd-bill-positon" /></td>
+                            </tr>
+                            <tr>
+                                <td>{__b('Straße:')}</td>
+                                <td><input type="text" name="street" class="rund_set text" id="yd-bill-street" /> *</td>
+                            </tr>
+                            <tr>
+                                <td>{__b('HausNr:')}</td>
+                                <td><input type="text" name="hausnr" class="rund_set text" id="yd-bill-hausnr" /> *</td>
+                            </tr>
+                            <tr>
+                                <td>{__b('PLZ:')}</td>
+                                <td>
+                                    {include file='administration/city_autocomplete.htm' city=$billingContact->getCity()}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{__b('eMail:')}</td>
+                                <td><input type="text" name="email" class="rund_set text" id="yd-bill-email" /> *</td>
+                            </tr>
+                            <tr>
+                                <td>{__b('Telefon:')}</td>
+                                <td><input type="text" name="tel" class="rund_set text" id="yd-bill-tel" /></td>
+                            </tr>
+                            <tr>
+                                <td>{__b('Fax:')}</td>
+                                <td><input type="text" name="fax" class="rund_set text" id="yd-bill-fax" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="item-content">
+                        <input type="submit" name="saveBillingContact" value="{__b('Speichern')}" class="button rund_set" />                        
+                        <input type="submit" id="yd-remove_billcontact" name="removeBillingContact" value="{__b('Rechnungsadresse entfernen')}" class="button rund_set" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{/block}

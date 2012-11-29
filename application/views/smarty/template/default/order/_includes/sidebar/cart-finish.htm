@@ -1,0 +1,91 @@
+<div class="yd-box br-box br-cart-finish">
+    <div class="yd-box-title yd-bucket-title" id="yd-expand-card-head">
+        {__('Einkaufswagen')}
+        <span title="{$order->getService()->getName()}">
+            {{$order->getService()->getName()|truncate:20:" ...":true}}
+        </span>
+        <img src="{$domain_static}/images/yd-background/yd-load-small.gif" alt="{__('Bitte warten')}" class="yd-loading" id="yd-loading-card" />
+    </div>
+    <div class="yd-box-body">
+
+        {assign var=card value=$order->getCard()}
+        <ul id="yd-shopping-positions" class="yd-card-items">
+            {foreach from=$card.bucket item=custItems key=custId}
+                {foreach from=$custItems item=item key=hash name=position}
+                    {assign var=meal value=$item.meal}
+                    {assign var=count value=$item.count}
+                    {assign var=size value=$item.size}
+                    <li class="yd-shopping-input" id="yd-meal-input-{$hash}">
+                        <!-- count -->
+                        {$count} x
+                    </li>
+                    <li class="yd-shopping-article readonly" id="yd-shopping-article-{$hash}">
+                        <!-- name -->
+                        {$meal->getName()}
+                        {if $meal->getExcludeFromMinCost()}<span class="yd-shopping-notmincost"> {__('nicht im Mindestbestellwert')}</span>{/if}
+                    </li>
+                    <li class="yd-shopping-extra" id="yd-shopping-extra-{$hash}">
+                        <!-- size / extras / options -->
+                        <span class="yd-clearfix"><em>{__('Größe: %s', $meal->getCurrentSizeName())}</em><span class="yd-shopping-singular-price">{__('je %s €',$meal->getCost()|inttoprice)}</span></span>
+                        {if $meal->getCurrentOptionsCount() > 0}
+                        {foreach name=bo from=$meal->getCurrentOptions() item=option}
+                        <span class="yd-clearfix">
+                            <em>{$option->getName()}</em>
+                            +&nbsp;{__('%s&nbsp;€',($option->getCost()*$count)|inttoprice)}
+                         </span>
+                        {/foreach}
+                        {/if}
+
+                        {if $meal->getCurrentExtrasCount() > 0}
+                        {foreach name=be from=$meal->getCurrentExtras() item=extra}
+                        <span class="yd-clearfix"><em>{$extra->getName()} {$extra->getCount()}x</em>{if $extra->getCost() > 0}+&nbsp;{__('%s&nbsp;€',($extra->getCost()*$count)|inttoprice)}{/if}</span>
+                        {/foreach}
+                        {/if}
+                    </li>
+                    <li class="yd-shopping-price" id="yd-shopping-price-{$hash}">
+                        {__('%s&nbsp;€',($count*$meal->getAllCosts())|inttoprice)}
+                    </li>                       
+
+                {/foreach}
+            {/foreach}            
+
+        </ul>
+        
+        <ul id="delivercost" class="{if $order->getService()->getDeliverCost($cityId, null, $order) <= 0}hidden{/if}">
+            <li>
+                <em>{if $order->getService()->isAvanti()}{__('Energiekostenaufschlag:')}{else}{__('Lieferkosten:')}{/if}</em> <span class="yd-deliver-cost">{__('%s €', $order->getService()->getDeliverCost($cityId, null, $order)|inttoprice)}</span>
+            </li> 
+        </ul>
+        
+        <ul>
+            <li class="yd-shopping-endprice">
+                <em>{__('Bestellwert:')}</em> 
+                <strong class="yd-full-amount">{__('%s €',$order->getAbsTotal(false,false,true,false,false,false)|inttoprice)}</strong>           
+                <input type="hidden" name="amount" value="{$order->getAbsTotal(false,false,true,false,false,false)}" />
+            </li>
+        </ul>
+        
+        {if (!$order->getService()->isOnlycash()) && ($config->domain->base != 'eat-star.de') && !$order->getService()->isNoContract()}      
+            <div class="hidden" id="yd-lang-redeem-fidelity-kind">{__('Eingelöste Treuepunkte')}</div>
+            <div class="hidden" id="yd-lang-redeem-fidelity-info">{__('für %s zum Preis von %s €')}</div>
+            <div id="yd-discount-add" {if $discount}class="hidden"{/if}>
+                 <ul class="yd-sidebar-list">
+                    <li id="input-discount" class="yd-shopping-discount">
+                        <em>{__('Gutscheincode:')}</em>
+                        <input type="text" name="discount_direct" value="{$post.discount_direct|default:''}" id="discount-code" class="discount-input" />
+                        <a class="discount-input" id="check-discount"><span>{__('einlösen')}</span></a>
+                        <a class="yd-discount-faq-in-menu tooltip" title="{__('Klicke auf das Symbol für mehr Informationen.')}" target="_blank" href="/faq-voucher"></a>
+                    </li>                 
+                </ul>
+            </div>
+            <div id="yd-discount-content">    
+                {include file="order/_includes/finish/discount.htm"}
+            </div>
+            {if $config->domain->base != 'janamesa.com.br'}
+            <div class="yd-form-info-left hidden yd-discount-info">
+                {__('Bitte beachte: Vorbestellungen sind mit Gutscheinen nicht möglich.')}
+            </div>
+            {/if}
+        {/if}
+    </div>
+</div>

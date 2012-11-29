@@ -1,0 +1,231 @@
+{extends file="company/base.htm"}
+
+{block name="content"}
+<div id="admincase">
+<div id="yd-lang-bugdet-notification" class="hidden">{__('Budgetzeit wurde erfolgreich entfernt')}</div>
+
+    {include file='company/_left_nav.htm'}
+
+    <div class="clear"></div>
+
+    <div id="main-content">
+
+        <!-- Page Head -->
+
+        <ul class="shortcut-buttons-set">
+
+            <li><a class="shortcut-button" href="/company/budgets"><span>
+                        <img src="{$domain_static}/images/yd-icons/backend/group.png" alt="" /><br />
+                        {__('Gruppen Übersicht')}
+                    </span></a></li>
+
+            <li><a class="shortcut-button" href="/company/budget"><span>
+                        <img src="{$domain_static}/images/yd-icons/backend/group_add.png" alt="" /><br />
+                        {__('Gruppe hinzufügen')}
+                    </span></a></li>
+
+        </ul><!-- End .shortcut-buttons-set -->
+
+        <div class="clear"></div>
+
+        <div class="content-box">
+
+            <div class="content-box-header">
+
+                <h3>{__('Budgetgruppe hinzugügen')}</h3>
+
+                <div class="clear"></div>
+
+            </div> <!-- End .content-box-header -->
+
+            <div id="content" class="right">
+                <div class="users"> <!-- Anfang Meine Daten -->
+                    <!-- Anfang Meine Daten -->
+                    <div class="mydata">
+
+                        <div class="users">
+                            <div class="set-content">
+                                <form action="/company/budget" method="post" class="fm yd-validation" id="yd-company-budget">
+                                    <div class="settings_group">
+                                        <div class="user-content">
+                                            <label for="">{__('Gruppenname')}  <span style="color:red">*</span></label>
+                                            <input type="text" class="text-input medium-input validate[required]" value="{$budget->getName()}" name="name" id="name" />
+                                        </div>
+                                    </div>
+                                    <div class="settings_group">
+                                        <input type="hidden" id="budgetId" value="{$budget->getId()}" />
+
+                                        <div class="title">{__('Budget und Zeiteinstellung')}</div>
+                                        <div class="time">
+                                            <table cellpadding="0" cellspacing="0">
+                                                {* loop through days of week *}
+                                                {section name=days start=1 loop=8 step=1}
+                                                {assign var=key value=$smarty.section.days.index}
+
+                                                {* order days from monday (1) to sunday (0) *}
+                                                {if $key==7}
+                                                {assign var=key value=0}
+                                                {/if}
+
+                                                {if isset($btimes[$key])}
+                                                {assign var=bb value=$btimes[$key]}
+                                                {foreach from=$btimes[$key] item=bb name=budgettime}
+                                                {assign var=budgettimekey value=$smarty.foreach.budgettime.index}
+                                                <tr>
+                                                    <td>
+                                                        <label for="">{$days.$key}:</label>
+                                                    </td>
+                                                    <td width="225" class="yd-budgettimes">
+                                                        <input type="hidden" class="day" value="{$key}" />
+                                                        <input type="hidden" class="budgettimekey" value="{$budgettimekey}" />
+                                                        <input type="text" value="{$bb.from|date_format:'%H:%M'}" name="new[{$key}][{$budgettimekey}][from]" class="text-input small-input yd-budgettime yd-budgettime-from" id="yd-budgettime-from-{$key}-{$budgettimekey}" />
+                                                        {__('bis')}
+                                                        <input type="text" value="{$bb.until|date_format:'%H:%M'}" name="new[{$key}][{$budgettimekey}][until]" class="text-input small-input yd-budgettime yd-budgettime-until" id="yd-budgettime-until-{$key}-{$budgettimekey}" />
+                                                    </td>
+                                                    <td width="130">
+                                                        {__('Budget:')}
+                                                        <input type="text" class="text-input medium-input yd-budgettime-amount" name="new[{$key}][{$budgettimekey}][amount]" value="{$bb.amount|inttoprice}"/>
+                                                    </td>
+                                                    <td>
+                                                        <a class="cursor yd-removebudgettime persistent" id="yd-removebudgettime-{$bb.id}">
+                                                            {__('Uhrzeit entfernen')}
+                                                        </a><br />
+                                                        <a class="cursor yd-addbudgettime persistent">
+                                                            {__('Uhrzeit hinzufügen')}
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                {/foreach}
+                                                {else}
+                                                <tr>
+                                                    <td>
+                                                        <label for="">{$days.$key}:</label>
+                                                    </td>
+                                                    <td width="225" class="yd-budgettimes">
+                                                        <input type="hidden" class="day" value="{$key}" />
+                                                        <input type="hidden" class="budgettimekey" value="{$budgettimekey}" />
+                                                        <input type="text" value="18:00" name="new[{$key}][0][from]" class="text-input small-input yd-budgettime yd-budgettime-from" id="yd-budgettime-from-{$key}" />
+                                                        {__('bis')}
+                                                        <input type="text" value="22:00" name="new[{$key}][0][until]" class="text-input small-input yd-budgettime yd-budgettime-until" id="yd-budgettime-until-{$key}" />
+                                                    </td>
+                                                    <td width="130">
+                                                        {__('Budget')}:
+                                                        <input type="text" class="text-input medium-input yd-budgettime-amount" name="new[{$key}][0][amount]" value="0,00"/>
+                                                    </td>
+                                                    <td>
+                                                        <a class="cursor yd-removebudgettime">
+                                                            {__('Uhrzeit entfernen')}
+                                                        </a><br />
+                                                        <a class="cursor yd-addbudgettime">
+                                                            {__('Uhrzeit hinzufügen')}
+                                                        </a>
+                                                    </td>
+                                                </tr>
+
+                                                {/if}
+
+                                                {/section}
+                                            </table>
+                                        </div>
+                                    </div>
+                                                <div class="settings_group">
+                                                    <div class="title">{__('Lieferadresse')}</div>
+                                                    {foreach from=$company->getLocations() item=loc}
+                                                    <div class="user-content">
+                                                        <label for=""></label>
+                                                        <input type="checkbox" class="" name="addr[{$loc->getId()}]" {if $budget->hasLocation($loc->getId())}checked="checked"{/if} value="1" />&nbsp;
+                                                               <span>{$loc->getStreet()} {$loc->getHausnr()}, {$loc->getPlz()} {$loc->getCity()->getCity()}, {$loc->getEtage()}, {$loc->getComment()}</span>
+                                                    </div>
+                                                    {foreachelse}
+                                                    <div class="user-content">
+                                                        <label for=""></label>
+                                                        <span>{__('Keine Lieferadresse eingetragen')}</span>
+                                                    </div>
+                                                    {/foreach}
+
+                                                    <div class="user-content">
+                                                        <label for="">&nbsp;</label>
+                                                        <input type="button" class="button" id="yd-add-caddress" value="{__('Adresse anlegen')}">
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="settings_group">
+                                                    <div class="title" style="border-top: 1px solid #ccc;">{__('Nutzer')}</div>
+                                                    <div class="">
+                                                        <div class="select">
+                                                            <div class="head">
+                                                                {__('Angestellte')}
+                                                            </div>
+                                                            <div class="sel" id="leftlist">
+                                                                <input type="hidden" name="yd-comp-id" id="yd-comp-id" value="{$company->getId()}" />
+                                                                <ul>
+
+                                                                    {foreach from=$company->getEmployees() item=e}
+                                                                    {if is_null($e->getBudget())  || ( $e->getBudget()->getId() != $budget->getId() )}
+                                                                    <li class="{$e->getBudgetId()}"  id="id-{$e->getId()}">
+                                                                        <input type="checkbox" class="" name="newmail"/>
+                                                                        <input type="hidden" name="empl[]" value=""/>
+                                                                        <span>{$e->getName()}, {$e->getPrename()}</span>
+                                                                    </li>
+                                                                    {/if}
+                                                                    {/foreach}
+                                                                </ul>
+                                                            </div>
+                                                            <a href="#" id="selectAllLeft">{__('Alle auswählen')}</a>
+                                                        </div>
+                                                        <div class="buttons">
+                                                            <a href="#" id="moveright"><img src="{$domain_static}/images/yd-backend/blue-button-right.gif" width="41" height="64" /></a>
+                                                            <a href="#" id="moveleft"><img src="{$domain_static}/images/yd-backend/blue-button-left.gif" width="41" height="64" /></a>
+                                                        </div>
+                                                        <div class="select">
+                                                            <div class="head">
+                                                                {__('Gruppe')} {$budget->getName()}
+                                                            </div>
+                                                            <div class="sel" id="rightlist">
+                                                                <ul>
+                                                                    {foreach from=$budget->getMembers() item=e}
+                                                                    <li id="id-{$e->getId()}">
+                                                                        <input type="checkbox" class="" name="newmail"/>
+                                                                        <input type="hidden" name="empl[]" value="{$e->getId()}"/>
+                                                                        <span>{$e->getName()}, {$e->getPrename()}</span>
+                                                                    </li>
+                                                                    {/foreach}
+                                                                </ul>
+                                                            </div>
+                                                            <a href="#" id="selectAllRight">{__('Alle auswählen')}</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user-content submit">
+                                                        <input type="button" class="button" id="yd-company-budget-submit" value="{__('Änderungen speichern')}"/>
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" name="id" value="{$budget->getId()}" />
+                                                </form>
+                                        </div>
+
+                                        {if !is_null($budget->getId())}
+                                        <br /><br /><br />
+
+                                        <div class="settings_comp"><br />
+                                            <div class="user-content">
+                                                <label for="yd-budget-active"></label>
+                                                <input type="hidden" name="yd-resetBudgetPasses-id" id="yd-resetBudgetPasses-id" value="{$budget->getId()}">
+                                                <input type="button" class="button" id="yd-resetBudgetPasses" value="{__('Alle Passwörter zurücksetzen')}" title="{__('Sollen wirklich ALLE Passwörter dieser Gruppe zurückgesetzt werden?')}"><br /><br />
+                                                <div style="margin: 0 50px 0 155px;"><span>{__('Die Passwörter aller Mitglieder dieser Gruppe werden zurückgesetzt und dem jeweiligen Mitarbeiter an seine Email-Adresse gesendet')}.</span></div>
+                                            </div>
+                                        </div>
+                                        {/if}
+                                    </div>
+                            </div>
+                        </div>
+                    </div> <!-- content class right-->
+                </div> <!-- content-box-content--->
+            </div> <!-- content-box -->
+
+        </div> <!-- main Content -->
+
+    </div> <!-- admincase -->
+
+    {/block}

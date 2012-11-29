@@ -1,0 +1,95 @@
+<html lang="en">
+    <head>
+
+        <title>{__("Gutschein")}</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="yourdelivery GmbH" />
+        <meta name="publisher" content="yourdelivery GmbH" />
+
+    </head>
+    <body marginheight="0" topmargin="0" marginwidth="0" bgcolor="#F0F0F0" offset="0" leftmargin="0">
+
+        <table cellspacing="0" style="margin-top: 20px; font-size: 13px; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444;" bgcolor="#F0F0F0" cellpadding="0" width="98%">
+            <tr>
+                <td>
+
+                    <table rules="none" cellpadding="0" cellspacing="0" bordercolor="#c2c2c2" border="1" frame="border" align="center" style="border-color: #c2c2c2 #c2c2c2 #c2c2c2 #c2c2c2; font-size: 13px; background: #ffffff; border-collapse: collapse; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444; border-spacing: 0px; border-style: solid solid solid solid; border-width: 1px 1px 1px 1px;" bgcolor="#FFFFFF" width="600">
+                        <tr>
+                            <td>
+                                <table width="600" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td><img src="http://www.{$config->domain->base}/media/images/yd-mail/{$config->domain->base}/yd-mail-logoheader.jpg" /></td>
+                                    </tr>
+                                </table>
+                                <table width="560" style="margin: 0 auto;" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td>
+                                            <table width="200" style="background: #ddd;" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td><img src="http://www.{$config->domain->base}/media/images/yd-mail/{$config->domain->base}/yd-mail-iphone-screen.jpg" /></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td>
+                                            <table width="360" style="font-size:11px;" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td>
+                                                        <p style="color: green; font-size: 13px; text-align: center;">
+                                                            {__("Ihr persönlicher %s Gutscheincode", $config->domain->base)}*
+                                                        </p>
+
+                                                        <p style="width: 200px; margin: 0 auto; padding: 10px; font-size: 24px; font-weight: bold; text-align: center; border: 2px solid #ccc; background: #eee;">
+                                                            {$code}
+                                                        </p>
+
+                                                        <p style="font-size: 13px; text-align: center;">
+                                                            <a href="http://www.{$config->domain->base}/">» {__("Jetzt Gutschein einlösen")}</a>
+                                                        </p>
+
+                                                        <p>
+                                                            <b>{__("Herzlichen Glückwunsch!")}</b> {__("Sie haben erfolgreich über die iPhone App Essen bestellt und das beste, Ihre Bestellung gehört zu den ersten 1000, die einen der begehrten 5€ Gutscheine als Dankeschön erhalten.")}
+                                                        </p>
+
+                                                        <p>
+                                                            {__("Gerne würden wir von Ihnen wissen, wie Ihnen die iPhone App gefällt. Verraten Sie uns doch was Sie denken, bewerten und kommentieren Sie jetzt die %sApp im Itunes Store%s.", '<a href="http://itunes.apple.com/de/app/lieferando-de/id419724490">', '</a>')}
+                                                        </p>
+
+                                                        <p>
+                                                            {__("Wir wünschen Ihnen einen guten Appetit und freuen uns auf Ihre nächste Essenbestellung bei %s", $config->domain->base)}
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <table width="560" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td>
+                                                        <a href="http://www.{$config->domain->base}/" style="margin-left: -5px;"><img src="http://www.{$config->domain->base}/media/images/yd-mail/{$config->domain->base}/yd-mail-iphone-link1.jpg" /></a>
+                                                        <a href="http://www.{$config->domain->base}/" style="margin-left: -5px;"><img src="http://www.{$config->domain->base}/media/images/yd-mail/{$config->domain->base}/yd-mail-iphone-link2.jpg" /></a>
+                                                        <a href="http://www.{$config->domain->base}/" style="margin-left: -5px;"><img src="http://www.{$config->domain->base}/media/images/yd-mail/{$config->domain->base}/yd-mail-iphone-link3.jpg" /></a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <table width="560" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td><img src="http://www.{$config->domain->base}/media/images/yd-mail/{$config->domain->base}/yd-mail-iphone-small.jpg" /></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                {include file="_email_footer.htm"}
+
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

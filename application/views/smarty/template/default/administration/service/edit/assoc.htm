@@ -1,0 +1,211 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{if isset($restaurant)}
+{include file='administration/service/edit/_navigation.htm'}
+
+<div class="two-column-box">
+    <a name="courier"></a>
+    <div class="item">
+        <div class="item-head">
+            {__b('Zuordnungen')}
+        </div>
+        <div class="item-content">
+            <form action="/administration_service/courier" method="post">
+                <input type="hidden" name="serviceId" value="{$restaurant->getId()}"/>
+                <table class="user-tab">
+                    <tr>
+                        <td width="20%">{__b('Kurierdienst')}</td>
+                            {if $courier && $courier->getId()}
+                            <td width="80%">
+                                {$courier->getName()}&nbsp;&nbsp;&nbsp;
+                                <a href="/administration_service/courier/serviceId/{$restaurant->getId()}/delcourier/{$courier->getId()}">
+                                    <img src="{$domain_static}/images/yd-backend/del-cat.gif" alt="{__b('Louml;schen')}" />
+                                </a>
+                            </td>
+                            {else}
+                            <td width="40%">
+                                <select name="service_courier">
+                                    <option value="-1" ></option>
+                                    {foreach from=$courierIds item=ci}
+                                        <option value="{$ci.id}">{$ci.id}: {$ci.name}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                            <td width="20%"></td>
+                            <td width="20%">
+                                <input name="add_courier" value="{__b('Hinzufügen')}" type="submit" class="button"/>
+                            </td>
+                            {/if}
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="item-content">
+            <form action="/administration_service/salesperson" method="post">
+                <input type="hidden" name="serviceId" value="{$restaurant->getId()}"/>
+                <table class="user-tab">
+                    <tr>
+                        <td width="20%">{__b('Vertriebler')}</td>
+                        {if $salesperson && $salesperson->getId()}
+                            <td width="80%">
+                                <a href="/administration_salesperson/info/id/{$salesperson->getId()}">{$salesperson->getName()} {$salesperson->getPrename()}</a>
+                                {if !is_null($contract)}({__b('Vertrag vom')} {$contract->getSigned()|dateYMD}){/if}
+                                &nbsp;&nbsp;&nbsp;
+                                <a href="/administration_service/salesperson/serviceId/{$restaurant->getId()}/delsalesperson/{$salesperson->getId()}">
+                                    <img src="{$domain_static}/images/yd-backend/del-cat.gif" alt="{__b('Louml;schen')}" />
+                                </a>
+                            </td>
+                            {else}
+                            <td width="30%">
+                                <select name="service_salesperson">
+                                    <option value="-1" ></option>
+                                    {foreach from=$salespersons item=sp}
+                                        <option value="{$sp.id}">{$sp.name} {$sp.prename}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                            <td width="30%">{__b('Unter Vertrag seit')}:&nbsp;&nbsp;&nbsp;<input type="text" name="signed" id="yd-date" value="{time()|timestampYMD}" style="width: 70px;"/></td>
+                            <td width="20%">
+                                <input name="add_salesperson" value="{__b('Hinzufügen')}" type="submit" class="button"/>
+                            </td>
+                            {/if}
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+<div class="item">
+        <div class="item-head">
+            {__b('Firmen')}
+        </div>
+        <div class="item-content">
+            <form action="/administration_service/company" method="post">
+                <input type="hidden" name="serviceId" value="{$restaurant->getId()}"/>
+                <table class="user-tab">
+                    <tr>
+                        <td width="20%">{__b('Firmenzuordnung')}:</td>
+                        <td width="40%">
+                            <select name="service_company" style="width:180px;">
+                                <option value="-1"></option>
+                                {foreach from=$compIds item=ci}
+                                <option value="{$ci.id}">{$ci.name} (#{$ci.id})</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                        <td width="20%">
+                            <select name="exclusive">
+                                <option value="0">{__b('Private für alle')}</option>
+                                <option value="1">{__b('Exklusive für diese Firma')}</option>
+                            </select>
+                        </td>
+                        <td width="20%">
+                            <input name="add_company" value="{__b('Hinzufügen')}" type="submit" class="button"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+            <br/>
+            <b>{__b('Vorhandene Zuordnungen')}</b>
+            <br/><br/>
+
+            <table class="user-tab">
+                {foreach from=$compAssoc item=assoc}
+                    <tr>
+                        <td width="20%">
+                            <a href="/administration_company_edit/index/companyid/{$assoc.id}" target="_blank">{$assoc.name}</a>
+                        </td>
+                        <td width="40%">
+                            {if $assoc.exclusive == 1}
+                                {__b('Exklusive für Firma')} {$assoc.id}
+                            {else}
+                                {__b('Private für alle Verfügbar')}
+                            {/if}
+                        </td>
+                        <td width="40%">
+                            <a href="/administration_service/company/serviceId/{$restaurant->getId()}/delcomp/{$assoc.id}"><img src="{$domain_static}/images/yd-backend/del-cat.gif" alt="{__b('Löschen')}" /></a><br>
+                        </td>
+                    </tr>
+                {/foreach}
+            </table>
+
+        </div>
+    </div>
+</div>
+
+<div class="two-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Untergeordnete Dienstleister')}
+        </div>
+        <div class="item-content">
+            <form action="/administration_service/billingmerge" method="post">
+                <input type="hidden" name="serviceId" value="{$restaurant->getId()}"/>
+                <table class="user-tab">
+                    {if is_null($billingParent)}
+                    <tr>
+                        <td width="15%">{__b('Dienstleister')}:</td>
+                        <td width="15%">
+                            <input type="text" id="yd-service-assoc" />
+                        </td>
+                        <td width="50%"  id="yd-service-assoc-add"></td>
+                         <td width="15%">
+                            <input name="add_company" value="{__b('Hinzufügen')}" type="submit" class="button"/>
+                        </td>                     
+                    </tr>
+                    {else}
+                        <tr>
+                            <td width="25%">{__b('Übergeordneter Dienstleister')}:</td>
+                            <td width="25%">
+                                <a href="/administration_service/edit/id/{$billingParent->getId()}">{$billingParent->getName()}</a>
+                            </td>
+                            <td width="30%">
+                                <a href="/administration_service/billingmerge/serviceId/{$restaurant->getId()}/deleteparent/{{$billingParent->getId()}}"><img src="{$domain_static}/images/yd-backend/del-cat.gif" alt="{__b('Löschen')}" />&nbsp;{__b('Zuordnung auflösen')}</a><br>
+                            </td>
+                            <td width="20%"></td>
+                        </tr>
+                    {/if}
+                </table>
+            </form>
+
+            <br/>
+            <b>{__b('Vorhandene Zuordnungen')}</b>
+            <br/>
+
+            <table class="user-tab">
+                {foreach from=$billing_children item=child}
+                    <tr>
+                        <td width="30%">
+                            <a href="/administration_service/edit/id/{$child->getId()}">{$child->getName()}</a>
+                        </td>
+                        <td>
+                            <a href="/administration_service/billingmerge/serviceId/{$restaurant->getId()}/deletechild/{$child->getId()}"><img src="{$domain_static}/images/yd-backend/del-cat.gif" alt="{__b('Löschen')}" /></a><br>
+                        </td>
+                    </tr>
+                {/foreach}
+            </table>
+        </div>
+    </div>
+    <div class="item">
+        <div class="item-head">
+            {__b('SMS Drucker')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <td>
+                        {if !is_null($printer)}
+                        {__b('Seriennummer:')} <a href="/administration_service_printer/index/orderratings/Restaurants_ASC/IDprinter/{$printer->getId()}">{$printer->getSerialNumber()}</a>
+                        {else}
+                        {__b('Kein Drucker zugeordnet.')}
+                        {/if}
+                    </td>
+                </tr>
+            </table>
+        </div>        
+    </div>
+</div>
+
+{/if}
+{/block}

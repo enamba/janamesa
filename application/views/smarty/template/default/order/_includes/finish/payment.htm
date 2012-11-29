@@ -1,0 +1,127 @@
+<div id="paymentDiv" class="yd-box">
+
+    <input type="hidden" id="payment" value="{$order->getPayment()}" />
+
+    <div class="yd-bigbox-head">
+        {__("Zahlungsmethode")}
+    </div>
+
+    <div class="yd-bigbox-body yd-bigbox-payment yd-clearfix">
+
+        {if $order->getKind() == 'comp'}
+        <div id="yd-finish-remain">
+            Wie willst Du den offenen Betrag von <b><strong class="yd-open-amount">{__('%s €',$order->getAbsTotal()|inttoprice)}</strong></b> bezahlen?
+        </div>
+        {/if}
+
+        {assign var=preselected value=Yourdelivery_Helpers_Payment::preselected($order)}
+        
+        {if $config->payment->bar->enabled && $order->getService()->isPaymentbar() && $order->getMode() == 'rest'}
+        <div id="yd-finish-payment-bar" class="yd-finish-payment yd-payment-cash {if !Yourdelivery_Helpers_Payment::allowBar($order) || $newCustomerDiscountError}hidden{/if} {if $preselected=='bar'}active{/if}">
+            <input id="yd-payment-bar" {if $preselected=='bar'}checked="checked"{/if} type="radio" name="payment" value="bar" class="radio yd-finish-payment-radio paymentHidden {if $order->getKind() != 'comp'}validate[payment]{/if}"/>
+            <span>{__("Barzahlung")}</span><small>{__("Bei Lieferung bezahlen")}</small>
+        </div>
+        {/if}
+        
+        {if !isBaseUrl() && $config->payment->bar->enabled && $order->getService()->isAvanti() && $order->getService()->isPaymentAllowed('ec')}
+        <!-- show only on satellite of avanti -->
+        <div id="yd-finish-payment-ec" class="yd-finish-payment yd-payment-addition yd-payment-ec {if !Yourdelivery_Helpers_Payment::allowBar($order)}hidden{/if} {if $preselected=='ec'}active{/if}">
+            <input id="yd-payment-ec" type="radio" name="paymentAddition" value="ec" class="yd-payment-addition-radio paymentHidden" />
+            <span>{__("EC Kartenzahlung")}</span><small>{__("Bei Lieferung bezahlen")}</small>
+        </div>
+        {/if}
+        
+        {include file='order/_includes/finish/payment/additions.htm'}
+        
+        {if $config->payment->paypal->enabled}
+        <div id="yd-finish-payment-paypal" class="yd-finish-payment yd-payment-payp {if !Yourdelivery_Helpers_Payment::allowPaypal($order)}hidden{/if} {if $preselected=='paypal'}active{/if}">
+            <input id="yd-payment-paypal" {if $preselected=='paypal'}checked="checked"{/if} type="radio" name="payment" value="paypal" class="radio yd-finish-payment-radio paymentHidden {if $order->getKind() != 'comp'}validate[payment]{/if}" />
+            <span class="invisible ie-visible">{__("PayPal")}</span><small>{__("Jetzt mit PayPal bezahlen")}</small>
+        </div>
+        {/if}
+        
+        {if $config->payment->credit->enabled}
+        <div id="yd-finish-payment-credit" class="yd-finish-payment yd-payment-card {if !Yourdelivery_Helpers_Payment::allowCredit($order) || $newCustomerDiscountError}hidden{/if} {if $preselected=='credit'}active{/if}">
+            <input id="yd-payment-credit" {if $preselected=='credit'}checked="checked"{/if} type="radio" name="payment" value="credit" class="radio yd-finish-payment-radio paymentHidden {if $order->getKind() != 'comp'}validate[payment]{/if}" />
+            <span>{__("Kreditkarte")}</span><small>{__("Jetzt Online bezahlen")}</small>
+        </div>
+        {/if}
+
+        {if $config->payment->ebanking->enabled}
+        <div id="yd-finish-payment-ebanking"
+           class="{if !Yourdelivery_Helpers_Payment::allowEbanking($order) || $newCustomerDiscountError}hidden{/if} 
+           yd-finish-payment
+           {if $domain_base == 'lieferando.de'}yd-payment-ebanking-de
+           {elseif $domain_base == 'eat-star.de'}yd-payment-ebanking-de
+           {elseif $domain_base == 'lieferando.at'}yd-payment-ebanking-de
+           {elseif $domain_base == 'taxiresto.fr'}yd-payment-ebanking-no-de
+           {elseif $domain_base == 'smakuje.pl'}yd-payment-ebanking-no-de
+           {elseif $domain_base == 'pyszne.pl'}yd-payment-ebanking-no-de{/if}
+           {if $preselected=='ebanking'}active{/if}
+           ">
+            <input id="yd-payment-ebanking" {if $preselected=='ebanking'}checked="checked"{/if} type="radio" name="payment" value="ebanking" class="radio yd-finish-payment-radio paymentHidden {if $order->getKind() != 'comp'}validate[payment]{/if}" />
+        </div>
+        {/if}
+        
+        {if $config->payment->credit->enabled}
+        <div id="yd-payment-form-credit" class="yd-payment-form hidden yd-form" style="clear:both;">
+            <strong class="yd-form-tease">
+                {__("Du wirst zur %sKreditkartenzahlung%s weitergeleitet.", '', '')}
+            </strong>
+            
+            {if $config->payment->credit->registration->enabled && $config->payment->credit->gateway == 'heidel' && $cust->isLoggedIn()}
+            <ul class="yd-clearfix">
+                <li class="yd-form-middle">
+                    <input type="checkbox" id="yd-save-cc" name="savecc" value="1" />
+                    <label for="yd-save-cc">{__("Kreditkartendaten speichern")}</label>
+                    <em style="width:300px;top:-30px;left:400px;z-index:100;" class="hidden yd-form-info">
+                        {__("Die Abwicklung Ihrer Kreditkarten-Zahlung erfolgt sicher und komfortabel über unseren Dienstleister Heidelberger Payment GmbH (Heidelpay). Heidelpay ist nach dem PCI-Standard zertifiziert und bietet zusätzlich auch 3D Secure (Verified by Visa und MasterCard Secure Code).
+                        <br /><br />
+                        Du hast die Möglichkeit, Deine Kreditkartendaten für zukünftige Bestellungen abzuspeichern. Diese werden dabei nicht durch %s / %s gespeichert, ebensowenig hat yd. yourdelivery GmbH Zugriff auf Deine Daten.",
+                        $config->domain->base, $config->locale->headoffice->name)}
+                    </em>
+                </li>
+            </ul>
+            <ul class="yd-clearfix yd-form-section">
+                {foreach $cust->getCreditcards() as $creditcard}
+                    <li class="yd-form-middle">
+                        <input type="radio" id="yd-creditcard-{$creditcard->getId()}" name="creditcard" value="{$creditcard->getId()}" class="yd-creditcard" />
+                        <label for="yd-creditcard-{$creditcard->getId()}">{* $creditcard->getName() *} {$creditcard->getBrand()} {$creditcard->getNumber()}</label><br />
+                    </li>
+                {foreachelse}
+                    <li>&nbsp;</li>
+                {/foreach}
+            </ul>
+            {/if}
+
+            
+        </div>
+        {/if}
+        
+        {if $config->payment->debit->enabled}
+        <div id="yd-payment-form-debit" class="yd-payment-form hidden yd-form" style="clear:both;">
+            <strong class="yd-form-tease">
+                {__("Du wirst zur Bezahlung weitergeleitet.")}
+            </strong>
+        </div>
+        {/if}
+
+        {if $config->payment->ebanking->enabled}
+        <div id="yd-payment-form-ebanking" class="yd-payment-form hidden yd-form" style="clear:both;">
+            <strong class="yd-form-tease">
+                {__("Du wirst zu %sSofortüberweisung%s weitergeleitet.", '', '')}
+            </strong>
+        </div>
+        {/if}
+
+        {if $config->payment->paypal->enabled}
+        <div id="yd-payment-form-paypal" class="yd-payment-form hidden yd-form" style="clear:both;">
+            <strong class="yd-form-tease">
+                {__("Du wirst zu %sPayPal%s weitergeleitet.", '', '')}
+            </strong>
+        </div>
+        {/if}
+
+    </div>
+
+</div>

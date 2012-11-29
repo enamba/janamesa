@@ -1,0 +1,36 @@
+{extends file='base.htm'}
+{block name="content"}
+
+<div class="yd-breadcrumbs-new">
+    <a href="/">{__('Startseite')}</a>
+    <a href="/{$order->getCityUrl()}">{__('Lieferservices in %s %s', $order->getLocation()->getPLz(), $order->getLocation()->getCity()->getCity())}</a>
+    <a href="/{$order->getServiceUrl()}">{__('Speisekarte %s', $order->getService()->getName())}</a>
+    <a class="active">{__('Lieferservice anrufen')}</a>
+</div>
+
+<div id="yd-ordering">
+
+    <div class="yd-rest-stop yd-box">
+        <h1>{__('Leider ist momentan keine Online-Bestellung möglich.')}</h1>
+        <p>
+            {__('Du kannst aber bei der unten angegebenen Telefonnummer anrufen und deine ausgewählte Bestellung telefonisch durchgeben.')}
+        </p>
+    </div>
+
+    <div class="yd-rest-info yd-box yd-clearfix">
+        <h2>{__("Restaurant %s", $service->getName())}</h2>
+        <small>{$order->getService()->getStreet()} {$order->getService()->getHausnr()}, {$order->getService()->getPlz()} {$order->getService()->getOrt()->getOrt()}</small>
+        <span>
+            {__("Bei Fragen zur Bestellung, Lieferzeit oder den Produkten wende Dich bitte an:")}
+        </span>
+        <img class="yd-rest-logo" src="{$order->getService()->getImg()}" alt="{$order->getService()->getName()}" />
+        <strong>{$service->getTel()}</strong>
+    </div>
+
+</div>
+
+<div id="yd-sidebar">
+    {include file="order/_includes/sidebar/cart-read.htm"}
+</div>
+
+{/block}

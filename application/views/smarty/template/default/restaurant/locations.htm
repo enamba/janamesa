@@ -1,0 +1,175 @@
+{extends file="restaurant/base.htm"}
+{block name="content"}
+
+<div id="yd-restaurant-backend-wait" style="display:none;"><img src="{$domain_static}/images/yd-backend/yd-back-load.gif" /></div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+            {{__b('Bitte beachten - wenn das Liefergebiet bereits eingetragen ist, werden die Daten für das Gebiet mit den neuen überschrieben.')}}
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {{__b('Verwaltung der Liefergebiete')}}
+        </div>
+        <div class="item-content">
+            <table width="100%" class="user-tab">
+            <form action="/restaurant_locations/create" method="post">
+                <tr>
+                    <td width="18%">{{__b('Postleitzahl:')}}</td>
+                    <td width="18%">{{__b('Lieferzeit, (Minuten):')}}</td>
+                    <td width="18%">{{__b('Mindestbestellwert, €')}}</td>
+                    <td width="18%">{{__b('Lieferkosten, €')}}</td>
+                    <td width="18%">{{__b('Keine Lieferkosten ab, €')}}</td>
+                    <td width="10%"></td>
+                </tr>
+                <tr>
+                    <td>
+                        {include file='restaurant/city_autocomplete.htm'}
+                    </td>
+                    <td><input type="text" name="deliverTime" value="" maxlength="5" /></td>
+                    <td><input type="text" name="mincost" maxlength="6" value="0,00" /></td>
+                    <td><input type="text" name="delcost" maxlength="6" value="0,00" /></td>
+                    <td><input type="text" name="noDeliverCostAbove" maxlength="6" value="0,00" /></td>
+                    <td align="right"><input type="submit" style="width: 250px;" class="button-locations" value="{{__b('Liefergebiet hinzufügen')}}" id="yd-add-plz-button" /></td>
+                </tr>
+                <tr>
+                    <td colspan="6" id="yd-plz-status" height="15"></td>
+                </tr>
+            </form>
+            <tr>
+                <td colspan="6" height="20"></td>
+            </tr>
+            <form action="/restaurant_locations/addcity" method="post" class="fe">
+                <tr>
+                    <td>{{__b('Ganze Stadt hinzufügen:')}}</td>
+                    <td>{{__b('Lieferzeit (Minuten):')}}</td>
+                    <td>{{__b('Mindestbestellwert, €')}}</td>
+                    <td>{{__b('Lieferkosten, €')}}</td>
+                    <td>{{__b('Keine Lieferkosten ab, €')}}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="city" style="width: 220px;" >
+                            {foreach from=Yourdelivery_Model_City::getAllCities() item=city}
+                            <option value="{$city}">{$city}</option>
+                            {/foreach}
+                        </select>
+                    </td>
+                    <td><input type="text" name="deliverTime" value="" class="rund_set text" /></td>
+                    <td><input type="text" name="mincost" class="rund_set text" maxlength="6" value="0,00" /></td>
+                    <td><input type="text" name="delcost" class="rund_set text" maxlength="6" value="0,00" /></td>
+                    <td><input type="text" name="noDeliverCostAbove" class="rund_set text" maxlength="6" value="0,00" /></td>
+                    <td align="right"><input type="submit" style="width: 250px;" class="button-locations" value="{{__b('Stadt hinzufügen')}}"/></td>
+                </tr>
+            </form>
+            {if strpos($config->domain->base, "janamesa")!==false}            
+            <form action="/restaurant_locations/addprefixplz" method="post" class="fe">
+                <tr>
+                    <td>{{__b('Alle PLZ hinzufügen, die mit der angegebenen Zeichenkette anfangen:')}}</td>
+                    <td>{{__b('Lieferzeit (Minuten):')}}</td>
+                    <td>{{__b('Mindestbestellwert, €')}}</td>
+                    <td>{{__b('Lieferkosten, €')}}</td>
+                    <td>{{__b('Keine Lieferkosten ab, €')}}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="plzprefix" value="" class="rund_set text" /></td>
+                    <td><input type="text" name="deliverTime" value="" class="rund_set text" /></td>
+                    <td><input type="text" name="mincost" class="rund_set text" maxlength="6" value="0,00" /></td>
+                    <td><input type="text" name="delcost" class="rund_set text" maxlength="6" value="0,00" /></td>
+                    <td><input type="text" name="noDeliverCostAbove" class="rund_set text" maxlength="6" value="0,00" /></td>
+                    <td align="right"><input type="submit" style="width: 250px;" class="button-locations" value="{{__b('Alle PLZ hinzufügen')}}"/></td>
+                </tr>
+            </form>
+            {/if}
+            <tr>
+                <td colspan="6" height="20"></td>
+            </tr>
+        </table>
+        </div>
+    </div>
+</div>
+<form action="/restaurant_locations/changeall" method="post">
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+                <table width="100%" class="user-tab">
+                <tr>
+                    <td width="18%">{{__b('Status:')}}</td>
+                    <td width="18%">{{__b('Lieferzeit (Minuten):')}}</td>
+                    <td width="18%">{{__b('Mindestbestellwert, €')}}</td>
+                    <td width="18%">{{__b('Lieferkosten, €')}}</td>
+                    <td width="18%">{{__b('Keine Lieferkosten ab, €')}}</td>
+                    <td width="10%"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="status" class="rund_set text">
+                            <option value="-1">{{__b('Nicht ändern')}}</option>
+                            <option value="1">{{__b('Online')}}</option>
+                            <option value="0">{{__b('Offline')}}</option>
+                        </select>
+                    </td>
+                    <td><input type="text" name="deliverTime" value="{{__b('Nicht ändern')}}" class="yd-grey-info yd-change-all-fields"/></td>
+                    <td><input type="text" name="mincost" value="{{__b('Nicht ändern')}}" class="yd-grey-info yd-change-all-fields"/></td>
+                    <td><input type="text" name="delcost" value="{{__b('Nicht ändern')}}" class="yd-grey-info yd-change-all-fields"/></td>
+                    <td><input type="text" name="noDeliverCostAbove" value="{{__b('Nicht ändern')}}" class="yd-grey-info yd-change-all-fields"/></td>
+                    <td align="right"><input type="submit" style="width: 250px;" class="button-locations" value="{{__b('Markierte Liefergebiete ändern')}}"/></td>
+                </tr>
+                <tr>
+                    <td colspan="6" height="20"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {{__b('Liefergebiete')}}
+        </div>
+        <div class="item-content" id="yd-restaurant-grid">
+            <div id="yd-check-all-link"><input id="yd-check-all-locations" type="checkbox" value="1"/><label for="yd-check-all-locations"> {{__b('alle auswählen')}} </label></div><br/>
+            {$grid}
+        </div>
+    </div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+                <table width="100%" class="user-tab">
+                <tr>
+                    <td align="right"><input type="submit" name="deleteSelected" style="width: 220px;"  class="yd-remove-selected-plz-button" value="{{__b('Markierte Liefergebiete löschen')}}" onclick="javascript:return confirm('{{__b('Sollen die markierten Gebiete wirklich gelöscht werden?')}}')"/></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</form>
+
+<br/><br/><br/><br/>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+            <form action="/restaurant_locations/deleteall" method="post">
+            <table width="100%" class="user-tab">
+                <tr>
+                    <td align="right"><input class="yd-remove-all-plz-button" style="width: 220px;"  type="submit" onclick="javascript:return confirm('{{__b('Vorsicht!! Sollen alle Lieferzeiten wirklich gelöscht werden?')}}')" value="{{__b('Alle Liefergebiete löschen')}}"/></td>
+                </tr>
+            </table>
+            </form>
+        </div>
+    </div>
+</div>
+{/block}
+

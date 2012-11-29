@@ -1,0 +1,327 @@
+/*-------------------------------------------------------------
+
+CSS INDEX (only colors!)
+
+    1.Links
+    2.Body
+    3.Head
+    4.Order Menu
+    5.Sidebar
+    6.Footer
+    7.Landingpage
+    8.Lightbox
+
+
+----------------------------------------------------------------*/
+/*Links*/
+/*Alle Links + Hover die nicht nochmal in de Klassen verfasst wurden*/
+a{
+    color: %font_links%;
+}
+a:hover{
+    color: %font_links_hover%;
+}
+
+a.yd-button-280:hover{
+    color: #fff !important;
+
+}
+/*Body Background*/
+body{
+    background-color:  %body_background% !important;
+}
+/*Head*/
+.yd-menu-head {
+    background: no-repeat;
+}
+/*Navigations Links + Hover*/
+/*%navigation%*/
+
+.yd-menu-modern ul.yd-menu-nav1 li a{
+    color: %font_navigation%;
+}
+.yd-menu-modern ul.yd-menu-nav1 li a:hover, .yd-menu-modern ul.yd-menu-nav1 li a.active, .category-lenght-toggle-full{
+    color: %font_navigation_hover%;
+}
+.category-lenght-toggle-full{
+    background: %background_full_toggele%;
+}
+.yd-menu-modern .yd-menu-nav2 {
+    background:  %nav2_background1%; /* Old browsers */
+    background:  -moz-linear-gradient(top, %nav2_background1% 0%, %nav2_background2% 100%); /* FF3.6+ */
+    background:  -webkit-gradient(linear, left top, left bottom, color-stop(0%,%nav2_background1%), color-stop(100%,%nav2_background2%)); /* Chrome,Safari4+ */
+    background:  -webkit-linear-gradient(top, %nav2_background1% 0%,%nav2_background2% 100%); /* Chrome10+,Safari5.1+ */
+    background:  -o-linear-gradient(top, %nav2_background1% 0%,%nav2_background2% 100%); /* Opera11.10+ */
+    background:  -ms-linear-gradient(top, %nav2_background1% 0%,%nav2_background2% 100%); /* IE10+ */
+    background:  linear-gradient(top, %nav2_background1% 0%,%nav2_background2% 100%); /* W3C */
+}
+.yd-menu-modern .yd-menu-nav2 ul li a{
+    color: %nav2_font_color%;    
+}
+
+.yd-menu-modern .yd-menu-nav2 ul li a:hover, .yd-menu-modern .yd-menu-nav2 ul li a.active {
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat 0 -1451px %nav2_background1_hover%; /* Old browsers */
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat 0 -1451px, -moz-linear-gradient(top, %nav2_background1_hover% 0%, %nav2_background2_hover% 100%); /* FF3.6+ */
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat 0 -1451px, -webkit-gradient(linear, left top, left bottom, color-stop(0%,%nav2_background1_hover%), color-stop(100%,%nav2_background2_hover%)); /* Chrome,Safari4+ */
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat 0 -1451px, -webkit-linear-gradient(top, %nav2_background1_hover% 0%,%nav2_background2_hover% 100%); /* Chrome10+,Safari5.1+ */
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat 0 -1451px, -o-linear-gradient(top, %nav2_background1_hover% 0%,%nav2_background2_hover% 100%); /* Opera11.10+ */
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat 0 -1451px, -ms-linear-gradient(top, %nav2_background1_hover% 0%,%nav2_background2_hover% 100%); /* IE10+ */
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat 0 -1451px, linear-gradient(top, %nav2_background1_hover% 0%,%nav2_background2_hover% 100%); /* W3C */
+}
+
+/*Order Menu*/
+/*Table Menu Border*/
+/*%speisekarte%*/
+/*Table Speißekarte*/
+#yd-menu .td, #yd-menu .th{
+    color: %font_color_menu_head%;
+    border-top: 1px solid %menu_borderbottom%;
+}
+/*Table Menu Link Color*/
+.td a{
+    color: %menu_links_font%;
+}
+/*Table Menu Unterschrift*/
+.td span, .th span, .td i{
+    color: %menu_small_font%;
+}
+/*Table Menu Hover für Links*/
+.tr:hover .td:first-child a,
+.tr:hover .td:hover a,.yd-menu-table_satellite tr a:hover {
+    color: %menu_links_font_hover% !important;
+}
+
+/*Table Menu <tr> ungrade Zahlen Background*/
+#yd-menu .tr:nth-child(odd) ,.yd-menu-table_satellite tbody tr:nth-child(odd) {
+    background: %menu_table_background_odd%;
+}
+/*Table Menu <tr> grade Zahlen Background*/
+#yd-menu .tr:nth-child(even) ,.yd-menu-table_satellite tbody tr:nth-child(even) {
+    background: %menu_table_background_even%;
+}
+/*Table Menu <tr> Background hover*/
+#yd-menu .tr:hover ,.yd-menu-table_satellite tbody tr:hover {
+    background: %menu_table_background_hover%;
+}
+/*Sidebar*/
+/*Boxenlayout*/
+/*%boxenlayout%*/
+/*Alle Heads von Tabellen und Boxen*/
+.yd-menu-table_satellite .thead,.yd-service_info thead, .yd-bigbox-head, #tooltip,.yd-successarea-left h1,.ui-dialog-content h1, .yd-box-head, .yd-menu-table_satellite tr td i:hover span, #extrahead, .yd-successarea-left-2 span, .ui-datepicker .ui-datepicker-header{
+    color: %font_tablehead% !important;
+    background: %tablehead_background2%;
+    background: -moz-linear-gradient(top,%tablehead_background1%,%tablehead_background2%);
+    background: -webkit-gradient(linear, left top, left bottom, from(%tablehead_background1%), to(%tablehead_background2%));
+}
+#yd-menu .thead{
+    background: %tablehead_background2%;
+    background:  -moz-linear-gradient(top, %tablehead_background1% 0%, %tablehead_background2% 100%); /* FF3.6+ */
+    background:  -webkit-gradient(linear, left top, left bottom, color-stop(0%,%tablehead_background1%), color-stop(100%,%tablehead_background2%)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, %tablehead_background1% 0%,%tablehead_background2% 100%); /* Chrome10+,Safari5.1+ */
+    background:  -o-linear-gradient(top, %tablehead_background1%,%tablehead_background2% 100%); /* Opera11.10+ */
+    background:  -ms-linear-gradient(top, %tablehead_background1% 0%,%tablehead_background2% 100%); /* IE10+ */
+    background:  linear-gradient(top, %tablehead_background1% 0%,%tablehead_background2% 100%); /* W3C */
+}
+#yd-expand-card-head{
+    color: %font_tablehead%;
+    background: %tablehead_background2% ;
+    background: -moz-linear-gradient(top,%tablehead_background1%,%tablehead_background2%); ;
+    background: -webkit-gradient(linear, left top, left bottom, from(%tablehead_background1%), to(%tablehead_background2%));
+}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span{
+    color: %font_tablehead% !important;
+}
+.yd-lightbox-content-container #yd-special-input{
+    color: #000 !important;
+}
+
+.yd-menu-table_satellite thead th,.yd-successarea-left-2 h2 {
+    color: %font_tablehead%;
+}
+.yd-box,.yd-successarea-left .yd-box, .yd-flying-meal ,ui-datepicker-div, .ui-datepicker{
+    color: %sidebar_background_font%;
+    background: %sidebar_background%; /* Old browsers */
+    background: -moz-linear-gradient(top, %sidebar_background1% 0%, %sidebar_background% 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,%sidebar_background1%), color-stop(100%,%sidebar_background%)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, %sidebar_background1% 0%,%sidebar_background% 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, %sidebar_background1% 0%,%sidebar_background% 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, %sidebar_background1% 0%,%sidebar_background% 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='%sidebar_background1%', endColorstr='%sidebar_background%',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, %sidebar_background1% 0%,%sidebar_background% 100%); /* W3C */
+}
+
+.yd-successarea-left .yd-box.yd-successarea-left-3{
+    background: url(/media/images/satellites/menu/yd-successarea-banner.png) no-repeat,%sidebar_background%;
+    background:  url(/media/images/satellites/menu/yd-successarea-banner.png) no-repeat, -moz-linear-gradient(top,%sidebar_background1%,%sidebar_background%);
+    background: url(/media/images/satellites/menu/yd-successarea-banner.png) no-repeat,  -webkit-gradient(linear, left top, left bottom, from(%sidebar_background1%), to(%sidebar_background%));
+    color: %sidebar_background_font%;
+}
+.yd-form strong.yd-form-tease, .yd-successarea-left-2 h2, #yd-ratings-detail .hreview , #yd-ratings-detail .q1, #yd-ratings-detail .summary , .yd-successarea-right-payment small, #yd-sidebar .yd-box-body ul li.yd-shopping-extra, ui-datepicker-calendar thead th span {
+    color: %sidebar_background_font%;
+}
+#yd-sidebar .yd-box-body ul li.yd-shopping-endprice strong{
+    color: %sidebar_background_font%;
+}
+#yd-sidebar .yd-box-body ul li.yd-shopping-extra, #yd-ratings-detail .q0, #yd-ratings-detail .item{
+    color: %sidebar_font_little%
+}
+.yd-box a{
+    color: %sidebar_link_font%;
+}
+.yd-box a:hover{
+    color: %sidebar_link_font_hover%;
+}
+/*Border der boxen*/
+.yd-box-head, #extrahead , #extrahead #extramenu,.ui-dialog-content h1 ,.yd-form strong.yd-form-tease, .yd-lightbox-content-container .item, #yd-sidebar .yd-box-body ul li.yd-shopping-discount, #yd-sidebar .yd-box-body ul li.yd-shopping-price, #yd-sidebar .yd-box-body ul li.yd-shopping-endprice, #yd-sidebar .yd-box-body ul li.yd-shopping-empty{
+    border-bottom-color:  %sidebar_borderbottom%;
+}
+.ui-dialog-buttonpane {
+    border-top-color: %sidebar_borderbottom%;
+}
+#yd-ratings-all-wrapper, #yd-ratings-detail .hreview, .yd-service_info .left td  {
+    border-color: %sidebar_borderbottom%;
+}
+/*Lightbox*/
+/*%lightbox%*/
+.yd-lightbox-buttons, .yd-lightbox-content-container, #yd-service-offline #change-plz{
+    background:  %lightbox_background1%; /* Old browsers */
+    background:  -moz-linear-gradient(top, %lightbox_background1% 0%, %lightbox_background2% 100%); /* FF3.6+ */
+    background:  -webkit-gradient(linear, left top, left bottom, color-stop(0%,%lightbox_background1%), color-stop(100%,%lightbox_background2%)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, %lightbox_background1% 0%,%lightbox_background2% 100%); /* Chrome10+,Safari5.1+ */
+    background:  -o-linear-gradient(top, %lightbox_background1%,%lightbox_background2% 100%); /* Opera11.10+ */
+    background:  -ms-linear-gradient(top, %lightbox_background1% 0%,%lightbox_background2% 100%); /* IE10+ */
+    background:  linear-gradient(top, %lightbox_background1% 0%,%lightbox_background2% 100%); /* W3C */
+    color: %lightbox_fontcolor%;
+}
+/*Mindestbestellwert Background und Font*/
+/*%minamount%*/
+#minamount div {
+    background: %sidebar_minimumorder_background%;
+    color: %sidebar_minimumorder_font%;
+}
+/*Footer*/
+/*%footer%*/
+#yd-menu-footer{
+    background:  %tablehead_background2%;
+    background:  -moz-linear-gradient(top,%tablehead_background1%,%tablehead_background2%);
+    background:   -webkit-gradient(linear, left top, left bottom, from(%tablehead_background1%), to(%tablehead_background2%));
+}
+#yd-menu-footer, #yd-menu-footer_content p a{
+    color: %footer_font%;
+}
+#yd-menu-footer_content p a:hover{
+    color: %footer_font_hover%;
+    background: none;
+}
+
+/*---7. Start Page---*/
+/*%navigation_start_page%*/
+#header a{
+    color: %font_navigation%;
+    color: %font_navigation_hover%;
+    background: %font_navigation_background2%;
+    background:  -moz-linear-gradient(top,%font_navigation_background1%,%font_navigation_background2%);
+    background:  -webkit-gradient(linear, left top, left bottom, from(%font_navigation_background1%), to(%font_navigation_background2%));
+    opacity:0.7;
+}
+#header a:hover, #header a.active{
+    color: %font_navigation_hover%;
+    background: %font_navigation_background2%;
+    background:  -moz-linear-gradient(top,%font_navigation_background1%,%font_navigation_background2%);
+    background:  -webkit-gradient(linear, left top, left bottom, from(%font_navigation_background1%), to(%font_navigation_background2%));
+    opacity: 1.0;
+    height: 20px;
+    margin: -5px 0 0 2px;
+    font-weight: bold;
+
+}
+/*Infoboxen (Kategorien auf der Startpage)*/
+.yd-service_info .left .active{
+    color: %font_navigation_hover%;
+    background: url(/media/images/satellites/start/yd-sprites-icons.png) 5px -3394px no-repeat %font_navigation_background2%;
+    background: url(/media/images/satellites/start/yd-sprites-icons.png) 5px -3394px no-repeat, -moz-linear-gradient(top,%font_navigation_background1%,%font_navigation_background2%);
+    background: url(/media/images/satellites/start/yd-sprites-icons.png) 5px -3394px no-repeat, -webkit-gradient(linear, left top, left bottom, from(%font_navigation_background1%), to(%font_navigation_background2%));
+}
+#info{
+    background:   %tablehead_background2%;
+    background:   -moz-linear-gradient(top,%tablehead_background1%,%tablehead_background2%);
+    background:   -webkit-gradient(linear, left top, left bottom, from(%tablehead_background1%), to(%tablehead_background2%));
+}
+#info p{
+    color: %font_tablehead%;
+}
+/*Impressum Box*/
+#impressum a, #impressum{
+    color: %sidebar_background_font%;
+}
+#impressum{
+    background: %sidebar_background%;
+    border-color: %sidebar_borderbottom%;
+    opacity: 0.87;
+}
+/*Infoboxen (Kategorien auf der Startpage)*/
+#info a{
+    color: %font_tablehead%;
+}
+#info a:hover{
+    color: %font_tablehead%;
+    background: none;
+}
+/*Start Page Box mit Seo Text und Bild*/
+.box_img_text{
+    background:  %sidebar_background1%;
+    background:  -moz-linear-gradient(top,%sidebar_background1%,%sidebar_background%);
+    background:  -webkit-gradient(linear, left top, left bottom, from(%sidebar_background1%), to(%sidebar_background%));
+
+}
+.text_box2_heading{
+    color: %sidebar_background_font%;
+    border-bottom-color: %sidebar_background_font%;
+}
+.text_box2 p{
+    color: %sidebar_background_font%;
+}
+/*Index Box Order*/
+/*%online_bestellen_box%*/
+.order_box{
+    border-color: %order_box_border%;
+    background: %order_box_background%;
+    background:-moz-linear-gradient(top,%order_box_background%,%order_box_background_1%);
+    background:  -webkit-gradient(linear, left top, left bottom, from(%order_box_background%), to(%order_box_background_1%));
+    opacity: 0.93;
+}
+.order_box i {
+    color: %order_box_button_font% !important;
+    background: %order_box_background_button%;
+    background:-moz-linear-gradient(top,%order_box_background_button%,%order_box_background_button_1%);
+    background:  -webkit-gradient(linear, left top, left bottom, from(%order_box_background_button%), to(%order_box_background_button_1%));
+    border-color: %order_box_background_button_1%;
+}
+.order_box i:hover {
+    color: %order_box_button_font% !important;
+    background:  %order_box_background_button_1%;
+    background: -moz-linear-gradient(top,%order_box_background_button_1%,%order_box_background_button%);
+    background: -webkit-gradient(linear, left top, left bottom, from(%order_box_background_button_1%), to(%order_box_background_button%));
+}
+.order_box h1{
+    border-bottom-color:  %order_box_border%;
+    color: %order_box_font%
+}
+#extrahead #extradesc {
+    color: %font_tablehead%;
+
+}
+/*%backbutton%*/
+.backbutton{
+    color: %font_color_backbutton%;
+    background: url(/media/images/satellites/menu/icon-left.png) 5px 0 no-repeat %background_backbutton%;
+    background: url(/media/images/satellites/menu/icon-left.png) 5px 0 no-repeat, -moz-linear-gradient(top,%background_backbutton%,%background_backbutton_1%);
+    background: url(/media/images/satellites/menu/icon-left.png) 5px 0 no-repeat, -webkit-gradient(linear, left top, left bottom, from(%background_backbutton%), to(%background_backbutton_1%));
+    border-color: %background_backbutton_1%;
+}
+.backbutton:hover{
+    color: %font_color_backbutton_hover%;
+    background: url(/media/images/satellites/menu/icon-left.png) 5px 0 no-repeat %background_backbutton_1%;
+    background: url(/media/images/satellites/menu/icon-left.png) 5px 0 no-repeat, -moz-linear-gradient(top,%background_backbutton_1%,%background_backbutton%);
+    background: url(/media/images/satellites/menu/icon-left.png) 5px 0 no-repeat, -webkit-gradient(linear, left top, left bottom, from(%background_backbutton_1%), to(%background_backbutton%));
+}

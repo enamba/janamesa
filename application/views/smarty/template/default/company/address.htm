@@ -1,0 +1,112 @@
+{extends file="company/base.htm"}
+{block name="content"}
+
+<div id="admincase">
+
+    {include file='company/_left_nav.htm'}
+
+    <div class="clear"></div>
+
+    <div id="main-content">
+
+        <!-- Page Head -->
+
+        <ul class="shortcut-buttons-set">
+
+            <li><a class="shortcut-button" href="/company/addresses"><span>
+                <img src="{$domain_static}/images/yd-icons/backend/adress_overview.png" alt="" /><br />
+                {__('Adressen Übersicht')}
+            </span></a></li>
+
+            <li><a class="shortcut-button" href="/company/address"><span>
+                <img src="{$domain_static}/images/yd-icons/backend/add_adress.png" alt="" /><br />
+                {__('Adresse hinzufügen')}
+            </span></a></li>
+
+        </ul><!-- End .shortcut-buttons-set -->
+
+        <div class="clear"></div>
+
+        <div class="content-box">
+
+        <div class="content-box-header">
+
+            <h3>{if isset($addr)}{__('Adresse bearbeiten')}{else}{__('Adresse anlegen')}{/if}</h3>
+
+            <div class="clear"></div>
+
+        </div>
+
+        <div class="right" id="content">
+            <!-- Anfang Meine Daten -->
+            <div class="mydata">
+                <div class="users">
+                    <div class="set-content">
+                        <form action="/company/address" method="post" class="fm yd-validation">
+                            <div class="settings_group">
+                                <div class="title">{__('Adressdaten')}</div>
+                                <div class="user-content">
+                                    <label for="">{__('Postleitzahl:')} <span style="color:red">*</span></label>
+                                    <input type="hidden" name="cityId" value="{if not is_null($address->getId()) && is_object($address->getCity())}{$address->getCity()->getId()}{/if}" />
+                                    <input type="text" class="yd-plz-autocomplete text-input medium-input yd-only-nr validate[plz]" id="plz" name="plz" value="{if isset($p)}{$p.plz}{else}{$address->getPlz()}{/if}" />
+                                </div>
+                                <div class="user-content">
+                                    <label for="">{__('Straße:')} <span style="color:red">*</span></label>
+                                    <input type="text" class="text-input medium-input validate[street]" name="street" id="street" value="{if isset($p)}{$p.street}{else}{$address->getStreet()}{/if}" />
+                                </div>
+                                <div class="user-content">
+                                    <label for="">{__('Hausnummer:')} <span style="color:red">*</span></label>
+                                    <input type="text" class="text-input medium-input validate[hausnr]" name="hausnr" id="hausnr" size="4" value="{if isset($p)}{$p.hausnr}{else}{$address->getHausnr()}{/if}" />
+                                </div>
+                                <div class="user-content">
+                                    <label for="">{__('Telefon:')}</label>
+                                    <input type="text" class="text-input medium-input yd-only-nr" name="tel" value="{if isset($p)}{$p.tel}{else}{$address->getTel()}{/if}" />
+                                </div>
+                                <div class="user-content">
+                                    <label for="">{__('Stockwerk:')}</label>
+                                    <input type="text" class="text-input medium-input" name="etage" value="{if isset($p)}{$p.etage}{else}{$address->getEtage()}{/if}" />
+                                </div>
+                                <div class="user-content">
+                                    <label for="">{__('Lieferhinweis:')}</label>
+                                    <input type="text" class="text-input medium-input" name="comment" value="{if isset($p)}{$p.comment}{else}{$address->getComment()}{/if}" />
+                                </div>
+                            </div>
+                            <div class="settings_group">
+                                <div class="title">{__('Zugeordnete Budgetgruppen')}</div>
+                                {foreach from=$company->getBudgets() item=a}
+                                  <div class="user-content">
+                                    <label for="">{__('Gruppe:')}</label>
+                                    <div class="yd-inner-margin">
+                                    <input type="checkbox" class="" value="1" name="budgets[{$a->getId()}]" {if $a->hasLocation($address->getId())}checked{/if} />
+                                    <span>{$a->getName()}</span>
+                                    </div>
+                                </div>
+                                  {foreachelse}
+                                  <div class="user-content">
+                                    {__('Keine Gruppen eingetragen')}
+                                </div>
+                                  {/foreach}
+                            </div>
+                            <div class="settings_group">
+                                <label for="">&nbsp;</label>
+                                <div class="title">
+                                    <input type="submit" class="button" name="add-acc" value="{__('Speichern')}"/>
+                                </div>
+
+                                {*if isset($addr)*}
+                                    <input type="hidden" name="id" value="{$address->getId()}" />
+                                {*/if*}
+                            </div>
+                        
+                        </form>
+                    </div>
+                </div>
+        <!-- Ende Meine Daten -->
+        </div> <!-- content -->
+    </div> <!-- Content-Box-content -->
+        </div> <!-- Content-Box -->
+        <div class="clear"></div>
+    </div> <!-- main Content -->
+</div> <!-- admincase -->
+
+{/block}

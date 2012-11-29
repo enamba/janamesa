@@ -1,0 +1,26 @@
+<div  class="ticket yd-clearfix">
+    
+    <span class="prio prio-{$message->getPrio()}">{$message->getPrio()}</span>
+
+    <div class="ticket-header">
+        <strong>
+            {__b('Status: offen')}
+        </strong>
+        &nbsp;
+    </div>
+
+    <div class="ticket-content">
+        
+        {$message->getCreated()|date_format:'%d.%m.%Y %H:%M'}: {$message->getMessage()}
+        
+        {foreach from=$message->getCallbacks() item=callback}
+        <a href="/request_administration_ticketsystem_message/{$callback}/mid/{$message->getId()}" class="yd-message-callback"></a>
+        {/foreach}       
+    </div>
+
+    <div class="ticket-sidebar yd-ticket-action">
+    </div>
+    
+    <a class="yd-message-release" id="yd-message-release-{$message->getId()}">{__b('Zurück geben')}</a>
+
+</div>

@@ -1,0 +1,20 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<ul class="be-tabs">
+    <li><a href="/administration_seo_links/edit">{__b('Neue Verlinkung erstellen')}</a></li>
+    <li><a href="/administration_seo_links/regenerate">{__b('Alle Verlinkungen neu generieren')}</a></li>
+    <!-- <li><a href="/administration_seo_links/crawler">{__b('Crawler')}</a></li> -->
+    <li><a href="/administration_seo_links/autolinker">{__b('Verlinken')}</a></li>
+</ul>
+
+<div class="be-1-column">
+    <div class="be-box">
+        <h2>{__b('Interne Verlinkung')}</h2>
+        <div class="be-box-in seolinks">
+            {$grid}
+        </div>
+    </div>
+</div>
+
+{/block}

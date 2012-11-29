@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="pt" xml:lang="pt" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="pt" xml:lang="pt" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="pt" xml:lang="pt" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="pt" xml:lang="pt" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="pt" xml:lang="pt">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="yourdelivery GmbH" />
+        <meta name="publisher" content="yourdelivery GmbH" />
+        <meta name="description" content="{$link->description|escape}" />
+        <meta name="keywords" content="{$link->keywords|escape}" />
+        <meta name="robots" content="{$link->robots}" />
+        <meta name="viewport" content="width=1100">
+
+        <title>{$link->title}</title>
+
+        <link rel="canonical" href="http://www.elpedido.es/{$link->url|escape}" />
+
+        <link rel="SHORTCUT ICON" href="/favicon.ico" type="image/x-icon" />
+
+        <link rel="stylesheet" type="text/css" href="/media/css/compiled/frontend-{$extra_css|default:'no'}-{$REVISION}.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-home.css" />
+
+        <script type="text/javascript" src="/media/javascript/compiled/frontend-{$smarty.now|date_format:'%Y%m%d'}.js"></script>
+
+        {include file='_cookies/google/analytics.htm'}
+    </head>
+
+    <body class="br yd-index-page">
+
+        {if $link->scriptTop}
+        <script type="text/javascript">{$link->scriptTop}</script>
+        {/if}
+
+
+        <div id="yd-nonfooter">
+
+            <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+            <div id="wrapper-header" class="blue">
+                <div class="header-bg">
+                    <div class="yd-header">
+                        <div class="yd-inner">
+                            <a class="yd-logo" href="/"></a>                
+
+                            <div class="yd-login">                           	
+                            <div class="yd-login-wrapper yd-logged-out">
+
+                                <a class="yd-header-login">{__('Einloggen')}</a>
+                                <a class="yd-header-register" href="/user/register">{__('Registrieren')}</a>   
+
+                                <div class="yd-login-window hidden">
+                                    <form name="login" action="/user/login" method="post" id="login">
+                                        <input type="hidden" name="login" value="1" />
+                                        <input class="yd-empty-text" type="text" name="user" value="" title="{__('E-Mail-Adresse')}" />
+                                        <input class="yd-empty-text" type="password" name="pass" value="" title="{__('Passwort')}" />
+                                        <input class="" type="submit" name="yd-login" value="{__('Login')}" /> 
+                                        <!--{include file='order/_includes/form_order.htm' postfix='login'}-->
+                                    </form>
+
+                                    <div class="br-label-login">Login</div>
+                                    <div class="br-register">
+                                        Ainda nao faz parte?&nbsp;&nbsp;<a title="Crie sua conta" href="/user/register">Crie sua conta</a>
+                                    </div>
+
+                                    <a class="yd-forgotten-pass">{__('Passwort vergessen?')}</a>
+                                </div>
+
+                            </div>                       
+                            </div>
+
+                            <div class="wrapper-plz-br">
+                                <h3>Está com fome ?</h3>
+                                <h4>Peça sua<br> comida preferida<br>online</h4>
+                                            
+                                {include file="order/_includes/error.htm"}
+                                
+                                <form name="cep_form" id="yd-start-order-form" method="get" action="/order_basis/plz">
+                                    <input type="hidden" name="cityId" value="" />
+                                    <input id="yd-plz-search" class="yd-only-nr yd-empty-text" type="text" name="plz" value="" title="{__('Postleitzahl')}" />
+                                    <span id="br-cep-autocomplete">Não sabe o seu CEP ?</span>
+                                    <a id="yd-start-order" class="link1554 yd-button-280" name="yd-start-order" href="javascript:void(0)">Buscar CEP pelo nome da rua</a>        
+                                    <a class="link1555 yd-button-280" name="yd-start-order" href="javascript:void(0)">{__("Bestellung starten!")}</a> 
+                                    <a class="buscar-btn" href="#" onclick="document.cep_form.submit();">Buscar Restaurantes</a>
+                                </form>
+                            </div>
+
+                            <div class="wrapper-benefits-block">
+                                <div class="benefits-block">
+                                    <div class="inner-benefits-block">
+                                        <p>Pague no cartão ou a vista</p>
+                                        <p>Pizza, Sushi e muito mais</p>
+                                        <p>Fácil e rápido</p>
+                                        <p>Sem nenhum custo extra</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>        
+                <div class="bottom-bg"></div>
+            </div>
+
+
+            <div id="yd-content" class="yd-clearfix">
+
+                {include file='notification.htm'}
+
+                <div id="yd-sidebar">                	
+
+                    {include file='order/_includes/sidebar/payment.htm'}
+
+                    <a href="https://www.facebook.com/Janamesa.delivery" target="_blank" class="yd-box br-box lateral social" title="Socializando">
+                        <div class="br-inner">
+                            <p class="tp">Socializando</p>
+                            <p class="mp">na mesa</p>
+                            <p class="bp">Apaixonados<br /> por comer bem</p>
+                        </div>
+                    </a>
+
+                    <!--<a href="#" class="yd-box br-box lateral newsletter" title="Newsletter">-->
+                    <!--	<div class="br-inner">-->
+                    <!--    <p class="tp">assine nossa</p>-->
+                    <!--<p class="mp">Newsletter</p>-->
+                    <!--<p class="bp">Fique por dentro<br /> de nossas promoções</p>-->
+                    <!--	</div>-->
+                    <!--</a>-->
+
+                    <a href="/contact" class="yd-box br-box lateral ajuda" title="Ajuda?">
+                        <div class="br-inner">
+                            <p class="tp">Precisa de</p>
+                            <p class="mp">Ajuda?</p>
+                            <p class="bp">Resolva suas<br />duvidas com nosso time</p>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div id="yd-ordering">
+
+                    {$link->content|stripslashes}
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="yd-footer">	
+            <div class="yd-footer-inner">
+
+                <div id="yd-footer-content">            
+                    <div class="wrapper-navigation-footer">
+                        <ul class="navigation-footer">
+                            <li class="col-item">
+                                <ul>
+                                    <li><a href="/about-customer" title="Sobre Jánamesa">Sobre Jánamesa</a></li>
+                                    <li><a href="/customer-terms" title="Termos para consumidores">Termos para consumidores</a></li>
+                                    <li><a href="/jobs" title="Trabalhe conosco">Trabalhe conosco</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-item">
+                                <ul>
+                                    <li><a href="/about-restaurants" title="Jánamesa para restaurantes">Jánamesa para restaurantes</a></li>
+                                    <li><a href="/restaurant-terms" title="Termos para restaurantes">Termos para restaurantes</a></li>
+                                    <li><a href="/contact" title="Serviço ao cliente">Serviço ao cliente</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div> 
+                </div>
+
+            </div>	
+        </div>
+
+        <script type="text/javascript">
+            var _sf_async_config={ uid:34514,domain:"janamesa.com.br" };
+            (function(){
+                function loadChartbeat() {
+                    window._sf_endpt=(new Date()).getTime();
+                    var e = document.createElement('script');
+                    e.setAttribute('language', 'javascript');
+                    e.setAttribute('type', 'text/javascript');
+                    e.setAttribute('src',
+                    (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+                        "js/chartbeat.js");
+                    document.body.appendChild(e);
+                }
+                var oldonload = window.onload;
+                window.onload = (typeof window.onload != 'function') ?
+                    loadChartbeat : function() { oldonload(); loadChartbeat(); };
+            })();
+
+        </script>
+
+        {if $link->scriptBottom}
+        <script type="text/javascript">{$link->scriptBottom}</script>
+        {/if}
+
+        {include file='_cookies/masterpixel/global.htm' uadomain='elpedido.es'}
+        {include file='_cookies/piwik/global.htm'}
+
+        {include file='_helper/generatedby.htm'}
+    </body>
+</html>

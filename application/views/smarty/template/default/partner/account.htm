@@ -1,0 +1,36 @@
+{extends file='partner/_base.htm'}
+{block name="content"}
+
+{include file='partner/_includes/nav.htm'}
+
+<div class="be-partner be-partner-account">
+    
+    <div>
+        <h1 class="icon06">{__p('E-Mail-Adresse ändern')}</h1>
+
+        {$emailForm}
+    </div>
+
+    <div>
+        <h1 class="icon06">{__p('Mobilnummer ändern')}</h1>
+
+        {$mobileForm}
+    </div>
+    
+    <br class="clearfloat"/>
+    
+    <div>
+        <h1 class="icon06">{__p('Passwort ändern')}</h1>
+
+        {$passForm}
+    </div>
+    
+    <div>
+        <h1 class="icon06">{__p('Einstellungen')}</h1>
+
+        {$configForm}
+    </div>
+    
+</div>
+
+{/block}

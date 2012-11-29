@@ -1,0 +1,7 @@
+    {__b('Budget:')}<br/>
+    <select name="budgetId" style="width: 250px;">
+        <option value=""></option>
+        {foreach from=$budgets item=budg}
+        <option value="{$budg->getId()}">{$budg->getName()} (#{$budg->getId()})</option>
+        {/foreach}
+    </select>

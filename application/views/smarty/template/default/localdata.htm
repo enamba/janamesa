@@ -1,0 +1,9 @@
+{* @deprecated *}
+<script type="text/javascript" charset="UTF-8">
+    <!--
+        {foreach from=$lookup key=jsvar item=data}
+            var {$jsvar} = [{foreach from=$data item=val name=it}{if is_array($val)}'{current($val)|encrypt}'{else}'{$val|encrypt}'{/if}{if !$smarty.foreach.it.last}, {/if}{/foreach}];         
+        {/foreach}
+    -->
+</script>
+

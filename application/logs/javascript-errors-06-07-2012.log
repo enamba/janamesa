@@ -1,0 +1,21 @@
+TIME: 06-07-2012 10:01:52 
+ MESSAGE: FB is not defined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-296a86beed286a4f6ab63f9243937c31d3b9e55e.js 
+ LINE: 12189 
+ PARENTURL: http://www.yourdelivery.local/ 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1 
+
+TIME: 06-07-2012 16:36:30 
+ MESSAGE: missing ] after element list 
+ URL: http://www.yourdelivery.local/order_private/success 
+ LINE: 62 
+ PARENTURL: http://www.yourdelivery.local/order_private/success 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1 
+
+TIME: 06-07-2012 16:51:58 
+ MESSAGE: missing ] after element list 
+ URL: http://www.yourdelivery.local/order_private/success 
+ LINE: 62 
+ PARENTURL: http://www.yourdelivery.local/order_private/success 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0.1 
+

@@ -1,0 +1,32 @@
+<div class="be-dialogs"><a class="be-dialogs-close"></a>
+
+    <div class="be-dialogs-head">
+        <h2> {__b('Benutzte Gutscheine mit diesem Paypal Account (%s)', $payerId)}</h2>
+    </div>
+
+    <div class="be-dialogs-body">
+        <table class="user-tab">
+            {foreach from=$discounts  item=discount}
+            <tr>
+                <td>{__b('Bestellung: %s',$discount.orderId)}</td>
+                <td>{__b('Datum: %s', $discount.time|dateFull)}</td>
+                <td>{__b('Rabatt: %s', $discount.rabattCode->getParent()->getName())}</td>
+                <td>{if $discount.rabattCode->getParent()->getKind() == 0} 
+                            {__b('Rabatt: %s %', $discount.rabattCode->getParent()->getRabatt())} 
+                         {else} 
+                            {__b('Rabatt: %s €', $discount.rabattCode->getParent()->getRabatt()|inttoprice)}
+                         {/if}    
+                </td>
+                <td>
+                    {__b('Typ: %s',$discount.rabattCode->getParent()->getType() )}
+                </td>
+            </tr>            
+            {/foreach}
+        </table>
+        
+        
+       
+       <a class="yd-close-lightbox button">Fertig</a>
+    </div>
+
+</div>

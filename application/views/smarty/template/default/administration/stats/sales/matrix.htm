@@ -1,0 +1,98 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/stats/sales/navigation.htm'}
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        var myclass;
+        var myclass2;
+        $("tr").mouseover(function(){
+            myclass2 = (this.className.split('-')[1]);
+            myclass2 = myclass2.split(' ')[0];
+            
+    });
+        $("td").mouseover(function(){
+            $("table td").css ("background", "none");
+            myclass = (this.className.split('-')[1]);
+           
+            for (var i = myclass; i > 0; i--){
+                $("table tr.col-"+parseInt(myclass2)+" td.row-"+parseInt(i)).css ("background", "#ffc");
+            }
+            for (var t = myclass2; t > 0; t--){
+                $("table tr.col-"+parseInt(t)+" td.row-"+parseInt(myclass)).css ("background", "#ffc");
+            }
+        });
+    });
+</script>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Matrixauswertung (Umsatz)')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>{__b('Montag')}</td>
+                        <td>{__b('Dienstag')}</td>
+                        <td>{__b('Mittwoch')}</td>
+                        <td>{__b('Donnerstag')}</td>
+                        <td>{__b('Freitag')}</td>
+                        <td>{__b('Samstag')}</td>
+                        <td>{__b('Sonntag')}</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {foreach from=$week key=hour item=hourValues name=fcol}
+
+                    <tr class="col-{$smarty.foreach.fcol.iteration}">
+                        <td>{$hour} - {$hour+1}</td>
+                        {foreach from=$hourValues key=day item=dayValues name=frow}
+                        <td class="row-{$smarty.foreach.frow.iteration}">{$dayValues.0.amount|inttoprice}</td>
+                        {/foreach}
+                    </tr>
+                    {/foreach}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Matrixauswertung (Anzahl Bestellung)')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>{__b('Montag')}</td>
+                        <td>{__b('Dienstag')}</td>
+                        <td>{__b('Mittwoch')}</td>
+                        <td>{__b('Donnerstag')}</td>
+                        <td>{__b('Freitag')}</td>
+                        <td>{__b('Samstag')}</td>
+                        <td>{__b('Sonntag')}</td>
+                    </tr>
+                </thead>
+                <tbod>
+                    {foreach from=$week key=hour item=hourValues name=fcol}
+                    <tr class="col-{$smarty.foreach.fcol.iteration}">
+                        <td>{$hour} - {$hour+1}</td>
+                        {foreach from=$hourValues key=day item=dayValues name=frow}
+                        <td class="row-{$smarty.foreach.frow.iteration}">{$dayValues.0.count}</td>
+                        {/foreach}
+                    </tr>
+                    {/foreach}
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{/block}

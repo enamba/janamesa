@@ -1,0 +1,15 @@
+<div itemprop="breadcrumb" class="yd-breadcrumbs-new">
+    <a itemprop="url" href="http://www.{$domain_base}/">{$domain_base}</a>
+    {if $domain_base == 'lieferando.de'}
+    <a href="http://www.{$domain_base}/lieferservice">{__('Lieferservice')}</a>
+    {/if}
+    {if $region}
+    <a {if ($depth == 'region')}class="active"{/if} href="http://www.{$domain_base}/{$region->restUrl}">{__('Lieferservice %s', $region->region3)}</a>
+    {/if}
+    {if ($district && ($depth == 'plz' || $depth == 'district' || $depth == 'city'))}
+    <a {if ($depth == 'district')}class="active"{/if} href="http://www.{$domain_base}/{$district->restUrl}">{__('Lieferservice %s %s', $district->district1, $district->district2)}</a>
+    {/if}
+    {if ($depth == 'plz')}
+    <a class="active">{__('Lieferservices in %s %s', $location->getPLz(), $location->getCity()->getCity())}</a>
+    {/if}
+</div>

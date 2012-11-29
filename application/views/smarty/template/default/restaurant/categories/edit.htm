@@ -1,0 +1,106 @@
+{extends file="restaurant/base.htm"}
+{block name="content"}
+
+{assign var=from value=$category->getFrom()}
+{assign var=to value=$category->getTo()}
+
+<form action="/restaurant_categories/edit" method="post" name="form">
+    <input type="hidden" name="id" value="{$category->getId()}"/>
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                Kategorie  {$category->getName()} (#{$category->getId()})
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="8%">Typ</td>
+                            <td width="30%">
+                                <table>
+                                    <tr>
+                                        <td class="centric" width="25%"><input type="checkbox" name="servicetypes[1]" value="1" {if $category->hasServiceType(1)}checked{/if}><br />Restaurant</td>
+                                        <td class="centric" width="25%"><input type="checkbox" name="servicetypes[2]" value="2" {if $category->hasServiceType(2)}checked{/if}><br />Catering</td>
+                                        <td class="centric" width="25%"><input type="checkbox" name="servicetypes[3]" value="3" {if $category->hasServiceType(3)}checked{/if}><br />Großhändler</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="60%"></td>
+                        </tr>
+                        <tr>
+                            <td>Parent:</td>
+                            <td colspan="2">
+                                <select name="parentMealCategoryId">
+                                    <option value="0"></option>
+                                {foreach from=Yourdelivery_Model_DbTable_Meal_CategoriesParents::getAll() item=p}
+                                    <option value="{$p['id']}" {if $category->getParentMealCategoryId()==$p['id']}selected{/if}>{$p['name']}</option>
+                                {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Name:</td>
+                            <td colspan="2"><input type="text" name="name" value="{$category->getName()}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>Beschreibung:</td>
+                            <td colspan="2">
+                                <textarea rows="3" name="description" class="inp">{$category->getDescription()}</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Mwst, %</td>
+                            <td colspan="2">
+                                <select name="mwst" id="yd-edit-category-mwst">
+                                    {foreach from=Default_Helpers_Money::getAllVats() item=v}
+                                        <option value="{$v}" {if $category->getMwst()==$v}selected{/if}>{$v}</option>
+                                    {/foreach}
+                                </select> *
+                                &nbsp;&nbsp;&nbsp;&nbsp;Diese Mwst auch für alle Speisen setzen <input value="1" type="checkbox" name="mwstForSizes" id="yd-edit-category-mwstforsizes"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input value="1" type="checkbox" name="excludeFromMinCost" {if $category->getExcludeFromMinCost() == 1}checked{/if}/>
+                            </td>
+                            <td colspan="2">
+                                Nicht im Mindestbestellwert
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input value="1" type="checkbox" name="hasPfand" {if $category->getHasPfand() == 1}checked{/if}/>
+                            </td>
+                            <td colspan="2">
+                                Pfand
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Bestellzeit von
+                            </td>
+                            <td colspan="2">
+                                bis
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                {include file='restaurant/timebit.htm' mode='from'}
+                            </td>
+                            <td colspan="2">
+                                {include file='restaurant/timebit.htm' mode='to'}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="Speichern"/>
+                <input type="submit" name="cancel" value="Abbrechen"/>
+            </div>
+        </div>
+    </div>
+</form>
+{/block}    

@@ -1,0 +1,53 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<form action="/administration_salesperson/createcontract" method="post">
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Vertrag hinzufügen')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table>
+                        <tr>
+                            <td width="30%">{__b('Dienstleister:')}</td>
+                            <td>
+                                <select name="restaurantId">
+                                    {foreach from=$restIds item=ri}
+                                        <option value="{$ri.id}" {if $p.restaurantId == $ri.id}selected{/if}>{$ri.name} (#{$ri.id})</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Dienstleister hat selbst angerufen:')}</td>
+                            <td><input id="yd-restaurant-called" type="checkbox" value="1" name="restaurantCalled" {if ($p.restaurantCalled==1)}checked{/if} /></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Abgeschlossen am:')}</td>
+                            <td><input type="text" id="yd-date" name="affirmed" value="{date('d.m.Y')}"/></td>
+                        </tr>
+                        <tr id="yd-salesperson_dropdown">
+                            <td>{__b('Durch Vertriebler:')}</td>
+                            <td>
+                                <select name="salespersonId">
+                                    {foreach from=$salespersons item=sp}
+                                        <option value="{$sp.id}" {if $p.salespersonId == $sp.id}selected{/if}>{$sp.id}: {$sp.prename} {$sp.name}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+
+</form>
+{/block}    

@@ -1,0 +1,32 @@
+{if $cust->isLoggedIn()}
+    <div class="yd-box-head cursor yd-float-head" id="yd-expand-fav-head">
+        <a id="yd-expand-fav-plus" class="yd-plus"></a>
+        <a id="yd-expand-fav-minus" class="yd-minus"></a>
+        {__('Favoriten')}<br />
+        <small>{__('Bestellung als Favorit speichern und in 15 Sekunden bestellen.')}</small>
+    </div>
+
+    <div class="yd-box-body yd-float-body " id="yd-expand-fav">
+        <ul class="yd-sidebar-list">
+            {foreach from=$cust->getFavourites() item=fav}
+                <li><em>{$fav->getFavName()|truncate:20:"..."}</em>&nbsp;</li>
+                <li class="align-l">
+                    {if $fav->isRepeatable()}
+                        <a href="#" id="yd-repeat-order-{$fav->getHash()}-{$fav->getService()->getId()}" class="repeat-order yd-link-repeat-fav">
+                            « {__('Bestellung wiederholen')}
+                        </a>
+                    {/if}
+                    {if $fav->showRatingLink()}
+                        <br /><a href="/rate/{$fav->getHash()}">« {__('Bestellung bewerten')}</a>
+                    {/if}
+                </li>
+            {foreachelse}
+                <li class="align-l">
+                    {__('Du hast bisher keine Favoriten. Du kannst jede Bestellung am Ende als Favorit speichern oder vorherige Bestellungen in Favoriten umwandeln.')}
+                </li>
+            {/foreach}
+        </ul>
+    </div>
+
+{if $config->domain->base != 'janamesa.com.br'}<br /><br />{/if}
+{/if}

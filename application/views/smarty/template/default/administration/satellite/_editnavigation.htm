@@ -1,0 +1,12 @@
+<header class="yd-satellitebackend">{__b('Satelliten-Backend')}</header>
+
+{if $satellite->getId() > 0}
+<ul class="be-tabs">
+    <li><a href="/administration_satellite/edit/id/{$satellite->getId()}">{__b('Informationen')}</a></li>
+    <li><a href="/administration_satellite/editcss/id/{$satellite->getId()}">{__b('CSS Editor')}</a></li>
+    <li><a href="/administration_satellite/editrandompictures/id/{$satellite->getId()}">{__b('Zufallsbilder für Slide-Show über den Menü')}</a></li>
+    <li><a href="/administration_satellite/editpictures/id/{$satellite->getId()}">{__b('Bilder und SEO-Text für die Startseite')}</a></li>
+    <!--<li><a href="/administration_satellite/editjobs/id/{$satellite->getId()}">{__b('Jobs-Seite')}</a></li>-->
+    <li><a href="/satellite/index/id/{$satellite->getId()}" target="_blank">{__b('Vorschau')}</a></li>
+</ul>
+{/if}

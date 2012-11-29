@@ -1,0 +1,54 @@
+{extends file='administration/base.htm'}
+{block name="content"}
+{include file='administration/stats/sales/navigation.htm'}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Bestellungen / Umsatz / Provision')}
+        </div>
+        <div class="item-content">
+            {__b('Diese Statistik wird stündlich aktualisiert, die Werte für den heutigen Tag können deswegen kleiner sein, als die Daten über Bestellungen zu diesem Zeitpunkt.')}
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+            <table width="100%" class="user-tab">
+                <tr>
+                    <td width="20%"></td>
+                    <td width="20%"><b>{__b('Heute')}</b></td>
+                    <td width="20%"><b>{__b('Diese Woche')}</b></td>
+                    <td width="20%"><b>{__b('Diesen Monat')}</b></td>
+                    <td width="40%"></td>
+                </tr>
+                <tr>
+                    <td><b>{__b('Bestellungen')}</b></td>
+                    <td>{$today.count}</td>
+                    <td>{$thisweek.count}</td>
+                    <td>{$thismonth.count}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>{__b('Umsatz')}</b></td>
+                    <td>{$today.sales|inttoprice} €</td>
+                    <td>{$thisweek.sales|inttoprice} €</td>
+                    <td>{$thismonth.sales|inttoprice} €</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><b>{__b('Provision')}</b></td>
+                    <td>{$today.commission|inttoprice} €</td>
+                    <td>{$thisweek.commission|inttoprice} €</td>
+                    <td>{$thismonth.commission|inttoprice} €</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+{/block}

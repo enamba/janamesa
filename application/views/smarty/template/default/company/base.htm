@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="de" xml:lang="de" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="de" xml:lang="de" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="de" xml:lang="de" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="de" xml:lang="de" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="de" xml:lang="de">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        
+        <title>{$domain_base} - {__('Firmenadmin')}</title>
+
+        <link rel="stylesheet" type="text/css" href="/media/css/compiled/frontend-{$extra_css|default:'no'}-{$REVISION}.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-company.css" />
+
+        <script type="text/javascript" src="/media/javascript/compiled/frontend-{$REVISION}.js"></script>
+
+        {if $grid}
+            <script type='text/javascript' charset='UTF-8'>
+                /* <![CDATA[ */
+                    {$grid->getHeaderScript()}
+                /* ]]> */
+            </script>
+        {/if}
+        
+    </head>
+
+    <body class="de">
+        <div id="yd-nonfooter">
+
+            <!-- Javascript enabled? -->
+            <noscript>
+                <div id="no-javascript">
+                    {__('Du hast Javascript deaktiviert. Diese Seite ist nur mit aktiviertem Javascript nutzbar. Bitte aktiviere Javascript in Deinem Browser und rufe diese Seite erneut auf.')}
+                </div>
+            </noscript>
+            <!-- Javascript enabled? -->
+
+            {include file='base_header.htm'}
+
+            <!-- this will be closed in footer -->
+            {include file='notification.htm'}
+
+            {block name="content"}{/block}
+
+        </div> <!-- yd-nonfooter -->
+
+    {include file="base_footer.htm"}
+
+    <script type="text/javascript">
+        {foreach from=$this->getDisabledElements() item=dis}
+        if ( ("{$dis}").length > 0 ){
+            $("#{$dis}").hide();
+        }
+        {/foreach}
+    </script>
+
+
+    </body>
+</html>

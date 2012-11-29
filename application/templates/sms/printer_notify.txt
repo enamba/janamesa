@@ -1,0 +1,6 @@
+{if $order->isPreOrder()}
+{__('Hallo, Dein Essen kommt in voraussichtlich %s. Guten Appetit wünscht %s!', $order->getDeliverDelay()->computeDelayFormated(), $config->domain->base)}
+{else}
+{__('Hallo, der Lieferdienst bestätigt die folgende Lieferzeit: %s. Guten Appetit wünscht %s!', $order->computeArrivalTime()|date_format:__("d.m.y H:i"), $config->domain->base)}
+{/if}
+{__('Jetzt App downloaden: http://%s/apps', $config->domain->base)}

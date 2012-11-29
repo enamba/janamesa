@@ -1,0 +1,440 @@
+2012-08-21T09:15:33+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving pyszne.pl.testing SMARTY: rendering template index/index.htm 
+2012-08-21T09:15:33+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving pyszne.pl.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-08-21T09:15:34+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving pyszne.pl.testing SMARTY: rendering template request/cityverbose/autocomplete/city.htm 
+2012-08-21T09:16:50+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-08-21T09:16:50+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-08-21T09:17:18+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/login.htm 
+2012-08-21T09:17:22+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Successfully loggged in admin #Supporter Jens Naie (345) 
+2012-08-21T09:17:22+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/dashboard.htm 
+2012-08-21T10:13:49+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/meals/types.htm 
+2012-08-21T10:13:59+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/meals/picturesbatchupload.htm 
+2012-08-21T10:14:04+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/meals/types.htm 
+2012-08-21T10:14:16+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/meals/ingredients.htm 
+2012-08-21T10:14:38+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/category/picture/list.htm 
+2012-08-21T10:14:45+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/meals/picturesbatchupload.htm 
+2012-08-21T10:17:06+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/category/index.htm 
+2012-08-21T10:17:30+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/category/picture/list.htm 
+2012-08-21T10:17:35+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/category/picture/create.htm 
+2012-08-21T10:21:23+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/discount/checkregistrationdiscountcode.htm 
+2012-08-21T11:01:55+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/meals/types.htm 
+2012-08-21T11:02:02+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/meals/picturesbatchupload.htm 
+2012-08-21T11:02:20+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/meals/picturesbatchupload.htm 
+2012-08-21T11:02:46+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/meals/picturesbatchupload.htm 
+2012-08-21T11:03:42+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/meals/types.htm 
+2012-08-21T11:03:45+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/request/service/meals/state.htm 
+2012-08-21T11:04:02+02:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Run into error: Message: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'janamesa.com.br.meal_ingredients_nn' doesn't exist
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Select.php(686): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select))
+#4 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid/Source/Zend/Select.php(297): Zend_Db_Select->query(2)
+#5 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid.php(2641): Bvb_Grid_Source_Zend_Select->execute()
+#6 /home/ydadmin/htdocs/lieferando/library/Bvb/Grid/Deploy/Table.php(1873): Bvb_Grid->deploy()
+#7 /home/ydadmin/htdocs/lieferando/application/controllers/Administration/Service/MealsController.php(424): Bvb_Grid_Deploy_Table->deploy()
+#8 /home/ydadmin/htdocs/lieferando/application/controllers/Administration/Service/MealsController.php(301): Administration_Service_MealsController->_getGrid(Array)
+#9 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): Administration_Service_MealsController->typesAction()
+#10 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('typesAction')
+#11 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#13 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#14 /home/ydadmin/htdocs/lieferando/public/index.php(116): Zend_Application->run()
+#15 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-21T11:04:02+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/error.htm 
+2012-08-21T11:17:40+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/discount/create.htm 
+2012-08-21T11:18:45+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/discounts.htm 
+2012-08-21T11:18:49+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/discount/edit.htm 
+2012-08-21T11:19:08+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/discount/checkdiscount.htm 
+2012-08-21T11:19:16+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/discount/create.htm 
+2012-08-21T13:58:09+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/dashboard.htm 
+2012-08-21T13:58:16+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/services.htm 
+2012-08-21T13:59:06+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Logged to the restaurant Pizzaria do David (360) #Supporter Jens Naie (345) 
+2012-08-21T13:59:06+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/index.htm 
+2012-08-21T13:59:26+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/index.htm 
+2012-08-21T13:59:37+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/menu.htm 
+2012-08-21T13:59:42+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T13:59:45+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T14:00:09+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/menu.htm 
+2012-08-21T14:00:12+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T14:00:14+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T14:00:32+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/mealcategories.htm 
+2012-08-21T14:00:36+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/mealsizes.htm 
+2012-08-21T14:00:54+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/mealoptionrows.htm 
+2012-08-21T14:41:13+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/mealextrasgroups.htm 
+2012-08-21T14:41:17+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/menu.htm 
+2012-08-21T14:41:21+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T14:41:22+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T14:41:28+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/services.htm 
+2012-08-21T14:41:47+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Logged to the restaurant Funny Pizzas (351) #Supporter Jens Naie (345) 
+2012-08-21T14:41:47+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/index.htm 
+2012-08-21T14:41:50+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/menu.htm 
+2012-08-21T14:41:53+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T14:41:54+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T14:57:33+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T14:57:33+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T14:57:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T14:57:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T14:57:40+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T14:57:40+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T14:58:50+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T14:58:50+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T14:58:51+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T14:58:52+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T16:54:02+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/locations.htm 
+2012-08-21T16:54:21+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/locations/edit.htm 
+2012-08-21T16:54:27+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/locations.htm 
+2012-08-21T16:54:58+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/locations.htm 
+2012-08-21T16:55:28+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/locations.htm 
+2012-08-21T17:59:56+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T17:59:58+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T17:59:59+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T18:00:00+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T18:00:01+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T18:00:02+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T18:00:41+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Logged to the restaurant Funny Pizzas (351) #Supporter Jens Naie (345) 
+2012-08-21T18:00:41+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/index.htm 
+2012-08-21T18:00:52+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/mealoptionrows.htm 
+2012-08-21T18:01:01+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/menu.htm 
+2012-08-21T18:01:09+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T18:01:09+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T18:21:53+02:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Run into error: Message: Syntax Error in template "/home/ydadmin/htdocs/lieferando/application/templates/janamesa/ecletica/order.txt"  on line 1 "[DADOS CLIENTE]{assign var=tel value=preg_replace('/(^0|\D)/', '', $order-&gt;getLocation()-&gt;getTel())}{assign var=tel1 value='0'.(strlength($tel)&gt;9?substring($tel,0,2):'11')}{assign var=tel2 value=(strlength($tel)&gt;9?substring($tel,2):$tel)}"  - Unexpected ".", expected one of: "}" , " "
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templateparser.php(2855): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templateparser.php(2920): Smarty_Internal_Templateparser->yy_syntax_error(56, '.')
+#2 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_smartytemplatecompiler.php(51): Smarty_Internal_Templateparser->doParse(56, '.')
+#3 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templatecompilerbase.php(82): Smarty_Internal_SmartyTemplateCompiler->doCompile('[DADOS CLIENTE]...')
+#4 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(260): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(422): Smarty_Internal_Template->compileTemplateSource()
+#6 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(567): Smarty_Internal_Template->renderTemplate()
+#7 /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php(338): Smarty_Internal_Template->getRenderedTemplate()
+#8 /home/ydadmin/htdocs/lieferando/library/Janamesa/Api/Ecletica.php(36): Smarty->fetch('order.txt')
+#9 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(12): Janamesa_Api_Ecletica->send(Object(Yourdelivery_Model_Order))
+#10 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): TestController->testAction()
+#11 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('testAction')
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#14 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#15 /home/ydadmin/htdocs/lieferando/public/index.php(116): Zend_Application->run()
+#16 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-21T18:21:53+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/error.htm 
+2012-08-21T18:23:17+02:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Run into error: Message: Syntax Error in template "/home/ydadmin/htdocs/lieferando/application/templates/janamesa/ecletica/order.txt"  on line 1 "[DADOS CLIENTE]{assign var=tel value=preg_replace('/(^0|\D)/', '', $order-&gt;getLocation()-&gt;getTel())}{assign var=tel1 value='0'.(strlength($tel)&gt;9?substring($tel,0,2):'11')}{assign var=tel2 value=(strlength($tel)&gt;9?substring($tel,2):$tel)}"  - Unexpected ".", expected one of: "}" , " "
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templateparser.php(2855): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templateparser.php(2920): Smarty_Internal_Templateparser->yy_syntax_error(56, '.')
+#2 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_smartytemplatecompiler.php(51): Smarty_Internal_Templateparser->doParse(56, '.')
+#3 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templatecompilerbase.php(82): Smarty_Internal_SmartyTemplateCompiler->doCompile('[DADOS CLIENTE]...')
+#4 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(260): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(422): Smarty_Internal_Template->compileTemplateSource()
+#6 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(567): Smarty_Internal_Template->renderTemplate()
+#7 /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php(338): Smarty_Internal_Template->getRenderedTemplate()
+#8 /home/ydadmin/htdocs/lieferando/library/Janamesa/Api/Ecletica.php(36): Smarty->fetch('order.txt')
+#9 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(12): Janamesa_Api_Ecletica->send(Object(Yourdelivery_Model_Order))
+#10 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): TestController->testAction()
+#11 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('testAction')
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#14 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#15 /home/ydadmin/htdocs/lieferando/public/index.php(116): Zend_Application->run()
+#16 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-21T18:23:17+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/error.htm 
+2012-08-21T18:31:08+02:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Run into error: Message: Syntax Error in template "/home/ydadmin/htdocs/lieferando/application/templates/janamesa/ecletica/order.txt"  on line 2 "{assign var=tel1 value='0'.(strlength($tel)&gt;9?substring($tel,0,2):'11')}"  - Unexpected ".", expected one of: "}" , " "
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templateparser.php(2855): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templateparser.php(2920): Smarty_Internal_Templateparser->yy_syntax_error(56, '.')
+#2 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_smartytemplatecompiler.php(51): Smarty_Internal_Templateparser->doParse(56, '.')
+#3 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templatecompilerbase.php(82): Smarty_Internal_SmartyTemplateCompiler->doCompile('[DADOS CLIENTE]...')
+#4 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(260): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(422): Smarty_Internal_Template->compileTemplateSource()
+#6 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(567): Smarty_Internal_Template->renderTemplate()
+#7 /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php(338): Smarty_Internal_Template->getRenderedTemplate()
+#8 /home/ydadmin/htdocs/lieferando/library/Janamesa/Api/Ecletica.php(36): Smarty->fetch('order.txt')
+#9 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(12): Janamesa_Api_Ecletica->send(Object(Yourdelivery_Model_Order))
+#10 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): TestController->testAction()
+#11 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('testAction')
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#14 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#15 /home/ydadmin/htdocs/lieferando/public/index.php(116): Zend_Application->run()
+#16 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-21T18:31:08+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/error.htm 
+2012-08-21T18:31:58+02:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Run into error: Message: Syntax Error in template "/home/ydadmin/htdocs/lieferando/application/templates/janamesa/ecletica/order.txt"  on line 2 "{assign var=tel1 value=('0'.(strlength($tel)&gt;9?substring($tel,0,2):'11'))}"  - Unexpected "."
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templateparser.php(2855): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templateparser.php(2920): Smarty_Internal_Templateparser->yy_syntax_error(56, '.')
+#2 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_smartytemplatecompiler.php(51): Smarty_Internal_Templateparser->doParse(56, '.')
+#3 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templatecompilerbase.php(82): Smarty_Internal_SmartyTemplateCompiler->doCompile('[DADOS CLIENTE]...')
+#4 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(260): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(422): Smarty_Internal_Template->compileTemplateSource()
+#6 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(567): Smarty_Internal_Template->renderTemplate()
+#7 /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php(338): Smarty_Internal_Template->getRenderedTemplate()
+#8 /home/ydadmin/htdocs/lieferando/library/Janamesa/Api/Ecletica.php(36): Smarty->fetch('order.txt')
+#9 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(12): Janamesa_Api_Ecletica->send(Object(Yourdelivery_Model_Order))
+#10 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): TestController->testAction()
+#11 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('testAction')
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#14 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#15 /home/ydadmin/htdocs/lieferando/public/index.php(116): Zend_Application->run()
+#16 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-21T18:31:58+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/error.htm 
+2012-08-21T18:33:56+02:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Run into error: Message: Syntax Error in template "/home/ydadmin/htdocs/lieferando/application/templates/janamesa/ecletica/order.txt"  on line 2 "{assign var=tel1 value=('0'.(strlen($tel)&gt;9?substring($tel,0,2):'11'))}"  - Unexpected "."
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templateparser.php(2855): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templateparser.php(2920): Smarty_Internal_Templateparser->yy_syntax_error(56, '.')
+#2 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_smartytemplatecompiler.php(51): Smarty_Internal_Templateparser->doParse(56, '.')
+#3 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templatecompilerbase.php(82): Smarty_Internal_SmartyTemplateCompiler->doCompile('[DADOS CLIENTE]...')
+#4 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(260): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(422): Smarty_Internal_Template->compileTemplateSource()
+#6 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(567): Smarty_Internal_Template->renderTemplate()
+#7 /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php(338): Smarty_Internal_Template->getRenderedTemplate()
+#8 /home/ydadmin/htdocs/lieferando/library/Janamesa/Api/Ecletica.php(36): Smarty->fetch('order.txt')
+#9 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(12): Janamesa_Api_Ecletica->send(Object(Yourdelivery_Model_Order))
+#10 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): TestController->testAction()
+#11 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('testAction')
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#14 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#15 /home/ydadmin/htdocs/lieferando/public/index.php(116): Zend_Application->run()
+#16 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-21T18:33:56+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/error.htm 
+2012-08-21T18:40:37+02:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Run into error: Message: Syntax Error in template "/home/ydadmin/htdocs/lieferando/application/templates/janamesa/ecletica/order.txt"  on line 2 "{assign var=tel1 value=('0'.(strlen($tel)&gt;9?substr($tel,0,2):'11'))}"  - Unexpected "."
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templateparser.php(2855): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templateparser.php(2920): Smarty_Internal_Templateparser->yy_syntax_error(56, '.')
+#2 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_smartytemplatecompiler.php(51): Smarty_Internal_Templateparser->doParse(56, '.')
+#3 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templatecompilerbase.php(82): Smarty_Internal_SmartyTemplateCompiler->doCompile('[DADOS CLIENTE]...')
+#4 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(260): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(422): Smarty_Internal_Template->compileTemplateSource()
+#6 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(567): Smarty_Internal_Template->renderTemplate()
+#7 /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php(338): Smarty_Internal_Template->getRenderedTemplate()
+#8 /home/ydadmin/htdocs/lieferando/library/Janamesa/Api/Ecletica.php(36): Smarty->fetch('order.txt')
+#9 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(12): Janamesa_Api_Ecletica->send(Object(Yourdelivery_Model_Order))
+#10 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): TestController->testAction()
+#11 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('testAction')
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#14 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#15 /home/ydadmin/htdocs/lieferando/public/index.php(116): Zend_Application->run()
+#16 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-21T18:40:37+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/error.htm 
+2012-08-21T18:42:03+02:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Run into error: Message: Syntax Error in template "/home/ydadmin/htdocs/lieferando/application/templates/janamesa/ecletica/order.txt"  on line 2 "{assign var=tel1 value=(strlen($tel)&gt;9?'0'.substr($tel,0,2):'011')}"  - Unexpected "?"
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templateparser.php(2855): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templateparser.php(2920): Smarty_Internal_Templateparser->yy_syntax_error(52, '?')
+#2 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_smartytemplatecompiler.php(51): Smarty_Internal_Templateparser->doParse(52, '?')
+#3 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templatecompilerbase.php(82): Smarty_Internal_SmartyTemplateCompiler->doCompile('[DADOS CLIENTE]...')
+#4 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(260): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(422): Smarty_Internal_Template->compileTemplateSource()
+#6 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(567): Smarty_Internal_Template->renderTemplate()
+#7 /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php(338): Smarty_Internal_Template->getRenderedTemplate()
+#8 /home/ydadmin/htdocs/lieferando/library/Janamesa/Api/Ecletica.php(36): Smarty->fetch('order.txt')
+#9 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(12): Janamesa_Api_Ecletica->send(Object(Yourdelivery_Model_Order))
+#10 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): TestController->testAction()
+#11 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('testAction')
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#14 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#15 /home/ydadmin/htdocs/lieferando/public/index.php(116): Zend_Application->run()
+#16 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-21T18:42:03+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/error.htm 
+2012-08-21T18:43:57+02:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Run into error: Message: Syntax Error in template "/home/ydadmin/htdocs/lieferando/application/templates/janamesa/ecletica/order.txt"  on line 3 "{assign var=tel1 value='0'.substr($tel,0,2)}"  - Unexpected ".", expected one of: "}" , " "
+
+Trace:
+#0 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templateparser.php(2855): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templateparser.php(2920): Smarty_Internal_Templateparser->yy_syntax_error(56, '.')
+#2 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_smartytemplatecompiler.php(51): Smarty_Internal_Templateparser->doParse(56, '.')
+#3 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_templatecompilerbase.php(82): Smarty_Internal_SmartyTemplateCompiler->doCompile('[DADOS CLIENTE]...')
+#4 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(260): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(422): Smarty_Internal_Template->compileTemplateSource()
+#6 /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_template.php(567): Smarty_Internal_Template->renderTemplate()
+#7 /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php(338): Smarty_Internal_Template->getRenderedTemplate()
+#8 /home/ydadmin/htdocs/lieferando/library/Janamesa/Api/Ecletica.php(36): Smarty->fetch('order.txt')
+#9 /home/ydadmin/htdocs/lieferando/application/controllers/TestController.php(12): Janamesa_Api_Ecletica->send(Object(Yourdelivery_Model_Order))
+#10 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): TestController->testAction()
+#11 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('testAction')
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#13 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#14 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#15 /home/ydadmin/htdocs/lieferando/public/index.php(116): Zend_Application->run()
+#16 {main}
+
+ #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:207]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:116]
+
+2012-08-21T18:43:57+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/error.htm 
+2012-08-21T18:59:54+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T18:59:54+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T18:59:56+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T18:59:56+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:00:49+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:00:49+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:00:50+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:00:51+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:01:36+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:01:37+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:02:25+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:02:25+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:03:28+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:03:28+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:03:32+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:03:32+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:04:09+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:04:10+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:04:12+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:04:12+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:04:40+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-08-21T19:08:14+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-08-21T19:08:49+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/login.htm 
+2012-08-21T19:08:56+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Successfully loggged in admin #Supporter Jens Naie (345) 
+2012-08-21T19:08:56+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/dashboard.htm 
+2012-08-21T19:09:01+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/services.htm 
+2012-08-21T19:09:28+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Logged to the restaurant Funny Pizzas (351) #Supporter Jens Naie (345) 
+2012-08-21T19:09:28+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/index.htm 
+2012-08-21T19:09:32+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/menu.htm 
+2012-08-21T19:09:37+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:09:38+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:10:00+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-08-21T19:10:12+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template restaurant/menu.htm 
+2012-08-21T19:10:16+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:10:16+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:10:26+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:10:27+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:10:28+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:10:29+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:10:31+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:10:32+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:11:31+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:11:32+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:11:50+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:11:51+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:11:55+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:11:55+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:12:22+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:12:22+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:12:24+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:12:25+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:12:27+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:12:28+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:12:53+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:12:56+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:12:59+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:13:00+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:15:09+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:15:11+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:15:18+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:15:19+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:15:49+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:15:50+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:15:53+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:15:53+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:16:22+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:16:23+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:17:23+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:17:24+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:17:56+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:17:57+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 
+2012-08-21T19:18:13+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategory.htm 
+2012-08-21T19:18:14+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/restaurant/getcategorieslist.htm 

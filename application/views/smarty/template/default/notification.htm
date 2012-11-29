@@ -1,0 +1,31 @@
+<div id="yd-notifications">
+    
+    <!-- Javascript enabled? -->
+    <noscript>
+        <div class="notification error">
+            <ul>
+                <li id="notification-error-1000000">
+                    {__('Sie haben Javascript deaktiviert. Diese Seite ist nur mit aktiviertem Javascript nutzbar. Bitte aktivieren Sie Javascript in Ihrem Browser und rufen Sie diese Seite erneut auf.')}
+                </li>
+            </ul>
+        </div>
+    </noscript>
+    
+    {if $notifications}
+        {foreach from=$notifications item=notification key=type}
+            <div class="notification {$type}">
+                <a href="#" class="closeNotification" id="notification-{$type}">
+                    <img src="{$domain_static}/images/yd-background/notification-close.png" alt="close" />
+                </a>
+                <ul>
+                {foreach from=$notification item=item name=noteIter}
+                    <li id="notification-{$type}-{$smarty.foreach.noteIter.iteration}">
+                        {$item}
+                    </li>
+                {/foreach}
+                </ul>
+            </div>
+        {/foreach}
+    {/if}
+    
+</div>

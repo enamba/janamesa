@@ -1,0 +1,194 @@
+{extends file="restaurant/base.htm"}
+{block name="content"}
+
+{if count($restaurant->getMealOptionsRows()) == 0}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {{__b('Option hinzufügen')}}
+        </div>
+        <div class="item-content">
+            <a href="/restaurant/mealoptionrows">{{__b('Bitte zuerst eine Gruppe erstellen')}}</a>
+        </div>
+    </div>
+</div>
+
+{else}
+
+<div class="two-column-box">
+    <div class="item">
+        <div class="item-head">
+            {{__b('Option hinzufügen')}}
+        </div>
+        <div class="item-content">
+            <form action="/restaurant_options/create" method="post" name="form">
+                <table class="user-tab">
+                    <tr>
+                        <td width="10%">{{__b('Name:')}}</td>
+                        <td><input type="text" name="name" value=""/> *</td>
+                    </tr>
+                    <tr>
+                        <td>{{__b('Preis:')}}</td>
+                        <td><input type="text" name="cost" value=""/> €</td>
+                    </tr>
+                    <tr>
+                        <td>{{__b('Mwst, %')}}</td>
+                        <td>
+                            <select name="mwst">
+                                {foreach from=Default_Helpers_Money::getAllVats() item=v}
+                                    <option value="{$v}">{$v}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{{__b('Gruppe:')}}</td>
+                        <td>
+                            <select name="optRow">
+                                {foreach from=$restaurant->getMealOptionsRows() item=row}
+                                    <option value="{$row->getId()}" {if $smarty.post.groupId == $row->getId()}selected{/if}>{$row->getName()} (#{$row->getId()}) {if $row->getInternalName()}({$row->getInternalName()}){/if}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{{__b('Status:')}}</td>
+                        <td>
+                            <select name="status">
+                                <option value="1" {if $smarty.post.status == 0}selected{/if}>{{__b('Online')}}</option>
+                                <option value="0" {if $smarty.post.status == 1}selected{/if}>{{__b('Offline')}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" name="createoption" value="{{__b('Hinzufügen')}}"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="item-head">
+            {{__b('Optionen Quick-Add')}}
+        </div>
+
+        <div class="item-content">
+            <form action="/restaurant_options/createbatch" method="post" name="form">
+                <table class="user-tab">
+                    <tr>
+                        <td width="30%">{{__b('Optionen, durch Semicolon getrennt:')}}</td>
+                        <td><textarea rows="3" name="names"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>{{__b('Preis:')}}</td>
+                        <td><input type="text" name="cost" value=""/> €</td>
+                    </tr>
+                    <tr>
+                        <td>{{__b('Mwst, %')}}</td>
+                        <td>
+                            <select name="mwst">
+                                {foreach from=Default_Helpers_Money::getAllVats() item=v}
+                                    <option value="{$v}">{$v}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{{__b('Gruppe:')}}</td>
+                        <td>
+                            <select name="optRow">
+                                {foreach from=$restaurant->getMealOptionsRows() item=row}
+                                <option value="{$row->getId()}" {if $smarty.post.groupId == $row->getId()}selected{/if}>{$row->getName()} (#{$row->getId()}) {if $row->getInternalName()}({$row->getInternalName()}){/if}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{{__b('Status:')}}</td>
+                        <td>
+                            <select name="status">
+                                <option value="1" {if $smarty.post.status == 0}selected{/if}>{{__b('Online')}}</option>
+                                <option value="0" {if $smarty.post.status == 1}selected{/if}>{{__b('Offline')}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" name="createoption" value="{{__b('Hinzufügen')}}"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+{/if}
+
+<form action="/restaurant_options/changeselected" method="post">
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+                <table width="100%" class="user-tab">
+                <tr>
+                    <td width="20%">{{__b('Preis:')}}</td>
+                    <td width="20%">{{__b('Status:')}}</td>
+                    <td width="20%">{{__b('Mwst:')}}</td>
+                    <td width="20%"></td>
+                    <td width="20%"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="cost" value="{{__b('Nicht ändern')}}" class="yd-grey-info yd-change-all-fields"/></td>
+                    <td>
+                        <select name="status" class="rund_set text">
+                            <option value="-1">{{__b('Nicht ändern')}}</option>
+                            <option value="1">{{__b('Online')}}</option>
+                            <option value="0">{{__b('Offline')}}</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="mwst">
+                            <option value="-1">{{__b('Nicht ändern')}}</option>
+                            {foreach from=Default_Helpers_Money::getAllVats() item=v}
+                                <option value="{$v}">{$v}</option>
+                            {/foreach}
+                        </select>
+                    </td>
+                    <td colspan="2"><input type="submit" value="{{__b('Markierte Optionen ändern')}}"/></td>
+                </tr>
+                <tr>
+                    <td colspan="6" height="20"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+    
+<form action="/restaurant_options/deleteselected" method="post">
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head" id="yd-restaurant-grid">
+            {{__b('Optionen')}}
+        </div>
+        <div class="item-content">
+            <div id="yd-check-all-link"><input class="yd-check-all-checkboxes" id="yd-check-all-checkboxes" type="checkbox" value="1"/><label for="yd-check-all-checkboxes"> {{__b('alle auswählen')}} </label></div><br/>
+            {$grid}
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+                <table width="100%" class="user-tab">
+                <tr>
+                    <td><input type="submit" name="deleteSelected" style="width: 220px;" value="{{__b('Markierte Optionen löschen')}}" onclick="javascript:return confirm('{{__b('Sollen die markierten Optionen wirklich gelöscht werden?')}}')"/></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</form>
+{/block}

@@ -1,0 +1,58 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{if isset($restaurant)}
+{include file='administration/service/edit/_navigation.htm'}
+
+<div class="one-column-box">
+     <div class="item">
+        <div class="item-head">
+            {{__b('Kommentar')}}
+        </div>
+         <div class="item-content">
+            <form action="/administration_service_edit/notepad/" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="{$restaurant->getId()}"/>
+            <table class="user-tab">
+                <tr>
+                    <td width="40%"><textarea rows="8" style="width: 400px;" name="comment"></textarea></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="{{__b('Abschicken')}}"/>
+                    </td>
+                </tr>
+            </table>
+            </form>
+         </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+     <div class="item">
+        <div class="item-head">
+            {{__b('Kommentare')}}
+        </div>
+         <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <th width="15%">{{__b('Eingetragen am')}}</th>
+                    <th width="15%">{{__b('Author')}}</th>
+                    <th width="50%">{{__b('Kommentar')}}</th>
+                    <th width="10%"></th>
+                </tr>
+                {foreach from=$comments item=comment}
+                <tr>
+                    <td>{$comment['time']}</td>
+                    <td>{$comment['aName']} ({$comment['aEmail']})</td>
+                    <td>{$comment['comment']}</td>
+                    <td></td>
+                </tr>
+                {/foreach}
+            </table>
+         </div>
+    </div>
+</div>
+
+{/if}
+{/block}
+

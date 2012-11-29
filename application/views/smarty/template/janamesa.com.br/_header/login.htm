@@ -1,0 +1,34 @@
+<div class="yd-login-wrapper yd-logged-out">
+
+    <div class="yd-login-window hidden">
+        <form name="login" action="/user/login" method="post" id="login">
+            <input type="hidden" name="login" value="1" />
+            <input class="yd-empty-text" type="text" name="user" value="" title="{__('E-Mail-Adresse')}" />
+            <input class="yd-empty-text" type="password" name="pass" value="" title="{__('Passwort')}" />
+            <input class="" type="submit" name="yd-login" value="{__('Login')}" /> 
+            {include file='order/_includes/form_order.htm' postfix='login'}
+        </form>
+
+        <div class="br-register"><a title="Crie sua conta" href="/user/register">Crie sua conta</a></div>
+        <div class="br-label-login">Login</div>
+        <div class="br-login-left">
+            <a class="yd-facebook-login" id="fb-login"><img src="/media/css/www.janamesa.com.br/images/facebookconnect.png"/></a><br/>
+        </div>
+
+        <a class="yd-forgotten-pass">{__('Passwort vergessen?')}</a>
+
+    </div>
+</div>
+<div id="fb-root"></div>
+<div id="logout" class="yd-logged-in hidden">
+    <span class="yd-customer-name"></span><em class="yd-customer-company hidden"></em>
+
+    | <a href="/user/index" class="yd-icon-account">{__('Account')}</a>
+
+    | <a href="/user/logout" class="yd-icon-logout yd-log-out" id="yd-logout">{__('Abmelden')}</a>
+
+    <div id="yd-customer-company-admin" class="hidden">
+        <a href="/company" class="yd-icon-company">{__('Firmenadmin')}</a>
+    </div>
+
+</div>

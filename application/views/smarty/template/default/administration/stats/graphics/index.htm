@@ -1,0 +1,154 @@
+{extends file='administration/base.htm'}
+{block name="content"}
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#my-chart-container-1-1').insertFusionCharts({
+                type: "stackedcolumn3d", width: "800", height: "500",
+                data: "/administration_stats_flash/sales/year/{$year}/week/{$week}/type/count/city/{$city}",
+                dataFormat: "URIData",
+                swfPath: "/media/flash/fusion-charts"
+            });
+            $('#my-chart-container-1-2').insertFusionCharts({
+                type: "stackedcolumn3d", width: "800", height: "500",
+                data: "/administration_stats_flash/sales/year/{$year}/week/{$week}/type/sales/city/{$city}",
+                dataFormat: "URIData",
+                swfPath: "/media/flash/fusion-charts"
+            });
+            $('#my-chart-container-1-3').insertFusionCharts({
+                type: "stackedcolumn3d", width: "800", height: "500",
+                data: "/administration_stats_flash/sales/year/{$year}/week/{$week}/type/commission/city/{$city}",
+                dataFormat: "URIData",
+                swfPath: "/media/flash/fusion-charts"
+            });
+
+            $('#my-chart-container-2-1').insertFusionCharts({
+                type: "stackedcolumn3d", width: "800", height: "500",
+                data: "/administration_stats_flash/salesmode/year/{$year}/week/{$week}/type/count/city/{$city}",
+                dataFormat: "URIData",
+                swfPath: "/media/flash/fusion-charts"
+            });
+            $('#my-chart-container-2-2').insertFusionCharts({
+                type: "stackedcolumn3d", width: "800", height: "500",
+                data: "/administration_stats_flash/salesmode/year/{$year}/week/{$week}/type/sales/city/{$city}",
+                dataFormat: "URIData",
+                swfPath: "/media/flash/fusion-charts"
+            });
+            $('#my-chart-container-2-3').insertFusionCharts({
+                type: "stackedcolumn3d", width: "800", height: "500",
+                data: "/administration_stats_flash/salesmode/year/{$year}/week/{$week}/type/commission/city/{$city}",
+                dataFormat: "URIData",
+                swfPath: "/media/flash/fusion-charts"
+            });
+
+            $('#my-chart-container-3-1').insertFusionCharts({
+                type: "stackedcolumn3d", width: "800", height: "500",
+                data: "/administration_stats_flash/saleskind/year/{$year}/week/{$week}/type/count/city/{$city}",
+                dataFormat: "URIData",
+                swfPath: "/media/flash/fusion-charts"
+            });
+            $('#my-chart-container-3-2').insertFusionCharts({
+                type: "stackedcolumn3d", width: "800", height: "500",
+                data: "/administration_stats_flash/saleskind/year/{$year}/week/{$week}/type/sales/city/{$city}",
+                dataFormat: "URIData",
+                swfPath: "/media/flash/fusion-charts"
+            });
+            $('#my-chart-container-3-3').insertFusionCharts({
+                type: "stackedcolumn3d", width: "800", height: "500",
+                data: "/administration_stats_flash/saleskind/year/{$year}/week/{$week}/type/commission/city/{$city}",
+                dataFormat: "URIData",
+                swfPath: "/media/flash/fusion-charts"
+            });
+        });
+    </script>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Umsatz')}
+            </div>
+            <div class="item-content">
+                <ul class="be-tabs">
+                    <li><a href="#yd-tab-1" class="yd-tab">{__b('Gesamt')}</a></li>
+                    <li><a href="#yd-tab-2" class="yd-tab">{__b('Dienstleister')}</a></li>
+                    <li><a href="#yd-tab-3" class="yd-tab">{__b('Privat / Firmen')}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <form method="post" action="/administration_stats_graphics">
+                    <table style="width:70%;" class="user-tab">
+                        <tr>
+                            <td width="25%">{__b('Jahr')}:
+                                <select name="year">
+                                    {foreach from=$years item=y}
+                                    <option {if $y eq $year}selected="selected"{/if}>{$y}</option>
+                                    {/foreach}
+                                </select>&nbsp;
+                            </td>
+                            <td width="25%">{__b('Woche')}:
+                                <select name="week">
+                                    {foreach from=$weeks item=w}
+                                    <option {if $w eq $week}selected="selected"{/if}>{$w}</option>
+                                    {/foreach}
+                                </select>&nbsp;
+                            </td>
+                            <td width="25%">{__b('Stadt')}:
+                                <select name="city">
+                                    <option value="">...</option>
+                                    {foreach from=$cities item=c}
+                                    <option value="{$c}" {if $c eq $city}selected="selected"{/if}>{$c}</option>
+                                    {/foreach}
+                                </select>&nbsp;
+                            </td>
+                            <td width="25%">
+                                <input type="submit" value="{__b('Anzeigen')}"/>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="yd-tab" id="yd-tab-1">
+        <div class="one-column-box">
+            <div class="item">
+                <div class="item-content">
+                    <div id="my-chart-container-1-1">{__b('Bitte warten...')}</div>
+                    <div id="my-chart-container-1-2">{__b('Bitte warten...')}</div>
+                    <div id="my-chart-container-1-3">{__b('Bitte warten...')}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="yd-tab" id="yd-tab-2">
+        <div class="one-column-box">
+            <div class="item">
+                <div class="item-content">
+                    <div id="my-chart-container-2-1">{__b('Bitte warten...')}</div>
+                    <div id="my-chart-container-2-2">{__b('Bitte warten...')}</div>
+                    <div id="my-chart-container-2-3">{__b('Bitte warten...')}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="yd-tab" id="yd-tab-3">
+        <div class="one-column-box">
+            <div class="item">
+                <div class="item-content">
+                    <div id="my-chart-container-3-1">{__b('Bitte warten...')}</div>
+                    <div id="my-chart-container-3-2">{__b('Bitte warten...')}</div>
+                    <div id="my-chart-container-3-3">{__b('Bitte warten...')}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{/block}

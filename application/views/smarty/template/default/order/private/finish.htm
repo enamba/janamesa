@@ -1,0 +1,81 @@
+{extends file='base.htm'}
+{block name="content"}
+
+{assign var=serviceCacheId value=$service->getId()}
+{include file='order/_includes/menu/ranges.htm' caching=1 cache_lifetime=86400 cache_id="ranges.$serviceCacheId"}
+    
+    <div id="yd-finish-content">
+        {assign var=orderData value=$order->getOrderData()}
+
+        <div class="yd-breadcrumbs-new">
+            <a href="/">{__('Startseite')}</a>
+            <a href="/{$order->getCityUrl()}">{__('Lieferservices in %s %s', $order->getLocation()->getPLz(), $order->getLocation()->getCity()->getCity())}</a>
+            <a href="/{$order->getServiceUrl()}">{__('Speisekarte %s', $service->getName())}</a>
+            <a class="active">{__('Bezahlmethode wählen')}</a>
+        </div>
+        
+        <form action="/order_private/finish" method="post" id="finishForm">
+
+            <div id="yd-sidebar">
+                
+                {include file="order/_includes/chat/supportchat.htm" city=$service->getCity()->getCity()}
+
+                {include file="order/_includes/sidebar/kind-switch.htm"}
+                
+                {include file="order/_includes/sidebar/cart-finish.htm"}
+				
+                {if $config->domain->base == 'janamesa.com.br'}<div class="yd-box br-box br-dark br-cart-finish-bottom">{/if}    
+
+                {if $config->newsletter->method == 'doubleoptin'}
+                <div class="yd-newsletter-selection yd-box">
+                    <div class="yd-box-title">Newsletter</div>
+                    <input id="yd-newsletter-selection" type="checkbox" name="newsletter" value="1" />
+                    <label for="yd-newsletter-selection">{__('Verbraucherinfos, Tipps und Gutscheine per E-Mail erhalten')}</label>
+                </div>
+                {else}
+                    <input type="hidden" name="newsletter" value="1" />
+                {/if}
+
+                {if $config->domain->base == 'lieferando.de'}
+                    <a href="#" id="yd-private-single-finish-bottom" class="yd-button-280 finish-button">{__('Jetzt kaufen')}</a>
+                {else}
+                    <a href="#" id="yd-private-single-finish-bottom" class="yd-button-280 finish-button">{__('Bestellung abschicken')}</a>
+                {/if}
+                    
+                {if $config->domain->base == 'janamesa.com.br'}
+                </div>
+                {include file="order/_includes/livechat.htm"}
+                {/if}
+                
+                {include file="order/_includes/sidebar/fidelity.htm" propose=false}
+            </div>
+
+            <div id="yd-ordering">
+
+                <div id="paymentcontent" {if !Yourdelivery_Helpers_Payment::showPayment($order)}class="hidden"{/if}>
+                    {include file='order/_includes/finish/payment.htm'}
+                </div>
+
+                {include file="order/_includes/finish/address.htm"}
+
+            </div>
+
+            <input type="hidden" name="finish" value="get me some food" />
+
+            {include file='order/_includes/form_order.htm'}
+
+        </form>
+    </div>
+    <div id="yd-finish-presuccess-content" class="hidden">
+        {include file='order/_includes/success/preprivate.htm'}
+    </div>
+    {include file='_cookies/sociomatic/finish.htm'}
+    {include file='_cookies/adlantic/finish.htm'}
+    
+    {include file='_cookies/monkeys/finish.htm'}
+    {include file='_cookies/masterpixel/orderflow.htm' uadomain=$domain_base step1=0 step2=0 step3=0 step4=1}
+    {include file='_cookies/nextPerformance/finish.htm'}
+    {if $domain_base == 'lieferando.de'}
+     {include file='_cookies/cadreon/finish.htm'}
+    {/if}
+{/block}

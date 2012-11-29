@@ -1,0 +1,39 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<ul class="be-tabs">
+    <li><a href="/administration_seo_links/crawler">{__b('Zurück')}</a></li>
+</ul>
+
+<form action="/administration_seo_links/blacklist" method="post">
+
+    <div class="one-column-box">
+        <!-- Blacklist -->
+        <div class="item">
+            <div class="item-head">{__b('Blacklist bearbeiten')}</div>
+            <div class="item-content">
+                <div>
+                    <table>
+                        <tr>
+                            <td><textarea name="blacklist" class="inp" style="width:100%;">{$blacklist}</textarea></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- submit -->
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" name="save" value="{__b('Speichern')}" class="button rund_set" />
+                <input type="submit" value="{__b('Übernehmen')}" class="button rund_set" />
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+
+</form>
+
+{/block}    

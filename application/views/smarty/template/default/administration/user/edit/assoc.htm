@@ -1,0 +1,104 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+{include file='administration/user/edit/_navigation.htm'}
+
+
+<div class="two-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Firmenzuordnung')}
+        </div>
+        <div class="item-content">
+            {if isset($employeeIn)}
+            <table class="user-tab">
+                <tr>
+                    <td width="15%">{__b('Firma')}</td>
+                    <td width="50%">
+                        <a href="/administration/companys/IDgrid/{$employeeIn->getId()}">{$employeeIn->getName()} {if !is_null($customer->getEmployee()) && !is_null($customer->getEmployee()->getBudget())}({__b('Budget')}: {$customer->getEmployee()->getBudget()->getName()}){/if} <a href="/administration_user_edit/company/userid/{$customer->getId()}/company/{$employeeIn->getId()}/delcomp/1"><img src="{$domain_static}/images/yd-backend/del-cat.gif" alt="{__b('Löschen')}"/></a>
+                    </td>
+                    <td width="20%">
+                        {if $customer->isAdmin($employeeIn)}
+                        <a href="/administration_user_edit/company/userid/{$customer->getId()}/company/{$employeeIn->getId()}/delcompadmin/1">&nbsp;{__b('[Admin Rechte entfernen]')}</a>
+                        {else}
+                        <a href="/administration_user_edit/company/userid/{$customer->getId()}/company/{$employeeIn->getId()}/addcompadmin/1">&nbsp;{__b('[Admin Rechte zuweisen]')}</a>
+                        {/if}
+                    </td>
+                    <td width="15%"></td>
+                </tr>
+            </table>
+            {else}
+            <form action="/administration_user_edit/company" method="post">
+                <table class="user-tab">
+                    <tr>
+                    <input type="hidden" name="userid" value="{$customer->getId()}"/>
+                    <td width="40%">{__b('Firma')}:<br/>
+                        <select name="company" style="width:250px;" id="yd-company-dropdown">
+                            <option value="-1"></option>
+                            {foreach from=$compIds item=ci}
+                            <option value="{$ci.id}">{$ci.name} (#{$ci.id})</option>
+                            {/foreach}
+                        </select>
+                    </td>
+                    <td width="40%" id="yd-company-budgets">
+                    </td>
+                    <td width="20%">
+                        <input type="checkbox" name="company_admin" value="1" />&nbsp;{__b('als Administrator')}
+                    </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <input name="adddcompany" value="{__b('Hinzufügen')}" type="submit" class="button"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            {/if}
+        </div>
+    </div>    
+
+    <div class="item">
+        <div class="item-head">
+            {__b('Restaurantzuordnung')}
+        </div>
+        <div class="item-content">
+            <form action="/administration_user_edit/restaurant" method="post">
+                <input type="hidden" name="userid" value="{$customer->getId()}"/>
+                <table>
+                    <tr>
+                        <th width="80%">{__b('Restaurants')}</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div><input class="yd-check-all-checkboxes" type="checkbox" value="1"/> {__b('Alle')}</div><br/>
+                            <div id="yd-checkboxes-box">
+                                {foreach from=$restIds item=ri}
+                                <input type="checkbox" name="restCheckbox[{$ri.id}]" class="yd-checkbox"> {$ri.name} ({$ri.street},{$ri.plz})  #ID:{$ri.id}<br/>
+                                {/foreach}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input name="assignadmin" value="{__b('Zuweisen')}" type="submit" class="button"/></td>
+                    </tr>
+                </table>
+                <table>
+                    {foreach from=$restIds item=ri}
+                    <tr>
+                        {foreach from=$customer->getRights('r') item=c key=k}
+                        {if $ri.id==$c}
+                        <td width="50%"><a href="/administration_service_edit/id/{$ri.id}">{$ri.name}</a></td>
+                        <td>
+                            <a href="/administration_user_edit/restaurant/userid/{$customer->getId()}/delrest/{$c}"><img src="{$domain_static}/images/yd-backend/del-cat.gif" alt="{__b('Löschen')}"/></a>&nbsp;
+                            <a href="/administration/servicelogin/id/{$c}">[Login]</a>
+                        </td>
+                        {/if}
+                        {/foreach}
+                    </tr>
+                    {/foreach}
+                </table>
+            </form>
+        </div>
+    </div>    
+</div>
+
+{/block}

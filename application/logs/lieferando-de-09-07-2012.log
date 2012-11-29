@@ -1,0 +1,480 @@
+2012-07-09T06:02:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/login.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T06:02:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/login.htm 
+2012-07-09T06:02:15-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Successfully loggged in admin #Supporter Jens Naie (345) 
+2012-07-09T06:02:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/dashboard.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T06:02:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/dashboard.htm 
+2012-07-09T06:02:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/users.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T06:02:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/users.htm 
+2012-07-09T06:02:35-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/users.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T06:02:35-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/users.htm 
+2012-07-09T06:02:40-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/user/edit/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T06:02:40-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/user/edit/index.htm 
+2012-07-09T06:02:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/user/edit/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T06:02:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/user/edit/index.htm 
+2012-07-09T07:12:12-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/users.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:12:12-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/users.htm 
+2012-07-09T07:13:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/user/edit/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:13:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/user/edit/index.htm 
+2012-07-09T07:13:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/user/edit/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:13:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/user/edit/index.htm 
+2012-07-09T07:14:39-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/users.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:14:39-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/users.htm 
+2012-07-09T07:14:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/user/edit/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:14:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/user/edit/index.htm 
+2012-07-09T07:14:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/user/edit/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:14:53-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/user/edit/index.htm 
+2012-07-09T07:15:29-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/user/edit/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:15:29-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/user/edit/index.htm 
+2012-07-09T07:16:07-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing order courier pdf for order 272 does not exists yet, generating and returning 
+2012-07-09T07:16:07-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/order/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:16:07-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/order/index.htm 
+2012-07-09T07:17:07-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/user/edit/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:17:07-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/user/edit/index.htm 
+2012-07-09T07:19:11-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/user/edit/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:19:11-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/user/edit/index.htm 
+2012-07-09T07:19:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template administration/user/edit/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:19:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/user/edit/index.htm 
+2012-07-09T07:37:41-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PAGE NOT FOUND: /contact #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-07-09T07:37:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/notfound.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:37:41-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/notfound.htm 
+2012-07-09T07:37:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:37:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-09T07:37:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-09T07:38:47-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PAGE NOT FOUND: /contact #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-07-09T07:38:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/notfound.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:38:47-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/notfound.htm 
+2012-07-09T07:44:31-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PAGE NOT FOUND: /contact #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-07-09T07:44:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/notfound.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:44:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/notfound.htm 
+2012-07-09T07:44:37-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PAGE NOT FOUND: /contact #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-07-09T07:44:37-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/notfound.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:44:37-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/notfound.htm 
+2012-07-09T07:47:35-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PAGE NOT FOUND: /contact #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-07-09T07:47:35-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/notfound.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:47:35-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/notfound.htm 
+2012-07-09T07:52:57-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PAGE NOT FOUND: /contact #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-07-09T07:52:57-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/notfound.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:52:57-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/notfound.htm 
+2012-07-09T07:53:10-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PAGE NOT FOUND: /static/contact #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-07-09T07:53:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/notfound.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:53:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/notfound.htm 
+2012-07-09T07:53:43-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PAGE NOT FOUND: /contact #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-07-09T07:53:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/notfound.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T07:53:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/notfound.htm 
+2012-07-09T10:38:05-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PAGE NOT FOUND: /contact #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-07-09T10:38:05-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/notfound.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T10:38:05-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/notfound.htm 
+2012-07-09T10:40:48-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PAGE NOT FOUND: /online-pizza #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-07-09T10:40:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/notfound.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T10:40:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/notfound.htm 
+2012-07-09T13:45:22-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template index/index.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T13:45:22-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template index/index.htm 
+2012-07-09T13:45:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-07-09T13:45:42-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing customer #468 Jens Naie already a facebook user - facebookId 690363597 
+2012-07-09T13:45:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing updating model Default_Model_Base #468 with modified data :: Array(    [title] => Herr/Frau    [name] => Naie    [prename] => Jens    [email] => jonz@kybernaut.de    [password] => 432d75ea509a2523e103d9c0d4857cd2    [lang] => de    [sex] => n    [tel] =>     [privmail] =>     [autologin] => 0    [start] => 1    [lastlogin] => 2012-07-09 13:45:42    [countLogin] => 10    [deleted] => 0    [permanentDiscountId] =>     [ktoName] =>     [ktoNr] =>     [ktoBlz] =>     [updated] => 2012-07-09 13:45:42    [birthday] => 0000-00-00    [source] =>     [addition] =>     [facebookId] => 690363597    [profileImage] =>     [nickname] =>     [whitelist] => 0    [anrede] => Senhor/senhora) 
+2012-07-09T13:45:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-09T13:45:42-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing User  successfully logged in 
+2012-07-09T13:45:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-09T13:45:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-07-09T13:45:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 5 - start 0) for customer #468 jonz@kybernaut.de - unratedOrderCount: 0 
+2012-07-09T13:45:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-07-09T13:45:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-07-09T13:45:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: could not store for id:  open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-09T13:45:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-09T13:45:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-09T13:45:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-09T13:45:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template user/locations.htm 
+2012-07-09T13:47:06-03:00 WARN (4): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing could not validate form Yourdelivery_Form_Order_Start_Citystreet with data Array
+(
+    [city] => 
+    [street] => Test Rua
+    [hausnr] => 12
+)
+form input field "city" failed with message: Value is required and can't be emptyform input field "city" failed with message: No record matching  was foundform input field "street" failed with message: No record matching Test Rua was found 
+2012-07-09T13:47:06-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing LOCATION CREATE: Yourdelivery_Form_Order_Start_Citystreet is not valid #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Request/User/LocationController.php:86]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Request/User/LocationController.php:86]
+#3 createAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-07-09T13:47:06-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Location with id #488 new data :: Array(    [street] => Test Rua    [hausnr] => 12    [cityId] => 32020    [plz] => 01451-001    [tel] => (00) 5511-1111    [companyName] =>     [etage] =>     [comment] =>     [customerId] => 468    [primary] => 1) 
+2012-07-09T13:47:06-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/user/location/create.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T13:47:06-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/user/location/create.htm 
+2012-07-09T13:47:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-07-09T13:47:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 5 - start 0) for customer #468 jonz@kybernaut.de - unratedOrderCount: 0 
+2012-07-09T13:47:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-07-09T13:47:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-07-09T13:47:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: could not store for id:  open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-09T13:47:19-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-09T13:47:24-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 19 online and 3 offline services in #32020 
+2012-07-09T13:47:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/service.htm 
+2012-07-09T13:47:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-sao-paulo-01451-001.html 
+2012-07-09T13:47:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/lastorder.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T13:47:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/lastorder.htm 
+2012-07-09T13:47:28-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing don't show ratingLink for order #820, because state <= 0 - state = 0 
+2012-07-09T13:47:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/service/preorder.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T13:47:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/service/preorder.htm 
+2012-07-09T13:47:43-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_service/preorder/type/rest.html 
+2012-07-09T13:47:45-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T13:47:45-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-07-09T13:47:48-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-pizzaria-portinari-ii-sao-paulo.html 
+2012-07-09T13:48:05-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing appending fallback verbose information to order via cityId 32020 
+2012-07-09T13:48:06-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/private/finish.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T13:48:06-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/finish.htm 
+2012-07-09T13:48:09-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/service/openingtimeday.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T13:48:09-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/service/openingtimeday.htm 
+2012-07-09T13:48:20-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing appending fallback verbose information to order via cityId 32020 
+2012-07-09T13:48:20-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing setting deliver time to 1341867600 based on day: 09.07.2012 time: 18:00 
+2012-07-09T13:48:20-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing service #47 is open due to  openings 18:00 - 23:00 
+2012-07-09T13:48:20-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Order_Private with id #821 new data :: Array(    [customerId] => 468    [nr] => 57924991    [time] => 2012-07-09 13:48:20    [deliverTime] => 2012-07-09 18:00:00    [mode] => rest    [kind] => priv    [ident] => WoVK0Y14xiGaj3ardQQX    [domain] => www.yourdelivery.local    [locationId] => 488    [cpf] =>     [serviceId] => 47    [restaurantId] => 47    [floor] => 0    [lift] =>     [currentPayment] => bar    [payment] => bar    [change] => 0    [total] => 3800    [courier] =>     [courierCost] => 0    [serviceDeliverCost] => 0    [charge] => 0    [contract] => 1    [ipAddr] => 127.0.0.1) 
+2012-07-09T13:48:20-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Could not finish order: Could not store order data: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'janamesa.com.br.orders_provission' doesn't exist#0 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('DESCRIBE `order...', Array)
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Mysql.php(156): Zend_Db_Adapter_Pdo_Abstract->query('DESCRIBE `order...')
+#4 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(823): Zend_Db_Adapter_Pdo_Mysql->describeTable('orders_provissi...', NULL)
+#5 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(845): Zend_Db_Table_Abstract->_setupMetadata()
+#6 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(1408): Zend_Db_Table_Abstract->_getCols()
+#7 /home/ydadmin/htdocs/lieferando/application/models/DbTable/Order/Provission.php(43): Zend_Db_Table_Abstract->createRow(Array)
+#8 /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php(1191): Yourdelivery_Model_DbTable_Order_Provission->create(Object(Yourdelivery_Model_Order_Private), false)
+#9 /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php(1069): Yourdelivery_Model_Order_Abstract->postFinish()
+#10 /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php(770): Yourdelivery_Model_Order_Abstract->finish()
+#11 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): Order_BasisController->finishAction()
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('finishAction')
+#13 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#14 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#15 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#16 /home/ydadmin/htdocs/lieferando/public/index.php(111): Zend_Application->run()
+#17 {main} #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:772]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:772]
+#3 finishAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-07-09T13:48:20-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/throw.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T13:48:20-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/throw.htm 
+2012-07-09T14:02:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/service/openingtimeday.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T14:02:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/service/openingtimeday.htm 
+2012-07-09T14:02:42-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing appending fallback verbose information to order via cityId 32020 
+2012-07-09T14:02:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing setting deliver time to 1341867600 based on day: 09.07.2012 time: 18:00 
+2012-07-09T14:02:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing service #47 is open due to  openings 18:00 - 23:00 
+2012-07-09T14:02:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Order_Private with id #822 new data :: Array(    [customerId] => 468    [nr] => 34043964    [time] => 2012-07-09 14:02:42    [deliverTime] => 2012-07-09 18:00:00    [mode] => rest    [kind] => priv    [ident] => vkbhKoLf12JvGldimAJa    [domain] => www.yourdelivery.local    [locationId] => 488    [cpf] =>     [serviceId] => 47    [restaurantId] => 47    [floor] => 0    [lift] =>     [currentPayment] => bar    [payment] => bar    [change] => 0    [total] => 3800    [courier] =>     [courierCost] => 0    [serviceDeliverCost] => 0    [charge] => 0    [contract] => 1    [ipAddr] => 127.0.0.1) 
+2012-07-09T14:02:42-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Could not finish order: Could not store order data: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'janamesa.com.br.orders_provission' doesn't exist#0 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('DESCRIBE `order...', Array)
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Mysql.php(156): Zend_Db_Adapter_Pdo_Abstract->query('DESCRIBE `order...')
+#4 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(823): Zend_Db_Adapter_Pdo_Mysql->describeTable('orders_provissi...', NULL)
+#5 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(845): Zend_Db_Table_Abstract->_setupMetadata()
+#6 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(1408): Zend_Db_Table_Abstract->_getCols()
+#7 /home/ydadmin/htdocs/lieferando/application/models/DbTable/Order/Provission.php(43): Zend_Db_Table_Abstract->createRow(Array)
+#8 /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php(1191): Yourdelivery_Model_DbTable_Order_Provission->create(Object(Yourdelivery_Model_Order_Private), false)
+#9 /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php(1069): Yourdelivery_Model_Order_Abstract->postFinish()
+#10 /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php(770): Yourdelivery_Model_Order_Abstract->finish()
+#11 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): Order_BasisController->finishAction()
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('finishAction')
+#13 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#14 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#15 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#16 /home/ydadmin/htdocs/lieferando/public/index.php(111): Zend_Application->run()
+#17 {main} #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:772]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:772]
+#3 finishAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-07-09T14:02:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/throw.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T14:02:42-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/throw.htm 
+2012-07-09T14:02:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-09T14:02:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-09T14:02:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-09T14:02:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_5_0customer468 
+2012-07-09T14:02:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_10_0customer468 
+2012-07-09T14:02:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_25_0customer468 
+2012-07-09T14:02:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_50_0customer468 
+2012-07-09T14:02:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: rated_100_0customer468 
+2012-07-09T14:02:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_5_0customer468 
+2012-07-09T14:02:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_10_0customer468 
+2012-07-09T14:02:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_25_0customer468 
+2012-07-09T14:02:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_50_0customer468 
+2012-07-09T14:02:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER - could not clear cache for limit 1 id: unrated_100_0customer468 
+2012-07-09T14:02:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for transactionsfidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-09T14:02:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open1fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-09T14:02:49-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing CUSTOMER FIDELITY - could not clear cache for open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-09T14:02:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 0 
+2012-07-09T14:02:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value  
+2012-07-09T14:02:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/throw.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T14:02:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/throw.htm 
+2012-07-09T14:03:10-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing customer #468 Jens Naie already a facebook user - facebookId 690363597 
+2012-07-09T14:03:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing updating model Default_Model_Base #468 with modified data :: Array(    [title] => Herr/Frau    [name] => Naie    [prename] => Jens    [email] => jonz@kybernaut.de    [password] => 432d75ea509a2523e103d9c0d4857cd2    [lang] => de    [sex] => n    [tel] =>     [privmail] =>     [autologin] => 0    [start] => 1    [lastlogin] => 2012-07-09 14:03:10    [countLogin] => 11    [deleted] => 0    [permanentDiscountId] =>     [ktoName] =>     [ktoNr] =>     [ktoBlz] =>     [updated] => 2012-07-09 14:03:10    [birthday] => 0000-00-00    [source] =>     [addition] =>     [facebookId] => 690363597    [profileImage] =>     [nickname] =>     [whitelist] => 0    [anrede] => Senhor/senhora) 
+2012-07-09T14:03:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-09T14:03:10-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing User  successfully logged in 
+2012-07-09T14:03:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PIWIK: tracking customer variable customerId at value 468 
+2012-07-09T14:03:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-07-09T14:03:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 5 - start 0) for customer #468 jonz@kybernaut.de - unratedOrderCount: 0 
+2012-07-09T14:03:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-07-09T14:03:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-07-09T14:03:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: could not store for id:  open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-09T14:03:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-09T14:03:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/lastorder.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T14:03:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/lastorder.htm 
+2012-07-09T14:03:16-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing don't show ratingLink for order #820, because state <= 0 - state = 0 
+2012-07-09T14:03:20-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T14:03:20-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-07-09T14:03:21-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entega-arabie-sao-paulo.html 
+2012-07-09T14:03:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/serviceinfo.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T14:03:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-07-09T14:03:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/serviceinfo/id/314.html 
+2012-07-09T14:03:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/basis/menu.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T14:03:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-07-09T14:03:37-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-delicias-congelados-sao-paulo.html 
+2012-07-09T14:03:51-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/callmeal.htm 
+2012-07-09T14:03:52-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/callmeal/id/31816/size/3836/update/false.html 
+2012-07-09T14:04:22-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing appending fallback verbose information to order via cityId 32020 
+2012-07-09T14:04:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/private/finish.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T14:04:23-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/finish.htm 
+2012-07-09T14:04:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/service/openingtimeday.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T14:04:26-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/service/openingtimeday.htm 
+2012-07-09T14:04:35-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing appending fallback verbose information to order via cityId 32020 
+2012-07-09T14:04:36-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing switching back to bar, no valid payment selected 
+2012-07-09T14:04:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing setting deliver time to 1341853476 based on day: 09.07.2012 time: imediatamente 
+2012-07-09T14:04:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing service #314 is open due to  openings 10:00 - 19:00 
+2012-07-09T14:04:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Order_Private with id #823 new data :: Array(    [customerId] => 468    [nr] => 90831419    [time] => 2012-07-09 14:04:36    [deliverTime] => 2012-07-09 14:04:36    [mode] => rest    [kind] => priv    [ident] => dptqTztuhHa202lhqlDU    [domain] => www.yourdelivery.local    [locationId] => 488    [cpf] =>     [serviceId] => 314    [restaurantId] => 314    [floor] => 0    [lift] =>     [currentPayment] => bar    [payment] => bar    [paymentAddition] => creditCardAtHome    [change] => 0    [total] => 8920    [courier] =>     [courierCost] => 0    [serviceDeliverCost] => 1000    [charge] => 0    [contract] => 1    [ipAddr] => 127.0.0.1) 
+2012-07-09T14:04:36-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Could not finish order: Could not store order data: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'janamesa.com.br.orders_provission' doesn't exist#0 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('DESCRIBE `order...', Array)
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Mysql.php(156): Zend_Db_Adapter_Pdo_Abstract->query('DESCRIBE `order...')
+#4 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(823): Zend_Db_Adapter_Pdo_Mysql->describeTable('orders_provissi...', NULL)
+#5 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(845): Zend_Db_Table_Abstract->_setupMetadata()
+#6 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(1408): Zend_Db_Table_Abstract->_getCols()
+#7 /home/ydadmin/htdocs/lieferando/application/models/DbTable/Order/Provission.php(43): Zend_Db_Table_Abstract->createRow(Array)
+#8 /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php(1191): Yourdelivery_Model_DbTable_Order_Provission->create(Object(Yourdelivery_Model_Order_Private), false)
+#9 /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php(1069): Yourdelivery_Model_Order_Abstract->postFinish()
+#10 /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php(770): Yourdelivery_Model_Order_Abstract->finish()
+#11 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): Order_BasisController->finishAction()
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('finishAction')
+#13 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#14 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#15 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#16 /home/ydadmin/htdocs/lieferando/public/index.php(111): Zend_Application->run()
+#17 {main} #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:772]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:772]
+#3 finishAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-07-09T14:04:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/throw.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T14:04:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/throw.htm 
+2012-07-09T14:09:03-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/service/openingtimeday.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T14:09:03-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/service/openingtimeday.htm 
+2012-07-09T14:09:08-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing appending fallback verbose information to order via cityId 32020 
+2012-07-09T14:09:09-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing switching back to bar, no valid payment selected 
+2012-07-09T14:09:09-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing setting deliver time to 1341853749 based on day: 09.07.2012 time: imediatamente 
+2012-07-09T14:09:09-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing service #314 is open due to  openings 10:00 - 19:00 
+2012-07-09T14:09:09-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Order_Private with id #824 new data :: Array(    [customerId] => 468    [nr] => 64737268    [time] => 2012-07-09 14:09:09    [deliverTime] => 2012-07-09 14:09:09    [mode] => rest    [kind] => priv    [ident] => SyWKmSxchQIKvXor3RI0    [domain] => www.yourdelivery.local    [locationId] => 488    [cpf] =>     [serviceId] => 314    [restaurantId] => 314    [floor] => 0    [lift] =>     [currentPayment] => bar    [payment] => bar    [paymentAddition] => creditCardAtHome    [change] => 0    [total] => 8920    [courier] =>     [courierCost] => 0    [serviceDeliverCost] => 1000    [charge] => 0    [contract] => 1    [ipAddr] => 127.0.0.1) 
+2012-07-09T14:09:09-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Could not finish order: Could not store order data: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'janamesa.com.br.orders_provission' doesn't exist#0 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('DESCRIBE `order...', Array)
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Mysql.php(156): Zend_Db_Adapter_Pdo_Abstract->query('DESCRIBE `order...')
+#4 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(823): Zend_Db_Adapter_Pdo_Mysql->describeTable('orders_provissi...', NULL)
+#5 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(845): Zend_Db_Table_Abstract->_setupMetadata()
+#6 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(1408): Zend_Db_Table_Abstract->_getCols()
+#7 /home/ydadmin/htdocs/lieferando/application/models/DbTable/Order/Provission.php(43): Zend_Db_Table_Abstract->createRow(Array)
+#8 /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php(1191): Yourdelivery_Model_DbTable_Order_Provission->create(Object(Yourdelivery_Model_Order_Private), false)
+#9 /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php(1069): Yourdelivery_Model_Order_Abstract->postFinish()
+#10 /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php(770): Yourdelivery_Model_Order_Abstract->finish()
+#11 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): Order_BasisController->finishAction()
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('finishAction')
+#13 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#14 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#15 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#16 /home/ydadmin/htdocs/lieferando/public/index.php(111): Zend_Application->run()
+#17 {main} #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:772]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:772]
+#3 finishAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-07-09T14:09:09-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/throw.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T14:09:09-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/throw.htm 
+2012-07-09T14:13:03-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/start.htm 
+2012-07-09T14:13:03-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing search UNRATED ORDERS (limit 5 - start 0) for customer #468 jonz@kybernaut.de - unratedOrderCount: 0 
+2012-07-09T14:13:03-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 5 points for action rate_high 
+2012-07-09T14:13:03-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing found 8 points for action accountimage 
+2012-07-09T14:13:03-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: could not store for id:  open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-07-09T14:13:03-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-07-09T14:13:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/order/lastorder.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T14:13:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/lastorder.htm 
+2012-07-09T14:13:10-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing don't show ratingLink for order #820, because state <= 0 - state = 0 
+2012-07-09T14:13:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/callmeal.htm 
+2012-07-09T14:13:24-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/callmeal/id/7819/size/1120/update/false.html 
+2012-07-09T14:13:31-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing appending fallback verbose information to order via cityId 32020 
+2012-07-09T14:13:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template order/private/finish.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T14:13:32-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/private/finish.htm 
+2012-07-09T14:13:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template request/service/openingtimeday.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T14:13:34-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/service/openingtimeday.htm 
+2012-07-09T14:13:49-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing appending fallback verbose information to order via cityId 32020 
+2012-07-09T14:13:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing setting deliver time to 1341854030 based on day: 09.07.2012 time: imediatamente 
+2012-07-09T14:13:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing service #87 is open due to  openings 11:45 - 14:15 
+2012-07-09T14:13:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Order_Private with id #825 new data :: Array(    [customerId] => 468    [nr] => 64686216    [time] => 2012-07-09 14:13:50    [deliverTime] => 2012-07-09 14:13:50    [mode] => rest    [kind] => priv    [ident] => NZgffRnsYiSKiGh4ZHzD    [domain] => www.yourdelivery.local    [locationId] => 488    [cpf] =>     [serviceId] => 87    [restaurantId] => 87    [floor] => 0    [lift] =>     [currentPayment] => bar    [payment] => bar    [change] => 0    [total] => 23400    [courier] =>     [courierCost] => 0    [serviceDeliverCost] => 390    [charge] => 0    [contract] => 1    [ipAddr] => 127.0.0.1) 
+2012-07-09T14:13:50-03:00 CRIT (2): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Could not finish order: Could not store order data: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'janamesa.com.br.orders_provission' doesn't exist#0 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('DESCRIBE `order...', Array)
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Adapter/Pdo/Mysql.php(156): Zend_Db_Adapter_Pdo_Abstract->query('DESCRIBE `order...')
+#4 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(823): Zend_Db_Adapter_Pdo_Mysql->describeTable('orders_provissi...', NULL)
+#5 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(845): Zend_Db_Table_Abstract->_setupMetadata()
+#6 /home/ydadmin/htdocs/lieferando/library/Zend/Db/Table/Abstract.php(1408): Zend_Db_Table_Abstract->_getCols()
+#7 /home/ydadmin/htdocs/lieferando/application/models/DbTable/Order/Provission.php(43): Zend_Db_Table_Abstract->createRow(Array)
+#8 /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php(1191): Yourdelivery_Model_DbTable_Order_Provission->create(Object(Yourdelivery_Model_Order_Private), false)
+#9 /home/ydadmin/htdocs/lieferando/application/models/Order/Abstract.php(1069): Yourdelivery_Model_Order_Abstract->postFinish()
+#10 /home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php(770): Yourdelivery_Model_Order_Abstract->finish()
+#11 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php(513): Order_BasisController->finishAction()
+#12 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php(289): Zend_Controller_Action->dispatch('finishAction')
+#13 /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#14 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#15 /home/ydadmin/htdocs/lieferando/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#16 /home/ydadmin/htdocs/lieferando/public/index.php(111): Zend_Application->run()
+#17 {main} #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:772]
+#2 crit() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Order/BasisController.php:772]
+#3 finishAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-07-09T14:13:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/throw.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T14:13:50-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/throw.htm 
+2012-07-09T14:16:31-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PAGE NOT FOUND: /delivery-jardins #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-07-09T14:16:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/notfound.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T14:16:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/notfound.htm 
+2012-07-09T14:16:36-03:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PAGE NOT FOUND: /delivery-jardins-sp #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:111]
+
+2012-07-09T14:16:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: did not find template error/notfound.htm in janamesa.com.br layout, switching successfully back to default 
+2012-07-09T14:16:36-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template error/notfound.htm 

@@ -1,0 +1,148 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<div id="yd-admin-backend-wait" style="display:none;"><img src="{$domain_static}/images/yd-backend/yd-back-load.gif" /></div>
+
+<form action="/administration_user/create" method="post">
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Benutzerinformationen')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab" width="100%">
+                        <tr>
+                            <td width="30%">{__b('Vorname')}:</td>
+                            <td width="70%"><input type="text" id="prename" name="prename" class="rund_set text" value="{$p.prename}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Nachname')}:</td>
+                            <td><input type="text" name="name" id="name" class="rund_set text" value="{$p.name}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Geschlecht')}</td>
+                            <td>
+                                <select class="rund_set text" name="sex">
+                                    <option value="n"></option>
+                                    <option value="w">{__b('weiblich')}</option>
+                                    <option value="m">{__b('männlich')}</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Geburtstag')}</td>
+                            <td><input type="text" name="birthday" value=""/> (YYYY-MM-DD)</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Passwort')}</td>
+                            <td colspan="2"><input type="text" name="password" id="password" class="rund_set text "/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('eMail')}:</td>
+                            <td><input type="text" name="email" class="rund_set text" value="{$p.email}"/> *</td>
+                        </tr>
+                        <tr colspan="2">
+                            <td>{__b('Telefon')}:</td>
+                            <td><input type="text" name="tel" id="tel" class="rund_set text" value="{$p.tel}"/></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+                {__b('Adressdaten')}
+            </div>
+            <div class="item-content">
+                <table class="user-tab" width="100%">
+                    <tr>
+                        <td width="30%">{__b('Straße')}:</td>
+                        <td width="70%"><input type="text" name="street" id="street" class="rund_set text" value="{$p.street}"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('HausNr')}:</td>
+                        <td><input type="text" name="hausnr" id="hausnr" class="rund_set text" value="{$p.hausnr}"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('PLZ:')}</td>
+                        <td>
+                            {if strpos($config->domain->base, "janamesa")!==false}
+                                <input type="text" name="plz"/> *
+                            {else}
+                                {include file='administration/city_autocomplete.htm'} *
+                            {/if}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Hinweis')}</td>
+                        <td><input type="text" name="comment" id="comment" class="rund_set text" value="{$p.comment}"/></td>
+                    </tr>
+                </table>
+                <br /><br /><br />
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Zusätzliche Informationen')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab" width="100%">
+                        <tr>
+                            <td width="15%">{__b('Firma')}</td>
+                            <td width="30%">
+                                <select name="company" id="yd-company-dropdown">
+                                    <option value="" selected></option>
+                                    {foreach from=$compIds item=ci}
+                                    <option value="{$ci.id}" {if $p.company==$ci.id}selected{/if}>{$ci.name}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                            <td width="15%">
+                                <input type="checkbox" name="company_admin" value="1" />&nbsp;{__b('als Administrator')}
+                            </td>
+                            <td width="40%" id="yd-company-budgets">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Permanenter Rabatt')}:</td>
+                            <td colspan="3">
+                                <select name="discount">
+                                    <option value="-1" selected></option>
+                                    {foreach from=$rabattIds item=ri}
+                                    <option value="{$ri.id}" {if $p.discount==$ri.id}selected{/if}>{$ri.name} ({$ri.code}/{$ri.rabatt} %)</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Restaurantadmin')}</td>
+                            <td colspan="3">
+                                <select name="service_admin">
+                                    <option value="-1" selected></option>
+                                    {foreach from=$restIds item=ri}
+                                        <option value="{$ri.id}" {if $p.service_admin==$ri.id}selected{/if}>{$ri.name} ({$ri.street},{$ri.plz})</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set"/>
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button"/>
+            </div>
+        </div>
+    </div>
+
+</form>
+{/block}

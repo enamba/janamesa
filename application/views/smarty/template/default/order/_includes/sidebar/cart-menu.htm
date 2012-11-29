@@ -1,0 +1,56 @@
+<div class="hidden" id="yd-lang-size">{__('Größe: %s')}</div>
+<div class="hidden red" id="yd-lang-exmincost">{__('nicht im Mindestbestellwert')}</div>
+<div class="hidden" id="yd-lang-every">{__('je %s €')}</div>
+<div class="hidden" id="yd-lang-from-currency">{__('ab %s €')}</div>
+
+
+<div class="yd-box br-box">
+    <div class="yd-box-title yd-bucket-title" id="yd-expand-card-head">
+        {__('Einkaufswagen')} <a href="#" id="yd-clear-bucket" class="hidden" title="{__('Einkaufswagen leeren')}"></a>
+
+        <img src="{$domain_static}/images/yd-background/yd-load-small.gif" alt="{__('Bitte warten')}" class="yd-loading" id="yd-loading-card" />
+    </div>
+    <div class="yd-box-body">
+        <div id="zettel">
+            <ul id="yd-shopping-positions" class="yd-card-items">
+                <li></li>
+            </ul>
+
+            <ul id="emptycart">
+                <li class="yd-shopping-empty">
+                    {__('Der Einkaufswagen ist leer.')}
+                </li>
+            </ul>
+
+            <ul id="delivercost">
+                <li>
+                    <em>{if is_object($service) && $service->isAvanti()}{__('Energiekostenaufschlag:')}{else}{__('Lieferkosten:')}{/if}</em> <span class="yd-deliver-cost">{__('%s €', 0|inttoprice)}</span>
+                </li>
+            </ul>
+
+            <ul id="minamount">
+                <li>
+                    <div>
+                        {__('Mindestbestellwert: ')} <strong class="yd-min-amount">{__('%s €', 0|inttoprice)}</strong>
+                    </div>
+                    <a id="yd-minamount-toogle-in"></a>
+                    <em id="yd-minamount-toogle-out" class="hidden">
+                        {__('Im Mindestbestellwert sind nicht alle Preise enthalten. Die Lieferkosten, Getränke, Desserts und Vorspeisen sind eventuell nicht inbegriffen.')}
+                    </em>
+                </li>
+            </ul>
+
+        </div>
+        <ul class="br-total">
+            <li class="yd-shopping-endprice">
+                <em>{__('Aktueller Bestellwert:')}</em> <strong class="yd-open-amount">{__('%s €', 0|inttoprice)}</strong>
+            </li>
+        </ul>
+    </div>
+
+    <a href="#" class="yd-button-250 yd-finish-order yd-gray-button">
+        {__('Bezahlmethode wählen')}
+        <strong class="mincosttooltip hidden">{__('Mindestbestellwert noch nicht erreicht!')}</strong>
+    </a>
+
+</div>

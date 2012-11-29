@@ -1,0 +1,3 @@
+{if $config->domain->base == 'lieferando.de'}
+<script type="text/javascript" src="http://nxtck.com/act.php?zid=30716;id={$order->getId()};mt={intToPrice($order->getBucketTotal() + $order->getDeliverCost() - $order->getDiscountAmount() - $order->getTax(), 2, ',')}"></script>
+{/if}

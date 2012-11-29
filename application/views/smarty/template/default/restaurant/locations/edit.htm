@@ -1,0 +1,59 @@
+{extends file="restaurant/base.htm"}
+{block name="content"}
+
+<form action="/restaurant_locations/edit/id/{$location->getId()}" method="post" name="form" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="{$location->getId()}"/>
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                Liefergebiet #{$location->getId()}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="10%">Plz:</td>
+                            <td><b>{$location->getPlz()} ({$city})</b></td>
+                        </tr>
+                        <tr>
+                            <td>Lieferzeit:</td>
+                            <td><input type="text" name="deliverTime" value="{$location->getDeliverTime()/60}"/> Minuten *</td>
+                        </tr>
+                        <tr>
+                            <td>Mindestbestellwert:</td>
+                            <td><input type="text" name="mincost" value="{intToPrice($location->getMincost())}"/> €</td>
+                        </tr>
+                        <tr>
+                            <td>Lieferkosten:</td>
+                            <td><input type="text" name="delcost" value="{intToPrice($location->getDelcost())}"/> €</td>
+                        </tr>
+                        <tr>
+                            <td>Keine Lieferkosten ab:</td>
+                            <td><input type="text" name="noDeliverCostAbove" value="{intToPrice($location->getNoDeliverCostAbove())}"/> €</td>
+                        </tr>
+                        <tr>
+                            <td>Kommentar:</td>
+                            <td><textarea rows="3" name="comment" class="inp">{$location->getComment()}</textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Status:</td>
+                            <td>
+                                <select name="status">
+                                    <option value="1" {if $location->getStatus() == 1}selected{/if}>Online</option>
+                                    <option value="0" {if $location->getStatus() == 0}selected{/if}>Offline</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" name="cancel" value="Abbrechen"/>
+                <input type="submit" value="Bestätigen"/>
+            </div>
+        </div>
+    </div>
+</form>
+{/block}    

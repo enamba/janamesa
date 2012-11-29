@@ -1,0 +1,111 @@
+
+{extends file='user/_base.htm'}
+
+{block name="content"}
+
+<div class="yd-profile yd-clearfix">
+
+    {include file='user/_header.htm' active=1 active_title=__('Meine Daten')}
+
+    <div class="yd-profile-body settings">
+
+        <h1>{__('Profilbild ändern')}</h1>
+
+        {include file='user/_include/profileimage.htm' redirect='settings'}
+
+        <form action="/user/settings" class="yd-profile-form yd-clearfix fm yd-validation" method="post" id="yd-user-settings-form" enctype="multipart/form-data">
+
+            <h1>
+                <i>{__('Um Daten zu ändern klicke bitte in das jeweilige Feld.')}</i>
+                {__('Nutzername und Passwort')}
+            </h1>
+
+            <ul>
+                <li class="onelabel">
+                    <label>{__('E-Mail-Adresse')}</label> <input type="text" name="email" value="{$cust->getEmail()}" class="validate[custom[email]]" id="email" {if $cust->isEmployee()}disabled="disabled"{/if} />
+                </li>
+                <li class="twolabel">
+                    <label>{__('Passwort')}</label> <input type="password" name="newpw" value="" class="yd-empty-text validate[length[0,20]]" id="newpw" autocomplete="off" title="******" />
+                    <label>{__('Passwort wiederholen')}</label> <input type="password" name="newpwagain" value="" class="yd-empty-text validate[confirm[newpw]]" id="newpwagain" autocomplete="off" title="******" />
+                </li>
+            </ul>
+
+            <h1>
+                <i>{__('Um Daten zu ändern, klicke bitte in das jeweilige Feld')}</i>
+                {__('Persönliche Daten')}
+            </h1>
+
+            <ul>
+                <li class="twolabel">
+                    <label>{__('Vorname')}</label> <input type="text" name="prename" value="{$cust->getPrename()}" class="validate[length[2,25]]" id="prename" />
+                    <label>{__('Nachname')}</label> <input type="text" name="name" value="{$cust->getName()}" class="validate[length[2,25]]" id="name" />
+                </li>
+                <li class="twolabel" style="position:relative;">
+                    <label>{__('Geburtsdatum')}</label>
+                    <select name="birthday_day">
+                        {if $cust->getBirthday() == '0000-00-00'}
+                        <option value="0" selected="selected">-</option>
+                        {/if}
+                        {section name=day start=1 loop=32 step=1}
+                        <option {if $cust->getBirthday() != '0000-00-00' && date('d',strtotime($cust->getBirthday())) == $smarty.section.day.index}selected="selected"{/if}>
+                            {$smarty.section.day.index}
+                    </option>
+                    {/section}
+                </select>
+                <select name="birthday_month">
+                    {if $cust->getBirthday() == '0000-00-00'}
+                    <option value="0" selected="selected">-</option>
+                    {/if}
+                    {section name=month start=1 loop=13 step=1}
+                    <option {if $cust->getBirthday() != '0000-00-00' && date('m',strtotime($cust->getBirthday())) == $smarty.section.month.index}selected="selected"{/if}>
+                        {$smarty.section.month.index}
+                </option>
+                {/section}
+            </select>
+            <select name="birthday_year">
+                {if $cust->getBirthday() == '0000-00-00'}
+                <option value="0" selected="selected">--</option>
+                {/if}
+                {section name=year start=(date('Y')-90) loop=(date('Y')+1) step=1}
+                <option {if $cust->getBirthday() != '0000-00-00' && date('Y',strtotime($cust->getBirthday())) == $smarty.section.year.index}selected="selected"{/if}>
+                    {$smarty.section.year.index}
+            </option>
+            {/section}
+        </select>
+        <label style="position: absolute;top:6px;left:352px;">{__('Ich bin')}</label>
+        <select name="sex" style="position: absolute;top:0;left:516px;">
+            {if $cust->getSex() == 'n'}
+                <option style="width: 157px;" value="n" {if $cust->getSex() == 'n'}selected="selected"{/if}>{__('keine Angaben')}</option>
+            {/if}
+            <option style="width: 157px;" value="m" {if $cust->getSex() == 'm'}selected="selected"{/if}>{__('Männlich')}</option>
+            <option style="width: 157px;" value="w" {if $cust->getSex() == 'w'}selected="selected"{/if}>{__('Weiblich')}</option>
+        </select>
+    </li>
+    <li class="twolabel">
+        <label>{__('Handynummer/Telefon')}</label> <input type="text" name="tel" value="{$cust->getTel()}" class="validate[telefon,length[7,25]] yd-only-nr" id="tel" />
+    </li>
+</ul>
+
+<h1>
+    {__('Newsletter')}
+</h1>
+
+<ul>
+    <li class="onelabel">
+        <p>
+            {__('Hast Du schon unseren Newsletter abonniert? Halte Dich auf dem Laufenden über Aktionen, Gutscheine und andere Infos rund um %s.', $config->domain->base)}
+            <br /><br />
+            <label style="text-align:left">{__('Newsletter abonniert?')}</label> <input type="checkbox" value="1" name="newsletter" {if $cust->getNewsletter()}checked="checked"{/if} />  
+            <div id="yd-lang-confirm-newsletter-delete" class="hidden">{__('Bist Du Dir sicher, dass Du unseren Newsletter abbestellen möchtest?')}</div>
+        </p>
+    </li>
+</ul>
+
+<input type="submit" class="button" value="{__('Änderungen speichern')}" />
+<br /><br /><br /><br />
+</form>
+
+</div>
+
+</div>
+{/block}

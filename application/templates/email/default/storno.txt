@@ -1,0 +1,15 @@
+{__('Bestätigung über Stornierung Deiner Bestellung vom %s', $order->getTime()|date_format:__("%d.%m.%Y"))}
+                                                
+{__('Hallo %s,
+
+hiermit bestätigen wir Dir, dass Deine oben genannte Bestellung in unserem System storniert wurde.
+
+Solltest Du per PayPal bereits gezahlt haben, wird der Betrag automatisch wieder zurückgebucht, bei SofortÜberweisung oder Kreditkartenzahlung, wurde unsere Buchhaltung bereits veranlasst, den entrichteten Betrag schnellstmöglich zu erstatten.
+
+Dies ist eine automatisch generierte E-Mail. Bei Fragen, wende Dich bitte an unsere Support-Hotline.
+Du erreichst uns unter der Telefonnummer %s in der Zeit von Montag – Freitag 09:00 Uhr bis 24:00 Uhr und am Samstag und Sonntag von 11:00 Uhr bis 24:00 Uhr.
+
+Wir wünschen Dir eine angenehme Zeit und freuen uns auf Deinen nächsten Besuch bei www.%s
+
+Dein %s-Team
+', $customer->getFullname(), $config->locale->tel->support, $config->domain->base, $config->domain->base)}

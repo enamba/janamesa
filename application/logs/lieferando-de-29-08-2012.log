@@ -1,0 +1,58 @@
+2012-08-29T09:09:30+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-08-29T09:09:32+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-funny-pizzas-sao-paulo.html 
+2012-08-29T09:09:56+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/login.htm 
+2012-08-29T09:10:09+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing Successfully loggged in admin #Supporter Jens Naie (345) 
+2012-08-29T09:10:09+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/dashboard.htm 
+2012-08-29T09:10:22+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/meals/types.htm 
+2012-08-29T09:10:35+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/meals/types.htm 
+2012-08-29T09:11:33+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type with id #3 new data :: Array(    [name] => pizza    [parentId] => 0) 
+2012-08-29T09:11:35+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type with id #4 new data :: Array(    [name] => napoli    [parentId] => 3) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #2 new data :: Array(    [mealId] => 333    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #3 new data :: Array(    [mealId] => 334    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #4 new data :: Array(    [mealId] => 617    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #5 new data :: Array(    [mealId] => 2481    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #6 new data :: Array(    [mealId] => 869    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #7 new data :: Array(    [mealId] => 3653    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #8 new data :: Array(    [mealId] => 1678    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #9 new data :: Array(    [mealId] => 1295    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #10 new data :: Array(    [mealId] => 3671    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #11 new data :: Array(    [mealId] => 3674    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #12 new data :: Array(    [mealId] => 3789    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #13 new data :: Array(    [mealId] => 2490    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #14 new data :: Array(    [mealId] => 2673    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #15 new data :: Array(    [mealId] => 3051    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #16 new data :: Array(    [mealId] => 1789    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #17 new data :: Array(    [mealId] => 1932    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #18 new data :: Array(    [mealId] => 2067    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #19 new data :: Array(    [mealId] => 3345    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #20 new data :: Array(    [mealId] => 4670    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #21 new data :: Array(    [mealId] => 4473    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #22 new data :: Array(    [mealId] => 5393    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #23 new data :: Array(    [mealId] => 5079    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #24 new data :: Array(    [mealId] => 5085    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #25 new data :: Array(    [mealId] => 5307    [typeId] => 4) 
+2012-08-29T09:11:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing saved model Yourdelivery_Model_Meal_Type_Nn with id #26 new data :: Array(    [mealId] => 13969    [typeId] => 4) 
+2012-08-29T09:11:56+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/meals/ingredients.htm 
+2012-08-29T09:12:06+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/meals/picturesbatchupload.htm 
+2012-08-29T09:13:01+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/category/picture/list.htm 
+2012-08-29T09:13:18+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/category/picture/edit.htm 
+2012-08-29T09:13:32+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/category/picture/create.htm 
+2012-08-29T09:13:45+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template administration/service/meals/picturesbatchupload.htm 
+2012-08-29T17:47:48+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-08-29T17:47:49+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-funny-pizzas-sao-paulo.html 
+2012-08-29T17:48:13+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-08-29T17:48:14+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-funny-pizzas-sao-paulo.html 
+2012-08-29T17:48:49+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-08-29T17:48:50+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-funny-pizzas-sao-paulo.html 
+2012-08-29T17:52:25+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-08-29T17:54:37+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-08-29T17:57:30+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-08-29T17:57:31+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-funny-pizzas-sao-paulo.html 
+2012-08-29T17:58:03+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-08-29T17:58:04+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-funny-pizzas-sao-paulo.html 
+2012-08-29T18:06:35+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-08-29T18:06:37+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-funny-pizzas-sao-paulo.html 
+2012-08-29T18:07:54+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template order/basis/menu.htm 
+2012-08-29T18:07:56+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/servico-de-entrega-funny-pizzas-sao-paulo.html 
+2012-08-29T18:08:05+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: rendering template request/order/callmeal.htm 
+2012-08-29T18:08:05+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/request_order/callmeal/id/36791/size/4074/update/false.html 

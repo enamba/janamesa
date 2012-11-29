@@ -1,0 +1,27 @@
+{if $order->getCustomer()->getCompany()->getCodeVariant() != 0}
+<div class="yd-box" {if $order->getCustomer()->getCompany()->isCode()} id="yd-comp-need-code"{/if}>
+     <input type="hidden" name="yd-need-code" value="{$cust->getCompany()->isCode()}" />
+    <div class="yd-bigbox-head">
+        {__('Projektnummer')}
+    </div>
+    <div class="yd-bigbox-body">
+
+        <ul class="yd-company-form">
+            <li>
+                <span>{__('Projektcode: ')}{if $order->getCustomer()->getCompany()->isCode()}<b class="red">*</b>{/if}</span>
+
+                <select name="pnumber" id="yd-pn" class="project-code-input-budget {if $order->getCustomer()->getCompany()->isCode()}validate[projectnumber]{/if}" style="width:212px">
+                    <option value="">{__('Bitte wählen ...')}</option>
+                    {foreach from=$projectcodes item=code}
+                    <option value="{$code.number}">{$code.number}</option>
+                    {foreachelse}
+                    <option value="">{__('kein Code hinterlegt')}</option>
+                    {/foreach}
+                </select>
+            </li>
+        </ul>
+
+
+    </div>
+</div>
+{/if}

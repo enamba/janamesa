@@ -1,0 +1,24 @@
+<div class="yd-dialogs"><a class="yd-dialogs-close"></a>
+
+    <div class="yd-dialogs-head">
+        <h2>{__('Passwort vergessen')}?</h2>
+    </div>
+
+    <div class="yd-lightbox-content-container">
+
+        <form method="post" action="/request/newpass" style="text-align:center">
+            <p style="text-align:center;font-size:16px;">{__('Gib Deine E-Mail-Adresse ein. Du erhältst dann ein neues Passwort.')}</p>
+
+            <div class="incenter">
+                <input type="text" name="email" style="font-size:20px;box-shadow:0 1px 3px #ddd;" />
+            </div>
+
+            <div class="yd-lightbox-buttons">
+                <input type="submit" value="{__('Senden')}" class="button yd-btn-confirm" />
+                <input type="button" value="{__('Schließen')}" class="button {if $config->domain->base == 'janamesa.com.br'}yd-button-140 yd-btn-decline{/if} yd-close-lightbox" />
+            </div>
+        </form>
+
+    </div>
+
+</div>

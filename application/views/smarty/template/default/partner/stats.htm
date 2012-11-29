@@ -1,0 +1,410 @@
+{extends file='partner/_base.htm'}
+{block name="content"}
+
+{include file='partner/_includes/nav.htm'}
+
+{assign var=monthNames value=Default_Helpers_Date::getMonthNames()}
+
+<div class="be-partner be-partner-stats">
+
+    <h1 class="icon04">{__p('Statistik des aktuellen Monats %s', $monthNames[date('n') - 1])} </h1>
+    
+    <div class="stats-staticbox-month">
+        <table class="user-tab user-tab-static get-me-width">
+            <tr>
+                <th colspan="2">{__p('Gesamt')}</th>
+            </tr>
+            <tr>
+                <td colspan="2">{__p('Umsatz')}</td>
+            </tr>
+            <tr>
+                <td colspan="2">{__p('Bestellungen')}</td>
+            </tr>
+            <tr>
+                <td colspan="100"><br/></td>
+            </tr>
+            <tr>
+                <th colspan="2">{__p('Nach Zahlungsmittel')}</th>
+            </tr>
+            <tr>
+                <td rowspan="2" style="vertical-align: middle;">{__p('Online')}</td>
+                <td>{__p('Umsatz')}</td>
+            </tr>
+            <tr>
+                <td>{__p('Bestellungen')}</td>
+            </tr>
+            <tr>
+                <td rowspan="2" style="vertical-align: middle;">{__p('Barzahlung')}</td>
+                <td>{__p('Umsatz')}</td>
+            </tr>
+            <tr>
+                <td>{__p('Bestellungen')}</td>
+            </tr>
+            {if $restaurant->getPartnerDetailedStats()}
+                <tr>
+                    <td colspan="100"><br/></td>
+                </tr>
+                <tr>
+                    <th colspan="2">{__p('Nach Plattform')}</th>
+                </tr>
+                <tr>
+                    <td rowspan="2" style="vertical-align: middle;">{__p('Auf')} {$config->domain->base}</td>
+                    <td>{__p('Umsatz')}</td>
+                </tr>
+                <tr>
+                    <td>{__p('Bestellungen')}</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" style="vertical-align: middle;">{__p('Auf eigener Domain')}</td>
+                    <td>{__p('Umsatz')}</td>
+                </tr>
+                <tr>
+                    <td>{__p('Bestellungen')}</td>
+                </tr>
+            {/if}
+        </table>
+    </div>
+    
+    <div class="stats-scrollbox-month">
+        <table class="user-tab get-me-width">
+            <tr>
+                {foreach $daysArray as $day}
+                <th {if date('d')==substr($day, 0, 2)}style=""{/if}>{$day}</th>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $daysArray as $day}
+                <td>{__p('%s €', $dailyStats[$day]['totalSales']|default:0|inttoprice)}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $daysArray as $day}
+                <td>{$dailyStats[$day]['totalOrders']|default:0}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                <td colspan="100"><br/></td>
+            </tr>
+            <tr>
+                <th colspan="100"><br/></th>
+            </tr>
+            <tr>
+                {foreach $daysArray as $day}
+                <td>{__p('%s €', $dailyStats[$day]['totalSalesOnline']|default:0|inttoprice)}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $daysArray as $day}
+                <td>{$dailyStats[$day]['totalOrdersOnline']|default:0}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $daysArray as $day}
+                <td>{__p('%s €', $dailyStats[$day]['totalSalesBar']|default:0|inttoprice)}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $daysArray as $day}
+                <td>{$dailyStats[$day]['totalOrdersBar']|default:0}</td>
+                {/foreach}
+            </tr>
+            {if $restaurant->getPartnerDetailedStats()}
+                <tr>
+                    <td colspan="100"><br/></td>
+                </tr>
+                <tr>
+                    <th colspan="100"><br/></th>
+                </tr>
+                <tr>
+                    {foreach $daysArray as $day}
+                    <td>{__p('%s €', $dailyStats[$day]['sales']|default:0|inttoprice)}</td>
+                    {/foreach}
+                </tr>
+                <tr>
+                    {foreach $daysArray as $day}
+                    <td>{$dailyStats[$day]['orders']|default:0}</td>
+                    {/foreach}
+                </tr>
+                <tr>
+                    {foreach $daysArray as $day}
+                    <td>{__p('%s €', $dailyStats[$day]['satelliteSales']|default:0|inttoprice)}</td>
+                    {/foreach}
+                </tr>
+                <tr>
+                    {foreach $daysArray as $day}
+                    <td>{$dailyStats[$day]['satelliteOrders']|default:0}</td>
+                    {/foreach}
+                </tr>
+            {/if}
+        </table>
+    </div>    
+    
+    <br style="clear: both;"/><br/>
+
+    <ul class="be-nav small">
+        {foreach from=$years item=year name=yearLoop}
+            <li data-tab="{$smarty.foreach.yearLoop.iteration}" class="yd-tab-stats-{$smarty.foreach.yearLoop.iteration} yd-tab-stats icon07 {if $smarty.foreach.yearLoop.first}active{/if}"><a><span>{__p('Umsätze %s',$year)}</span></a></li>
+        {/foreach}
+    </ul>
+
+    {foreach from=$stats item=stat key=year name=statLoop}
+        <table class="visualize-sales" id="vs-stats-table-sales-{$smarty.foreach.statLoop.iteration}" style="display:none;">
+            <caption>{__p('Entwicklung der Umsätze %s in € pro Kalenderwoche', $year)}</caption>
+            <thead>
+                <td></td>
+                {section name=year start=1 loop=$stat.lastWeek}
+                <th><span class="KW" {if $smarty.section.year.index%2-1}style="display: none"{/if}>{$smarty.section.year.index}</span></th>                
+                {/section}
+            </thead>
+            <tbody>
+                <tr>
+                    {section name=year start=1 loop=$stat.lastWeek}
+                    <td scope="row">{$stat['sales']['week'][$smarty.section.year.index]['totalSales'] / 100|default:0}</td>
+                    {/section}
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="visualize-orders" id="vs-stats-table-orders-{$smarty.foreach.statLoop.iteration}" style="display:none;">
+            <caption>{__p('Entwicklung der Bestellungen %s pro Kalenderwoche', $year)}</caption>
+            <thead>
+                <td></td>
+                {section name=year start=1 loop=$stat.lastWeek}
+                <th><span class="KW" {if $smarty.section.year.index%2-1}style="display: none"{/if}>{$smarty.section.year.index}</span></th>
+                {/section}
+            </thead>
+            <tbody>
+                <tr>
+                    {section name=year start=1 loop=$stat.lastWeek}
+                    <td scope="row">{$stat['orders']['week'][$smarty.section.year.index]['totalCount']|default:0}</td>
+                    {/section}
+                </tr>
+            </tbody>
+        </table>
+    {/foreach}
+    
+    
+    <ul class="be-nav small">
+        {foreach from=$years item=year name=yearLoop}
+            <li data-tab="{$smarty.foreach.yearLoop.iteration}" class="yd-tab-stats-{$smarty.foreach.yearLoop.iteration} yd-tab-stats icon07 {if $smarty.foreach.yearLoop.first}active{/if}"><a><span>{__p('Übersicht %s',$year)}</span></a></li>
+        {/foreach}
+    </ul>
+    
+    <br/>
+
+    {foreach from=$stats item=stat key=year name=statLoop}
+    <div class="stats-staticbox stats-staticbox-{$smarty.foreach.statLoop.iteration}">
+        <table class="user-tab user-tab-static yd-stats-data" id="yd-stats-sales-table-{$smarty.foreach.statLoop.iteration}-static" {if !$smarty.foreach.statLoop.first}style="display:none;"{/if}>
+            <tr>
+                <th>{__p('Umsätze %s', $year)}</th>
+            </tr>
+            {if $restaurant->getPartnerDetailedStats()}
+            <tr>
+                <td>{__p('%s | Online Zahlung', $domain)}</td>
+            </tr>
+            <tr>
+                <td>{__p('%s | Bar Zahlung', $domain)}</td>
+            </tr>
+            <tr>
+                <td>{__p('%s | Gesamt', $domain)}</td>
+            </tr>
+            <tr>
+                <td>{__p('Eigene Domain | Bar Zahlung')}</td>
+            </tr>
+            <tr>
+                <td>{__p('Eigene Domain | Online Zahlung')}</td>
+            </tr>
+            <tr>
+                <td>{__p('Eigene Domain | Gesamt')}</td>
+            </tr>
+            <tr>
+                <td>{__p('Gesamtumsatz')}</td>
+            </tr>
+            {else}
+            <tr>
+                <td>{__p('%s | Online Zahlung', $domain)}</td>
+            </tr>
+            <tr>
+                <td>{__p('%s | Bar Zahlung', $domain)}</td>
+            </tr>
+            <tr>
+                <td>{__p('%s | Gesamt', $domain)}</td>
+            </tr>
+            {/if}
+        </table>
+    </div>
+    
+    <div class="stats-scrollbox stats-scrollbox-{$smarty.foreach.statLoop.iteration}" {if !$smarty.foreach.statLoop.first}style="display:none;"{/if}>
+        <table class="user-tab yd-stats-data" id="yd-stats-sales-table-{$smarty.foreach.statLoop.iteration}" {if !$smarty.foreach.statLoop.first}style="display:none;"{/if}>
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <th>{$month}</th>
+                {/foreach}
+            </tr>
+            {if $restaurant->getPartnerDetailedStats()}
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['sales']['month'][$m + 1]['salesOnline']} {__p('%s €', $stat['sales']['month'][$m + 1]['salesOnline']|inttoprice)} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['sales']['month'][$m + 1]['salesBar']}  {__p('%s €', $stat['sales']['month'][$m + 1]['salesBar']|inttoprice)} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['sales']['month'][$m + 1]['sales']} {__p('%s €', $stat['sales']['month'][$m + 1]['sales']|inttoprice)} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['sales']['month'][$m + 1]['satelliteSalesBar']}  {__p('%s €', $stat['sales']['month'][$m + 1]['satelliteSalesBar']|inttoprice)} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['sales']['month'][$m + 1]['satelliteSalesOnline']}  {__p('%s €', $stat['sales']['month'][$m + 1]['satelliteSalesOnline']|inttoprice)} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['sales']['month'][$m + 1]['satelliteSales']}  {__p('%s €', $stat['sales']['month'][$m + 1]['satelliteSales']|inttoprice)} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['sales']['month'][$m + 1]['totalSales']}  {__p('%s €', $stat['sales']['month'][$m + 1]['totalSales']|inttoprice)} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            {else}
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['sales']['month'][$m + 1]['totalSalesOnline']} {__p('%s €', $stat['sales']['month'][$m + 1]['totalSalesOnline']|inttoprice)} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['sales']['month'][$m + 1]['totalSalesBar']}  {__p('%s €', $stat['sales']['month'][$m + 1]['totalSalesBar']|inttoprice)} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['sales']['month'][$m + 1]['totalSales']} {__p('%s €', $stat['sales']['month'][$m + 1]['totalSales']|inttoprice)} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            {/if}
+        </table>       
+    </div>
+    
+    <div class="stats-staticbox stats-staticbox-{$smarty.foreach.statLoop.iteration}">
+        <table class="user-tab user-tab-static yd-stats-data" id="yd-stats-orders-table-{$smarty.foreach.statLoop.iteration}-static" {if !$smarty.foreach.statLoop.first}style="display:none;"{/if}>
+            <tr>
+                <th>{__p('Bestellungen %s', $year)}</th>
+            </tr>
+            {if $restaurant->getPartnerDetailedStats()}
+            <tr>
+                <td>{__p('%s | Online Zahlung', $domain)}</td>
+            </tr>
+            <tr>
+                <td>{__p('%s | Bar Zahlung', $domain)}</td>
+            </tr>
+            <tr>
+                <td>{__p('%s | Gesamt', $domain)}</td>
+            </tr>
+            <tr>
+                <td>{__p('Eigene Domain | Online Zahlung')}</td>
+            </tr>
+            <tr>
+                <td>{__p('Eigene Domain | Bar Zahlung')}</td>
+            </tr>
+            <tr>
+                <td>{__p('Eigene Domain | Gesamt')}</td>
+            </tr>
+            <tr>
+                <td>{__p('Gesamtbestellungen')}</td>
+            </tr>
+            {else}
+            <tr>
+                <td>{__p('%s | Online Zahlung', $domain)}</td>
+            </tr>
+            <tr>
+                <td>{__p('%s | Bar Zahlung', $domain)}</td>
+            </tr>
+            <tr>
+                <td>{__p('%s | Gesamt', $domain)}</td>
+            </tr>
+            {/if}
+        </table>
+    </div>
+    
+    <div class="stats-scrollbox stats-scrollbox-{$smarty.foreach.statLoop.iteration}" {if !$smarty.foreach.statLoop.first}style="display:none;"{/if}>
+        <table class="user-tab yd-stats-data" id="yd-stats-orders-table-{$smarty.foreach.statLoop.iteration}" {if !$smarty.foreach.statLoop.first}style="display:none;"{/if}>
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <th>{$month}</th>
+                {/foreach}
+            </tr>
+            {if $restaurant->getPartnerDetailedStats()}
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['orders']['month'][$m + 1]['countOnline']} {$stat['orders']['month'][$m + 1]['countOnline']} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['orders']['month'][$m + 1]['countBar']} {$stat['orders']['month'][$m + 1]['countBar']} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['orders']['month'][$m + 1]['count']} {$stat['orders']['month'][$m + 1]['count']} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['orders']['month'][$m + 1]['satelliteCountBar']} {$stat['orders']['month'][$m + 1]['satelliteCountBar']} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['orders']['month'][$m + 1]['satelliteCountOnline']} {$stat['orders']['month'][$m + 1]['satelliteCountOnline']} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['orders']['month'][$m + 1]['satelliteCount']}{$stat['orders']['month'][$m + 1]['satelliteCount']} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['orders']['month'][$m + 1]['totalCount']}{$stat['orders']['month'][$m + 1]['totalCount']} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            {else}
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['orders']['month'][$m + 1]['totalCountOnline']} {$stat['orders']['month'][$m + 1]['totalCountOnline']} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['orders']['month'][$m + 1]['totalCountBar']} {$stat['orders']['month'][$m + 1]['totalCountBar']} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            <tr>
+                {foreach $monthNames as $m => $month}
+                <td>{if $stat['orders']['month'][$m + 1]['totalCount']} {$stat['orders']['month'][$m + 1]['totalCount']} {else} - {/if}</td>
+                {/foreach}
+            </tr>
+            {/if}
+        </table>
+    </div>
+    
+    {/foreach}
+    
+</div>
+
+<div class="hidden" id="yd-lang-partner-calendar-week">{__p('Kalenderwoche')}</div>
+
+{/block}

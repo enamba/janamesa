@@ -1,0 +1,1 @@
+ALTER TABLE `interfax_transactions` ADD `processCount` SMALLINT NOT NULL  DEFAULT '0' AFTER `currentStatus` ;

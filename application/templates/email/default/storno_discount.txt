@@ -1,0 +1,4 @@
+{__("Es tut uns leid, aber leider ist dieser Gutschein nicht mehr gültig, d.h. das jemand Anderes diesen Gutschein bereits eingelöst hast.
+Falls wir uns irrtümlicherweise geirrt haben sollten, schreibe uns bitte eine E-Mail mit deinen Daten und der Angabe der Aktion und deren Details an %s.
+
+Deine Bestellung wurde bereits online bezahlt. Der Betrag von %s€ wird Dir selbstverständlich zurücküberwiesen. In der Regel erfolgen Rückerstattungen jedoch innerhalb von 7 Arbeitstagen.", $config->locale->email->support, $absTotal)}

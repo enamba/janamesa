@@ -1,0 +1,58 @@
+{extends file='administration/base.htm'}
+{block name="content"}
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Aktuelle Supportnummern')}
+            </div>
+            <div class="item-content">
+                <table id="yd-support">
+                    <tr>
+                        <th width="40%">{__b('Nummer')}</th>
+                        <th width="40%">{__b('Name')}</th>
+                        <th width="10%">{__b('Aktiv')}</th>
+                        <th width="10%"></th>
+                    </tr>
+                    {foreach from=$numbers item=support}
+                        <tr id="yd-support-{$support.id}">
+                            <td>{$support.number}</td>
+                            <td>{$support.name}</td>
+                            <td><input class="yd-toggle-support" id="yd-toggle-support-{$support.id}" type="checkbox" value="1" {if $support.active == 1}checked{/if} /></td>
+                            <td><a href="javascript:void(0)" class="yd-remove-support" id="yd-remove-support-{$support.id}">[{__b('entfernen')}]</a></td>
+                        </tr>
+                    {foreachelse}
+                        <tr>
+                            <td colspan="4">{__b('keine Nummern eingetragen')}</td>
+                        </tr>
+                    {/foreach}
+                </table>
+                <table>
+                    <tr>
+                        <td width="40%" height="100"><input type="text" name="number" id="yd-add-support-number-text"/></td>
+                        <td width="40%"><input type="text" name="name" id="yd-add-support-name-text"/></td>
+                        <td width="10%"><input type="submit" value="{__b('hinzufügen')}" id="yd-add-support-number"  class="button"/></td>
+                        <td width="10%"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+                {__b('Hinweis')}:
+            </div>
+            <div class="item-content">
+                {__b('Den Nummer muss 0049 vorangestellt haben z.B. 004917620142163')}
+            </div>
+        </div>
+    </div>
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Blacklist')}
+            </div>
+            <div class="item-content">
+                <a href="/administration_blacklist/keywords">{__b('zur neuen Blacklist')}</a>
+            </div>
+        </div>
+    </div>
+{/block}

@@ -1,0 +1,190 @@
+{extends file='administration/base.htm'}
+{block name="content"}
+
+<div class="be-1-column">
+    <div class="be-box">
+        <h2>{__b('Übersicht der SaleChannels')}</h2>
+        <div class="be-box-in">
+            <ul class="be-tabs">
+                <li><a href="#yd-tab-1" class="yd-tab">{__b('Übersicht')}</a></li>
+                <li><a href="#yd-tab-2" class="yd-tab">{__b('Ziele')}</a></li>
+                <li><a href="#yd-tab-3" class="yd-tab">{__b('Segmentierung')}</a></li>
+                <li><a href="/administration_stats_marketing/costs">{__b('Kosten')}</a></li>
+                <li><a href="/administration_stats_marketing/link">{__b('URL generieren')}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="yd-tab" id="yd-tab-1">
+
+    <div class="be-2-column">
+        <div class="be-box">
+            <h2>{__b('Piwik')}</h2>
+            <div class="be-box-in">
+                <div class="piwikWidget">
+                    <!-- origin, referrers -->
+                    <iframe 
+                        width="100%" 
+                        height="400" 
+                        src="{$config->piwik->url}/index.php?module=Widgetize&action=iframe&moduleToWidgetize=Referers&actionToWidgetize=getRefererType&idSite={$config->piwik->id}&period=day&date=yesterday&disableLink=1&token_auth={$config->piwik->token}" 
+                        scrolling="no" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="be-box">
+            <h2>{__b('Piwik')}</h2>
+            <div class="be-box-in">
+                <div class="piwikWidget">
+                    <!-- visitor overview -->
+                    <iframe 
+                        width="100%" 
+                        height="720" 
+                        src="{$config->piwik->url}/index.php?module=Widgetize&action=iframe&moduleToWidgetize=VisitsSummary&actionToWidgetize=index&idSite={$config->piwik->id}&period=day&date=yesterday&disableLink=1&token_auth={$config->piwik->token}" 
+                        scrolling="no" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0">
+                    </iframe>
+                </div>
+                <div class="piwikWidget">
+                    <!-- seo ranking -->
+                    <iframe 
+                        width="100%" 
+                        height="220" 
+                        src="{$config->piwik->url}/index.php?module=Widgetize&action=iframe&moduleToWidgetize=SEO&actionToWidgetize=getRank&idSite={$config->piwik->id}&period=day&date=yesterday&disableLink=1&token_auth={$config->piwik->token}" 
+                        scrolling="no" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0">
+                    </iframe>
+                </div>
+                <div class="piwikWidget">
+                    <!-- list of all keywords -->
+                    <iframe 
+                        width="100%" 
+                        height="500" 
+                        src="{$config->piwik->url}/index.php?module=Widgetize&action=iframe&moduleToWidgetize=Referers&actionToWidgetize=getKeywords&idSite={$config->piwik->id}&period=day&date=yesterday&disableLink=1&token_auth={$config->piwik->token}" 
+                        scrolling="no" 
+                        frameborder="0" 
+                        marginheight="0"
+                        marginwidth="0">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="yd-tab" id="yd-tab-2">
+
+    <div class="be-1-column">
+        <div class="be-box">
+            <h2></h2>
+            <div class="be-box-in">
+                <div class="piwikWidget">
+                    <iframe width="100%" 
+                            height="900" 
+                            src="{$config->piwik->url}/index.php?module=Widgetize&action=iframe&moduleToWidgetize=Goals&actionToWidgetize=widgetGoalsOverview&idSite={$config->piwik->id}&period=day&date=yesterday&disableLink=1&token_auth={$config->piwik->token}" 
+                            scrolling="no" 
+                            frameborder="0" 
+                            marginheight="0" 
+                            marginwidth="0">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="yd-tab" id="yd-tab-3">
+
+    <!-- this must be migrated soon into javascript/backend -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var segments = 1;
+            $('.yd-add-segment').live('click',function(){
+                var html = $('#segment-1').html();
+                segments += 1;
+                $(html).find('.yd-delete-segment').attr('id','yd-delete-segment-' + segments);
+                $('#segments').append('<div class="segment" id="segment-' + segments + '">' + html + '<a class="yd-delete-segment" id="yd-delete-segment-' + segments +'">delete</a></div>');
+                $('.yd-join').show();
+            });
+            $('.yd-delete-segment').live('click', function(){
+                var id = this.id.split('-')[3];
+                $('#segment-' + id).remove();
+            });
+        });
+    </script>
+
+    <div class="be-1-column">
+        <div class="be-box">
+            <h2>Segmentierung</h2>
+            <div class="be-box-in">
+                <form action="/administration_stats_marketing/segment" target="_blank" method="POST">
+                    <div id="segments">
+
+                        <select name="data">
+                            <option value="referers">{__b('Herkunft')}</option>
+                        </select>
+
+                        <br /><br />
+
+                        <div class="segment" id="segment-1">                      
+                            {__b('Segment')}:
+                            <select name="segment[]">
+                                <option value="referrerKeyword">{__b('Keyword')}</option>
+                                <option value="referrerName">{__b('Webseite oder Kampagne')}</option>
+                            </select>
+
+                            {__b('Compare')}:
+                            <select name="compare[]">
+                                <option value="==">{__b('exakt')}</option>
+                                <option value="!=">{__b('ungleich')}</option>
+                                <option value="<">{__b('kleiner')}</option>
+                                <option value=">">{__b('größer')}</option>
+                                <option value="=@">{__b('beinhaltet')}</option>
+                                <option value="!@">{__b('beinhaltet nicht')}</option>
+                            </select>
+
+                            {__b('Value')}: <input type="text" name="value[]" value="" />
+
+                            <br /><br />
+                            <div class="yd-join" style="display:none">
+                                <select name="join[]">
+                                    <option value=";">{__b('und')}</option>
+                                    <option value=",">{__b('oder')}</option>
+                                </select>
+                            </div>
+                            <br /><br />
+
+                        </div>
+                    </div>
+
+                    <br /><br />
+
+                    <a class="yd-add-segment button">+</a>
+
+                    <br /><br />
+
+                    <hr />
+
+                    <br />
+
+                    <input type="submit" value="{__b('auswerten')}" class="button" />
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{/block}

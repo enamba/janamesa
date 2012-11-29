@@ -1,0 +1,12 @@
+{extends file='partner/_base.htm'}
+{block name="content"}
+
+<div class="yd-backend-login">
+    <h2>{$domain_base} {__p('Partner-Konto')}</h2>
+    <div class="yd-backend-login-in">
+        {$form}
+        <a href="{$this->url(['action'=>'requestpassword'],'partnerRoute',true)}">{__p('Passwort vergessen?')}</a>
+    </div>
+</div>
+
+{/block}

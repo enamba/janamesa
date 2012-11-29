@@ -1,0 +1,199 @@
+{extends file='administration/base.htm'}
+{block name="content"}
+<h1>{__b('Status insgesamt')}:</h1>
+
+	<table>
+	<tr>
+		<td width="210">{__b("Insgesamt: ")}</td>
+		<td width="80">{$anzahlLeads}</td>
+		<td width="80"></td>
+		<td>
+			{__b('Ohne "neu"')}
+			<br />
+			({{$anzahlLeads} - {$neu}})
+		</td>
+		<td>
+			{__b('Ohne "in Prozess" und "neu"')}
+			<br />
+
+			({$anzahlLeads - $inProcess - $neu})
+		</td>
+	</tr>
+	<tr>
+		<td>{__b('Converted: ')}</td>
+		<td>{$converted}</td>
+		<td>{$convertedPerc.normal} %</td>
+		<td><span style="font-weight: bold; color: #62cb1d;">{$convertedPerc.neu}%</span></td>
+		<td><span style="font-weight: bold; color: #62cb1d;">{$convertedPerc.neuProc}%</span></td>
+	</tr>
+	<tr>
+		<td>{__b('Heiß: ')}</td>
+		<td>{$hot}</td>
+		<td>{$hotPerc.normal}%</td>
+		<td><span style="font-weight: bold; color: #90b876;">{$hotPerc.neu}%</span></td>
+		<td><span style="font-weight: bold; color: #90b876;">{$hotPerc.neuProc}%</span></td>
+	</tr>
+	<tr>
+		<td>{__b('Tot: ')}</td>
+		<td>{$dead}</td>
+		<td>{$deadPerc.normal}%</td>
+		<td><span style="font-weight: bold; color: red;">{$deadPerc.neu}%</span></td>
+		<td><span style="font-weight: bold; color: red;">{$deadPerc.neuProc}%</span></td>
+	</tr>
+	<tr>
+		<td>{__b('Recycled: ')}</td>
+		<td>{$recycled}</td>
+		<td>{$recycledPerc.normal}%</td>
+		<td><span style="font-weight: bold; color: #ffb400;">{$recycledPerc.neu}%</span></td>
+		<td><span style="font-weight: bold; color: #ffb400;">{$recycledPerc.neuProc}%</span></td>
+	</tr>
+	<tr>
+		<td>{__b('In Process: ')}</td>
+		<td>{$inProcess}</td>
+		<td>{$inProcessPerc.normal}%</td>
+		<td>{$inProcessPerc.neu}%</td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td>{__b('Neu: ')}</td>
+		<td>{$neu}</td>
+		<td>{$neuPerc.normal}%</td>
+		<td></td>
+	</tr>
+	</table>
+
+
+
+<h1>{__b('Nach Zeit:')}</h1>
+
+	<table>
+
+	<tr>
+		<td>{__b('Modified in letzten 7 Tagen: ')}</td>
+		<td>{$modified7.anzahl}</td>
+	</tr>
+	<tr>
+		<td>{__b('Modified in t-8 bis t-14: ')}</td>
+		<td>{$modified14.anzahl}</td>
+	</tr>
+	<tr>
+		<td>{__b('Modified t-15 bis t-21: ')}</td>
+		<td>{$modified21.anzahl}</td>
+	</tr>
+
+	<tr>
+		<td colspan="2" align="center">
+			{__b('davon (Teilmenge)')}
+		</td>
+	</tr>
+
+	<tr>
+		<td width="210">{__b('1. Kontakt in letzten 7 Tagen: ')}</td>
+		<td>{$kontakt7.anzahl}</td>
+	</tr>
+	<tr>
+		<td>{__b('1. Kontakt in t-8 bis t-14: ')}</td>
+		<td>{$kontakt14.anzahl}</td>
+	</tr>
+	<tr>
+		<td>{__b('1. Kontakt t-15 bis t-21: ')}</td>
+		<td>{$kontakt21.anzahl}</td>
+	</tr>
+	</table>
+
+
+
+
+    <h1>{__b('Nach Personen:')}</h1>
+
+	<table cellpadding="5">
+	<tr>
+		<td width="210">{__b('Leads insgesamt: ')}</td>
+		<td width="80">{$anzahlLeads}</td>
+		<td></td>
+		<td width="90">{__b('Modified ')}<br />{__b('t bis t-7')}</td>
+		<td width="90">{__b('Modified ')}<br />{__b('t-8 bis t-14')}</td>
+		<td width="90">{__b('Modified ')}<br />{__b('t-15 bis t-21')}</td>
+		<td>{__b('davon')} <br />{__b('(Teilmenge)')}</td>
+		<td width="90">{__b('1. Kontakt ')}<br />{__b('t bis t-7')}</td>
+		<td width="90">{__b('1. Kontakt ')}<br />{__b('t-8 bis t-14')}</td>
+		<td width="90">{__b('1. Kontakt ')}<br />{__b('t-15 bis t-21')}</td>
+	</tr>
+	<tr>
+		<td>{__b('Xu:')} </td>
+		<td>{$xu}</td>
+		<td>{$xuPerc.normal}%</td>
+		<td>{$modified7.xu}</td>
+		<td>{$modified14.xu}</td>
+		<td>{$modified21.xu}</td>
+		<td></td>
+		<td>{$kontakt7.xu}</td>
+		<td>{$kontakt14.xu}</td>
+		<td>{$kontakt21.xu}</td>
+	</tr>
+	<tr>
+		<td>{__b('Torsten:')} </td>
+		<td>{$torsten}</td>
+		<td>{$torstenPerc.normal}%</td>
+		<td>{$modified7.torsten}</td>
+		<td>{$modified14.torsten}</td>
+		<td>{$modified21.torsten}</td>
+		<td></td>
+		<td>{$kontakt7.torsten}</td>
+		<td>{$kontakt14.torsten}</td>
+		<td>{$kontakt21.torsten}</td>
+	</tr>
+	<tr>
+		<td>{__b('Can:')} </td>
+		<td>{$can}</td>
+		<td>{$canPerc.normal}%</td>
+		<td>{$modified7.can}</td>
+		<td>{$modified14.can}</td>
+		<td>{$modified21.can}</td>
+		<td></td>
+		<td>{$kontakt7.can}</td>
+		<td>{$kontakt14.can}</td>
+		<td>{$kontakt21.can}</td>
+	</tr>
+
+	<tr>
+		<td>{__b('Moritz:')} </td>
+		<td>{$moritz}</td>
+		<td>{$moritzPerc.normal}%</td>
+		<td>{$modified7.moritz}</td>
+		<td>{$modified14.moritz}</td>
+		<td>{$modified21.moritz}</td>
+		<td></td>
+		<td>{$kontakt7.moritz}</td>
+		<td>{$kontakt14.moritz}</td>
+		<td>{$kontakt21.moritz}</td>
+	</tr>
+	</table>
+
+
+<h1>{__b('Converted:')}</h1>
+{foreach from=$convertedArray item=item}
+	{$item} <br />
+{/foreach}
+
+<h1>{__b('Heiß:')}</h1>
+{foreach from=$hotArray item=item}
+	{$item} <br />
+{/foreach}
+
+
+<h1>{__b('Rohdaten:')}</h1>
+<table>
+{assign var=j value=0}
+{foreach from=$finalLeads item=Array}
+		
+		{assign var=j value=$j+1}
+		<tr>
+		<td>{$j}</td>
+                {foreach from=$Array item=data}
+		<td>{$data}</td>
+		{/foreach}
+		</tr>
+{/foreach}
+</table>
+{/block}

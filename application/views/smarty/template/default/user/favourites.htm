@@ -1,0 +1,62 @@
+{extends file='user/_base.htm'}
+{block name="content"}
+
+<script type="text/javascript">
+    var services = [];
+    var serviceIds = [];
+    var serviceCitys = [];
+
+    {foreach $services as $i => $r}
+    serviceIds.push({$r->getId()});
+    
+    services.push({
+        id: {$r->getId()},
+        type: "{$r->getType()}",
+        name: "{$r->getName()}",
+        openings: {$this->formatOpeningsAsJson($r->getOpening()->getIntervalOfDay(time()))},
+    });
+    
+    serviceCitys['{$r->getId()}'] = "{$r->getCurrentCityId()}";
+    {/foreach}
+</script>
+
+<div class="yd-profile yd-clearfix">
+
+    {include file='user/_header.htm' active=3 active_title=__('Favoriten')}
+
+    <div class="yd-profile-body">
+
+        <h1>
+            <span id="yd-search-favourites">
+                {__('Suche')}
+                <form id="yd-search-service-form">
+                     <input name="search" class="yd-empty-text" id="yd-search-service" type="text" value="{__('z.B. Sushi')}" title="{__('z.B. Sushi')}" />
+                </form>
+                <a class="yd-search-meals"></a>
+            </span>
+            {__('Meine Top')} <strong id="yd-favourite-count">{count($services)}</strong> {__('Lieferservices')}
+        </h1>
+
+        <div id="yd-filter-found"></div>
+
+        <div class="ordering-category-no hidden">
+            {__('Lieferdienste, die zu Dir liefern, aber nicht zu der Kategorie gehören')}:
+            <span class=""><a id="yd-reset-service-filter" class="cursor">{__('Filter zurücksetzen')}</a></span>
+        </div>
+
+        <div id="yd-filter-the-rest"></div>
+        <div class="hidden" id="yd-lang-no-meals-found">{__('Bei Deiner Suche wurden leider keine Speisen gefunden')}.</div>
+        <div class="hidden" id="yd-lang-confirm-favorite-delete">{__('Favorit wirklich löschen?')}</div>
+        {foreach from=$services item=r}
+         
+            {include file='order/_includes/service/services.htm' r=$r withdelete=1 isFavourite=1}
+
+        {/foreach}
+
+    </div>
+
+</div>
+
+
+
+{/block}

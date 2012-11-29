@@ -1,0 +1,3593 @@
+/*
+    Form toggle
+***********************************************************/
+
+.yd-form-toggled {
+    background: none !important;
+    border: none !important;
+    cursor: default !important;
+    box-shadow: 0 0 0 !important;
+    border-radius: 0 !important;
+}
+
+.yd-register{
+    display: inline-block;
+    width: 100%;
+    padding: 0 0 25px 0;
+}
+
+.yd-register .yd-submit-on-click{
+    display: inline-block;
+    height: 49px;
+    line-height: 46px;
+    padding: 0 10px;
+    margin: 18px 0 0 0;
+    color: #ffffff;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 18px;
+    text-shadow: 0 1px 0 #000000;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 242px;
+    vertical-align: middle;
+    text-align: center;
+    background: url(/media/css/www.janamesa.com.br/images/btns-bg.png) no-repeat scroll 0 -147px transparent;
+}
+
+.yd-register .yd-submit-on-click:hover{
+    text-decoration: underline;
+}
+
+.yd-register .yd-register-form {
+    float: left;
+    margin: 0 0 0 20px;
+    width: 640px;
+}
+
+.yd-register .yd-register-form .br-box-title{
+    padding: 0 0 25px 0;
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) repeat-x left bottom transparent;
+}
+
+.yd-register .yd-register-form .br-box-title .yd-form-tease{
+    color: #6C584A;
+    font-family: Museo700,Helvetica,Verdana,Arial,sans-serif;
+    font-size: 34px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+.yd-register .yd-register-form .br-box-title p{
+    color: #575757;
+    margin: 3px 0 0;
+    font-size: 18px;
+    font-family: Helvetica,Verdana,Arial,sans-serif;
+}
+
+.yd-register .yd-register-form .yd-form-wrapper{
+    padding: 27px 0 0 0;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.yd-register .yd-register-form .yd-form-wrapper:after{
+    content: '* campos obrigatórios';
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: inline-block;
+    color: #F41111;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.yd-register .yd-register-form .yd-form-wrapper #br-cep-autocomplete{
+    position: relative;
+    top: -5px;
+    left: 0;
+    margin: 0 0 0 5px;
+    font-size: 12px;
+}
+
+.yd-register-sidebar {
+    float: right;
+    margin: 0 20px 0 0;
+    width: 295px;
+}
+
+.yd-register-sidebar .yd-box {
+    width: 100%;
+}
+
+#yd-register-teaser {
+    font-size: 14px;
+}
+
+#yd-register-teaser .yd-box-title{
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    font-size: 20px;
+    display: inline-block;
+    width: 100%;
+    color: #000000;
+    /*min-height: 73px;*/
+    padding: 5px 0 9px 0;
+    border-bottom: 1px solid #d1c8b5;
+    background: none transparent;
+    text-shadow: 0px 2px 0 #ffffff;
+}
+
+#yd-register-teaser .yd-box-body ul{
+    display: inline-block;
+    width: 100%;
+}
+
+#yd-register-teaser .yd-box-body ul li{
+    float: left;
+    clear: left;
+    width: 247px;
+    padding: 15px 0 15px 48px;
+    margin: 0;
+    color: #6C6262;
+    font-size: 16px;
+    font-family: Helvetica,Verdana,Arial,sans-serif;
+}
+
+.yd-register-icon-1 { background: url(/media/images/yd-sprites-icons.png) 0 -2019px no-repeat; }
+.yd-register-icon-2 { background: url(/media/css/www.janamesa.com.br/images/bonus-img.png) no-repeat left center transparent; }
+.yd-register-icon-3 { background: url(/media/css/www.janamesa.com.br/images/mic-img.png) no-repeat left center transparent; }
+.yd-register-icon-4 { background: url(/media/css/www.janamesa.com.br/images/edit-img.png) no-repeat left center transparent; }
+.yd-register-icon-5 { background: url(/media/css/www.janamesa.com.br/images/precent-bonus-img.png) no-repeat left center transparent; }
+.yd-register-icon-6 { background: url(/media/css/www.janamesa.com.br/images/msg-img.png) no-repeat left center transparent; }
+
+#yd-register-teaser .yd-box-head {
+    padding-left: 35px;
+}
+
+.yd-registerthx {
+    position: relative;
+    width: 500px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 30px 0 0 130px;
+}
+
+.yd-registerthx span {
+    position: absolute;
+    top: -30px;
+    left: -100px;
+    display: block;
+    width: 210px;
+    height: 180px;
+    background: url(/media/images/yd-background/yd-register-thx.png);
+}
+
+.yd-registerthx h1 {
+    margin: 0 0 10px;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.yd-registerthx h2 {
+    font-size: 20px;
+}
+
+#yd-loginfail {
+    width: 720px;
+    float: left;
+    margin: 25px 0 0 0;
+    padding: 32px 0 0 0;
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) repeat-x scroll left top transparent;
+}
+
+#yd-loginfail div{
+    background: url(/media/css/www.janamesa.com.br/images/ico-warning-j2.png) no-repeat 12px 10px transparent;
+    padding: 0 12px 21px 150px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#yd-loginfail div br{
+    display: none;
+}
+
+#yd-loginfail div h1{
+    color: #AD2C0E;
+    font-family: Museo700,Helvetica,Verdana,Arial,sans-serif;
+    font-size: 242.85%;    
+}
+
+.ie7 #yd-loginfail div h1{
+    padding: 0 0 20px 0;
+}
+
+#yd-loginfail div h1:after{
+    content: "As senhas são case-sensitive.";
+    color: #3E3935;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1.2;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    display: block;
+    padding: 20px 0 0 0;
+}
+
+#yd-loginfail div p{
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 114.28%;
+}
+
+#yd-loginfail form.fo{
+    padding: 31px 0 27px 150px;
+    display: block;	
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) repeat-x scroll left top transparent;
+}
+
+#yd-loginfail form.fo ul {
+    display: inline-block;
+    width: 100%;
+}
+
+#yd-loginfail form.fo ul li {
+    float: left;
+    clear: left;
+    padding: 10px 0 0 0;
+}
+
+#yd-loginfail form.fo ul li:first-child{
+    padding: 0;
+}
+
+#yd-loginfail form.fo ul li .button{
+    cursor: pointer;
+    display: inline-block;
+    color: #FFFFFF;
+    font-family: Museo700,Helvetica,Verdana,Arial,sans-serif!important;
+    font-size: 18px;
+    text-shadow: 0 1px 0 #000000;
+    width: 110px;
+    height: 49px;
+    line-height: 46px;
+    vertical-align: middle;
+    text-align: center!important;
+    margin: 32px 0 0 0;
+    padding: 0;
+    border: 0 none;
+    filter: none!important;
+    background: url(/media/css/www.janamesa.com.br/images/btns-bg.png) 0 -98px no-repeat transparent;
+}
+
+#yd-loginfail form.fo ul li .button:hover{
+    text-decoration: underline!important;
+}
+
+#yd-loginfail form.fo ul li label {
+    display: block;
+    padding: 0 0 7px 0;
+    color: #484848;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 107.14%;
+}
+
+#yd-loginfail form.fo ul li a{
+    color: #685E5A;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 114.28%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#yd-ratings {
+    margin: 20px 0;
+}
+
+#yd-ratings-action {
+    margin: -20px 0 0;
+}
+
+#yd-ratings-action.yd-box {
+    position: relative;
+    padding: 20px;
+    width: 660px;
+}
+
+#yd-ratings-action h1 {
+    padding: 0 0 5px;
+    font-size: 16px;
+    font-weight: normal;
+    border-bottom: 1px solid #ccc;
+}
+
+#yd-ratings-action h2 {
+    padding: 5px 0 15px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+#yd-ratings-action ul {
+    width: 400px;
+}
+
+#yd-ratings-action ul li {
+    font-size: 14px;
+    padding: 18px 0 18px 50px;
+    border-bottom: 1px dotted #ccc;
+}
+
+#yd-ratings-action ul li small {
+    font-size: 11px;
+    color: green;
+    font-weight: bold;
+}
+
+#yd-ratings-action-1 { background: url(/media/images/yd-sprites-icons.png) -39px -2254px no-repeat; }
+#yd-ratings-action-2 { background: url(/media/images/yd-sprites-icons.png) 0px -2304px no-repeat; }
+#yd-ratings-action-3 { background: url(/media/images/yd-sprites-icons.png) -39px -2355px no-repeat; }
+
+#yd-ratings-action-1 img,
+#yd-ratings-action-2 img,
+#yd-ratings-action-3 img {
+    float: right;
+}
+
+#yd-ratings-action ul li img {
+    vertical-align: middle;
+}
+
+#yd-ratings-action ul li input,
+#yd-ratings-action ul li textarea {
+    width: 338px;
+}
+
+#yd-ratings-action ul li span {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    margin: 10px 20px 0;
+}
+
+#yd-ratings-action-yes {
+    cursor: pointer;
+    background: url(/media/images/yd-icons/yd-ratings-thumbs.png) 0 0 no-repeat;
+}
+
+#yd-ratings-action-no {
+    cursor: pointer;
+    background: url(/media/images/yd-icons/yd-ratings-thumbs.png) -120px 0 no-repeat;
+}
+
+#yd-ratings-action-yes:hover { background: url(/media/images/yd-icons/yd-ratings-thumbs.png) 0 -40px no-repeat; }
+#yd-ratings-action-no:hover { background: url(/media/images/yd-icons/yd-ratings-thumbs.png) -120px -40px no-repeat; }
+
+#yd-ratings-action-yes.active { background: url(/media/images/yd-icons/yd-ratings-thumbs.png) 0 -80px no-repeat; }
+#yd-ratings-action-no.active { background: url(/media/images/yd-icons/yd-ratings-thumbs.png) -120px -80px no-repeat; }
+
+#yd-ratings-info-1,
+#yd-ratings-info-2,
+#yd-ratings-info-3 {
+    position: absolute;
+    padding: 5px 10px 5px 30px;
+    font-size: 11px;
+    border: 1px solid #037ed8;
+    background: url(/media/images/yd-sprites-icons.png) -17px -717px no-repeat #d5e1ff;
+    border-radius: 4px;
+}
+
+#yd-ratings-info-1 {
+    top: 198px;
+    right: 100px;
+}
+
+#yd-ratings-info-2 {
+    top: 250px;
+    right: 100px;
+}
+
+#yd-ratings-info-3 {
+    top: 315px;
+    right: 100px;
+    width: 128px;
+}
+
+
+
+
+
+/* Danke Bewertungen */
+
+#yd-success {
+    margin: 20px 0;
+}
+
+#yd-success #yd-success-rating {
+    height: 140px;
+    padding: 110px 0 0 275px;
+    background: url(/media/images/yd-background/yd-success-rating.jpg) no-repeat;
+}
+
+#yd-success #yd-success-rating h2 {
+    width: 600px;
+    font-size: 24px;
+    text-align: center;
+}
+
+#yd-success #yd-success-rating p {
+    width: 600px;
+    font-size: 16px;
+    text-align: center;
+}
+
+#yd-success #yd-success-rating p a {
+    text-decoration: underline;
+}
+
+#yd-success h2 {
+    font-size: 14px;
+    margin: 0 0 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Verifizierte Rechnungen */
+
+#yd-signed {
+    width: 600px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 10px 0 0 120px;
+    font-size: 24px;
+    background: url(/media/images/yd-background/yd-signed.png) 0px 0px no-repeat;
+}
+
+#yd-signed a {
+    display: block;
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    margin: 10px 0 0 120px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #358ddb;
+    text-shadow: #000 1px 1px 0px;
+    border-radius: 4px;
+    background: #62abef;
+    background: -moz-linear-gradient(top,#62abef,#066fc0);
+    background: -webkit-gradient(linear, left top, left bottom, from(#62abef), to(#066fc0));
+}
+
+#yd-signed a:hover {
+    background: #066fc0;
+    background: -moz-linear-gradient(top,#066fc0,#62abef);
+    background: -webkit-gradient(linear, left top, left bottom, from(#066fc0), to(#62abef));
+}
+
+#yd-signed small {
+    display: block;
+    line-height: 140%;
+    color: #e10000;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+/*
+ * Cancel Newsletter
+ **********************************************************/
+
+.yd-news-off {
+    position: relative;
+    width: 835px;
+    height: 435px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: url(/media/images/yd-background/yd-news-off.jpg);
+}
+
+.yd-news-off h1 {
+    margin: 20px;
+    padding: 0 0 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.yd-news-off ul {
+    position: absolute;
+    top: 80px;
+    left: 200px;
+}
+
+.yd-news-off ul li {
+    margin: 0 0 10px;
+    padding: 0 0 0 35px;
+    font: 24px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    background: url(/media/images/yd-icons/check-24.png) no-repeat;
+}
+
+.yd-news-off p {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    width: 400px;
+}
+
+.yd-news-off .button {
+    color: #aaa;
+    font-weight: normal;
+    text-shadow: 0 0 0;
+    border: 1px solid #aaa;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* W3C */
+}
+
+#yd-newsletter-off1 {
+    position: absolute;
+    top: 300px;
+    left: 200px;
+    font-size: 14px;
+}
+
+#yd-newsletter-off2 {
+    position: absolute;
+    top: 300px;
+    left: 200px;
+}
+
+#yd-newsletter-off2 h2 {
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+.yd-profile {
+    margin: 0 5px 20px 2px;
+    background: none #ffffff;
+    -webkit-box-shadow: 0 0 9px #6eb5be;
+    -moz-box-shadow: 0 0 9px #6eb5be;
+    box-shadow: 0 0 9px #6eb5be;
+    -moz-border-radius: 8px !important;
+    -webkit-border-radius: 8px !important;
+    border-radius: 8px !important;
+    behavior: url(/media/css/www.janamesa.com.br/PIE.htc);
+    padding: 14px;
+    display: block;
+    width: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.ie7 .yd-awesome-rating .td div{
+    display: block;
+}
+
+.yd-profile .br-inner-box{
+    display: inline-block;	
+    width: 961px;
+    padding: 25px 10px;
+    border: 2px solid #C5DDE0;
+    -moz-border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    border-radius: 4px !important;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    behavior: url(/media/css/www.janamesa.com.br/PIE.htc);
+}
+
+.yd-profile-head {
+    position: absolute;
+    top: -71px;
+    left: 0;
+    width: 100%;
+}
+
+.yd-profile-head ul{
+    display: none!important;
+}
+
+.yd-profile-head .yd-button-140 {
+    float: right;
+    display: inline-block;
+    height: 42px;
+    line-height: 39px;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 18px;
+    text-shadow: 0 1px 0 #000000;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    left: 2px;
+    width: 217px;
+    vertical-align: middle;
+    text-align: center;
+    border: 0 none;
+    filter: none!important;
+    background: url(/media/css/www.janamesa.com.br/images/btns-bg.png) no-repeat scroll 0 -245px transparent;
+}
+
+.yd-profile-nav {
+    float: left;
+    width: 216px;
+    text-align: center;
+    margin-top: 10px!important;
+}
+
+.yd-profile-nav.br-box:after {
+    content: '';
+    width: 246px;
+    height: 10px;
+    background: url(/media/css/www.janamesa.com.br/images/paper-menu-bottom.png);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+.yd-profile-nav.br-box:before {
+    content: '';
+    width: 246px;
+    height: 10px;
+    background: url(/media/css/www.janamesa.com.br/images/paper-menu-top.png);
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+
+.yd-profile-nav ul{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    font-family: Helvetica,Verdana,Arial,sans-serif;
+}
+
+.yd-profile-nav ul li{
+    float: left;
+    clear: left;
+    width: 100%;
+}
+
+.yd-profile-nav ul li a{	
+    color: #6C6262;
+    font-size: 16px;
+    display: inline-block;
+    width: 100%;
+    border-top: 1px solid #C0B094;
+}
+
+.yd-profile-nav ul li:first-child a{
+    border: 0 none;
+}
+
+.yd-profile-nav ul li a:hover{
+    text-decoration: none;
+}
+
+.yd-profile-nav ul li a:hover span{
+    text-decoration: underline!important;
+}
+
+.yd-profile-nav ul li css3-container{
+    z-index: 0;
+}
+
+.yd-profile-nav ul li a.active{
+    font-family: Helvetica-Bold, Helvetica, Verdana, Arial, sans-serif;
+    background: none #c0b094;
+    margin: 0 0 -2px 0;
+    -webkit-box-shadow: 0 2px 0 #ffffff;
+    -moz-box-shadow: 0 2px 0 #ffffff;
+    box-shadow: 0 2px 0 #ffffff;
+    -moz-border-radius: 3px !important;
+    -webkit-border-radius: 3px !important;
+    border-radius: 3px !important;
+    border: 0 none;
+    color: #FFFFFF;
+    text-shadow: 0 2px 0 #736A59;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    behavior: url(/media/css/www.janamesa.com.br/PIE.htc);
+}
+
+.yd-profile-nav ul li a.active:hover,
+.yd-profile-nav ul li a.active:hover span{
+    text-decoration: none!important;
+}
+
+.yd-profile-nav ul li a span{
+    padding: 15px 0 15px 50px;
+    display: inline-block;
+    width: 166px;
+}
+
+.yd-profile-nav ul li a.yd-pn0 span{ background: url(/media/css/www.janamesa.com.br/images/profile-img.png) 10px center no-repeat transparent; }
+.yd-profile-nav ul li a.yd-pn1 span{ background: url(/media/css/www.janamesa.com.br/images/edit2-img.png) 10px center no-repeat transparent; }
+.yd-profile-nav ul li a.yd-pn2 span{ background: url(/media/css/www.janamesa.com.br/images/home-img.png) 9px center no-repeat transparent; }
+.yd-profile-nav ul li a.yd-pn5 span{ background: url(/media/css/www.janamesa.com.br/images/star-img.png) 11px center no-repeat transparent; }
+.yd-profile-nav ul li a.yd-pn4 span{ background: url(/media/css/www.janamesa.com.br/images/basket-img.png) 6px center no-repeat transparent; }
+.yd-profile-nav ul li a.yd-pn7 span{ background: url(/media/css/www.janamesa.com.br/images/like-img.png) 10px center no-repeat transparent; }
+.yd-profile-nav ul li a.yd-pn6 span{ background: url(/media/css/www.janamesa.com.br/images/point-img.png) 10px center no-repeat transparent; }
+.yd-profile-nav ul li a.yd-pn3 span{ background: url(/media/css/www.janamesa.com.br/images/heart.png) 0 center no-repeat transparent; }
+
+.yd-profile-body {
+    position: relative;
+    top: 0;
+    left: 0;
+    float: right;
+    width: 695px;
+}
+
+.yd-profile-button {
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2b5300;
+    text-shadow: 0 1px 0 #fff;
+    border: 1px solid #c3be23;
+    border-radius: 6px;
+    background: #e9e44d; /* Old browsers */
+    background: -moz-linear-gradient(top, #e9e44d 0%, #bfce32 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e9e44d), color-stop(100%,#bfce32)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #e9e44d 0%,#bfce32 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #e9e44d 0%,#bfce32 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #e9e44d 0%,#bfce32 100%); /* IE10+ */
+    background: linear-gradient(top, #e9e44d 0%,#bfce32 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9e44d', endColorstr='#bfce32',GradientType=0 ); /* IE6-9 */
+    box-shadow: inset 0 1px 1px #fff;
+}
+
+.yd-profile-button:hover {
+    background: #bfce32; /* Old browsers */
+    background: -moz-linear-gradient(top, #bfce32 0%, #e9e44d 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bfce32), color-stop(100%,#e9e44d)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #bfce32 0%,#e9e44d 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #bfce32 0%,#e9e44d 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #bfce32 0%,#e9e44d 100%); /* IE10+ */
+    background: linear-gradient(top, #bfce32 0%,#e9e44d 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfce32', endColorstr='#e9e44d',GradientType=0 ); /* IE6-9 */
+}
+
+#yd-user-location-create {
+    display: inline-block;
+    height: 38px;
+    line-height: 40px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #73736a;
+    font-size: 13px;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    padding: 0 19px;
+    text-shadow: 1px 1px 0 #ffffff;
+    background: none #f2ebdf;
+    border: 1px solid #f6f6f6;
+    -webkit-box-shadow: 0 2px 0 #c2c2c2;
+    -moz-box-shadow: 0 2px 0 #c2c2c2;
+    box-shadow: 0 2px 0 #c2c2c2;
+    -moz-border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    border-radius: 4px !important;
+    behavior: url(/media/css/www.janamesa.com.br/PIE.htc);
+}
+
+#yd-user-location-create:hover {
+    text-decoration: underline;
+    color: #73736a;
+}
+
+.yd-coupon {
+    margin: 60px 0 30px;
+}
+
+.yd-coupon div {
+    position: relative;
+}
+
+.yd-coupon div div {
+    padding: 20px 170px 40px;
+    background: url(/media/images/yd-profile/yd-wood-5.png);
+}
+
+.yd-coupon div.yd-coupon-first span,
+.yd-coupon div.yd-coupon-second span,
+.yd-coupon div.yd-coupon-everything-else span {
+    display: block;
+    position: relative;
+}
+
+.yd-coupon div.yd-coupon-second span a,
+.yd-coupon div.yd-coupon-everything-else span a {
+    display: block;
+    width: 234px;
+    height: 43px;
+    line-height: 41px;
+    padding: 0 0 0 17px;
+    background: url(/media/images/yd-profile/yd-coupon-button.png) 0 0;
+    position: absolute;
+    top: -20px;
+    left: 170px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+}
+
+.yd-coupon div.yd-coupon-second span a:hover,
+.yd-coupon div.yd-coupon-everything-else span a:hover {
+    background: url(/media/images/yd-profile/yd-coupon-button.png) 0 -43px;
+}
+
+.yd-coupon div.yd-coupon-second span a:focus,
+.yd-coupon div.yd-coupon-everything-else span a:active,
+.yd-coupon div.yd-coupon-second span a:active,
+.yd-coupon div.yd-coupon-everything-else span a:active {
+    background: url(/media/images/yd-profile/yd-coupon-button.png) 0 -86px;
+}
+
+.yd-coupon div.yd-coupon-second span img,
+.yd-coupon div.yd-coupon-everything-else span img {
+    position: absolute;
+    right: 95px;
+    bottom: 40px;
+}
+
+.yd-coupon div.yd-coupon-first span {
+    height: 177px;
+    background: url(/media/images/yd-profile/yd-wood-2.png);
+}
+
+.yd-coupon div.yd-coupon-second span {
+    height: 83px;
+    background: url(/media/images/yd-profile/yd-wood-3.png);
+}
+
+.yd-coupon div.yd-coupon-everything-else span {
+    height: 92px;
+    background: url(/media/images/yd-profile/yd-wood-4.png);
+}
+
+.yd-coupon div.yd-coupon-second,
+.yd-coupon div.yd-coupon-everything-else {
+    margin: -25px 0 0;
+}
+
+.yd-coupon div.yd-coupon-first h2 {
+    margin: 0 0 -90px;
+    padding: 0 0 0 250px;
+    font-family: FuturaCondensedExtraBold, arial, "nimbus sans l", sans-serif;
+    font-size: 23px;
+}
+
+.yd-coupon div.yd-coupon-first h2 strong {
+    display: block;
+    font-weight: normal;
+    color: green;
+}
+
+.yd-coupon div h3 {
+    font-family: FuturaCondensedExtraBold, arial, "nimbus sans l", sans-serif;
+    font-size: 50px;
+    text-shadow:
+        0 3px 0 #fff,
+        0 -3px 0 #fff,
+        3px 0 0 #fff,
+        -3px 0 0 #fff,
+        -3px -3px 0 #fff,
+        3px 3px 0 #fff,
+        -3px 3px 0 #fff,
+        3px -3px 0 #fff,
+        0 0 8px #000;
+}
+
+.yd-coupon div h3 i {
+    font-style: normal;
+    color: green;
+}
+
+.yd-coupon div small {
+    font-size: 16px;
+    color: #777;
+}
+
+.yd-coupon div p {
+    margin: 10px 0 0;
+    padding: 0 150px 0 0;
+}
+
+
+
+/******** AVALIAR POPUP *********
+********************************/
+
+.yd-profile-body.availor-action h1{
+    display: none!important;
+}
+
+.yd-awesome-rating{
+    margin: 0;
+    padding: 10px 0;
+    width: 695px;	
+    text-align: left;
+    position: relative;
+    top: 0;
+    left: 0;	
+}
+
+.yd-awesome-rating .paper-body{
+    display: inline-block;
+    width: 100%;
+}
+
+.yd-awesome-rating .paper-body .yd-rating-tesa{
+    display: inline-block;
+    width: 370px;
+    padding: 0 0 13px 0;	
+}
+
+.yd-awesome-rating .paper-body .yd-rating-tesa .br-detail-img{
+    width: 126px;
+    padding: 11px 15px 14px 14px;
+    float: left;
+    clear: none; 
+    background: url(/media/css/www.janamesa.com.br/images/papre-img.png) no-repeat scroll 0 0 transparent;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%; 
+    zoom: 1;
+}
+
+.yd-awesome-rating .paper-body .yd-rating-tesa .br-detail-img img {
+    width: 100%!important;
+    height: auto!important;
+}
+
+.yd-awesome-rating .paper-body .yd-rating-tesa ul{
+    float: left;
+    width: 205px;
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+.yd-awesome-rating .paper-body .yd-rating-tesa ul li{
+    float: left;
+    clear: left;
+    width: 100%;
+    padding: 0 0 3px 0;
+    margin: 0;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 14px;
+    color: #949494;
+}
+
+.yd-awesome-rating .paper-body .yd-rating-tesa ul li.br-name{
+    font-family: Helvetica,Verdana,Arial,sans-serif;
+    font-size: 24px;
+    padding: 10px 0;
+    color: #3e3935;
+}
+
+.yd-awesome-rating .paper-body > h2,
+.yd-awesome-rating .paper-body > h3{
+    margin: 0 10px;
+    padding: 15px 0 5px 0; 
+    font-weight: normal;
+    font-size: 22px;
+    font-family: Helvetica,Verdana,Arial,sans-serif;
+    color: #3e3935;
+}
+
+.yd-awesome-rating .paper-body > h2{
+    padding: 19px 0 5px 0; 
+    background: url(/media/css/www.janamesa.com.br/images/strip2-rw-block.png) repeat-x left top transparent;
+}
+
+.yd-awesome-rating .paper-body #yd-rating-yes,
+.yd-awesome-rating .paper-body #yd-rating-no{
+    display: inline-block;
+    height: 42px;
+    line-height: 42px;
+    padding: 0;
+    margin: 0 0 0 10px;
+    color: #ffffff;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 18px;
+    text-shadow: 0 1px 0 #000000;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 140px;
+    vertical-align: middle;
+    text-align: center;
+    border: 0 none;
+    text-transform: uppercase;
+    filter: none!important;	
+    opacity: 0.7;
+    background: url(/media/css/www.janamesa.com.br/images/btn-bg140.png) no-repeat scroll 0 -42px transparent;
+}
+
+.ie7 .yd-awesome-rating .paper-body #yd-rating-yes, .ie8 .yd-awesome-rating .paper-body #yd-rating-yes,
+.ie7 .yd-awesome-rating .paper-body #yd-rating-no, .ie8 .yd-awesome-rating .paper-body #yd-rating-no{
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70)!important;
+}
+
+.yd-awesome-rating .paper-body #yd-rating-yes:hover, .yd-awesome-rating .paper-body #yd-rating-yes.active,
+.yd-awesome-rating .paper-body #yd-rating-no:hover, .yd-awesome-rating .paper-body #yd-rating-no.active{
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.ie7 .yd-awesome-rating .paper-body #yd-rating-yes:hover, .ie7 .yd-awesome-rating .paper-body #yd-rating-yes.active,
+.ie7 .yd-awesome-rating .paper-body #yd-rating-no:hover, .ie7 .yd-awesome-rating .paper-body #yd-rating-no.active,
+.ie8 .yd-awesome-rating .paper-body #yd-rating-yes:hover, .ie8 .yd-awesome-rating .paper-body #yd-rating-yes.active,
+.ie8 .yd-awesome-rating .paper-body #yd-rating-no:hover, .ie8 .yd-awesome-rating .paper-body #yd-rating-no.active{
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100)!important;
+}
+
+.yd-awesome-rating .paper-body #yd-rating-yes{
+    background: url(/media/css/www.janamesa.com.br/images/btn-bg140.png) no-repeat scroll 0 0 transparent;
+}
+
+.yd-awesome-rating .paper-body #yd-rating-yes span,
+.yd-awesome-rating .paper-body #yd-rating-no span{
+    display: inline-block;
+    height: 100%;
+    padding: 0 0 0 30px;
+}
+
+.yd-awesome-rating .paper-body #yd-rating-yes span{
+    background: url(/media/css/www.janamesa.com.br/images/like-ico.png) no-repeat scroll 0 6px transparent;
+}
+
+.yd-awesome-rating .paper-body #yd-rating-no span{
+    background: url(/media/css/www.janamesa.com.br/images/unlike-ico.png) no-repeat scroll 0 12px transparent;
+}
+
+.yd-awesome-rating .paper-body > h3{
+    padding: 30px 0 5px 0;
+}
+
+.yd-awesome-rating .paper-body .paper-right{
+    float: right;
+    clear: right;
+    width: 295px;
+    margin-top: 10px;
+    padding-left: 30px;
+    background: none #fff;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 8;
+}
+
+.ie7 .yd-awesome-rating .paper-body .paper-right{
+    margin-top: 0;
+}
+
+.yd-awesome-rating .paper-body img[src*="star"]{
+    display: inline-block;
+    margin: 0 0 0 -4px;
+    padding: 0 0 0 4px;
+    width: 20px!important;
+    height: auto!important;
+    cursor: pointer;
+}
+
+.yd-awesome-rating .paper-body img[src*="star"]#yd-rate1-qual-1,
+.yd-awesome-rating .paper-body img[src*="star"]#yd-rate2-qual-1{
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+.yd-awesome-rating .paper-body .paper-right-body{
+    font-family: Helvetica,Verdana,Arial,sans-serif;
+    font-size: 14px;
+    color: #3e3935;
+}
+
+.yd-awesome-rating .paper-body .paper-right-body h1{
+    display: inline-block!important;
+    width: 100%;
+    color: #4D4D4D;
+    font-family: KGLoveYouThroughItRegular,Helvetica,Verdana,Arial,sans-serif;
+    font-size: 34px;
+    padding: 0 0 8px 0;
+    margin: 0 0 8px 0;
+    text-align: left;
+    border-bottom: 1px solid #d1c8b5;
+}
+
+.yd-awesome-rating .paper-body .paper-right-body h1 span {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 0 0 0;;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.yd-awesome-rating .paper-body .paper-right-body div{
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0 0 0;
+    text-align: right;
+}
+
+.yd-awesome-rating .paper-body .paper-right-body div span{
+    float: left;
+}
+
+.yd-awesome-rating .paper-body .paper-right-body ul{
+    display: inline-block;
+    width: 100%;
+    padding: 15px 0 0 0;
+    margin: 0;
+}
+
+.yd-awesome-rating .paper-body .paper-right-body ul li{
+    float: left;
+    clear: left;
+    width: 100%;
+    padding: 5px 0 0 0;
+    margin: 0;
+    border-top: 1px solid #d1c8b5;
+}
+
+.yd-awesome-rating .paper-body .paper-right-body ul li:first-child{
+    border: 0 none;
+}
+
+.yd-awesome-rating .paper-body .paper-right-body ul li span.name{
+    float: left;
+    left: 0;
+    line-height: 19px;
+    margin: 0 0 0 5px;
+    padding: 0 0 0 36px;
+    position: relative;
+    top: 0;
+    width: 138px;
+}
+
+.yd-awesome-rating .paper-body .paper-right-body ul li span.name span{
+    float: left;
+    font-size: 17px;
+    left: 0;
+    line-height: 17px;
+    padding: 0 5px 0 0;
+    position: absolute;
+    top: 0;
+    width: 31px;
+}
+
+.yd-awesome-rating .paper-body .paper-right-body ul li span.price{
+    float: right;
+    margin: 0 5px 0 0;
+    text-align: right;
+    width: 79px;
+    line-height: 20px;
+}
+
+.yd-awesome-rating .paper-body .paper-right-body ul li span.desc{
+    float: left;
+    font-size: 12px;
+    padding: 5px 0 0 41px;
+    width: 138px;
+}
+
+.yd-awesome-rating .paper-body .paper-right-body ul.details{
+    padding: 20px 0 0 0;
+}
+
+.yd-awesome-rating .paper-body .paper-right-body ul.details li{
+    padding: 0 0 0 41px;
+    width: 224px;
+    text-align: right;
+    border: 0 none;
+}
+
+.yd-awesome-rating .paper-body .paper-right-body ul.details li span{
+    float: left;
+}
+
+.yd-awesome-rating .paper-body .paper-right-body ul.details li.br-total{
+    padding: 16px 0 0 0;
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) repeat-x left top transparent;
+    font-family: KGLoveYouThroughItRegular,Helvetica,Verdana,Arial,sans-serif;
+    color: #127F00;
+    font-size: 32px;
+    line-height: 1.3;
+    width: 100%;
+    margin: 12px 0 0 0;
+}
+
+.yd-awesome-rating .paper-body .paper-right-body ul.details li.br-total span{
+    font-family: Helvetica-Bold,Helvetica,Verdana,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 33px;
+    text-shadow: 0 2px 0 #FFFFFF;
+    text-transform: uppercase;
+}
+
+.yd-awesome-rating .paper-body .paper-right-body ul.details li.br-last{
+    width: 100%;
+    padding: 16px 0 0 0;
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) repeat-x left top transparent;
+    text-align: left;
+    font-family: Helvetica-Bold,Helvetica,Verdana,Arial,sans-serif;
+    font-size: 14px;
+    color: #ad5146;
+}
+
+.yd-awesome-rating .paper-body .paper-right-body ul.details li.br-last a{
+    color: #ad5146;
+}
+
+.yd-awesome-rating .paper-body #yd-rate-form{
+    display: block;
+    width: auto;
+    float: none;
+    clear: none;
+}
+
+.yd-awesome-rating .paper-body #yd-rate-form h3{
+    color: #3E3935;
+    font-family: Helvetica,Verdana,Arial,sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    margin: 0 10px;
+    padding: 30px 0 5px;
+}
+
+.ie7 .yd-awesome-rating .paper-body #yd-rate-form h3{
+    margin-top: -45px;
+}
+
+.yd-awesome-rating .paper-body #yd-rate-form .table, 
+.yd-awesome-rating .paper-body #yd-rate-form .table .tr,
+.yd-awesome-rating .paper-body #yd-rate-form .table .tr .td{
+    display: block!important;
+    padding: 0!important;
+    margin: 0!important;
+    width: auto!important;
+    border: 0 none!important;
+}
+.ie7 .yd-awesome-rating .paper-body #yd-rate-form .table .tr .td{
+    width: 100%!important;
+}
+
+.yd-awesome-rating .paper-body #yd-rate-form .table:after, .yd-awesome-rating .paper-body #yd-rate-form .table:before,
+.yd-awesome-rating .paper-body #yd-rate-form .table .tr:after, .yd-awesome-rating .paper-body #yd-rate-form .table .tr:before,
+.yd-awesome-rating .paper-body #yd-rate-form .table .tr .td:after, .yd-awesome-rating .paper-body #yd-rate-form .table .tr .td:before{
+    content: ''!important;
+    display: none!important;
+}
+
+.yd-awesome-rating .paper-body #yd-rate-form .table{
+    margin: 0 10px!important;
+}
+
+.yd-awesome-rating .paper-body #yd-rate-form .br-submit{
+    display: inline-block;
+    width: 100%;
+    margin: 25px 0 0 0;
+    padding: 20px 0 0 0;
+    background: url(/media/css/www.janamesa.com.br/images/strip2-rw-block.png) repeat-x left top transparent;
+}
+
+.yd-awesome-rating .paper-body #yd-rate-form .br-submit a{
+    float: right;
+    display: inline-block;
+    color: #FFFFFF;
+    font-family: Museo700,Helvetica,Verdana,Arial,sans-serif;
+    font-size: 18px;
+    text-shadow: 0 1px 0 #000000;
+    width: 288px;
+    height: 49px;
+    line-height: 49px;
+    vertical-align: middle;
+    text-align: center!important;
+    margin: 0 4px 0 0;
+    padding: 0;
+    background: url(/media/css/www.janamesa.com.br/images/yd-button-green-288.png) 0 0 no-repeat transparent;
+    text-transform: uppercase;
+    border: 0 none;
+    text-decoration: none;
+}
+
+.yd-awesome-rating .paper-body #yd-rate-form .br-submit a:hover{
+    text-decoration: underline;
+}
+
+.yd-awesome-rating .paper-body #yd-rate-form .table .tr .td div{
+    padding: 5px 0;	
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    color: #757372;
+}
+
+.yd-awesome-rating .paper-body .br-title-fr,
+.yd-awesome-rating .paper-body #yd-rate-form .br-title-fr,
+.yd-awesome-rating .paper-body #yd-rate-form .yd-please-write-your-name,
+.yd-awesome-rating .paper-body #yd-rate-form .yd-please-write-your-rating{
+    float: right;
+    clear: right;
+    margin: 0 3px 0 33px;
+}
+
+.yd-awesome-rating .paper-body .br-title-fr,
+.yd-awesome-rating .paper-body #yd-rate-form .br-title-fr{	
+    width: 289px;
+    margin: 0 3px 0 33px!important;
+    padding: 18px 0 5px 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #757372;
+}
+
+.yd-awesome-rating .paper-body #yd-rate-form .yd-please-write-your-name{
+    width: 287px;
+}
+
+.yd-awesome-rating .paper-body #yd-rate-form .yd-please-write-your-rating{
+    width: 277px;
+    height: 120px;
+}
+
+
+
+
+.yd-profile-table table {
+    border-collapse: separate;
+}
+
+.yd-profile-table {
+    width: 695px;
+    margin: 0 auto 20px;
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) repeat-x scroll 0 100% transparent;
+}
+
+.locations-old {
+    display: none;
+}
+
+.yd-profile-top-border {
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) repeat-x scroll 0 0 transparent;
+    height: 4px;
+    width: 100%;
+}
+
+.yd-profile-table .thead {
+    display: none;
+}
+
+.yd-profile-table .td,
+.yd-profile-table .th,
+.yd-profile-table td,
+.yd-profile-table th {
+    padding: 5px;
+    font-size: 11px;
+}
+.ratings .yd-profile-table .td,
+.ratings .yd-profile-table .th {
+    padding: 10px 5px;
+}
+
+.yd-profile-table .th,
+.yd-profile-table th {
+    white-space: nowrap;
+    color: #aaa;
+    border-bottom: 1px dotted #ccc;
+}
+
+.td-up,
+.td-down {
+    display: inline-block;
+    width: 7px;
+    height: 6px;
+    margin: 0 3px;
+    background: url(/media/images/yd-profile/yd-profile-sprite-nav.png);
+}
+
+.td-up { background-position: -100px -200px; }
+.td-down { background-position: -107px -206px; }
+.td-up.active { background-position: -100px -206px; }
+.td-down.active { background-position: -107px -200px; }
+
+.yd-profile-table .tr:nth-child(even),
+.yd-profile-table tr:nth-child(even) {
+
+}
+
+.yd-profile-table .tr:hover,
+.yd-profile-table tr:hover {
+    /*     background: #eee; */
+}
+
+.yd-profile-table .tr.warning {
+    -webkit-background-size: 30px 30px;
+    -moz-background-size: 30px 30px;
+    -ms-background-size: 30px 30px;
+    -o-background-size: 30px 30px;
+    background-size: 30px 30px;
+    background-image: -webkit-gradient(linear, left top, right bottom,
+        color-stop(.25, rgba(255, 255, 255, .1)), color-stop(.25, transparent),
+        color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .1)),
+        color-stop(.75, rgba(255, 255, 255, .1)), color-stop(.75, transparent),
+        to(transparent));
+    background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, .1) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%,
+        transparent 75%, transparent);
+    background-image: -moz-linear-gradient(135deg, rgba(255, 255, 255, .1) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%,
+        transparent 75%, transparent);
+    background-image: -ms-linear-gradient(135deg, rgba(255, 255, 255, .1) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%,
+        transparent 75%, transparent);
+    background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, .1) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%,
+        transparent 75%, transparent);
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .1) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%,
+        transparent 75%, transparent);
+    background-color: #f77;
+    border-color: #c43d3d;
+}
+
+.yd-profile-table .tr:nth-child(even) .td,
+.yd-profile-table tr:nth-child(even) td {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.yd-profile-table .tr:nth-child(odd) .td,
+.yd-profile-table tr:nth-child(odd) td {
+    border-top: 1px dotted #ccc;
+    border-bottom: 1px dotted #ccc;
+}
+
+.yd-profile-table .td:last-child,
+.yd-profile-table td:last-child {
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.locations-new,
+.locations-new textarea,
+body .locations-new input[type="text"],
+.locations-new  .td {
+    font-family: Helvetica,Verdana,Arial,sans-serif;
+    font-size: 20px;
+    color: #3e3935;
+    height: auto;
+    line-height: auto;
+}
+
+.locations-new textarea {
+    height: 26px !important;
+}
+
+.td-edit,
+.td-delete,
+.td-show,
+.td-star,
+.td-repeat,
+.td-thumb,
+.td-check,
+.td-heart,
+.td-letsgo {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 0 0 10px;
+    background: url(/media/images/yd-profile/yd-profile-sprite-nav.png);
+}
+
+.locations-edit,
+.yd-heart-location,
+.locations-delete,
+.locations-letsgo {
+    width: 32px;
+    height: 29px;
+    background: url(/media/css/www.janamesa.com.br/images/yd-profile-sprite-locations.png) 0 0 no-repeat transparent;
+}
+
+
+.td-edit { background-position: -100px 0px; }
+.td-edit:hover { background-position: -116px 0px; }
+.td-edit:focus, .td-edit:active { background-position: -148px 0; }
+
+.locations-edit,
+.locations-edit:hover,
+.locations-edit:focus,
+.locations-edit:active {
+    background-position: 0 0;
+}
+
+.td-delete { background-position: -100px -16px; }
+.td-delete:hover { background-position: -116px -16px; }
+.td-delete:focus, .td-delete:active { background-position: -148px -16px; }
+
+.locations-delete,
+.locations-delete:hover,
+.locations-delete:focus,
+.locations-delete:active {
+    background-position: 0 -242px;
+}
+
+.td-show { background-position: -100px -32px; }
+.td-show:hover { background-position: -116px -32px; }
+.td-show:focus, .td-show:active { background-position: -148px -32px; }
+
+.td-repeat { background-position: -100px -48px; }
+.td-repeat:hover { background-position: -116px -48px; }
+.td-repeat:focus, .td-repeat:active { background-position: -148px -48px; }
+
+.td-star { background-position: -132px -64px; }
+.td-star.inactive { background-position: -100px -64px; }
+.td-star:hover { background-position: -116px -64px; }
+.td-star:focus, .td-star:active { background-position: -148px -64px; }
+
+.td-thumb { background-position: -132px -80px; } /* unused */
+.td-thumb:hover { background-position: -116px -80px; }
+.td-thumb:focus, .td-thumb:active { background-position: -148px -80px; }
+.td-thumb.inactive { background-position: -100px -96px; }
+.td-thumb.inactive-error { background-position: -100px -160px; }
+
+.td-check { background-position: -100px -96px; }
+.td-check:hover { background-position: -116px -96px; }
+.td-check:focus, .td-check:active { background-position: -148px -96px; }
+
+.td-heart { background-position: -100px -112px; }
+.td-heart.active { background-position: -132px -112px; }
+.td-heart:hover { background-position: -116px -112px; }
+.td-heart:focus, .td-heart:active { background-position: -148px -112px; }
+
+.yd-heart-location,
+.yd-heart-location:hover,
+.yd-heart-location:focus,
+.yd-heart-location:active,
+.yd-heart-location.active {
+    background-position: 0 -116px;
+}
+
+.td-letsgo { background-position: -100px -128px; }
+.td-letsgo:hover { background-position: -116px -128px; }
+.td-letsgo:focus, .td-letsgo:active { background-position: -148px -128px; }
+
+.locations-letsgo,
+.locations-letsgo:hover,
+.locations-letsgo:focus,
+.locations-letsgo:active {
+    background-position: 0 -371px;
+}
+
+
+.yd-profile-table .td-storno {
+    display: block;
+    color: red;
+}
+
+.yd-profile-table .td-discount {
+    display: block;
+    color: green;
+}
+
+.yd-profile-table .tr * {
+    vertical-align: top;
+}
+
+.yd-profile-table textarea {
+    height: 14px;
+}
+
+
+
+
+.yd-profile-body h1 {
+    display: block;
+    width: auto;
+    margin: 0 5px;
+    padding: 20px 5px 15px 5px;
+    color: #3E3935;
+    font-size: 22px;
+    font-weight: normal;
+    font-family: Helvetica,Verdana,Arial,sans-serif;
+}
+
+.yd-profile-body h1.locations {
+    display: none;
+}
+
+.yd-profile-body h1.br-strip{
+    border-top: 1px solid #D1C8B5;
+}
+
+.br-favorite-list{
+    margin: 15px 0 -34px 0;
+    padding: 15px 0 0 0;
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) repeat-x scroll left top transparent;
+}
+
+.br-favorite-list .br-inner{
+    padding: 0 0 15px 0;
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) repeat-x scroll left bottom transparent;
+}
+
+.br-favorite-list .br-inner h1{
+    font-family: Museo700,Helvetica,Verdana,Arial,sans-serif;
+    color: #6C584A;
+    font-size: 26px;
+}
+
+.br-favorite-list .br-inner .br-no-fav{
+    margin: 0 5px;
+    padding: 0 5px 20px!important;
+}
+
+.yd-profile-body > h1 option {
+    padding: 0 10px;
+    text-align: left;
+}
+
+.yd-profile-body > h1 span {
+    float: right;
+}
+
+.yd-profile-body form h1 i {
+    float: right;
+    font-style: normal;
+    font-size: 11px;
+    color: #6fb5c3;
+}
+
+.yd-profile-body > h1 span form {
+    display: inline-block;
+}
+
+.yd-profile-body > h1 span a {
+    float: right;
+    margin: 5px 0 0 5px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(/media/images/yd-profile/yd-profile-sprite-nav.png) -100px -144px;
+}
+
+.yd-profile-body > h1 span a:hover {
+    background: url(/media/images/yd-profile/yd-profile-sprite-nav.png) -116px -144px;
+}
+
+.yd-profile-body > h1 strong{
+    font-weight: normal;
+}
+
+a.yd-profile-blue-button {
+    padding: 8px 8px 8px 40px;
+    color: #006bbb;
+    font-weight: bold;
+    background: url(/media/images/yd-profile/yd-profile-sprite-nav.png) -96px -216px #d2edf2 no-repeat;
+    border-radius: 4px;
+}
+
+a.yd-profile-blue-button:hover {
+    text-decoration: none;
+    background: url(/media/images/yd-profile/yd-profile-sprite-nav.png) -96px -216px #9acefc no-repeat;
+}
+
+a.yd-profile-blue-button:focus,
+a.yd-profile-blue-button:active {
+    color: #fff;
+    text-shadow: 0 0 0;
+    background: url(/media/images/yd-profile/yd-profile-sprite-nav.png) -96px -216px #9acefc no-repeat;
+}
+
+h1 a.yd-profile-blue-button {
+    float: right;
+    margin: -8px -8px 0 0;
+}
+
+
+
+p.yd-profile-fidelity {
+    margin: 0;
+    padding: 25px 40px 25px 200px;
+    border-bottom: 1px solid #ccc;
+    background: url(/media/images/yd-profile/yd-profile-points.png) 40px 30px no-repeat;
+}
+
+
+
+
+
+
+.yd-profile-body .yd-service-list {
+    margin: 0 auto;
+}
+
+
+
+
+
+.yd-profile-picture {
+    padding: 11px 17px 20px 14px;
+    margin: 0 0 65px 0;
+    float: left;
+    clear: none;
+    background: url(/media/css/www.janamesa.com.br/images/papre-img.png) no-repeat scroll 0 0 transparent;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    zoom: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 197px;
+}
+
+.index .yd-profile-picture p{
+    display: none!important;
+}
+
+.yd-profile-picture form{
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    bottom: -45px;
+    left: 0;
+}
+
+.settings h1{
+    margin: 16px 5px 0;
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) repeat-x left top transparent;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 26px;
+    color: #6c584a;
+}
+
+.settings h1 i{
+    display: none!important;
+}
+
+.settings .yd-profile-picture{
+    margin: 0 467px 0 0;
+}
+
+.settings .yd-profile-picture form{
+    bottom: 25px;
+    left: 253px;
+    width: 442px;
+}
+
+.settings ul {
+    margin: 0 0 0 10px;
+}
+
+.settings #fb-connect img {
+    margin: 10px 0 0;
+}
+
+.yd-profile-picture form div.uniformbutton{
+    margin: 0 0 0 8px;
+    padding: 0;
+    border: 0 none;	
+    float: left;
+    height: 42px;
+    line-height: 39px;
+    color: #ffffff;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 18px;
+    text-shadow: 0 1px 0 #000000;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 58px;
+    vertical-align: middle;
+    text-align: center;
+    filter: none!important;
+    background: url(/media/css/www.janamesa.com.br/images/btns-bg.png) no-repeat scroll -268px -98px transparent;
+}
+
+.yd-profile-picture form div.uniformbutton:hover{
+    text-decoration: underline;
+}
+
+.yd-profile-picture form div.uniformbutton span{
+    background: none transparent;
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    line-height: inherit;
+    height: auto;
+    width: auto;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: normal;
+    font-weight: normal;
+}
+
+.yd-profile-picture form div.uniformbutton span input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.yd-profile-picture form div.uniformbutton *{
+    cursor: pointer;
+}
+
+.yd-profile-picture form div.uploader{
+    float: left;
+    clear: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 35px;
+    padding: 0;
+    margin: 4px 0 0 0;
+    background: url(/media/css/www.janamesa.com.br/images/file-inp-bg.png) 0 0 no-repeat transparent;
+}
+
+.yd-profile-picture form div.uploader input{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    line-height: 100%;
+}
+
+.yd-profile-picture form div.uploader span.action{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    height: 100%;
+    width: 35px;
+    background: none transparent!important;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+
+.yd-profile-picture form div.uploader span.filename{
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    height: 33px;
+    width: 217px;
+    overflow: hidden;
+    line-height: 33px;
+    padding: 0 0 0 8px;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 14px;
+    color: #8e8f8f;
+    border: 0 none;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.yd-profile-picture p {
+    left: 253px;
+    position: absolute;
+    top: 0;
+    width: 442px;
+    margin: 20px 0 0 0;
+    padding: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #757372;
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.yd-profile-picture p span{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 0 2px 0 0;
+    height: 28px;
+    line-height: 28px;
+    width: 29px;
+    font-size: 12px;
+    background: url(/media/css/www.janamesa.com.br/images/point-bg.png) 0 0 no-repeat transparent;
+}
+
+.settings .yd-profile-form{
+    display: inline-block;
+    width: 100%;
+}
+
+.yd-profile-picture div.window {
+    height: 190px;
+    width: 197px;
+    background: url(/media/css/www.janamesa.com.br/images/default_user.png) no-repeat scroll 0 0 transparent;
+}
+
+.yd-profile-picture a,
+.yd-profile-picture em{
+    background: url(/media/css/www.janamesa.com.br/images/place-text-bg.png) no-repeat right bottom transparent;
+    bottom: 25px;
+    display: inline-block;
+    left: 14px;
+    padding: 7px 5px 6px 5px;
+    position: absolute;
+    text-align: center;
+    width: 187px;
+    z-index: 5;
+    font-size: 12px;
+    color: #ad5146;
+    font-family: Helvetica-Bold, Helvetica, Verdana, Arial, sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+.yd-profile-picture em{
+    z-index: 2;
+}
+
+.yd-profile-picture a:hover{
+    text-decoration: underline;
+    background: url(/media/css/www.janamesa.com.br/images/place-text-bg.png) no-repeat right bottom transparent;
+}
+
+.yd-profile-picture em:hover{
+    background: url(/media/css/www.janamesa.com.br/images/place-text-bg.png) no-repeat right bottom transparent;
+    text-decoration: none;
+}
+
+.yd-profile-picture img {
+    width: 197px;
+    margin: -190px 0 0 0;
+    min-height: 190px;
+    height: auto;	
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.yd-profile-infos-1 {
+    float: left;
+    margin: 15px 0 0 25px;
+    padding: 0;
+    width: 442px;
+}
+
+.yd-profile-infos-1 li {
+    margin: 0 0 5px 0;
+    padding: 0 0 0 35px;
+    font-size: 14px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    color: 757372;
+    line-height: 21px;
+}
+
+.yd-profile-infos-1 li.br-fullname{
+    margin: 0 0 15px 0;
+    padding: 0;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 34px;
+    color: #6c584a;
+    line-height: 1.2;
+}
+
+.yd-profile-infos-1 li.br-location{
+    background: url(/media/css/www.janamesa.com.br/images/home-img2.png) 3px 0 no-repeat transparent;
+}
+
+.yd-profile-infos-1 li.br-email{
+    background: url(/media/css/www.janamesa.com.br/images/email-img.png) 3px 5px no-repeat transparent;
+}
+
+.yd-profile-infos-1 li.br-tel{
+    padding: 0;
+}
+
+.yd-profile-infos-2 {
+    border-bottom: 1px solid #ffffff;
+    -moz-border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    border-radius: 4px !important;
+    -webkit-box-shadow: 0 2px 0 #cccccc;
+    -moz-box-shadow: 0 2px 0 #cccccc;
+    box-shadow: 0 2px 0 #cccccc;
+    behavior: url(/media/css/www.janamesa.com.br/PIE.htc);
+    padding: 0 15px;
+    background: none #f2ebdf;
+    height: 62px;
+    width: 665px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.yd-profile-infos-2 li{
+    text-align: left;
+    height: 62px;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    line-height: 66px;
+    color: #757372;
+    font-size: 18px
+}
+
+.yd-profile-infos-2 li strong{
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 28px;
+    color: #AD5146;
+    padding: 0 15px 0 0;
+    font-weight: normal;
+    float: left;
+}
+
+.yd-profile-infos-2 li.br-pedidos{
+    float: left;
+    background: url(/media/css/www.janamesa.com.br/images/basket-img.png) no-repeat left center transparent;
+    padding: 0 0 0 45px;
+}
+
+.yd-profile-infos-2 li.br-favoritos{
+    background: url(/media/css/www.janamesa.com.br/images/star-img.png) no-repeat left center transparent;
+    padding: 0 0 0 39px;
+}
+
+.ie7 .yd-profile-infos-2 li.br-favoritos{
+    float: left;
+    margin: 0 0 0 15px;
+}
+
+.yd-profile-infos-2 li.br-points{
+    background: url(/media/css/www.janamesa.com.br/images/point-img.png) no-repeat left center transparent;
+    float: right;
+    padding: 0 0 0 43px;
+}
+
+.yd-profile-body .yd-profile-infos-3{
+    position: absolute;
+    bottom: 29px;
+    right: 5px;
+    text-align: center;
+    width: 130px;
+    padding: 0 20px 27px 15px;
+    margin: 0;
+    line-height: 1.3;
+    background: url(/media/css/www.janamesa.com.br/images/point-hint.png) left bottom no-repeat transparent;
+}
+
+.yd-profile-body .yd-profile-infos-3 a{
+    font-size: 18px;
+    color: #6c584a;
+    font-family: KGLoveYouThroughItRegular, Helvetica, Verdana, Arial, sans-serif;
+    -moz-transform: rotate(5deg); 
+    -o-transform: rotate(5deg); 
+    -webkit-transform: rotate(5deg);  
+    -ms-transform: rotate(5deg);  
+    transform: rotate(5deg);
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.yd-profile-body .yd-profile-infos-3 a strong{
+    font-size: 26px;
+    color: #669da5;
+    font-weight: normal;
+}
+
+.yd-profile-body .br-line-info{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+
+
+.yd-profile-news {
+    margin: 0 25px;
+}
+
+.yd-profile-news div {
+    margin: 0 0 5px;
+    padding: 0 0 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.yd-profile-news div img {
+    float: left;
+    width: 75px;
+    height: 75px;
+    margin: 0 15px 0 0;
+    border: 3px solid #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+.yd-profile-news div small {
+    font-size: 10px;
+    color: #aaa;
+}
+
+.yd-profile-news div h1 {
+    margin: 8px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.yd-profile-news div a {
+    text-decoration: underline;
+}
+
+.yd-profile-news .button {
+    float: right;
+    margin: 10px 0;
+    padding: 8px 20px;
+    font-size: 16px;
+}
+
+.yd-profile-form ul{
+    padding: 0 2px 0 10px;
+    margin: 0 0 0 -8px;
+}
+
+.yd-profile-form li {
+    margin: 0;
+    padding: 0 0 25px 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.yd-profile-form li label {
+    float: left;
+    padding: 9px 12px 0 12px;
+    text-align: left;
+    width: 140px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 14px;
+    color: #757372;
+    position: relative!important;
+    top: 0!important;
+    left: 0!important;
+}
+
+.yd-profile-form li.onelabel p,
+.yd-profile-form li.onelabel #yd-lang-confirm-newsletter-delete{
+    display: inline-block;
+    margin: 0 0 10px 12px;
+    padding: 0;
+    width: 679px;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    color: #757372;
+    font-size: 16px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.yd-profile-form li.onelabel p label{
+    padding: 0 0 0 21px;
+    text-align: left;
+    white-space: nowrap;
+    width: auto;
+    z-index: 1;
+}
+
+.yd-profile-form li.onelabel p input[type="checkbox"]{
+    bottom: 1px;
+    float: left;
+    left: 0;
+    position: absolute;
+    z-index: 5;
+}
+
+.yd-profile-form li.onelabel #yd-lang-confirm-newsletter-delete.hidden{
+    display: none;
+}
+
+.yd-profile-form li.onelabel input[type=text],
+.yd-profile-form li.onelabel input[type=password] {
+    width: 524px;
+    float: left;
+}
+
+.yd-profile-form li.twolabel input[type=text],
+.yd-profile-form li.twolabel input[type=password] {
+    width: 179px;
+    float: left;
+}
+
+.yd-profile-form li.twolabel select{
+    width: 181px;
+    float: left;
+    position: relative!important;
+    top: 0!important;
+    left: 0!important;
+}
+
+.yd-profile-form li.twolabel select.birthday_day{
+    width: 53px;
+}
+
+.yd-profile-form li.twolabel select.birthday_month{
+    width: 53px;
+    margin: 0 0 0 3px;
+}
+
+.yd-profile-form li.twolabel select.birthday_year{
+    width: 69px;
+    margin: 0 0 0 3px;
+}
+
+.yd-profile-form li.twolabel option {
+    width: 31px;
+}
+
+.yd-profile-form li input:focus,
+.yd-profile-form li textarea:focus {
+    border: 1px solid #00c800;
+    background: #eeffe7;
+    -webkit-box-shadow: 0 0 3px #00c800;
+    -moz-box-shadow: 0 0 3px #00c800;
+    box-shadow: 0 0 3px #00c800;
+}
+
+.onelabel.facebook {
+    position: relative;
+    height: 25px;
+    border: 0;
+}
+
+.onelabel .fb-login-button {
+    position: absolute;
+    top: 0;
+    left: 90px;
+}
+
+.onelabel .desc {
+    position: absolute;
+    top: 3px;
+    right: 75px;
+}
+
+.yd-profile-form li input, .yd-profile-form li select, .yd-form-toggle input, .yd-form-toggle textarea {
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.yd-profile-form option {
+    width: 28px;
+}
+
+.yd-profile-form .button {
+    display: inline-block;
+    color: #FFFFFF;
+    font-family: Museo700,Helvetica,Verdana,Arial,sans-serif;
+    font-size: 18px;
+    text-shadow: 0 1px 0 #000000;
+    width: 257px;
+    height: 49px;
+    line-height: 46px;
+    vertical-align: middle;
+    text-align: center!important;
+    margin: 0 0 0 10px;
+    padding: 0;
+    background: url(/media/css/www.janamesa.com.br/images/btns-bg.png) 0 0 no-repeat transparent;
+    float: left;
+    border: 0 none;
+}
+
+.yd-profile-form .button:hover{
+    text-decoration: underline;
+}
+
+
+
+.yd-profile-notification {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -120px;
+    width: 90px;
+    min-height: 70px;
+    padding: 7px;
+    font-style: normal;
+    text-shadow: 0 1px 0px #fff;
+    font-size: 11px;
+    border: 1px solid #d2be00;
+    border-radius: 4px;
+    background: #ffffe5; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffe5 0%, #ffee9d 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffe5), color-stop(100%,#ffee9d)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* IE10+ */
+    background: linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffe5', endColorstr='#ffee9d',GradientType=0 ); /* IE6-9 */
+}
+/*
+.yd-profile-notification:before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 30px;
+    z-index: 1;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 5px solid #fff7c4;
+}
+
+.yd-profile-notification:after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: -6px;
+    z-index: 0;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 5px solid #d2be00;
+}*/
+
+
+.yd-profile-not-logged-in .yd-profile-head,
+.yd-profile-not-logged-in .yd-profile-nav,
+.yd-profile-not-logged-in .yd-profile-body h1 {
+    display: none;
+}
+
+.yd-profile-not-logged-in .yd-profile-body {
+    float: none;
+    margin: 0 auto;
+    width: auto;
+}
+
+.menu-top3 {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.yd-service-container form{
+    min-height: 151px;
+}
+
+.br-favorite-list .yd-service-container form{
+    min-height: 121px;
+}
+
+.yd-delete-favourite{
+    height: 21px;
+    width: 18px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 140px;
+    right: 10px;
+    background: url(/media/css/www.janamesa.com.br/images/delete-ico.png) 0 0 no-repeat transparent;
+}
+
+.yd-service-container form:hover .yd-delete-favourite{
+    background: url(/media/css/www.janamesa.com.br/images/delete-ico.png) 0 -21px no-repeat transparent;
+}
+
+
+.mealname-lenght-toggle {
+    position: relative;
+    padding: 5px;
+    cursor: default;
+}
+
+
+.mealname-lenght-toggle-full {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    display: block;
+    width: 150px;
+    padding: 5px;
+    background: #fff9e7;
+    border-radius: 4px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.5);
+}
+
+.yd-service-v2 {
+    margin: 5px 0 0 !important;
+}
+.yd-form ul.br-sex li{
+    display: none;
+}
+.yd-form ul.br-sex li.br-radios-rw{
+    display: inline-block;
+    width: 100%;
+    color: #484848;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 15px;
+}
+
+.ie6 .yd-register .yd-box, 
+.ie7 .yd-register .yd-box{
+    border: 0 none!important;
+}
+
+
+/*
+
+Uniform Theme: Uniform Default
+Version: 1.6
+By: Josh Pyles
+License: MIT License
+---
+For use with the Uniform plugin:
+http://pixelmatrixdesign.com/uniform/
+---
+Generated by Uniform Theme Generator:
+http://pixelmatrixdesign.com/uniform/themer.html
+
+*/
+
+/* Global Declaration */
+
+div.selector, 
+div.selector span, 
+div.checker span,
+div.radio span, 
+div.uploader, 
+div.uploader span.action,
+div.uniformbutton,
+div.uniformbutton span {
+    background-image: url(/media/images/uniform/sprite.png);
+    background-repeat: no-repeat;
+    -webkit-font-smoothing: antialiased;
+}
+
+.selector, 
+.radio, 
+.checker, 
+.uploader,
+.uniformbutton, 
+.selector *, 
+.radio *, 
+.checker *, 
+.uploader *,
+.uniformbutton *{
+    margin: 0;
+    padding: 0;
+}
+
+/* INPUT & TEXTAREA */
+
+input.text,
+input.email, 
+input.password,
+textarea.uniform {
+    font-size: 12px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    padding: 3px;
+    color: #777;
+    background: url('/media/images/uniform/bg-input-focus.png') repeat-x 0px 0px;
+    background: url('/media/images/uniform/bg-input.png') repeat-x 0px 0px;
+    border-top: solid 1px #aaa;
+    border-left: solid 1px #aaa;
+    border-bottom: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    outline: 0;
+}
+
+input.text:focus,
+input.email:focus,
+input.password:focus,
+textarea.uniform:focus {
+    -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.3);
+    border-color: #999;
+    background: url('/media/images/uniform/bg-input-focus.png') repeat-x 0px 0px;
+}
+
+/* SPRITES */
+
+/* Select */
+
+div.selector {
+    background-position: -483px -130px;
+    line-height: 26px;
+    height: 26px;
+}
+
+div.selector span {
+    background-position: right 0px;
+    height: 26px;
+    line-height: 26px;
+}
+
+div.selector select {
+    /* change these to adjust positioning of select element */
+    top: 0px;
+    left: 0px;
+}
+
+div.selector:active, 
+div.selector.active {
+    background-position: -483px -156px;
+}
+
+div.selector:active span, 
+div.selector.active span {
+    background-position: right -26px;
+}
+
+div.selector.focus, div.selector.hover, div.selector:hover {
+    background-position: -483px -182px;
+}
+
+div.selector.focus span, div.selector.hover span, div.selector:hover span {
+    background-position: right -52px;
+}
+
+div.selector.focus:active,
+div.selector.focus.active,
+div.selector:hover:active,
+div.selector.active:hover {
+    background-position: -483px -208px;
+}
+
+div.selector.focus:active span,
+div.selector:hover:active span,
+div.selector.active:hover span,
+div.selector.focus.active span {
+    background-position: right -78px;
+}
+
+div.selector.disabled {
+    background-position: -483px -234px;
+}
+
+div.selector.disabled span {
+    background-position: right -104px;
+}
+
+/* Checkbox */
+
+div.checker {
+    width: 19px;
+    height: 19px;
+}
+
+div.checker input {
+    width: 19px;
+    height: 19px;
+}
+
+div.checker span {
+    background-position: 0px -260px;
+    height: 19px;
+    width: 19px;
+}
+
+div.checker:active span, 
+div.checker.active span {
+    background-position: -19px -260px;
+}
+
+div.checker.focus span,
+div.checker:hover span {
+    background-position: -38px -260px;
+}
+
+div.checker.focus:active span,
+div.checker:active:hover span,
+div.checker.active:hover span,
+div.checker.focus.active span {
+    background-position: -57px -260px;
+}
+
+div.checker span.checked {
+    background-position: -76px -260px;
+}
+
+div.checker:active span.checked, 
+div.checker.active span.checked {
+    background-position: -95px -260px;
+}
+
+div.checker.focus span.checked,
+div.checker:hover span.checked {
+    background-position: -114px -260px;
+}
+
+div.checker.focus:active span.checked,
+div.checker:hover:active span.checked,
+div.checker.active:hover span.checked,
+div.checker.active.focus span.checked {
+    background-position: -133px -260px;
+}
+
+div.checker.disabled span,
+div.checker.disabled:active span,
+div.checker.disabled.active span {
+    background-position: -152px -260px;
+}
+
+div.checker.disabled span.checked,
+div.checker.disabled:active span.checked,
+div.checker.disabled.active span.checked {
+    background-position: -171px -260px;
+}
+
+/* Radio */
+
+div.radio {
+    width: 18px;
+    height: 18px;
+}
+
+div.radio input {
+    width: 18px;
+    height: 18px;
+}
+
+div.radio span {
+    height: 18px;
+    width: 18px;
+    background-position: 0px -279px;
+}
+
+div.radio:active span, 
+div.radio.active span {
+    background-position: -18px -279px;
+}
+
+div.radio.focus span, 
+div.radio:hover span {
+    background-position: -36px -279px;
+}
+
+div.radio.focus:active span,
+div.radio:active:hover span,
+div.radio.active:hover span,
+div.radio.active.focus span {
+    background-position: -54px -279px;
+}
+
+div.radio span.checked {
+    background-position: -72px -279px;
+}
+
+div.radio:active span.checked,
+div.radio.active span.checked {
+    background-position: -90px -279px;
+}
+
+div.radio.focus span.checked, div.radio:hover span.checked {
+    background-position: -108px -279px;
+}
+
+div.radio.focus:active span.checked, 
+div.radio:hover:active span.checked,
+div.radio.focus.active span.checked,
+div.radio.active:hover span.checked {
+    background-position: -126px -279px;
+}
+
+div.radio.disabled span,
+div.radio.disabled:active span,
+div.radio.disabled.active span {
+    background-position: -144px -279px;
+}
+
+div.radio.disabled span.checked,
+div.radio.disabled:active span.checked,
+div.radio.disabled.active span.checked {
+    background-position: -162px -279px;
+}
+
+/* Uploader */
+
+div.uploader {
+    background-position: 0px -297px;
+    height: 28px;
+}
+
+div.uploader span.action { /************************************************************************************/
+    background: url(/media/images/test/testicon.png) 11px 6px no-repeat, url(/media/images/uniform/sprite.png) right -409px;
+    height: 24px;
+    line-height: 24px;
+}
+
+div.uploader span.filename {
+    height: 24px;
+    /* change this line to adjust positioning of filename area */
+    margin: 2px 0px 2px 2px;
+    line-height: 24px;
+}
+
+div.uploader.focus,
+div.uploader.hover,
+div.uploader:hover {
+    background-position: 0px -353px;
+}
+
+div.uploader.focus span.action,
+div.uploader.hover span.action,
+div.uploader:hover span.action {
+    background: url(/media/images/test/testicon.png) 11px 6px no-repeat, url(/media/images/uniform/sprite.png) right -437px #fff;
+}
+
+div.uploader.active span.action,
+div.uploader:active span.action {
+    background-position: right -465px;
+}
+
+div.uploader.focus.active span.action,
+div.uploader:focus.active span.action,
+div.uploader.focus:active span.action,
+div.uploader:focus:active span.action {
+    background: url(/media/images/test/testicon.png) 11px 6px no-repeat, url(/media/images/uniform/sprite.png) right -493px #fff;
+}
+
+div.uploader.disabled {
+    background-position: 0px -325px;
+}
+
+div.uploader.disabled span.action {
+    background-position: right -381px;
+}
+
+div.uniformbutton {
+    background-position: 0px -523px;
+}
+
+div.uniformbutton span {
+    background-position: right -643px;
+}
+
+div.uniformbutton.focus,
+div.uniformbutton:focus,
+div.uniformbutton:hover,
+div.uniformbutton.hover {
+    background-position: 0px -553px;
+}
+
+div.uniformbutton.focus span,
+div.uniformbutton:focus span,
+div.uniformbutton:hover span,
+div.uniformbutton.hover span {
+    background-position: right -673px; 
+}
+
+div.uniformbutton.active,
+div.uniformbutton:active {
+    background-position: 0px -583px;
+}
+
+div.uniformbutton.active span,
+div.uniformbutton:active span {
+    background-position: right -703px;
+    color: #555;
+}
+
+div.uniformbutton.disabled,
+div.uniformbutton:disabled {
+    background-position: 0px -613px;
+}
+
+div.uniformbutton.disabled span,
+div.uniformbutton:disabled span {
+    background-position: right -733px;
+    color: #bbb;
+    cursor: default;
+}
+
+/* PRESENTATION */
+
+/* Button */
+
+div.uniformbutton {
+    height: 30px;
+}
+
+div.uniformbutton span {
+    margin-left: 13px;
+    height: 22px;
+    padding-top: 8px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding-left: 2px;
+    padding-right: 15px;	
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Select */
+div.selector {
+    width: 190px;
+    font-size: 12px;
+}
+
+div.selector select {
+    min-width: 190px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    border: solid 1px #fff;
+}
+
+div.selector span {
+    padding: 0px 25px 0px 2px;
+    cursor: pointer;
+}
+
+div.selector span {
+    color: #666;
+    width: 158px;
+    text-shadow: 0 1px 0 #fff;
+}
+
+div.selector.disabled span {
+    color: #bbb;
+}
+
+/* Checker */
+div.checker {
+    margin-right: 5px;
+}
+
+/* Radio */
+div.radio {
+    margin-right: 3px;
+}
+
+/* Uploader */
+div.uploader {
+    width: 165px; /* war 190 */
+    cursor: pointer;
+}
+
+div.uploader span.action {
+    width: 40px; /* war 85 */
+    text-align: center;
+    text-shadow: #fff 0px 1px 0px;
+    background-color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+div.uploader span.filename {
+    color: #777;
+    width: 102px;
+    border-right: solid 1px #bbb;
+    font-size: 11px;
+}
+
+div.uploader input {
+    width: 190px;
+}
+
+div.uploader.disabled span.action {
+    color: #aaa;
+}
+
+div.uploader.disabled span.filename {
+    border-color: #ddd;
+    color: #aaa;
+}
+/*
+
+CORE FUNCTIONALITY 
+
+Not advised to edit stuff below this line
+-----------------------------------------------------
+*/
+
+.selector, 
+.checker, 
+.uniformbutton, 
+.radio, 
+.uploader {
+    display: -moz-inline-box;
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    *display: inline;
+}
+
+.selector select:focus, .radio input:focus, .checker input:focus, .uploader input:focus {
+    outline: 0;
+}
+
+/* Button */
+
+div.uniformbutton a,
+div.uniformbutton button,
+div.uniformbutton input {
+    position: absolute;
+}
+
+div.uniformbutton {
+    cursor: pointer;
+    position: relative;
+}
+
+/* Select */
+
+div.selector {
+    position: relative;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+div.selector span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+div.selector select {
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity:0);
+    height: 25px;
+    border: none;
+    background: none;
+}
+
+/* Checker */
+
+div.checker {
+    position: relative;
+}
+
+div.checker span {
+    display: -moz-inline-box;
+    display: inline-block;
+    text-align: center;
+}
+
+div.checker input {
+    opacity: 0;
+    filter: alpha(opacity:0);
+    display: inline-block;
+    background: none;
+}
+
+/* Radio */
+
+div.radio {
+    position: relative;
+}
+
+div.radio span {
+    display: -moz-inline-box;
+    display: inline-block;
+    text-align: center;
+}
+
+div.radio input {
+    opacity: 0;
+    filter: alpha(opacity:0);
+    text-align: center;
+    display: inline-block;
+    background: none;
+}
+
+/* Uploader */
+
+div.uploader {
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+
+div.uploader span.action {
+    float: left;
+    display: inline;
+    padding: 2px 0px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+div.uploader span.filename {
+    padding: 0px 10px;
+    float: left;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: default;
+}
+
+div.uploader input {
+    opacity: 0;
+    filter: alpha(opacity:0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    float: right;
+    height: 25px;
+    border: none;
+    cursor: default;
+}
+
+#yd-search-favourites{
+    color: transparent;
+    float: right;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#yd-search-favourites input{
+    width: 168px;
+    padding: 0 30px 0 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+#yd-search-favourites a{
+    position: absolute;
+    top: 1px;
+    right: 6px;
+    height: 32px;
+    width: 18px;
+    padding: 0;
+    margin: 0;
+    z-index: 6;
+    background: url(/media/css/www.janamesa.com.br/images/search-inp-bg.gif) 0 0 no-repeat transparent;
+}
+
+#yd-search-favourites a:hover{
+    background: url(/media/css/www.janamesa.com.br/images/search-inp-bg.gif) 0 -32px no-repeat transparent;
+}
+
+.index .yd-profile-picture form div.uploader{
+    margin: 4px 0 0 8px;
+    width: 148px;
+    background: url(/media/css/www.janamesa.com.br/images/file-inp148-bg.png) 0 0 no-repeat transparent;
+}
+
+.index .yd-profile-picture form div.uploader span.filename{
+    width: 105px;
+}
+
+/******** PONTOS ***********
+***************************/
+
+.yd-profile-body.yd-pf6 h1{
+    color: #6C584A;
+    font-family: Museo700,Helvetica,Verdana,Arial,sans-serif;
+    font-size: 26px;
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) repeat-x left bottom transparent;
+}
+
+.yd-profile-body.yd-pf6 h2{
+    margin: 20px 10px;
+    padding: 0;
+    font-family: Helvetica,Verdana,Arial,sans-serif;
+    font-weight: normal;
+    font-size: 22px;
+    color: #3e3935;
+}
+
+.yd-profile-body.yd-pf6 h2 small{
+    font-size: 16px;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    line-height: inherit;
+    color: #757372;
+    display: inline-block;
+    width: 100%;
+}
+
+.yd-profile-body.yd-pf6 h3{
+    display: none!important;
+}
+
+.yd-profile-body.yd-pf6 .br-points{
+    float: left;
+    clear: none;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 28px;
+    color: #fff;
+    width: 67px;
+    height: 57px;
+    text-align: center;
+    padding: 46px 38px 35px 36px;
+    margin: 0 0 0 71px;
+    background: url(/media/css/www.janamesa.com.br/images/current-point-big.png) 0 0 no-repeat transparent;
+}
+
+.yd-profile-body.yd-pf6 .br-points span{
+    display: block;
+    width: 100%;
+    font-family: Helvetica-Bold, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+.yd-profile-body.yd-pf6 .yd-credit{
+    float: right;
+    clear: none;
+    margin: 55px 0 0 0;
+    padding: 0;
+    width: 394px;
+    height: 194px;
+    background: url(/media/css/www.janamesa.com.br/images/credit-bg.png) 0 0 no-repeat transparent;
+}
+
+.yd-profile-body.yd-pf6 hr{
+    display: none!important;
+}
+
+.yd-profile-body.yd-pf6 .br-title-wycdfc{
+    float: left;
+    margin: 0 0 0 10px;
+    padding: 0 0 12px 0;
+    width: 264px;
+    font-size: 16px;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    color: #757372;
+    background: url(/media/css/www.janamesa.com.br/images/strip2-rw-block.png) repeat-x left bottom transparent;
+}
+
+.yd-profile-body.yd-pf6 .yd-what-you-can-do-for-credit{
+    float: left;
+    margin: 0 0 0 10px;
+    padding: 0;
+    width: 264px!important;
+    display: inline-block;
+}
+
+.yd-profile-body.yd-pf6 .yd-what-you-can-do-for-credit li{
+    float: left;
+    clear: left;
+    width: 100%;
+    padding: 5px 0;
+    border-bottom: 1px solid #e5f0f1;
+}
+
+.yd-profile-body.yd-pf6 .yd-what-you-can-do-for-credit li a{
+    font-family: Helvetica-Bold, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 12px;
+    color: #d97764;
+    text-decoration: none;
+    padding: 7px 0 8px 40px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 224px;
+    display: inline-block;
+}
+
+.yd-profile-body.yd-pf6 .yd-what-you-can-do-for-credit li a:hover{
+    text-decoration: underline;
+}
+
+.yd-profile-body.yd-pf6 .yd-what-you-can-do-for-credit li a .yd-coin{
+    text-decoration: none!important;	
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin: -14px 0 0 0;
+    padding: 0 2px 0 0;
+    height: 28px;
+    width: 29px;
+    background: url(/media/css/www.janamesa.com.br/images/point-bg.png) 0 0 no-repeat transparent;
+    color: #ffffff;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    text-align: center;
+    line-height: 28px;
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.yd-profile-body.yd-pf6 .yd-what-you-can-do-for-credit li a:hover .yd-coin{
+    text-decoration: none!important;
+    color: #ffffff;
+}
+
+.yd-profile-body.yd-pf6 .yd-what-you-can-do-for-credit li a .yd-coin:before{
+    content: '+';
+    color: #ffffff;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 18px;
+    text-decoration: none!important;
+}
+
+.yd-profile-body.yd-pf6 .yd-clearfix{
+    display: inline-block;
+    width: 100%;
+}
+
+.yd-how-credit-work{
+    float: right;
+    clear: none;
+    padding: 14px 18px 20px;
+    margin: 45px 5px 0 0;
+    width: 224px;
+    background: none #f2ebdf;
+    border-bottom: 1px solid #fff;
+    -webkit-box-shadow: 0 2px 0 #cccccc;
+    -moz-box-shadow: 0 2px 0 #cccccc;
+    box-shadow: 0 2px 0 #cccccc;
+    -moz-border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    border-radius: 5px !important;
+    behavior: url(/media/css/www.janamesa.com.br/PIE.htc);
+}
+
+.yd-how-credit-work strong{
+    font-family: Helvetica,Verdana,Arial,sans-serif;
+    color: #000000;
+    text-shadow: 0px 2px 0 #ffffff;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.yd-how-credit-work p{
+    font-size: 14px;
+    font-family: Helvetica,Verdana,Arial,sans-serif;
+    color: #949494;
+    padding: 15px 0 0 0;
+    margin: 0;
+}
+
+.yd-how-credit-work p strong{
+    font-family: Helvetica-Bold, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 12px;
+    color: #6c584a;
+    text-shadow: 0 0 0 #fff;
+}
+
+
+/******** ORDERS ***********
+***************************/
+
+.yd-profile-body.br-orders h1{
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    color: #6c584a;
+    font-size: 26px;
+    padding: 3px 0 15px 0;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) repeat-x scroll left bottom transparent;
+}
+
+.yd-profile-body.br-orders h1 select{
+    top: -3px;
+}
+
+.ie7 .yd-profile-body.br-orders h1 select{
+    top: 0;
+}
+
+.yd-profile-body.br-orders h1 span{
+    color: transparent;
+    position: relative;
+    top: -3px;
+    left: 0;
+}
+
+.yd-profile-body.br-orders h1 span input{	
+    padding: 0 30px 0 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 168px;
+    z-index: 5;
+}
+
+.yd-profile-body.br-orders h1 span:before{
+    content: '';
+    display: block;
+    height: 32px;
+    width: 18px;
+    z-index: 6;
+    position: absolute;
+    right: 6px;
+    top: 2px;
+    background: url(/media/css/www.janamesa.com.br/images/search-inp-bg.gif) no-repeat scroll 0 0 transparent;
+}
+
+#user_orders tr:nth-child(2n) td{
+    border: 0 none;
+    background: none #f3f3f3;
+}
+
+#user_orders tr td{
+    padding: 45px 10px 28px 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-family: Helvetica,Verdana,Arial,sans-serif;
+    font-size: 12px;
+    color: #3e3935;
+    border: 0 none;
+    white-space: normal;
+}
+
+#user_orders tr th{
+    border: 0 none;
+    white-space: normal;
+}
+
+
+
+
+
+div.uploader span.action {
+    background-color: #fff;
+}
+
+.locations-textarea {
+    width: 142px;
+    height: 32px !important;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.comments-locations textarea {
+    width: 400px;
+    height: 32px !important;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 16px !important;
+    color: #757372 !important;
+}
+
+.locations-house {
+    width: auto !important;
+    height: 27px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 100%;
+    vertical-align: top;
+}
+
+.locations-new .tr:nth-child(odd) .td,
+.locations-new tr:nth-child(odd) td {
+    border-top: none;
+    padding: 35px 0 30px 0;
+    border-bottom: 1px solid #e6e6e3;
+}
+
+.locations-new .tr:last-child .td,
+.locations-new tr:last-child td {
+    border-bottom: none !important;
+}
+
+/***** RATINGS ************
+***************************/
+
+.yd-profile-body-ratings .display-none {
+    display: none;
+}
+
+.yd-profile-body-ratings h1 {
+    color: #6c584a;
+    font-size: 26px;
+    font-family: 'Museo700',Helvetica,Verdana, sans-serif;
+    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) repeat-x 0 100% transparent;
+}
+
+.yd-profile-body-ratings h1 span,
+.yd-profile-body-ratings > h1 span {
+    background: url(/media/css/www.janamesa.com.br/images/digit-underline.png) 50% 100% no-repeat transparent;
+    padding: 0 5px;
+    float: none;
+}
+
+.yd-profile-body-ratings .yd-profile-fidelity {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #757372;
+    font-size: 16px;
+    padding: 25px 40px 25px 240px;
+    border-bottom: none;
+    background: url(/media/css/www.janamesa.com.br/images/yd-profile-points2.png) no-repeat 0 0 transparent;
+}
+
+.yd-profile-body-ratings .yd-profile-table {
+    background: none;
+}
+
+.yd-profile-body-ratings .yd-profile-table th {
+    border-bottom: none;
+    color: #6c584a;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.yd-profile-body-ratings a.yd-profile-blue-button:focus, 
+.yd-profile-body-ratings a.yd-profile-blue-button:active,
+.yd-profile-body-ratings a.yd-profile-blue-button {
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
+    font-size: 18px;
+    text-shadow: 0 1px 0 black;
+    cursor: pointer;
+    width: 128px;
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
+    border: 0 none;
+    filter: none!important;
+    background: url(/media/css/www.janamesa.com.br/images/avaliar-btn.png) no-repeat scroll 0 0 transparent;
+}
+
+.yd-profile-body-ratings a.yd-profile-blue-button:hover {
+    text-decoration: underline;
+}
+
+.yd-profile-body-ratings .yd-profile-table .td, 
+.yd-profile-body-ratings .yd-profile-table .th {
+    font-size: 12px;
+    color: #3e3935;
+    border-bottom: none;
+}
+
+.yd-profile-body-ratings .yd-profile-table .th {
+    color: #6c584a;
+    font-weight: bold;
+}
+
+.yd-profile-body-ratings .yd-profile-table .td:last-child {
+    vertical-align: top;
+}
+
+.yd-profile-body-ratings .yd-profile-table {
+    border-top: 1px solid #e6e6e3;
+}
+
+.yd-profile-body-ratings .yd-profile-table .tr:nth-child(even) .td {
+    background: #f3f3f3;
+}
+
+.yd-profile-body-ratings .yd-profile-table .tr:nth-child(odd) .td {
+    border: none;
+}
+
+.yd-profile-body-ratings .yd-profile-table .tr.warning {
+    background: none; 
+}
+
+.yd-profile-body-ratings .rate-count {
+    border: none;
+}
+
+
+.yd-profile-body-ratings .rate-count .yd-rated-00, 
+.yd-profile-body-ratings .rate-count .yd-rated-01, 
+.yd-profile-body-ratings .rate-count .yd-rated-02, 
+.yd-profile-body-ratings .rate-count .yd-rated-03, 
+.yd-profile-body-ratings .rate-count .yd-rated-04, 
+.yd-profile-body-ratings .rate-count .yd-rated-05, 
+.yd-profile-body-ratings .rate-count .yd-rated-06, 
+.yd-profile-body-ratings .rate-count .yd-rated-07, 
+.yd-profile-body-ratings .rate-count .yd-rated-08, 
+.yd-profile-body-ratings .rate-count .yd-rated-09, 
+.yd-profile-body-ratings .rate-count .yd-rated-10{
+    display: inline-block;
+    width: 117px;
+    height: 21px;
+    background: url(/media/css/www.janamesa.com.br/images/sprite-stars2.png) 0 0 no-repeat transparent;
+}
+.yd-profile-body-ratings .rate-count .yd-rated-01{
+    background-position: 0 -21px;
+}
+.yd-profile-body-ratings .rate-count .yd-rated-02{
+    background-position: 0 -42px;
+}
+.yd-profile-body-ratings .rate-count .yd-rated-03{
+    background-position: 0 -64px;
+}
+.yd-profile-body-ratings .rate-count .yd-rated-04{
+    background-position: 0 -85px;
+}
+.yd-profile-body-ratings .rate-count .yd-rated-05{
+    background-position: 0 -106px;
+}
+.yd-profile-body-ratings .rate-count .yd-rated-06{
+    background-position: 0 -127px;
+}
+.yd-profile-body-ratings .rate-count .yd-rated-07{
+    background-position: 0 -150px;
+}
+.yd-profile-body-ratings .rate-count .yd-rated-08{
+    background-position: 0 -171px;
+}
+.yd-profile-body-ratings .rate-count .yd-rated-09{
+    background-position: 0 -192px;
+}
+.yd-profile-body-ratings .rate-count .yd-rated-10{
+    background-position: 0 -213px;
+}

@@ -1,0 +1,1636 @@
+Land;Stadt;Anzahl;KW
+AT;Wien;252;33
+AT;Purkersdorf;16;33
+AT;Langenzersdorf;13;33
+AT;Graz;12;33
+AT;Linz;10;33
+AT;Klagenfurt;8;33
+AT;Seiersberg;8;33
+AT;Pirka;7;33
+AT;Salzburg;7;33
+AT;Windorf;7;33
+AT;Guntramsdorf;7;33
+AT;Wiener Neudorf;7;33
+AT;Neupirka;7;33
+AT;Hautzendorf;6;33
+AT;Raaba;6;33
+AT;Biedermannsdorf;6;33
+AT;Mantscha;6;33
+AT;Mühlriegl;6;33
+AT;Laxenburg;6;33
+AT;Brunn am Gebirge;6;33
+AT;Riederhof;6;33
+AT;Maria Enzersdorf;5;33
+AT;Feldkirchen bei Graz;5;33
+AT;Mödling;5;33
+AT;Schwechat;5;33
+AT;Baden;5;33
+AT;Leonding;5;33
+AT;Forst;5;33
+AT;Grambach;5;33
+AT;Hönigtal;4;33
+AT;Lebern;4;33
+AT;Neuwindorf;4;33
+AT;Dürwagersbach;4;33
+AT;Thondorf;4;33
+AT;Berg;4;33
+AT;Traiskirchen;4;33
+AT;Hart bei Graz;4;33
+AT;Eggendorf;4;33
+AT;Steinberg;4;33
+AT;Kainbach;4;33
+AT;Oberberg;4;33
+AT;Pfaffstätten;4;33
+AT;Wagnitz;4;33
+AT;Lamberg;4;33
+AT;Hinterbrühl;4;33
+AT;Gumpoldskirchen;4;33
+AT;Hart;4;33
+AT;St. Pölten;4;33
+AT;Wagersbach;4;33
+AT;Abtissendorf;4;33
+AT;Angern;4;33
+AT;Schaftal;4;33
+AT;Edelsbach bei Graz;4;33
+AT;Perchtoldsdorf;4;33
+AT;Thal;4;33
+AT;Gießhübl;4;33
+AT;Reith;3;33
+AT;Eichberg;3;33
+AT;Hagenbrunn;3;33
+AT;Katzgraben;3;33
+AT;Niederdorf;3;33
+AT;Sankt Veit;3;33
+AT;Imberg;3;33
+AT;Gaumberg;3;33
+AT;Hochgreit;3;33
+AT;Neulichtenberg;3;33
+AT;Asberg;3;33
+AT;Doppl;3;33
+AT;Spratzern;3;33
+AT;Haag;3;33
+AT;Haselgraben;3;33
+AT;Krumpendorf;3;33
+AT;Felling;3;33
+AT;Weinitzen;3;33
+AT;Leber;3;33
+AT;Plesching;3;33
+AT;Buchberg;3;33
+AT;Kinderdorf Sankt Isidor;3;33
+AT;Mühl;3;33
+AT;Neudorf;3;33
+AT;Aichberg;3;33
+AT;Siegenfeld;3;33
+AT;Enzenwinkl;3;33
+AT;Ursprung;3;33
+AT;Innsbruck;3;33
+AT;Mühlberg;3;33
+AT;Oberschöckl;3;33
+AT;Alharting;3;33
+AT;Sooß;3;33
+AT;Hohenberg;3;33
+AT;Oberbairing;3;33
+AT;Altlichtenberg;3;33
+AT;Steingraben;3;33
+AT;Holzheim;3;33
+AT;Purgstall bei Eggersdorf;3;33
+AT;Großamberg;3;33
+AT;Kammerschlag;3;33
+AT;Rabnitz;3;33
+AT;Buch;3;33
+AT;Ebenthal;3;33
+AT;Hub;3;33
+AT;Krail;3;33
+AT;Pöstlingberg;3;33
+AT;Staudach;3;33
+AT;Fölling;3;33
+AT;Kitzelsbach;3;33
+AT;Krems an der Donau;3;33
+AT;Niederschöckl;3;33
+AT;Pasching;3;33
+AT;Rannach;3;33
+AT;Bergham;3;33
+AT;Traun;3;33
+AT;Untergaumberg;3;33
+AT;Jetzing;3;33
+AT;Hollenburg;3;33
+AT;Kalkleiten;3;33
+AT;Krustetten;2;33
+AT;Oberfucha;2;33
+AT;Pummersdorf;2;33
+AT;Theiß;2;33
+AT;Groß-Enzersdorf;2;33
+AT;Kammern;2;33
+AT;Mollersdorf;2;33
+AT;Bad Fischau;2;33
+AT;Brunnkirchen;2;33
+AT;Lengenfeld;2;33
+AT;Portendorf;2;33
+AT;Rohrendorf;2;33
+AT;Senftenberg;2;33
+AT;Straß im Straßertale;2;33
+AT;Tiefenfucha;2;33
+AT;Gottesbichl;2;33
+AT;Unterzwischenbrunn;2;33
+AT;Walkersdorf am Kamp;2;33
+AT;Neudörfl;2;33
+AT;Aigen;2;33
+AT;Rothenhof;2;33
+AT;Scheibenhof;2;33
+AT;Etsdorf am Kamp;2;33
+AT;Stratzdorf;2;33
+AT;Gundersdorf;2;33
+AT;Rufling;2;33
+AT;Schlickendorf;2;33
+AT;Teufelhof;2;33
+AT;Klein-Wien;2;33
+AT;Breitenfurt bei Wien;2;33
+AT;Schwadorf;2;33
+AT;Thallern;2;33
+AT;Tribuswinkel;2;33
+AT;Gobelsburg;2;33
+AT;Vösendorf;2;33
+AT;Hafing;2;33
+AT;Willersdorf;2;33
+AT;Kaltenleutgeben;2;33
+AT;Klosterneuburg;2;33
+AT;Neuweidling;2;33
+AT;Brunn im Felde;2;33
+AT;Dürnstein;2;33
+AT;Einöde;2;33
+AT;Theresienfeld;2;33
+AT;Hörsching;2;33
+AT;Zöbing;2;33
+AT;Korneuburg;2;33
+AT;Oberloiben;2;33
+AT;Poppichl;2;33
+AT;Stattersdorf;2;33
+AT;Engabrunn;2;33
+AT;Tulbing;2;33
+AT;Walddorf;2;33
+AT;Imbach;2;33
+AT;Palt;2;33
+AT;Rossatz;2;33
+AT;Diendorf am Kamp;2;33
+AT;Stein an der Donau;2;33
+AT;Hochbuchedt;2;33
+AT;Mauerbach;2;33
+AT;Paudorf;2;33
+AT;Berndorf;2;33
+AT;Schiltern;2;33
+AT;Egelsee;2;33
+AT;Farchern;2;33
+AT;Gerasdorf;2;33
+AT;Wiener Neustadt;2;33
+AT;Oberwaltersdorf;2;33
+AT;Rehberg;2;33
+AT;Gneixendorf;2;33
+AT;Hadersdorf am Kamp;2;33
+AT;Zeiselberg;2;33
+AT;Mittelberg;2;33
+AT;Nadelbach;2;33
+AT;Neustift an der Donau;2;33
+AT;Oberzwischenbrunn;2;33
+AT;Amras;2;33
+AT;Droß;2;33
+AT;Stift Göttweig;2;33
+AT;Furth bei Göttweig;2;33
+AT;Trumau;2;33
+AT;Weißenkirchen in der Wachau;2;33
+AT;Hörfarth;2;33
+AT;Bad Vöslau;2;33
+AT;Unterwagram;2;33
+AT;Waitzendorf;2;33
+AT;Wels;2;33
+AT;Witzendorf;2;33
+AT;Landersdorf;2;33
+AT;Seyring;2;33
+AT;Höbenbach;2;33
+AT;Wöllersdorf;2;33
+AT;Langenlois;2;33
+AT;Lerchenfeld;2;33
+AT;Steinaweg;2;33
+AT;Stratzing;2;33
+AT;Gedersdorf;2;33
+AT;Viehofen;2;33
+AT;Kledering;2;33
+AT;Meidling;2;33
+AT;Oberwagram;2;33
+AT;Ratzersdorf an der Traisen;2;33
+AT;Bisamberg;2;33
+AT;Friesenegg;2;33
+AT;Unterloiben;2;33
+AT;Völtendorf;2;33
+AT;Lassersdorf;1;33
+AT;Lipizach / Lipice;1;33
+AT;Mils;1;33
+AT;Mutters;1;33
+AT;Neustift;1;33
+AT;Oberwinkl;1;33
+AT;Amberg;1;33
+AT;Au;1;33
+AT;Saberda;1;33
+AT;Brunn;1;33
+AT;Schwarz / Dvorec;1;33
+AT;Drobollach am Faaker See;1;33
+AT;St. Margarethen;1;33
+AT;Stetten;1;33
+AT;Felsleiten;1;33
+AT;Fürnitz;1;33
+AT;Trübensee;1;33
+AT;Goldegg;1;33
+AT;Unterradlberg;1;33
+AT;Waasen;1;33
+AT;Weißenberg;1;33
+AT;Wilten;1;33
+AT;Zetterei;1;33
+AT;Kohldorf;1;33
+AT;Kosasmojach;1;33
+AT;Kuning;1;33
+AT;Maierleiten;1;33
+AT;Natters;1;33
+AT;Oberhartheim;1;33
+AT;Ochsenburg;1;33
+AT;Plöschenberg;1;33
+AT;Absam;1;33
+AT;Anger;1;33
+AT;Rennersdorf;1;33
+AT;Sankt Dionysen;1;33
+AT;Schwechatbach;1;33
+AT;St. Ulrich;1;33
+AT;Eisenstadt;1;33
+AT;Stötten;1;33
+AT;Flandorf;1;33
+AT;Gabersdorf;1;33
+AT;Tschedram;1;33
+AT;Goritschach;1;33
+AT;Untertöllern;1;33
+AT;Großhart;1;33
+AT;Wagram;1;33
+AT;Hainbuch;1;33
+AT;Weitern;1;33
+AT;Hennersdorf;1;33
+AT;Winkeln;1;33
+AT;Hötting;1;33
+AT;Zwanzgerberg;1;33
+AT;Köttmannsdorf;1;33
+AT;Lambichl;1;33
+AT;Mostitz;1;33
+AT;Neuaigen;1;33
+AT;Obermieger;1;33
+AT;Oeynhausen;1;33
+AT;Aham;1;33
+AT;Ragelsdorf;1;33
+AT;Annaberg;1;33
+AT;Badendorf;1;33
+AT;Chorherrn;1;33
+AT;Eck;1;33
+AT;Staubgasse;1;33
+AT;Engelsdorf;1;33
+AT;Flinsdorf;1;33
+AT;Ganzendorf;1;33
+AT;Tulln an der Donau;1;33
+AT;Gstocket;1;33
+AT;Hamberg;1;33
+AT;Wernersdorf;1;33
+AT;Hitzing;1;33
+AT;Wölfnitz;1;33
+AT;Kirchberg;1;33
+AT;Kreisberg;1;33
+AT;Langenlebarn-Oberaigen;1;33
+AT;Leopoldsdorf;1;33
+AT;Maria-Lanzendorf;1;33
+AT;Mühlau;1;33
+AT;Niederhollabrunn;1;33
+AT;Oberradlberg;1;33
+AT;Pargfried;1;33
+AT;Pradl;1;33
+AT;Ramersdorf;1;33
+AT;Antau / Otava;1;33
+AT;Dietersberg;1;33
+AT;Sierndorf;1;33
+AT;Edramsberg;1;33
+AT;Steinabrückl;1;33
+AT;Frauenhofen;1;33
+AT;Ufer;1;33
+AT;Gramastetten;1;33
+AT;Vasoldsberg;1;33
+AT;Wassergspreng;1;33
+AT;Wörth;1;33
+AT;Intenham;1;33
+AT;Klangen;1;33
+AT;Kreuth / Rute;1;33
+AT;Lichtenwörth;1;33
+AT;Mauterheim;1;33
+AT;Mühlgang;1;33
+AT;Nitzing;1;33
+AT;Obertöllern;1;33
+AT;Pengersdorf;1;33
+AT;Priedl;1;33
+AT;Alkoven;1;33
+AT;Rapperswinkel;1;33
+AT;Fridau;1;33
+AT;Treffen;1;33
+AT;Gerersdorf;1;33
+AT;Unterguntschach;1;33
+AT;Villach-Innere Stadt;1;33
+AT;Weidach;1;33
+AT;Wiesen;1;33
+AT;Hohenfeld;1;33
+AT;Ybbs an der Donau;1;33
+AT;Lanzenkirchen;1;33
+AT;Mieger;1;33
+AT;Müllendorf;1;33
+AT;Neusiedl;1;33
+AT;Oberweitrag;1;33
+AT;Pultendorf;1;33
+AT;Am Teller;1;33
+AT;Reichersdorf;1;33
+AT;Attendorf;1;33
+AT;Saager;1;33
+AT;Dörnbach;1;33
+AT;St. Georgen am Steinfelde;1;33
+AT;Eibesbrunn;1;33
+AT;Stemeritsch;1;33
+AT;Fürhappen;1;33
+AT;Unterpuchenau;1;33
+AT;Gröben;1;33
+AT;Hausmannstätten;1;33
+AT;Holzleiten;1;33
+AT;Zell;1;33
+AT;Kumitz;1;33
+AT;Luberg;1;33
+AT;Nadram;1;33
+AT;Oberguntschach;1;33
+AT;Obitschach;1;33
+AT;Amstetten;1;33
+AT;Reitzing;1;33
+AT;Axberg;1;33
+AT;St. Ruprecht;1;33
+AT;Stockerau;1;33
+AT;Finkenstein;1;33
+AT;Gaaden;1;33
+AT;Tschachoritsch;1;33
+AT;Göriach;1;33
+AT;Unterschloßberg;1;33
+AT;Großhain;1;33
+AT;Haimach;1;33
+AT;Weissenbach bei Mödling;1;33
+AT;Heiligenkreuz;1;33
+AT;Windpassing;1;33
+AT;Katzelsdorf;1;33
+AT;Kotting;1;33
+AT;Lendorf;1;33
+AT;Moosberg;1;33
+AT;Nettingsdorf;1;33
+AT;Niederbuch;1;33
+AT;Oedt;1;33
+AT;Afing;1;33
+AT;Radsberg / Radiše;1;33
+AT;Angersbichl;1;33
+AT;Ritzersdorf;1;33
+AT;Sankt Martin;1;33
+AT;Seitzersdorf-Wolfpassing;1;33
+AT;Ebersdorf;1;33
+AT;Straß;1;33
+AT;Flinsbach;1;33
+AT;Thurnharting;1;33
+AT;Gaisach;1;33
+AT;Gössendorf;1;33
+AT;Unterweitrag;1;33
+AT;Grub;1;33
+AT;Hals;1;33
+AT;Wernberg;1;33
+AT;Wolfenberg;1;33
+AT;Zwölfaxing;1;33
+AT;Kranzing;1;33
+AT;Landskron;1;33
+AT;Maria Rain;1;33
+AT;Niederfellabrunn;1;33
+AT;Oberpuchenau;1;33
+AT;Pottenbrunn;1;33
+AT;Raitis;1;33
+AT;Ansfelden;1;33
+AT;Baumgarten am Tullnerfeld;1;33
+AT;Schauersfreiling;1;33
+AT;Edlitz;1;33
+AT;Stratreith;1;33
+AT;Trabesing;1;33
+AT;Gattmannsdorf;1;33
+AT;Tutzach / Tuce;1;33
+AT;Gradnitz;1;33
+AT;Wasserburg;1;33
+AT;Wetzersdorf;1;33
+AT;Wollmannsberg;1;33
+AT;Kremsdorf;1;33
+AT;Langenrohr;1;33
+AT;Lichtenhag;1;33
+AT;Neulengbach;1;33
+AT;Niederwinkl;1;33
+AT;Preliebl;1;33
+AT;Rannersdorf;1;33
+AT;Arzl;1;33
+AT;Rudelsdorf;1;33
+AT;Donach;1;33
+AT;Steinbach;1;33
+AT;Sulz im Wienerwald;1;33
+AT;Freundorf;1;33
+AT;Trausdorf an der Wulka / Trajštof;1;33
+AT;Untergeng;1;33
+AT;Gratschach;1;33
+AT;Vill;1;33
+AT;Gurnitz;1;33
+AT;Wegscheide;1;33
+AT;Haselbach;1;33
+AT;Würschendorf;1;33
+AT;Judenau;1;33
+AT;Klein-Engersdorf;1;33
+AT;Kronabitedt;1;33
+AT;Lanzendorf;1;33
+AT;Lindenlach;1;33
+AT;Michelhausen;1;33
+AT;Neusaß;1;33
+AT;Pfaffendorf;1;33
+AT;Puchham;1;33
+AT;Asparn;1;33
+AT;Rutzing;1;33
+AT;Breitbrunn;1;33
+AT;Schönering;1;33
+AT;Dörfla;1;33
+AT;St. Gandolf;1;33
+AT;Ehrensdorf;1;33
+AT;Felixdorf;1;33
+AT;Thalham;1;33
+AT;Frindorf;1;33
+AT;Tretram;1;33
+AT;Untermieger;1;33
+AT;Griechenberg;1;33
+AT;Vordermayrberg;1;33
+AT;Weinburg;1;33
+AT;Hausleiten;1;33
+AT;Wilhering;1;33
+AT;Kalsdorf bei Graz;1;33
+AT;Kleinhart;1;33
+AT;Kulm;1;33
+AT;Lohnharting;1;33
+AT;Obergeng;1;33
+AT;Pischelsdorf;1;33
+AT;Reitzersdorf;1;33
+AT;Audorf;1;33
+AT;Sabuatach;1;33
+AT;Schwarzendorf;1;33
+AT;Eidenberg;1;33
+AT;Fernitz;1;33
+AT;Thening;1;33
+AT;Göltschach;1;33
+AT;Unterrohrbach;1;33
+AT;Haid;1;33
+AT;Heiligen Gestade;1;33
+AT;Zissersdorf;1;33
+AT;Königstetten;1;33
+AT;Kossiach / Kozje;1;33
+AT;Laab im Walde;1;33
+AT;Leitzersdorf;1;33
+AT;Mannswörth;1;33
+AT;Moos;1;33
+AT;Neidling;1;33
+AT;Niederbairing;1;33
+AT;Oberkulm;1;33
+AT;Oed;1;33
+AT;Polsing;1;33
+AT;Sankt Margarethen im Burgenland;1;33
+AT;Staasdorf;1;33
+AT;Emling;1;33
+AT;Strantschitschach;1;33
+AT;Fleckendorf;1;33
+AT;Thürnau;1;33
+AT;Gablitz;1;33
+AT;Tschrestal;1;33
+AT;Görtschach;1;33
+AT;Großhöflein;1;33
+AT;Hall in Tirol;1;33
+AT;Hinterberg;1;33
+AT;Zwerndorf;1;33
+AT;Katzing;1;33
+AT;Leobendorf;1;33
+AT;Maria Jeutendorf;1;33
+AT;Muckendorf an der Donau;1;33
+AT;Neubau;1;33
+AT;Niederfeld;1;33
+AT;Oberolberndorf;1;33
+AT;Öhndorf;1;33
+AT;Aich an der Straße;1;33
+AT;Rain;1;33
+AT;Annenheim;1;33
+AT;Rosenegg;1;33
+AT;Baumgarten;1;33
+AT;Diendorf;1;33
+AT;Enikelberg;1;33
+AT;Straßham;1;33
+AT;Toppelsdorf;1;33
+AT;Gasten;1;33
+AT;Türkstetten;1;33
+AT;Grabwinkel;1;33
+AT;Urlaken;1;33
+AT;Gumpolding;1;33
+AT;Wantendorf;1;33
+AT;Harland;1;33
+AT;Werouzach / Verovce;1;33
+AT;Innernschlag;1;33
+AT;Matzendorf;1;33
+AT;Mühlbach;1;33
+AT;Neulandskron;1;33
+AT;Oberrohrbach;1;33
+AT;Preising;1;33
+AT;Aistental;1;33
+AT;Appersberg;1;33
+AT;Rottenstein;1;33
+AT;Schiefegg;1;33
+AT;Dietmannsdorf;1;33
+AT;Sollenau;1;33
+AT;Edt;1;33
+AT;Fall;1;33
+AT;Freindorf;1;33
+AT;Watzelsdorf;1;33
+AT;Hartheim;1;33
+AT;Höf;1;33
+AT;Wurdach;1;33
+AT;Kreuzbichl;1;33
+AT;Langholzfeld;1;33
+AT;Limberg;1;33
+AT;Mühlhofen;1;33
+AT;Ober-Grafendorf;1;33
+AT;Puchenau;1;33
+AT;Altenberg bei Linz;1;33
+AT;Aschlberg;1;33
+AT;Rust im Tullnerfeld;1;33
+AT;Schönberg im Stubaital;1;33
+AT;Dörfl;1;33
+AT;St. Andrä;1;33
+AT;Eggendorf am Wagram;1;33
+AT;Steinfeld;1;33
+AT;Feldsdorf;1;33
+AT;Tresdorf;1;33
+AT;Greiling;1;33
+AT;Haber;1;33
+AT;Weignersedt;1;33
+AT;Haslach;1;33
+AT;Wieshof;1;33
+AT;Zagging;1;33
+AT;Kleinhain;1;33
+CH;Zürich;17;33
+CH;Bottmingen;16;33
+CH;Basel;16;33
+CH;Allschwil;16;33
+CH;Münchenstein;15;33
+CH;Birsfelden;15;33
+CH;Binningen;14;33
+CH;Muttenz;14;33
+CH;Bettingen;14;33
+CH;Schönenbuch;14;33
+CH;Arlesheim;13;33
+CH;Bern;13;33
+CH;Reinach;13;33
+CH;Therwil;12;33
+CH;Bruderholz;9;33
+CH;Riehen;9;33
+CH;Oberwil;8;33
+CH;Liebefeld;6;33
+CH;Bern Bethlehem;6;33
+CH;Pratteln;6;33
+CH;Sankt Gallen;6;33
+CH;Köniz;6;33
+CH;Ostermundigen;6;33
+CH;Bern Bümpliz;5;33
+CH;Füllinsdorf;5;33
+CH;Ettingen;5;33
+CH;Biel-Benken;5;33
+CH;Geeren;5;33
+CH;Muri bei Bern;5;33
+CH;Gümligen;4;33
+CH;Rodersdorf;4;33
+CH;Witterswil;4;33
+CH;Hofstetten;4;33
+CH;Augst;4;33
+CH;Wabern;4;33
+CH;Ittigen;4;33
+CH;Aesch;4;33
+CH;Wittenbach;4;33
+CH;Dornach;4;33
+CH;Frenkendorf;4;33
+CH;Engelburg;4;33
+CH;Eyfeld bei Bern;3;33
+CH;Hinterkappelen;3;33
+CH;Pfeffingen;3;33
+CH;Spiegel bei Bern;3;33
+CH;Zollikofen;3;33
+CH;Ebikon;3;33
+CH;Kaiseraugst;3;33
+CH;Luzern;3;33
+CH;Reutlingen;3;33
+CH;Schliern bei Köniz;3;33
+CH;Emmenbrücke;3;33
+CH;Gelterkinden;3;33
+CH;Niederwangen bei Bern;3;33
+CH;Seltisberg;3;33
+CH;Oberengstringen;3;33
+CH;Arisdorf;3;33
+CH;Kriens;3;33
+CH;Unterengstringen;3;33
+CH;Dietikon;3;33
+CH;Lausen;3;33
+CH;Bärschwil;3;33
+CH;Basel SPILOG;3;33
+CH;Bremgarten bei Bern;3;33
+CH;Littau;3;33
+CH;Schlieren;3;33
+CH;Bubendorf;3;33
+CH;Emmen;3;33
+CH;Nuglar;3;33
+CH;Hochwald;3;33
+CH;Sissach;3;33
+CH;Laufen;3;33
+CH;Stadel;3;33
+CH;Liestal;3;33
+CH;Basel SBB Cargo AG;3;33
+CH;Bättwil;3;33
+CH;Bennwil;3;33
+CH;Gempen;3;33
+CH;Notkersegg;3;33
+CH;Winterthur;3;33
+CH;Kollbrunn;2;33
+CH;Root;2;33
+CH;Wohlen bei Bern;2;33
+CH;Horw;2;33
+CH;Säriswil;2;33
+CH;Weiningen;2;33
+CH;Belp;2;33
+CH;Herrenschwanden;2;33
+CH;Kappelisacker;2;33
+CH;Aesch bei Neftenbach;2;33
+CH;Seuzach;2;33
+CH;Fahrweid;2;33
+CH;Bolligen;2;33
+CH;Gossau;2;33
+CH;Illiswil;2;33
+CH;Regensdorf;2;33
+CH;Reussbühl;2;33
+CH;Stettlen;2;33
+CH;Herisau;2;33
+CH;Niederscherli;2;33
+CH;Eschenbach;2;33
+CH;Möriswil;2;33
+CH;Papiermühle;2;33
+CH;Sennhof;2;33
+CH;Glattbrugg;2;33
+CH;Pfungen;2;33
+CH;Worblaufen;2;33
+CH;Neftenbach;2;33
+CH;Gurten Kulm;2;33
+CH;Abtwil;2;33
+CH;Brütten;2;33
+CH;Gasel;2;33
+CH;Rheinfelden;2;33
+CH;Kehrsatz;2;33
+CH;Dampfwil;1;33
+CH;Gisikon;1;33
+CH;Oberried bei Niederscherli;1;33
+CH;Siselen;1;33
+CH;Uitikon Waldegg;1;33
+CH;Dielsdorf;1;33
+CH;Ferenberg bei Stettlen;1;33
+CH;Gockhausen;1;33
+CH;Langenloh;1;33
+CH;Radelfingen bei Aarberg;1;33
+CH;Rümlang;1;33
+CH;Urdorf;1;33
+CH;Bantigen;1;33
+CH;Dietlikon;1;33
+CH;Freidorf;1;33
+CH;Innerberg;1;33
+CH;Neubrück;1;33
+CH;Reichenbach bei Bern;1;33
+CH;Steinach;1;33
+CH;Waldau;1;33
+CH;Zürich Crédit Suisse;1;33
+CH;Aarberg;1;33
+CH;Bassersdorf;1;33
+CH;Hardern;1;33
+CH;Neureinach;1;33
+CH;Stuckishaus;1;33
+CH;Zürich Jelmoli-Vers.;1;33
+CH;Adlikon bei Andelfingen;1;33
+CH;Buchrain;1;33
+CH;Melchenbühl;1;33
+CH;Opfikon;1;33
+CH;Wiler bei Seedorf;1;33
+CH;Zürichhorn;1;33
+CH;Chur;1;33
+CH;Geroldswil;1;33
+CH;Hildisrieden;1;33
+CH;Kloten;1;33
+CH;Mörschwil;1;33
+CH;Perlen;1;33
+CH;Uettligen;1;33
+CH;Detligen;1;33
+CH;Glattpark;1;33
+CH;Murzelen;1;33
+CH;Oberwangen bei Bern;1;33
+CH;Rüfenacht;1;33
+CH;Speicher;1;33
+CH;Zollikerberg;1;33
+CH;Frauenkappelen;1;33
+CH;Neschwil;1;33
+CH;Stein;1;33
+CH;Zürich Amtsstellen;1;33
+CH;Dübendorf;1;33
+CH;Frieswil;1;33
+CH;Habstetten;1;33
+CH;Neuenkirch;1;33
+CH;Walperswil;1;33
+CH;Zürich Helsana;1;33
+CH;Adligenswil;1;33
+CH;Bättwil-Flüh;1;33
+CH;Kappelen;1;33
+CH;Meggen;1;33
+CH;Riedern bei Bern;1;33
+CH;Seftau;1;33
+CH;Theilingen;1;33
+CH;Wiesendangen;1;33
+CH;Zürich Sonderdienste;1;33
+CH;Bühl bei Aarberg;1;33
+CH;Geristein;1;33
+CH;Hettlingen;1;33
+CH;Kemptthal;1;33
+CH;Rikon im Tösstal;1;33
+CH;Turbenthal;1;33
+CH;Deisswil bei Stettlen;1;33
+CH;Eymatt;1;33
+CH;Oberscherli;1;33
+CH;Rothenburg;1;33
+CH;Untereggen;1;33
+CH;Aspi bei Seedorf;1;33
+CH;Dierikon;1;33
+CH;Flugbrunnen;1;33
+CH;Goldach;1;33
+CH;Hünikon;1;33
+CH;Oetwil an der Limmat;1;33
+CH;Rain;1;33
+CH;Rütti;1;33
+CH;Vielbringen bei Worb;1;33
+CH;Bargen;1;33
+CH;Bottmingermühle;1;33
+CH;Inwil;1;33
+CH;Neudorf;1;33
+CH;Schlatt bei Winterthur;1;33
+CH;Steinibach;1;33
+CH;Wallisellen;1;33
+CH;Zürich ETH;1;33
+CH;Effretikon;1;33
+CH;Hellbühl;1;33
+CH;Kallnach;1;33
+CH;Mariastein;1;33
+CH;Niederbottigen;1;33
+CH;Teufen;1;33
+CH;Weisslingen;1;33
+CH;Zürich Mülligen GK;1;33
+CH;Adliswil;1;33
+CH;Buchs;1;33
+CH;Herzwil;1;33
+CH;Möhlin;1;33
+CH;Riet;1;33
+CH;Sempach;1;33
+CH;Tübach;1;33
+CH;Affoltern am Albis;1;33
+FR;Paris;339;33
+FR;Levallois-Perret;75;33
+FR;Neuilly-sur-Seine;71;33
+FR;Montrouge;69;33
+FR;Issy-les-Moulineaux;67;33
+FR;Boulogne-Billancourt;61;33
+FR;Malakoff;60;33
+FR;Vincennes;50;33
+FR;Vanves;48;33
+FR;Saint-Mandé;47;33
+FR;Clichy;46;33
+FR;Bagnolet;43;33
+FR;Puteaux;43;33
+FR;Châtillon;42;33
+FR;Montreuil;42;33
+FR;Le Kremlin-Bicêtre;39;33
+FR;Lyon;38;33
+FR;Gentilly;38;33
+FR;Bagneux;37;33
+FR;Saint-Ouen;37;33
+FR;Arcueil;37;33
+FR;Les Lilas;35;33
+FR;Courbevoie;34;33
+FR;Cachan;33;33
+FR;Asnières-sur-Seine;33;33
+FR;Villeurbanne;32;33
+FR;Bourg-la-Reine;29;33
+FR;Ivry-sur-Seine;28;33
+FR;Charenton-le-Pont;28;33
+FR;Romainville;26;33
+FR;Pantin;26;33
+FR;Nogent-sur-Marne;26;33
+FR;Le Pré-Saint-Gervais;25;33
+FR;L\'Haÿ-les-Roses;24;33
+FR;Fontenay-aux-Roses;24;33
+FR;Caluire-et-Cuire;23;33
+FR;Châtenay-Malabry;23;33
+FR;Suresnes;23;33
+FR;Pierre-Bénite;22;33
+FR;Bron;22;33
+FR;Vénissieux;22;33
+FR;Rosny-sous-Bois;22;33
+FR;Francheville;22;33
+FR;Tassin-la-Demi-Lune;22;33
+FR;La Mulatière;22;33
+FR;Vaulx-en-Velin;22;33
+FR;Oullins;22;33
+FR;Saint-Fons;22;33
+FR;Rillieux-la-Pape;22;33
+FR;Dardilly;22;33
+FR;Antony;21;33
+FR;Clamart;21;33
+FR;Saint-Cyr-au-Mont-d\'Or;21;33
+FR;Saint-Didier-au-Mont-d\'Or;21;33
+FR;Ecully;21;33
+FR;Collonges-au-Mont-d\'Or;21;33
+FR;Champagne-au-Mont-d\'Or;21;33
+FR;Sainte-Foy-lès-Lyon;20;33
+FR;Nanterre;20;33
+FR;Saint-Maurice;20;33
+FR;Sceaux;19;33
+FR;Champigny-sur-Marne;19;33
+FR;Joinville-le-Pont;19;33
+FR;Bry-sur-Marne;19;33
+FR;Marseille;19;33
+FR;Noisy-le-Sec;19;33
+FR;Chevilly-Larue;18;33
+FR;Gennevilliers;18;33
+FR;Alfortville;18;33
+FR;Saint-Cloud;18;33
+FR;Fontenay-sous-Bois;18;33
+FR;Aubervilliers;18;33
+FR;La Garenne-Colombes;18;33
+FR;Villejuif;18;33
+FR;Neuilly-sur-Marne;17;33
+FR;Rueil-Malmaison;17;33
+FR;Colombes;17;33
+FR;Le Plessis-Robinson;17;33
+FR;Sèvres;16;33
+FR;Vitry-sur-Seine;16;33
+FR;Le Perreux-sur-Marne;16;33
+FR;Bobigny;16;33
+FR;La Defense;16;33
+FR;Thiais;15;33
+FR;Villiers-sur-Marne;15;33
+FR;Maisons-Alfort;15;33
+FR;Strasbourg;14;33
+FR;Wissous;14;33
+FR;Meudon;14;33
+FR;Massy;14;33
+FR;Noisy-le-Grand;14;33
+FR;Neuilly-Plaisance;14;33
+FR;Bois-Colombes;14;33
+FR;Verrières-le-Buisson;14;33
+FR;Bondy;13;33
+FR;Fresnes;13;33
+FR;Choisy-le-Roi;13;33
+FR;Ville-d\'Avray;12;33
+FR;Saint-Denis;12;33
+FR;Saint-Maur-des-Fossés;12;33
+FR;Orly;11;33
+FR;Montpellier;11;33
+FR;Créteil;11;33
+FR;Saint-Jean-de-Védas;11;33
+FR;Villeneuve-la-Garenne;11;33
+FR;Juvignac;11;33
+FR;Castelnau-le-Lez;11;33
+FR;Le Plessis-Trévise;11;33
+FR;Grabels;11;33
+FR;Lattes;11;33
+FR;Rungis;10;33
+FR;Chennevières-sur-Marne;10;33
+FR;Versailles;10;33
+FR;Villeneuve-le-Roi;10;33
+FR;La Plaine-Saint-Denis;9;33
+FR;Palaiseau;9;33
+FR;Juvisy-sur-Orge;8;33
+FR;La Courneuve;8;33
+FR;Savigny-sur-Orge;8;33
+FR;Guyancourt;8;33
+FR;Buc;8;33
+FR;Vaucresson;8;33
+FR;Villebon-sur-Yvette;8;33
+FR;Les Pavillons-sous-Bois;8;33
+FR;Livry-Gargan;8;33
+FR;Viry-Châtillon;8;33
+FR;Garches;8;33
+FR;Vaujours;8;33
+FR;Ostwald;8;33
+FR;Villemomble;8;33
+FR;Ormesson-sur-Marne;7;33
+FR;Toulouse;7;33
+FR;Tremblay-en-France;7;33
+FR;Longjumeau;7;33
+FR;Bièvres;7;33
+FR;Chaville;7;33
+FR;Drancy;7;33
+FR;Sevran;7;33
+FR;La Varenne-Saint-Hilaire;7;33
+FR;Ris-Orangis;7;33
+FR;Le Raincy;7;33
+FR;Schiltigheim;7;33
+FR;Vélizy-Villacoublay;7;33
+FR;Igny;7;33
+FR;Ablon-sur-Seine;7;33
+FR;Gournay-sur-Marne;6;33
+FR;Meudon-la-Forêt;6;33
+FR;L\'Ile-Saint-Denis;6;33
+FR;Grigny;6;33
+FR;Bonneuil-sur-Marne;6;33
+FR;Gagny;6;33
+FR;Le Chesnay;6;33
+FR;Lingolsheim;6;33
+FR;Illkirch-Graffenstaden;6;33
+FR;Villeneuve-Saint-Georges;6;33
+FR;Villetaneuse;6;33
+FR;Champlan;6;33
+FR;La Queue-en-Brie;6;33
+FR;Le Pecq;6;33
+FR;Morsang-sur-Orge;6;33
+FR;Viroflay;6;33
+FR;Sucy-en-Brie;6;33
+FR;Aulnay-sous-Bois;6;33
+FR;Villepinte;5;33
+FR;Le Bourget;5;33
+FR;Marnes-la-Coquette;5;33
+FR;Epinay-sur-Seine;5;33
+FR;Noiseau;5;33
+FR;Clichy-sous-Bois;5;33
+FR;Les Ulis;5;33
+FR;Deuil-la-Barre;5;33
+FR;Le Blanc-Mesnil;5;33
+FR;Montigny-le-Bretonneux;5;33
+FR;Jouy-en-Josas;5;33
+FR;Villejust;5;33
+FR;Mons-en-Barœul;5;33
+FR;Pontault-Combault;5;33
+FR;Stains;5;33
+FR;La Celle-Saint-Cloud;5;33
+FR;Bezons;5;33
+FR;Bischheim;5;33
+FR;Le Vésinet;5;33
+FR;Orsay;5;33
+FR;Athis-Mons;5;33
+FR;Chatou;5;33
+FR;Voisins-le-Bretonneux;5;33
+FR;Montfermeil;5;33
+FR;Oberhausbergen;5;33
+FR;Saint-Germain-en-Laye;4;33
+FR;Chilly-Mazarin;4;33
+FR;Draveil;4;33
+FR;Mitry-le-Neuf;4;33
+FR;Morangis;4;33
+FR;Sartrouville;4;33
+FR;Enghien-les-Bains;4;33
+FR;Villeparisis;4;33
+FR;Lille;4;33
+FR;Yerres;4;33
+FR;Hellemmes-Lille;4;33
+FR;Champs-sur-Marne;4;33
+FR;Mittelhausbergen;4;33
+FR;Soisy-sous-Montmorency;4;33
+FR;Croissy-sur-Seine;4;33
+FR;Eckbolsheim;4;33
+FR;Sarcelles;4;33
+FR;Eschau;4;33
+FR;Gif-sur-Yvette;4;33
+FR;Coubron;4;33
+FR;Lezennes;4;33
+FR;Limeil-Brévannes;4;33
+FR;Bures-sur-Yvette;4;33
+FR;Mitry-Mory;4;33
+FR;Pierrefitte-sur-Seine;4;33
+FR;Claye-Souilly;4;33
+FR;Geispolsheim;4;33
+FR;Ronchin;4;33
+FR;Sathonay-Camp;4;33
+FR;Gometz-le-Châtel;4;33
+FR;Limay;3;33
+FR;Louveciennes;3;33
+FR;Bailly;3;33
+FR;Buchelay;3;33
+FR;Septeuil;3;33
+FR;Sainghin-en-Mélantois;3;33
+FR;Saint-Gratien;3;33
+FR;Lipsheim;3;33
+FR;Brétigny-sur-Orge;3;33
+FR;Sannois;3;33
+FR;Villemoisson-sur-Orge;3;33
+FR;Hœnheim;3;33
+FR;Le Plessis-Pâté;3;33
+FR;Forest-sur-Marque;3;33
+FR;Gometz-la-Ville;3;33
+FR;Le Port-Marly;3;33
+FR;Auffreville-Brasseuil;3;33
+FR;Paray-Vieille-Poste;3;33
+FR;Chéreng;3;33
+FR;Vert;3;33
+FR;Mantes-la-Ville;3;33
+FR;Valenton;3;33
+FR;Fegersheim;3;33
+FR;Marly-le-Roi;3;33
+FR;Montmorency;3;33
+FR;Anstaing;3;33
+FR;Ballainvilliers;3;33
+FR;Dugny;3;33
+FR;Argenteuil;3;33
+FR;Houilles;3;33
+FR;Magnanville;3;33
+FR;Villeneuve-d\'Ascq;3;33
+FR;Gruson;3;33
+FR;Fourqueux;3;33
+FR;Mantes-la-Jolie;3;33
+FR;Montgeron;3;33
+FR;Wolfisheim;3;33
+FR;Montmagny;3;33
+FR;Bougival;3;33
+FR;Saclay;3;33
+FR;L\'Etang-la-Ville;3;33
+FR;Sainte-Geneviève-des-Bois;3;33
+FR;Lisses;3;33
+FR;Arnouville-lès-Mantes;3;33
+FR;Plobsheim;3;33
+FR;Breuil-Bois-Robert;3;33
+FR;Saint-Brice-sous-Forêt;3;33
+FR;Ecouen;3;33
+FR;Bondoufle;3;33
+FR;Saint-Cyr-l\'Ecole;3;33
+FR;Tressin;3;33
+FR;Emerainville;3;33
+FR;Guerville;3;33
+FR;Saint-Michel-sur-Orge;3;33
+FR;Marcq-en-Barœul;2;33
+FR;Entzheim;2;33
+FR;Hem;2;33
+FR;Boinvilliers;2;33
+FR;Eaubonne;2;33
+FR;Villecresnes;2;33
+FR;Garges-lès-Gonesse;2;33
+FR;Arnouville-lès-Gonesse;2;33
+FR;Osny;2;33
+FR;Rocquencourt;2;33
+FR;Soisy-sur-Seine;2;33
+FR;Eckwersheim;2;33
+FR;Ermont;2;33
+FR;Fontenay-Mauvoisin;2;33
+FR;Lognes;2;33
+FR;Noisy-le-Roi;2;33
+FR;Cergy;2;33
+FR;Corbeil-Essonnes;2;33
+FR;Dammartin-en-Serve;2;33
+FR;Lampertheim;2;33
+FR;Montesson;2;33
+FR;Brunoy;2;33
+FR;Chambourcy;2;33
+FR;Ezanville;2;33
+FR;Loos;2;33
+FR;Perdreauville;2;33
+FR;Villette;2;33
+FR;Mitry-Bourg;2;33
+FR;Niederhausbergen;2;33
+FR;Epinay-sur-Orge;2;33
+FR;Gargenville;2;33
+FR;Les Loges-en-Josas;2;33
+FR;Saint-Aubin;2;33
+FR;La Wantzenau;2;33
+FR;Boissy-Saint-Léger;2;33
+FR;Cysoing;2;33
+FR;Vendenheim;2;33
+FR;Lesquin;2;33
+FR;Ménerville;2;33
+FR;Mundolsheim;2;33
+FR;Porcheville;2;33
+FR;Rosay;2;33
+FR;Saulx-les-Chartreux;2;33
+FR;Evry;2;33
+FR;Wattignies;2;33
+FR;Issou;2;33
+FR;Bordeaux;2;33
+FR;Courdimanche;2;33
+FR;Domont;2;33
+FR;Favrieux;2;33
+FR;Mareil-Marly;2;33
+FR;Mézières-sur-Seine;2;33
+FR;Baisieux;2;33
+FR;Reichstett;2;33
+FR;Sequedin;2;33
+FR;Craponne;2;33
+FR;Flacourt;2;33
+FR;Villevaudé;2;33
+FR;Cailloux-sur-Fontaines;2;33
+FR;Soindres;2;33
+FR;Torcy;2;33
+FR;Epône;2;33
+FR;Gressy;2;33
+FR;Jouy-Mauvoisin;2;33
+FR;Boissy-Mauvoisin;2;33
+FR;Carrières-sur-Seine;2;33
+FR;Châteaufort;2;33
+FR;Souffelweyersheim;2;33
+FR;Crosne;2;33
+FR;Groslay;2;33
+FR;Lomme;2;33
+FR;Pontoise;2;33
+FR;Mandres-les-Roses;2;33
+FR;Rosny-sur-Seine;2;33
+FR;Courcouronnes;1;33
+FR;Tacoignières;1;33
+FR;Dijon;1;33
+FR;Val-de-Reuil;1;33
+FR;Englos;1;33
+FR;Vigneux-sur-Seine;1;33
+FR;Faches-Thumesnil;1;33
+FR;Freneuse;1;33
+FR;Witry-lès-Reims;1;33
+FR;Hargeville;1;33
+FR;La Haye-le-Comte;1;33
+FR;Le Vaudreuil;1;33
+FR;Montlhéry;1;33
+FR;Andé;1;33
+FR;Périgny;1;33
+FR;Blaru;1;33
+FR;Radinghem-en-Weppes;1;33
+FR;Bouffémont;1;33
+FR;Saint-Pierre-du-Perray;1;33
+FR;Saint-Rémy-lès-Chevreuse;1;33
+FR;Courtry;1;33
+FR;Férolles-Attilly;1;33
+FR;Gambais;1;33
+FR;Gouvieux;1;33
+FR;Les Clayes-sous-Bois;1;33
+FR;Limours;1;33
+FR;Lys-lez-Lannoy;1;33
+FR;Nogent-l\'Abbesse;1;33
+FR;Balma;1;33
+FR;Richebourg;1;33
+FR;Chantilly;1;33
+FR;Tinqueux;1;33
+FR;Vauhallan;1;33
+FR;Flins-Neuve-Eglise;1;33
+FR;Villiers-le-Bel;1;33
+FR;Gressey;1;33
+FR;Holtzheim;1;33
+FR;Jouy-le-Moutier;1;33
+FR;La Verrière;1;33
+FR;Le Mesnil-Saint-Denis;1;33
+FR;Les Mesneux;1;33
+FR;Marolles-sur-Seine;1;33
+FR;Moisson;1;33
+FR;Bègles;1;33
+FR;Plaisir;1;33
+FR;Boissets;1;33
+FR;Saint-Brice-Courcelles;1;33
+FR;Cannes-Ecluse;1;33
+FR;Chassieu;1;33
+FR;Croix;1;33
+FR;Vauréal;1;33
+FR;Lainville-en-Vexin;1;33
+FR;Magny-les-Hameaux;1;33
+FR;Maulette;1;33
+FR;Montalet-le-Bois;1;33
+FR;Mousseaux-sur-Seine;1;33
+FR;Ozoir-la-Ferrière;1;33
+FR;Berru;1;33
+FR;Pontcarré;1;33
+FR;Bompas;1;33
+FR;Saint-Martin-des-Champs;1;33
+FR;Elancourt;1;33
+FR;Escobecques;1;33
+FR;Guernes;1;33
+FR;Incarville;1;33
+FR;Leudeville;1;33
+FR;Menucourt;1;33
+FR;Noyelles-lès-Seclin;1;33
+FR;Port-Villez;1;33
+FR;Surville;1;33
+FR;Val Pompadour;1;33
+FR;Gonesse;1;33
+FR;La Grande-Paroisse;1;33
+FR;Le Tertre-Saint-Denis;1;33
+FR;Oinville-sur-Montcient;1;33
+FR;Blaesheim;1;33
+FR;Quatremare;1;33
+FR;Bornel;1;33
+FR;Saint-Genis-Laval;1;33
+FR;Champigny;1;33
+FR;Saint-Ouen-l\'Aumône;1;33
+FR;Saint-Priest;1;33
+FR;Chevry-Cossigny;1;33
+FR;Schirmeck;1;33
+FR;Courgent;1;33
+FR;Ennetières-en-Weppes;1;33
+FR;ville test;1;33
+FR;Goussonville;1;33
+FR;Jeufosse;1;33
+FR;Lécluse;1;33
+FR;Limetz-Villez;1;33
+FR;Ormes;1;33
+FR;Persan;1;33
+FR;Boinville-en-Mantois;1;33
+FR;Reims;1;33
+FR;Boullay-les-Troux;1;33
+FR;Sailly;1;33
+FR;Cabestany;1;33
+FR;Saint-Germain-lès-Corbeil;1;33
+FR;Saint-Thibault-des-Vignes;1;33
+FR;Civry-la-Forêt;1;33
+FR;Cravent;1;33
+FR;Tilly;1;33
+FR;Fleury-Mérogis;1;33
+FR;Villiers-le-Bâcle;1;33
+FR;Gravigny;1;33
+FR;Heudreville-sur-Eure;1;33
+FR;Le Mesnil-en-Thelle;1;33
+FR;Marolles-en-Hurepoix;1;33
+FR;Nointel;1;33
+FR;Orvilliers;1;33
+FR;Beaumont-sur-Oise;1;33
+FR;Piscop;1;33
+FR;Bois-d\'Arcy;1;33
+FR;Saint-Illiers-le-Bois;1;33
+FR;Saintry-sur-Seine;1;33
+FR;Toulon;1;33
+FR;Eragny-sur-Oise;1;33
+FR;Villiers-sur-Orge;1;33
+FR;Génicourt;1;33
+FR;Gretz-Armainvilliers;1;33
+FR;Mours;1;33
+FR;Arpajon;1;33
+FR;Bernes-sur-Oise;1;33
+FR;Rolleboise;1;33
+FR;Bréval;1;33
+FR;Trappes;1;33
+FR;Lamorlaye;1;33
+FR;Lommoye;1;33
+FR;Maisons-Laffitte;1;33
+FR;Montereau-Fault-Yonne;1;33
+FR;Normanville;1;33
+FR;Bruges;1;33
+FR;Chambly;1;33
+FR;Chaufour-lès-Bonnières;1;33
+FR;Décines-Charpieu;1;33
+FR;Vaires-sur-Marne;1;33
+FR;Emmerin;1;33
+FR;Gommecourt;1;33
+FR;Guitrancourt;1;33
+FR;Laval-en-Brie;1;33
+FR;Longpont-sur-Orge;1;33
+FR;Mérignac;1;33
+FR;Acquigny;1;33
+FR;Oberschaeffolsheim;1;33
+FR;Parmain;1;33
+FR;Roubaix;1;33
+FR;Champagne-sur-Oise;1;33
+FR;Chevreuse;1;33
+FR;Talence;1;33
+FR;Valence-en-Brie;1;33
+FR;Ennery;1;33
+FR;Villabé;1;33
+FR;Goussainville;1;33
+FR;Haubourdin;1;33
+FR;Jambville;1;33
+FR;La Madeleine;1;33
+FR;Le Bouscat;1;33
+FR;Louviers;1;33
+FR;Nice;1;33
+FR;Angerville-la-Campagne;1;33
+FR;Orly aéroport;1;33
+FR;Perpignan;1;33
+FR;Saint-Germain-lès-Arpajon;1;33
+FR;Saint-Pierre-du-Vauvray;1;33
+FR;Saint-Sébastien-de-Morsent;1;33
+FR;Thillois;1;33
+FR;Drocourt;1;33
+FR;Varennes-sur-Seine;1;33
+FR;Epinay-sous-Sénart;1;33
+FR;Ville-Saint-Jacques;1;33
+FR;Heudebouville;1;33
+FR;Jouars-Pontchartrain;1;33
+FR;Le Mesnil-Aubry;1;33
+FR;Linas;1;33
+FR;Marolles-en-Brie;1;33
+FR;Bazainville;1;33
+FR;Bouqueval;1;33
+FR;Saint-André-lez-Lille;1;33
+FR;Saint-Illiers-la-Ville;1;33
+FR;Charbonnières-les-Bains;1;33
+FR;Croissy-Beaubourg;1;33
+FR;Echouboulains;1;33
+FR;Follainville-Dennemont;1;33
+FR;Houdan;1;33
+FR;La Villeneuve-en-Chevrie;1;33
+FR;Les Molières;1;33
+FR;L\'Isle-Adam;1;33
+FR;Mondreville;1;33
+FR;Noisiel;1;33
+FR;Bennecourt;1;33
+FR;Roissy-en-Brie;1;33
+FR;Saint-Lubin-de-la-Haye;1;33
+FR;Santeny;1;33
+FR;Toussus-le-Noble;1;33
+FR;Erquinghem-le-Sec;1;33
+FR;Fontenay-Saint-Père;1;33
+FR;Juziers;1;33
+FR;Lambersart;1;33
+FR;Lésigny;1;33
+FR;Maurepas;1;33
+FR;Montchauvet;1;33
+FR;Mulcent;1;33
+FR;Bezannes;1;33
+FR;Brueil-en-Vexin;1;33
+FR;Cernay-lès-Reims;1;33
+FR;Saint-Martin-la-Garenne;1;33
+FR;Cormontreuil;1;33
+FR;Evreux;1;33
+FR;Forges;1;33
+FR;Irigny;1;33
+FR;Longnes;1;33
+FR;Méricourt;1;33
+FR;Neauphlette;1;33
+FR;Bilwisheim;1;33
+FR;Presles;1;33
+FR;Bonnières-sur-Seine;1;33
+FR;Bruyères-sur-Oise;1;33
+FR;Saint-Etienne-du-Vauvray;1;33
+FR;Chelles;1;33
+PL;Kraków;93;33
+PL;Wrocław;69;33
+PL;Warszawa;60;33
+PL;Poznań;36;33
+PL;Katowice;16;33
+PL;Plewiska;9;33
+PL;Wysoka;9;33
+PL;Sosnowiec;9;33
+PL;Bydgoszcz;8;33
+PL;Chorzów;7;33
+PL;Luboń;7;33
+PL;Dąbrowa Górnicza;7;33
+PL;Częstochowa;6;33
+PL;Bielany Wrocławskie;6;33
+PL;Mokronos Dolny;6;33
+PL;Rząska;6;33
+PL;Radomierzyce;6;33
+PL;Komorniki;5;33
+PL;Mokronos Górny;5;33
+PL;Wiry;5;33
+PL;Zabrodzie;5;33
+PL;Będzin;5;33
+PL;Rzeszów;4;33
+PL;Cesarzowice;4;33
+PL;Smolec;4;33
+PL;Zielonki;4;33
+PL;Węgrzce;4;33
+PL;Złotniki;3;33
+PL;Biestrzyków;3;33
+PL;Jelonek;3;33
+PL;Łódź;3;33
+PL;Wieliczka;3;33
+PL;Szreniawa;3;33
+PL;Głuchowo;3;33
+PL;Radwanice;3;33
+PL;Zakrzewo;3;33
+PL;Chomęcice;3;33
+PL;Skórzewo;3;33
+PL;Tychy;3;33
+PL;Wysogotowo;3;33
+PL;Bibice;3;33
+PL;Bytom;3;33
+PL;Lusina;3;33
+PL;Baranowo;3;33
+PL;Iwiny;3;33
+PL;Przeźmierowo;3;33
+PL;Ślęza;3;33
+PL;Rosnowo;3;33
+PL;Dąbrowa;3;33
+PL;Garliczka;2;33
+PL;Radom;2;33
+PL;Swadzim;2;33
+PL;Babki;2;33
+PL;Blizne Łaszczyńskiego;2;33
+PL;Domasław;2;33
+PL;Giebułtów;2;33
+PL;Lusówko (Rozalin);2;33
+PL;Prusy;2;33
+PL;Golkowice;2;33
+PL;Pawłowice;2;33
+PL;Przybysławice;2;33
+PL;Rosnówko;2;33
+PL;Trojanowice;2;33
+PL;Będzin (Warpie);2;33
+PL;Januszowice;2;33
+PL;Klaudyn;2;33
+PL;Napachanie;2;33
+PL;Rumianek;2;33
+PL;Tyniec Mały;2;33
+PL;Złotkowo;2;33
+PL;Dąbrówka;2;33
+PL;Garlica Murowana;2;33
+PL;Suchy Las;2;33
+PL;Lusówko;2;33
+PL;Batorowo;2;33
+PL;Będzin (Brzozowica);2;33
+PL;Chyby;2;33
+PL;Kaźmierz;2;33
+PL;Pękowice;2;33
+PL;Przybroda;2;33
+PL;Rokietnica;2;33
+PL;Będzin (Małobądz);2;33
+PL;Czeladź;2;33
+PL;Garlica Duchowna;2;33
+PL;Kokoszczyn;2;33
+PL;Suchy Dwór;2;33
+PL;Łęczyca;2;33
+PL;Cerekwica;2;33
+PL;Gdańsk;2;33
+PL;Komorowice;2;33
+PL;Sady;2;33
+PL;Swarzędz;2;33
+PL;Gliwice;2;33
+PL;Karwiany;2;33
+PL;Lusowo;2;33
+PL;Palędzie;2;33
+PL;Szczyglice;2;33
+PL;Góra;2;33
+PL;Tarnowo Podgórne;2;33
+PL;Będzin (Ksawera);2;33
+PL;Gołuski;2;33
+PL;Jankowice;2;33
+PL;Kiekrz;2;33
+PL;Krzeptów;2;33
+PL;Mikołów;2;33
+PL;Mysłowice;2;33
+PL;Tulce;2;33
+PL;Kobylniki;2;33
+PL;Latchorzew;2;33
+PL;Umiastów;1;33
+PL;Zabierzów;1;33
+PL;Ceradz Kościelny;1;33
+PL;Darzlubie;1;33
+PL;Lulinek;1;33
+PL;Mirków;1;33
+PL;Otowo;1;33
+PL;Wąsy-Kolonia;1;33
+PL;Zacharzyce;1;33
+PL;Chlewiska;1;33
+PL;Kaputy;1;33
+PL;Konstancin-Jeziorna;1;33
+PL;Ołtarzew;1;33
+PL;Ramiszów;1;33
+PL;Siechnice;1;33
+PL;Szamotuły;1;33
+PL;Zalasewo;1;33
+PL;Batowice;1;33
+PL;Bosutów;1;33
+PL;Drwęsa;1;33
+PL;Iwanowice;1;33
+PL;Koziegłowy;1;33
+PL;Magnice;1;33
+PL;Mościska;1;33
+PL;Przecławek;1;33
+PL;Rekowo Górne;1;33
+PL;Śledziejowice;1;33
+PL;Sławutowo;1;33
+PL;Wilkszyn;1;33
+PL;Żerniki Małe;1;33
+PL;Będzin (Grodziec);1;33
+PL;Brzezno;1;33
+PL;Czapury;1;33
+PL;Długołęka;1;33
+PL;Gołaszew;1;33
+PL;Janikowo;1;33
+PL;Kiączyn;1;33
+PL;Krępice;1;33
+PL;Michałowice-Wieś;1;33
+PL;Mrzezino;1;33
+PL;Pętkowice;1;33
+PL;Sobota;1;33
+PL;Wola Zachariaszowska;1;33
+PL;Żórawina;1;33
+PL;Gaj Wielki;1;33
+PL;Księginice;1;33
+PL;Mikołów (Kamionka);1;33
+PL;Puszczykowo;1;33
+PL;Starzyny;1;33
+PL;Celbowo;1;33
+PL;Jaworzno;1;33
+PL;Koleczkowo;1;33
+PL;Mikołów (Śmiłowice);1;33
+PL;Osłonino;1;33
+PL;Pogroszew;1;33
+PL;Racławice Wielkie;1;33
+PL;Rzeplin;1;33
+PL;Zabrze;1;33
+PL;Łężyce;1;33
+PL;Blizne Jasińskiego;1;33
+PL;Dolne Pole;1;33
+PL;Gdynia;1;33
+PL;Kąpino;1;33
+PL;Konotopa;1;33
+PL;Ożarów Mazowiecki;1;33
+PL;Połczyno;1;33
+PL;Samotwór;1;33
+PL;Święta Katarzyna;1;33
+PL;Wejherowo;1;33
+PL;Boleń;1;33
+PL;Dopiewo;1;33
+PL;Golęczewo;1;33
+PL;Imielin;1;33
+PL;Kątnik;1;33
+PL;Korzkiew;1;33
+PL;Macierzysz;1;33
+PL;Mory;1;33
+PL;Pamiątkowo;1;33
+PL;Przecław;1;33
+PL;Reguły;1;33
+PL;Szeligi;1;33
+PL;Wilczyce;1;33
+PL;Żelistrzewo;1;33
+PL;Brudzewo;1;33
+PL;Dziekanowice;1;33
+PL;Górna Wieś;1;33
+PL;Jabłonna;1;33
+PL;Michałowice-Osiedle;1;33
+PL;Mrowino (Zmysłowo);1;33
+PL;Sławutówko;1;33
+PL;Trestno;1;33
+PL;Brzozówka;1;33
+PL;Gądów;1;33
+PL;Grębynice;1;33
+PL;Jankowice (Edmundowo);1;33
+PL;Kiełczów;1;33
+PL;Krzyżanowice;1;33
+PL;Mikołów (Borowa Wieś);1;33
+PL;Młodziejowice;1;33
+PL;Piotrkówek Mały;1;33
+PL;Puck;1;33
+PL;Rumia;1;33
+PL;Stare;1;33
+PL;Żydowo;1;33
+PL;Jawczyce;1;33
+PL;Libertów;1;33
+PL;Mikołów (Reta Śmiłowicka);1;33
+PL;Opacz-Kolonia;1;33
+PL;Podłoziny;1;33
+PL;Rąbień AB;1;33
+PL;Wacyn;1;33
+PL;Biskupice Podgórne;1;33
+PL;Daszewice;1;33
+PL;Kamienna Góra;1;33
+PL;Modlnica;1;33
+PL;Owczary;1;33
+PL;Połchowo;1;33
+PL;Zakręt;1;33
+PL;Bogucin;1;33
+PL;Chludowo;1;33
+PL;Dopiewiec;1;33
+PL;Koprki;1;33
+PL;Mokry Dwór;1;33
+PL;Pruszowice;1;33
+PL;Reda;1;33
+PL;Sierosław;1;33
+PL;Wieruchów;1;33
+PL;Zdrada;1;33
+PL;Bronisze;1;33
+PL;Chrzanów;1;33
+PL;Duchnice;1;33
+PL;Katowice (Piotrowice);1;33
+PL;Kozierów;1;33
+PL;Michałowice;1;33
+PL;Mrowino;1;33
+PL;Pęcice;1;33
+PL;Rogierówko;1;33
+PL;Szukalice;1;33
+PL;Wiórek;1;33
+PL;Zielątkowo;1;33
+PL;Brzoza;1;33
+PL;Czarnochowice;1;33
+PL;Gądki;1;33
+PL;Piotrkówek Duży;1;33
+PL;Psary;1;33
+PL;Żurawiniec;1;33
+PL;Będzin (Łagisza);1;33
+PL;Bytkowo;1;33
+PL;Garby;1;33
+PL;Głuszyna Leśna;1;33
+PL;Jaryszki;1;33
+PL;Mikołów (Paniowy);1;33
+PL;Opacz Mała;1;33
+PL;Podgaj;1;33
+PL;Rąbień;1;33
+PL;Rybnik;1;33
+PL;Strzykuły;1;33

@@ -1,0 +1,12 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{if isset($company)}
+    {include file='administration/company/edit/_navigation.htm'}
+
+    {include file='administration/crm/ticket.htm'}
+
+    {$grid}
+{/if}
+
+{/block}

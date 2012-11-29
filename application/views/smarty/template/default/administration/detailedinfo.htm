@@ -1,0 +1,313 @@
+{extends file='administration/base.htm'}
+{block name="content"}
+
+<ul class="be-tabs">
+    <li><a class="tab" id="yd-this-tab-1">{__b('Letzten Ereignisse')}</a></li>
+    <li><a class="tab" id="yd-this-tab-2">{__b('Statistik')}</a></li>
+    <li><a class="tab" id="yd-this-tab-3">{__b('Umsätze')}</a></li>
+    <li><a class="tab" id="yd-this-tab-4">{__b('Top Listen')}</a></li>
+    <li><a class="tab" id="yd-this-tab-5">{__b('Blacklist')}</a></li>
+</ul>
+
+<div id="detailedinfo">
+    <div class="yd-tab" id="yd-tab-1">
+        <div class="two-column-box">
+            <div class="item">
+                <div class="item-head">
+                    {__b('Letzten Bestellungen')}
+                </div>
+                <div class="item-content">
+                    <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-head">
+                    {__b('Letzten Firmenbestellungen')}
+                </div>
+                <div class="item-content">
+                    <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+        </div>
+        <div class="two-column-box">
+            <div class="item">
+                <div class="item-head">
+                    {__b('Zuletzt Registriert')}
+                </div>
+                <div class="item-content">
+                    <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="yd-tab" id="yd-tab-2">
+        <div class="one-column-box">
+            <div class="item">
+                <div class="item-head">
+                    {__b('Statistik Gesamt')}
+                </div>
+                <div class="item-content">
+                    <table>
+                        <div id="yd-lb-wait"></div>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="five-column-box">
+            <div class="item">
+                <div class="item-head">
+                    {__b('Bestellungen bewertet heute')}
+                </div>
+                <div class="item-content">
+                    <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-head">
+                    {__b('Bestellungen bewertet diese Woche')}
+                </div>
+                <div class="item-content">
+                    <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-head">
+                    {__b('Bestellungen bewertet diesen Monat')}
+                </div>
+                <div class="item-content">
+                    <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-head">
+                    {__b('Bestellungen bewertet dieses Jahr')}
+                </div>
+                <div class="item-content">
+                    <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-head">
+                    {__b('Bestellungen bewertet insgesamt')}
+                </div>
+                <div class="item-content">
+                    <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="one-column-box">
+            <div class="item">
+                <div class="item-head">
+                    {__b('Restaurants')}
+                </div>
+                <div class="item-content">
+                    <table>
+                        <div id="yd-lb-wait"></div>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <div class="yd-tab" id="yd-tab-3">
+        <div class="one-column-box">
+
+            <div class="item">
+                <div class="item-head">
+                    {__b('Statistik Gesamt')}
+                </div>
+                <div class="item-content">
+                    <table>
+                        <div id="yd-lb-wait"></div>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="one-column-box">
+            <div class="item">
+                <div class="item-head">
+                    {__b('Restaurants')}
+                </div>
+                <div class="item-content">
+                    <table>
+                        <div id="yd-lb-wait"></div>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="three-column-box">
+            <div class="item">
+                <div class="item-head">
+                    {__b('Bestellungen Heute')}
+                </div>
+                <div class="item-content">
+                    <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-head">
+                    {__b('Bestellungen diese Woche')}
+                </div>
+                <div class="item-content">
+                    <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="item-head">
+                    {__b('Bestellungen diesen Monat')}
+                </div>
+                <div class="item-content">
+                    <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="three-column-box">
+
+            <div class="item">
+                <div class="item-head">
+                    {__b('Umsatz Heute')}
+                </div>
+                <div class="item-content">
+                    <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-head">
+                    {__b('Umsatz diese Woche')}
+                </div>
+                <div class="item-content">
+                    <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-head">
+                    {__b('Umsatz diesen Monat')}
+                </div>
+                <div class="item-content">
+                    <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="three-column-box">
+            <div class="item">
+                <div class="item-head">
+                    {__b('Provision Heute')}
+                </div>
+                <div class="item-content">
+                   <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-head">
+                    {__b('Provision diese Woche')}
+                </div>
+                <div class="item-content">
+                    <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-head">
+                    {__b('Provision diesen Monat')}
+                </div>
+                <div class="item-content">
+                    <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="yd-tab" id="yd-tab-4">
+        <div class="three-column-box">
+
+            <div class="item">
+                <div class="item-head">
+                    {__b('Top Restaurants')}
+                </div>
+                <div class="item-content">
+                    <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-head">
+                    {__b('Top Kunden')}
+                </div>
+                <div class="item-content">
+                    <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-head">
+                    {__b('Top Firmen')}
+                </div>
+                <div class="item-content">
+                    <div id="yd-lb-wait"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+<div class="yd-tab" id="yd-tab-5">
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Blacklist')}
+            </div>
+            <div class="item-content">
+                <table cellspacing="10">
+                    <tr>
+                        <td width="80%"><textarea cols="50" rows="30" id="blacklist">{$blacklist}</textarea></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="{__b('Sichern')}" id="yd-save-blacklist" class="button rund_set"/></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+                {__b('Hinweise')}
+            </div>
+            <div class="item-content">
+                <i>{__b('Pro Zeile einen Begriff eintragen, bei dem eine Bestellung als Fake gekennzeichnet werden soll.')}</i>
+                <br />
+                <br />
+                <u>{__b('Gesucht wird in')}:</u>
+                <ul>
+                    <li>{__b('Vorname')}</li>
+                    <li>{__b('Nachname')}</li>
+                    <li>{__b('Telefonnummer')}</li>
+                    <li>{__b('Email')}</li>
+                    <li>{__b('Straße')}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+{/block}

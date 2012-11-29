@@ -1,0 +1,11 @@
+{if $config->domain->base == 'lieferando.de'}
+<script type="text/javascript">
+    /*<![CDATA[*/
+    
+    var sonar_product = {ldelim} 
+        category: "{$city->getPlz()}-{str_replace(" ", "-", $city->getFullname())}"
+    {rdelim} ;
+    
+    /* ]]> */
+</script>
+{/if}

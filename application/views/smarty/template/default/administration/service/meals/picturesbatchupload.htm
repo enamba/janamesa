@@ -1,0 +1,115 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/service/meals/_navigation.htm'}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Bilder für mehrere Speisen setzen')}
+        </div>
+        <div class="item-content">
+            <form method="post" action="/administration_service_meals/picturesbatchupload">
+                <table class="user-tab">
+                    <tr>
+                        <td colspan="3">{__b('Bitte Text eingeben, nach dem die Speisen gefiltert werden sollen')}</td>
+                    </tr>
+                    <tr>
+                        <td width="30%"><input type="text" name="searchtext" value="{$searchtext}" style="width: 200px;"></td>
+                        <td width="35%"><input type="checkbox" name="exactphrase" value="1" {if $exactphrase==1}checked{/if}/> {__b('Exakte Übereinstimmung %s(wenn nicht markiert, werden alle Speisen angezeigt, die den Suchtext im Namen haben)', '<br/>')}</td>
+                        <td width="35%"><input type="checkbox" name="showOnlyIfNoImage" value="1" {if $showOnlyIfNoImage==1}checked{/if}/> {__b('Nur Speisen ohne Bilder anzeigen')}</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Speisen aus der Suche ausschließen, die folgenden Text enthalten')}:</td>
+                        <td colspan="2"><input type="text" name="excludetext" value="{$excludetext}" style="width: 200px;"></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Liste der Restaurants, wo nicht gesucht werden soll.<br/>Liste der Ids, durch Komma getrennt')}:</td>
+                        <td colspan="2"><input type="text" name="excluderestaurants" value="{$excluderestaurants}" style="width: 600px;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><input type="submit" value="{__b('Suchen')}" style="width: 100px;" class="button"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+{if isset($grid)}
+<form method="post" action="/administration_service_meals/picturesbatchupload" enctype="multipart/form-data">
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Neues Bild setzen. Entweder für alle %s Speisen mit "%s" im Namen oder nur für die markierte Speisen.', $grid->getTotalRecords(), $searchtext)}
+        </div>
+        <div class="item-content">
+                <input type="hidden" name="searchtext" value="{$searchtext}"/>
+                <input type="hidden" name="exactphrase" value="{$exactphrase}"/>
+                <input type="hidden" name="excludetext" value="{$excludetext}"/>
+                <input type="hidden" name="excluderestaurants" value="{$excluderestaurants}"/>
+                <input type="hidden" name="showOnlyIfNoImage" value="{$showOnlyIfNoImage}"/>
+                <table class="user-tab">
+                    <tr>
+                        <td width="30%"><input type="file" name="img" style="width: 200px;"></td>
+                        <td width="25%"><input onclick="javascript:return confirm(__b('Soll das Bild für alle Speisen gesetzt werden?'))"  type="submit" name="loadimg" value="{__b('Für alle Speisen setzen')}" style="width: 250px;" class="button"></td>
+                        <td width="25%"><input type="submit" name="loadimgselected" value="{__b('Nur für die markierten Speisen setzen')}" style="width: 350px;" class="button"></td>
+                        <td width="20%"><input type="checkbox" name="onlyifnoimage" value="1"/>{__b('Nur wenn die Speise noch keine Bilder hat')}</td>
+                    </tr>
+                </table>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Speisen')}
+        </div>
+        <div class="item-content">
+            {if is_null($countset)}
+            <b>
+                {__b('Hier sehen Sie alle Speisen, auf die dieser Suchkriterium zutrifft. Das Bild wird für diese Speisen gesetzt.')}
+            </b>
+            {/if}
+            <br/><br/>
+            <table>
+                <tr>
+                    <td><input class="yd-check-all-checkboxes" type="checkbox" value="1"/> {__b('Alle')}</td>
+                    <td align="right"><b>{__b('Die Filter in dieser Tabelle werden nicht durch "Enter" aktiviert. Geben Sie einen Text ein und klicken Sie außerhalb des Eingabefeldes, dann wird nach dem Text gefitert.')}</b></td>
+                </tr>
+            </table>
+
+            <br/>
+            {$grid}
+        </div>
+    </div>
+</div>
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Bilder löschen. Entweder für alle Speisen, auf die das Suchkriterium zutrifft oder nur für die markierten Speisen.')}
+        </div>
+        <div class="item-content">
+                <input type="hidden" name="searchtext" value="{$searchtext}"/>
+                <input type="hidden" name="exactphrase" value="{$exactphrase}"/>
+                <input type="hidden" name="excludetext" value="{$excludetext}"/>
+                <input type="hidden" name="excluderestaurants" value="{$excluderestaurants}"/>
+                <input type="hidden" name="showOnlyIfNoImage" value="{$showOnlyIfNoImage}"/>
+                <table class="user-tab">
+                    <tr>
+                        <td width="40%"></td>
+                        <td width="30%"><input type="submit" name="deleteimgselected" value="{__b('Bilder für die markierten Speisen löschen')}" class="yd-remove-selected-pictures-button" style="width: 350px;" onclick="javascript:return confirm(__b('Vorsicht!! Sollen die Bilder für die markieren Speisen wirklich gelöscht werden?'))"></td>
+                        <td width="30%"><input type="submit" name="deleteimg" value="{__b('Bilder für alle Speisen löschen')}" class="yd-remove-all-pictures-button" style="width: 250px;" onclick="javascript:return confirm(__b('Vorsicht!! Sollen Bilder für alle diese Speisen wirklich gelöscht werden?'))"></td>
+                    </tr>
+                </table>
+        </div>
+    </div>
+</div>
+
+</form>
+{/if}
+{/block}

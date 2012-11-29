@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+{if $config->domain->base == 'lieferando.de' || $config->domain->base == 'lieferando.at' || $config->domain->base == 'lieferando.ch' || $config->domain->base == 'eat-star.de'}
+<!--[if lt IE 7 ]> <html lang="de" xml:lang="de" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="de" xml:lang="de" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="de" xml:lang="de" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="de" xml:lang="de" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="de" xml:lang="de">         <!--<![endif]-->
+    {/if}
+
+    {if $config->domain->base == 'pyszne.pl'}
+    <!--[if lt IE 7 ]> <html lang="pl" xml:lang="pl" class="ie6"> <![endif]-->
+    <!--[if IE 7 ]>    <html lang="pl" xml:lang="pl" class="ie7"> <![endif]-->
+    <!--[if IE 8 ]>    <html lang="pl" xml:lang="pl" class="ie8"> <![endif]-->
+    <!--[if gt IE 8 ]> <html lang="pl" xml:lang="pl" class="ie9"> <![endif]-->
+    <!--[!IE]>   <!--> <html lang="pl" xml:lang="pl">         <!--<![endif]-->
+        {/if}
+
+        {if $config->domain->base == 'taxiresto.fr'}
+        <!--[if lt IE 7 ]> <html lang="fr" xml:lang="fr" class="ie6"> <![endif]-->
+        <!--[if IE 7 ]>    <html lang="fr" xml:lang="fr" class="ie7"> <![endif]-->
+        <!--[if IE 8 ]>    <html lang="fr" xml:lang="fr" class="ie8"> <![endif]-->
+        <!--[if gt IE 8 ]> <html lang="fr" xml:lang="fr" class="ie9"> <![endif]-->
+        <!--[!IE]>   <!--> <html lang="fr" xml:lang="fr">         <!--<![endif]-->
+            {/if}
+
+            {if $config->domain->base == 'elpedido.es'}
+            <!--[if lt IE 7 ]> <html lang="es" xml:lang="es" class="ie6"> <![endif]-->
+            <!--[if IE 7 ]>    <html lang="es" xml:lang="es" class="ie7"> <![endif]-->
+            <!--[if IE 8 ]>    <html lang="es" xml:lang="es" class="ie8"> <![endif]-->
+            <!--[if gt IE 8 ]> <html lang="es" xml:lang="es" class="ie9"> <![endif]-->
+            <!--[!IE]>   <!--> <html lang="es" xml:lang="es">         <!--<![endif]-->
+                {/if}
+
+                {if $config->domain->base == 'appetitos.it'}
+                <!--[if lt IE 7 ]> <html lang="it" xml:lang="it" class="ie6"> <![endif]-->
+                <!--[if IE 7 ]>    <html lang="it" xml:lang="it" class="ie7"> <![endif]-->
+                <!--[if IE 8 ]>    <html lang="it" xml:lang="it" class="ie8"> <![endif]-->
+                <!--[if gt IE 8 ]> <html lang="it" xml:lang="it" class="ie9"> <![endif]-->
+                <!--[!IE]>   <!--> <html lang="it" xml:lang="it">         <!--<![endif]-->
+                    {/if}
+
+                    {if $config->domain->base == 'janamesa.com.br'}
+                    <!--[if lt IE 7 ]> <html lang="pt" xml:lang="pt" class="ie6"> <![endif]-->
+                    <!--[if IE 7 ]>    <html lang="pt" xml:lang="pt" class="ie7"> <![endif]-->
+                    <!--[if IE 8 ]>    <html lang="pt" xml:lang="pt" class="ie8"> <![endif]-->
+                    <!--[if gt IE 8 ]> <html lang="pt" xml:lang="pt" class="ie9"> <![endif]-->
+                    <!--[!IE]>   <!--> <html lang="pt" xml:lang="pt">         <!--<![endif]-->
+                        {/if}
+
+                        <head>
+                            <meta charset="utf-8">
+                            <title>{$config->domain->base}</title>
+                            <link rel="stylesheet" type="text/css" href="/media/css/compiled/frontend-{$extra_css|default:'no'}-{$REVISION}.css" />
+
+                            <meta name="robots" content="noindex,nofollow" />
+                            <script type="text/javascript" src="/media/javascript/compiled/frontend-sem.js"></script>
+
+                            <style>
+
+                                body {
+                                    background: #fff;
+                                }
+
+                                #yd-fail {
+                                    position: relative;
+                                    width: 500px;
+                                    padding: 0 0 0 300px;
+                                    margin: 50px auto 0;
+                                    background: url(/media/images/yd-background/yd-error.jpg) no-repeat;
+                                }
+
+                                #yd-fail h1 {
+                                    font: 42px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+                                }
+
+                                #yd-fail h2 {
+                                    font: 24px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+                                    color: #999;
+                                }
+
+                                #yd-fail p {
+                                    margin: 15px 0;
+                                    font-size: 14px;
+                                }
+
+                                #yd-fail p strong {
+                                    display: block;
+                                    font-weight: normal;
+                                    margin: 5px 0 0;
+                                }
+
+                                #yd-fail h3 {
+                                    position: absolute;
+                                    top: 180px;
+                                    left: 298px;
+                                    width: 480px;
+                                    height: 30px;
+                                    text-align: center;
+                                    font-size: 18px;
+                                }
+
+                                #yd-fail #yd-plz-search {
+                                    position: absolute;
+                                    top: 195px;
+                                    left: 295px;
+                                    width: 200px;
+                                    height: 45px;
+                                    line-height: 45px;
+                                }
+
+                                #yd-fail .yd-button-280 {
+                                    position: absolute;
+                                    top: 194px;
+                                    left: 502px;
+                                }
+
+                            </style>
+                        </head>
+
+                        <body>
+
+                            {include file='base_header.htm'}
+
+                            <div id="yd-fail">
+                                {if $APPLICATION_ENV == 'developemnt'}
+                                {$message}
+                                {/if}
+
+                                {include file='error/_base.htm'}
+
+                                {include file='order/_includes/plz.htm'}
+
+                            </div>
+
+                        </body>
+
+                    </html>

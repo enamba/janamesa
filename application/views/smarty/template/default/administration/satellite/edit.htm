@@ -1,0 +1,172 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/satellite/_editnavigation.htm'}
+<form action="/administration_satellite/edit/" method="post" name="form" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="{$satellite->getId()}" />
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">{__b('Domain')}</div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="20%">{__b('Domain')}:</td>
+                            <td width="20%"><input type="text" name="domain" value="{$satellite->getDomain()}" class="rund_set text" /> *</td>
+                            <td width="60%"><input type="checkbox" name="disabled" value="1"{if $satellite->getDisabled() || $satellite->getId()==0} checked="checked"{/if} /> {__b('Deaktiviert')}</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('URL')}:</td>
+                            <td><input type="text" name="url" value="{$satellite->getUrl()}" class="rund_set text" /> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Restaurant-ID')}: </td>
+                            <td colspan="2">
+                                <select name="restaurantId">
+                                    {foreach from=$restIds item=ri}
+                                        <option value="{$ri.id}" {if ($satellite->getRestaurantId() == $ri.id)}selected="selected"{/if}>{$ri.name} (#{$ri.id})</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">{__b('Einstellungen für die Startseite')}</div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="20%">{__b('Meinungen anzeigen')}:</td>
+                            <td width="10%"><input type="checkbox" name="showOpinions" value="1"{if $satellite->getShowOpinions()} checked="checked"{/if} /></td>
+                            <td width="20%"></td>
+                            <td width="60%"></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Jobs anzeigen')}:</td>
+                            <td colspan="3"><input type="checkbox" name="showJobs" value="1"{if $satellite->getShowJobs()} checked="checked"{/if} /></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Facebook Link anzeigen')}:</td>
+                            <td><input type="checkbox" name="showFacebookLink" value="1"{if $satellite->getShowFacebookLink()} checked="checked"{/if} /></td>
+                            <td>{__b('Facebook Link (z.B. www.facebook.com/lieferando)')}:</td>
+                            <td><input type="text" name="facebookLink" value="{$satellite->getFacebookLink()}" class="rund_set text" /></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {if $satellite->getService()}
+        <div class="one-column-box">
+            <div class="item">
+                <div class="item-head">{__b('Provisionen')}</div>
+                <div class="item-content">
+                    <div>
+                        <table class="user-tab">
+                            <tr>
+                                <td>{__b('Kommission')}:</td>
+                                <td><input type="text" name="kommSat" value="{$satellite->getService()->getKommSat()}" /></td>
+                            </tr>
+                            <tr>
+                                <td>{__b('Gebühr pro Bestellung')}:</td>
+                                <td><input class="yd-money" type="text" name="feeSat" value="{$satellite->getService()->getFeeSat()}" /></td>
+                            </tr>
+                            <tr>
+                                <td>{__b('Gebühr po Artikel')}:</td>
+                                <td><input class="yd-money" type="text" name="itemSat" value="{$satellite->getService()->getItemSat()}" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {/if}
+    
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">{__b('HTML')}</div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="20%">{__b('Titel')}</td>
+                            <td width="80%"><input type="text" name="title" value="{$satellite->getTitle()}" class="rund_set text" /></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Beschreibung')}:</td>
+                            <td><textarea name="description" style="width: 50%;">{$satellite->getDescription()}</textarea></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Keywords:')}</td>
+                            <td><textarea name="keywords" style="width: 50%;"/>{$satellite->getKeywords()}</textarea></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Impressum:')}</td>
+                            <td><textarea name="impressum" style="width: 50%;"/>{$satellite->getImpressum()}</textarea></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Robots')}:</td>
+                            <td>
+                                <select name="robots">
+                                    {foreach from=$robots key=val item=robot}
+                                    <option value="{$val}"{if $satellite->getRobots()==$val} selected="selected"{/if}>{$robot}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">{__b('Inhalt')}</div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="20%">{__b('Logo')}</td>
+                            <td width="30%"><input type="file" name="_logo" /></td>
+                            <td width="50%"><img src="{$satellite->getLogo()}" alt="" height="150"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Hintergrundbild')}</td>
+                            <td><input type="file" name="_background" /></td>
+                            <td><img src="{$satellite->getBackground()}" alt="" height="150"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Zertifikatbild')}</td>
+                            <td><input type="file" name="_certification" /></td>
+                            <td><img src="{$satellite->getCertificationImg()}" alt="" height="150"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Dynamischer Text (default ist "Essen online bestellen")')}</td>
+                            <td colspan="2"><input type="text" name="dynamicText" value="{$satellite->getDynamicText()}" class="rund_set text" /></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" />
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+
+</form>
+{/block}    

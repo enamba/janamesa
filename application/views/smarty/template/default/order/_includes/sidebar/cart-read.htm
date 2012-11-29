@@ -1,0 +1,80 @@
+<div class="yd-box">
+    <div class="yd-box-title yd-bucket-title" id="yd-expand-card-head">
+        {__('Einkaufswagen')}
+        <span title="{$order->getService()->getName()}">
+            {{$order->getService()->getName()|truncate:14:" ...":true}}
+        </span>
+        <img src="{$domain_static}/images/yd-background/yd-load-small.gif" alt="{__('Bitte warten')}" class="yd-loading" id="yd-loading-card" />
+    </div>
+    <div class="yd-box-body">
+
+            {assign var=card value=$order->getCard()}
+            <ul id="yd-shopping-positions" class="yd-card-items">
+                {foreach from=$card.bucket item=custItems key=custId}
+                    {foreach from=$custItems item=item key=hash name=position}
+                        {assign var=meal value=$item.meal}
+                        {assign var=count value=$item.count}
+                        {assign var=size value=$item.size}
+                        <li id="{$hash}" class="yd-shopping-input" id="yd-meal-input-{$hash}">
+                            <!-- count -->
+                            {$count} x
+                        </li>
+                        <li class="yd-shopping-article readonly" id="yd-shopping-article-{$hash}">
+                            <!-- name -->
+                            {$meal->getName()}
+                            {if $meal->getExcludeFromMinCost()}<span class="yd-shopping-notmincost"> {__('nicht im Mindestbestellwert')}</span>{/if}
+                        </li>
+                        <li class="yd-shopping-extra" id="yd-shopping-extra-{$hash}">
+                            <!-- size / extras / options -->
+                            <span class="yd-clearfix"><em>{__('Größe: %s', $meal->getCurrentSizeName())}</em> <span class="yd-shopping-singular-price">{__('zu je %s €', $meal->getAllCosts()|inttoprice)}</span></span>
+                            {if $meal->getCurrentOptionsCount() > 0}
+                                {foreach name=bo from=$meal->getCurrentOptions() item=option}
+                                    <span class="yd-clearfix">
+                                        <em>{$option->getName()}</em>
+                                        {if $option->getCost() > 0}
+                                            +&nbsp;{__('%s&nbsp;€',($option->getCost()*$count)|inttoprice)}
+                                        {/if}
+                                    </span>
+                                {/foreach}
+                            {/if}
+
+                            {if $meal->getCurrentExtrasCount() > 0}
+                                {foreach name=be from=$meal->getCurrentExtras() item=extra}
+                                    <span class="yd-clearfix"><em>{$extra->getName()}</em>{if $extra->getCost() > 0}+&nbsp;{__('%s €',($extra->getCost()*$count)|inttoprice)}{/if}</span>
+                                {/foreach}
+                            {/if}
+                        </li>
+                        <li class="yd-shopping-price" id="yd-shopping-price-{$hash}">
+                            {__('%s €',($count*$meal->getAllCosts())|inttoprice)}
+                        </li>                       
+                        
+                    {/foreach}
+                {/foreach}            
+                
+            </ul>
+            
+            {if $order->getDeliverCost() > 0}
+                <ul id="delivercost">
+                    <li>
+                        <em>{if $order->getService()->isAvanti()}{__('Energiekostenaufschlag:')}{else}{__('Lieferkosten:')}{/if}</em> <span class="yd-deliver-cost">{__('%s €', $order->getDeliverCost()|inttoprice)}</span>
+                    </li> 
+                </ul>
+            {/if}
+            
+            <ul>
+                <li class="yd-shopping-endprice">
+                    <em>{__('Bestellwert:')}</em> 
+                    <strong class="yd-full-amount">{__('%s €',$order->getAbsTotal(false,true,true,false,false,false)|inttoprice)}</strong>
+                    <input type="hidden" name="amount" value="{$order->getAbsTotal(false,false,true,false,false,false)}" />
+                </li>
+            </ul>
+            
+            <div id="yd-discount-content">            
+                {if $order->getDiscount()}
+                    {include file="order/_includes/finish/discount.htm" type="read"}
+                {elseif $discount && $newCustomerDiscountError}
+                    {include file="order/_includes/finish/new_customer_discount.htm" type="read"}
+                {/if}
+            </div>
+    </div>
+</div>

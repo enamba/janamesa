@@ -1,0 +1,144 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/service/meals/_navigation.htm'}
+
+<div class="be-1-column">
+    <div class="be-box">
+        <h2>{__b('Aktueller Stand')}</h2>
+        <div class="be-box-in">
+            <div id="yd-service-meals-state"></div>
+            <strong style="font-size: 18px;">
+                <a href="/administration_request_service_meals/state/q/types" id="yd-service-meals-check-state">
+                    Aktuellen Stand abfragen
+                </a>
+            </strong>
+        </div>
+    </div>
+</div>
+
+{include file='administration/service/meals/_search.htm'}
+
+<form action="/administration_request_service_meals/types" method="post" id="yd-service-meals-types-form">
+
+    {if is_object($grid)}
+    <div class="be-1-column">
+        <div class="be-box">
+            <h2>{__b('Speisen')}</h2>
+            
+            <div class="be-box-in">
+                <table>
+                    <tr>
+                        <td>
+                            <input class="yd-check-all-checkboxes" type="checkbox" id="yd-check-all-checkboxes-top" /> <label for="yd-check-all-checkboxes-top">{__b('Alle Speisen auf dieser Seite auswählen')}</label>
+                        </td>
+                    </tr>
+                </table>
+                
+                {$grid}
+                
+                <table>
+                    <tr>
+                        <td>
+                            <input class="yd-check-all-checkboxes" type="checkbox" id="yd-check-all-checkboxes-bottom" /> <label for="yd-check-all-checkboxes-bottom">{__b('Alle Speisen auf dieser Seite auswählen')}</label>
+                        </td>
+                        <td style="text-align:right;">
+                            <input type="submit" name="delete" value="{__b('Kategorie für markierte Speisen löschen')}" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    {/if}
+    
+    <div class="be-2-column">
+        {if is_object($grid)}
+        <div class="be-box">
+            <div class="be-box-in">
+                <table>
+                    <tr>
+                        <td>{__b('Kategorie eingeben für markierte Speisen')}</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="hidden" name="typeId0" class="yd-service-meals-types-autocomplete" />
+                            <input type="text" id="yd-service-meals-types-autocomplete" class="yd-service-meals-types-autocomplete" style="width:300px;" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        {/if}
+        
+        <div class="be-box">
+            <div class="be-box-in">
+                <table>
+                    <tr>
+                        <td>{__b('Neue Kategorie anlegen für markierte Speisen')}</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1: 
+                            <select id="yd-service-meals-types-select-1" class="yd-service-meals-types-select" style="width:200px;" name="typeId1">
+                                <option value="0">...</option>
+                                {foreach from=Yourdelivery_Model_Meal_Type::getTypesOfParent(0) item=type}
+                                <option value="{$type->getId()}">{$type->getName()}</option>
+                                {/foreach}
+                            </select>
+                            <input type="text" id="yd-service-meals-types-name-1" value="" style="width:200px;" />
+                            <a href="#" id="yd-service-meals-types-add-1" class="yd-service-meals-types-add">{__b('hinzufügen')}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2:
+                            <select id="yd-service-meals-types-select-2" class="yd-service-meals-types-select" style="width:200px;" name="typeId2">
+                            </select>
+                            <input type="text" id="yd-service-meals-types-name-2" value="" style="width:200px;" /> 
+                            <a href="#" id="yd-service-meals-types-add-2" class="yd-service-meals-types-add">{__b('hinzufügen')}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3:
+                            <select id="yd-service-meals-types-select-3" class="yd-service-meals-types-select" style="width:200px;" name="typeId3">
+                            </select>
+                            <input type="text" id="yd-service-meals-types-name-3" value="" style="width:200px;" />
+                            <a href="#" id="yd-service-meals-types-add-3" class="yd-service-meals-types-add">{__b('hinzufügen')}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4:
+                            <select id="yd-service-meals-types-select-4" class="yd-service-meals-types-select" style="width:200px;" name="typeId4">
+                            </select>
+                            <input type="text" id="yd-service-meals-types-name-4" value="" style="width:200px;" />
+                            <a href="#" id="yd-service-meals-types-add-4" class="yd-service-meals-types-add">{__b('hinzufügen')}</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="be-1-column">
+        {if is_object($grid)}
+        <div class="be-box">
+            <div class="be-box-in">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="submit" name="set" value="{__b('Kategorie für markierte Speisen setzen')}" />
+                            <input type="submit" name="add" value="{__b('Kategorie für markierte Speisen hinzufügen')}" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        {/if}
+    </div>
+    
+</form>
+
+{/block}

@@ -1,0 +1,121 @@
+<html lang="en">
+    <head>
+
+        <title>{__("Neuer Firmenaccount")}</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="yourdelivery GmbH" />
+        <meta name="publisher" content="yourdelivery GmbH" />
+
+        <style type="text/css">
+            <!--
+            .red {
+                color: #D02019;
+            }
+            .Kursiv {
+                font-style: italic;
+            }
+            -->
+        </style>
+    </head>
+    <body marginheight="0" topmargin="0" marginwidth="0" bgcolor="#F0F0F0" offset="0" leftmargin="0">
+
+        <!-- wrapper table. needed as some readers strip the <html>, <head> and <body> tag -->
+        <table cellspacing="0" style="margin-top: 20px; font-size: 13px; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444;" bgcolor="#F0F0F0" cellpadding="0" width="98%">
+            <tr>
+                <td>
+
+                    <!-- /////////////////////////////////// Newsletter Content  /////////////////////////////////// -->
+
+                    <table rules="none" cellspacing="0" bordercolor="#c2c2c2" border="1" frame="border" align="center" style="border-color: #c2c2c2 #c2c2c2 #c2c2c2 #c2c2c2; font-size: 13px; background: #ffffff; border-collapse: collapse; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444; border-spacing: 0px; border-style: solid solid solid solid; border-width: 1px 1px 1px 1px;" cellpadding="0" bgcolor="#FFFFFF" width="600">
+                        <tr><td>
+                                <!-- Main Newsletter Content Starts here. Add Modules below this line -->
+
+                                <!-- Module: Header -->
+                                <table width="600" align="center" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td>
+                                            <img src="http://www.{$config->domain->base}/media/images/yd-mail/{$config->domain->base}/yd-mail-employee.jpg" alt="" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- End Module -->
+
+                                <!-- Module: Content -->
+                                <table cellspacing="0" align="center" style="font-size: 13px; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444;" width="520" cellpadding="0">
+                                    <tr>
+                                        <td>
+
+                                            <p>{__("Liebes Team von %s", $cust->getCompany()->getName())}</p>
+                                            <p>
+                                                {__("Sie nutzen das System von %s für die Spätverpflegung und anschließende buchhalterische Abwicklung der Bestellungen.", $config->domain->base)}
+                                                <br /><br />
+                                                {__("%s funktioniert indem Sie ab einer bestimmten Uhrzeit auf ein Budget zugreifen und anschließend online bestellen können. Dies erspart den bisherigen Aufwand mit dem Einreichen unzähliger Belege und Rechnungen. Wenn Ihr Bestellwert das Budget überschreitet, haben Sie die Möglichkeit die Differenz mit Barzahlung, Paypal oder Kreditkarte auszugleichen.", $config->domain->base)}
+                                                <br />
+                                            </p>
+
+
+                                            <div style="background: #ffffcc; border: 1px solid #f0f000; font-size: 13px; padding: 15px; margin: 0 0 20px 0;">
+                                                <img src="http://www.{$config->domain->base}/media/images/yd-mail/lock.gif" alt="" /> <strong style="font-size: 15px;">{__("Zugangsdaten")}</strong>
+                                                <hr style="border: 0 none; border-top: 1px dotted #000;">
+
+                                                {__("Ihre Zugangsdaten für %s lauten:", $config->domain->base)}
+                                                <br /><br />
+                                                <table style="width:100%; font-size:15px;">
+                                                    <tr>
+                                                        <td width="20%">{__("Login:")}</td>
+                                                        <td width="80%"><strong>{$cust->getEmail()}</strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="20%">{__("Passwort:")}</td>
+                                                        <td width="80%"><strong>{$password}</strong></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                            <div style="background: #e7f7ff; border: 1px solid #79c2ff; font-size: 13px; padding: 15px">
+                                                <img src="http://www.{$config->domain->base}/media/images/yd-mail/lock.gif" alt="" /> <strong style="font-size: 15px;">{__("Budget")}</strong>
+                                                <hr style="border: 0 none; border-top: 1px dotted #000;">
+                                                <p>{__("Ihre Budget Einstellungen sind wie folgt:")}</p>
+                                                <div id="ordering-budget-box">
+                                                    {if not is_null($cust->getBudget())}
+                                                    <table>
+                                                        {foreach key=key from=$cust->getBudget()->getBudgetTimes() item=times}
+                                                        {foreach from=$times item=ab}
+                                                        <tr>
+                                                            <td width="10%"></td>
+                                                            <td width="30%">
+                                                                {$key|date_weekday}
+                                                            </td>
+                                                            <td width="40%">
+                                                                {$ab.from|date_format:'%H:%M'} - {$ab.until|date_format:'%H:%M'}
+                                                            </td>
+                                                            <td width="20%" align="right">
+                                                                {__('%s €', $ab.amount|inttoprice)}
+                                                            </td>
+                                                        </tr>
+                                                        {/foreach}
+                                                        {/foreach}
+                                                    </table>
+                                                    {/if}
+                                                    <br />
+                                                </div>
+                                            </div>
+
+                                            <p>
+                                                {__("Bei Fragen, Vorschlägen oder Problemen können Sie unser Team jederzeit unter %s oder %s erreichen.", $config->locale->email->support, $config->locale->tel->support)}
+                                            </p>
+                                            <p>
+                                                {__("Mit besten Grüßen")}<br>
+                                                {__("Ihr Team von %s", $config->domain->base)}
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- End Module -->
+
+                                {include file="_email_footer.htm"}
+
+                            </td></tr></table><!-- end wrapper table-->
+
+                    </body>
+                    </html>

@@ -1,0 +1,49 @@
+{include file="testing/cms/_testingCmsHeader.htm"}
+
+<div id="content">
+
+    <form action="/testing_cms/edittestcase/id/{$testcase->getId()}" method="post" enctype="multipart/form-data">
+
+        <div class="yd-box">
+
+            <b>Titel:</b>
+
+            <input type="text" name="title" id="title" value="{$testcase->getTitle()}"></input>
+
+            <b>Author:</b>
+
+            <input type="text" name="author" id="author" value="{$testcase->getAuthor()}"></input>
+            
+            <b>Priority:</b>
+
+            <input type="text" name="priority" id="priority" value="{$testcase->getPriority()}"></input>
+                        
+            <b>Tag:</b>
+
+            <input type="text" name="tag" id="tag" value="{$testcase->getTag()|default:'empty'}"></input>
+                        
+            <br /><br />
+
+            <b>Desciption:</b>
+            
+            <br /><br />
+
+            <textarea name="description" cols="50" rows="3">{$testcase->getDescription()}</textarea>
+            
+            <br /><br />
+            
+            <input type="hidden" name="proceed" id="proceed" value="{$post['proceed']|default:'false'}" />
+            
+            <input class="button" type="submit" name="submit" id="submit" />
+            {if $post['proceed']=='true'}
+            <b><= Daten trotzdem abschicken</b>
+            {/if}
+
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>

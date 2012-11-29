@@ -1,0 +1,358 @@
+2012-09-28T13:11:19+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PAGE NOT FOUND: www.yourdelivery.test//htdocs/ydPhoneOrder/phoneorder #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T13:11:19+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template error/notfound.htm 
+2012-09-28T13:15:58+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - ORDER - POST: no parameters provided #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/OrderController.php:627]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/OrderController.php:627]
+#3 postAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T13:15:58+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - BASE: didn't get access for customer via POST with access  
+2012-09-28T16:41:55+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PAGE NOT FOUND: www.yourdelivery.test//lieferservice-kremperheide #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/ErrorController.php:187]
+#3 errorAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T16:41:55+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template error/notfound.htm 
+2012-09-28T16:42:08+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing getting 1 cityIds for url /lieferservice-au 
+2012-09-28T16:42:08+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 7 online and 0 offline services in #5803 
+2012-09-28T16:42:08+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/service.htm 
+2012-09-28T16:42:10+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/lieferservice-au.html 
+2012-09-28T16:42:17+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-09-28T16:42:17+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/request_order/serviceinfo/id/14234.html 
+2012-09-28T16:42:18+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-09-28T16:42:18+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/request_order/serviceinfo/id/14237.html 
+2012-09-28T17:00:00+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing getting 1 cityIds for url /lieferservice-heidelberg-wieblingen 
+2012-09-28T17:00:00+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 10 online and 0 offline services in #23873 
+2012-09-28T17:00:00+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/service.htm 
+2012-09-28T17:00:01+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/lieferservice-heidelberg-wieblingen.html 
+2012-09-28T17:10:14+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-09-28T17:10:14+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/request_order/serviceinfo/id/13463.html 
+2012-09-28T18:11:11+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing getting 1 cityIds for url /lieferservice-heidelberg-wieblingen 
+2012-09-28T18:11:11+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-09-28T18:11:11+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/request_order/serviceinfo/id/16088.html 
+2012-09-28T18:11:11+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 10 online and 0 offline services in #23873 
+2012-09-28T18:11:11+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/service.htm 
+2012-09-28T18:11:13+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/lieferservice-heidelberg-wieblingen.html 
+2012-09-28T18:12:13+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing getting 1 cityIds for url /lieferservice-heidelberg-wieblingen 
+2012-09-28T18:12:14+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 10 online and 0 offline services in #23873 
+2012-09-28T18:12:14+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/service.htm 
+2012-09-28T18:12:15+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/lieferservice-heidelberg-wieblingen.html 
+2012-09-28T18:15:54+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing getting 1 cityIds for url /lieferservice-heidelberg-wieblingen 
+2012-09-28T18:15:54+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 10 online and 0 offline services in #23873 
+2012-09-28T18:15:54+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/service.htm 
+2012-09-28T18:15:55+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/lieferservice-heidelberg-wieblingen.html 
+2012-09-28T18:16:19+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-09-28T18:16:19+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/request_order/serviceinfo/id/13464.html 
+2012-09-28T18:18:35+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-09-28T18:18:35+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/request_order/serviceinfo/id/13463.html 
+2012-09-28T18:18:38+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing getting 1 cityIds for url /lieferservice-heidelberg-wieblingen 
+2012-09-28T18:18:39+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 10 online and 0 offline services in #23873 
+2012-09-28T18:18:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/service.htm 
+2012-09-28T18:18:40+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/lieferservice-heidelberg-wieblingen.html 
+2012-09-28T18:18:49+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template request/order/serviceinfo.htm 
+2012-09-28T18:18:49+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/request_order/serviceinfo/id/13464.html 
+2012-09-28T18:19:14+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 11 online and 0 offline services in #4893 
+2012-09-28T18:19:14+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/service.htm 
+2012-09-28T18:19:15+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/lieferservice-heidelberg-69126.html 
+2012-09-28T18:19:37+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing getting 3 cityIds for url /lieferservice-heidelberg-altstadt 
+2012-09-28T18:19:37+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 3 online and 0 offline services in #4887,24450,24479 
+2012-09-28T18:19:37+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/service.htm 
+2012-09-28T18:19:37+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/lieferservice-heidelberg-altstadt.html 
+2012-09-28T21:12:38+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no phonenumber has been provided #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:21]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:21]
+#3 indexAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:14:14+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no phonenumber has been provided #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:21]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:21]
+#3 indexAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:14:54+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#3 getAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:14:54+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#3 indexAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:15:55+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#3 indexAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:15:55+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#3 getAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:36:48+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#3 getAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:36:48+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#3 indexAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:37:14+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#3 getAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:37:14+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#3 indexAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:40:47+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#3 getAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:40:47+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#3 indexAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:44:49+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#3 getAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:44:49+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#3 indexAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:44:59+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#3 getAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:44:59+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#3 indexAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:45:05+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#3 indexAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:45:05+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#3 getAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:45:09+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#3 indexAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:45:09+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#3 getAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:45:31+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#3 getAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T21:45:31+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#3 indexAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T22:19:24+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#3 getAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T22:19:24+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - INDEX: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#3 indexAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T22:19:46+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - INDEX: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#3 indexAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T22:19:46+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#3 getAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T22:20:27+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - INDEX: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/MealController.php:31]
+#3 indexAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+
+2012-09-28T22:20:27+02:00 ERR (3): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing API - MEAL - GET: no service found for phonenumber #0 log() called at [/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Log.php:68]
+#1 __call() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#2 err() called at [/home/ydadmin/htdocs/lieferando/application/controllers/Get/Phoneorder/ServiceController.php:31]
+#3 getAction() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513]
+#4 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289]
+#5 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954]
+#6 dispatch() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97]
+#7 run() called at [/home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366]
+#8 run() called at [/home/ydadmin/htdocs/lieferando/public/index.php:118]
+

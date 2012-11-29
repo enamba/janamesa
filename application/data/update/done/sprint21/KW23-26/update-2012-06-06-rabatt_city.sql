@@ -1,0 +1,9 @@
+CREATE TABLE `rabatt_city` (
+`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`rabattId` INT NOT NULL ,
+`cityId` INT NOT NULL ,
+`created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+`updated` TIMESTAMP NULL DEFAULT NULL 
+) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+ALTER TABLE `rabatt_city` ADD UNIQUE `uqRabattCity` ( `rabattId` , `cityId` );

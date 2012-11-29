@@ -1,0 +1,56 @@
+{extends file="company/base.htm"}
+
+{block name="content"}
+
+<div id="admincase">
+
+    {include file='company/_left_nav.htm'}
+
+    <div id="main-content">
+
+        <h2 class="welcome">{__('Willkommen')} {$cust->getAnrede()} {$cust->getFullname()}!</h2>
+        <p id="page-intro">{__('Welche Einstellungen möchten Sie vornehmen?')}</p>
+
+        <div class="back-overview">
+            <ul>
+                <li>
+                    <a href="/company/addemployee" class="overview-1">
+                        <span>
+                            {__('Mitarbeiter anlegen')}
+                            <small>{__('Hier können Sie einen neuen Mitarbeiter hinzufügen')}</small>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/company/budgets" class="overview-2">
+                        <span>
+                            {__('Gruppe anlegen')}
+                            <small>{__('Hier können Sie Mitarbeiter zu Gruppen hinzufügen')}</small>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/company/billing" class="overview-3">
+                        <span>
+                            {__('Rechnungen')}
+                            <small>{__('Ihre gesamten Rechnungen auf einen Blick')}</small>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/company/orders" class="overview-4">
+                        <span>
+                            {__('Statistiken')}
+                            <small>{__('Übersicht über alle abgeschlossenen Bestellungen')}</small>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+
+</div>
+
+{/block}

@@ -1,0 +1,80 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="one-column-box" id="yd-confirm-dtaexport-file-panel" style="display:none;">
+    <div class="item">
+        <div class="item-head" style="font-size: 20px;">
+            {__b('Sind die Daten korrekt? Beim bestätigen werden die ausgewählten Rechnungen auf "bezahlt" gesetzt.')}
+        </div>
+        <div class="item-content">
+            <div>
+                <table class="user-tab">
+                    <tr>
+                        <td width="20%">
+                            <input type="button" value="{__b('Bestätigen')}" id="yd-confirm-dtaexport-button"/>
+                            &nbsp;&nbsp;
+                            <input type="button" value="{__b('Abbrechen')}"  id="yd-cancel-dtaexport-button"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('DATAUS Datei erstellen')}
+        </div>
+        <div class="item-content">
+            <form action="/administration_billing/dtaexport/" method="POST" enctype="multipart/form-data">
+                <table class="user-tab">
+                    <tr>
+                        <td width="20%">
+                            <input type="radio" value="0" name="type" {if $type == 0}checked="checked"{/if} /> {__b('Credit (Überweisung)')}
+                        </td>
+                        <td width="80%">
+                            <input type="radio" value="1" name="type" {if $type == 1}checked="checked"{/if} /> {__b('Debit (Lastschrift)')}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="Erstellen" id="yd-dtaexport-button"/>
+                        </td>
+                    <tr>
+                </table>
+                <br /><br />
+
+                <table class="user-tab">
+                    <tr>
+                        <th>{__b('Name')}</th>
+                        <th>{__b('Kontonummer')}</th>
+                        <th>{__b('Bankleitzahlt')}</th>
+                        <th>{__b('Betrag in Euro')}</th>
+                        <th>{__b('Verwendungszweck 1')}</th>
+                        <th>{__b('Verwendungszweck 2')}</th>
+                        <th>{__b('Verwendungszweck 3')}</th>
+                        <th></th>
+                    </tr>
+                    {foreach from=$result item=item}
+                        <tr>
+                            <td><input type="text" value="{$item.receiver.name}" name="item[{$item.id}][receiver][name]" /></td>
+                            <td><input type="text" value="{$item.receiver.account_number}" name="item[{$item.id}][receiver][account_number]" /></td>
+                            <td><input type="text" value="{$item.receiver.bank_code}" name="item[{$item.id}][receiver][bank_code]" /></td>
+                            <td><input type="text" value="{$item.amount}" name="item[{$item.id}][amount]" /></td>
+                            <td><input type="text" value="{$item.usage.first}" name="item[{$item.id}][usage][first]" /></td>
+                            <td><input type="text" value="{$item.usage.second}" name="item[{$item.id}][usage][second]" /></td>
+                            <td><input type="text" value="Yourdelivery GmbH" name="item[{$item.id}][usage][third]" /></td>
+                            <td>
+                                <input type="checkbox" value="1" name="item[{$item.id}][import]" {if $item.allow == 1}checked="checked"{/if} class="yd-billing-for-dataus" id="yd-billing-for-dataus-{$item.id}"/>
+                            </td>
+                        </tr>
+                    {/foreach}
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+{/block}

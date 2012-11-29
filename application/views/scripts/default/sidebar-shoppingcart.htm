@@ -1,0 +1,22 @@
+<div class="yd-box">
+    <div class="yd-box-title yd-bucket-title" id="yd-expand-card-head">
+        {__('Einkaufswagen')}
+        {if is_object($order) && is_object($order->getService())}
+            <span title="{$order->getService()->getName()}">
+                ({$order->getService()->getName()|truncate:14:" ...":true})
+            </span>
+        {/if}
+
+        <img src="{$domain_static}/images/yd-background/yd-load-small.gif" alt="{__('Bitte warten')}" class="yd-loading" id="yd-loading-card" />
+    </div>
+    <div class="yd-box-body">
+        <div id="zettel">
+            <!-- order card will be placed in here -->
+        </div>
+        <ul>
+            <li class="yd-shopping-endprice">
+                <em>{__('Aktueller Bestellwert:')}</em> <strong class="yd-open-amount">0,00 €</strong>
+            </li>
+        </ul>
+    </div>
+</div>

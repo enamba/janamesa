@@ -1,0 +1,134 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/stats/sales/navigation.htm'}
+<ul class="be-tabs">
+    <li><a href="/administration_stats_sales/summary">{__b('Gesamt')}</a></li>
+    <li><a href="/administration_stats_sales/summary/kind/priv">{__b('Privatkunden')}</a></li>
+    <li><a href="/administration_stats_sales/summary/kind/comp">{__b('Geschäftskunden')}</a></li>
+</ul>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Bestellungen / Umsatz / Provision für diese Woche')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <td width="15%" align="center">{__b('Montag')}<br/>{$thisweek.0.day}</td>
+                    <td width="15%" align="center">{__b('Dienstag')}<br/>{$thisweek.1.day}</td>
+                    <td width="15%" align="center">{__b('Mittwoch')}<br/>{$thisweek.2.day}</td>
+                    <td width="15%" align="center">{__b('Donnerstag')}<br/>{$thisweek.3.day}</td>
+                    <td width="15%" align="center">{__b('Freitag')}<br/>{$thisweek.4.day}</td>
+                    <td width="15%" align="center">{__b('Samstag')}<br/>{$thisweek.5.day}</td>
+                    <td width="15%" align="center">{__b('Sonntag')}<br/>{$thisweek.6.day}</td>
+                </tr>
+                <tr>
+                    {foreach from=$thisweek item=r}
+                    <td align="center">
+                        {$r.count}
+                        <br />{$r.sales|inttoprice} {__b('€')}
+                        <br />{$r.commission|inttoprice} {__b('€')}
+                    </td>
+                    {/foreach}
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Bestellungen / Umsatz / Provision für diesen Monat nach Kalenderwochen')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    {foreach from=$thismonth item=r}
+                    <td width="15%" align="center">
+                        {__b('Woche')} {$r.week}
+                    </td>
+                    {/foreach}
+                </tr>
+                <tr>
+                    {foreach from=$thismonth item=r}
+                    <td align="center">
+                        {$r.count}
+                        <br />{$r.sales|inttoprice} €
+                        <br />{$r.commission|inttoprice} €
+                    </td>
+                    {/foreach}
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Bestellungen / Umsatz / Provision für dieses Jahr')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <td width="5%" align="center">{__b('Januar')}</td>
+                    <td width="5%" align="center">{__b('Februar')}</td>
+                    <td width="5%" align="center">{__b('März')}</td>
+                    <td width="5%" align="center">{__b('April')}</td>
+                    <td width="5%" align="center">{__b('Mai')}</td>
+                    <td width="5%" align="center">{__b('Juni')}</td>
+                    <td width="5%" align="center">{__b('Juli')}</td>
+                    <td width="5%" align="center">{__b('August')}</td>
+                    <td width="5%" align="center">{__b('September')}</td>
+                    <td width="5%" align="center">{__b('Oktober')}</td>
+                    <td width="5%" align="center">{__b('November')}</td>
+                    <td width="5%" align="center">{__b('Dezember')}</td>
+                </tr>
+                <tr>
+                    {section name=year start=1 loop=13}
+                    <td align="center">
+                        {if !is_null($thisyear[$smarty.section.year.index])}                            
+                        {$thisyear[$smarty.section.year.index]['count']}
+                        <br />{$thisyear[$smarty.section.year.index]['sales']|inttoprice} €
+                        <br />{$thisyear[$smarty.section.year.index]['commission']|inttoprice} €
+                        {/if}
+                    </td>
+                    {/section}
+
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Bestellungen / Umsatz / Provision pro Jahr')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    {foreach from=$peryear item=r}
+                    <td width="5%" align="center">{$r.year}</td>
+                    {/foreach}
+                </tr>
+                <tr>
+                    {foreach from=$peryear item=r}
+                    <td align="center">
+                        {$r.count}
+                        <br />{$r.sales|inttoprice} €
+                        <br />{$r.commission|inttoprice} €
+                    </td>
+                    {/foreach}
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+{/block}
+

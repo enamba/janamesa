@@ -1,0 +1,1 @@
+alter table restaurants add column butler tinyint(4) default 0;

@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta name="robots" content="noindex,follow" />
+    </head>
+    <body style="background: url(/storage/sem/images/backgrounds/{$page.background}) repeat-x;">
+
+        <div id="sem">
+
+            <form action="/order_private/start?mode=rest" method="post" style="top: {$page.x}px; left: {$page.y}px;">
+                <input id="sem-input" type="text" value="" />
+
+                <input style="background: url(/storage/sem/images/buttons/{$page.button}) no-repeat;" id="sem-button" type="submit" value="" />
+            </form>
+
+            <img src="/storage/sem/images/foregrounds/{$page.foreground}" />
+
+        </div>
+
+        {if $APPLICATION_ENV == "production"}
+            <!-- GoogleAnalytics -->
+            <script type="text/javascript">
+                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+                try{
+                    var pageTracker = _gat._getTracker("UA-7904955-1");
+                        pageTracker._trackPageview();
+                    }catch(err){
+                        // TODO log the error
+                    }
+            </script>
+            <!-- AdWords -->
+            <script type="text/javascript">
+            /* <![CDATA[ */
+                var google_conversion_id = 1019477021;
+                var google_conversion_language = "en";
+                var google_conversion_format = "3";
+                var google_conversion_color = "666666";
+                var google_conversion_label = "b6zQCKukygEQnfiP5gM";
+                var google_conversion_value = 0;
+            /* ]]> */
+            </script>
+            <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js"></script>
+            <noscript>
+                <div style="display:inline;">
+                    <img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1019477021/?label=b6zQCKukygEQnfiP5gM&guid=ON&script=0"/>
+                </div>
+            </noscript>
+        {/if}
+
+    </body>
+</html>

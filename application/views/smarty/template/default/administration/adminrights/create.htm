@@ -1,0 +1,47 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<form action="/administration_adminrights/create" method="post">
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b("Zugangsrechte")}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="20%">{__b("Name")}</td>
+                            <td width="80%"><input type="text" name="name" class="rund_set text" value="{$p.name}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b("Email:")}</td>
+                            <td><input type="text" name="email" class="rund_set text" value="{$p.email}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b("Passwort")}</td>
+                            <td><input type="text" name="password" class="rund_set text" value="{$p.password}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b("Gruppe")}</td>
+                            <td>
+                                <select name="groupIds[]" size="20" multiple>
+                                    {foreach from=Yourdelivery_Model_DbTable_Admin_Access_Groups::getAllGroups() item=group}
+                                    <option value="{$group.id}">{$group.name}</option>
+                                    {/foreach}
+                                </select> *
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" />
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+
+</form>
+{/block}    

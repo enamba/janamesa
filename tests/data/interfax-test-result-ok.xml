@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <FaxQueryResponse xmlns="http://www.interfax.cc">
+            <FaxQueryResult>
+                <FaxItemEx>
+                    <ParentTransactionID>227714786</ParentTransactionID>
+                    <TransactionID>227714786</TransactionID>
+                    <SubmitTime>2011-08-31T21:43:09</SubmitTime>
+                    <PostponeTime>0001-01-01T00:00:00</PostponeTime>
+                    <CompletionTime>2011-08-31T21:47:23</CompletionTime>
+                    <UserID>yourdelivery</UserID>
+                    <Contact />
+                    <JobID />
+                    <DestinationFax>004317865852</DestinationFax>
+                    <ReplyEmail />
+                    <RemoteCSID />
+                    <PagesSent>1</PagesSent>
+                    <Status>0</Status>
+                    <Duration>29</Duration>
+                    <Subject />
+                    <PagesSubmitted>1</PagesSubmitted>
+                    <SenderCSID>INTERFAX</SenderCSID>
+                    <Priority>2</Priority>
+                    <Units>1.00</Units>
+                    <CostPerUnit>0.0900</CostPerUnit>
+                    <PageSize>A4</PageSize>
+                    <PageOrientation>Portrait</PageOrientation>
+                    <PageResolution>Standard</PageResolution>
+                    <RenderingQuality>Fine</RenderingQuality>
+                    <PageHeader />
+                    <RetriesToPerform>4</RetriesToPerform>
+                    <TrialsPerformed>2</TrialsPerformed>
+                </FaxItemEx>
+            </FaxQueryResult>           
+            <ResultCode>0</ResultCode>
+        </FaxQueryResponse>
+    </soap:Body>
+</soap:Envelope>

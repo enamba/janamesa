@@ -1,0 +1,9 @@
+{if count($departments) > 0}
+    Kostenstellen:
+    <select name="departmentId" style="width: 300px;">
+        <option value=""></option>
+        {foreach from=$departments item=dept}
+        <option value="{$dept->getId()}" {if !is_null($billasset) && ($billasset->getDepartmentId()==$dept->getId())}selected{/if}>{$dept->getName()} ({$dept->getIdentNr()}) (#{$dept->getId()})</option>
+        {/foreach}
+    </select>
+{/if}

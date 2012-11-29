@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="de" xml:lang="de" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="de" xml:lang="de" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="de" xml:lang="de" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="de" xml:lang="de" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="de" xml:lang="de">         <!--<![endif]-->
+    <head>
+        <title>Avanti Pizza München Augsburg Lieferservice Pizzaservice Heimservice</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="verify-v1" content="8FkQKoLGBaYuIR6TefpycUGdFpQKEg/TqVO+fFIIVL4=" />
+        <link rel="shortcut icon" type="image/png" href="/storage/satellites/www.avanti.de/img/favicon.ico" />
+        <meta name="language" content="deutsch, de">
+        <meta name="keywords" content="avanti, pizza, München, Augsburg, Lieferservice, Pizzaservice, heimservice, Lieferservice">
+        <meta name="description" content="avanti pizza heimservice münchen  Augsburg online bestellen Liefervice Pizzaserivce">
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="non-footer" class="yd-clearfix">
+            <div id="avanti-header">
+                <ul class="social">
+                    <li>Folge uns auf</li>
+                    <li>
+                        <a href="http://www.facebook.com/PizzaAvanti" class="facebook_icon" target="_blank" title="PIZZA AVANTI"></a>
+                    </li>
+                    <li>
+                        <a href="http://twitter.com/pizzaavanti/" class="twitter_icon" target="_blank" title="PIZZA AVANTI (pizzaavanti) on Twitter"></a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li><a href="/bestellen/deutschland">Online bestellen</a></li>
+                    <li><a href="http://www.avanti-franchise.de">Franchise</a></li>
+                    <!--<li><a href="newsletter">Newsletter</a></li>-->
+
+                    <li><a href="/qualitaet">Qualität</a></li>
+                    <li><a href="jobs">Jobs</a></li>
+                    <li><a href="bewerten">Bewertung</a></li>
+
+                    <li><a href="/sponsoring">Sponsoring</a></li>
+                    <li><a href="/video">Video</a></li>
+                </ul>
+                <a href="/impr" class="impress">Impressum</a>
+            </div>     
+            <div id="avanti-content" class="impressum">
+                <div class="content-header">
+                    <h1>Impressum</h1>
+                </div>
+                <div class="subnav">
+                    {foreach from=$satelliteList item=satellite}
+                    {assign var=service value=$satellite->getService()}
+                        {if $service}
+                            <a href="#{$service->getCity()->getPlz()}{$service->getCity()->getCity()}">{$service->getCity()->getPlz()} {$service->getCity()->getCity()}</a>
+                        {/if}
+                    {/foreach}
+                </div>
+                <div class="text">
+
+                    {foreach from=$satelliteList item=satellite}
+                    {assign var=service value=$satellite->getService()}
+                        {if $service && $service->getContact()}
+                            <div class="shop yd-clearfix">
+                                <a name="{$service->getCity()->getPlz()}{$service->getCity()->getCity()}"></a>
+                                <h2>{$service->getCity()->getPlz()} {$service->getCity()->getCity()}</h2>
+
+                                    <div class="left">                               
+                                        Tel. {$service->getContact()->getTel()}
+                                        <br/><br/>
+                                    </div>
+
+                                    <div class="right">
+                                        <b> Anschrift:</b><br />
+                                        {$service->getName()}<br/>
+                                        {$service->getContact()->getStreet()} {$service->getContact()->getHausnr()}<br/>
+                                        {$service->getCity()->getPlz()} {$service->getCity()->getCity()}<br/>
+                                        <br/><br/>
+                                        <b>Verantwortlicher Inhaber :</b><br/>
+                                        {$service->getContact()->getPrename()} {$service->getContact()->getName()}
+                                        <br/><br/>
+                                        <b>E-Mail:</b> <br/>
+                                        {$service->getService()->getEmail()}
+                                        <br/><br/>
+                                    </div>
+                            </div>
+                        {/if}
+                    {/foreach}
+                </div>
+            </div>
+            <div id="avanti-sidebar">
+                <div>
+                    <script>(function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) { return; }
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
+                    <fb:fan profile_id="117273638296456" stream="0" width="190" height="250px" logobar="0" css="http://staging.lieferando.de/storage/satellites/www.zaboos-bringdienst.de/facebook.css?4"></fb:fan>
+                    <!--<div class="fb-like-box" data-href="http://www.facebook.com/PizzaAvanti" data-width="190" data-show-faces="true" data-stream="false" data-header="true"></div>-->
+                </div>
+                <!-- <div class="iphone">
+                     <h3>PIZZA AVANTI iphone APP</h3>
+                     <p>Geschmack und Qualiät jetzt mobil bestellen!</p>
+                     <a href="http://itunes.apple.com/de/app/pizza-avanti/id381706861?mt=8" title="iphone APP">mehr...</a>
+                 </div>-->
+                <div class="sponsor">
+                    <h3>Sponsoring</h3>
+                    <p>Jetzt aber schnell!</p>
+                    <p>Münchens neue Liebe EHC München Eishockey ist in den Herzen angekommen</p>
+                    <a href="/sponsoring" title="Sponsoring">mehr...</a>
+                </div>
+                <div class="quali">
+                    <h3>PIZZA AVANTI Qualität</h3>
+                    <p>Geschmack und Qualiät bei Pizza Avanti - Hierfür stehen wir ein!</p>
+                    <a href="/qualitaet" title="Qualität">mehr...</a>
+                </div>
+                 <div class="rating" >
+                <h3>Bewerte uns</h3>
+                <p>Wir wollen noch besser werden, dafür ist uns Ihre Meinung wichtig.</p>
+                <a href="/bewerten" title="Bewerten">mehr...</a>
+            </div>
+
+                <div class="video">
+                    <h3>PIZZA AVANTI Video</h3>
+                    <p>So kommt die Pizza zu Ihnen nach Hause!</p>
+                    <a href="/video" title="Bewerten">Jetzt ansehen...</a>
+                </div>
+
+                  <div class="jobs">
+                         <h3>Jobs bei Avanti</h3>
+                         <p>Vom Pizzafahrer zum Millionär!</p>
+                         <p>Jobs und Stellenangebote bei Pizza Avanti.</p>
+                         <a href="/jobs" title="Jobs">mehr...</a>
+                     </div>
+
+                <div class="franchise">
+                    <h3>Franchisenehmer werden</h3>
+                    <p>Erfolgreich selbständig, natürlich mit System.</p>
+                    <a href="http://www.avanti-franchise.de" title="Franchise">mehr...</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

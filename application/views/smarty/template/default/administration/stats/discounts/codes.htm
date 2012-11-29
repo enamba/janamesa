@@ -1,0 +1,110 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/stats/discounts/navigation.htm'}
+
+<div class="three-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Verwendete Gutscheine heute')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <th width="40%">{__b('Gutscheincode')}</th>
+                    <th width="10%">{__b('Anzahl')}</th>
+                    <th width="30%">{__b('Gutscheinaktion')}</th>
+                    <th width="20%">{__b('Gesamt')}</th>
+                </tr>
+            {$count_today=0}
+            {$sum_today=0}
+            {foreach from=$discounts_today item=d}
+                <tr>
+                    <td>{$d.name}</td>
+                    <td>{$d.count}</td>
+                    <td><a href='/administration/discounts/ordergrid/r.id_DESC/filtersgrid/&#123;"filter_ID":"{$d.rabattId}","filter_Status":"","filter_Wiederholend":"","filter_Art":"","filter_Zeitraum von":"","filter_bis":"","filter_Name":"","filter_Höhe":""&#125;'>{$d.rabattName}</a></td>
+                    <td>{__b('%s €',$d.sum|inttoprice)}</td>
+                    {$count_today = $count_today + $d.count}
+                    {$sum_today = $sum_today + $d.sum}
+                </tr>
+            {/foreach}
+                <tr>
+                    <td><b>{__b('Gesamt')}: {count($discounts_today)}</b></td>
+                    <td><b>{$count_today}</b></td>
+                    <td></td>
+                    <td><b>{__b('%s €',$sum_today|inttoprice)}</b></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="item">
+        <div class="item-head">
+            {__b('Verwendete Gutscheine diese Woche')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <th width="40%">{__b('Gutscheincode')}</th>
+                    <th width="10%">{__b('Anzahl')}</th>
+                    <th width="30%">{__b('Gutscheinaktion')}</th>
+                    <th width="20%">{__b('Gesamt')}</th>
+                </tr>
+            {$count_week=0}
+            {$sum_week=0}
+            {foreach from=$discounts_week item=d}
+                <tr>
+                    <td>{$d.name}</td>
+                    <td>{$d.count}</td>
+                    <td><a href='/administration/discounts/ordergrid/r.id_DESC/filtersgrid/&#123;"filter_ID":"{$d.rabattId}","filter_Status":"","filter_Wiederholend":"","filter_Art":"","filter_Zeitraum von":"","filter_bis":"","filter_Name":"","filter_Höhe":""&#125;'>{$d.rabattName}</a></td>
+                    <td>{__b('%s €',$d.sum|inttoprice)}</td>
+                    {$count_week = $count_week + $d.count}
+                    {$sum_week = $sum_week + $d.sum}
+                </tr>
+            {/foreach}
+                <tr>
+                    <td><b>{__b('Gesamt')}: {count($discounts_week)}</b></td>
+                    <td><b>{$count_week}</b></td>
+                    <td></td>
+                    <td><b>{__b('%s €',$sum_week|inttoprice)}</b></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="item-head">
+            {__b('Verwendete Gutscheine diesen Monat')}
+        </div>
+        <div class="item-content">            
+            <table class="user-tab">
+                <tr><th colspan="4">{__b('Gesamt')}: ({count($discounts_month)})</th></tr>
+                <tr>
+                    <th width="40%">{__b('Gutscheincode')}</th>
+                    <th width="10%">{__b('Anzahl')}</th>
+                    <th width="30%">{__b('Gutscheinaktion')}</th>
+                    <th width="20%">{__b('Gesamt')}</th>
+                </tr>
+            {$count_month=0}
+            {$sum_month=0}
+            {foreach from=$discounts_month item=d}
+                <tr>
+                    <td>{$d.name}</td>
+                    <td>{$d.count}</td>
+                    <td><a href='/administration/discounts/ordergrid/r.id_DESC/filtersgrid/&#123;"filter_ID":"{$d.rabattId}","filter_Status":"","filter_Wiederholend":"","filter_Art":"","filter_Zeitraum von":"","filter_bis":"","filter_Name":"","filter_Höhe":""&#125;'>{$d.rabattName}</a></td>
+                    <td>{__b('%s €',$d.sum|inttoprice)}</td>
+                    {$count_month = $count_month + $d.count}
+                    {$sum_month = $sum_month + $d.sum}
+                </tr>
+            {/foreach}
+                <tr>
+                    <td><b>{__b('Gesamt')}: {count($discounts_month)}</b></td>
+                    <td><b>{$count_month}</b></td>
+                    <td></td>
+                    <td><b>{__b('%s €',$sum_month|inttoprice)}</b></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+{/block}

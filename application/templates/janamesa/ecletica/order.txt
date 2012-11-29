@@ -1,0 +1,45 @@
+[DADOS CLIENTE]
+{assign var=tel value=preg_replace('/(^0|\D)/', '', $order->getLocation()->getTel())}
+{if strlen($tel)>9}
+{assign var=tel1 value=substr($tel,0,2)}
+{assign var=tel2 value=substr($tel,2)}
+{else}
+{assign var=tel1 value='11'}
+{assign var=tel2 value=$tel}
+{/if}
+0{$tel1}|{$tel2}|{$order->getCustomer()->getFullname()}|{$order->getCustomer()->getEmail()}|Rua|{$order->getLocation()->getStreet()}|{$order->getLocation()->getHausnr()}|0|{assign var=city_verbose value=$order->getLocation()->getCity()->getVerboseInformation()}{if $city_verbose}{$city_verbose[0]['neighbour']}{/if}|{$order->getLocation()->getCity()->getCity()}|SP|{$order->getLocation()->getPlz()}|C
+[FIM DADOS CLIENTE]
+[DADOS PEDIDO]
+{assign var=card value=$order->getCard()}
+{foreach from=$card.bucket item=custItems key=custId}
+{foreach from=$custItems item=item key=hash name=meals}
+{assign var=mealoptioncount value=$item.meal->getCurrentMealOptionsCount()}
+{assign var=mealoptionmaxprice value=$item.meal->getCurrentMealOptionsMaxPrice()}
+{$item.meal->getNr()}|{$item.meal->getName()}|{$item.count}|{$item.meal->getAllCosts()|inttoprice:2:","}
+{foreach name=bo from=$item.meal->getCurrentOptions() item=option}
+{assign var=ocost value=$option->getCost()}
+{if ($option instanceof Yourdelivery_Model_Meals)}
+{if ($item.meal->getPriceType() == 'options_avg')}
+{assign var=ocost value=$option->getCost()/$mealoptioncount}
+{elseif ($item.meal->getPriceType() == 'options_max')}
+{if $mealoptionmaxprice==$option->getCost()}
+{assign var=oamount value=$mealoptionmaxprice}
+{else}
+{assign var=oamount value=0}
+{/if}
+{/if}
+{/if}
+0|{$option->getName()}|1|{$ocost|inttoprice:2:","}
+{/foreach}
+{foreach name=be from=$item.meal->getCurrentExtras() item=extra}
+0|{$extra->getName()}|1|{$extra->getCost()|inttoprice:2:","}
+{/foreach}
+{/foreach}
+{/foreach}
+[FIM DADOS PEDIDO]
+[INICIO PAGAMENTO]
+{$order->getAbsTotal()|inttoprice:2:","}|{$order->getChange()|inttoprice:2:","}|{if $order->getPaymentAddition() == 'vr'}{$order->getAbsTotal()|inttoprice:2:","}{else}0{/if}|0|0|{if $order->getPaymentAddition() == 'creditCardAtHome'}{$order->getAbsTotal()|inttoprice:2:","}{else}0{/if}|0|{if $order->getPayment() != 'bar'}{$order->getAbsTotal()|inttoprice:2:","}{else}0{/if}|0|{if $order->getPayment() == 'bar' && !$order->getPaymentAddition()}{($order->getChange()-$order->getAbsTotal())|inttoprice:2:","}{else}0{/if}|0|{$order->getDeliverCost()|inttoprice:2:","}|1|*|D|{if $order->getPayment() != 'bar'}ja pago online{/if}
+
+[FIM PAGAMENTO]
+[INICIO DETALHE BANDEIRA]
+[FIM DETALHE BANDEIRA]

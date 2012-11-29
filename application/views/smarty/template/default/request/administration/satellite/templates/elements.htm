@@ -1,0 +1,124 @@
+<script type="text/javascript">
+    $( ".newelement" ).draggable({
+        appendTo: "body",
+        helper: "clone"
+    });
+    $( "#yd-satellite-content" ).droppable({
+        activeClass: "ui-state-default",
+        hoverClass: "ui-state-hover",
+        //accept: ":not(.ui-sortable-helper)",
+        drop: function( event, ui ) {
+            
+            $(ui.draggable.html()).appendTo('#yd-satellite-content');
+            $("#yd-satellite-content").droppable( "destroy" );
+            var temp=$("#yd-satellite-content .ui-button-text").html();
+            $("#yd-satellite-content .ui-button-text").remove();
+            $(".newelement").remove();
+            $(temp).appendTo('#yd-satellite-content');
+            $("#yd-satellite-content .click").show();
+            contextmenu();
+            $("#dialog").remove();
+            
+        }
+    });
+    
+    $(".newelement").button();
+
+</script>
+
+<!--Regeln: Jedes Element muss ein Div mit der Class=newelement umschließen. Das Element darin muss die Class=click erhalten und Display:none -->
+<div class="newelement" >{__b('Box')}<div style="postion:relative; display:none;height: 50px; width: 50px; border-radius:5px; " class="click yd-box"></div></div>
+
+<div class="newelement" >{__b('Button')}<div class="click yd-box" style="display:none;height: 10px;padding:10px; width: 51px;"><a>BUTTON</a></div></div>
+
+<div class="newelement" >{__b('Navi')}
+    <div style="display:none;" class="click">
+        <ul>
+
+            <li><a href="/menu"><span>{__b('Online bestellen')}</span></a></li>
+            <li><a href="/" class="active">{__b('Home')}</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="newelement" >{__b('Box Transparent')}<div style="display:none;height: 50px; width: 50px; background: none ;color:#000;font-size: 16px; " class="click">{__b('Box Transparent')}</div></div>
+
+<!--Öffnungszeiten und Liefergebiete-->
+<div class="newelement" >{__b('Öffnungszeiten/Liefergebiete')}
+    <div id="service-info" class="yd-service_info yd-box clearfix smarty click" style="display:none;">
+        <div class="yd-box-head_2">
+            <table>
+                <tbody><tr>
+                        <td class="left">{__b('Öffnungszeiten')}</td>
+                        <td class="right">{__b('Mindestbestellwert und Liefergebiete in Berlin')}</td>
+                    </tr>
+                </tbody></table>
+        </div>
+
+        <table class="left">
+            <tbody><tr>
+                    <td>{__b('Montag')}</td>
+                    <td>11:00 - 23:00</td>
+                </tr>
+                <tr>
+                    <td>{__b('Dienstag')}</td>
+                    <td>11:00 - 23:00</td>
+                </tr>
+                <tr>
+                    <td>{__b('Mittwoch')}</td>
+                    <td>11:00 - 23:00</td>
+                </tr>
+                <tr>
+                    <td>{__b('Donnerstag')}</td>
+                    <td>11:00 - 23:00</td>
+                </tr>
+                <tr>
+                    <td>{__b('Freitag')}</td>
+                    <td>11:00 - 23:00</td>
+                </tr>
+                <tr>
+                    <td>{__b('Samstag')}</td>
+                    <td>11:00 - 23:00</td>
+                </tr>
+                <tr>
+                    <td>{__b('Sonntag')}</td>
+                    <td>11:00 - 23:00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="right">
+            <tbody><tr>
+                    <td><b>7,00 €:</b></td>
+                    <td>10115 Berlin, 10551 Berlin, 10553 Berlin, 10555 Berlin, 10557 Berlin, 10559 Berlin, 10585 Berlin, 10587 Berlin, 10589 Berlin, 10625 Berlin, 10627 Berlin, 10629 Berlin, 10787 Berlin, 13351 Berlin, 13353 Berlin, 13627 Berlin, 13629 Berlin, 14050 Berlin, 14057 Berlin, 14059 Berlin</td>
+                </tr>
+                <tr>
+                    <td><b>8,00 €:</b></td>
+                    <td>10623 Berlin, 13347 Berlin</td>
+                </tr>
+                <tr>
+                    <td><b>9,00 €:</b></td>
+                    <td>10707 Berlin, 10711 Berlin, 10719 Berlin, 10789 Berlin, 13405 Berlin, 14053 Berlin</td>
+                </tr>
+                <tr>
+                    <td><b>10,00 €:</b></td>
+                    <td>13349 Berlin</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+<!--SeoText-->
+<div class="newelement">Seo Text<div style="display: none; position: relative" class="box_img_text clearfix click smarty">
+
+        <img src="/storage/satellites/389/pictures/512.jpg" alt="" class="text_box_img">
+
+        <div class="text_box2">
+            <p>{__b('Die leckerste Pizza Berlins gibt es bei uns, bei Pizza Chief in der Sickinger Str. Unser Lieferservice liefert immer on Time!')}</p>
+        </div>
+
+    </div></div>
+
+
+</div>

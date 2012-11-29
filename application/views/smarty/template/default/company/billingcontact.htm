@@ -1,0 +1,81 @@
+{extends file="company/base.htm"}
+
+{block name="content"}
+
+<div id="admincase">
+
+    {include file="company/_left_nav.htm"}
+
+    <div class="clear"></div>
+
+    <div id="main-content">
+
+        <!-- Page Head -->
+
+        <ul class="shortcut-buttons-set">
+
+            <li><a class="shortcut-button" href="/company/billingcontact"><span>
+                        <img src="{$domain_static}/images/yd-icons/backend/information.png" alt="" /><br />
+                        {__('Rechnungsadresse')}
+                    </span></a></li>
+
+        </ul><!-- End .shortcut-buttons-set -->
+
+        <div class="clear"></div>
+
+        <div class="content-box">
+
+            <div class="content-box-header">
+
+                <h3>{__('Rechnungsadresse')}</h3>
+
+                <div class="clear"></div>
+
+            </div>
+
+            <div id="content" class="right">
+                <form action="" method="post" class="fm yd-validation">
+                    <input type="hidden" name="contactId" value="{$company->getContact()->getId()}" />
+                    <input type="hidden" name="billingContactId" value="{$company->getBillingContact()->getId()}" />
+                    <input type="hidden" name="compId" value="{$company->getId()}" />
+                    <div class="settings_group">
+                        <div id="comp-billingcontact">
+                            <div class="user-content">
+                                <label for="heading">{__('Vorname:')}</label>
+                                <input type="text" class="text-input billingcontact medium-input" name="heading" value="{$customized.heading}"/>
+                            </div>
+                            <div class="user-content">
+                                <label for="street">{__('Straße:')}</label>
+                                <input type="text" class="text-input billingcontact medium-input" name="street" value="{$customized.street}" />
+                            </div>
+                            <div class="user-content">
+                                <label for="hausnr">{__('Hausnummer:')}</label>
+                                <input type="text" class="text-input billingcontact medium-input" name="hausnr" value="{$customized.hausnr}"/>
+                            </div>
+                            <div class="user-content">
+                                <label for="plz">{__('PLZ:')}</label>
+                                <input type="text" class="text-input billingcontact medium-input" name="plz" value="{$customized.plz}" />
+                            </div>
+                            <div class="user-content">
+                                <label for="city">{__('Ort:')}</label>
+                                <input type="text" class="text-input billingcontact medium-input" name="city" value="{$customized.city}" />
+                            </div>
+                            <div class="user-content">
+                                <label for="addition">{__('Zusatz:')}</label>
+                                <input type="text" class="text-input billingcontact medium-input" name="addition" value="{$customized.addition}" />
+                            </div>
+                            <div class="user-content">
+                                <label for="">&nbsp;</label>
+                                <input type="submit" class="button" name="submit-billingcontact" value="{__('Speichern')}"/>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div> <!-- content box -->
+        <div class="clear"></div>
+    </div> <!-- main content -->
+</div> <!-- admincase -->
+</div> <!-- yd-nonfooter -->
+
+{/block}

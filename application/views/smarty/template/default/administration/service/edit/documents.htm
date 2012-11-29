@@ -1,0 +1,48 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{if isset($restaurant)}
+{include file='administration/service/edit/_navigation.htm'}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Dokumente')}
+        </div>
+        <div class="item-content">
+            <table width="100%" class="user-tab">
+                <tr>
+                    <td width="20%"></td>
+                    <td width="80%"></td>
+                </tr>
+                {foreach from=$restaurant->getDocuments() item=doc}
+                <tr>
+                    <td width="20%"><a href="/storage/restaurants/{$restaurant->getId()}/documents/{$doc}">{$doc}</></td>
+                    <td width="80%"><a href="/administration_service/deletedocument/serviceId/{$restaurant->getId()}?document={$doc}"><img src="{$domain_static}/images/yd-backend/del-cat.gif" onclick="javascript:return confirm(__b('Soll dieses Dokument wirklich gelöscht werden?'));" alt="{__b('Louml;schen')}" /></a></td>
+                </tr>
+                {/foreach}
+            </table>
+
+            <br/><br/>
+
+            <form action="/administration_service/uploaddocument" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="serviceId" value="{$restaurant->getId()}"/>
+            <table width="100%" class="user-tab">
+                <tr>
+                    <td width="15%"><b>{__b('Datei hochladen')}:</b></td>
+                    <td width="85%"><input type="file" name="document"/></td>
+                </tr>
+                <tr>
+                    <td>{__b('Name für die Datei (optional)')}:</td>
+                    <td><input type="text" name="alternativeName" value=""/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input name="upload" value="{__b('Speichern')}" type="submit" class="button"/></td>
+                </tr>
+            </table>
+            </form>
+        </div>
+    </div>
+</div>
+{/if}
+{/block}

@@ -1,0 +1,60 @@
+{if (is_object($order) && !$order->getId()) || $newCustomerDiscountError}
+    {assign var=card value=$order->getCard()}
+    {foreach from=$card.bucket item=custItems key=custId}
+        {foreach from=$custItems item=item key=hash name=position}
+            {assign var=meal value=$item.meal}
+            {assign var=count value=$item.count}
+            {assign var=size value=$item.size}
+
+            {if $meal->getCurrentOptionsCount() > 0}
+                {foreach name=bo from=$meal->getCurrentOptions() item=option}
+                    {if ($option instanceof Yourdelivery_Model_Meals)}
+                        <input type="hidden" class="yd-order-mealoption" id="yd-order-mealoption-{$hash}-{$option->getId()}-{$postfix}" name="meal[{$hash}][mealoptions][]" value="{$option->getId()}" />
+                        <input type="hidden" class="yd-order-mealoption" value="{$option->getName()}" />
+                        <input type="hidden" class="yd-order-mealoption" value="{$option->getCost()}" />
+                    {else}
+                        <input type="hidden" class="yd-order-option" id="yd-order-option-{$hash}-{$option->getId()}-{$postfix}" name="meal[{$hash}][options][]" value="{$option->getId()}" />
+                        <input type="hidden" class="yd-order-option" value="{$option->getName()}" />
+                        <input type="hidden" class="yd-order-option" value="{$option->getCost()}" />
+                    {/if}
+                {/foreach}
+            {/if}
+
+            {if $meal->getCurrentExtrasCount() > 0}
+                {foreach name=be from=$meal->getCurrentExtras() item=extra}
+                    <input type="hidden" class="yd-order-extra" id="yd-order-extra-{$hash}-{$extra->getId()}-{$postfix}" name="meal[{$hash}][extras][{$extra->getId()}][id]" value="{$extra->getId()}" />
+                    <input type="hidden" class="yd-order-extra" name="meal[{$hash}][extras][{$extra->getId()}][count]" value="{$extra->getCount()}" />
+                    <input type="hidden" class="yd-order-extra" value="{$extra->getName()}" />
+                    <input type="hidden" class="yd-order-extra" value="{$extra->getCost(false)}" />
+                    <input type="hidden" class="yd-order-extra" value="{$extra->getCount()}" />
+                {/foreach}
+            {/if}
+
+            <!-- build up post data -->
+            <input type="hidden" class="yd-order-meal" name="meal[{$hash}][id]" id="yd-order-meal-{$hash}-{$postfix}" value="{$meal->getId()}" />
+            <input type="hidden" class="yd-order-meal" value="{$meal->getName()}" />
+            <input type="hidden" class="yd-order-meal" value="{$meal->getCost()}" />
+            <input type="hidden" class="yd-order-meal" name="meal[{$hash}][count]" value="{$count}" />
+            <input type="hidden" class="yd-order-meal" value="{$meal->getMinAmount()}" />
+            <input type="hidden" class="yd-order-meal" value="{$meal->getExcludeFromMinCost()}" />
+            <input type="hidden" class="yd-order-meal" name="meal[{$hash}][special]" value="{$meal->getSpecial()}" />
+            <input type="hidden" class="yd-order-meal" name="meal[{$hash}][size]" value="{$meal->getCurrentSize()}" />
+            <input type="hidden" class="yd-order-meal" value="{$meal->getCurrentSizeName()}" />
+
+        {/foreach}
+    {/foreach}
+
+    <!-- this will trigger the restoring of the ydOrder object withOUT an update of the view -->
+    <input type="hidden" name="serviceId" value="{$order->getService()->getId()}" />
+    <input class="yd-no-update" type="hidden" name="restore" />
+    
+    {if $order->getDiscount()}
+        <input type="hidden" name="discount" value="{$order->getDiscount()->getCode()}" />
+    {/if}
+    
+    <input type="hidden" name="deliverCost" value="{$order->getService()->getDeliverCost()}" />
+    <input type="hidden" name="cityId" value="{$order->getLocation()->getCityId()}" />
+    <input type="hidden" class="floor" name="floor" value="" />
+    <input type="hidden" name="floorfee" value="{$order->getService()->getFloorfee()}" />
+    <input type="hidden" name="mode" value="{$order->getMode()}" />
+{/if}

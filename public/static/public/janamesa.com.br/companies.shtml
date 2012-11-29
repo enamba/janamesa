@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="pt" xml:lang="pt" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="pt" xml:lang="pt" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="pt" xml:lang="pt" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="pt" xml:lang="pt" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="pt" xml:lang="pt">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="viewport" content="width=1100">
+        <link rel="SHORTCUT ICON" href="/media/css/www.janamesa.com.br/favicon.ico" type="image/x-icon">
+
+            <title>B2B Partner - janamesa.com.br</title>
+
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-core.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-home.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-jquery.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-ie.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-infocenter.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-hidden.css" />
+            
+            <script type="text/javascript" src="/media/javascript/compiled/frontend-sem.js"></script>
+    </head>
+    <body class="br">
+
+        <!--#include virtual="_br_header.html" -->
+
+        <div id="yd-content" class="yd-clearfix post">
+
+            <div id="yd-ordering">
+
+                <h1 class="underlined">Faça parte com a sua empresa!</h1>
+                <p>A contabilidade sobre o orçamento alimentício dos seus empregados e os pedidos feitos tarde da noite são problemas muito comuns em várias empresas. O  Jánamesa é a solução ideal para quem tem que lidar com estes problemas,  pois nós permitimos que você configure o orçamento alimentício de seus funcionários e os relacione a específicas horas e endereços. Ainda mais, os pedidos são relacionados com os números de registro de cada funcionário e com os centros de custo.</p>
+
+                <h2>Benefícios para empresas:</h2>
+                <ul style="list-style-type:disc; margin-left:30px;">
+                    <li style="margin-bottom:10px;">Sua companhia pode facilmente cadastrar uma conta com o Janamesa, que será adinistrada por um ou vários funiconários de sua empresa. Eles determinam:  quanto, quando e por quais grupos de usuários os gastos serão feitos.</li>
+                    <li style="margin-bottom:10px;">Chega de receber inúmeros comprovantes: Seu administrador de contas ira receber uma fatura única, quer seja para 10 ou para 1.000 funcionários. Os benefícios oferecidos pelo Janamesa não variam conforme o tamanho da sua empresa, todas as empresas recebem os mesmo benefícios.</li>
+                    <li style="margin-bottom:10px;">O serviço é de graça: Não há limite mínimo para o valor do pedido, Sem taxa de cadastro, sem custos adicionais. Os pedidos serão feitos pelo mesmo valor caso  o pedido que seriam caso fossem feitos diretamente aos restaurantes pelo telefone. </li>
+                    <li style="margin-bottom:10px;">Função de exportação de arquivos CSV: Baixe todos os arquivos de maneira fácil e rápida em formato CSV direto para sua conta integrada ao nosso sistema.</li>
+                </ul>
+                <h2>Benefícios para funcionários:</h2>
+                <ul style="list-style-type:disc; margin-left:30px;">
+                    <li style="margin-bottom:10px;">Opções diversificadas: Funcionários fazem sua escolha preferida em um grupo de mais de 100 fornecedores selecionados a dedo. Desde um restaurante mais simples até os restaurantes mais sofisticados, podem ter certeza: o Jánamesa tem o que vocês procuram!</li>
+                    <li style="margin-bottom:10px;">Pedidos em conjunto: A coordenação de pedidos em grupo pode ser complicada e custar tempo. Com o Janamesa você poupa o tempo dos seus empregados e facilita pedidos em conjunto. Funcionários podem facilmente configurar pedidos online em conjunto. Por tanto, a cansativa tarefa de anotar individualmente os pedidos de cada funcionário, bem como os pedidos errôneos feitos por telefone chegam a um fim.</li>
+                    <li style="margin-bottom:10px;">Seus funcionários estão com ânimo para um refeição mais cara? Pelo Janamesa seus funcionários podem escolher pagar a diferença entre seu limite diário e o preço da sua refeição. </li>
+                    <li style="margin-bottom:10px;">Repetindo pedidos: Janamesa habilita os funcionários para rapidamente repetir seu último pedido, para que seus funcionários não precisem gastar sua energia e tempo com pedidos de comida e possam se focar no que realmente importa: o seu trabalho.</li>
+
+                </ul>
+                <p>Você tem um restaurante favorito e não consegue encontrá-lo no janamesa.com.br? Diga-nos qual é ele e nós o integraremos ao nosso sistema.</p>
+
+                <h1>Registre sua empresa agora:</h1>
+                <p>Ligue-nos para o número: <b>(11) 4063 1731</b> ou use o nosso <a href="contact">formulario de contato</a>. Configuraremos uma conta gratuita para sua empresa para que você possa avaliar nossos serviços sem qualquer obrigação. Caso seja do seu interesse, poderíamos também marcar uma visita a sua empresa para explicar nossos benefícios. Um de nossos principais consultores pessoalmente até vocês para entender suas necessidades particulares.</p>
+                <p>Janamesa garante <b>pagamento online seguro</b> e <b>uso confidencial de todas suas informações</b>.</p>
+
+                <h2>Sobre o Janamesa para clientes da sua companhia</h2>
+                <p>Nosso sistema foi desenvolvido pela nossa subsidiária na Alemanha, Lieferando, em colaboração com numerosas empresas de DAX-30. Toda experiências e confiabilidade destas empresas estão incorporadas ao nosso sistema atual, para que os serviços empresariais do Janamesa possam provir uma solução ideal para suas necessidades.</p>
+
+
+
+            </div>
+
+            <div id="yd-sidebar">
+
+                <!-- Secondary navigation -->
+                <div id="nav-secondary" class="yd-box br-box">
+                    <ul>
+                        <li><a href="/about-customer">Jánamesa para consumidores</a></li>
+                        <li><a href="/about-restaurant">Jánamesa para restaurantes</a></li>
+                        <li><a href="/customer-terms">Termos para consumidores</a></li>
+                        <li><a href="/restaurant-terms">Termos para restaurantes</a></li>
+                        <li><a href="/jobs">Trabalhe conosco</a></li>
+                    </ul>
+                </div>
+                <!-- /Secondary navigation -->
+
+            </div>
+
+        </div>
+        </div>
+
+        <!--#include virtual="_br_footer.html" -->

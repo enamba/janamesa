@@ -1,0 +1,24 @@
+<div class="be-dialogs"><a class="be-dialogs-close yd-close-lightbox"></a>
+
+    <div class="be-dialogs-head">
+        <h2>{__b('Kommentare')}</h2>
+    </div>
+
+    <div class="be-dialogs-body">
+
+        <form id="orderhelp">
+            <table class="user-tab" width="100%">    
+                {foreach from=$comments item=log}
+                <tr>
+                    <td width="30%">{$log.created}<br/></td>
+                    <td width="70%">{$log->getStatusMessage()}</td>
+                </tr>
+                {/foreach}
+            </table>
+            
+            <input type="button" value="{__('Ok')}" class="yd-close-lightbox button" />
+        </form>
+
+    </div>
+    
+</div>

@@ -1,0 +1,102 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/stats/sales/navigation.htm'}
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Top 10')}
+            </div>
+            <div class="item-content">
+                <form action="/administration_stats_sales/topten" method="post" name="form">
+                <table class="user-tab">
+                    <tr>
+                        <td width="5%">{__b('Von')}</td>
+                        <td width="15%"><input type="text" name="fromD" id="yd-statistics-start" value="{$from}"/></td>
+                        <td width="5%">{__b('Bis')}</td>
+                        <td width="15%"><input type="text" name="untilD" id="yd-statistics-end"  value="{$until}"/></td>
+                        <td width="5%">{__b('PLZ')}</td>
+                        <td width="15%">
+                            <select name="plz" style="width: 100px;" >
+                                    <option value="all">alle</option>                                  
+                                {section name=plz start=0 loop=10}
+                                    <option value="{$smarty.section.plz.index}"  {if $smarty.section.plz.index==$plz}selected{/if}>{$smarty.section.plz.index}</option>                                  
+                                {/section}
+                            </select>                            
+                        </td>
+                        <td width="40%"><input value="{__b('Sortierung festlegen')}" type="submit" class="button"/></td>
+                    </tr>
+                </table>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="four-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Top Restaurants')}
+            </div>
+            <div class="item-content">
+                <table class="user-tab">
+                    {foreach from=$restaurants key=i item=r}
+                    <tr>
+                        <td width="80%">{$i + 1}. <a href="/administration_service_edit/index/id/{$r.id}">{$r.name}</a></td>
+                        <td align="right">{$r.sales|inttoprice}&nbsp;€</td>
+                    </tr>
+                    {/foreach}
+                </table>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-head">
+                {__b('Top registrierte Privatkunden')}
+            </div>
+            <div class="item-content">
+                <table class="user-tab">
+                    {foreach from=$regcustomers key=i item=r}
+                    <tr>
+                        <td width="80%">{$i + 1}. <a href="/administration_user_edit/index/id/{$r.id}">{$r.prename} {$r.name}</a></td>
+                        <td align="right">{$r.sales|inttoprice}&nbsp;€</td>
+                    </tr>
+                    {/foreach}
+                </table>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-head">
+                {__b('Top unregistrierte Privatkunden')}
+            </div>
+            <div class="item-content">
+                <table class="user-tab">
+                    {foreach from=$unregcustomers key=i item=r}
+                    <tr>
+                        <td width="80%">{$i + 1}. {$r.prename} {$r.name}</a>
+                        <td align="right">{$r.sales|inttoprice}&nbsp;€</td>
+                    </tr>
+                    {/foreach}
+                </table>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-head">
+                {__b('Top Firmen')}
+            </div>
+            <div class="item-content">
+                <table class="user-tab">
+                    {foreach from=$companies key=i item=r}
+                    <tr>
+                        <td width="80%">{$i + 1}. <a href="/administration_company_edit/index/id/{$r.id}">{$r.name}</a></td>
+                        <td align="right">{$r.sales|inttoprice}&nbsp;€</td>
+                    </tr>
+                    {/foreach}
+                </table>
+            </div>
+        </div>
+    </div>
+
+{/block}

@@ -1,0 +1,183 @@
+{extends file='user/_base.htm'}
+
+{block name="content"}
+
+<div class="yd-profile yd-clearfix">
+
+    {include file='user/_header.htm' active=2 active_title=__('Lieferadressen')}
+
+    <div class="yd-profile-body">
+
+        <div id="dialog-locations" class="yd-dialog-parent yd-dialogs hidden"><a class="yd-dialogs-close"></a>
+
+            <div class="yd-dialogs-head">
+                <h2>{__('Neue Lieferadresse anlegen')}</h2>
+            </div>
+
+            <div class="yd-dialogs-body">
+
+                <form class="yd-new-address-form" action="/request_user_location/create" method="post" style="width: 380px; margin: 0 auto;">    
+
+                    <div class="yd-form">
+                        <div class="yd-form-wrapper">
+                            <ul class="yd-clearfix">
+                                <li class="yd-form-left">
+                                    <span>{__('Straße')}</span>
+                                    <input type="text" name="street">                                    
+                                    <div class="formError nameformError" style="display:none; top: -30px; left: 140px">
+                                        <div class="formErrorContent"></div>
+                                        <div class="formErrorArrow">
+                                            <div class="line10"></div>
+                                            <div class="line9"></div>
+                                            <div class="line8"></div>
+                                            <div class="line7"></div>
+                                            <div class="line6"></div>
+                                            <div class="line5"></div>
+                                            <div class="line4"></div>
+                                            <div class="line3"></div>
+                                            <div class="line2"></div>
+                                            <div class="line1"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="yd-form-right">
+                                    <span>{__('Nr')}</span>
+                                    <input type="text" name="hausnr" size="4" />
+                                    <div class="formError nameformError" style="display:none; top: -30px; left: 140px">
+                                        <div class="formErrorContent"></div>
+                                        <div class="formErrorArrow">
+                                            <div class="line10"></div>
+                                            <div class="line9"></div>
+                                            <div class="line8"></div>
+                                            <div class="line7"></div>
+                                            <div class="line6"></div>
+                                            <div class="line5"></div>
+                                            <div class="line4"></div>
+                                            <div class="line3"></div>
+                                            <div class="line2"></div>
+                                            <div class="line1"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="yd-clearfix">
+                                <li class="yd-form-left">
+                                    <span>{__('Postleitzahl')}</span>
+                                    {if $config->domain->base == 'janamesa.com.br'}
+                                        <a id="br-cep-autocomplete" class="br-cep-location">Não sabe seu CEP? Clique aqui</a>
+                                    {/if}
+                                    <input class="hidden" type="hidden" name="cityId" value="" />
+                                    <input type="text" id="plz" name="plz" value="" class="yd-plz-autocomplete yd-only-nr" {if $config->domain->base == 'janamesa.com.br'}readonly="readonly"{/if}  />
+                                    <div class="formError nameformError" style="display:none; top: -30px; left: 140px">
+                                        <div class="formErrorContent"></div>
+                                        <div class="formErrorArrow">
+                                            <div class="line10"></div>
+                                            <div class="line9"></div>
+                                            <div class="line8"></div>
+                                            <div class="line7"></div>
+                                            <div class="line6"></div>
+                                            <div class="line5"></div>
+                                            <div class="line4"></div>
+                                            <div class="line3"></div>
+                                            <div class="line2"></div>
+                                            <div class="line1"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="yd-form-right">
+                                    <span>{__('Telefon')}</span>
+                                    <input type="text" name="tel" />
+                                    <div class="formError nameformError" style="display:none; top: -30px; left: 140px">
+                                        <div class="formErrorContent"></div>
+                                        <div class="formErrorArrow">
+                                            <div class="line10"></div>
+                                            <div class="line9"></div>
+                                            <div class="line8"></div>
+                                            <div class="line7"></div>
+                                            <div class="line6"></div>
+                                            <div class="line5"></div>
+                                            <div class="line4"></div>
+                                            <div class="line3"></div>
+                                            <div class="line2"></div>
+                                            <div class="line1"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="yd-clearfix">
+                                  <li class="yd-form-left">
+                                    <span>{__('Firma')}</span>
+                                    <input type="text" name="companyName" />
+                                </li>                                
+                                <li class="yd-form-right">
+                                    <span>{__('Stockwerk')}</span>
+                                    <input type="text" name="etage" size="4" />
+                                </li>
+                            </ul>
+                            <ul class="yd-clearfix">
+                                <li class="yd-form-middle">
+                                    <span>{__('Lieferanweisungen')}</span>
+                                    <textarea name="comment"></textarea>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <a class="yd-button-190 yd-create-location" href="#new_address" name="new_address">{__('Adresse speichern')}</a>
+
+                </form>
+
+            </div>
+
+            <div class="yd-dialogs-footer"></div>
+
+        </div>
+
+        <h1>
+            <a class="yd-profile-blue-button " id="yd-user-location-create">{__('Neue Lieferadresse anlegen')}</a>
+            {__('Lieferadressen')}
+        </h1>
+
+        <div class="table yd-profile-table">
+            <div class="thead">
+                <div class="th">{__('Straße')}</div>
+                <div class="th">{__('Nr')}</div>
+                <div class="th">{__('Postleitzahl')}</div>
+                <div class="th">{__('Telefon')}</div>
+                <div class="th">{__('Lieferanweisungen')}</div>
+                <div class="th">{__('Stockwerk')}</div>
+                <div class="th">{__('Firma')}</div>
+                <div class="th">{__('Bearbeiten')}</div>
+            </div>
+
+            {foreach from=$cust->getLocations(null,false) item=location}
+
+            <form class="tr yd-form-toggle" action="/request_user_location/edit" method="post">
+                <input class="hidden" type="hidden" name="id" value="{$location->getId()}" />
+                <input class="hidden" type="hidden" name="cityId" value="{$location->getCity()->getId()}" />
+                <input class="hidden" type="hidden" name="plz" value="{$location->getPlz()}" />
+                <div class="td"><textarea style="width: 80px" name="street">{$location->getStreet()}</textarea></div>
+                <div class="td"><input style="width: 20px" type="text" value="{$location->getHausnr()}" name="hausnr" size="4" /></div>
+                <div class="td"><span style="display:block;padding:5px">{$location->getPlz()} {$location->getCity()->getCity()}</span></div>
+                <div class="td"><input style="width: 75px" type="text" value="{$location->getTel()}" name="tel" /></div>
+                <div class="td"><textarea style="width: 80px" name="comment">{$location->getComment()}</textarea></div>
+                <div class="td"><input style="width: 30px" type="text" value="{$location->getEtage()}" name="etage" /></div>             
+                <div class="td"><textarea style="width: 80px" name="companyName">{$location->getCompanyName()}</textarea></div>
+                <div class="td">
+                    <span class="yd-please-wait hidden"><img src="{$domain_static}/images/ajax-loader-16-white.gif" /></span>
+                    <a class="td-edit yd-form-toggle" title="{__('Adresse editieren')}" href="#location_{$location->getId()}" name="location_{$location->getId()}" id="location_{$location->getId()}"></a>
+                    <a class="td-check yd-edit-location" title="{__('Speichern')}" style="display:none"></a>
+                    <a class="td-heart yd-heart-location {if $location->isPrimary()}active{/if}" title="{__('Primäre Adresse')}" id="yd-heart-location-{$location->getId()}"></a>
+                    <a href="/user/locations/del/{$location->getId()}" class="td-delete" title="{__('Adresse löschen')}" onclick="if(!confirm('{__('Adresse löschen?')}')){ldelim}return false;{rdelim}"></a>
+                    <a class="td-letsgo yd-start-order-from-address" title="{__('Jetzt dorthin bestellen')}" id="yd-addr-{$location->getId()}-{$location->getCity()->getId()}" href="/{$location->getCity()->getRestUrl()}"></a>
+                </div>
+            </form>
+
+            {/foreach}
+
+        </div>
+
+    </div>
+
+</div>
+{/block}

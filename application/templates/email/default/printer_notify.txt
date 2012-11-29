@@ -1,0 +1,12 @@
+{__("Lieber Lieferando-Kunde,
+
+vielen Dank für Deine Bestellung. Sie wurde erfolgreich übermittelt.")}
+
+{if $order->isPreOrder()}
+{__("Der Lieferdienst hat als voraussichtliche Lieferzeit %s angegeben.", $order->getDeliverDelay()->computeDelayFormated())}
+{else}
+{__("Der Lieferdienst hat folgende Lieferzeit bestätigt: %s", date(__("d.m.Y H:i"), $order->computeArrivalTime()))}
+{/if}
+
+{__("Guten Appetit!")}
+{$config->domain->base}

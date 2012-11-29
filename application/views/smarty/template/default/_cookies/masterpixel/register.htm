@@ -1,0 +1,24 @@
+{if $APPLICATION_ENV == "production"}
+
+    {if $uadomain == 'lieferando.de'}
+        <iframe src="http://img-cdn.mediaplex.com/0/18421/universal.html?page_name=registrierung&amp;regs=1&amp;mpuid={$cust->getId()}"  height="1"  width="1"  frameborder="0"></iframe>
+    {elseif $uadomain == 'lieferando.at'}
+        <iframe src="http://img-cdn.mediaplex.com/0/18589/universal.html?page_name=at_registrierung&amp;at_regs=1&amp;mpuid={$cust->getId()}" height="1" width="1" frameborder="0"></iframe>
+    {elseif $uadomain == 'lieferando.ch'}
+        <iframe src="http://img-cdn.mediaplex.com/0/18590/universal.html?page_name=ch_registrierung&amp;ch_regs=1&amp;mpuid={$cust->getId()}" height="1" width="1" frameborder="0"></iframe>
+    {elseif $uadomain == 'taxiresto.fr'}  
+        <iframe src="http://img-cdn.mediaplex.com/0/18591/universal.html?page_name=fr_registrierung&amp;fr_regs=1&amp;mpuid={$cust->getId()}" height="1" width="1" frameborder="0"></iframe>
+    {elseif $uadomain == 'elpedido.es'}
+    
+    {elseif $uadomain == 'appetitos.it'}
+
+    {elseif $uadomain == 'smakuje.pl'}
+    
+    {/if}
+    
+{else}
+
+    <iframe   src="/null.php?page_name=registrierung&regs=1&mpuid={$cust->getId()}"   height="1"  width="1" frameborder="0" > </iframe>
+    
+
+{/if}

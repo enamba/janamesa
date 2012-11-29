@@ -1,0 +1,32 @@
+<h1>{__('Bewerte Deine Bestellung vom %s bei %s', ($ord->getTime()|date_format:__("%d.%m. um %H:%M Uhr")), $ord->getService()->getName())}</h1>
+
+<div class="ratings">
+    
+    <form id="ratings">
+        <p>{__('Bitte bewerte Deine Bestellung objektiv. Es hilft anderen Kunden, wenn Du einen aussagekräftigen Kommentar schreiben. Dieser kann jedoch auch leer gelassen werden.')}</p>
+
+        <table>
+            <tr>
+                <td>{__('Qualität')}</td>
+                <td>{__('Lieferzeit')}</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="rate-1" value="1" title="" id="rate1-1" /> <label for="rate1-1">{__('Schlecht')}</label><br />
+                    <input type="radio" name="rate-1" value="2" title="" id="rate1-2" /> <label for="rate1-2">{__('Durchschnitt')}</label><br />
+                    <input type="radio" name="rate-1" value="3" title="" id="rate1-3" checked="checked" /> <label for="rate1-3">{__('Gut')}</label><br />
+                    <input type="radio" name="rate-1" value="4" title="" id="rate1-4" /> <label for="rate1-4">{__('Sehr Gut')}</label><br />
+                    <input type="radio" name="rate-1" value="5" title="" id="rate1-5" /> <label for="rate1-5">{__('Ausgezeichnet')}</label>
+                </td>
+                <td>
+                    <input type="radio" name="rate-2" value="1" title="" id="rate2-1" /> <label for="rate2-1">{__('Schlecht')}</label><br />
+                    <input type="radio" name="rate-2" value="2" title="" id="rate2-2" /> <label for="rate2-2">{__('Durchschnitt')}</label><br />
+                    <input type="radio" name="rate-2" value="3" title="" id="rate2-3" checked="checked" /> <label for="rate2-3">{__('Gut')}</label><br />
+                    <input type="radio" name="rate-2" value="4" title="" id="rate2-4" /> <label for="rate2-4">{__('Sehr Gut')}</label><br />
+                    <input type="radio" name="rate-2" value="5" title="" id="rate2-5" /> <label for="rate2-5">{__('Ausgezeichnet')}</label>
+                </td>
+            </tr>
+        </table>
+        <textarea name="comment" id="comment"></textarea>
+    </form>
+</div>

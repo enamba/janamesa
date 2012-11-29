@@ -1,0 +1,4 @@
+<span class="yd-city-autocomplete-container">
+    <input type="text" class="yd-city-autocomplete-shown" value="{if $city}{$city->getPlz()} {$city->getFullName()}{/if}" />
+    <input type="hidden" class="yd-city-autocomplete-hidden" name="{$prefix}cityId" value="{if $city}{$city->getId()}{/if}" />
+</span>

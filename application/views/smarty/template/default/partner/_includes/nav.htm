@@ -1,0 +1,11 @@
+<ul class="be-sidebar">
+    <li class="icon01 {if $action == 'index'} active {/if}"><a href="{$this->url([],'partnerRoute',true)}"><span>{__p('Übersicht')}</span></a></li>
+    <li class="icon02 {if $action == 'orders'} active {/if}"><a href="{$this->url(['action'=>'orders'],'partnerRoute',true)}"><span>{__p('Bestellungen')}</span></a></li>
+    <li class="icon03 {if $action == 'billing'} active {/if}"><a href="{$this->url(['action'=>'billing'],'partnerRoute',true)}"><span>{__p('Rechnungen')}</span></a></li>
+    <li class="icon04 {if $action == 'stats'} active {/if}"><a href="{$this->url(['action'=>'stats'],'partnerRoute',true)}"><span>{__p('Statistiken')}</span></a></li>
+    <li class="icon05 {if $action == 'documents'} active {/if}"><a href="{$this->url(['action'=>'documents'],'partnerRoute',true)}"><span>{__p('Faxvorlagen')}</span></a></li>
+    <li class="icon06 {if $action == 'account'} active {/if}"><a href="{$this->url(['action'=>'account'],'partnerRoute',true)}"><span>{__p('Konto')}</span></a></li>
+    <li class="icon07 comingsoon"><a><span>{__p('Rabatte')}</span><small>{__p('bald verfügbar')}</small></a></li>
+    <li class="icon08 {if $action == 'contact'} active {/if}"><a href="{$this->url(['action'=>'contact'],'partnerRoute',true)}"><span>{__p('Kontakt')}</span></a></li>
+    <li class="icon09 {if $action == 'faq'} active {/if}"><a href="{$this->url(['action'=>'faq'],'partnerRoute',true)}"><span>{__p('Hilfe')}</span></a></li>
+</ul>

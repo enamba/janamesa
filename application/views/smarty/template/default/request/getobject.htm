@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+    {if $error}
+        <error>1</error>
+    {else}
+        <error>0</error>
+        {foreach from=$obj->getData() item=value key=key}
+            <{$key}>{if is_object($value)}{foreach from=$value->getData() item=_value key=_key}{if !is_object($_value) && !empty($_value)}<{$_key}>{$_value}</{$_key}>{/if}{/foreach}
+            {else}{if !empty($value)}{$value}{/if}{/if}</{$key}>
+        {/foreach}
+        <return>{$returnValue}</return>
+    {/if}
+</response>

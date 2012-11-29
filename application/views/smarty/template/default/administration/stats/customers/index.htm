@@ -1,0 +1,372 @@
+{extends file='administration/base.htm'}
+{block name="content"}
+{include file='administration/stats/customers/navigation.htm'}              
+
+    {assign var=absRegCount value=0}
+    {assign var=absNotregCount value=0}
+    
+    {assign var=absCompanyCountRest value=0}
+    {assign var=absCompanyCountCater value=0}
+    {assign var=absCompanyCountGreat value=0}
+    
+    {assign var=absRegCountDivisor value=0}
+    {assign var=absNotregCountDivisor value=0}
+    
+    {assign var=absCompanyCountDivisorRest value=0}
+    {assign var=absCompanyCountDivisorCater value=0}
+    {assign var=absCompanyCountDivisorGreat value=0}
+    
+    {foreach from=$years item=year}
+        <div class="one-column-box">
+            <div class="item">
+                <div class="item-head">
+                    {$year}
+                </div>
+                <div class="item-content">
+                    <table class="user-tab">
+                        <tr>
+                            <td width="16%"></td>
+                        <td width="7%" align="center"><b>{__b('Januar')}</b></td>
+                        <td width="7%" align="center"><b>{__b('Februar')}</b></td>
+                        <td width="7%" align="center"><b>{__b('März')}</b></td>
+                        <td width="7%" align="center"><b>{__b('April')}</b></td>
+                        <td width="7%" align="center"><b>{__b('Mai')}</b></td>
+                        <td width="7%" align="center"><b>{__b('Juni')}</b></td>
+                        <td width="7%" align="center"><b>{__b('Juli')}</b></td>
+                        <td width="7%" align="center"><b>{__b('August')}</b></td>
+                        <td width="7%" align="center"><b>{__b('September')}</b></td>
+                        <td width="7%" align="center"><b>{__b('Oktober')}</b></td>
+                        <td width="7%" align="center"><b>{__b('November')}</b></td>
+                        <td width="7%" align="center"><b>{__b('Dezember')}</b></td>
+                        </tr>
+                        
+                        <!-- count customers -->
+                        <tr><td colspan="12" align="center"><td></tr>
+                        <tr><td colspan="12" align="center"><b>{__b('Anzahl Benutzer')}</b><td></tr>
+                        <tr>
+                            <td align="center">{__b('Private registrierte Benutzer')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=val value=$dataRegistered[$year][$smarty.section.month.iteration]['countUsers']}
+                                {if $val > 0}
+                                    {assign var=absRegCount value=$absRegCount+$val}
+                                    <td align="center">{$absRegCount}&nbsp;&nbsp;&nbsp;<span style="color:green">+{$val}</span></td>
+                                {else}
+                                    <td align="center"> --- </td>
+                                {/if}
+                            {/section}
+                        </tr>                  
+                        <tr>
+                            <td align="center">{__b('Private unregistrierte Benutzer')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=val value=$dataNotregistered[$year][$smarty.section.month.iteration]['countUsers']}
+                                {if $val > 0}
+                                    {assign var=absNotregCount value=$absNotregCount+$val}
+                                    <td align="center">{$absNotregCount}&nbsp;&nbsp;&nbsp;<span style="color:green">+{$val}</span></td>
+                                {else}
+                                    <td align="center"> --- </td>
+                                {/if}
+                            {/section}
+                        </tr>                 
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Restaurant')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=val value=$dataCompany[$year][$smarty.section.month.iteration]['rest']['countUsers']}
+                                {if $val > 0}
+                                    {assign var=absCompanyCountRest value=$absCompanyCountRest+$val}
+                                    <td align="center">{$absCompanyCountRest}&nbsp;&nbsp;&nbsp;<span style="color:green">+{$val}</span></td>
+                                {else}
+                                    <td align="center"> --- </td>
+                                {/if}
+                            {/section}
+                        </tr>   
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Catering')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=val value=$dataCompany[$year][$smarty.section.month.iteration]['cater']['countUsers']}
+                                {if $val > 0}
+                                    {assign var=absCompanyCountCater value=$absCompanyCountCater+$val}
+                                    <td align="center">{$absCompanyCountCater}&nbsp;&nbsp;&nbsp;<span style="color:green">+{$val}</span></td>
+                                {else}
+                                    <td align="center"> --- </td>
+                                {/if}
+                            {/section}
+                        </tr>  
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Großhandel')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=val value=$dataCompany[$year][$smarty.section.month.iteration]['great']['countUsers']}
+                                {if $val > 0}
+                                    {assign var=absCompanyCountGreat value=$absCompanyCountGreat+$val}
+                                    <td align="center">{$absCompanyCountGreat}&nbsp;&nbsp;&nbsp;<span style="color:green">+{$val}</span></td>
+                                {else}
+                                    <td align="center"> --- </td>
+                                {/if}
+                            {/section}
+                        </tr>            
+                        
+                                               
+                        <!-- average order value -->
+                        <tr><td colspan="12" align="center"><td></tr>
+                        <tr><td colspan="12" align="center"><b>{__b('Durchschnittlicher Warenkorb')}</b><td></tr>
+                        <tr>
+                            <td align="center">{__b('Private registrierte Benutzer')}</td>
+                            {section name=month start=1 loop=13}
+                                <td align="center">{$ordersRegistered[$year][$smarty.section.month.iteration]['average_bucket_value']|inttoprice}</td>
+                            {/section}
+                        </tr>             
+                        <tr>
+                            <td align="center">{__b('Private unregistrierte Benutzer')}</td>
+                            {section name=month start=1 loop=13}
+                                <td align="center">{$ordersNotregistered[$year][$smarty.section.month.iteration]['average_bucket_value']|inttoprice} &euro;</td>
+                            {/section}
+                        </tr>         
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Restaurant')}</td>
+                            {section name=month start=1 loop=13}
+                                <td align="center">{$ordersCompany[$year][$smarty.section.month.iteration]['rest']['average_bucket_value']|inttoprice} &euro;</td>
+                            {/section}
+                        </tr> 
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Catering')}</td>
+                            {section name=month start=1 loop=13}
+                                <td align="center">{$ordersCompany[$year][$smarty.section.month.iteration]['cater']['average_bucket_value']|inttoprice} &euro;</td>
+                            {/section}
+                        </tr> 
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Großhandel')}</td>
+                            {section name=month start=1 loop=13}
+                                <td align="center">{$ordersCompany[$year][$smarty.section.month.iteration]['great']['average_bucket_value']|inttoprice} &euro;</td>
+                            {/section}
+                        </tr>
+                        
+                        <!-- orders per month -->         
+                        <tr><td colspan="12" align="center"><td></tr>              
+                        <tr><td colspan="12" align="center"><b>{__b('Anzahl Bestellungen pro Monat')}</b><td></tr>
+                        <tr>
+                            <td align="center">{__b('Private registrierte Benutzer')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=count value=$ordersRegistered[$year][$smarty.section.month.iteration]['countOrders']}
+                                <td align="center">{$count}</td>
+                            {/section}
+                        </tr>             
+                        <tr>
+                            <td align="center">{__b('Private unregistrierte Benutzer')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=count value=$ordersNotregistered[$year][$smarty.section.month.iteration]['countOrders']}
+                                <td align="center">{$count}</td>
+                            {/section}
+                        </tr>       
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Restaurant')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=count value=$ordersCompany[$year][$smarty.section.month.iteration]['rest']['countOrders']}
+                                <td align="center">{$count}</td>
+                            {/section}
+                        </tr>
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Catering')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=count value=$ordersCompany[$year][$smarty.section.month.iteration]['cater']['countOrders']}
+                                <td align="center">{$count}</td>
+                            {/section}
+                        </tr>
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Großhandel')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=count value=$ordersCompany[$year][$smarty.section.month.iteration]['great']['countOrders']}
+                                <td align="center">{$count}</td>
+                            {/section}
+                        </tr>
+                        
+                                              
+                        <!-- orders per month per user -->         
+                        <tr><td colspan="12" align="center"><td></tr>              
+                        <tr><td colspan="12" align="center"><b>{__b('Anzahl Bestellungen pro Monat je Benutzer')}</b><td></tr>
+                        <tr>
+                            <td align="center">{__b('Private registrierte Benutzer')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=count value=$ordersRegistered[$year][$smarty.section.month.iteration]['countOrders']}
+                                {assign var=absRegCountDivisor value=$absRegCountDivisor+$dataRegistered[$year][$smarty.section.month.iteration]['countUsers']}
+                                <td align="center">
+                                    <a class="tooltip" title="{__b('%d Bestellungen in diesem Monat / %d absolute Anzahl von registrierten Benutzern', $count, $absRegCountDivisor)}">
+                                        {math equation="x / y" x=$count y=$absRegCountDivisor format="%.2f"}
+                                    </a>
+                                </td>
+                            {/section}
+                        </tr>             
+                        <tr>
+                            <td align="center">{__b('Private unregistrierte Benutzer')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=count value=$ordersNotregistered[$year][$smarty.section.month.iteration]['countOrders']}
+                                {assign var=absNotregCountDivisor value=$absNotregCountDivisor+$dataNotregistered[$year][$smarty.section.month.iteration]['countUsers']}
+                                <td align="center">
+                                    <a class="tooltip" title="{__b('%d Bestellungen in diesem Monat / %d absolute Anzahl von unregistrierten Benutzern', $count, $absNotregCountDivisor)}"">                       
+                                        {math equation="x / y" x=$count y=$absNotregCountDivisor format="%.2f"}
+                                    </a>
+                                </td>
+                            {/section}
+                        </tr>
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Restaurant')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=count value=$ordersCompany[$year][$smarty.section.month.iteration]['rest']['countOrders']}
+                                {assign var=absCompanyCountDivisorRest value=$absCompanyCountDivisorRest+$dataCompany[$year][$smarty.section.month.iteration]['rest']['countUsers']}
+                                <td align="center">
+                                    <a class="tooltip" title="{__b('%d Bestellungen in diesem Monat / %d absolute Anzahl von Firmen Benutzern',$count, $absCompanyCountDivisorRest)}">                       
+                                        {math equation="x / y" x=$count y=$absCompanyCountDivisorRest format="%.2f"}
+                                    </a>
+                                </td>
+                            {/section}
+                        </tr>
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Catering')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=count value=$ordersCompany[$year][$smarty.section.month.iteration]['cater']['countOrders']}
+                                {assign var=absCompanyCountDivisorCater value=$absCompanyCountDivisorCater+$dataCompany[$year][$smarty.section.month.iteration]['cater']['countUsers']}
+                                <td align="center">
+                                    <a class="tooltip" title="{__b('%d Bestellungen in diesem Monat / %d absolute Anzahl von Firmen Benutzern',$count, $absCompanyCountDivisorCater)}">                       
+                                        {math equation="x / y" x=$count y=$absCompanyCountDivisorCater format="%.2f"}
+                                    </a>
+                                </td>
+                            {/section}
+                        </tr>
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Großhandel')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=count value=$ordersCompany[$year][$smarty.section.month.iteration]['great']['countOrders']}
+                                {assign var=absCompanyCountDivisorGreat value=$absCompanyCountDivisorGreat+$dataCompany[$year][$smarty.section.month.iteration]['great']['countUsers']}
+                                <td align="center">
+                                    <a class="tooltip" title="{__b('%d Bestellungen in diesem Monat / %d absolute Anzahl von Firmen Benutzern',$count, $absCompanyCountDivisorGreat)}">                       
+                                        {math equation="x / y" x=$count y=$absCompanyCountDivisorGreat format="%.2f"}
+                                    </a>
+                                </td>
+                            {/section}
+                        </tr>
+                        
+                                                                   
+                        <!-- sales per month -->         
+                        <tr><td colspan="12" align="center"><td></tr>              
+                        <tr><td colspan="12" align="center"><b>{__b('Umsatz pro Monat')}</b><td></tr>
+                        <tr>
+                            <td align="center">{__b('Private registrierte Benutzer')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=amount value=$ordersRegistered[$year][$smarty.section.month.iteration]['sum_bucket_value']}
+                                <td align="center">{$amount|inttoprice} &euro;</td>
+                            {/section}
+                        </tr>             
+                        <tr>
+                            <td align="center">{__b('Private unregistrierte Benutzer')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=amount value=$ordersNotregistered[$year][$smarty.section.month.iteration]['sum_bucket_value']}
+                                <td align="center">{$amount|inttoprice} &euro;</td>
+                            {/section}
+                        </tr>   
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Restaurant')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=amount value=$ordersCompany[$year][$smarty.section.month.iteration]['rest']['sum_bucket_value']}
+                                <td align="center">{$amount|inttoprice} &euro;</td>
+                            {/section}
+                        </tr>
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Catering')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=amount value=$ordersCompany[$year][$smarty.section.month.iteration]['cater']['sum_bucket_value']}
+                                <td align="center">{$amount|inttoprice} &euro;</td>
+                            {/section}
+                        </tr>
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Großhandel')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=amount value=$ordersCompany[$year][$smarty.section.month.iteration]['great']['sum_bucket_value']}
+                                <td align="center">{$amount|inttoprice} &euro;</td>
+                            {/section}
+                        </tr>
+                        
+                        
+                        <!-- commission per month -->         
+                        <tr><td colspan="12" align="center"><td></tr>              
+                        <tr><td colspan="12" align="center"><b>{__b('Provission pro Monat')}</b><td></tr>
+                        <tr>
+                            <td align="center">{__b('Private registrierte Benutzer')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=amount value=$ordersRegistered[$year][$smarty.section.month.iteration]['sum_commission']}
+                                <td align="center">{$amount|inttoprice} &euro;</td>
+                            {/section}
+                        </tr>             
+                        <tr>
+                            <td align="center">{__b('Private unregistrierte Benutzer')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=amount value=$ordersNotregistered[$year][$smarty.section.month.iteration]['sum_commission']}
+                                <td align="center">{$amount|inttoprice} &euro;</td>
+                            {/section}
+                        </tr>   
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Restaurant')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=amount value=$ordersCompany[$year][$smarty.section.month.iteration]['rest']['sum_commission']}
+                                <td align="center">{$amount|inttoprice} &euro;</td>
+                            {/section}
+                        </tr>
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Catering')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=amount value=$ordersCompany[$year][$smarty.section.month.iteration]['cater']['sum_commission']}
+                                <td align="center">{$amount|inttoprice} &euro;</td>
+                            {/section}
+                        </tr>
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Großhandel')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=amount value=$ordersCompany[$year][$smarty.section.month.iteration]['great']['sum_commission']}
+                                <td align="center">{$amount|inttoprice} &euro;</td>
+                            {/section}
+                        </tr>
+                        
+                        
+                        <!-- commission avg per month -->         
+                        <tr><td colspan="12" align="center"><td></tr>              
+                        <tr><td colspan="12" align="center"><b>{__b('durchschnittlicher Provisionssatz pro Monat')}</b><td></tr>
+                        <tr>
+                            <td align="center">{__b('Private registrierte Benutzer')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=amount value=$ordersRegistered[$year][$smarty.section.month.iteration]['avg_comm_perc']}
+                                <td align="center">{$amount}</td>
+                            {/section}
+                        </tr>             
+                        <tr>
+                            <td align="center">{__b('Private unregistrierte Benutzer')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=amount value=$ordersNotregistered[$year][$smarty.section.month.iteration]['avg_comm_perc']}
+                                <td align="center">{$amount}</td>
+                            {/section}
+                        </tr>   
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Restaurant')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=amount value=$ordersCompany[$year][$smarty.section.month.iteration]['rest']['avg_comm_perc']}
+                                <td align="center">{$amount}</td>
+                            {/section}
+                        </tr>
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Catering')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=amount value=$ordersCompany[$year][$smarty.section.month.iteration]['cater']['avg_comm_perc']}
+                                <td align="center">{$amount}</td>
+                            {/section}
+                        </tr>
+                        <tr>
+                            <td align="center">{__b('Firmen Benutzer Großhandel')}</td>
+                            {section name=month start=1 loop=13}
+                                {assign var=amount value=$ordersCompany[$year][$smarty.section.month.iteration]['great']['avg_comm_perc']}
+                                <td align="center">{$amount}</td>
+                            {/section}
+                        </tr>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+    {/foreach}
+    
+{/block}

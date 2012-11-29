@@ -1,0 +1,1498 @@
+.be-nav li a span {
+    display: block;
+    padding: 9px 9px 9px 30px;
+    background: url(/media/images/yd-backend/2012/nav-sprite.png) no-repeat;
+}
+
+.be-nav li:first-child a span { background-position: 6px 8px; }
+.be-nav li.icon01 a span { background-position: 6px -32px; }
+.be-nav li.icon02 a span { background-position: 6px -70px; }
+.be-nav li.icon03 a span { background-position: 6px -110px; }
+.be-nav li.icon04 a span { background-position: 6px -150px; }
+.be-nav li.icon05 a span { background-position: 6px -191px; }
+.be-nav li.icon06 a span { background-position: 6px -230px; }
+.be-nav li.icon07 a span { background-position: 6px -271px; }
+.be-nav li.icon08 a span { background-position: 4px -311px; }
+.be-nav li.icon09 a span { background-position: 9px -351px; }
+.be-nav li.icon10 a span { background-position: 6px -390px; }
+.be-nav li.icon11 a span { background-position: 6px -432px; }
+.be-nav li.icon12 a span { background-position: 10px -471px; }
+.be-nav li.icon13 a span { background-position: 6px -512px; }
+.be-nav li.icon14 a span { background-position: 7px -551px; }
+.be-nav li.icon15 a span { background-position: 6px -591px; }
+.be-nav li.icon16 a span { background-position: 6px -631px; }
+.be-nav li.icon17 a span { background-position: 6px -671px; }
+
+.be-nav li:first-child.active a span { background-position: -164px 8px; }
+.be-nav li.icon01.active a span { background-position: -164px -32px; }
+.be-nav li.icon02.active a span { background-position: -164px -70px; }
+.be-nav li.icon03.active a span { background-position: -164px -110px; }
+.be-nav li.icon04.active a span { background-position: -164px -150px; }
+.be-nav li.icon05.active a span { background-position: -164px -191px; }
+.be-nav li.icon06.active a span { background-position: -164px -230px; }
+.be-nav li.icon07.active a span { background-position: -164px -271px; }
+.be-nav li.icon08.active a span { background-position: -166px -311px; }
+.be-nav li.icon09.active a span { background-position: -161px -351px; }
+.be-nav li.icon10.active a span { background-position: -164px -390px; }
+.be-nav li.icon11.active a span { background-position: -164px -432px; }
+.be-nav li.icon12.active a span { background-position: -160px -471px; }
+.be-nav li.icon13.active a span { background-position: -164px -512px; }
+.be-nav li.icon14.active a span { background-position: -163px -551px; }
+.be-nav li.icon15.active a span { background-position: -164px -591px; }
+.be-nav li.icon16.active a span { background-position: -164px -631px; }
+.be-nav li.icon17.active a span { background-position: -164px -671px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.be-discount-formulars h3 {
+    margin: 0 0 20px 0;
+    padding: 0 0 0 32px;
+    font-size: 24px;
+    background: url(/media/images/yd-backend/2012/discount-0.png) 0 3px no-repeat;
+}
+
+.be-discount-formulars ul {
+    float: left;
+}
+
+.be-discount-formulars hr {
+    margin: 0 0 15px;
+}
+
+.be-discount-formulars input[type=submit] {
+    margin: 0 0 25px;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+.be-discount-formulars li {
+    position: relative;
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+    box-shadow: 0 2px 0 -1px #ccc, 0 3px 0 -1px #fff;
+}
+
+.be-discount-formulars label {
+    display: inline-block;
+    width: 100px;
+    padding: 5px 20px 5px 30px;
+}
+
+.be-discount-formulars input[type=text] {
+    width: 288px;
+}
+
+.be-discount-formulars select {
+    width: 300px;
+}
+
+.be-discount-formulars span {
+    display: inline-block;
+    width: 300px;
+}
+
+.be-discount-formulars textarea {
+    width: 288px;
+    height: 100px;
+}
+
+.be-discount-formulars.be-discount-create textarea { height: 50px; }
+
+.be-discount-formulars table td {
+    font-size: 14px;
+}
+
+.be-discount-formulars small {
+    display: inline-block;
+    max-width: 400px;
+    margin: 5px 0 0 10px;
+    padding: 5px 5px 5px 25px;
+    box-shadow: inset 0 0 0 1px #fff, 0 0 0 1px #ccc;
+    background:
+        url(/media/images/yd-icons/information.png) 4px 4px no-repeat,
+        #eee; /* IE */
+    background:
+        url(/media/images/yd-icons/information.png) 4px 4px no-repeat,
+        -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+    background:
+        url(/media/images/yd-icons/information.png) 4px 4px no-repeat,
+        -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background:
+        url(/media/images/yd-icons/information.png) 4px 4px no-repeat,
+        -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background:
+        url(/media/images/yd-icons/information.png) 4px 4px no-repeat,
+        -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Opera11.10+ */
+    background:
+        url(/media/images/yd-icons/information.png) 4px 4px no-repeat,
+        -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* IE10+ */
+    background:
+        url(/media/images/yd-icons/information.png) 4px 4px no-repeat,
+        linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* W3C */
+    border-radius: 8px;
+}
+
+.be-discount-formulars small span {
+    width: auto;
+}
+
+.be-discount-formulars dt,
+.be-discount-formulars dd {
+    display: inline-block;
+}
+
+/* Rabattaktion-Icons */
+
+.be-cd1 label { background: url(/media/images/yd-backend/2012/discount-1.png) 3px 5px no-repeat; }
+.be-cd2 label { background: url(/media/images/yd-backend/2012/discount-2.png) 3px 5px no-repeat; }
+.be-cd3 label { background: url(/media/images/yd-backend/2012/discount-3.png) 3px 5px no-repeat; }
+.be-cd4 label { background: url(/media/images/yd-backend/2012/discount-4.png) 3px 5px no-repeat; }
+
+.be-dc1 label { background: url(/media/images/yd-backend/2012/discount-create/1.png) 3px 5px no-repeat; }
+.be-dc2 label { background: url(/media/images/yd-backend/2012/discount-create/2.png) 3px 5px no-repeat; }
+.be-dc3 label { background: url(/media/images/yd-backend/2012/discount-create/3.png) 3px 5px no-repeat; }
+.be-dc32 label { background: url(/media/images/yd-backend/2012/discount-create/3-2.png) 3px 5px no-repeat; }
+.be-dc41 label { background: url(/media/images/yd-backend/2012/discount-create/4-1.png) 3px 5px no-repeat; }
+.be-dc42 label { background: url(/media/images/yd-backend/2012/discount-create/4-2.png) 3px 5px no-repeat; }
+.be-dc5 label { background: url(/media/images/yd-backend/2012/discount-create/5.png) 3px 5px no-repeat; }
+.be-dc6 label { background: url(/media/images/yd-backend/2012/discount-create/6.png) 3px 5px no-repeat; }
+.be-dc7 label { background: url(/media/images/yd-backend/2012/discount-create/7.png) 3px 5px no-repeat; }
+.be-dc8 label { background: url(/media/images/yd-backend/2012/discount-create/8.png) 3px 5px no-repeat; }
+.be-dc9 label { background: url(/media/images/yd-backend/2012/discount-create/9.png) 3px 5px no-repeat; }
+.be-dc10 label { background: url(/media/images/yd-backend/2012/discount-create/10.png) 3px 5px no-repeat; }
+.be-dc11 label { background: url(/media/images/yd-backend/2012/discount-create/11.png) 3px 5px no-repeat; }
+.be-dc14 label { background: url(/media/images/yd-backend/2012/discount-create/14.png) 3px 5px no-repeat; }
+.be-dc15 label { background: url(/media/images/yd-backend/2012/discount-create/15.png) 3px 5px no-repeat; }
+.be-dc16 label { background: url(/media/images/yd-backend/2012/discount-create/16.png) 3px 5px no-repeat; }
+.be-dc17 label { background: url(/media/images/yd-backend/2012/discount-create/17.png) 3px 5px no-repeat; }
+.be-dc18 label { background: url(/media/images/yd-backend/2012/discount-create/18.png) 3px 5px no-repeat; }
+.be-dc19 label { background: url(/media/images/yd-backend/2012/discount-create/19.png) 3px 5px no-repeat; }
+
+/* Rabattaktion für für bestimmten DL oder bestimmte PLZ */
+
+.yd-restaurants-list-container {
+    float: right;
+    width: 350px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.yd-restaurants-list-container strong {
+    display: block;
+    padding: 5px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.yd-restaurants-list-container strong a {
+    float: right;
+    display: block;
+    width: 16px;
+    height: 16px;
+    text-indent: -999em;
+    background: url(/media/images/yd-icons/delete.png) 0 0 no-repeat;
+}
+
+#yd-restaurants-list-delete-all, #yd-discount-citys-delete-all, #yd-mailing-citys-delete-all {
+    display: block;
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+#yd-restaurants-list, #yd-discount-citys, #yd-mailing-citys {
+    max-height: 125px;
+    overflow-y: auto;
+}
+
+
+
+.yd-ingredients-list-container {
+    float: left;
+    width: 350px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.yd-ingredients-list-container strong {
+    display: block;
+    padding: 5px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.yd-ingredients-list-container strong a {
+    float: right;
+    display: block;
+    width: 16px;
+    height: 16px;
+    text-indent: -999em;
+    background: url(/media/images/yd-icons/delete.png) 0 0 no-repeat;
+}
+
+#yd-ingredients-list-delete-all, #yd-discount-citys-delete-all {
+    display: block;
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+#yd-ingredients-list, #yd-discount-citys {
+    max-height: 125px;
+    overflow-y: auto;
+}   
+
+
+
+#yd-admin-backend-wait img,
+#yd-restaurant-backend-wait img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    padding: 10px;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 0 3px #000;
+}
+
+/*
+    Adminbackend Box-Modell old
+***********************************************************/
+
+.item-head h1, .item-head h2, .item-head h3, .item-head h4, .item-head h5, .item-head h6 {
+    font-size: 13px;
+}
+
+.item-head input {
+    float: right;
+    margin: -4px 15px 0 0;
+}
+
+.item-warning {
+    height: 24px;
+    padding: 8px 0 0 35px;
+    font-weight: bold;
+    font-size: 13px;
+    background: url(/media/images/yd-icons/yd-admininfo.png) 12px 8px no-repeat, red;
+    color: white;
+}
+
+.item-content-green {
+    padding: 15px;
+    border: 1px solid #0f0;
+}
+
+.item-content-red {
+    padding: 15px;
+    border: 1px solid #f00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+   Notifications
+***********************************************************/
+
+.notification {
+    margin: 0 0 10px;
+    position: relative;
+    padding: 12px;
+    font-size: 12px;
+    border: 1px solid #555;
+    background: #def;
+}
+
+.error {
+    background: #fcc;
+}
+
+.warn {
+    background: #ffe;
+}
+
+.success {
+    background: #dfc;
+}
+
+.notification a {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+
+/*
+   Lightboxen
+***********************************************************/
+
+/* Background */
+
+.promptffade {
+    background: #000;
+}
+
+/* Box */
+
+.promptf {
+    position: absolute;
+    width: 900px;
+    background: #fff;
+}
+
+/* Header */
+
+.promptf h1 {
+    padding: 10px;
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    text-shadow: 0 1px 0px #fff;
+    background: #f4f4f4; /* Old browsers */
+    background: -moz-linear-gradient(top, #f4f4f4 0%, #e7e7e7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f4f4), color-stop(100%,#e7e7e7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f4f4f4 0%,#e7e7e7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f4f4f4 0%,#e7e7e7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f4f4f4 0%,#e7e7e7 100%); /* IE10+ */
+    background: linear-gradient(top, #f4f4f4 0%,#e7e7e7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#e7e7e7',GradientType=0 ); /* IE6-9 */
+}
+
+/* Footer */
+
+.promptfbuttons {
+    padding: 15px 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    background: #eee;
+}
+
+.promptfbuttons button {
+    margin: 0 10px;
+}
+
+/* Content */
+
+.promptf-content {
+    padding: 20px 50px;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.promptf form {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 530px;
+}
+
+/* Close */
+
+.promptfclose {
+    position: absolute;
+    top: -22px;
+    right: -22px;
+    z-index: 9999;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    text-indent: -9999px;
+    background: url(/media/images/yd-frontend-core/yd-sprite-core.png) 0 -300px;
+}
+
+/* Extra-Header */
+
+#extrahead {
+    padding: 16px 50px;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+    background: url(/media/images/yd-sprites-icons.png) -40px -2983px no-repeat #eee;
+}
+
+/* Extra Name and Price */
+
+#extrahead #extramenu {
+    text-align: right;
+    padding: 0 0 8px;
+    border-bottom: 1px dotted #aaa;
+}
+
+/* Extra Input */
+
+#extrahead #extramenu .extraleft {
+    float: left;
+}
+
+input#eingabefeld {
+    width: 30px;
+    height: 15px;
+    text-align: center;
+    font-size: 10px;
+    margin: 0 5px 2px 0;
+    padding: 1px;
+}
+
+/* Extra Description */
+
+#extrahead #extradesc {
+    font-weight: normal;
+    font-size: 10px;
+    color: #555;
+    padding: 5px 0 0;
+}
+
+/* Extra Item */
+
+#yd-special-input {
+    width: 458px;
+    height: 30px;
+    padding: 10px;
+    font-size: 12px;
+    color: #555;
+    background: #fff;
+}
+
+/* Sonstiges */
+
+#errors ul {
+    padding: 0 30px;
+    color: #f00;
+}
+
+#errors ul li {
+    margin: 0 0 10px 0;
+}
+
+#yd-lb-wait {
+    width: 48px;
+    height: 48px;
+    margin: 40px auto;
+    background: url(/media/images/yd-background/yd-load-big.gif) no-repeat;
+}
+
+.notification,
+.promptf
+{
+    border-radius: 4px;
+}
+
+.promptf h1
+{
+    border-radius: 4px 4px 0 0;
+}
+
+.promptfbuttons
+{
+    border-radius: 0 0 4px 4px;
+}
+
+/*
+   Lightboxen Ende
+***********************************************************/
+
+.table-row-accent td {
+    font-weight: bold;
+    margin-top: 10px;
+    background: #ceceff;
+}
+
+.table-row-header td {
+    font-weight: bold;
+    margin-top: 11px;
+    background: #c9c9ef;
+}
+
+td.centric {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 2px;
+    background: #f5f5f5;
+}
+
+
+
+
+
+
+
+
+
+
+
+#ordering-sheet .yd-box.wrapper {
+    font-size: 12px;
+    width: 980px;
+    margin: 50px auto;
+}
+
+#ordering-sheet .yd-box.wrapper .yd-box-head div {
+    float: right;
+}
+
+#ordering-sheet .yd-box.wrapper .yd-box.left {
+    float: left;
+    width: 370px;
+}
+
+#ordering-sheet .yd-box.wrapper .yd-box.right {
+    float: right;
+    width: 370px;
+}
+
+#ordering-sheet table {
+    margin: 20px 0 50px 0;
+    text-align: center;
+}
+
+#ordering-sheet table table, #ordering-sheet table table td {
+    border-bottom: 0;
+    margin: 0;
+    vertical-align: top;
+}
+
+#ordering-sheet table td, #ordering-sheet table th {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+#ordering-sheet table td input {
+    width: 50px;
+}
+
+#ordering-sheet table td.info-meal {
+    font-size: 13px;
+    text-align: left;
+}
+
+#ordering-sheet table td.info-meal span {
+    font-size: 11px;
+    color: #aaa;
+}
+
+#ordering-sheet table td.info-price {
+    text-align: right;
+    font-weight: bold;
+    color: green;
+}
+
+#ordering-sheet .info-meal-options {
+    text-align: center;
+}
+
+#ordering-sheet .info-meal-options select {
+    margin: 0 0 5px 0;
+}
+
+#ordering-sheet .info-meal-options .width {
+    width: 345px;
+    margin: 10px 0;
+}
+
+.yd-box {
+    position: relative;
+    margin: 0 0 20px;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    background: #fcfcfc; /* Old browsers */
+    background: -moz-linear-gradient(top, #fcfcfc 0%, #f9f9f9 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#f9f9f9)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fcfcfc 0%,#f9f9f9 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #fcfcfc 0%,#f9f9f9 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #fcfcfc 0%,#f9f9f9 100%); /* IE10+ */
+    background: linear-gradient(top, #fcfcfc 0%,#f9f9f9 100%); /* W3C */
+}
+
+.yd-box-head {
+    position: relative;
+    margin: -5px 0 10px;
+    padding: 0 0 5px;
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 19px;
+    text-shadow: 1px 1px 0 #fff;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 1px 0 #fff;
+}
+
+#tooltip {
+    padding: 5px;
+    border: 2px solid #f00;
+    background: #ffc;
+}
+
+
+
+
+
+.seolinks .subtitulo input {
+    width: 50px !important;
+}
+
+.seolinks .subtitulo #filter_gridtitle {
+    width: 170px !important;
+}
+
+
+
+
+
+
+
+
+.statistics {
+    width: 950px;
+    margin: 0 auto;
+    padding-right: 250px;
+}
+
+.statistics h1 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px;
+    padding: 3px 0 5px 35px;
+    border-bottom: 1px dotted #aaa;
+    background: url(/media/images/yd-backend/yd-backend-button8.png) no-repeat;
+}
+
+.statistics .one-column-box,
+.statistics .two-column-box,
+.statistics .three-column-box {
+    position: relative;
+}
+
+.statistics .statistics-info {
+    position: absolute;
+    top: 50%;
+    right: -250px;
+    font-size: 11px;
+    width: 175px;
+    height: 80px;
+    padding: 10px 10px 10px 45px;
+    margin-top: -50px;
+    background: url(/media/images/yd-backend/yd-statistics-info.png);
+}
+
+.statistics .three-column-box .item {
+    float: left !important;
+    width: 290px !important;
+}
+
+.statistics .three-column-box label {
+    display: block;
+    padding: 8px 0;
+    cursor: pointer;
+    border-bottom: 1px dotted #ccc;
+}
+
+.statistics .three-column-box span {
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+.statistics .three-column-box span select {
+    width: 260px;
+    cursor: pointer;
+}
+
+.statistics .three-column-box label:hover {
+    background: #ffb;
+}
+
+.statistics .three-column-box label input {
+    margin: 0 10px 0 0;
+}
+
+.statistics-info-bottom {
+    position: relative;
+}
+
+.statistics-info-bottom img {
+    vertical-align: middle;
+}
+
+.statistics-info-bottom i {
+    position: absolute;
+    top: 20px;
+    left: -10px;
+    display: block;
+    width: 155px;
+    height: 72px;
+    padding: 18px 10px 10px 35px;
+    font-size: 11px;
+    font-style: normal;
+    background: url(/media/images/yd-backend/yd-statistics-info2.png);
+}
+
+.statistics-date {
+    margin: 0 10px 0 0;
+    padding: 6px 0 6px 35px;
+    background: url(/media/images/yd-icons/yd-cal.png) 2px 2px no-repeat;
+}
+.statistics-date input {
+    width: 135px;
+    text-align: center;
+}
+
+.statistics-plz {
+    padding: 6px 0 6px 30px;
+    background: url(/media/images/yd-icons/yd-marker.png) 2px 2px no-repeat;
+}
+.statistics-plz select {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#filter-plz-select {
+    width: 80px;
+}
+
+#filter-city-dropdown {
+    width: 140px;
+}
+
+.yd-plus {
+    float: right;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(/media/images/yd-sprites-icons.png) 0 -880px no-repeat;
+}
+
+.yd-minus {
+    float: right;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(/media/images/yd-sprites-icons.png) 0 -920px no-repeat;
+}
+
+
+
+
+
+.edit-newsletter {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.edit-newsletter .email-html {
+    width: 600px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.edit-newsletter .email-html .res-header {
+    height: 150px;
+    background: url(/media/images/yd-backend/res-header.png);
+}
+
+.edit-newsletter .email-html textarea {
+    width: 588px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-top: 0;
+    border-bottom: 0;
+    border-radius: 0;
+}
+
+.edit-newsletter .email-html .res-footer {
+    height: 150px;
+    background: url(/media/images/yd-backend/res-footer.png);
+}
+
+.edit-newsletter .email-preview {
+    width: 600px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+#yd-checkboxes-box {
+    overflow: auto;
+    width: 600px;
+    height: 300px;
+    border: 1px solid;
+    padding-left: 10px;
+    font-size: 12px;
+    background-color: #fff;
+}
+
+
+.yd-remove-all-pictures-button{
+    border: 3px solid #f00;
+    color: #000;
+    background: #fdd;
+    width: 250px;
+}
+
+.yd-remove-selected-pictures-button{
+    border: 2px solid #f00;
+    color: #000;
+    background: #fee;
+    width: 250px;
+}
+
+
+
+
+
+
+
+
+.yd-rated-00, .yd-rated-0,
+.yd-rated-01, .yd-rated-1,
+.yd-rated-02, .yd-rated-2,
+.yd-rated-03, .yd-rated-3,
+.yd-rated-04, .yd-rated-4,
+.yd-rated-05, .yd-rated-5,
+.yd-rated-06, .yd-rated-6,
+.yd-rated-07, .yd-rated-7,
+.yd-rated-08, .yd-rated-8,
+.yd-rated-09, .yd-rated-9,
+.yd-rated-10 {
+    display: block;
+    width: 80px;
+    height: 17px;
+    background-image: url(/media/images/yd-frontend-core/yd-sprite-core.png);
+    background-repeat: no-repeat;
+}
+
+.yd-rated-00, .yd-rated-0 { background-position: 0 -340px; }
+.yd-rated-01, .yd-rated-1 { background-position: 0 -356px; }
+.yd-rated-02, .yd-rated-2 { background-position: 0 -372px; }
+.yd-rated-03, .yd-rated-3 { background-position: 0 -388px; }
+.yd-rated-04, .yd-rated-4 { background-position: 0 -404px; }
+.yd-rated-05, .yd-rated-5 { background-position: 0 -420px; }
+.yd-rated-06, .yd-rated-6 { background-position: 0 -436px; }
+.yd-rated-07, .yd-rated-7 { background-position: 0 -452px; }
+.yd-rated-08, .yd-rated-8 { background-position: 0 -468px; }
+.yd-rated-09, .yd-rated-9 { background-position: 0 -484px; }
+.yd-rated-10 { background-position: 0 -500px; }
+
+
+
+
+
+.csvcompare-css tr:nth-child(odd) { background: #fff; }
+.csvcompare-css tr:nth-child(even) { background: #eee; }
+
+.csvcompare-css tr td {
+    padding: 10px 0;
+}
+
+.csvcompare-css tr:hover {
+    cursor: pointer;
+    background: #ffd;
+}
+
+table.user-tab tr.hover:hover{ background-color: #000; }
+.hover { background-color: #000; }
+
+
+
+
+
+/*Administration Inventory*/
+
+.yd-inventory-pizzacase{
+    background: url(/media/images/yd-backend/administration_inventory.png) 0px 3px no-repeat;
+}
+.yd-inventory-pizzacaselittle{
+    background: url(/media/images/yd-backend/administration_inventory.png) -5px -995px no-repeat;
+}
+.yd-inventory-napkins{
+    background: url(/media/images/yd-backend/administration_inventory.png) 0px -510px no-repeat;
+}
+.yd-inventory-plasticbag{
+    background: url(/media/images/yd-backend/administration_inventory.png) 0px -430px no-repeat;
+}
+.yd-inventory-chopsticks{
+    background: url(/media/images/yd-backend/administration_inventory.png) 0px -380px no-repeat;
+}
+.yd-inventory-print{
+    background: url(/media/images/yd-backend/administration_inventory.png) 0px -738px no-repeat;
+}
+.yd-inventory-type{
+    background: url(/media/images/yd-backend/administration_inventory.png) 0px -285px no-repeat;
+}
+.yd-inventory-colors{
+    background: url(/media/images/yd-backend/administration_inventory.png) 0px -238px no-repeat;
+}
+.yd-inventory-price{
+    background: url(/media/images/yd-backend/administration_inventory.png) 0px -595px no-repeat;
+}
+.yd-inventory-yesno{
+    background: url(/media/images/yd-backend/administration_inventory.png) 0px -670px no-repeat;
+}
+.yd-inventory-time{
+    background: url(/media/images/yd-backend/administration_inventory.png) 0px -60px no-repeat;
+}
+.yd-inventory-priority{
+    background: url(/media/images/yd-backend/administration_inventory.png) 0px -120px no-repeat;
+}
+.yd-inventory-percent{
+    background: url(/media/images/yd-backend/administration_inventory.png) 0px -795px no-repeat;
+}
+.yd-inventory-format{
+    background: url(/media/images/yd-backend/administration_inventory.png) 0px -173px no-repeat;
+}
+.yd-inventory-costshare{
+    background: url(/media/images/yd-backend/administration_inventory.png) 0px -855px no-repeat;
+}
+.yd-inventory-paperstack{
+    background: url(/media/images/yd-backend/administration_inventory.png) 0px -925px no-repeat;
+}
+.yd-inventory-restaurantId{
+    height: 30px;
+}
+.yd-inventory-restaurantId select{
+    float: right;
+
+}
+.yd-inventory-status{
+    vertical-align: top;
+}
+.item-content .yd-inventory-status {
+    font-weight: bold;
+    margin-top: 5px;
+}
+.yd-inventory-status-select{
+    margin: 0 10px;
+    vertical-align: top;
+    width: 230px;
+}
+.yd-inventory-border tr{
+    border-bottom: 1px solid #a7a7a7;  
+}
+.yd-inventory-border td{
+    padding: 5px 0;
+    vertical-align: middle;
+    border: 0;
+}
+.yd-inventory-border td select{
+    width: 165px;
+    margin-right: 20px;
+}
+.yd-inventory-border td input{
+    float: right;
+    width: 155px;
+    margin-right: 20px;
+}
+.yd-inventory-big{
+    width: 500px;
+}
+.sum{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+
+
+
+/*Send Bill Input width*/
+
+
+/* Hiding Content */
+
+.hidden { display: none; }
+
+.invisible { visibility: hidden; }
+
+/* No Wrap Helper */
+
+.yd-nowrap {
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    Achtung: Ab hier beginnt das neue Design des Backends!
+***********************************************************/
+
+/*
+    Form toggle
+***********************************************************/
+
+.yd-form-toggled {
+    background: none !important;
+    border: none !important;
+    cursor: default !important;
+    box-shadow: 0 0 0 !important;
+    border-radius: 0 !important;
+    -moz-appearance: window;
+    -webkit-appearance: none;
+    -khtml-appearance: none;
+}
+
+input[type=checkbox].yd-form-toggled {
+    -moz-appearance: checkbox;
+    -webkit-appearance: checkbox;
+    -khtml-appearance: checkbox;
+}
+
+/*
+    Grid
+***********************************************************/
+
+/* Rechnungen */
+
+table.billings-links-tab td {
+    padding: 0;
+}
+
+table.billings-links-tab tr:first-child td a,
+table.billings-links-tab tr:first-child td b {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+table.billings-links-tab td a,
+table.billings-links-tab td b {
+    display: block;
+    padding: 7px;
+}
+
+table.billings-links-tab td a:hover {
+    background: #ffc;
+}
+
+.yd-grid-input .yd-send-bill {
+    border: 1px solid #fff;
+    background: #fff;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+}
+
+.yd-grid-input .yd-send-bill table tr,
+.yd-grid-input .yd-send-bill table tr td {
+    background: none;
+}
+
+
+
+/*
+    Tables without borders
+***********************************************************/
+
+.noborder, .noborder tr, .noborder td, .noborder thead, .noborder tbody, .noborder th {
+    border: 0;
+}
+
+.noborder th {
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+/*
+    Administration > Service
+***********************************************************/
+
+header.yd-store {
+    margin: 0 0 20px;
+    padding: 2px 0 20px 45px;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    background: url(/media/images/yd-backend/yd-back-store.png) no-repeat;
+}
+
+header.yd-store footer {
+    margin: 10px 0 0;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+header.yd-newsatellite a {
+    display: block;
+    width: 300px;
+    margin: 0 auto 20px;
+    padding: 15px 0 15px 65px;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-shadow: 0 1px 0 #fff;
+    background: url(/media/images/yd-backend/yd-back-satellite.png) 5px 5px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+    background: url(/media/images/yd-backend/yd-back-satellite.png) 5px 5px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: url(/media/images/yd-backend/yd-back-satellite.png) 5px 5px no-repeat, -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: url(/media/images/yd-backend/yd-back-satellite.png) 5px 5px no-repeat, -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Opera11.10+ */
+    background: url(/media/images/yd-backend/yd-back-satellite.png) 5px 5px no-repeat, -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* IE10+ */
+    background: url(/media/images/yd-backend/yd-back-satellite.png) 5px 5px no-repeat, linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* W3C */
+}
+
+header.yd-newsatellite a:hover {
+    background: url(/media/images/yd-backend/yd-back-satellite.png) 5px 5px no-repeat, -moz-linear-gradient(top, #eeeeee 0%, #ffffff 100%); /* FF3.6+ */
+    background: url(/media/images/yd-backend/yd-back-satellite.png) 5px 5px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: url(/media/images/yd-backend/yd-back-satellite.png) 5px 5px no-repeat, -webkit-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: url(/media/images/yd-backend/yd-back-satellite.png) 5px 5px no-repeat, -o-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* Opera11.10+ */
+    background: url(/media/images/yd-backend/yd-back-satellite.png) 5px 5px no-repeat, -ms-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* IE10+ */
+    background: url(/media/images/yd-backend/yd-back-satellite.png) 5px 5px no-repeat, linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* W3C */
+}
+
+header.yd-satellitebackend {
+    margin: 0 0 10px;
+    padding: 15px 0 15px 65px;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #fff;
+    background: url(/media/images/yd-backend/yd-back-satellite.png) 5px 5px no-repeat;
+}
+
+.yd-form1 label {
+    display: inline-block;
+    width: 150px;
+    padding: 6px;
+}
+
+.yd-form1 textarea,
+.yd-form1 input[type=text] {
+    width: 200px;
+    vertical-align: baseline;
+}
+
+.yd-form1 select {
+    width: 215px;
+}
+
+/*
+    Administration > CRM Tool
+***********************************************************/
+
+.yd-crmtool input,
+.yd-crmtool textarea {
+    width: 300px;
+}
+
+.yd-crmtool select {
+    width: 315px;
+}
+
+.yd-crmtool label {
+    display: inline-block;
+    width: 150px;
+    padding: 6px;
+}
+
+#grid a[href*="administration_crm/callhistory"],
+#grid a[href*="administration_crm/taskhistory"]{
+    display: block;
+    margin: 0 0 -10px;
+    padding: 0 0 0 20px;
+    font-size: 13px;
+    background: url(/media/images/yd-backend/yd-create-sem-2.png) 0 0 no-repeat;
+}
+
+
+
+
+
+
+#grid td:last-child a[href*="administration_satellite/edit/id"], /* SEO Satelliten */
+#grid td:last-child a[href*="administration_inventory/edit/id"], /* Warenwirtschaft */
+#grid td:last-child a[href*="administration_courier/edit/cid"], /* Kurierdienste */
+#grid td:last-child a[href*="administration_discount/edit/id"], /* Rabattaktionen */
+#grid td:last-child a[href*="administration_contact/edit/id"], /* Kontakte */
+#grid td:last-child a[href*="administration_company_edit/index"], /* Firmen */
+#grid td:last-child a[href*="administration_user_edit/index"], /* Benutzer */
+#grid td:last-child a[href*="administration_seo_links/edit"], /* Interne Verlinkung */
+#grid td:last-child a[href*="administration_salesperson/edit"], /* Vertriebler */
+#grid td:last-child a[href*="administration_service_edit/index/id"] /* Dienstleister */
+{
+    display: block;
+    margin: 0 0 5px;
+    padding: 0 0 0 20px;
+    font-size: 13px;
+    background: url(/media/images/yd-backend/yd-link-edit1.png) 0 0 no-repeat;
+}
+
+#grid td:last-child a[href*="satellite/index/id"], /* SEO Satelliten */
+#grid td:last-child a[class*="yd-discount-codes-table"], /* Rabattcodes */
+#grid td:last-child a[class*="yd-show-discount-codes"], /* Rabattaktionen lightbox */
+#grid td:last-child a[class*="yd-verification-codes-table"], /* Registrierungcodes */
+#grid td:last-child a[class*="yd-show-verification-codes"], /* Registrierungcodes lightbox */
+#grid td:last-child a[href*="administration/companylogin/id"], /* Firmen */
+#grid td:last-child a[href*="administration/userlogin/id"], /* Benutzer */
+#grid td:last-child a[href*="administration_seo_links/disable"], /* Interne Verlinkung */
+#grid td:last-child a[href*="administration/servicelogin/id"] /* Dienstleister */
+{
+    display: block;
+    margin: 0 0 5px;
+    padding: 0 0 0 20px;
+    font-size: 13px;
+    background: url(/media/images/yd-backend/yd-link-edit2.png) 0 0 no-repeat;
+}
+
+#grid td:last-child a[href*="administration/partnerlogin/id"], /* Dienstleister */
+#grid td:last-child a[href*="administration_salesperson/info"] /* Vertriebler */
+{
+    display: block;
+    margin: 0 0 5px;
+    padding: 0 0 0 20px;
+    font-size: 13px;
+    background: url(/media/images/yd-backend/yd-link-edit4.png) 2px 2px no-repeat;
+}
+
+#grid td:last-child a[href*="downloadcodes/id"] /* Discounts */
+{
+    display: block;
+    margin: 0 0 5px;
+    padding: 0 0 0 20px;
+    font-size: 13px;
+    background: url(/media/images/yd-backend/yd-link-edit5.png) 2px 2px no-repeat;
+}
+
+#grid td:last-child a[href*="/administration_discount/checkdiscount?rabattId="] /* Discounts */
+{
+    display: block;
+    margin: 5px 0;
+    padding: 0 0 0 20px;
+    font-size: 11px;
+    background: url(/media/images/yd-backend/yd-link-edit6.gif) 3px 3px no-repeat;
+}
+
+#grid td:last-child a[href*="administration_courier/delete/cid"], /* Kurierdienste */
+#grid td:last-child a[href*="administration_discount/delete/id"], /* Rabattaktionen */
+#grid td:last-child a[href*="administration_contact/delete/id"], /* Kontakte */
+#grid td:last-child a[href*="administration_company/delete/id"], /* Firmen */
+#grid td:last-child a[href*="administration_user/delete/id"], /* Benutzer */
+#grid td:last-child a[href*="administration_seo_links/delete"], /* Interne Verlinkung */
+#grid td:last-child a[href*="administration_service/delete/id"] /* Dienstleister */
+{
+    display: block;
+    margin: 0 0 5px;
+    padding: 0 0 0 20px;
+    font-size: 13px;
+    background: url(/media/images/yd-backend/yd-link-edit3.png) 0 0 no-repeat;
+}
+
+#grid td:last-child a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+#grid tr:last-child div {
+    font-size: 14px;
+}
+
+#grid tr:last-child strong {
+    display: inline-block;
+    margin: 0 5px 0;
+    padding: 3px 10px;
+    font-size: 14px;
+    background: #fff;
+    box-shadow: 0 0 0 1px #15488b, 0 1px 0 rgba(255,255,255,0.5) inset;
+    border-radius: 2px;
+}
+
+#grid a[href*="startgrid"],
+#grid a[href*="start/0"]
+{
+    display: inline-block;
+    margin: 0 5px 0;
+    padding: 3px 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background: #4baef2; /* Old browsers */
+    background: -moz-linear-gradient(top, #4baef2 0%, #3978cc 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4baef2), color-stop(100%,#3978cc)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #4baef2 0%,#3978cc 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #4baef2 0%,#3978cc 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #4baef2 0%,#3978cc 100%); /* IE10+ */
+    background: linear-gradient(top, #4baef2 0%,#3978cc 100%); /* W3C */
+    box-shadow: 0 0 0 1px #15488b, 0 1px 0 rgba(255,255,255,0.5) inset;
+    border-radius: 2px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.6);
+}
+
+#grid a[href*="startgrid"]:hover,
+#grid a[href*="start/0"]:hover
+{
+    text-shadow: 0 0 5px #fff;
+    text-decoration: none !important;
+}
+
+
+
+
+
+
+.yd-internal-create table,
+.yd-internal-create th,
+.yd-internal-create td {
+    border: 0;
+}
+
+.yd-internal-create {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.yd-internal-create label {
+    padding-left: 30px;
+}
+
+.yd-internal-create label.v1 { background: url(/media/images/yd-backend/yd-back-iv-1.png) 5px 5px no-repeat; }
+.yd-internal-create label.v2 { background: url(/media/images/yd-backend/yd-back-iv-2.png) 5px 5px no-repeat; }
+.yd-internal-create label.v3 { background: url(/media/images/yd-backend/yd-back-iv-3.png) 5px 5px no-repeat; }
+.yd-internal-create label.v4 { background: url(/media/images/yd-backend/yd-back-iv-4.png) 5px 5px no-repeat; }
+.yd-internal-create label.v5 { background: url(/media/images/yd-backend/yd-back-iv-5.png) 5px 5px no-repeat; }
+.yd-internal-create label.v6 { background: url(/media/images/yd-backend/yd-back-iv-6.png) 5px 5px no-repeat; }
+.yd-internal-create label.v7 { background: url(/media/images/yd-backend/yd-back-iv-7.png) 5px 5px no-repeat; }
+.yd-internal-create label.v8 { background: url(/media/images/yd-backend/yd-back-iv-8.png) 5px 5px no-repeat; }
+.yd-internal-create label.v9 { background: url(/media/images/yd-backend/yd-back-iv-9.png) 5px 5px no-repeat; }
+.yd-internal-create label.v10 { background: url(/media/images/yd-backend/yd-back-iv-10.png) 5px 5px no-repeat; }
+
+.striked-0{
+    
+}
+.striked-1{
+    text-decoration: line-through;
+}
+
+
+
+
+
+
+
+
+
+
+.ie6 .be-wrapper,
+.ie7 .be-wrapper,
+.ie8 .be-wrapper,
+.ie9 .be-wrapper,
+.ie6 .be-sidebar,
+.ie7 .be-sidebar,
+.ie8 .be-sidebar,
+.ie9 .be-sidebar {
+    display: none !important;
+}
+
+.fuck-off {
+    display: none;
+    width: 600px;
+    height: 180px;
+    margin: 200px auto 0;
+    border: 5px solid #000;
+    background: url(/media/images/yd-backend/ie.png) 20px 20px no-repeat #fff;
+}
+
+.fuck-off div {
+    padding: 30px 0 0 180px;
+}
+
+.fuck-off div h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+}
+
+.fuck-off div h2 {
+    margin: 0 0 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+
+.fuck-off div h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.ie6 .fuck-off,
+.ie7 .fuck-off,
+.ie8 .fuck-off,
+.ie9 .fuck-off {
+    display: block !important;
+}
+
+.yd-definitions table {
+    font-size: 14px;
+}
+
+.yd-definitions td {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.yd-definitions pre {
+    font-family: Courier, sans-serif;
+    font-size: 14px;
+    max-width: 800px;
+    overflow-x: scroll;
+}
+
+.yd-definitions li {
+    font-size: 14px;
+    margin: 0 0 10px;
+}    
+
+.yd-definitions td:nth-child(1) {
+    font-weight: bold;
+}
+
+.one-column-box textarea.big,
+.be-dialogs textarea.big {
+    width: 550px;
+    height: 250px;
+}

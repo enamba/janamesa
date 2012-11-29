@@ -1,0 +1,22 @@
+{if $cust->isEmployee()}
+    {foreach name=it from=$cust->getCompanyLocations() item=address}
+        <span class="yd-adress {if  !$cust->hasPrimaryLocation() && count($cust->getLastOrder())>0 && $address->getCityId() == $cust->getLastOrder()->getLocation()->getCityId() || count($cust->getLocations()) == 0}active{/if}"
+            id="yd-addr-{$address->getId()}-{$address->getCity()->getId()}" data="/{$address->getCity()->getUrl($mode)}">
+			
+            {if $config->domain->base == 'janamesa.com.br'}<div>{/if}
+                {$address->getStreet()} {$address->getHausnr()}, {$address->getPlz()} {$address->getOrt()->getOrt()} 
+    
+                {if $cust->isCompanyAdmin()}
+                    <a href="/company/address/id/{$address->getId()}">{__('bearbeiten')}</a>
+                {/if}
+    
+                {if $address->getAddition()!=''}
+                    <br />
+                    <i>{$address->getAddition()|truncate:80:" ...":false}</i>
+                {/if}
+            {if $config->domain->base == 'janamesa.com.br'}</div>{/if}
+        </span>
+        {assign var=temp value=$temp+1}
+    {/foreach}
+{/if}
+

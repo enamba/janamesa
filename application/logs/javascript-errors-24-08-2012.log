@@ -1,0 +1,21 @@
+TIME: 24-08-2012 13:30:41 
+ MESSAGE: TypeError: ydMeal is null 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-296a86beed286a4f6ab63f9243937c31d3b9e55e.js 
+ LINE: 11932 
+ PARENTURL: http://www.yourdelivery.local/order_private/finish 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+
+TIME: 24-08-2012 13:35:39 
+ MESSAGE: TypeError: ydMeal is null 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-296a86beed286a4f6ab63f9243937c31d3b9e55e.js 
+ LINE: 11932 
+ PARENTURL: http://www.yourdelivery.local/order_private/finish 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+
+TIME: 24-08-2012 13:54:09 
+ MESSAGE: TypeError: $(".yd-option-item-"   o.id).get(optionCount).prop is not a function 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-296a86beed286a4f6ab63f9243937c31d3b9e55e.js 
+ LINE: 19160 
+ PARENTURL: http://www.yourdelivery.local/servico-de-entrega-funny-pizzas-sao-paulo 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+

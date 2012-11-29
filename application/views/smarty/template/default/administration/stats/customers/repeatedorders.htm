@@ -1,0 +1,117 @@
+{extends file='administration/base.htm'}
+{block name="content"}
+{include file='administration/stats/customers/navigation.htm'}
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                {__b('Hier wird angezeigt, wie viele Bestellungen wurden von wie vielen Kunden gemacht. Ein Kunde wird durch seine E-Mail Adresse bestimmt.')}
+            </div>
+        </div>
+    </div>
+
+    <div class="three-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Registrierte Privatkunden')}
+            </div>
+            <div class="item-content">
+                <table class="user-tab">
+                    <tr>
+                        <th width="16%" height="50px">{__b('Anzahl der Benutzer')}</th>
+                        <th width="16%">{__b('Anzahl kummuliert')}</th>
+                        <th width="16%">% {__b('von gesamt')}</th>
+                        <th width="16%">% {__b('von gesamt kummuliert')}</th>
+                        <th width="16%">{__b('Bestellungen')}</th>
+                        <th width="16%">{__b('Maximale Anzahl der Bestellungen')}</th>
+                    </tr>
+                    {$val_cummul = 0}
+                    {$val_cummul_percent = 0}
+                    {$val_cummul_orders = 0}
+                    {foreach from=$registered item=val}
+                    <tr>
+                        <td>{$val['users']}</td>
+                        <td>{$val_cummul = $val_cummul + $val['users']}{$val_cummul}</td>
+                        <td>{round($val['users']*100/$sumreg, 3)}</td>
+                        <td>{$val_cummul_percent = $val_cummul_percent + $val['users']*100/$sumreg}{round($val_cummul_percent, 3)}</td>
+                        <td>{$val.count}</td>
+                        <td>{$val_cummul_orders = $val_cummul_orders + $val.count}{$val_cummul_orders}</td>
+                    </tr>
+                    {/foreach}                    
+                    <tr>
+                        <td colspan="6">{__b('Gesamt')}: {$sumreg}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-head">
+                {__b('Nicht registrierte Privatkunden')}
+            </div>
+            <div class="item-content">
+                <table class="user-tab">
+                    <tr>
+                        <th width="16%" height="50px">{__b('Anzahl der Benutzer')}</th>
+                        <th width="16%">{__b('Anzahl kummuliert')}</th>
+                        <th width="16%">% {__b('von gesamt')}</th>
+                        <th width="16%">% {__b('von gesamt kummuliert')}</th>
+                        <th width="16%">{__b('Bestellungen')}</th>
+                        <th width="16%">{__b('Maximale Anzahl der Bestellungen')}</th>
+                    </tr>
+                    {$val_cummul = 0}
+                    {$val_cummul_percent = 0}
+                    {$val_cummul_orders = 0}
+                    {foreach from=$unregistered item=val}
+                    <tr>
+                        <td>{$val['users']}</td>
+                        <td>{$val_cummul = $val_cummul + $val['users']}{$val_cummul}</td>
+                        <td>{round($val['users']*100/$sumunreg, 3)}</td>
+                        <td>{$val_cummul_percent = $val_cummul_percent + $val['users']*100/$sumunreg}{round($val_cummul_percent, 3)}</td>
+                        <td>{$val.count}</td>
+                        <td>{$val_cummul_orders = $val_cummul_orders + $val.count}{$val_cummul_orders}</td>
+                    </tr>
+                    {/foreach}
+                    <tr>
+                        <td colspan="6">{__b('Gesamt')}: {$sumunreg}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="item">
+            <div class="item-head">
+                {__b('Firmen')}
+            </div>
+            <div class="item-content">
+                <table class="user-tab">
+                    <tr>
+                        <th width="16%" height="50px">{__b('Anzahl der Benutzer')}</th>
+                        <th width="16%">{__b('Anzahl kummuliert')}</th>
+                        <th width="16%">% {__b('von gesamt')}</th>
+                        <th width="16%">% {__b('von gesamt kummuliert')}</th>
+                        <th width="16%">{__b('Bestellungen')}</th>
+                        <th width="16%">{__b('Maximale Anzahl der Bestellungen')}</th>
+                    </tr>
+                    {$val_cummul = 0}
+                    {$val_cummul_percent = 0}
+                    {$val_cummul_orders = 0}
+                    {foreach from=$companies item=val}
+                    <tr>
+                        <td>{$val['users']}</td>
+                        <td>{$val_cummul = $val_cummul + $val['users']}{$val_cummul}</td>
+                        <td>{round($val['users']*100/$sumcomp, 3)}</td>
+                        <td>{$val_cummul_percent = $val_cummul_percent + $val['users']*100/$sumcomp}{round($val_cummul_percent, 3)}</td>
+                        <td>{$val.count}</td>
+                        <td>{$val_cummul_orders = $val_cummul_orders + $val.count}{$val_cummul_orders}</td>
+                    </tr>
+                    {/foreach}
+                    <tr>
+                        <td colspan="6">{__b('Gesamt')}: {$sumcomp}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+{/block}

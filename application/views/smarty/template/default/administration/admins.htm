@@ -1,0 +1,19 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<ul class="be-tabs">
+    <li><a href="/administration_adminrights/create">{__b('Admin Account erstellen')}</a></li>
+</ul>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Übersicht')}
+        </div>
+        <div class="item-content">
+            {$grid}
+        </div>
+    </div>
+</div>
+
+{/block}

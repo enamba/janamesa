@@ -1,0 +1,48 @@
+<h1>{__b('Firma nachträglich anlegen')}</h1>
+
+<form id="newAddressForm">
+
+    <p>
+        {__b('Direkt zuweisen')}:
+        <select name="assoc" style="width:300px;" id="yd-assoc-comp">
+            <option value="0">{__b('Neu anlegen')}</option>
+            {foreach from=$compTable item=company}
+                <option value="{$company.id}">{$company.name} ({$company.id})</option>
+            {/foreach}
+        </select>
+    </p>
+
+    <table id="assco-new-comp">
+        <tr>
+            <td width="10%"></td>
+            <td width="30%">{__b('Firma:')}</td>
+            <td width="35%"><input type="text" name="name" class="rund rund_set" style="width:140px;" value="{$order->getLocation()->getCompanyName()}"/></td>
+            <td width="35%"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>{__b('Straße, Hausnummer')}:</td>
+            <td><input value="{$order->getLocation()->getStreet()}" class="rund rund_set" type="text" value="" name="street" style="width:150px;" /></td>
+            <td align="left"><input value="{$order->getLocation()->getHausnr()}" class="rund rund_set" type="text" value="" name="hausnr" style="width:35px;" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>{__b('PLZ')}</td>
+            <td><input value="{$order->getLocation()->getPlz()}" type="text" name="plz" value="" class="rund rund_set" maxlength="5" style="width:150px;" /></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>{__b('Telefon: (für evtl. Rückfragen)')}</td>
+            <td><input value="{$order->getLocation()->getTel()}" type="text" name="tel" value="" class="rund rund_set yd-only-nr" style="width:150px;" /></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>{__b('Stockwerk:')}</td>
+            <td><input value="{$order->getLocation()->getEtage()}" type="text" name="etage" value="" class="rund rund_set" style="width:150px;" /></td>
+            <td></td>
+        </tr>
+    </table>
+
+</form>

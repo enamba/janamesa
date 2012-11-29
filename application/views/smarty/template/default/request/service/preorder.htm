@@ -1,0 +1,22 @@
+<div class="yd-dialogs br-para"><a class="yd-dialogs-close yd-go-back"></a>
+
+    <div class="yd-dialogs-head"><h2>{__('Lieferservice noch geschlossen')}</h2></div>
+
+    <div class="yd-dialogs-body">
+        <p style="text-align:center; font-size: 15px;">
+            
+            {if $type == "cater" || $type == "great"}
+                {__('Dieser Lieferservice hat eine Vorlaufzeit von %s. Möchtest Du vorbestellen?', $handlingtime|replace:'-':' ')}
+            {else}
+                {__('Dieser Lieferservice hat momentan noch geschlossen. Möchtest Du vorbestellen?')}
+            {/if}
+
+            <br /><br />
+            	<a style="display:inline-block;width:100px;" class="button yd-btn-confirm" href="#" id="yd-yes-i-want">{__('Ja')}</a>
+                {*http://ticket/browse/YD-3083*}
+            	<a style="display:inline-block;width:100px;" class="button yd-destroy-lightbox {if $back}yd-go-back{/if}" href="#">{__('Nein')}</a>
+            <br /><br />
+        </p>
+    </div>
+
+</div>

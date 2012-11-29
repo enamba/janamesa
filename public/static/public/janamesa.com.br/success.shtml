@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="pt" xml:lang="pt" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="pt" xml:lang="pt" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="pt" xml:lang="pt" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="pt" xml:lang="pt" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="pt" xml:lang="pt">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="viewport" content="width=1100">
+        <link rel="SHORTCUT ICON" href="/media/css/www.janamesa.com.br/favicon.ico" type="image/x-icon" />
+
+        <title>Jánamesa</title>
+
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-core.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-home.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-jquery.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-ie.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-infocenter.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-hidden.css" />
+            
+            <script type="text/javascript" src="/media/javascript/compiled/frontend-sem.js"></script>
+    </head>
+    <body class="br">
+
+        <!--#include virtual="_br_header.html" -->
+
+        <div id="yd-content" class="yd-clearfix post">
+
+            <div id="yd-ordering">
+
+                <!-- Payment timeline -->
+                <div id="timeline-payment" class="underlined">
+                    <ul>
+                        <li>Página inicial</li>
+                        <li class="checked">Serviços de entega<br />01443-001, São Paulo </li>
+                        <li class="checked">Cardápio<br />Pita Delivery2</li>
+                        <li class="checked">Método de<br />Pagamento</li>
+                        <li class="current">Pedido<br />Efetuado</li>
+                    </ul>
+                </div>
+                <!-- /Payment timeline -->                
+
+                <h1>Obrigado, seu pedido foi<br />enviado com sucesso!</h1>
+
+                <p class="text-intro">Uma confirmação do pedido será enviada<br />para seu email de cadastrado<br /><strong><a href="mailto:test@janamesa.com.br">test@janamesa.com.br</a></strong></p>
+
+                <!-- Contact board -->
+                <div id="board-contact">
+                    <p class="text">Em caso qualquer dúvida sobre  o pedido, o tempo de entrega e os produtos, por favor entre em contato com:</p>
+                    <span class="phone">(11)37741792</span>
+                </div>
+                <!-- /Contact board -->     
+
+                <!-- Restaurants -->
+                <div id="restaurants">
+
+                    <div class="item section">
+                        <div class="thumb">
+                            <a href="#"><img src="../css/images/site-img/restaurantes-big.jpg" width="273" height="180" /></a>
+                        </div>
+                        <div class="details">
+                            <div class="section">
+                                <h2 class="fleft">Pita Delivery 2</h2>
+                                <h3 class="fleft">Pizzaria</h3>
+                                <span id="yd-rate-8" class="yd-menu-detail-rate fright">
+                                    <span class="yd-rated-06"></span>
+                                    <span class="yd-rated-total">186</span>
+                                </span>
+                            </div>
+                            <p>Rua Francisco Leitão 282,</p>
+                            <p>13500-359</p>
+                            <p>Rio Claro </p>
+                            <a class="yd-read-more-link-br">Ler mais...</a>                           
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /Restaurants -->            	
+
+            </div>
+
+            <div id="yd-sidebar">
+
+                <div id="fidelity-box" class="yd-box">
+                    <div class="br-inner-box">
+                        <div class="yd-box-title">
+                            <span>PROGRAMA DE BÔNUS</span>
+                            <h3><div>Seus Bônus</div></h3>            
+                        </div>
+
+                        <div id="fidelity-content">
+                            <dl class="bonus-points">
+                                <dt><span class="num">10</span> pontos </dt>
+                                <dd>Para seu pedido você recebeu</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>     
+
+            </div>
+
+        </div>
+    </div>
+
+    <!--#include virtual="_br_footer.html" -->

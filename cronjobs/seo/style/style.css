@@ -1,0 +1,302 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: helvetica, sans-serif;
+    font-size: 12px;
+    color: #333;
+    background: #fff;
+}
+
+img {
+    border: 0;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+p {
+    color: #777;
+    width: 575px;
+    line-height: 160%;
+}
+
+p a {
+    display: block;
+    width: 120px;
+    height: 25px;
+    background: url(images/xing.png) no-repeat;
+}
+
+.p1 {
+    font-size: 14px;
+    margin: 0 auto 20px;
+}
+
+.p2 {
+    font-size: 12px;
+    margin: 0 auto 20px;
+}
+
+.p3 {
+    font-size: 12px;
+    margin: 0 auto 20px;
+}
+
+.p4 {
+    font-size: 10px;
+    margin: 0 auto 20px;
+}
+
+#wrapper {
+    position: relative;
+    width: 1020px;
+    margin: 0 auto;
+}
+
+#header-home {
+    height: 150px;
+}
+
+#plz-home {
+    position: relative;
+    height: 220px;
+}
+
+#plz-home .picture-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: block;
+    width: 280px;
+    height: 220px;
+}
+
+#plz-home .picture-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+    width: 280px;
+    height: 220px;
+}
+
+#plz-home form {
+    position: absolute;
+    top: 0;
+    left: 210px;
+    z-index: 2;
+    width: 600px;
+    height: 220px;
+    background: url(images/plz.png) no-repeat;
+}
+
+#plz-home form .text {
+    position: absolute;
+    top: 66px;
+    left: 255px;
+    font-size: 16px;
+    padding: 5px;
+    color: #aaa;
+    border: 0;
+    background: none;
+}
+
+#plz-home form .submit {
+    position: absolute;
+    top: 56px;
+    left: 486px;
+    display: block;
+    cursor: pointer;
+    width: 80px;
+    height: 50px;
+    border: 0;
+    background: url(images/submit.png) 0 0 no-repeat;
+}
+
+#plz-home form .submit:hover {
+    background: url(images/submit.png) 0 -50px no-repeat;
+}
+
+#slider {
+    position: relative;
+    margin: 60px 0 20px;
+}
+
+#slider a#slider-left {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    display: block;
+    width: 35px;
+    height: 35px;
+    background: url(images/left.png);
+}
+#slider a#slider-right {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    display: block;
+    width: 35px;
+    height: 35px;
+    background: url(images/right.png);
+}
+
+#slider #logos {
+    width: 895px;
+    height: 135px;
+    padding: 10px;
+    margin: 0 auto;
+    background: #eee;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: inset 0 0 5px #aaa;
+    -webkit-box-shadow: inset 0 0 5px #aaa;
+    box-shadow: inset 0 0 5px #aaa;
+}
+
+#slider #logos img {
+    margin: 0 9px;
+    border: 1px solid #ccc;
+}
+
+#info {
+    margin: 50px 0 20px;
+    padding: 0 20px 20px 20px;
+    background: #f5f5f5;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#info h1 {
+    margin: 0 0 15px;
+    font-weight: normal;
+    font-size: 20px;
+    border-bottom: 1px dotted #ccc;
+}
+
+#info p {
+    text-align:justify;
+    width: 980px;
+    -moz-column-count: 2;
+    -moz-column-gap: 40px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 40px;
+}
+
+
+
+
+
+a#impressum {
+    display: block;
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+#header {
+    height: 150px;
+    background: url(images/header-plz.png) no-repeat;
+}
+
+#header img {
+    position: absolute;
+    top: -7px;
+    left: 280px;
+}
+
+#header form .text {
+    position: absolute;
+    top: 80px;
+    left: 460px;
+    font-size: 16px;
+    padding: 5px;
+    color: #aaa;
+    border: 0;
+    background: none;
+}
+
+#header form .submit {
+    position: absolute;
+    top: 71px;
+    left: 700px;
+    display: block;
+    cursor: pointer;
+    width: 80px;
+    height: 50px;
+    border: 0;
+    background: url(images/submit.png) 0 0 no-repeat;
+}
+
+#header form .submit:hover {
+    background: url(images/submit.png) 0 -50px no-repeat;
+}
+
+
+
+
+
+
+
+
+
+.service {
+    position: relative;
+    width: 600px;
+    margin: 0 auto 10px;
+    padding: 5px;
+    border: 1px solid #eee;
+}
+
+.service ul {
+    position: absolute;
+    top: 5px;
+    left: 175px;
+    color: #777;
+    font-size: 12px;
+}
+
+.service ul li strong {
+    font-size: 14px;
+    font-weight: normal;
+    color: #338600;
+}
+
+.service .service-submit {
+    width: 150px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    cursor: pointer;
+    display: block;
+    padding: 6px 0;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    background: #338600;
+}
+
+#result {
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 0 20px;
+}

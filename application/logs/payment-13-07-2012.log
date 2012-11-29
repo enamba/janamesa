@@ -1,0 +1,4 @@
+2012-07-13T06:26:56-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PaymentHelper: OrderNr 10080722, ServiceId 314, CustomerId 432, Nachricht: O pagamento à vista foi aceito 
+2012-07-13T06:26:56-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PaymentHelper: OrderNr 10080722, ServiceId 314, CustomerId 432, Nachricht: A transferência imediata foi recusada, porque o sistema foi desativado  
+2012-07-13T06:26:56-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PaymentHelper: OrderNr 10080722, ServiceId 314, CustomerId 432, Nachricht: Paypalbezahlung zugestimmt 
+2012-07-13T06:26:56-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PaymentHelper: OrderNr 10080722, ServiceId 314, CustomerId 432, Nachricht: O pagamento com cartão de crédito foi aceito 

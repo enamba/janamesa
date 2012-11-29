@@ -1,0 +1,9 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<a href="/administration_satellite/linkcontrol"><input type="button" value="{__b('Add New Link')}"></a>
+<br />
+<img src="{$domain_static}/images/yd-backend/grid/certo.png" alt="OK" /> : {__b('Link is OK')} <br />
+<img src="{$domain_static}/images/yd-backend/grid/fechar.png" alt="NOT-OK" /> : {__b('Link is gone / change in the Url')} <br />
+<img src="{$domain_static}/images/yd-icons/icon-info.png" alt="UNKNOWN" /> : {__b('Not assign / Website broken / Wrong website')} <br />
+ {$grid}
+{/block}

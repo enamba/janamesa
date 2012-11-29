@@ -1,0 +1,290 @@
+/*CSS INDEX (only colors!)
+
+    1.Links
+    2.Body
+    3.Head
+    4.Order Menu
+    5.Sidebar
+    6.Footer
+    7.Landingpage
+    8.Lightbox
+
+
+----------------------------------------------------------------*/
+/*Links*/
+/*Alle Links + Hover die nicht nochmal in de Klassen verfasst wurden*/
+
+a{
+    color: #a1a1a1;
+}
+a:hover{
+    color: #ffffff;
+}
+
+a.yd-button-280:hover{
+    color: #fff !important;
+
+}
+.backbutton{
+    color: #e6e6e6;
+    background: url(/media/images/satellites/menu/icon-left.png) 5px 0 no-repeat, #999565;
+    background: url(/media/images/satellites/menu/icon-left.png) 5px 0 no-repeat, -moz-linear-gradient(top,#999565,#757144);
+    background: url(/media/images/satellites/menu/icon-left.png) 5px 0 no-repeat, -webkit-gradient(linear, left top, left bottom, from(#999565), to(#757144));
+    border-color: #757144;
+}
+.backbutton:hover{
+    color: #e6e6e6;
+    background: url(/media/images/satellites/menu/icon-left.png) 5px 0 no-repeat, #757144;
+    background: url(/media/images/satellites/menu/icon-left.png) 5px 0 no-repeat, -moz-linear-gradient(top,#757144,#999565);
+    background: url(/media/images/satellites/menu/icon-left.png) 5px 0 no-repeat, -webkit-gradient(linear, left top, left bottom, from(#757144), to(#999565));
+}
+/*Body Background*/
+body{
+    background-color:  #e8e7da !important;
+}
+/*Head*/
+.yd-menu-head {
+    background: no-repeat;
+}
+/*Navigations Links + Hover*/
+.yd-menu-modern ul.yd-menu-nav1 li a{
+    color: #000;
+}
+.yd-menu-modern ul.yd-menu-nav1 li a:hover, .yd-menu-modern ul.yd-menu-nav1 li a.active, .category-lenght-toggle-full{
+    color: #888;
+}
+.category-lenght-toggle-full{
+    background: #eee;
+}
+.yd-menu-modern .yd-menu-nav2 {
+    background: #555555; /* Old browsers */
+    background:  -moz-linear-gradient(top, #555555 0%, #444444 100%); /* FF3.6+ */
+    background:  -webkit-gradient(linear, left top, left bottom, color-stop(0%,#555555), color-stop(100%,#444444)); /* Chrome,Safari4+ */
+    background:  -webkit-linear-gradient(top, #555555 0%,#444444 100%); /* Chrome10+,Safari5.1+ */
+    background:  -o-linear-gradient(top, #555555 0%,#444444 100%); /* Opera11.10+ */
+    background:  -ms-linear-gradient(top, #555555 0%,#444444 100%); /* IE10+ */
+    background:  linear-gradient(top, #555555 0%,#444444 100%); /* W3C */
+}
+.yd-menu-modern .yd-menu-nav2 ul li a{
+    color: #fff; 
+}
+
+.yd-menu-modern .yd-menu-nav2 ul li a:hover, .yd-menu-modern .yd-menu-nav2 ul li a.active {
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat 0 -1451px #4da1dd; /* Old browsers */
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat 0 -1451px, -moz-linear-gradient(top, #4da1dd 0%, #88bfe8 100%); /* FF3.6+ */
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat 0 -1451px, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4da1dd), color-stop(100%,#88bfe8)); /* Chrome,Safari4+ */
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat 0 -1451px, -webkit-linear-gradient(top, #4da1dd 0%,#88bfe8 100%); /* Chrome10+,Safari5.1+ */
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat 0 -1451px, -o-linear-gradient(top, #4da1dd 0%,#88bfe8 100%); /* Opera11.10+ */
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat 0 -1451px, -ms-linear-gradient(top, #4da1dd 0%,#88bfe8 100%); /* IE10+ */
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat 0 -1451px, linear-gradient(top, #4da1dd 0%,#88bfe8 100%); /* W3C */
+}
+
+/*Order Menu*/
+/*Alle Heads von Tabellen und Boxen*/
+.yd-menu-table_satellite thead,.yd-bigbox-head, #tooltip, #simpleTooltip,.yd-successarea-left h1,.ui-dialog-content h1, .yd-box-head, .yd-menu-table_satellite tr td i:hover span, #extrahead, .yd-successarea-left-2 span, .ui-datepicker .ui-datepicker-header{
+    color: #000000 !important;
+    background: #999565;
+    background: -moz-linear-gradient(top,#b3af85,#999565);
+    background: -webkit-gradient(linear, left top, left bottom, from(#b3af85), to(#999565));
+}
+#yd-menu .thead{
+    background: #b3af85;
+}
+#yd-expand-card-head{
+    background: #999565 ;
+    background: -moz-linear-gradient(top,#b3af85,#999565); ;
+    background: -webkit-gradient(linear, left top, left bottom, from(#b3af85), to(#999565));
+}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span{
+    color: #000000 !important;
+}
+.yd-lightbox-content-container #yd-special-input{
+    color: #000 !important;
+}
+
+.yd-menu-table_satellite thead th, h2,.yd-successarea-left-2 h2 {
+    color: #000000;
+}
+/*Table Speißekarte*/
+#yd-menu .td,#yd-menu .th{
+    color: #000;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+/*Table Menu Link Color*/
+.td a{
+    color: #000;
+}
+/*Table Menu Unterschrift*/
+.td span, .th span, .td i{
+    color: #000;
+}
+/*Table Menu Hover für Links*/
+.tr:hover .td:first-child a,
+.tr:hover .td:hover a,.yd-menu-table_satellite tr a:hover {
+    color: #888 !important;
+}
+/*Table Menu <tr> ungrade Zahlen Background*/
+#yd-menu .tr:nth-child(odd) ,.yd-menu-table_satellite tbody tr:nth-child(odd) {
+    background: #FCFCFC;
+}
+/*Table Menu <tr> grade Zahlen Background*/
+#yd-menu .tr:nth-child(even) ,.yd-menu-table_satellite tbody tr:nth-child(even) {
+    background: #F5F5F5;
+}
+/*Table Menu <tr> Background hover*/
+#yd-menu .tr:hover ,.yd-menu-table_satellite tbody tr:hover {
+    background: #d9e7ff;
+}
+/*
+        New Menu
+***********************************/
+.td a {
+    color: #559dd4;
+}
+.td a:hover{
+    color: #1062ae;
+}
+
+/*Sidebar*/
+/*Boxenlayout*/
+.yd-box, .yd-successarea-left .yd-box, ui-datepicker-div, .ui-datepicker{
+    background: #cccaaf;
+    background:  -moz-linear-gradient(top,#ebe8cd,#cccaaf);
+    background:   -webkit-gradient(linear, left top, left bottom, from(#ebe8cd), to(#cccaaf));
+    color: #000000;
+}
+.yd-successarea-left .yd-box.yd-successarea-left-3{
+    background: url(/media/images/satellites/menu/yd-successarea-banner.png) no-repeat,#cccaaf;
+    background:  url(/media/images/satellites/menu/yd-successarea-banner.png) no-repeat, -moz-linear-gradient(top,#ebe8cd,#cccaaf);
+    background: url(/media/images/satellites/menu/yd-successarea-banner.png) no-repeat,  -webkit-gradient(linear, left top, left bottom, from(#ebe8cd), to(#cccaaf));
+    color: #000000;
+}
+.yd-form strong.yd-form-tease, .yd-successarea-left-2 h2, .yd-successarea-right-payment small, #yd-sidebar .yd-box-body ul li.yd-shopping-extra, ui-datepicker-calendar thead th span {
+    color: #000000;
+}
+#yd-sidebar .yd-box-body ul li.yd-shopping-endprice strong,#yd-sidebar .yd-box-body ul li.yd-shopping-extra span em{
+    color: #000000;
+}
+.yd-box a{
+    color: #000000;
+}
+.yd-box a:hover{
+    color: #3d3d3d;
+}
+
+/*Border der boxen*/
+.yd-box-head, #extrahead , #extrahead #extramenu,.ui-dialog-content h1 ,.yd-form strong.yd-form-tease, .yd-lightbox-content-container .item, #yd-sidebar .yd-box-body ul li.yd-shopping-discount, #yd-sidebar .yd-box-body ul li.yd-shopping-price, #yd-sidebar .yd-box-body ul li.yd-shopping-endprice, #yd-sidebar .yd-box-body ul li.yd-shopping-empty{
+    border-bottom-color:  #595635;
+}
+.ui-dialog-buttonpane {
+    border-top-color: #595635;
+}
+.yd-lightbox-buttons, .yd-lightbox-content-container{
+    background:  #fff; /* Old browsers */
+    background:  -moz-linear-gradient(top, #fff 0%, #fff 100%); /* FF3.6+ */
+    background:  -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#fff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fff 0%,#fff 100%); /* Chrome10+,Safari5.1+ */
+    background:  -o-linear-gradient(top, #fff ,#fff 100%); /* Opera11.10+ */
+    background:  -ms-linear-gradient(top, #fff 0%,#fff 100%); /* IE10+ */
+    background:  linear-gradient(top, #fff 0%,#fff 100%); /* W3C */
+    color: #333;
+}
+/*Mindestbestellwert Background und Font*/
+#minamount div {
+    background: #d9d9d9;
+    color: #000000;
+}
+/*Footer*/
+#yd-menu-footer{
+    background:  #999565;
+    background:  -moz-linear-gradient(top,#b3af85,#999565);
+    background:   -webkit-gradient(linear, left top, left bottom, from(#b3af85), to(#999565));
+}
+#yd-menu-footer, #yd-menu-footer_content p a{
+    color: #000000;
+}
+#yd-menu-footer_content p a:hover{
+    color: #242424;
+    background: none;
+}
+
+/*---7. Start Page---*/
+/*Navigation Start PAge*/
+#header a{
+    color: #000000;
+    border-right-color: #52503b;
+}
+#header a:hover, #header a.active{
+    color: #ffffff;
+    background: #999565;
+    background:  -moz-linear-gradient(top,#b3af85,#999565);
+    background:  -webkit-gradient(linear, left top, left bottom, from(#b3af85), to(#999565));
+}
+/*Infoboxen (Kategorien auf der Startpage)*/
+#info{
+    background:   #999565;
+    background:   -moz-linear-gradient(top,#b3af85,#999565);
+    background:   -webkit-gradient(linear, left top, left bottom, from(#b3af85), to(#999565));
+}
+#info p{
+    color: #000000;
+}
+/*Impressum Box*/
+#impressum a, #impressum{
+    color: #fff;
+}
+#impressum{
+    background: #000;
+    opacity: 0.87;
+}
+/*Infoboxen (Kategorien auf der Startpage)*/
+#info a{
+    color: #000000;
+}
+#info a:hover{
+    color: #000000;
+    background: none;
+}
+/*Start Page Box mit Seo Text und Bild*/
+.box_img_text{
+    background:  #ebe8cd;
+    background:  -moz-linear-gradient(top,#ebe8cd,#cccaaf);
+    background:  -webkit-gradient(linear, left top, left bottom, from(#ebe8cd), to(#cccaaf));
+
+}
+.text_box2_heading{
+    color: #000000;
+    border-bottom-color: #000000;
+}
+.text_box2 p{
+    color: #000000;
+}
+/*Index Box Order*/
+/*Box mit blauen Button zum Menu*/
+.order_box{
+    border-color: #706d52;
+    background: #878465;
+    opacity: 0.94;
+}
+.order_box i {
+    color: #f5f5f5 !important;
+    background: #52503b;
+    background:-moz-linear-gradient(top,#52503b,#3d3b25);
+    background:  -webkit-gradient(linear, left top, left bottom, from(#52503b), to(#3d3b25));
+    border-color: #3d3b25;
+}
+.order_box i:hover {
+    color: #f5f5f5 !important;
+    background:  #3d3b25;
+    background: -moz-linear-gradient(top,#3d3b25,#52503b);
+    background: -webkit-gradient(linear, left top, left bottom, from(#3d3b25), to(#52503b));
+}
+.order_box h1{
+    border-bottom-color:  #706d52;
+    color: #ffffff
+}
+#extrahead #extradesc {
+    color: #000000;
+
+}

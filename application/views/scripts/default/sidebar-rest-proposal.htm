@@ -1,0 +1,37 @@
+    <div class="yd-box">
+        <div class="yd-box-title" id="yd-expand-rest-proposal-head">
+            <a href="#" id="yd-expand-rest-proposal-plus" class="yd-plus"></a>
+            <a href="#" id="yd-expand-rest-proposal-minus" class="yd-minus"></a>
+            {__('Restaurant vorschlagen')}
+        </div>
+
+        <div class="yd-box-body" id="yd-expand-rest-proposal">
+            <ul class="yd-rest-proposal-form">
+                <li>
+                    <em>{__('Restaurant:')} *</em><input class="yd-rest-proposal-input" type="text" value="" id="yd-rest-proposal-name" />
+                    <div id="yd-rest-proposal-error-name" style="color:red;"></div>
+                </li>
+                <li>
+                    <em>{__('Stadt:')} *</em>
+                    <input class="yd-rest-proposal-input" type="text" value="" id="yd-rest-proposal-city" />
+                    <div id="yd-rest-proposal-error-city" style="color:red;"></div>
+                </li>
+                <li>
+                    <em>{__('Straße:')} </em>
+                    <input class="yd-rest-proposal-input" type="text" value="" id="yd-rest-proposal-street"/>
+                </li>
+                <li>
+                    <em>{__('Kommentar:')}</em>
+                    <textarea cols="25" rows="10" class="yd-rest-proposal-input" id="yd-rest-proposal-comment"></textarea>
+                    <br /><br />
+                    * {__('benötigte Angaben')}
+                    <br /><br />
+                </li>
+                <li class="feedback yd-rest-proposal-input"><input class="button" id="yd-rest-proposal-send" type="button" value="{__('Restaurant vorschlagen')}" /></li>
+                
+            </ul>
+            <ul class="yd-rest-proposal-thx" style="display:none;">
+                <li>{__('Wir bedanken uns für Ihren Vorschlag.')}</li>
+            </ul>
+        </div>
+    </div>

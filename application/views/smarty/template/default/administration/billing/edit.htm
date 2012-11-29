@@ -1,0 +1,47 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{if !is_null($bill)}
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Optionen')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <a href="/administration_billing/resetbill/mode/{$bill->getMode()}/id/{$bill->getId()}" onclick="return confirm(__b('Wirklich neu generieren'));">{__b('NEU GENERIEREN')}</a>&nbsp;|&nbsp;
+                    <a href="#" class="yd-mahnung" id="yd-mahnung-{$bill->getId()}">{__b('MAHUNG ERSTELLEN')}</a>&nbsp;|&nbsp;
+                    <a href="/administration_billing/deletebill/mode/{$bill->getMode()}/id/{$bill->getId()}" onclick="return confirm(__b('Wirklich löschen'));">{__b('LÖSCHEN')}</a>&nbsp;|&nbsp;
+                    <a href="/administration_billing/resetstandard/mode/{$bill->getMode()}/id/{$bill->getId()}" onclick="return confirm(__b('Standard wirklich wieder herstellen? Alle Einstellungen für diese Rechnungen gehen verloren'));">{__b('FIRMENSTANDARD WIEDERHERSTELLEN')}</a>
+                </div>
+                <div>
+                    <br />
+                        {__b('Rechnungsnummer: ')}{$bill->getNumber()}
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form action="/administration_billing/edit/id/{$bill->getId()}" method="post">
+        {include file='administration/billing/default/customized_form.htm'}
+        
+        {if $bill->getReference() instanceof Yourdelivery_Model_Company}
+            {include file='administration/billing/default/customized_form_company.htm'}
+        {/if}
+    </form>
+
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Übersicht der Rechnung ')}{$bill->getNumber()}
+            </div>
+            <div class="item-content">
+                {$grid}
+            </div>
+        </div>
+    </div>
+
+{/if}
+{/block}

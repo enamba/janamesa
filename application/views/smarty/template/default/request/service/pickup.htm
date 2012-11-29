@@ -1,0 +1,24 @@
+<div class="yd-dialogs"><a class="yd-dialogs-close"></a>
+
+    <div class="yd-dialogs-head">
+        <h2>{__('Abholung')}</h2>
+    </div>
+
+    <div class="yd-lightbox-content-container">
+
+        {if is_object($service)}
+        <div id="pickup">
+            <p>{__('Der Lieferservice %s liefert nicht aus. Bitte hole die Bestellung selbst ab.', $service->getName())}</p>
+            <div id="pickup-map">
+                <!-- todo: GoogleMaps Karte mit Standort Restaurant  -->
+            </div>
+        </div>
+        {else}
+        <div id="pickup">
+            <p>{__('Fehler beim Laden des Lieferservices.')}</p>
+        </div>
+        {/if}
+
+    </div>
+
+</div>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="pt" xml:lang="pt" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="pt" xml:lang="pt" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="pt" xml:lang="pt" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="pt" xml:lang="pt" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="pt" xml:lang="pt">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="viewport" content="width=1100">
+        <link rel="SHORTCUT ICON" href="/media/css/www.janamesa.com.br/favicon.ico" type="image/x-icon" />
+
+        <title>Impressum - lieferando.de</title>
+
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-core.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-home.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-jquery.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-ie.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-infocenter.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-hidden.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-iphone.css" />
+            
+            <script type="text/javascript" src="/media/javascript/compiled/frontend-sem.js"></script>
+    </head>
+    <body class="br yd-iphone-page">
+
+        <div id="yd-nonfooter">
+            <div id="wrapper-header" class="blue">
+                <div class="header-bg">
+                    <div class="yd-header">
+                        <div class="yd-inner">
+                            <a class="yd-logo" href="/"></a>                
+                            <div class="yd-login">                           	
+                                <div class="yd-login-wrapper yd-logged-out">
+                                    <a class="yd-header-login">Fazer login</a>
+                                    <a class="yd-header-register" href="/user/register">Registrieren</a>   
+                                    <div class="yd-login-window hidden">
+                                        <form name="login" action="/user/login?redirect_url=/user/loginfailed" method="post" id="login">
+                                            <input name="login" value="1" type="hidden" />
+                                            <input class="yd-empty-text" name="user" value="Endereco de email" title="" type="text" />
+                                            <input class="yd-empty-text" name="pass" value="" title="" type="password" />
+                                            <input class="" name="yd-login" value="Login" type="submit" /> 
+                                        </form>
+                                        <div class="br-label-login">Login</div>
+                                        <div class="br-register">
+                                            Ainda nao faz parte?&nbsp;&nbsp;<a title="Crie sua conta" href="/user/register">Crie sua conta</a>
+                                        </div>
+                                        <a class="yd-forgotten-pass">Esqueceu a senha?</a>
+                                    </div>
+                                </div>
+                                <div id="logout" class="yd-logged-in hidden">
+                                    <span class="yd-customer-name"></span><em class="yd-customer-company hidden"></em>
+                                    | <a href="/user/index">Conta</a>
+                                    <span id="yd-customer-company-admin" class="hidden">| <a href="/company">Firmenadmin</a></span>
+                                    | <a href="/user/logout?redirect_url=/user/loginfailed" class="yd-log-out" id="yd-logout">
+                                        <img src="loginfailed_files/yd-logout.png" alt=""> Sair
+                                    </a>
+                                </div>				
+                            </div>
+                            <div class="wrapper-plz-br hidden">
+                                <h3>Esta com fome ?</h3>
+                                <h4>Peca sua<br /> comida preferida<br />online</h4>
+                                <div class="hidden" id="yd-lang-plzerror">Este CEP nao existe </div>  
+                                <form name="plzAutocomplete" id="yd-start-order-form" method="get" action="/order_basis/plz">
+                                    <input name="cityId" value="" type="hidden" />
+                                    <input id="yd-plz-search" class="yd-only-nr yd-empty-text" name="plz" value="CEP" title="" type="text" />
+                                    <a id="br-cep-autocomplete">Nao sabe o seu CEP ?</a>
+                                    <a id="yd-start-order" class="link1554 yd-button-280" name="yd-start-order" href=""><span>Iniciar seu Pedido</span></a>        
+                                    <a id="yd-start-order" class="link1554 yd-button-280" name="yd-start-order" href=""><span>Faca seu pedido!</span></a> 
+                                    <a class="buscar-btn" href="#">Buscar Restaurantes</a>
+                                </form>
+                            </div>
+
+                            <!-- Mobile app -->
+                            <div id="app-mobile">
+
+                                <div class="fleft">
+                                    <img src="/media/css/www.janamesa.com.br/images/tem-um-iphone.png" width="284" height="198" alt="Tem um iPhone?" />
+                                    <a href="#" class="link-app-download">Baixe nosso<br /> aplicativo</a>
+                                </div>
+
+                                <div class="wrapper-benefits-block">
+                                    <div class="benefits-block">
+                                        <div class="inner-benefits-block">
+                                            <p>Page no cartão ou a vista</p>
+                                            <p>Pizza, Sushi e muito mais</p>
+                                            <p>Fácil e rápido</p>
+                                            <p>Sem nenhum custo extra</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Mobile app --> 
+
+                        </div>
+                    </div>
+                </div>        
+                <div class="bottom-bg"></div>
+            </div>
+
+            <div id="yd-content" class="yd-clearfix">
+
+                <div id="yd-ordering">
+                    <h1>Now simply go with the food order Lieferando iPhone app!</h1>
+                    <p>The online ordering platform Lieferando is now also available for your iPhone mobile. Why? As we move with the times and you want to allow independence and flexibility in your food order. Lieferando is rising for a variety of delivery services, trend, and this you can now easily find on your phone with the iPhone App Lieferando. Of course, this app is free, it is worthwhile in any case, to test this useful add-on program. You must not use your mobile phone extra access our website and wait until everything is set up, including the small pictures. This may take a slow Internet connection for quite some time. Even smartphones are still no proper computer. The Lieferando iPhone app is tailored directly to the iPhone and its capabilities. It is clear and shows you only on what you need. No unnecessary and annoying load times longer! With the iPhone App Lieferando you can quickly and easily order your lunch, dinner or snack between meals and the comfort of traveling. They sit in the tram, the bus or the train and already notice how your stomach growls? Order but before dinner with your iPhone! This shortens the wait time tremendously. They do not have to go home and sit there on the computer, but can be found directly through our app a delivery service and order your favorite meal. Use your precious leisure time effectively and save time thanks to the new iPhone app Lieferando!</p>
+                    <a class="yd-read-more-link-br">Ler mais...</a>                
+                </div>
+
+                <div id="yd-sidebar">
+                    <h4 class="heading-section">Discover the benefits of the new iPhone app Lieferando!</h4>
+                    <p>The online ordering platform Lieferando is now also available for your iPhone mobile. Why? As we move with the times and you want to allow independence and flexibility in your food order. Lieferando is rising for a variety of delivery services, trend, and this you can now easily find on your phone with the iPhone App Lieferando. Of course, this app is free, it is worthwhile in any case, to test this useful add-on program. You must not use your mobile phone extra access our website and wait until everything is set up, including the small pictures. This may take a slow Internet connection for quite some time.</p>
+                    <a class="yd-read-more-link-br">Ler mais...</a>      
+                </div>		
+
+            </div>
+        </div>
+
+        <!--#include virtual="_br_footer.html" -->

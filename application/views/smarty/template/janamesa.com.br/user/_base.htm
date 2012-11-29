@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="pt" xml:lang="pt" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="pt" xml:lang="pt" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="pt" xml:lang="pt" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="pt" xml:lang="pt" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="pt" xml:lang="pt">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="viewport" content="width=1100">
+
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-frontend-user-fonts.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-frontend-step2.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-frontend-user-uniform.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/compiled/frontend-{$extra_css|default:'no'}-{$REVISION}.css" />
+
+        <script type="text/javascript" src="/media/javascript/compiled/frontend-test.js"></script>
+        
+        {include file='_cookies/janamesa/abtest.htm'}
+        
+        <title>
+            {if $cust->isLoggedIn()}
+                {__('Profil von %s bei %s', $cust->getFullname(), $config->domain->base)}
+            {else}
+                {__('Profil von %s bei %s', 'Gast', $config->domain->base)}
+            {/if}
+        </title>
+
+        <script>
+            $(function(){
+                $(".yd-profile-picture input, .yd-profile-picture textarea, .yd-profile-picture select, .yd-profile-picture button").uniform();
+            });
+        </script>
+
+        {include file='_cookies/google/analytics.htm'}
+        {if $trackGoogleEcomerce}
+            {include file='_cookies/google/ecommerce.htm'}
+        {/if}
+    </head>
+
+    <body class="br yd-user-content">
+
+        <div id="fb-root"></div>
+        {literal}
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=APP_ID";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        {/literal}
+
+        <div id="yd-nonfooter">
+
+            {include file="notification.htm"}
+            
+            {include file="base_header.htm"}
+
+            <div id="yd-content" class="yd-clearfix">
+
+                {block name="content"}{/block}
+
+            </div>
+
+        </div>
+
+        {include file="base_footer.htm"}
+        
+        {include file='_cookies/masterpixel/global.htm' uadomain=$domain_base}
+        {include file='_cookies/piwik/global.htm' uadomain=$domain_base}
+
+    </body>
+</html>

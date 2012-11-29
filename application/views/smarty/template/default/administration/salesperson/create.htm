@@ -1,0 +1,65 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<form action="/administration_salesperson/create" method="post">
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Vertriebler')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="10%">{__b('Vorname:')}</td>
+                            <td width="30%"><input type="text" name="prename" class="rund_set text" value="{$p.prename}"/> *</td>
+                            <td width="60%"></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Nachname:')}</td>
+                            <td><input type="text" name="name" class="rund_set text" value="{$p.name}"/> *</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Email:')}</td>
+                            <td><input id="yd-create-salesperson-email" type="text" name="email" class="rund_set text" value="{$p.email}"/> *</td>
+                            <td id="yd-create-salesperson-email-admin-status"></td>
+                        </tr>
+                        <tr id="yd-create-salesperson-password">
+                            <td>{__b('Passwort:')}</td>
+                            <td><input type="text" name="password" class="rund_set text" value="{$p.password}"/></td>
+                            <td>{__b('Wenn nicht angegeben, dann wird der Vertriebler keinen Zuganz zum Admin-Backend haben %sund kann seine Arbeitszeiten nicht eintragen', '<br/>')}</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Arbeitet in:')}</td>
+                            <td>
+                                <select name="callcenter" id="yd-salesperson-type">
+                                    <option value="0">{__b('Aussendienst')}</option>
+                                    <option value="1"  {if ($p.callcenter==1)}selected{/if}>{__b('Call Center')}</option>
+                                </select>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Gehalt')}</td>
+                            <td><input type="text" name="salary" class="rund_set text" value="{$p.salary}"/></td>
+                            <td id="yd-salesperson-salary-type">€ {if ($p.callcenter==1)} {__b('pro Stunde')} {else} {__b('pro Vertrag')} {/if}</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Anmerkung:')}</td>
+                            <td><textarea rows="3" name="description" class="inp">{$p.description}</textarea></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" id="yd-create-salesperson-button"/>
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+
+</form>
+{/block}    

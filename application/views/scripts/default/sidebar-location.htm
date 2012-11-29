@@ -1,0 +1,20 @@
+{if $order->getCustomer()->isLoggedIn()}
+    <div class="yd-box">
+        <div class="yd-box-title">
+            {__('Lieferadresse')}
+        </div>
+        <div class="yd-box-body">
+            <ul>
+                <li class="yd-budget-adress">
+                    {if $order->getPickup()}
+                        <em>{__('Adresse:')}</em><strong>{__('Abholung')}</strong>
+                    {else}
+                        <em>{__('Adresse:')}</em> <strong>{$order->getLocation()->getStreet()} {$order->getLocation()->getHausnr()}</strong>
+                    {/if}
+                     <br/>
+                     <em>{__('Postleitzahl:')}</em> <strong id="yd-order-location">{if is_object($order->getLocation()->getOrt())}{$order->getLocation()->getOrt()->getPlz()}&nbsp;{$order->getLocation()->getOrt()->getOrt()}{else}&nbsp;{/if}</strong>
+                </li>
+            </ul>
+        </div>
+    </div>
+{/if}

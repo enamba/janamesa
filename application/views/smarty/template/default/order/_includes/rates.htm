@@ -1,0 +1,15 @@
+{if $ratings}
+<div class="yd-clearfix">
+    <div class="yd-voodoo-lastrate">
+        <div class="yd-box">
+            <div class="yd-box-title">{__('Die letzten Bewertungen in %s', $location->getTitle())}</div>
+            {foreach from=$ratings item=comment}
+            <a href="{$comment['restUrl']}" itemprop="review" itemscope itemtype="http://schema.org/Review">
+                <span itemprop="description">{$comment['comment']|escape}</span>
+                <small><meta itemprop="datePublished" content="{$comment['created']}"/>{$comment['created']|date_format:__('%d.%m.%Y')} <span itemprop="author">{$comment['author']|escape}</span> {__('bei')} <span itemprop="name">{$comment['name']|escape}</span></small>
+            </a>
+            {/foreach}
+        </div>
+    </div>
+</div>
+{/if}

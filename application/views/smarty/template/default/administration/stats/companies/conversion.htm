@@ -1,0 +1,142 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/stats/companies/_navigation.htm'}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Übersicht')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <td>{__b('Accounts pro Firma')}</td>
+                    <td>{$account_per_company}</td>
+                </tr>
+                <tr>
+                    <td>{__b('Bestellungen pro Monat')}</td>
+                    <td>{$orders_per_company_per_employee}</td>
+                </tr>
+                <tr>
+                    <td>{__b('Durschnittlicher Warenkorb')}</td>
+                    <td>{$average_bucket_value}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Firmenumsätze nach Monat')}
+        </div>
+        <div class="item-content">
+            <form method="post" action="/administration_stats_companies/conversion">
+                <table class="user-tab">
+                    <tr>
+                        <td width="10%">{__b('Firma')}</td>
+                        <td width="90%">
+                            <select name="companyIds[]" multiple="multiple" style="height: 100px; width: 500px;">
+                                {foreach from=$companies item=company}
+                                    <option value="{$company.id}">{$company.name}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Jahr')}</td>
+                        <td>
+                            <select name="year" >
+                                <option value="2009">2009</otpion>
+                                <option value="2010" selected="selected">2010</otpion>
+                                <option value="2011">2011</otpion>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input value="{__b('Statistik anzeigen')}" type="submit" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+{foreach from=$result item=company}
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {$company.name}
+            </div>
+            <div class="item-content">
+                <div class="item-content">
+                    <table class="user-tab">
+                        <tr style="font-weight: bold; text-align: center;">
+                            <td width="8%" style="text-align: left;">{__b('Firma')}</td>
+                            <td width="7%">{__b('Januar')}</td>
+                            <td width="7%">{__b('Februar')}</td>
+                            <td width="7%">{__b('März')}</td>
+                            <td width="7%">{__b('April')}</td>
+                            <td width="7%">{__b('Mai')}</td>
+                            <td width="7%">{__b('Juni')}</td>
+                            <td width="7%">{__b('Juli')}</td>
+                            <td width="7%">{__b('August')}</td>
+                            <td width="7%">{__b('September')}</td>
+                            <td width="7%">{__b('Oktober')}</td>
+                            <td width="7%">{__b('November')}</td>
+                            <td width="7%">{__b('Dezember')}</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">{__b('Mitarbeiter')}</td>
+                            {section name=month start=1 loop=13}
+                                <td align="center">{$company.employees[$smarty.section.month.iteration]|intval}</td>
+                            {/section}
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">{__b('Bestellungen')}</td>
+                            {section name=month start=1 loop=13}
+                                <td align="center">{$company.sales[$smarty.section.month.iteration].count|intval}</td>
+                            {/section}
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">{__b('Budgets')}</td>
+                            {section name=month start=1 loop=13}
+                                <td align="center">{$company.budgets[$smarty.section.month.iteration].count|intval}</td>
+                            {/section}
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;"><i>% {__b('der Budgetnutzung')}</i></td>
+                            {section name=month start=1 loop=13}
+                                <td align="center">{$company.budgets[$smarty.section.month.iteration].percent|floatval}</td>
+                            {/section}
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">{__b('Umsatz (€)')}</td>
+                            {section name=month start=1 loop=13}
+                                <td align="center">{$company.sales[$smarty.section.month.iteration].sales|inttoprice}</td>
+                            {/section}
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;"><i>{__b('Umsatz/Budgets (€)')}</i></td>
+                            {section name=month start=1 loop=13}
+                                <td align="center">{$company.budgets[$smarty.section.month.iteration].sales|inttoprice}</td>
+                            {/section}
+                        </tr>
+                        {foreach from=$details key=mode item=detail}
+                        <tr>
+                            <td style="font-weight: bold;"><i>% {$modes[$mode]}:</i></td>
+                            {section name=month start=1 loop=13}
+                                <td align="center">{$company.detail[$smarty.section.month.iteration].percent|floatval}</td>
+                            {/section}
+                        </tr>
+                        {/foreach}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{/foreach}
+{/block}

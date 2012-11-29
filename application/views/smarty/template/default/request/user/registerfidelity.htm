@@ -1,0 +1,38 @@
+<div class="yd-dialogs"><a class="yd-dialogs-close"></a>
+
+    <div class="yd-dialogs-head">
+        <h2>{__('Nur noch 1 Schritt entfernt von %d Treuepunkten ...', $pointsforregister)}</h2>
+    </div>
+
+    <div class="yd-box yd-register-form" id="yd-form-register">    
+        <form method="post" action="/request_user/registerfidelity" class="yd-validation">
+            <input type="hidden" name="orderId" value="{$orderId}" />
+            <input type="hidden" name="registerLightbox" value="1" />
+
+            <div class="yd-lightbox-content-container">
+
+                <div class="yd-form">
+                    <strong class="yd-form-tease">{__("Wähle Dein persönliches Passwort:")}</strong>
+                    <div class="yd-form-wrapper">
+                        <ul class="yd-clearfix">
+                            <li class="yd-form-left"><span>Passwort <b class="red">*</b></span>
+                                <input type="password" name="password" id="pw" class="yd-form-input yd-form-invalid validate[length[5,20]]" value="" />
+                            </li>
+                            <li class="yd-form-right">
+                                <span>{__("Passwort wiederholen")} <b class="red">*</b></span>
+                                <input type="password" name="password2" id="pwagain" class="yd-form-input yd-form-invalid validate[confirm[pw]]" value="" />
+                                <em class="yd-form-info" id="pw-info" >'{__("Bitte wähle Dein persönliches Passwort ( 5 - 20 Zeichen ) und bestätige es.")}</em>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="yd-lightbox-buttons">
+                    <input type="submit" value="{__('Sichern')}" class="button" />
+                    <input type="button" value="{__('Abbrechen')}" class="button yd-close-lightbox" />
+                </div>
+
+            </div>
+        </form>
+
+</div>

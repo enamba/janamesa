@@ -1,0 +1,70 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<form action="/administration_stats_marketing/editcost" method="post">
+    <input type="hidden" name="costId" value="{$salechannelcost->getId()}"/>
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Salechannel Kosteneintrag')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td>{__b('Bezeichnung')}:</td>
+                            <td colspan="2"><input type="text" name="name" value="{$salechannelcost->getName()}"/></td>
+                        </tr>
+                        <tr>
+                            <td width="20%">{__b('saleChannel')}:</td>
+                            <td width="20%">
+                                <select name="saleChannel">
+                                    {foreach from=$distinctSalechannels item=sc}
+                                        <option value="{$sc.saleChannel}" {if strcmp($sc.saleChannel, $salechannelcost->getSaleChannel())==0}selected{/if}>{$sc.saleChannel}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                            <td width="60%"></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('subSaleChannel')}:</td>
+                            <td colspan="2">
+                                <select name="subSaleChannel">
+                                    <option value=""></option>
+                                    {foreach from=$distinctSubsalechannels item=ssc}
+                                        <option value="{$ssc.subSaleChannel}" {if strcmp($ssc.subSaleChannel, $salechannelcost->getSubSaleChannel())==0}selected{/if}>{$ssc.subSaleChannel}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Kosten')}:</td>
+                            <td colspan="2"><input type="text" name="cost" value="{intToPrice($salechannelcost->getCost())}"/> &euro;</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Von')}:</td>
+                            <td><input type="text" name="fromTimeD" readonly id="yd-date-full-from" value="{$salechannelcost->getFrom()|sqlTimeToDMY}"/></td>
+                            <td>{include file='administration/timebit.htm' separator=':' mode='fromTimeT' value=$salechannelcost->getFrom()|sqlTimeToHi}</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Bis')}:</td>
+                            <td><input type="text" name="untilTimeD" readonly id="yd-date-full-until" value="{$salechannelcost->getUntil()|sqlTimeToDMY}"/></td>
+                            <td>{include file='administration/timebit.htm' separator=':' mode='untilTimeT' value=$salechannelcost->getUntil()|sqlTimeToHi}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set"/>
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+
+</form>
+{/block}

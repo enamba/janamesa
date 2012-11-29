@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>StudiVZ</title>
+        <script type="text/javascript" src="http://www.lieferando.de/media/javascript/compiled/backend-min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#my-chart-container').insertFusionCharts({
+                    type: "stackedcolumn3d", width: "800", height: "500",
+                    data: "/extern/studivz/xml/on",
+                    dataFormat: "URIData",
+                    swfPath: "/media/flash/fusion-charts"
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="my-chart-container">Bitte warten...</div>
+    </body>
+</html>

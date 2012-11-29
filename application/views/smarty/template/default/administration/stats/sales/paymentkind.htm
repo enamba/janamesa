@@ -1,0 +1,104 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/stats/sales/navigation.htm'}
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Einnahmen nach Bezahlmethoden:')}
+                {__b('Gesamtbetrag / Betrag abzüglich Rabatt')}
+            </div>
+            <div class="item-content">
+                {__b('Die Zahlen werden abgerunden, daher können die Werte in Spalten "Gesamt" um einen Cent von der Summe aller Werte abweichen.')}
+            </div>
+        </div>
+    </div>
+
+    <form action="/administration_stats_sales/paymentkind" method="post">
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                {__b('Filter nach Bestelltyp')}:
+                <select name="mode" style="width: 220px;" >
+                    <option value="all">{__b('Alle')}</option>
+                    <option value="rest" {if $mode=='rest'}selected{/if}>{__b('Restaurant')}</option>
+                    <option value="great" {if $mode=='great'}selected{/if}>{__b('Großhandel')}</option>
+                    <option value="cater" {if $mode=='cater'}selected{/if}>{__b('Catering')}</option>
+                    <option value="fruit" {if $mode=='fruit'}selected{/if}>{__b('Obsthändler')}</option>
+                    <option value="canteen" {if $mode=='canteen'}selected{/if}>{__b('Kantine')}</option>
+                </select>
+                <input type="submit" value="{__b('filtern')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+    </form>
+
+    {foreach from=$paymentstats key=year item=pdata}
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {$year}
+            </div>
+            <div class="item-content">
+            <table width="100%" class="user-tab">
+                <tr>
+                    <th width="10%" height="30px">{__b('Bezahlmethode')}</th>
+                    {section name=month start=1 loop=13}
+                    <th width="7%">{$months[$smarty.section.month.index]}</th>
+                    {/section}
+                    <th width="6%">{__b('Gesamt')}</th>
+                </tr>
+                {foreach from=$pdata key=payment item=d}
+                <tr>
+                    <td>{$paymentkinds[$payment]}</td>
+                    {section name=month start=1 loop=13}
+                    <td valign="top">
+                            {if $d[$smarty.section.month.index]['betrag'] > 0}
+                                {$d[$smarty.section.month.index]['betrag']|inttoprice}
+                            {/if}
+                            {if $d[$smarty.section.month.index]['total'] > 0}
+                                <br/>{$d[$smarty.section.month.index]['total']|inttoprice}
+                            {/if}
+                            {if ($payment=='bill') && ($bills[$year][$smarty.section.month.index]['total'] > 0)}
+                                <br/>{$bills[$year][$smarty.section.month.index]['total']|inttoprice}
+                            {/if}
+                        </td>
+                    {/section}
+                    <td>
+                        {$pdata[$payment]['sumbetrag']|inttoprice}
+                        <br/>{$pdata[$payment]['sum']|inttoprice}
+                        {if ($payment=='bill') && ($bills[$year]['sum'] > 0)}
+                            <br/>{$bills[$year]['sum']|inttoprice}
+                        {/if}
+                    </td>
+                </tr>
+                {/foreach}
+                <tr style="font-weight: bold;">
+                    <td><b>{__b('Gesamt')}</b></td>
+                    {section name=month start=1 loop=13}
+                        <td>
+                            {if $sumbetrag[$year][$smarty.section.month.index] > 0}
+                                {$sumbetrag[$year][$smarty.section.month.index]|inttoprice}
+                            {/if}
+                            {if $sum[$year][$smarty.section.month.index] > 0}
+                                <br/>{$sum[$year][$smarty.section.month.index]|inttoprice}
+                            {/if}
+                        </td>
+                    {/section}
+                    <td>
+                        {if $sumbetrag[$year]['sum'] > 0}
+                            {$sumbetrag[$year]['sum']|inttoprice}
+                        {/if}
+                        {if $sum[$year]['sum'] > 0}
+                            / {$sum[$year]['sum']|inttoprice}
+                        {/if}
+                    </td>
+                </tr>
+            </table>
+            </div>
+        </div>
+    </div>
+    {/foreach}
+
+{/block}

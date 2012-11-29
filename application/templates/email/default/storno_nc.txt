@@ -1,0 +1,8 @@
+{__("Hallo %s,
+
+Deine Bestellung wurde storniert, da der Gutschein, den Du versucht hast einzulösen, nur für Neukunden gültig ist. Da Du bereits bei uns bestellt hast, ist dieser Gutschein leider nicht mehr von Dir einlösbar.
+Der bereits per Sofortüberweisung bezahlte Betrag in Höhe von %s€ wird Dir selbstverständlich zurücküberwiesen. In der Regel erfolgen Rückerstattungen innerhalb von 7 Arbeitstagen.
+Solltest Du noch Fragen dazu haben, kannst Du Dich gern, mit Deinen Daten und der Angabe der Rabatt-Aktion, per E-Mail an %s an uns wenden.
+
+Mit freundlichen Grüßen,
+Dein lieferando-Team.", $order->getCustomer()->getPrename(), $absTotal|inttoprice, $config->locale->email->support)}

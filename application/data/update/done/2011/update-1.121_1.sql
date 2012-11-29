@@ -1,0 +1,1 @@
+alter table customers add birthday date default '0000-00-00';

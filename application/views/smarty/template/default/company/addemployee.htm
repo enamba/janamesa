@@ -1,0 +1,126 @@
+{extends file="company/base.htm"}
+
+{block name="content"}
+
+<div id="admincase">
+
+    {include file='company/_left_nav.htm'}
+
+    <div class="clear"></div>
+    
+    <div id="main-content">
+
+
+        <ul class="shortcut-buttons-set">
+            <li><a class="shortcut-button" href="/company/employees"><span>
+                <img src="{$domain_static}/images/yd-icons/backend/group.png" alt="" /><br />
+                {__('Mitarbeiter Übersicht')}
+            </span></a></li>
+
+            <li><a class="shortcut-button" href="/company/addemployee"><span>
+                <img src="{$domain_static}/images/yd-icons/backend/user_add.png" alt="" /><br />
+                {__('Mitarbeiter hinzufügen')}
+            </span></a></li>
+
+        </ul><!-- End .shortcut-buttons-set -->
+
+        <div class="clear"></div>
+
+        <div class="content-box">
+            <div class="content-box-header">
+
+                <h3>{__('Neuen Mitarbeiter anlegen')}</h3>
+
+                <div class="clear"></div>
+
+            </div> <!-- End .content-box-header -->
+
+        <div class="right" id="content">
+            <div class="users"> <!-- Anfang Meine Daten -->
+                <div class="set-content">
+                    <form action="/company/addemployee" method="post" class="fm yd-validation">
+                    <div class="settings_group">
+                        <div class="title">{__('Nutzerdaten')}</div>
+                        <div class="user-content">
+                            <label for="">{__('Vorname:')} <span style="color:red">*</span></label>
+                            <input type="text" class="text-input medium-input validate[prename]" name="prename" id="prename" value="{if isset($post)}{$post.prename}{/if}" />
+                        </div>
+                        <div class="user-content">
+                            <label for="">{__('Name:')} <span style="color:red">*</span></label>
+                            <input type="text" class="text-input medium-input validate[name]" name="name" id="name"  value="{if isset($post)}{$post.name}{/if}" />
+                        </div>
+                        <div class="user-content">
+                            <label for="">{__('E-Mail:')} <span style="color:red">*</span></label>
+                            <input type="text" class="text-input medium-input validate[custom[email]]" name="email" id="email" value="{if isset($post)}{$post.email}{/if}" />
+                        </div>
+                        <div class="user-content">
+                            <label for="">{__('Personalnummer:')}</label>
+                            <input type="text" class="text-input medium-input" name="personalnumber" value="{if isset($post)}{$post.personalnumber}{/if}" />
+                        </div>                        
+                        <div class="user-content">
+                            <label for="">{__('Telefonnummer:')}</label>
+                            <input type="text" class="text-input medium-input" name="tel" value="{if isset($post)}{$post.tel}{/if}" />
+                        </div>
+                        
+                        <div class="user-content">
+                            <label for="">{__('Kostenstelle:')}</label>
+                            <select name="costcenter">
+                                <option value=""></option>
+                                {foreach from=$company->getCostcenters() item=costcenter}
+                                    <option value="{$costcenter->getId()}">{$costcenter->getName()} {if $costcenter->getIdent() != ""}({$costcenter->getIdent()}){/if}</option>
+                                {/foreach}
+                            </select>
+                        </div>
+
+                        <div class="user-content">
+                            <label for="">{__('Benachrichtigen:')}</label>
+                            <div class="yd-inner-margin">
+                            <input type="checkbox" name="notify" value="1" checked /> {__('Mitarbeiter benachrichtigen')}!
+                            </div>
+                        </div>
+
+                        <div class="user-content">
+                            <label for="">{__('Administrator:')}</label>
+                            <div class="yd-inner-margin">
+                            <input type="checkbox" name="admin" value="1" /> {__('Administrator')}
+                            </div>
+                        </div>
+                        <div class="user-content">
+                            <label for="">{__('Catering:')}</label>
+                            <div class="yd-inner-margin">
+                            <input type="checkbox" name="cater" value="1" /> {__('Darf Catering auf Firmenkosten bestellen')}
+                            </div>
+                        </div>
+                        <div class="user-content">
+                            <label for="">{__('Großhandel:')}</label>
+                            <div class="yd-inner-margin">
+                            <input type="checkbox" name="great" value="1" /> {__('Darf beim Großhändler auf Firmenkosten bestellen')}
+                            </div>
+                        </div>
+
+
+                        <div class="user-content">
+                            <label for="">{__('Gruppe:')}</label>
+                            <select name="budget" class="bg w280">
+                                {foreach from=$company->getBudgets() item=budget}
+                                <option value="{$budget->getId()}">{$budget->getName()}</option>
+                                {foreachelse}
+                                <option value="0">{__('Kein Budget angelegt')}!</option>
+                                {/foreach}
+                            </select>
+                            <span class="checked"><img src="{$domain_static}/images/yd-icons/icon_checked.gif" width="18" height="19" /></span>
+                        </div>
+                        <div class="user-content">
+                            <label for="">&nbsp;</label>
+                            <input type="submit" class="button" name="add-acc" value="{__('Account einrichten')}"/>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div> <!-- Ende Meine Daten -->
+        </div> <!-- content-box-content -->
+     </div> <!-- content-box-->
+     </div> <!-- main-content -->
+     </div> <!-- admincase -->
+
+{/block}

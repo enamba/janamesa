@@ -1,0 +1,62 @@
+<html lang="en">
+    <head>
+
+        <title>{__("Budgetsharing")}</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="yourdelivery GmbH" />
+        <meta name="publisher" content="yourdelivery GmbH" />
+
+    </head>
+    <body marginheight="0" topmargin="0" marginwidth="0" bgcolor="#F0F0F0" offset="0" leftmargin="0">
+
+        <!-- wrapper table. needed as some readers strip the <html>, <head> and <body> tag -->
+        <table cellspacing="0" style="margin-top: 20px; font-size: 13px; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444;" bgcolor="#F0F0F0" cellpadding="0" width="98%"><tr><td>
+
+                    <!-- /////////////////////////////////// Newsletter Content  /////////////////////////////////// -->
+
+                    <table rules="none" cellspacing="0" bordercolor="#c2c2c2" border="1" frame="border" align="center" style="border-color: #c2c2c2 #c2c2c2 #c2c2c2 #c2c2c2; font-size: 13px; background: #ffffff; border-collapse: collapse; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444; border-spacing: 0px; border-style: solid solid solid solid; border-width: 1px 1px 1px 1px;" cellpadding="0" bgcolor="#FFFFFF" width="600">
+                        <tr><td>
+                                <!-- Main Newsletter Content Starts here. Add Modules below this line -->
+
+                                <!-- Module: Header -->
+                                <table width="600" align="center" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td>
+                                            <img src="http://www.{$config->domain->base}/media/images/yd-mail/{$config->domain->base}/yd-mail-budgetsharing.jpg" alt="" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- End Module -->
+
+                                <!-- Module: Content -->
+                                <table cellspacing="0" align="center" style="font-size: 13px; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444;" width="520" cellpadding="0">
+                                    <tr>
+                                        <td>
+
+                                            <h2 style="font-size: 16px; font-family: Arial, sans-serif; color: #000; letter-spacing: -1px;">
+                                            {__("%s hat ihr Budget verwendet", $order->getCustomer()->getFullname())}
+                                            </h2>
+
+                                            <p>
+                                                {$cust->getEmailSalutation()},
+                                                <br /><br />
+                                                {__("%s hat am %s auf Dein Budget zugegriffen. Dein Budget wurde in Höhe von %s € belastet.", $order->getCustomer()->getFullname(), $order->getTime()|date_format:__("%A, %d.%m.%G um %H:%M Uhr"), $amount|inttoprice)}
+                                            </p>
+                                            <p>
+                                                <br />
+                                                {__("Wenn zu Unrecht auf Dein Budget zugegriffen worden ist, kontaktiere bitte Deinen Firmenadministrator um eventuellen Missbrauch zu melden.")}
+                                            </p>
+                                            <p>
+                                                {__("Dein Team von %s", $config->domain->base)}
+                                            </p>
+
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- End Module -->
+                                {include file="_email_footer.htm"}
+
+                            </td></tr></table><!-- end wrapper table-->
+
+                    </body>
+                    </html>

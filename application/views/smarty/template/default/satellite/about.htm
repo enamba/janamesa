@@ -1,0 +1,25 @@
+{extends file='satellite/_base_start.htm'}
+{block name="content"}
+    <br/>
+<div id="info">
+    <h2>{__("Impressum von %s.", $service->getName())}</h2>
+</div>
+<div class="yd-box clearfix">
+    <div id="impressum">
+        <h3>{__("Impressum:")}</h3>
+        <br/>
+        <h4>{$service->getName()}</h4><br />
+        
+        <i>
+            <p>{$service->getStreet()} {$service->getHausnr()} </p>
+            <p> {$service->getPlz()} {$service->getCity()->getCity()}</p>
+            <p>{__("Tel.:")} {$service->getTel()}</p>
+        </i>
+        
+        <i>{$satellite->getImpressum()}</i>
+    </div>
+                        
+    <iframe style="margin-top: 30px; margin-bottom: 20px;" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.de/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q={$service->getStreet()|urlencode}+{$service->getHausnr()|urlencode},+{$service->getPlz()|urlencode},+{$service->getCity()->getCity()|urlencode}&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+</div>
+
+{/block}

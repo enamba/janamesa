@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="de" xml:lang="de" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="de" xml:lang="de" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="de" xml:lang="de" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="de" xml:lang="de" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="de" xml:lang="de">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link href="style/style.css" rel="stylesheet" type="text/css" />
+        <title>##TITLE##</title>
+        <meta name="description" content="##DESCRIPTION##" />
+        <meta name="keywords" content="##KEYWORDS##" />
+        <script type="text/javascript" src="/style/jquery.js"></script>
+        <script type="text/javascript">
+            <!--
+            jQuery('#search-plz').live('click',function(){
+                var plz = jQuery('input[name=plz]').val();
+                location.href = '/'+plz;
+                return false;
+            });
+            jQuery('input[name=plz]').live('click',function(){
+                jQuery(this).val(''); 
+            });
+            -->
+        </script>
+    </head>
+    <body>
+
+        <div id="wrapper">
+
+            <div id="header-home">
+                <img src="style/images/header.png" width="1020" height="150" alt="" />
+            </div>
+
+            <div id="plz-home">
+
+                <img class="picture-left" src="style/images/picture-left.png" alt="" />
+
+                <form>
+                    <input class="text" name="plz" type="text" value="Postleitzahl" />
+                    <input class="submit" id="search-plz" type="submit" value="" />
+                </form>
+
+                <img class="picture-right" src="style/images/picture-right.png" alt="" />
+
+            </div>
+
+            <div id="info">
+                ##TEXT##
+            </div>
+
+            <a href="impressum.htm" id="impressum" rel="##REL##">
+                Impressum
+            </a>
+
+        </div>
+
+    </body>
+</html>

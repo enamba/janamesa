@@ -1,0 +1,49 @@
+<div class="yd-dialogs"><a class="yd-dialogs-close"></a>
+
+    <div class="yd-dialogs-head">
+        <h2>{__('Kontodaten - zur Teilnahme am Lastschriftverfahren')}</h2>
+    </div>
+
+    <form class="yd-validation">
+        <div class="yd-lightbox-content-container">
+
+            <div class="yd-form">
+                <strong class="yd-form-tease">{__('Bitte gib Deine Kontodaten ein:')}</strong>
+                <div class="yd-form-wrapper">
+                    <br /><br />
+                    <ul class="yd-clearfix">
+                        <li class="yd-form-left">
+                            <span>{__('Kontoinhaber')} <b class="red">*</b></span>
+                        </li>
+                        <li class="yd-form-right">
+                            <input type="text" name="ktoName" id="ktoName" class="yd-form-input yd-form-invalid" value="" />
+                            <em class="yd-form-info hidden" id="debit-reg-name-info" >{__('Bitte gib den Kontoinhaber an')}</em>
+                        </li>
+                    </ul>
+                    <ul class="yd-clearfix">
+                        <li class="yd-form-left">
+                            <span>{__('Kontonummer')} <b class="red">*</b></span>
+                        </li>
+                        <li class="yd-form-right">
+                            <input type="text" name="ktoNr" id="ktoNr" class="yd-form-input yd-form-invalid yd-only-nr" value="" />
+                            <em class="yd-form-info hidden" id="debit-reg-nr-info" >{__('Bitte gib die Kontonummer ein')}</em>
+                        </li>
+                    </ul>
+                    <ul class="yd-clearfix">
+                        <li class="yd-form-left">
+                            <span>{__('Bankleitzahl')} <b class="red">*</b></span>
+                        </li>
+                        <li class="yd-form-right">
+                            <input type="text" name="ktoBlz" id="ktoBlz" class="yd-form-input yd-form-invalid yd-only-nr" value="" />
+                            <em class="yd-form-info hidden" id="debit-reg-blz-info" >{__('Bitte gib die Bankleitzahl ein')}</em>
+                        </li>
+                    </ul>
+                </div>
+                <br /><br /><br />
+                <input type="button" id="yd-finish-payment-debit-register-form-submit" value="{__('Speichern')}" class="button" />&nbsp;
+            </div>
+
+        </div>
+    </form>
+
+</div>

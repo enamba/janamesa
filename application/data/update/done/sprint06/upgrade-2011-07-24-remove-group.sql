@@ -1,0 +1,2 @@
+-- DROP TABLE IF EXISTS order_group_nn;
+-- DROP TABLE IF EXISTS order_group;

@@ -1,0 +1,84 @@
+<div class="be-dialogs"><a class="be-dialogs-close"></a>
+
+    <div class="be-dialogs-head">
+        <h2>{__b('Optionen für den Gutschein')} {$code->getCode()} (#{$code->getId()})</h2>
+         {if $lightboxstate > 0}
+         <h4 style="color:red; font-size:16px; font-weight:bold;">{__b('Gutschein wurde zurückgesetzt')} </h4>    
+         {/if}
+    </div>
+   
+    <div class="be-dialogs-body">
+
+        <div style="width: 200px;margin: 0 auto 20px;text-align:center;font-size:16px;">
+            <div class="yd-grid">
+                <a href="#" class="yd-grid-trigger">{__b('aus Bestellung #%d', $orderId)}</a>
+                <div class="yd-grid-box">
+                    <a class="yd-grid-box-close" href="#"></a>
+                    <ul class="yd-grid-box-content">    
+                        <li><a href="/administration_order/index/type/view_grid_orders/IDgrid/{$orderId}" target="_blank">{__b('Bestell-Grid')}</a></li>
+                        <li><a href="/download/order/{Default_Helpers_Crypt::hash($orderId)}">{__b('PDF-Ansicht')}</a></li>
+                        <li><a href="#" onclick="return popup('/order/bestellzettel/order/{$orderId}', 'Bestellzettel', 800, 600);">{__b('HTML-Ansicht')}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="be-discount-formulars">
+            
+            <ul>
+                <li class="be-dc1">
+                    <label>{__b('Rabattaktion:')}</label>
+                    {$rabatt->getName()} {if strlen($rabatt->getInfo()) > 0}({$rabatt->getInfo()}){/if}
+                </li>
+                <li class="be-dc7">
+                    <label>{__b('Betrag:')}</label>
+                    {if $rabatt->getKind() == 0}
+                    {$rabatt->getRabatt()} %
+                    {else}
+                    {$rabatt->getRabatt()|inttoprice} €
+                    {/if}
+                </li>
+                <li class="be-dc8">
+                    <label>{__b('Gültig ab:')}</label>
+                    {$rabatt->getStart()|date_format:'%d.%m.%Y %H:%M'}
+                </li>
+                <li class="be-dc9">
+                    <label>{__b('Gültig bis:')}</label>
+                    {$rabatt->getEnd()|date_format:'%d.%m.%Y %H:%M'}
+                </li>
+                <li class="be-dc10">
+                    <label>{__b('Mindestbestellwert:')}</label>
+                    {$rabatt->getMinAmount()|inttoprice} €
+                </li>
+                <li class="be-dc3">
+                    <label>{__b('Typ')}</label>
+                    {$rabatt->getType()} <small>{$discountTypes[$rabatt->getType()]['description']}</small>
+                </li>
+                {if $rabatt->isNewCustomerDiscount() && $rabatt->getType() < 4}
+                <li class="be-dc5">
+                    <label>{__b('Landingpage')}</label>
+                    <a href="http://{{$config->domain->base}}/{$rabatt->getReferer()}" target="_blank">{$domain}/{$rabatt->getReferer()}</a>
+                </li>
+                {/if}
+                <li class="be-dc2">
+                    <label>{__b('Status')}</label>
+                    {if $rabatt->isActive()} {__b('aktiv')} {else} {__b('deaktiviert')} {/if}
+                </li>
+
+            </ul>
+
+            <hr />
+            
+            <a  id="yd-rabattcode-reset-{$code->getId()}-{$orderId}" class="button yd-rabattcode-reset"  target="_blank">{__b('zurücksetzen')}</a>
+            <a class="button" href="/administration_discount/edit/id/{$rabatt->getId()}" target="_blank">{__b('Rabattaktion editieren')}</a>
+            <a class="button cancel yd-close-lightbox">Fertig</a>
+            
+            <br /><br /><br />
+            
+            <a class="button" href="/administration_order?type=view_grid_orders&amp;rabattId={$rabatt->getId()}" target="_blank">{__b('Alle Bestellungen zu dieser Gutschein-Aktion')}</a>
+
+        </div>
+
+    </div>
+
+</div>

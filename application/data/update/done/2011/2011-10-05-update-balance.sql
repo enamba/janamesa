@@ -1,0 +1,1 @@
+update billing_balance bb inner join billing b on b.id=bb.billingId set comment=CONCAT('Verrechnung aus Rechnung ',b.number) where comment='added by billing system';

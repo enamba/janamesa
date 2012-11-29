@@ -1,0 +1,28 @@
+
+{if $cust->isLoggedIn() && $order->getMode() == "rest" && $order->getGroupMembers()->count() > 0}
+
+    <div class="yd-box" id="yd-current-group-members">
+        <div class="yd-box-head" id="yd-expand-group-head">
+            <a href="#" id="yd-expand-group-plus" class="yd-plus"></a>
+            <a href="#" id="yd-expand-group-minus" class="yd-minus"></a>
+            <img alt="" src="{$domain_static}/images/yd-icons/icon-recent-member.png" />
+            <span class="tooltip" title="{__('Entfernen sie aktuelle Mitglieder von dieser Gruppenbestellung')}">{__('Gruppenmitglieder')}</span>
+        </div>
+
+        <div class="yd-box-body" id="yd-expand-group">
+            <ul>
+               {foreach from=$cgm item=item key=hash}
+                    {foreach from=$order->getGroupMembers() item=member}
+                        {if $member->getEmail() == $item.email}
+                            <li id="yd-container-group-email-{$hash}">
+                                <em>{$item.email|truncate:20:"..."}</em>
+                                <a href='#' class='yd-erase-group-email' id='yd-erase-group-email-{$hash}'><strong>« {__('entfernen')}</strong></a>
+                            </li>
+                        {/if}
+                    {/foreach}
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+
+{/if}

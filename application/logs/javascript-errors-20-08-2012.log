@@ -1,0 +1,70 @@
+TIME: 20-08-2012 13:46:35 
+ MESSAGE: TypeError: ydCustomer.setHasLocations is not a function 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-test.js 
+ LINE: 21165 
+ PARENTURL: http://www.yourdelivery.local/user/locations#new_address 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+
+TIME: 20-08-2012 17:07:01 
+ MESSAGE: TypeError: this.menu is undefined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-test.js 
+ LINE: 310 
+ PARENTURL: http://www.yourdelivery.local/user/index 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+
+TIME: 20-08-2012 17:07:09 
+ MESSAGE: TypeError: this.menu is undefined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-test.js 
+ LINE: 310 
+ PARENTURL: http://www.yourdelivery.local/user/index 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+
+TIME: 20-08-2012 17:07:11 
+ MESSAGE: TypeError: this.menu is undefined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-test.js 
+ LINE: 310 
+ PARENTURL: http://www.yourdelivery.local/user/index 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+
+TIME: 20-08-2012 17:07:12 
+ MESSAGE: TypeError: this.menu is undefined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-test.js 
+ LINE: 310 
+ PARENTURL: http://www.yourdelivery.local/user/index 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+
+TIME: 20-08-2012 17:07:38 
+ MESSAGE: TypeError: this.menu is undefined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-test.js 
+ LINE: 310 
+ PARENTURL: http://www.yourdelivery.local/user/index 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+
+TIME: 20-08-2012 17:07:50 
+ MESSAGE: TypeError: this.menu is undefined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-test.js 
+ LINE: 310 
+ PARENTURL: http://www.yourdelivery.local/user/index 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+
+TIME: 20-08-2012 17:08:02 
+ MESSAGE: TypeError: this.menu is undefined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-test.js 
+ LINE: 310 
+ PARENTURL: http://www.yourdelivery.local/user/index 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+
+TIME: 20-08-2012 17:09:39 
+ MESSAGE: TypeError: this.menu is undefined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-test.js 
+ LINE: 310 
+ PARENTURL: http://www.yourdelivery.local/user/index 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+
+TIME: 20-08-2012 17:09:42 
+ MESSAGE: TypeError: this.menu is undefined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-test.js 
+ LINE: 308 
+ PARENTURL: http://www.yourdelivery.local/user/index 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+

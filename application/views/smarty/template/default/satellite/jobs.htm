@@ -1,0 +1,157 @@
+{extends file='satellite/_base_start.htm'}
+{block name="content"}
+<br/>
+
+<div id="info">
+    <h2>{__("Arbeite bei %s.", $service->getName())}</h2>
+</div>
+
+<div class="yd-box  clearfix">
+    {if $satellite->getImg('jobTexImg')}<img src="{$satellite->getImg('jobTexImg')}" />{/if}
+
+   
+
+    <p>{$satellite->getJobText()}</p>
+</div>
+
+<form method="post" action="">
+    <div class="yd-box clearfix image_right">
+        <div class="yd-jobs-form clearfix">
+            <table>
+                <tr>
+                   
+                    <td>
+
+                        <select name="top5" size="1">
+                            <option>---{__("Bitte Tätigkeit wählen!")}---</option>
+                            <option>{__("Fahrer")}</option>
+                            <option>{__("Koch")}</option>
+                            <option>{__("Service")}</option>
+                        </select>
+                    </td>
+                     <td></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        {__("Name*")}
+                    </td>
+                    <td>
+                        <input type="text" name="name" />
+                    </td>
+                    <td>
+                        {__("Vorname*")}
+                    </td>
+                    <td>
+                        <input type="text" name="vorname" id="vorname"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {__("E-mail*")}
+                    </td>
+                    <td>
+                        <input type="text" name="email" id="email"/>
+                        <td>
+                            {__("Telefon Nr.*")}
+                        </td>
+                        <td>
+                            <input type="text" name="telefon" id="telefon"/>
+                        </td>
+                </tr>
+                <tr>
+                    <td>
+                        {__("Geburtstag*")}
+                    </td>
+                    <td>
+                        <input type="text" name="geburtstag" id="geburtstag"/>
+                    </td>
+
+                    <td>{__("Straße*")}</td>
+                    <td>
+                        <input type="text" name="strasse" id="strasse"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {__("PLZ Ort*")}
+                    </td>
+                    <td>
+                        <input type="text" name="plz" id="plz"/>
+                    </td>
+
+                    <td>
+                       {__( "Email*")}
+                    </td>
+                    <td>
+                        <input type="text" name="email" id="email"/>
+                    </td>
+                </tr>
+                <tr>
+
+
+                    <td>
+                        {__("Berufstätig*")}
+                    </td>
+                    <td>
+                        <input  class="radio" type="radio" value="Ja" name="berufstaetig">
+                           {__( "Ja")}
+                            <input class="radio" type="radio" value="Nein" name="berufstaetig">
+                               {__( "Nein")}
+
+                                </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                       {__( "Führerschein*")}
+                                    </td><td>
+                                        <input  class="radio" type="radio" value="Ja" name="berufstaetig">
+                                            {__("Ja")}
+                                            <input class="radio" type="radio" value="Nein" name="berufstaetig">
+                                               {__(" Nein")}
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                       {__(" Eigenes Fahrzeug *")}
+                                                    </td>
+                                                    <td>
+                                                        <input class="radio" type="radio" value="Ja" name="berufstaetig">
+                                                          {__("Ja")}
+                                                            <input class="radio" type="radio" value="Nein" name="berufstaetig">
+                                                               {__("Nein")}
+                                                                </td>
+                                                                </tr>
+                                                                </table>
+                                                                <br/>
+                                                                <table>
+                                                                    <tr>
+                                                                        <td>{__("Bemerkungen")}
+
+
+                                                                            <textarea rows="5" cols="60" name="bemerkungen"></textarea>
+                                                                        </td>
+                                                                        <td></td>
+                                                                        <td></td>
+
+
+                                                                    </tr>
+                                                                    <tr><td><br/></td></tr>
+                                                                    <tr>
+                                                                        <td colspan="2">{__("Mit einem Stern (*) gekennzeichnete Felder müssen ausgefüllt werden!")}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input class="submit" type="submit" value="Absenden">
+
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                                </div>
+        
+                                                                {if $satellite->getImg('jobFormularImg')}<img src="{$satellite->getImg('jobFormularImg')}" />{/if}
+
+                                                                </div>
+                                                                </form>
+{/block}

@@ -1,0 +1,66 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+    {foreach from=$messages key=restId item=msgs}
+        <div style="font-weight: bold">
+            {$restId}
+            {foreach from=$msgs['errors'] item=err}
+            <div style="color: red;">
+                {$err}
+            </div>
+            {/foreach}
+            {foreach from=$msgs['success'] item=suc}
+            <div style="color: green;">
+                {$suc}
+            </div>
+            {/foreach}
+        <br/>
+        </div>
+    {/foreach}
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Speisekarte kopieren')}
+            </div>
+            <div class="item-content">
+                <form action="/administration_service/copy" method="post">
+                    <input type="hidden" name="srcId" id="yd-service-copy-srcId" value="" />
+                    <table class="user-tab">
+                        <tr>
+                            <th width="30%">{__b('Von Restaurant')}</th>
+                            <th width="30%">{__b('nach Restaurant')}</th>
+                            <th width="30%">&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="yd-service-copy-from" style="width: 300px;"/>
+                            </td>
+                            <td>
+                                <input type="text" id="yd-service-copy-to" style="width: 300px;"/>
+                                <br/><br/>
+                                <div class="yd-restaurants-list-container hidden">
+                                    <div id="yd-restaurants-list">
+                                    </div>
+                                    <a id="yd-restaurants-list-delete-all" style="display:none">{__b('alle entfernen')}</a>
+                                </div>                                
+                            </td>
+                            <td>
+                                <input type="checkbox" name="menu" checked value="1"/>  {__b('Karte kopieren')}
+                                <br/><br/>
+                                <input type="checkbox" name="openings" value="1"/>  {__b('Öffnungszeiten kopieren')} {__b('(Nur möglich, wenn das Zielrestaurant keine Öffnungszeiten hat)')}
+                                <br/><br/>
+                                <input type="checkbox" name="deliverranges" value="1"/>  {__b('Liefergebiete kopieren')}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <input name="addrestid" value="{__b('Kopieren')}" type="submit"  class="button"/>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+{/block}

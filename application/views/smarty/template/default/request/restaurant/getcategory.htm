@@ -1,0 +1,7 @@
+{if isset($category)}
+<div id="yd-category-box-{$category->getId()}">
+    <table id="yd-restaurant-category-{$category->getId()}">
+        {include file='request/restaurant/showcategorytable.htm'}
+    </table>
+</div>
+{/if}

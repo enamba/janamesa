@@ -1,0 +1,143 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="two-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Übersicht')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <td width="30%">{__b('Firmenrechnugen:')}</td>
+                    <td width="70%">{$compAll}</td>
+                </tr>
+                <tr>
+                    <td>{__b('Firmenrechnugen (noch nicht verschickt):')}</td>
+                    <td>{$compNotDelivered}</td>
+                </tr>
+                <tr>
+                    <td>{__b('Firmenrechnugen (noch nicht bezahlt):')}</td>
+                    <td>{$compNotPayed}</td>
+                </tr>
+                <tr>
+                    <td>{__b('Firmenrechnugen (bezahlt):')}</td>
+                    <td>{$compPayed}</td>
+                </tr>
+            </table>
+            <br/>
+            <table class="user-tab">
+                <tr>
+                    <td width="30%">{__b('Dienstleisterrechnungen:')}</td>
+                    <td width="70%">{$serviceAll}</td>
+                </tr>
+                <tr>
+                    <td>{__b('Dienstleister (noch nicht verschickt):')}</td>
+                    <td>{$serviceNotDelivered}</td>
+                </tr>
+                <tr>
+                    <td>{__b('Dienstleister (noch nicht bezahlt):')}</td>
+                    <td>{$serviceNotPayed}</td>
+                </tr>
+                <tr>
+                    <td>{__b('Dienstleister (bezahlt):')}</td>
+                    <td>{$servicePayed}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="item-head">
+            {__b('Rechnung erstellen')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <td width="20%">
+                        {__b('Nächste Rechnungenummer:')}
+                    </td>
+                    <td>
+                        <b id="nextBillingNumber">{$nextBillingNumber}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {__b('Typ')}
+                    </td>
+                    <td>
+                        <select id="nextBilling-type" style="width: 200px;">
+                            <option value="rest">{__b('Dienstlesterrechnung')}</option>
+                            <option value="company">{__b('Firmenrechnung')}</option>
+                            <option value="courier">{__b('Kurierdienst')}</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="yd-nextBilling-owner-type">
+                        {__b('Dienstleister:')}
+                    </td>
+                    <td id="yd-nextBilling-owner-list-services">
+                        <select id="nextBilling-services-list" style="width: 200px;">
+                            <option value=""></option>
+                            {foreach from=$restTable item=restaurant}
+                            <option value="{$restaurant.id}">{$restaurant.name} ({$restaurant.id})</option>
+                            {/foreach}
+                        </select>
+                    </td>
+                    <td id="yd-nextBilling-owner-list-companies" style="display:none;">
+                        <select id="nextBilling-companies-list" style="width: 200px;">
+                            <option value=""></option>
+                            {foreach from=$compTable item=company}
+                            <option value="{$company.id}">{$company.name} ({$company.id})</option>
+                            {/foreach}
+                        </select>
+                    </td>
+                    <td id="yd-nextBilling-owner-list-couriers" style="display:none;">
+                        <select id="nextBilling-couriers-list" style="width: 200px;">
+                            <option value=""></option>
+                            {foreach from=$courierTable item=courier}
+                            <option value="{$courier.id}">{$courier.name} ({$courier.id})</option>
+                            {/foreach}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {__b('Von:')}
+                    </td>
+                    <td>
+                        <input type="text" value="{$smarty.now|date_format:'%d.%m.%Y'}" id="yd-nextBilling-create-start"/>&nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {__b('Bis:')}
+                    </td>
+                    <td>
+                        <input type="text" value="{$smarty.now|date_format:'%d.%m.%Y'}" id="yd-nextBilling-create-end"/>&nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" id="yd-reserve-number" value="{__b('Erstellen')}" class="button"/></td>
+                </tr>
+            </table>
+            <div id="yd-reserve">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Rechnungsintervalle')}
+        </div>
+        <div class="item-content">
+            {$grid}
+        </div>
+    </div>
+
+</div>
+
+{/block}

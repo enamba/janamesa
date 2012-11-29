@@ -1,0 +1,39 @@
+{extends file="base.htm"}
+{block name="content"}
+
+<div class="yd-news-off">
+    <form class="fo yd-validation" action="/unsubscribe" method="post" >
+
+        <h1>{__('Schade! Willst du dich wirklich abmelden? Dann verpasst du...')}</h1>
+
+        <ul>
+            <li>{__('Gutscheine und Aktionen')}</li>
+            <li>{__('Infos über neue Lieferservices in deiner Nähe')}</li>
+            <li>{__('Spezielle Angebote nur für dich!')}</li>
+        </ul>
+
+        {if $signoff === false}
+            <p>
+                {__('Solltest du es dir anders überlegen, würden wir uns freuen, dich wieder über
+                Neuheiten und Aktionen informieren zu dürfen. Auf unserer Homepage kannst du den
+                Newsletter jederzeit wieder abonnieren.')}
+            </p>
+            
+            <div id="yd-newsletter-off1">
+                {foreach $reasons as $r => $reason}
+                <input type="radio" value="{$r}" name="reason" id="yd-unsubscribe-reason-{$r}"/> <label for="yd-unsubscribe-reason-{$r}">{$reason}</label><br />
+                {/foreach}<br />
+                <input id="email" type="text" value="{$email|escape}" name="email" class="validate[custom[email]]" />
+                <input name="abmelden" class="button" type="submit" value="{__('Abmelden!')}" />
+            </div>
+        {else}
+            <div id="yd-newsletter-off2">
+                <h2>
+                    {__('Du hast dich erfolgreich vom Newsletter abgemeldet.')}
+                </h2>
+            </div>
+        {/if}
+    </form>
+</div>
+
+{/block}

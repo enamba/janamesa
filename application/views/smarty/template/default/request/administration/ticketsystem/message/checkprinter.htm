@@ -1,0 +1,6 @@
+<form method="post" action="/request_administration_ticketsystem_message/checkprinter" class="yd-message-callback-post">
+    <input type="hidden" name="mid" value="{$message->getId()}" />
+    <input type="hidden" name="pid" value="{$printer->getId()}" />
+    
+    <input type="submit" value="{__b('Drucker')} #{$printer->getId()} {__b('prüfen')}" class="button" />
+</form>

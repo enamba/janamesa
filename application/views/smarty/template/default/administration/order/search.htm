@@ -1,0 +1,40 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="one-column-box">
+    <a name="courier"></a>
+    <div class="item">
+        <div class="item-head">
+            {__b('Nach Bestellungen suchen')}
+        </div>
+        <div class="item-content">
+            <form action="" method="post" id="">
+                    <table>
+                        <tr>
+                            <td>
+                                {__b('Mögliche Eingaben, eine pro Zeile:<br/> - id<br/> - id mit Prefix<br/> - Nummer mit Prefix')}<br/><br/>
+                                <textarea rows="3" name="searchfor" cols="40" style="height: 200px;">{$input}</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="{__b('Suchen')}" class="button" ></a>                                
+                            </td>
+                        </tr>
+                        {if strlen($result)>0}
+                        <tr>
+                            <td>
+                                <br/>{__b('Suchergebnis:')}<br/><br/>
+                                <textarea rows="3" name="names" cols="180" style="height: 200px;">{$result}</textarea>
+                            </td>
+                        </tr>
+                        {/if}
+                    </table>
+            </form>
+        </div>
+    </div>
+    <div class="item">
+    </div>
+</div>
+{/block}
+

@@ -1,0 +1,54 @@
+{if $config->domain->base == 'lieferando.at'}
+<script type="text/javascript">    
+    /*<![CDATA[*/
+   
+    var adlantic_product = {};
+   
+    var no_adlantic_auto_track = 1;
+   
+    var build_adlantic_menu = function() {
+      
+        if (!ydCurrentRanges[ydState.getCity()] && !ydCurrentRanges[ydState.getCity()].name) {
+            return false;
+        }
+
+        var tracking_city = ydCurrentRanges[ydState.getCity()].name;
+        tracking_city = tracking_city.replace(/\ /g,"-");
+        //  maybe used later
+        //   tracking_ref = 'http://' +  document.domain + "/" + ydCurrentRanges[ydState.getCity()].restUrl;
+     
+        tracking_ref = 'http://' +  document.domain + window.location.pathname;
+     
+        adlantic_product = {
+            identifier: "{$service->getId()}",
+            fn: "{$service->getName()|addslashes|addslashes}",
+            description: "{round($service->getRating()->getAverage()*2,0)/2|string_format:'%.1f'} Sterne ({$service->getRating()->count(null, true, false, true)} Bewertungen)",
+            category: Array(tracking_city),
+            brand: "{$service->getTagsWithMaxStringlength(25)|implode:', '|addslashes|addslashes}",
+            price: 0, 
+            amount: 0,
+            currency: "EUR",
+            url: tracking_ref + "?utm_source=ret&utm_medium=dp&utm_campaign=dp_44&utm_content=dp_1",
+            photo: "{$timthumb}/{$config->domain->base}/service/{$service->getId()}/{$service->getName()|urlencode}-155-100.jpg"
+        };
+    }
+    
+    var track_adlantic_in_menu = function() {
+        build_adlantic_menu();
+        track_adlantic();
+    }
+    
+    //catch special case when getCity is not defined            
+    if (ydState.getCity() != null && typeof ydCurrentRanges[ydState.getCity()] != "undefined") {    
+        $(document).ready(function(){                   
+            try {
+                track_adlantic_in_menu();                   
+            } catch(err) {
+                        
+            }                  
+        });
+    }
+    
+    /* ]]> */
+</script>
+{/if}

@@ -1,0 +1,67 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/stats/services/navigation.htm'}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Anzahl der Dienstleister nach Status')}
+        </div>
+        <div class="item-content">
+            {__b('Der Link führt zu allen Dienstleister mit diesem Status. Nicht vergessen - um diese Dienstleister sehen zu können, muss die Option "offline anzeigen" aktiviert werden. Klicken Sie %s hier %s , um diese Option zu aktivieren.', '<a href="/administration/showofflineservices/do/1" target="_blank">', '</a>')} 
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <td width="30%" colspan="2">{__b('Status')}</td>
+                    <td width="10%">{__b('Anzahl der Restaurants (mit Vertrag)')}</td>
+                    <td width="10%">{__b('Anzahl der Restaurants (ohne Vertrag)')}</td>                   
+                    <td width="10%">{__b('Anzahl der Restaurants (gesamt)')}</td>
+                    <td width="5%">{__b('Differenz Montag')}</td>
+                    <td width="5%">{__b('Differenz Dienstag')}</td>
+                    <td width="5%">{__b('Differenz Mittwoch')}</td>
+                    <td width="5%">{__b('Differenz Donnerstag')}</td>
+                    <td width="5%">{__b('Differenz Freitag')}</td>
+                    <td width="5%">{__b('Differenz Sonnabend')}</td>
+                    <td width="5%">{__b('Differenz Sonntag')}</td>
+                    <td width="5%">{__b('Summe')}</td>
+                </tr>
+                {foreach from=$restaurants item=r}
+                <tr>
+                    <td>{$r['statusId']}</td>
+                    <td>{$r['status']}</td>
+                    <td>{$r['countContract']}</td>
+                    <td><a href='/administration/services/Offline Statusgrid/{$r["statusId"]}/Franchisegrid/2'>{$r['countNoContract']}</a></td>                    
+                    <td><a href='/administration/services/Offline Statusgrid/{$r["statusId"]}'>{$r['count']}</a></td>
+                    {foreach from=$r.diff item=diff}
+
+                    <td> 
+                        {if ($diff.add || $diff.sub)}                        
+                        <span style="color: green;">+{$diff.add}</span> | 
+                        <span style="color: red;">-{$diff.sub}</span>     
+                        {elseif ($diff.sum)}
+                            {if ($diff.sum > 0)}
+                                <span style="color: green;">+{$diff.sum} </span>
+                             {else}
+                                <span style="color: red;">{$diff.sum}</span>     
+                            {/if}
+                        {else}
+                        0 
+                        {/if}
+                    </td>
+
+                    {/foreach}
+
+                </tr>
+                {/foreach}
+            </table>
+        </div>
+    </div>
+</div>
+{/block}

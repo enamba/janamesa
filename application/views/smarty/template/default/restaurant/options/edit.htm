@@ -1,0 +1,62 @@
+{extends file="restaurant/base.htm"}
+{block name="content"}
+
+<form action="/restaurant_options/edit" method="post" name="form">
+    <input type="hidden" name="id" value="{$option->getId()}"/>
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                <table>
+                    <tr><td colspan="{count($option->getOptionsGroups()) + 2}">{{__b('Option')}}  #{$option->getId()}</td></tr>
+                    <tr>
+                        <td width="10%">{{__b('Optionsgruppe')}}:</td>
+                        {foreach from=$option->getOptionsGroups() item=group}
+                        <td width="20%" align="left">{$group['name']} (#{$group['id']})</td>
+                        {/foreach}
+                        <td width="{100 - count($option->getOptionsGroups())*10}%"></td>
+                    </tr>
+                </table>                
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width ="10%">{{__b('Name')}}:</td>
+                            <td><input type="text" name="name" value="{$option->getName()}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{{__b('Preis')}}:</td>
+                            <td><input type="text" name="cost" value="{intToPrice($option->getCost())}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{{__b('Mwst, %')}}</td>
+                            <td>
+                                <select name="mwst">
+                                    {foreach from=Default_Helpers_Money::getAllVats() item=v}
+                                        <option value="{$v}" {if $option->getMwst()==$v}selected{/if}>{$v}</option>
+                                    {/foreach}
+                                </select> *
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{{__b('Status')}}:</td>
+                            <td>
+                                <select name="status">
+                                    <option value="1" {if $option->getStatus() == 1}selected{/if}>{{__b('Online')}}</option>
+                                    <option value="0" {if $option->getStatus() == 0}selected{/if}>{{__b('Offline')}}</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" name="cancel" value="{{__b('Abbrechen')}}"/>
+                <input type="submit" value="{{__b('Bestätigen')}}"/>
+            </div>
+        </div>
+    </div>
+</form>
+{/block}    

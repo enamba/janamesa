@@ -1,0 +1,56 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="be-1-column">
+    <div class="be-box">
+        <h2>{__b(' Registrierungscode prüfen')}</h2>
+        <div class="be-box-in be-discount-formulars">
+            <form action="/administration_discount/checkregistrationcode/" method="post">
+                <label>{__b('Registrierungscode')}</label>
+                <input type="text" name="registrationcode" value="{if is_object($registrationcode)}{$registrationcode->getRegistrationCode()}{/if}"/>
+                <input type="submit" name="{__('prüfen')}" />
+            </form>
+
+            {if is_object($registrationcode)}
+            <ul style="float:none;">
+                <li class="be-dc1"><label>{__b('Rabattaktion')}:</label>
+                    <div class="yd-grid">
+                        <a href="#" class="yd-grid-trigger">{$registrationcode->getParent()->getName()}</a>
+                        <div class="yd-grid-box">
+                            <a class="yd-grid-box-close" href="#"></a>
+                            <ul class="yd-grid-box-content">    
+                                <li><a href="/administration_discount/edit/id/{$registrationcode->getRabattId()}" target="_blank">{__b('Rabattaktion editieren')}</a></li>
+                                <li><a href="/administration_order?type=view_grid_orders&amp;rabattId={$registrationcode->getRabattId()}" target="_blank">{__b('Alle Bestellungen dieser GS Aktion')}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                <li class="be-dc7"><label>{__b('Betrag')}:</label>
+                    {if $registrationcode->getParent()->getKind() == Yourdelivery_Model_Rabatt::RELATIVE}
+                    {$registrationcode->getParent()->getRabatt()}%
+                    {else}
+                    {__b('%s €',$registrationcode->getParent()->getRabatt()|inttoprice)}
+                    {/if}
+                </li>
+                <li><label>{__b('Gültigkeit')}:</label> {if $registrationcode->getParent()->getRrepeat() == 0}{__b('nur einmal')}{else}{__b('mehrfach')}{/if}</li>
+                <li class="be-dc8"><label>{__b('Gültig ab')}:</label> {$registrationcode->getParent()->getStart()|date_format:'%d.%m.%Y %H:%m'}</li>
+                <li class="be-dc9"><label>{__b('Gültig bis')}:</label> {$registrationcode->getParent()->getEnd()|date_format:'%d.%m.%Y %H:%m'}</li>
+                <li class="be-dc10"><label>{__b('Mindestbestellwert')}:</label> {__b('%s €',$registrationcode->getParent()->getMinAmount()|inttoprice)}</li>
+                <li class="be-dc3"><label>{__b('Typ')}:</label> {$types[$registrationcode->getParent()->getType()]['description']}</li>
+                
+                {if $registrationcode->getParent()->needsLandingpage()}
+                <li class="be-dc42"><label>{__b('Landing Page')}:</label> {__b('Ja')}</li>
+                <li class="be-dc42"><label>{__b('URL')}:</label> <a href="http://{$config->domain->base}/{$registrationcode->getParent()->getReferer()}" target="_blank">/{$registrationcode->getParent()->getReferer()}</a></li>
+                {/if}
+            </ul>
+            {/if}            
+        </div>
+
+        {if is_object($registrationcode)}
+            <div>{$grid}</div>
+        {/if}
+
+    </div>
+</div>
+
+{/block}    

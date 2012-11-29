@@ -1,0 +1,43 @@
+{extends file="restaurant/popupbase.htm"}
+{block name="content"}
+
+<div style="font-size: 22px; font-weight: bold;">Extras</div>
+für <b>{$meal->getCategory()->getName()} &rarr; {$meal->getName()}</b>, Größe: <b>{$size->getName()}</b>
+<br/><br/><br/>
+
+{$extrasGroups = $restaurant->getMealExtrasGroups()}
+
+
+
+{if $restaurant->getMealExtrasGroupsCount() > 0}
+<table>
+    <tr>
+        <th width="35%" height="50">Extra</th>
+        <th width="25%">Preis</th>
+        <th width="25%">Gruppe</th>
+        <th width="15%"></th>
+    </tr>
+    {foreach from=$extrasGroups key=name item=extrasGroup}
+        {foreach from=$extrasGroup->getExtras() item=e}
+            {if ($category->getExtraCost($e->getId(), $size->getId()) != '')}
+            <tr class="extras-group-preview">
+                <td>{$e->getName()}</td>
+                <td>{intToPrice($category->getExtraCost($e->getId(), $size->getId()))} € </td>
+                <td><small>{$extrasGroup->getName()}</small></td>
+                <td><small>Gehört zur Kategorie</small></td>
+            </tr>
+            {else}
+                {if ($meal->getExtraCost($e->getId(), $size->getId()) != 0)}
+                <tr class="extras-group-preview-meal">
+                    <td>{$e->getName()}</td>
+                    <td>{intToPrice($meal->getExtraCost($e->getId(), $size->getId()))} € </td>
+                    <td><small>{$extrasGroup->getName()}</small></td>
+                    <td></td>
+                </tr>
+                {/if}
+            {/if}
+        {/foreach}
+    {/foreach}
+</table>
+{/if}
+{/block}

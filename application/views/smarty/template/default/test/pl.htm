@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="pl" xml:lang="pl" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="pl" xml:lang="pl" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="pl" xml:lang="pl" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="pl" xml:lang="pl" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="pl" xml:lang="pl">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="viewport" content="width=1100">
+
+        <title>Test</title>
+
+        <link rel="stylesheet" type="text/css" href="/media/css/www.pyszne.pl/yd-frontend-core.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/www.pyszne.pl/yd-frontend-autocomplete.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/www.pyszne.pl/yd-frontend-jquery.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/www.pyszne.pl/yd-frontend-hidden.css" />
+
+        <style>
+            #yd-nonfooter > div, #yd-content > div {
+                position: relative;
+            }
+
+            i {
+                position: absolute;
+                top: -15px;
+                left: 50%;
+                margin-left: -500px;
+                padding: 5px 8px;
+                font-family: arial;
+                font-size: 14px;
+                font-weight: bold;
+                font-style: normal;
+                color: #000;
+                border: 1px solid #000;
+                background: #fff;
+            }
+        </style>
+
+    </head>
+    <body class="pl">
+
+        <div id="yd-nonfooter">
+
+            <div class="yd-header">
+                <div class="yd-inner">
+                    <a class="yd-logo" href="/"><img src="/media/images/www.pyszne.pl/Pyszne-pl-jedzenia-z-dostawa-online-logo.png" title="pyszne.pl to zamawianie online jedzenia z dostawą" alt="Zamów przez internet jedzenie z dostawą na Pyszne.pl" /></a>
+                    <div class="yd-bubble"></div>
+                </div>
+            </div>
+
+            <div style="margin: 20px 0; padding: 20px 0; background: #ccc;"> <i>Standardlayout (404 Pages und Elterncode für ALLE anderen PL Autocompletes)</i>
+                <div class="pl-autocomplete-wrapper">
+                    <div class="pl-autocomplete-arrow">wpisz adres <br /> dostawy</div>
+                    <form action="/order_basis/citystreet" method="post" class="pl-autocomplete-city-street yd-validation pl-autocomplete-is-short">
+
+                        <input type="text" name="city" value="" class="pl-autocomplete-city" />
+                        <input type="text" name="street" value="" class="pl-autocomplete-street" />
+
+                        <!-- this field only shows up, if needed -->
+                        <input type="text" name="hausnr" class="pl-autocomplete-number" />
+
+                        <input type="submit" name="suchen" value="pokaż restauracje" class="pl-autocomplete-button" />
+
+                        <span class="pl-autocomplete-helper1">MIASTO</span>
+                        <span class="pl-autocomplete-helper2">ULICA</span>
+                        <span class="pl-autocomplete-helper3">NR</span>
+
+                        <span class="pl-autocomplete-why">
+                            Dlaczego potrzebny jest Twój adres?
+                            <span class="pl-autocomplete-reason">
+                                Twój adres jest konieczny, aby pokazać Ci dokładnie te restauracje, które na pewno do Ciebie dowożą.
+                                Uwaga - dane, które podasz będą użyte tylko w celu realizacji zamówienia.
+                            </span>
+                        </span>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="yd-dagobert2" style="margin: 20px 0; padding: 50px 0 30px; background: #ccc;"> <i>Dagobert 2 (alte Startseite, nur noch wenige LPs)</i>
+                <div class="pl-autocomplete-wrapper">
+                    <div class="pl-autocomplete-arrow">wpisz adres <br /> dostawy</div>
+                    <strong>Znajdź restauracje i zamów jedzenie online</strong>
+                    <form action="/order_basis/citystreet" method="post" class="pl-autocomplete-city-street yd-validation pl-autocomplete-is-short">
+
+                        <input type="text" name="city" value="" class="pl-autocomplete-city" />
+                        <input type="text" name="street" value="" class="pl-autocomplete-street" />
+
+                        <!-- this field only shows up, if needed -->
+                        <input type="text" name="hausnr" class="pl-autocomplete-number" />
+
+                        <input type="submit" name="suchen" value="pokaż restauracje" class="pl-autocomplete-button" />
+
+                        <span class="pl-autocomplete-helper1">MIASTO</span>
+                        <span class="pl-autocomplete-helper2">ULICA</span>
+                        <span class="pl-autocomplete-helper3">NR</span>
+
+                        <span class="pl-autocomplete-why">
+                            Dlaczego potrzebny jest Twój adres?
+                            <span class="pl-autocomplete-reason">
+                                Twój adres jest konieczny, aby pokazać Ci dokładnie te restauracje, które na pewno do Ciebie dowożą.
+                                Uwaga - dane, które podasz będą użyte tylko w celu realizacji zamówienia.
+                            </span>
+                        </span>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="yd-goofy" style="margin: 20px 0; padding: 50px 0 30px; background: #ccc;"> <i>Goofy (aktuelle Startseite)</i>
+                <div class="pl-autocomplete-wrapper" style="position: relative; top: auto; left: auto;">
+                    <div class="pl-autocomplete-arrow">wpisz adres <br /> dostawy</div>
+                    <strong>Znajdź restauracje i zamów jedzenie online</strong>
+                    <form action="/order_basis/citystreet" method="post" class="pl-autocomplete-city-street yd-validation pl-autocomplete-is-short">
+
+                        <input type="text" name="city" value="" class="pl-autocomplete-city" />
+                        <input type="text" name="street" value="" class="pl-autocomplete-street" />
+
+                        <!-- this field only shows up, if needed -->
+                        <input type="text" name="hausnr" class="pl-autocomplete-number" />
+
+                        <input type="submit" name="suchen" value="pokaż restauracje" class="pl-autocomplete-button" />
+
+                        <span class="pl-autocomplete-helper1">MIASTO</span>
+                        <span class="pl-autocomplete-helper2">ULICA</span>
+                        <span class="pl-autocomplete-helper3">NR</span>
+
+                        <span class="pl-autocomplete-why">
+                            Dlaczego potrzebny jest Twój adres?
+                            <span class="pl-autocomplete-reason">
+                                Twój adres jest konieczny, aby pokazać Ci dokładnie te restauracje, które na pewno do Ciebie dowożą.
+                                Uwaga - dane, które podasz będą użyte tylko w celu realizacji zamówienia.
+                            </span>
+                        </span>
+
+                    </form>
+                </div>
+            </div>
+
+            <div id="yd-content" class="yd-clearfix">
+
+                <div class="yd-donald" style="margin: 20px 0; height: 200px; background: #ccc;"> <i>Donald (LPs mit grauem Header)</i>
+                    <div class="pl-autocomplete-wrapper">
+                        <div class="pl-autocomplete-arrow">wpisz adres <br /> dostawy</div>
+                        <form action="/order_basis/citystreet" method="post" class="pl-autocomplete-city-street yd-validation pl-autocomplete-is-short">
+
+                            <input type="text" name="city" value="" class="pl-autocomplete-city" />
+                            <input type="text" name="street" value="" class="pl-autocomplete-street" />
+
+                            <!-- this field only shows up, if needed -->
+                            <input type="text" name="hausnr" class="pl-autocomplete-number" />
+
+                            <input type="submit" name="suchen" value="pokaż restauracje" class="pl-autocomplete-button" />
+
+                            <span class="pl-autocomplete-helper1">MIASTO</span>
+                            <span class="pl-autocomplete-helper2">ULICA</span>
+                            <span class="pl-autocomplete-helper3">NR</span>
+
+                            <span class="pl-autocomplete-why">
+                                Dlaczego potrzebny jest Twój adres?
+                                <span class="pl-autocomplete-reason">
+                                    Twój adres jest konieczny, aby pokazać Ci dokładnie te restauracje, które na pewno do Ciebie dowożą.
+                                    Uwaga - dane, które podasz będą użyte tylko w celu realizacji zamówienia.
+                                </span>
+                            </span>
+
+                        </form>
+                    </div>
+                </div>
+
+                <div class="pl-sem" style="margin: 20px 0 20px 10px; width: 1000px; height: 200px; background: #ccc;"><br /><br /><br /> <i>SEM</i>
+                    <div class="pl-autocomplete-wrapper">
+                        <div class="pl-autocomplete-arrow">wpisz adres <br /> dostawy</div>
+                        <form action="/order_basis/citystreet" method="post" class="pl-autocomplete-city-street yd-validation pl-autocomplete-is-short">
+
+                            <input type="text" name="city" value="" class="pl-autocomplete-city" />
+                            <input type="text" name="street" value="" class="pl-autocomplete-street" />
+
+                            <!-- this field only shows up, if needed -->
+                            <input type="text" name="hausnr" class="pl-autocomplete-number" />
+
+                            <input type="submit" name="suchen" value="pokaż restauracje" class="pl-autocomplete-button" />
+
+                            <span class="pl-autocomplete-helper1">MIASTO</span>
+                            <span class="pl-autocomplete-helper2">ULICA</span>
+                            <span class="pl-autocomplete-helper3">NR</span>
+
+                            <span class="pl-autocomplete-why">
+                                Dlaczego potrzebny jest Twój adres?
+                                <span class="pl-autocomplete-reason">
+                                    Twój adres jest konieczny, aby pokazać Ci dokładnie te restauracje, które na pewno do Ciebie dowożą.
+                                    Uwaga - dane, które podasz będą użyte tylko w celu realizacji zamówienia.
+                                </span>
+                            </span>
+
+                        </form>
+                    </div>
+                </div>
+
+                <div id="yd-cms-teaser" style="margin: 20px 0; width: 1020px; height: 200px; background: #ccc;"><br /><br /><br /> <i>SEO</i>
+                    <div class="pl-autocomplete-wrapper">
+                        <div class="pl-autocomplete-arrow">wpisz adres <br /> dostawy</div>
+                        <form action="/order_basis/citystreet" method="post" class="pl-autocomplete-city-street yd-validation pl-autocomplete-is-short">
+
+                            <input type="text" name="city" value="" class="pl-autocomplete-city" />
+                            <input type="text" name="street" value="" class="pl-autocomplete-street" />
+
+                            <!-- this field only shows up, if needed -->
+                            <input type="text" name="hausnr" class="pl-autocomplete-number" />
+
+                            <input type="submit" name="suchen" value="pokaż restauracje" class="pl-autocomplete-button" />
+
+                            <span class="pl-autocomplete-helper1">MIASTO</span>
+                            <span class="pl-autocomplete-helper2">ULICA</span>
+                            <span class="pl-autocomplete-helper3">NR</span>
+
+                            <span class="pl-autocomplete-why">
+                                Dlaczego potrzebny jest Twój adres?
+                                <span class="pl-autocomplete-reason">
+                                    Twój adres jest konieczny, aby pokazać Ci dokładnie te restauracje, które na pewno do Ciebie dowożą.
+                                    Uwaga - dane, które podasz będą użyte tylko w celu realizacji zamówienia.
+                                </span>
+                            </span>
+
+                        </form>
+                    </div>
+                </div>
+
+                <br /><br /><br />
+
+                <div class="yd-dialogs" style="width:360px;margin: 0 auto;"><a class="yd-dialogs-close"></a> <i>Lightbox Schritt 3</i>
+
+                    <div class="yd-dialogs-head">
+                        <h2>Headline</h2>
+                    </div>
+
+                    <div class="pl-autocomplete-wrapper">
+                        <div class="pl-autocomplete-arrow">wpisz ulicę dostawy</div>
+                        <form action="/order_basis/citystreet" method="post" class="pl-autocomplete-city-street yd-validation pl-autocomplete-is-short">
+
+                            <input type="text" name="city" value="" class="pl-autocomplete-city" />
+                            <input type="text" name="street" value="" class="pl-autocomplete-street" />
+
+                            <!-- this field only shows up, if needed -->
+                            <input type="text" name="hausnr" class="pl-autocomplete-number" />
+
+                            <input type="submit" name="suchen" value="pokaż menu" class="pl-autocomplete-button" />
+
+                            <span class="pl-autocomplete-helper1">MIASTO</span>
+                            <span class="pl-autocomplete-helper2">ULICA</span>
+                            <span class="pl-autocomplete-helper3">NR</span>
+
+                            <div class="pl-select-city-list hidden">
+                                <ul class="yd-clearfix">
+                                    <li><a class="pl-select-city" data-city-id="0" data-city="Kraków">Kraków</a></li>
+                                    <li><a class="pl-select-city" data-city-id="0" data-city="Warszawa">Warszawa</a></li>
+                                    <li><a class="pl-select-city" data-city-id="0" data-city="Wrocław">Wrocław</a></li>
+                                    <li><a class="pl-select-city" data-city-id="0" data-city="Poznań">Poznań</a></li>
+                                    <li><a class="pl-select-city" data-city-id="0" data-city="Łódź">Łódź</a></li>
+                                    <li><a class="pl-select-city" data-city-id="0" data-city="Katowice">Katowice</a></li>
+                                    <li><a class="pl-select-city" data-city-id="0" data-city="Gdańsk">Gdańsk</a></li>
+                                    <li><a class="pl-select-city" data-city-id="0" data-city="Bydgoszcz">Bydgoszcz</a></li>
+                                    <li><a class="pl-select-city" data-city-id="0" data-city="Chorzów">Chorzów</a></li>
+                                    <li><a class="pl-select-city" data-city-id="15776" data-city="Olsztyn">Olsztyn</a></li>
+                                </ul>
+                            </div>
+
+                            <span class="pl-autocomplete-why">
+                                Dlaczego potrzebny jest Twój adres?
+                                <span class="pl-autocomplete-reason">
+                                    Twój adres jest konieczny, aby pokazać Ci dokładnie te restauracje, które na pewno do Ciebie dowożą.
+                                    Uwaga - dane, które podasz będą użyte tylko w celu realizacji zamówienia.
+                                </span>
+                            </span>
+
+                        </form>
+                    </div>
+
+                </div>
+                
+                <br /><br /><br />
+
+                <div class="yd-hulk" style="height: 400px; background: #618100;"> <i>Hulk (grüne LPs)</i>
+
+                    <div class="pl-autocomplete-wrapper" style="top:10px;left:35%;right:auto;">
+                        <div class="pl-autocomplete-arrow">Zamów z ulubionej restauracji<br/>w Twoim mieście</div>
+                        <form action="/order_basis/citystreet" method="post" class="pl-autocomplete-city-street yd-validation pl-autocomplete-is-short">
+
+                            <input type="text" name="city" value="" class="pl-autocomplete-city" />
+                            <input type="text" name="street" value="" class="pl-autocomplete-street" />
+
+                            <!-- this field only shows up, if needed -->
+                            <input type="text" name="hausnr" class="pl-autocomplete-number" />
+
+                            <input type="submit" name="suchen" value="pokaż restauracje" class="pl-autocomplete-button" />
+
+                            <span class="pl-autocomplete-helper1">MIASTO</span>
+                            <span class="pl-autocomplete-helper2">ULICA</span>
+                            <span class="pl-autocomplete-helper3">NR</span>
+
+                            <span class="pl-autocomplete-why">
+                                Dlaczego potrzebny jest Twój adres?
+                                <span class="pl-autocomplete-reason">
+                                    Twój adres jest konieczny, aby pokazać Ci dokładnie te restauracje, które na pewno do Ciebie dowożą.
+                                    Uwaga - dane, które podasz będą użyte tylko w celu realizacji zamówienia.
+                                </span>
+                            </span>
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="yd-footer">
+        </div>
+
+    </body>
+</html>

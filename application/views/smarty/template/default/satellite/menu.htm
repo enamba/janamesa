@@ -1,0 +1,82 @@
+{extends file='satellite/_base_menu.htm'}
+{block name="content"}
+
+<script type="text/javascript">
+    var services = [];
+    services.push({
+        id: {$service->getId()},
+        openings: {$this->formatOpeningsAsJson($service->getOpening()->getIntervalOfDay(time()))},
+        type: '{$service->getType()}'
+    });
+</script>
+
+<div id="yd-menu" class="yd-clearfix yd-menu-modern">
+    {include file='satellite/_menu.htm'}
+</div>
+
+<div id="yd-sidebar">
+    {if $satellite->isPremium() == false}
+    <div id="yd-menu-lieferando_logo">
+        <a class="yd-flashlink" target="_blank" href="{if $domain_base == 'pyszne.pl'}http://pyszne.pl{elseif $domain_base == 'taxiresto.fr'}http://www.taxiresto.fr{else}http://www.lieferando.de{/if}"></a>
+        <object classid="CLSID:D27CDB6E-AE6D-11cf-96B8-444553540000" width="278" height="40" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0">
+            <param name="wmode" value="transparent">
+            <embed src="/media/flash/{if $domain_base == 'pyszne.pl'}pyszne-pl.swf{elseif $domain_base == 'taxiresto.fr'}taxiresto-fr.swf{else}lieferando-de.swf{/if}" quality="high" scale="exactfit" menu="false"
+                   bgcolor="#000000" width="278" height="40" swLiveConnect="false"
+                   type="application/x-shockwave-flash" wmode="transparent"
+                   pluginspage="http://www.macromedia.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">
+            </embed>
+        </object>
+
+    </div>
+    {/if}
+    <form action="{if $preview}/satellite/finish/id/{$satellite->getId()}{else}{$satellite->getUrl()}/finish{/if}" method="post" id="yd-finish-order-form">
+        <!-- this will trigger the restoring of the ydOrder object with an update of the view -->
+        <input type="hidden" name="serviceId" value="{$service->getId()}" id="yd-order-service-id" />       
+        <input id="yd-order-restore-bucket" type="hidden" name="restore" />
+
+        {include file="order/_includes/sidebar/cart-menu.htm"}
+    </form>
+    {if $satellite->isPremium() == false}
+    {if $domain_base == 'taxiresto.fr'}
+    <img src="{$domain_static}/images/satellites/menu/FR/FR_Payment.png" alt="payment" />
+    {elseif $domain_base == 'pyszne.pl'}
+    <img src="{$domain_static}/images/satellites/menu/PL/PL_Payment.png" alt="payment" />
+    {else}
+    <img src="{$domain_static}/images/satellites/menu/payment.png" alt="payment" />
+    {/if}
+    {/if} 
+    {if $satellite->getCertificationImg()}
+    <img id="yd-menu-certification" src="{$satellite->getCertificationImg()}" alt="" />
+    {/if}
+
+</div>
+
+<div id="yd-select-plz-{$service->getId()}" class="yd-dialog-parent yd-select-plz hidden">
+    {include file='order/_includes/menu/plz.htm'}
+</div>
+
+{if !$service->isOnline()}
+<div id="yd-service-offline" class="yd-dialog-parent hidden">
+
+    <div class="yd-dialogs"><a class="yd-dialogs-close"></a>
+
+        <div class="yd-dialogs-head">
+            <h2>{__('Geschlossen')}</h2>
+        </div>
+
+        <div class="change-plz" id="change-plz">
+            <span>
+                {__("%s ist zurzeit geschlossen.", $service->getName())}
+                <br /><br />
+                {__("Du hast hier die Möglichkeit, nach einem anderen Lieferservice in Deiner Umgebung zu suchen:")}
+                <br /><br />
+                <a id="satellite-go-away">www.{$config->domain->base}</a>
+            </span>
+        </div>
+
+    </div>
+
+</div>
+{/if}
+
+{/block}

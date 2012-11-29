@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+{if $config->domain->base == 'lieferando.de' || $config->domain->base == 'lieferando.at' || $config->domain->base == 'lieferando.ch' || $config->domain->base == 'eat-star.de'}
+<!--[if lt IE 7 ]> <html lang="de" xml:lang="de" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="de" xml:lang="de" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="de" xml:lang="de" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="de" xml:lang="de" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="de" xml:lang="de">         <!--<![endif]-->
+{/if}
+
+{if $config->domain->base == 'pyszne.pl'}
+<!--[if lt IE 7 ]> <html lang="pl" xml:lang="pl" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="pl" xml:lang="pl" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="pl" xml:lang="pl" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="pl" xml:lang="pl" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="pl" xml:lang="pl">         <!--<![endif]-->
+{/if}
+
+{if $config->domain->base == 'taxiresto.fr'}
+<!--[if lt IE 7 ]> <html lang="fr" xml:lang="fr" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="fr" xml:lang="fr" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="fr" xml:lang="fr" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="fr" xml:lang="fr" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="fr" xml:lang="fr">         <!--<![endif]-->
+{/if}
+
+{if $config->domain->base == 'elpedido.es'}
+<!--[if lt IE 7 ]> <html lang="es" xml:lang="es" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="es" xml:lang="es" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="es" xml:lang="es" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="es" xml:lang="es" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="es" xml:lang="es">         <!--<![endif]-->
+{/if}
+
+{if $config->domain->base == 'appetitos.it'}
+<!--[if lt IE 7 ]> <html lang="it" xml:lang="it" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="it" xml:lang="it" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="it" xml:lang="it" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="it" xml:lang="it" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="it" xml:lang="it">         <!--<![endif]-->
+{/if}
+
+{if $config->domain->base == 'janamesa.com.br'}
+<!--[if lt IE 7 ]> <html lang="pt" xml:lang="pt" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="pt" xml:lang="pt" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="pt" xml:lang="pt" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="pt" xml:lang="pt" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="pt" xml:lang="pt">         <!--<![endif]-->
+{/if}
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="{__('%s - Speisekarte anschauen und online in %s bestellen. Anschließend online bezahlen und sich in %s beliefern lassen!', $service->getName(), $service->getCity(), $service->getCity())}" />
+        <meta name="keywords" content="{$satellite->getKeywords()}" />
+        <meta name="language" content="de" />
+        {if $preview}
+        <meta name="robots" content="noindex, follow" />
+        {else}
+        {if $additionalMetatags}
+        {foreach from=$additionalMetatags item=meta}
+        {$meta}
+        {/foreach}
+        {else}
+        <meta name="robots" content="{$satellite->getRobots()}" />
+        {/if}
+        {/if}
+        <title>{__("%s - die passende Speisekarte, die jeden Hunger in %s stillt!", $service->getName(), $service->getCity())}</title>
+        
+        {if $service->isPremium()}
+        <link rel="shortcut icon" type="image/png" href="/storage/satellites/{$satellite->getDomain()}/img/favicon.ico" />
+        {else}
+        <link rel="canonical" href="http://{$satellite->getDomain()}/menu" />
+        {/if}
+
+        <link rel="stylesheet" type="text/css" href="/media/css/compiled/{$package_css|default:'satellite'}-{$extra_css|default:'no'}-{$REVISION}.css" />
+        
+        {if $package_css != 'gelbeseiten' && $package_css != 'gelbeseiten.staging'}
+            {if $satellite->getCss()}
+            <style type="text/css">{$satellite->getCss()}</style>
+            {else}
+            <link rel="stylesheet" type="text/css" href="/media/css/satellites/color-default.css" />
+            {/if}
+        {/if}
+
+        <script type="text/javascript" src="/media/javascript/compiled/frontend-{$REVISION}-satellite.js"></script>
+    </head>
+
+    <body style="background:url({$satellite->getBackground()}) repeat-y center;" class="satteliteid-{$satellite->getId()} {strtolower($service->getName())} {if $satellite->isPremium()}premium{/if}" >
+
+        {include file='satellite/_piwik.htm'}
+        {include file='_cookies/piwik/global.htm' uadomain=$domain_base}
+
+        {assign var=serviceCacheId value=$service->getId()}
+        {include file='order/_includes/menu/ranges.htm' caching=1 cache_lifetime=86400 cache_id="ranges.$serviceCacheId"}
+
+        <div id="yd-nonfooter">
+            {include file='notification.htm'}
+            <div id="content" class="yd-clearfix">
+                <div class="yd-menu-head" style="background:url({nocache}{$satellite->getLogo()}{/nocache});">
+                    {if $satellite->isPremium()}
+                    <a class="linktoindex" href="/" ></a>
+                    <span> <a href="{if $preview}/satellite/about/id/{$satellite->getId()}{else}/impr{/if}">{__("Impressum")}</a>
+                    {$service->getStreet()} {$service->getHausnr()} {$service->getPlz()} {$service->getCity()->getCity()}</span>
+                    {/if}
+                </div>
+                {block name='content'}{/block}
+            </div>
+        </div>
+
+        <div id="yd-menu-footer">
+
+            <div id="yd-menu-footer_content">
+
+                <p>
+                    {if !$satellite->isPremium()}
+                    <a href="{if $preview}/satellite/about/id/{$satellite->getId()}{else}/about{/if}" target="_blank">{__("Impressum")}</a> ,
+                    {$service->getName()} {$service->getStreet()} {$service->getHausnr()} {$service->getPlz()} {$service->getCity()->getCity()}
+                    {/if}
+                </p>
+
+            </div>
+        </div>
+
+    </body>
+</html>

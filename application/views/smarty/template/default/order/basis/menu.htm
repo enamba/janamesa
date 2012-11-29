@@ -1,0 +1,138 @@
+{extends file='base.htm'}
+{block name="content"}
+
+{include file="order/_includes/menu/top.htm"}
+
+<div class="yd-breadcrumbs-new">
+    <a href="/">{__('Startseite')}</a>
+    <a href="/" class="yd-set-city-url hidden">{__('Lieferservices in')} <span class="yd-set-city-text"></span></a>
+    <a class="active">{__('Speisekarte %s', $service->getName())}</a>
+</div>
+
+<div id="yd-sidebar">
+
+    {include file="order/_includes/chat/supportchat.htm" city=$service->getCity()->getCity()}
+
+    {include file="order/_includes/sidebar/coupon.htm"}
+
+    <div class="yd-menu-detail yd-box">
+
+        <strong>{$service->getName()}</strong>
+
+        <div class="yd-clearfix">
+
+            <div class="yd-menu-detail-img">
+                <img src="{$service->getImg('small')}" alt="{$service->getName()}" />
+            </div>
+
+            <ul>
+                {if $mode != 'rest'}
+                <div class="hidden" id="yd-lang-minute">{__('%d Minute')}</div>
+                <div class="hidden" id="yd-lang-minutes">{__('%d Minuten')}</div>
+                <div class="hidden" id="yd-lang-hour">{__('%d Stunde')}</div>
+                <div class="hidden" id="yd-lang-hours">{__('%d Stunden')}</div>
+                <li class="yd-menu-detail-open">{__('Vorlaufzeit: ')}<span class="yd-menu-handling-time"></span><br />{$this->formatOpenings($service->getOpening()->getIntervalOfDay(time()))}</li>
+                {else}
+                <li class="yd-menu-detail-open">{$this->formatOpenings($service->getOpening()->getIntervalOfDay(time()))}</li>
+                {/if}
+                {if $service->isOnlyPickup()}
+                <li class="yd-menu-detail-cost">{__('Nur Abholung!')}</li>
+                {else}
+                <li class="yd-menu-detail-cost">{if $service->isAvanti()}{__('Energiekostenaufschlag: ')}{else}{__('Lieferkosten: ')}{/if}<span class="yd-deliver-cost">{__('%s €', 0|inttoprice)}</span></li>
+                <li>{__('Lieferung ab:')} <span class="yd-delivery-from">{__('%s €', 0|inttoprice)}</span></li>
+                {/if}
+            </ul>
+
+        </div>
+
+        {if $service->getRating()->hasRating()}
+        <span class="yd-menu-detail-rate" id="yd-rate-{$service->getId()}">
+            <span class="yd-rated-{($service->getRating()->getAverage()*2)|string_format:'%02d'}"></span>
+
+            {if $config->domain->base == 'janamesa.com.br'}
+            <span class="yd-rated-total">({$service->getRating()->count(null, true, false, true)})</span>
+            {else}
+            <span>&oslash; {_n('%s Stern', '%s Sterne', $service->getRating()->getAverage(), $service->getRating()->getAverage()|string_format:"%.2f")}</span>
+            <span>{__('aus')} <a>{_n('%s Bewertung', '%s Bewertungen', $service->getRating()->count(null, true, false, true), $service->getRating()->count(null, true, false, true))}</a></span>
+            {/if}
+        </span>
+        {/if}
+
+    </div>
+
+    <!-- TODO: check yd-state and change url according -->
+    <form action="" method="post" id="yd-finish-order-form">
+
+        <!-- this will trigger the restoring of the ydOrder object with an update of the view -->
+        <input type="hidden" name="serviceId" value="{$service->getId()}" id="yd-order-service-id" />
+        <input id="yd-order-restore-bucket" type="hidden" name="restore" />
+
+        {include file="order/_includes/sidebar/cart-menu.htm"}
+    </form>
+
+    {include file="order/_includes/sidebar/payment.htm"}
+
+    {if $config->domain->base == 'janamesa.com.br'}
+    {include file="order/_includes/livechat.htm"}
+    {/if}
+
+</div>
+
+<div id="yd-ordering" class="yd-menu-modern {if $service->isBloomsburys()}yd-menu-bloomsburys{/if}">
+
+    <ul class="yd-menu-tabs yd-clearfix">
+        <li class="tab1 active">
+            <a class="yd-menu-toggle-1a">{__('Speisekarte')}<span></span></a>
+        </li>
+        <li class="tab2">
+            <a class="yd-menu-toggle-2a">{__('Bewertungen')}<span></span></a>
+        </li>
+        {if strlen($service->getDescription()) > 0}
+        <li class="tab3">
+            <a class="yd-menu-toggle-3a">{__('Info')}<span></span></a>
+        </li>
+        {/if}
+
+
+        <!-- will not be shown in IE < 8 -->
+        <li class="tab4 active last">
+            <span class="yd-search-reset hidden">
+                <a>{__('Suche zurücksetzen')}</a>
+            </span>
+            <input type="text" value="{__('Worauf hast du Hunger?')}" class="menu-nav-search-text" id="menu-nav-search-text" maxlength="30" />
+        </li>
+
+    </ul>
+
+    <div id="yd-service-tabs">
+
+        <div id="yd-menu-toggle-1">
+            {include file='order/_includes/menu/menu.htm'}
+        </div>
+
+        <div id="yd-menu-toggle-2" class="hidden" style="padding: 20px;">           
+            {assign var=serviceCacheId value=$service->getId()}
+            {include file='order/_includes/menu/ratings.htm' caching=1 cache_lifetime=86400 cache_id="ratings.$serviceCacheId" max=0}
+        </div>
+
+        {if strlen($service->getDescription()) > 0}
+        <div id="yd-menu-toggle-3" class="hidden" style="padding: 20px;">
+            {$service->getDescription()|default:__('Keine Informationen zu diesem Restaurant verfügbar.')}
+        </div>
+        {/if}
+
+    </div>
+
+    <div class="yd-menu-modern-footer">
+        <span class="yd-mmf1">{__('vegetarisch')}</span>
+        <span class="yd-mmf2">{__('scharf gewürzt')}</span>
+        <span class="yd-mmf3">{__('mit Knoblauch')}</span>
+        <span class="yd-mmf4">{__('mit Fisch')}</span>
+    </div>
+
+</div>
+
+
+{include file="order/_includes/menu/bottom.htm" tracking=true}
+
+{/block}

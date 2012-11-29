@@ -1,0 +1,593 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<div id="yd-admin-backend-wait" style="display:none;"><img src="{$domain_static}/images/yd-backend/yd-back-load.gif" /></div>
+
+<form action="/administration_service/create" method="post" name="form" enctype="multipart/form-data">
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button" />
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button" />
+            </div>
+        </div>
+    </div>
+
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Dienstleister anlegen')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="30%">{__b('Name')}:</td>
+                            <td width="40%"><input type="text" name="name" class="rund_set text" value="{$p.name}"/> *</td>
+                            <td width="30%"></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Franchise')}</td>
+                            <td colspan="1">
+                                <select name="franchiseTypeId" id="yd-select_franchise">                                    
+                                    <option value="-1">{__b('Neues Franchise')}</option>
+                                    {foreach from=$franchisetypes item=franchise}
+                                    <option value="{$franchise->id}" {if $p.franchiseTypeId|default:'1' == $franchise->id}selected{/if}>{$franchise->name}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                            <td id='yd-create-franchise' class="hidden">{__b('Franchise-Name')}
+                                <input type="text" name="franchiseName" class="rund_set text" value="{$p.franchiseName}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Status')}</td>
+                            <td colspan="2">
+                                <select name="isOnline">
+                                    <option value="0" {if ($p.status==1)}selected{/if}>{__b('deaktiviert')}</option>
+                                    <option value="1">aktiviert</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr><td colspan="3" height="40px"></td></tr>
+                        <tr>
+                            <td>{__b('Straße')}</td>
+                            <td colspan="2"><input type="text" name="street" class="rund_set text" value="{$p.street}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('HausNr')}</td>
+                            <td colspan="2"><input type="text" name="hausnr" class="rund_set text" value="{$p.hausnr}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('PLZ')}:</td>
+                            <td colspan="2">
+                                {if strpos($config->domain->base, "janamesa")!==false}
+                                    <input type="text" name="plz"/> *
+                                {else}
+                                    {include file='administration/city_autocomplete.htm'} *
+                                {/if}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('E-Mail')}</td>
+                            <td colspan="2"><input type="text" name="email" class="rund_set text" value="{$p.email}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Telefon')}</td>
+                            <td colspan="2"><input type="text" name="tel" class="rund_set text" value="{$p.tel}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Telefon 2')}</td>
+                            <td colspan="2"><input type="text" name="tel2" class="rund_set text" value="{$p.tel2}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Telefon 3')}</td>
+                            <td colspan="2"><input type="text" name="tel3" class="rund_set text" value="{$p.tel3}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Fax')}</td>
+                            <td><input type="text" name="fax" class="rund_set text" value="{$p.fax}" id="yd-create-restaurant-fax"/> *</td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td><input id="yd-send-testfax" type="button" value="{__b('Testfax senden')}"/></td>
+                                        <td>
+                                            <select name="faxService" id="yd-testfax-service">
+                                                <option value="retarus" selected>{__b('retarus')}</option>
+                                                <option value="interfax">{__b('interfax')}</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr><td id="yd-testfax-status" colspan="2"><br/></td></tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr><td colspan="3" height="40px"></td></tr>
+                        <tr>
+                            <td>{__b('Kategorie')}</td>
+                            <td colspan="2">
+                                <select name="categoryId">
+                                    {foreach from=$categories item=cat}
+                                    <option value="{$cat->id}" {if $p.categoryId == $cat->id}selected{/if}>{$cat->name}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Akzeptiert Pfand bei Lieferung')}:</td>
+                            <td colspan="2"><input type="checkbox" name="acceptsPfand" value="1" {if $p.acceptsPfand==1}checked{/if}/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Qype ID')}</td>
+                            <td><input type="text" id="yd-service-qype-id" name="qypeId" class="rund_set text" {if strlen($p.qypeId)==0}disabled{else}value="{$p.qypeId}{/if}"/></td>
+                            <td><input type="checkbox" id="yd-service-qype-dontlist" value="1" {if strlen($p.qypeId)==0}checked{/if}/> {__b('bei Qype nicht auflisten')}</td>
+                        </tr>
+                        <tr><td colspan="3" height="40px"></td></tr>
+                        <tr>
+                            <td>{__b('Beschreibung')}</td>
+                            <td colspan="2"><textarea class="rund_set text" name="description">{$p.description}</textarea></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Öffentlicher Vermerk')}</td>
+                            <td colspan="2"><textarea class="rund_set text" name="specialComment">{$p.specialComment}</textarea></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Interner Vermerk')}</td>
+                            <td colspan="2"><textarea class="rund_set text" name="statecomment">{$p.statecomment}</textarea></td>
+                        </tr>
+                        <tr><td colspan="3" height="40px"></td></tr>
+                        <tr>
+                            <td>{__b('Versand')}</td>
+                            <td colspan="2">
+                                <select name="notify" class="rund_set text">
+                                    {foreach from=Yourdelivery_Model_Servicetype_Abstract::getNotificationKinds() key=ind item=s}
+                                    <option value="{$ind}" {if "fax" == $ind}selected="selected"{/if}>{$s}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Faxdienstleister')}</td>
+                            <td colspan="2">
+                                <select name="faxService">
+                                    <option value="retarus" {if $p.faxService == "retarus"}selected{/if}>{__b('retarus')}</option>
+                                    <option value="interfax" {if $p.faxService == "interfax"}selected{/if}>{__b('interfax')}</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr><td colspan="3" height="40px"></td></tr>
+                        <tr>
+                            <td>{__b('Bild')}</td>
+                            <td colspan="2"><input type="file" name="img" class="rund_set text" value="{$p.picture}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Das Bild ist Logo')}</td>
+                            <td colspan="2"><input type="checkbox" name="isLogo" value="1"/></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" style="float: right;">
+            <div class="item-head">
+                {__b('Zahlungsinformationen')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        {if $config->domain->base != "janamesa.com.br"}
+                        <tr>
+                            <td width="40%">{__b('Kontobesitzer')}:</td>
+                            <td width="60%"><input type="text" name="ktoName" class="rund_set text" value="{$p.ktoName}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Kontonummer')}</td>
+                            <td><input type="text" name="ktoNr" class="rund_set text" value="{$p.ktoNr}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('BLZ')}</td>
+                            <td><input type="text" name="ktoBlz" class="rund_set text" value="{$p.ktoBlz}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('IBAN')}</td>
+                            <td><input type="text" name="ktoIban" class="rund_set text" value="{$p.ktoIban}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('BIC(SWIFT)')}</td>
+                            <td><input type="text" name="ktoSwift" class="rund_set text" value="{$p.ktoSwift}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('USt-ID-Nr')}</td>
+                            <td><input type="text" name="ustIdNr" class="rund_set text" value="{$p.ustIdNr}"/></td>
+                        </tr>
+                        {else}
+                        <tr>
+                            <td width="40%">{__b('Bank')}</td>
+                            <td width="60%"><input type="text" name="ktoBank" class="rund_set text" value="{$p.ktoBank}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Agentur')}</td>
+                            <td><input type="text" name="ktoAgentur" class="rund_set text" value="{$p.ktoAgentur}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Kontonummer')}</td>
+                            <td><input type="text" name="ktoNr" class="rund_set text" value="{$p.ktoNr}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Ziffer')}</td>
+                            <td><input type="text" name="ktoDigit" class="rund_set text" value="{$p.ktoDigit}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Kontobesitzer')}:</td>
+                            <td><input type="text" name="ktoName" class="rund_set text" value="{$p.ktoName}"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('CPF')}</td>
+                            <td><input type="text" name="ustIdNr" class="rund_set text" value="{$p.ustIdNr}"/></td>
+                        </tr>
+                        {/if}
+                        <tr>
+                            <td>{__b('Nur Barzahlung')}</td>
+                            <td><input type="checkbox" name="onlycash" value="1" id="yd-service-onlycash" class="rund_set text"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Akzeptiert Barzahlung')}</td>
+                            <td><input type="checkbox" name="paymentbar" id="yd-service-paymentbar" value="1" checked class="rund_set text"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Akzeptiert Gutscheine')}</td>
+                            <td>
+                                <table class="user-tab">
+                                    <tr>
+                                        <td><input type="checkbox" name="sodexo" value="1" {if $p.sodexo==1}checked{/if}/><br>{__b('Sodexo')}</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Nur Abholung')}</td>
+                            <td><input type="checkbox" name="onlyPickup" value="1" {if $p.onlyPickup==1}checked{/if}/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Provision für Lieferkosten')}</td>
+                            <td><input type="checkbox" name="billDeliverCost" value="1" checked/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Etagenzuschlag')}</td>
+                            <td><input type="text" name="floorfee" class="rund_set text" value="{$p.floorfee}"/> {__b('Cents')}</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Akzeptiert Lastschrift')}</td>
+                            <td><input type="checkbox" name="debit" value="1" checked/></td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-head">
+                {__b('Meta Angaben')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="40%">{__b('Titel')}:</td>
+                            <td width="60%"><input type="text" name="metaTitle" class="rund_set text yd-empty-text" value="" title="{__b('%s Lieferservice %s %s, %s bestellen')}" /></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Stichwörter')}:</td>
+                            <td><input type="text" name="metaKeywords" class="rund_set text yd-empty-text" value="" title="{__b('%s Lieferservice %s %s essen bestellen Kreditkarte bargeldlos Heimservice Bringdienst')}" /></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Beschreibung')}:</td>
+                            <td>
+                                <textarea name="metaDescription" title="{__b('%s %s Lieferservice %s im Überblick. Alle Informationen auf einen Blick. Bequem %s bestellen, bargeldlos zahlen bei %s.')}" class="rund_set text yd-empty-text"></textarea>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Robots')}</td>
+                            <td>
+                                <select name="metaRobots">
+                                    {foreach from=$robots key=val item=robot}
+                                    <option value="{$val}" >{$robot}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Kommission')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="30%">{__b('Kommission')}</td>
+                            <td width="40%"><input type="text" name="komm" class="rund_set text" value="{$p.komm}"/></td>
+                            <td width="30%"></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Gebühr pro Bestellung')}</td>
+                            <td colspan="2"><input type="text" name="fee" class="rund_set text" value="{$p.fee}"/> {__b('Cents')}</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Gebühr po Artikel')}</td>
+                            <td colspan="2"><input type="text" name="item" class="rund_set text" value="{$p.item}"/> {__b('Cents')}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+                {__b('Rechnung')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="40%">{__b('Rechnungsintervall')}</td>
+                            <td width="60%">
+                                <select name="billInterval">
+                                    <option value="0">Monatlich</option>
+                                    <option value="1" {if ($p.billInterval == '1')}selected="selected"{/if}>{__b('Alle 2 Wochen')}</option>
+                                    <option value="2" {if ($p.billInterval == '2')}selected="selected"{/if}>{__b('Täglich')}</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Rechnungsversand')}</td>
+                            <td>
+                                <select name="billDeliver" class="rund_set text">
+                                    <option value="none" {if $p.billDeliver == "none"}selected="selected"{/if}>{__b('Kein')}</option>
+                                    <option value="all" {if $p.billDeliver == "all"}selected="selected"{/if}>{__b('Beides')}</option>
+                                    <option value="fax" {if $p.billDeliver == "fax"}selected="selected"{/if}>{__b('Faxgerät')}</option>
+                                    <option value="email" {if $p.billDeliver == "email"}selected="selected"{/if}>{__b('E-Mail')}</option>
+                                    <option value="post" {if $p.billDeliver == "post"}selected="selected"{/if}>{__b('Post')}</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Umsätze im Partner-Konto inklusive eigener Domain anzeigen')}</td>
+                            <td><input type="checkbox" name="partnerDetailedStats" value="1" /></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Kontakt')}
+            </div>
+            <div class="item-content">
+                <table class="user-tab">
+                    <tr>
+                        <td width="30%">{__b('Kontakt als Administrator anlegen')}</td>
+                        <td width="40%"><input type="checkbox" name="use_as_admin" value="1" class="rund_set text" {if $p.use_as_admin==1}checked{/if}/></td>
+                        <td width="30%"></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Bestehenden Kontakt auswählen')}</td>
+                        <td>
+                            <select name="selContactId" id="yd-select_contact">
+                                <option value="-1" >{__b('Neuer Kontakt')}</option>
+                                {foreach from=$contacts item=ci}
+                                <option value="{$ci.id}">{$ci.name} {$ci.prename} (#{$ci.id})</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div id="yd-create-contact">
+                    <table class="user-tab">
+                        <tr>
+                            <td width="30%">{__b('Vorname')}</td>
+                            <td width="40%"><input type="text" name="contact_prename" class="rund_set text" value="{$p.contact_prename}"/> *</td>
+                            <td width="30%"></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Nachname')}</td>
+                            <td><input type="text" name="contact_name" class="rund_set text" value="{$p.contact_name}"/> *</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Position')}</td>
+                            <td><input type="text" name="contact_position" class="rund_set text" value="{$p.contact_position}"/></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Straße')}</td>
+                            <td><input type="text" name="contact_street" class="rund_set text" value="{$p.contact_street}"/></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('HausNr')}</td>
+                            <td><input type="text" name="contact_hausnr" class="rund_set text" value="{$p.contact_hausnr}"/></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('PLZ')}</td>
+                            <td colspan="2">
+                                {include file='administration/city_autocomplete.htm' prefix='contact_'}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('E-Mail')}</td>
+                            <td><input type="text" name="contact_email" class="rund_set text" value="{$p.contact_email}"/></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Telefon')}</td>
+                            <td><input type="text" name="contact_tel" class="rund_set text" value="{$p.contact_tel}"/></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Fax')}</td>
+                            <td><input type="text" name="contact_fax" class="rund_set text" value="{$p.contact_fax}"/></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+                {__b('Rechnungskontakt')}
+            </div>
+            <div class="item-content">
+                <div>
+                    {__b('Rechnungskontakt ist der selbe wie Kontakt')} <input type="checkbox" name="bill_as_contact" value="1" id="yd-bill-as-contact" checked="checked" /><br/><br/>
+                </div>
+                <div id="yd-other-bill" style="display:none;">
+                    <table class="user-tab">
+                        <tr>
+                            <td width="30%">{__b('Bestehenden Kontakt auswählen')}</td>
+                            <td>
+                                <select name="selBillingContactId" id="yd-select_billcontact">
+                                    <option value="-1" ></option>
+                                    {foreach from=$contacts item=ci}
+                                    <option value="{$ci.id}">{$ci.name} {$ci.prename}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    <div id="yd-create-billcontact">
+                        <table class="user-tab">
+                            <tr>
+                                <td width="30%">{__b('Vorname')}</td>
+                                <td width="40%"><input type="text" name="bill_prename" class="rund_set text"/> *</td>
+                                <td width="30%"></td>
+                            </tr>
+                            <tr>
+                                <td>{__b('Nachname')}</td>
+                                <td><input type="text" name="bill_name" class="rund_set text"/> *</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>{__b('Position')}</td>
+                                <td><input type="text" name="bill_position" class="rund_set text"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>{__b('Straße')}</td>
+                                <td><input type="text" name="bill_street" class="rund_set text"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>{__b('HausNr')}</td>
+                                <td><input type="text" name="bill_hausnr" class="rund_set text"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>{__b('PLZ')}</td>
+                                <td>
+                                    {include file='administration/city_autocomplete.htm' prefix='bill_'}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{__b('E-Mail')}</td>
+                                <td><input type="text" name="bill_email" class="rund_set text"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>{__b('Telefon')}</td>
+                                <td><input type="text" name="bill_tel" class="rund_set text"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>{__b('Fax')}</td>
+                                <td><input type="text" name="bill_fax" class="rund_set text"/></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Verschiedenes')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="15%">{__b('Kurierdienst')}</td>
+                            <td width="25%" colspan="2">
+                                <select name="service_courier" style="width: 300px;">
+                                    <option value="-1" ></option>
+                                    {foreach from=$courierIds item=ci}
+                                    <option value="{$ci.id}">{$ci.id}: {$ci.name}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Firmenzuordnung')}:</td>
+                            <td colspan="2">
+                                <select name="service_company" style="width: 300px;">
+                                    <option value="-1"></option>
+                                    {foreach from=$compIds item=ci}
+                                    <option value="{$ci.id}">{$ci.name}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Vertriebler')}</td>
+                            <td>
+                                <select name="service_salesperson" style="width: 300px;">
+                                    <option value="" ></option>
+                                    {foreach from=$salespersons item=sp}
+                                    <option value="{$sp.id}">{$sp.name} {$sp.prename}</option>
+                                    {/foreach}
+                                </select> *
+                            </td>
+                            <td>
+                                {__b('Vertrag am')}:&nbsp;&nbsp;&nbsp;<input type="text" name="signed" id="yd-date" value="{time()|timestampYMD}" style="width: 70px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="2">
+                                {__b('Kann jederzeit kündigen')}:
+                                <input type="checkbox" name="laxContract" value="1" {if $p.laxContract==1}checked{/if}/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set"/>
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set"/>
+            </div>
+        </div>
+    </div>
+
+</form>
+{/block}

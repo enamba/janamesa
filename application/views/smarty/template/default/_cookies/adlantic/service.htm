@@ -1,0 +1,11 @@
+{if $config->domain->base == 'lieferando.at'}
+<script type="text/javascript">
+    /*<![CDATA[*/
+    
+    var adlantic_product = {ldelim} 
+        category: "{$city->getPlz()}-{str_replace(" ", "-", $city->getFullname())}"
+    {rdelim} ;
+    
+    /* ]]> */
+</script>
+{/if}

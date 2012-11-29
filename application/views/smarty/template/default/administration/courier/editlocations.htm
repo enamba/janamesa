@@ -1,0 +1,51 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{if isset($courier)}
+{include file='administration/courier/editnavigation.htm'}
+
+<form action="/administration_courier/addlocation" method="post">
+    <input type="hidden" name="courierId" value="{$courier->getId()}"/>
+     <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Kosten')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td>{__b('Kilometer:')}</td>
+                            <td><input type="text" name="range" class="rund_set text" value="" /> *</td>
+                        </tr>
+                            <tr>
+                            <td>{__b('Kosten:')}</td>
+                            <td><input type="text" name="cost" class="rund_set text" value="" /> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Lieferzeit (Minuten):')}</td>
+                            <td><input type="text" name="deliverTime" class="rund_set text" value="" /> *</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="item-content">
+                <input type="submit" value="{__b('Hinzufügen')}" class="button"/>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Übersicht')}
+        </div>
+        <div class="item-content">
+            {$grid}
+        </div>
+    </div>
+</div>
+
+{/if}
+{/block}    

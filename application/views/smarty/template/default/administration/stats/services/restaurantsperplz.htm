@@ -1,0 +1,159 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/stats/services/navigation.htm'}
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Anzahl der Dienstleister nach Kategorien und PLZ')}
+            </div>
+        </div>
+    </div>
+
+{if $restaurantsSumStats[null][1]>0}
+    <div class="one-column-box">
+        <div class="item">
+
+            {if count(Yourdelivery_Model_DbTable_Restaurant::getOnlineRestaurantsWithoutMenu())>0}
+                <div class="item-head" style="font-weight: bold; font-size: 20px; color:red;">
+                    {__b('Alarm! Folgende Restaurants ohne Speisekarte wurden online gestellt')}:<br/>
+                </div>
+                <div class="item-content">
+                    {foreach from=Yourdelivery_Model_DbTable_Restaurant::getOnlineRestaurantsWithoutMenu() item=r}
+                    <a href="/administration_service/edit/id/{$r.id}">{$r.name}, {$r.hausNr} {$r.street}, {$r.plz}</a><br/>
+                    {/foreach}
+                </div>
+            {else}
+                <div class="item-head" style="font-weight: bold; font-size: 20px; color:red;">
+                    {__b('Alarm! Es wurden Restaurants gefunden, die online sind, die aber keinem Liefertyp zugewiesen sind. Bitte sofort IT kontaktieren!')}<br/>
+                </div>
+                <div class="item-content">
+                </div>
+            {/if}
+        </div>
+    </div>
+{/if}
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                * {__b('Summe der Dienstleister nach Kategorien in einem PLZ-Gebiet kann größer sein, als Gesamtanzahl der Dienstleister in diesem Gebiet, weil ein Dienstleister mehreren Kategorien zugeordnet werden kann.')}<br/>
+                * {__b('Andererseits, Gesamtzahl der offline Dienstleister kann größer sein, als die Summe der Dienstleister nach Kategorien, weil manche offline Dienstleister noch keiner Kategorie zugewiesen sind.')}<br/>
+                * {__b('Sollte es passieren, dass in einem Gebiet die Summe der <b>online</b> Dienstleister größer ist, als die Summe der Dienstleister nach Kategorien in diesem Gebiet, sofort bei IT melden - das kann bedeuten, dass es Restaurants ohne Speisekarte online geschaltet wurden!')}
+            </div>
+        </div>
+    </div>
+
+    {section name=plz start=0 loop=10}
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('PLZ')} {$smarty.section.plz.index}
+            </div>
+            <div class="item-content">
+                <table class="user-tab">
+                    <tr>
+                        <th width="15%">{__b('Kategorie')}</th>
+                        <th width="15%">{__b('online')}</th>
+                        <th width="15%">{__b('offline')}</th>
+                        <th width="15%">{__b('gesamt')}</th>
+                        <th width="40%"></th>
+                    </tr>
+                    <tr>
+                        <td>{__b('Restaurant')}</td>
+                        <td>{$restaurantsPerPlz[$smarty.section.plz.index][1][1]|intval}</td>
+                        <td>{$restaurantsPerPlz[$smarty.section.plz.index][1][0]|intval}</td>
+                        <td colspan="2">{($restaurantsPerPlz[$smarty.section.plz.index][1][1]+$restaurantsPerPlz[$smarty.section.plz.index][1][0])|intval}</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Caterer')}</td>
+                        <td>{$restaurantsPerPlz[$smarty.section.plz.index][2][1]|intval}</td>
+                        <td>{$restaurantsPerPlz[$smarty.section.plz.index][2][0]|intval}</td>
+                        <td colspan="2">{($restaurantsPerPlz[$smarty.section.plz.index][2][1]+$restaurantsPerPlz[$smarty.section.plz.index][2][0])|intval}</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Großhändler')}</td>
+                        <td>{$restaurantsPerPlz[$smarty.section.plz.index][3][1]|intval}</td>
+                        <td>{$restaurantsPerPlz[$smarty.section.plz.index][3][0]|intval}</td>
+                        <td colspan="2">{($restaurantsPerPlz[$smarty.section.plz.index][3][1]+$restaurantsPerPlz[$smarty.section.plz.index][3][0])|intval}</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Kantine')}</td>
+                        <td>{$restaurantsPerPlz[$smarty.section.plz.index][5][1]|intval}</td>
+                        <td>{$restaurantsPerPlz[$smarty.section.plz.index][5][0]|intval}</td>
+                        <td colspan="2">{($restaurantsPerPlz[$smarty.section.plz.index][5][1]+$restaurantsPerPlz[$smarty.section.plz.index][5][0])|intval}</td>
+                    </tr>
+                    <tr style="color: #999;">
+                        <td>{__b('Keine Kategorie')}</td>
+                        <td>{$restaurantsPerPlz[$smarty.section.plz.index][null][1]|intval}</td>
+                        <td>{$restaurantsPerPlz[$smarty.section.plz.index][null][0]|intval}</td>
+                        <td colspan="2">{($restaurantsPerPlz[$smarty.section.plz.index][null][1]+$restaurantsPerPlz[$smarty.section.plz.index][null][0])|intval}</td>
+                    </tr>
+                    <tr style="font-weight: bold;">
+                        <td>{__b('Alle Dienstleister')}</td>
+                        <td>{$restaurantsPerPlz[$smarty.section.plz.index]['sum'][1]|intval}</td>
+                        <td>{$restaurantsPerPlz[$smarty.section.plz.index]['sum'][0]|intval}</td>
+                        <td colspan="2">{($restaurantsPerPlz[$smarty.section.plz.index]['sum'][1]+$restaurantsPerPlz[$smarty.section.plz.index]['sum'][0])|intval}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    {/section}
+
+        <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Gesamt')}
+            </div>
+            <div class="item-content">
+                <table class="user-tab">
+                    <tr>
+                        <th width="15%">{__b('Kategorie')}</th>
+                        <th width="15%">{__b('online')}</th>
+                        <th width="15%">{__b('offline')}</th>
+                        <th width="15%">{__b('gesamt')}</th>
+                        <th width="40%"></th>
+                    </tr>
+                    <tr>
+                        <td>{__b('Restaurant')}</td>
+                        <td>{$restaurantsSumStats[1][1]|intval}</td>
+                        <td>{$restaurantsSumStats[1][0]|intval}</td>
+                        <td colspan="2">{($restaurantsSumStats[1][1]+$restaurantsSumStats[1][0])|intval}</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Caterer')}</td>
+                        <td>{$restaurantsSumStats[2][1]|intval}</td>
+                        <td>{$restaurantsSumStats[2][0]|intval}</td>
+                        <td colspan="2">{($restaurantsSumStats[2][1]+$restaurantsSumStats[2][0])|intval}</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Großhändler')}</td>
+                        <td>{$restaurantsSumStats[3][1]|intval}</td>
+                        <td>{$restaurantsSumStats[3][0]|intval}</td>
+                        <td colspan="2">{($restaurantsSumStats[3][1]+$restaurantsSumStats[3][0])|intval}</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Kantine')}</td>
+                        <td>{$restaurantsSumStats[5][1]|intval}</td>
+                        <td>{$restaurantsSumStats[5][0]|intval}</td>
+                        <td colspan="2">{($restaurantsSumStats[5][1]+$restaurantsSumStats[5][0])|intval}</td>
+                    </tr>
+                    <tr style="color: #999;">
+                        <td>{__b('Keine Kategorie')}</td>
+                        <td {if $restaurantsSumStats[null][1]>0}style="font-weight: bold; font-size: 18px; color:red;"{/if}>{$restaurantsSumStats[null][1]|intval}</td>
+                        <td>{$restaurantsSumStats[null][0]|intval}</td>
+                        <td colspan="2">{($restaurantsSumStats[null][1]+$restaurantsSumStats[null][0])|intval}</td>
+                    </tr>
+                    <tr style="font-weight: bold;">
+                        <td>{__b('Alle Dienstleister')}</td>
+                        <td>{$restaurantsSumStats['sum'][1]|intval}</td>
+                        <td>{$restaurantsSumStats['sum'][0]|intval}</td>
+                        <td colspan="2">{($restaurantsSumStats['sum'][1]+$restaurantsSumStats['sum'][0])|intval}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+{/block}

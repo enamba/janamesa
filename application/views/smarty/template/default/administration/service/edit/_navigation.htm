@@ -1,0 +1,142 @@
+<header class="yd-store">
+    {__b('Dienstleister: %s KundenNr: %d #%d', $restaurant->getName(), $restaurant->getCustomerNr(), $restaurant->getId())}
+    <footer>
+        <a href="/administration/servicelogin/id/{$restaurant->getId()}">{__b('Bei diesem Dienstleister %seinloggen%s!','<b>','</b>')}</a><br/><br/>
+        <a href="/administration/partnerlogin/id/{$restaurant->getId()}">{__b('Bei diesem Dienstleister im Partner Backend %seinloggen%s!','<b>','</b>')}</a>
+        
+        {if count($restaurant->getBillingChildren()) > 0}
+            <br /><br /><b>{__b('Verknüpfte DL:')}</b> 
+            {foreach $restaurant->getBillingChildren() as $r}
+                <a href="/administration_service_edit/index/id/{$r->getId()}">{$r->getName()} (#{$r->getId()})</a> | 
+            {/foreach}
+        {/if}
+    </footer>
+</header>
+
+<ul class="be-tabs">
+    <li><a href="/administration_service_edit/index/id/{$restaurant->getId()}">{__b('Allgemein')}</a></li>
+    <li><a href="/administration_service_edit/payments/id/{$restaurant->getId()}">{__b('Bezahlarten')}</a></li>
+    <li><a href="/administration_service_edit/contacts/id/{$restaurant->getId()}">{__b('Kontaktdaten')}</a></li>
+    <li><a href="/administration_service_edit/assoc/id/{$restaurant->getId()}">{__b('Zuordnungen')}</a></li>
+    <li><a href="/administration_service_edit/piccategories/id/{$restaurant->getId()}">{__b('Bilderkategorien')}</a></li>
+    <li><a href="/administration_service_edit/documents/id/{$restaurant->getId()}">{__b('Dokumente')}</a></li>
+    <li><a href="/administration_service_edit/comissions/id/{$restaurant->getId()}">{__b('Provision und Gebühren')}</a></li>
+    <li><a href="/administration_service_edit/billing/id/{$restaurant->getId()}">{__b('Rechnungen')}</a></li>
+    <li><a href="/administration_order/index/type/view_grid_orders/Dienstleistergrid/{$restaurant->getId()}">{__b('Bestellungen')}</a></li>
+    <li><a href="/administration_service_edit/logo/id/{$restaurant->getId()}">{__b('Logo')}</a></li>
+    <li><a href="/administration_service_ratings/index/RestaurantIdratings/{$restaurant->getId()}">{__b('Bewertungen')}</a></li>
+    <li><a href="/administration_service_edit/setpassword/id/{$restaurant->getId()}">{__b('Passwort zurücksetzen')}</a></li>
+    <li><a href="/administration_service_edit/notepad/id/{$restaurant->getId()}">{__b('Notizblock')}</a></li>
+</ul>
+
+<div class="be-2-column">
+    <div class="be-box">
+        <h2>{__b('Konto')} <a href="#balance-div" class="yd-toggle">{__b('ausblenden')}|{__b('einblenden')}</a></h2>
+
+        <div id="balance-div" class="hidden be-box-in">
+
+            <h1>{__b('Auflistung Rechnung')}</h1>
+            <br />
+            <table class="user-tab">
+                <thead>
+                <th>{__b('Typ')}</th>
+                <th>{__b('Von')}</th>
+                <th>{__b('Bis')}</th>
+                <th>{__b('Rechnungsbetrag')}</th>
+                <th>{__b('Gutscheinbetrag')}</th>
+                <th>{__b('Status')}</th>
+                </thead>
+
+                <!-- list all billings -->
+                {foreach from=$restaurant->getBillings() item=bill}
+                <tr>
+                    <td><a href="/download/bill/{Default_Helpers_Crypt::hash($bill->getId())}/pdf">{__b('Rechnung')}</a></td>
+                    <td>{$bill->getFrom()}</td>
+                    <td>{$bill->getUntil()}</td>
+                    <td>{$bill->getAmount()|inttoprice}</td>
+                    <td>{$bill->getVoucher()|inttoprice}</td>
+                    <td>{$bill->getStatusWording()}</td>
+                </tr>
+                {foreachelse}
+                <tr><td colspan="6">{__b('keine Rechnungen vorhanden')}</td></tr>
+                {/foreach}
+
+                <!-- list all transaction -->
+                {foreach from=$restaurant->getBalance()->getList() item=trans}
+                <tr>
+                    <td>{__b('Ausgleich')}</td>
+                    <td colspan="2">{$trans.created}</td>
+                    <td colspan="1">{$trans.amount|intToPriceWithNegative}</td>
+                    <td colspan="2">{$trans.comment}</td>
+                </tr>
+                {/foreach}
+
+            </table>
+            <br /><br />
+            <table class="noborde">
+
+                <tr>
+                    <th>{__b('Art')}</th>
+                    <th>{__b('nicht versandt')}</th>
+                    <th>{__b('nicht bezahlt')}</th>
+                    <th>{__b('bezahlt')}</th>
+                </tr>
+                <tr>
+                    <td>{__b('Rechnungen')}:</td>
+                    <td style="color:red;">{$balance.0.amount|default:0|inttoprice}</td>
+                    <td style="color:orange;">{$balance.1.amount|default:0|inttoprice}</td>
+                    <td style="color:green;">{$balance.2.amount|default:0|inttoprice}</td>
+                </tr>
+                <tr>
+                    <td>{__b('Gutschrift')}:</td>
+                    <td style="color:red;">{$balance.0.voucher|default:0|inttoprice}</td>
+                    <td style="color:orange;">{$balance.1.voucher|default:0|inttoprice}</td>
+                    <td style="color:green;">{$balance.2.voucher|default:0|inttoprice}</td>
+                </tr>
+                <tr>
+                    <td>{__b('Ausgleichsbetrag')}:</td>
+                    <td colspan="3">{$restaurant->getBalance()->getAmount()|inttoprice}</td>
+                </tr>
+
+            </table>
+            <br /><br />
+            <h1>{__b('Neuen Ausgleichsbetrag hinzufügen')}</h1>
+            <form action="/administration_service_edit/balance/id/{$restaurant->getId()}#balance-div" method="post">
+                <select name="sign">
+                    <option value="0">{__b('Bitte auswählen')}</option>
+                    <option value="1">{__b('Gutschrift')}</option>
+                    <option value="-1">{__b('Rechnung')}</option>
+                </select>
+                <input type="text" name="amount" value="0" class="yd-money" />
+                <input type="text" name="comment" value="{__b('Kommentar')}" class="yd-clear-on-click" />
+                <input type="submit" value="{__b('speichern')}" class="button" />
+            </form>
+
+        </div>
+
+    </div>
+    <div class="be-box">
+        <h2>{__b('Kommentare')} <a href="#comments-div" class="yd-toggle">{__b('ausblenden')}|{__b('einblenden')}</a></h2>
+
+        <div id="comments-div" class="be-box-in hidden">
+            <table class="user-tab">
+                <tr>
+                    <th width="25%">{__b('Eingetragen am')}</th>
+                    <th width="15%">{__b('Author')}</th>
+                    <th width="50%">{__b('Kommentar')}</th>
+                    <th width="10%">{__b('Eingeloggt')}</th>
+                </tr>
+                {foreach from=$comments item=comment}
+                <tr>
+                    <td>{$comment['time']}</td>
+                    <td>{if $comment['masterAdmin']}{$comment['aName']} ({$comment['aEmail']}){else}{$comment['cPrename']} {$comment['cName']} ({$comment['cEmail']}){/if} </td>
+                    <td>{$comment['comment']}</td>
+                    <td>{if $comment['masterAdmin']}{__b('aus Admin-backend')}{else}{__b('direkt')}{/if}</td>
+                </tr>
+                {/foreach}
+            </table>
+        </div>
+
+    </div>
+</div>
+

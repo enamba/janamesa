@@ -1,0 +1,155 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="be-1-column" style="">
+    <div class="be-box">
+        <h2>{__b('Neukundengutschein prüfen')}   </h2>
+        <div class="be-box-in be-discount-formulars">
+
+            <h3>{__b('Bitte nur ein Feld ausfüllen!')}</h3>
+
+            <form action="/administration_discount/checkregistrationdiscountcode/" method="post">
+
+                <ul>
+                    <li class="be-cd1">
+                        <label>{__b('E-Mail-Adresse')}</label>
+                        <input type="text" name="email" value="{$searchval['email']}" />
+                    </li>
+                    <li class="be-cd2">
+                        <label>{__b('Tel. Nummer')}</label>
+                        <input type="text" name="tel" value="{$searchval['tel']}" />
+                    </li>
+                    <li class="be-cd3">
+                        <label>{__b('Benutzer ID')}</label>
+                        <input type="text" name="customerId" value="{$searchval['customerId']}" />
+                    </li>
+                    <li class="be-cd4">
+                        <label>{__b('Registrierungscode')}</label>
+                        <input type="text" name="registrationCode" value="{$searchval['registrationCode']}" />
+                    </li>
+                </ul>
+                
+                <hr />
+                
+                <input type="submit" value="{__b('Jetzt prüfen!')}"/>
+
+            </form>
+
+
+            {if !($getrequest)}
+            {if (!is_null($discountcheck))}
+            <table class="user-tab" style="max-width: 850px">
+                <tr>
+                    <td>E-Mail-Adresse</td>
+                    {if is_null($discountcheck->getReferer())}
+                    <td colspan="2">
+                        {__b('Bei diese Rabattaktion gibt es keinen URL Referer')}
+                    </td>
+                    {else if strlen($discountcheck->getCodeEmail())>0}
+                    <td>
+                        {__b('Dieser Link wurde')} {if $discountcheck->getEmailSendCount() > 1}{$discountcheck->getEmailSendCount()} {__b('Mal')}{/if} {__b('auf die Adresse')} <a href="mailto:{$discountcheck->getEmail()}">{$discountcheck->getEmail()}</a> {__b('verschickt:')}<br/>
+                        <input type="text" class="yd-discountcheck-readonly-input" value="/{$discountcheck->getReferer()}/confirm/code/{$discountcheck->getCodeEmail()}" style="width: 600px;" readonly/><br/>
+                        {__b('Benutzer:')} {$discountcheck->getPrename()} {$discountcheck->getName()}
+                    </td>
+                    <td>
+                        {if !is_null($discountcheck->getCreated())}{__b('am')} {date("d.m.Y H:i:s", $discountcheck->getCreated())}{/if}
+                    </td>
+                    {else}
+                    <td colspan="2">
+                        {__b('Es wurde kein Link auf die Adresse')} <a href="mailto:{$discountcheck->getEmail()}">{$discountcheck->getEmail()}</a> {__b('verschickt')}
+                    </td>
+                    {/if}                      
+                </tr>
+                <tr>
+                    <td>{__b('E-Mail Verifizierung')}</td>
+                    {if strlen($discountcheck->getEmailConfirmed())>0}
+                    <td>
+                        {__b('Die Email wurde bestätigt')}
+                    </td>
+                    <td>
+                        {if !is_null($discountcheck->getEmailConfirmed())}{__b('am')} {date("d.m.Y H:i:s", strtotime($discountcheck->getEmailConfirmed()))}{/if}
+                    </td>
+                    {else}
+                    <td colspan="2">
+                        {__b('Die Email wurde noch nicht verifiziert.')}
+                    </td>
+                    {/if}                      
+                </tr>
+                <tr>
+                    <td>{__b('Tel.')}</td>
+                    {if strlen($discountcheck->getTel())>0}
+                    <td>
+                       {__b('Bestätigungscode')} <input class="yd-discountcheck-readonly-input" type="text" value="{$discountcheck->getCodeTel()}" style="width: 70px; text-align: center;"/> wurde {if $discountcheck->getSmsSendCount() > 1}{$discountcheck->getSmsSendCount()} Mal{/if} auf die Nummer <a class="yd-sip" href="sip:{$discountcheck->getTel()}">{$discountcheck->getTel()}</a> verschickt<br/>
+                    </td>
+                    <td>
+                        {if !is_null($discountcheck->getTelSend())}{__b('am')} {date("d.m.Y H:i:s", strtotime($discountcheck->getTelSend()))}{/if}
+                    </td>
+                    {else}
+                    <td colspan="2">
+                        {__b('Es wurde kein Bestätigungscode verschickt')}
+                    </td>
+                    {/if}
+                </tr>
+                <tr>
+                    <td>{__b('Benutzer')}</td>
+                    {if !is_null($customer)}
+                    <td>
+                        {__b('Benutzer')} <a href="/administration/users/IDgrid/{$discountcheck->getCustomerId()}" target="_blank">{$customer->getPrename()} {$customer->getName()}</a> {__b('wurde angelegt')}
+                    </td>
+                    <td>
+                        {__b('am')} {date("d.m.Y H:i:s", $customer->getCreated())}
+                    </td>
+                    {else}
+                    <td colspan="2">
+                        {__b('Es wurde kein Benutzer bei diesem Gutschein angelegt')}
+                    </td>
+                    {/if}
+                </tr>                
+                <tr>
+                    <td>{__b('Rabattcode')}</td>
+                    {if !is_null($rabattcode)}
+                    <td>
+                        {__b('Rabattcode')} <input class="yd-discountcheck-readonly-input" type="text" value="{$rabattcode->getCode()}" style="width: 100px; text-align: center;"/> {__b('aus der Rabattaktion')} <a href="/administration/discounts/IDgrid/{$rabattcode->getRabattId()}" target="_blank">"{$rabattcode->getParent()->getName()}"</a> {__b('wurde erstellt.')}<br>
+                        {__b('Diese Rabattaktion ist gültig von')} {date("d.m.Y", $rabattcode->getParent()->getStart())} {__b('bis')} {date("d.m.Y", $rabattcode->getParent()->getEnd())}. 
+                        {__b('Wert:')} {if $rabattcode->getParent()->getKind() == 0}
+                            {$rabattcode->getParent()->getRabatt()} %
+                        {else}
+                            {intToPrice($rabattcode->getParent()->getRabatt())} &euro;
+                        {/if}
+                        
+                        {if $orderscount>0}<br/>{__b('Rabattcode wurde bereits in')} {$orderscount} {__b('Bestellung')}{if $orderscount>1}{__b('en')}{/if} {__b('verwendet.')}{/if}
+                    </td>
+                    <td>
+                        {__b('am')} {date("d.m.Y H:i:s", $rabattcode->getCreated())} 
+                    </td>
+                    {else}
+                    <td colspan="2">
+                        {__b('Es wurde kein Rabattcode erstellt')}
+                    </td>
+                    {/if}
+                </tr>
+            </table>
+            <br/><br/><br/>
+            {else if (!is_null($emailcustomer))}
+            <b>
+                {__b('Unter dieser Email ist bereits ein Benutzer angelegt')}:  <a href="/administration/users/IDgrid/{$emailcustomer->getId()}">{$emailcustomer->getPrename()} {$emailcustomer->getName()}</a>, {__b('registriert am')} {date("d.m.Y H:i:s", $emailcustomer->getCreated())}
+            </b>
+            {else if (!is_null($telcustomer))}
+            <b>
+                {__b('Unter dieser Tel. Nummer wurde bereits ein Benutzer angelegt')}:  <a href="/administration/users/IDgrid/{$telcustomer->getId()}">{$telcustomer->getPrename()} {$telcustomer->getName()}</a>, {__b('registriert am')} {date("d.m.Y H:i:s", $telcustomer->getCreated())}
+            </b>
+            {else if !is_null($verificationCode)}
+                {if $verificationCode->getSend() == 0}
+                    {__b('Der Registrierungscode existiert, wurde aber noch nicht verwendet.')}
+                {/if}
+            {else}
+            {__b('Es wurde kein Gutschein gefunden')}
+            {/if}
+            {/if}
+
+
+        </div>
+    </div>
+</div>
+
+{/block}    

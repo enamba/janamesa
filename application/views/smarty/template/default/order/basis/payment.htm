@@ -1,0 +1,52 @@
+{extends file='base.htm'}
+{block name="content"}
+
+    {if $newCustomerDiscountError == 1}
+    <div class="discount-warn yd-box">
+        <p>{__('Dieser Paypal-Account wurde bereits für eine Bestellung mit %s verwendet. Bitte verwende einen anderen Account oder eine andere Bezahlmethode. Ein Paypal-Account ist für %s ein eindeutiger Zuordnung zu einem Kunden zu Grunde gelegt.', $domain_base, $domain_base)} </p>
+        <p>{__('Der Betrag von %s € wurde nicht von Deinem Konto abgebucht.', $newCustomerDiscountAbsTotal|inttoprice)}</p>  
+        <br />
+        <p><a class="button yd-link-rabatt-delete">{__('Ohne Gutschein bestellen')}</a> <a class="button" onclick=" $('#paymentForm').submit();">{__('Anderes Paypal Konto nehmen')}</a></p>
+    </div>
+    {elseif $newCustomerDiscountError == 2}
+    <div class="discount-warn yd-box">
+        <p>{__('Es tut uns leid, aber Gutscheine sind nur mit einem verifiziertem PayPal-Account einlösbar. Bitte verwende einen anderen Account oder eine andere Bezahlmethode.')} </p>
+        <p>{__('Der Betrag von %s € wurde nicht von Deinem Konto abgebucht.', $newCustomerDiscountAbsTotal|inttoprice)}</p>  
+        <br />
+        <p><a class="button yd-link-rabatt-delete">{__('Ohne Gutschein bestellen')}</a> <a class="button" onclick=" $('#paymentForm').submit();">{__('Anderes Paypal Konto nehmen')}</a></p>
+    </div>
+    {/if}
+
+    <form action="/order_basis/payment" method="post" name="finishForm" id="paymentForm">
+
+        <div id="yd-sidebar">
+
+            {* include file="$bits/default/sidebar-location.htm" *}
+            {include file="order/_includes/sidebar/cart-read.htm"}         
+
+            {if $config->domain->base == 'lieferando.de'}
+                <a href="#" class="yd-button-280 yd-submit-on-click">{__('Jetzt kaufen')}</a>
+            {else}
+                <a href="#" class="yd-button-280 yd-submit-on-click">{__('Bestellung abschicken')}</a>
+            {/if}
+                
+        </div>
+
+        <div id="yd-ordering">
+            <span id="paymentcontent">
+                {include file='order/_includes/finish/payment.htm'}
+            </span>
+        </div>
+
+        {if $config->domain->base == 'janamesa.com.br'}
+        {include file="order/_includes/livechat.htm"}
+        {/if}
+        
+        {if $newCustomerDiscountError}
+        {include file='order/_includes/form_order.htm'}
+        {/if}
+    </form>
+   
+    {include file='_cookies/masterpixel/orderflow.htm' uadomain=$domain_base step1=0 step2=0 step3=0 step4=1}
+   
+{/block}

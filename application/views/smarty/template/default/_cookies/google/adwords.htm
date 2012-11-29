@@ -1,0 +1,17 @@
+{assign var="templatename" value="`$request->getControllerName()`_`$request->getActionName()`"}
+{if ($config->google->conversion && $config->google->conversion->label->$templatename)}
+<script type="text/javascript">
+/* <![CDATA[ */
+$(document).ready(function() {ldelim}
+    var google_conversion_id = {$config->google->conversion->id};
+    var google_conversion_language = "{$config->google->conversion->language}";
+    var google_conversion_format = "{$config->google->conversion->format}";
+    var google_conversion_color = "{$config->google->conversion->color}";
+    var google_conversion_label = "{$config->google->conversion->label->$templatename}";
+    var google_conversion_value = {$config->google->conversion->value};
+    var adservicesUrl = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'googleadservices.com/pagead/conversion.js';
+    $.getScript(adservicesUrl); 
+{rdelim});
+/* ]]> */
+</script>
+{/if}

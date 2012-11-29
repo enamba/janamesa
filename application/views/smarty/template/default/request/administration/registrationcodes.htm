@@ -1,0 +1,23 @@
+<h1>GutscheinCodes für {$discount->getName()}</h1>
+    <form id="discount">
+        {if is_null($discount)}
+            Keine Liste verfügbar
+        {else}
+            <br />
+            <br />
+            <table class="noborder">
+                {foreach from=$discount->getCodes(1) item=code}
+                    <tr>
+                        <td>
+                            <input style="width: 300px;" type="text" value="{$code->registrationCode}">
+                        </td>
+                        <td width="50%"></td>
+                    </tr>
+                {foreachelse}
+                    <li>{__b('Keine Liste verfügbar')}</li>
+                {/foreach}
+            </table>
+            <br />
+            <br />
+        {/if}
+    </form>

@@ -1,0 +1,56 @@
+{extends file="company/base.htm"}
+
+{block name="content"}
+
+<div id="admincase">
+
+    {include file='company/_left_nav.htm'}
+
+    <div class="clear"></div>
+
+    <div id="main-content">
+
+    <!-- Page Head -->
+    
+
+        <ul class="shortcut-buttons-set">
+
+            <li><a class="shortcut-button" href="/company/addresses"><span>
+                <img src="{$domain_static}/images/yd-icons/backend/adress_overview.png" alt="" /><br />
+                {__('Adressen Übersicht')}
+            </span></a></li>
+
+            <li><a class="shortcut-button" href="/company/address"><span>
+                <img src="{$domain_static}/images/yd-icons/backend/add_adress.png" alt="" /><br />
+                {__('Adresse hinzufügen')}
+            </span></a></li>
+
+        </ul><!-- End .shortcut-buttons-set -->
+
+        <div class="clear"></div>
+
+
+        <div class="content-box">
+            <div class="content-box-header">
+                <h3>{__('Adressen')}</h3>
+                <p class="yd-title-margin">{__('Verwalte hier die Lieferadressen der Firma')}</p>
+                <div class="clear"></div>
+            </div>
+            <div class="right" id="content">
+                    <!-- Anfang Meine Daten -->
+                    <div class="mydata">
+
+                    <div class="users">
+                        <div class="set-content">
+                            <div class="settings_group">
+                               {$grid}
+                            </div>
+                        </div>
+                    </div>
+                <!-- Ende Meine Daten -->
+            </div>
+        </div> <!-- Content-Box-content -->
+        </div> <!-- Content-Box -->
+    </div> <!-- main Content -->
+    </div>
+{/block}

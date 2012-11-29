@@ -1,0 +1,69 @@
+{foreach from=$messages item=message}
+<div class="ticket yd-pull-this-message" id="yd-current-message-{$message->getId()}">
+    <span class="prio prio-{$message->getPrio()}">{$message->getPrio()}</span>
+    <small>Nachricht vom {$message->getCreated()|date_format:'%d.%m.%Y %H:%M'}</small>
+    <div class="ticket-icon"></div>
+    <ul>
+        <li>{__b('Status: offen')}</li>
+        {if strlen($message->getMessage()) > 0}
+            <li>{__b('Nachricht:')} {$message->getMessage()}</li>
+        {/if}
+        <li></li>
+    </ul>
+</div> 
+{/foreach}
+
+
+{foreach from=$tickets item=ticket}
+<div class="ticket yd-pull-this-ticket
+            {if $ticket->getService()->isPremium()}premium{/if}
+            {if  $ticket->getService()->isBloomsburys()}bloomsburys{/if}
+            {if $ticket->getService()->isGreat()}great{/if}
+            {if $ticket->getService()->isNoContract()}nocontract{/if}"
+            id="yd-current-ticket-{$ticket->getId()}">
+    <span class="prio prio-{$ticket->getPrio()}">{$ticket->getPrio()}</span>
+    <small>Bestellung vom {$ticket->getTime()|date_format:'%d.%m. - %H:%M'}</small>
+    <div class="ticket-icon">
+        {if $ticket->getUuid() != NULL}
+        <img src="{$domain_static}/images/yd-backend/iphone.png" />
+        {/if}
+        {if $ticket->getService()->isPremium()}
+        <img src="{$domain_static}/images/yd-frontend-step2/badge-premium.png" />
+        {/if}
+        {if $ticket->getService()->isBloomsburys()}
+        <img src="{$domain_static}/images/yd-frontend-step2/badge-bloomsburys.png" />
+        {/if}
+        {if $ticket->getService()->isDomadelis()}
+        <img src="{$domain_static}/images/yd-frontend-step2/badge-domadelis.png" />
+        {/if}
+        {if $ticket->getService()->isRestonomad()}
+        <img src="{$domain_static}/images/yd-frontend-step2/badge-restonomad.png" />
+        {/if}
+        {if $ticket->getService()->isReseauResto()}
+        <img src="{$domain_static}/images/yd-frontend-step2/badge-reseauresto.png" />
+        {/if}
+        {if $ticket->getService()->isNoContract()}
+        <img src="{$domain_static}/images/yd-backend/heyho/heyho-nocontract.png" />
+        {/if}
+    </div>
+    <ul>
+        <li>
+            {if $ticket->getService()->isNoContract()}
+                {__b('Dienstleister ohne Vertrag')}
+            {else}
+                {$ticket->getState()|intToStatusOrders}
+            {/if}
+        </li>
+        <li>
+            {__b('Benutzer:')} {$ticket->getCustomer()->getFullname()} 
+            {if $ticket->getCustomer()->isEmployee()} {$ticket->getCustomer()->getCompany()->getName()} {/if}
+        </li>
+        <li>seit {$ticket->getLastStateChange()|date_format:'%d.%m. - %H:%M'}</li>
+        
+        <br/>
+        <div {if $ticket->getService()->getOpening()->isOpen()}style="color: green"{else}style="color: red"{/if}>
+            {$this->formatOpenings($ticket->getService()->getOpening()->getIntervalOfDay(time()))}
+        </div>
+    </ul>
+</div>   
+{/foreach}

@@ -1,0 +1,15 @@
+{extends file="base.htm"}
+{block name="content"}
+
+<div class="yd-discount {$referer}">
+    {include file='discount/_standard_text.htm'}
+    <div class="yd-discount-2012 yd-discount-progress-6" id="step-6-{$referer}">
+    
+
+     {include file='request/discount/index.htm'}
+    </div>
+</div>
+
+{include file='discount/_standard_rules.htm'}
+
+{/block}

@@ -1,0 +1,29 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<ul class="be-tabs">
+    <li><a href="/administration_user/create">{__b('Benutzer erstellen')}</a></li>
+    <li>
+        {if $showdeleted}
+        <a style="color: red" href="/administration/showdeletedusers/do/0">{__b('Gelöschte Benutzer verbergen')}</a>
+        {else}
+        <a style="color: green" href="/administration/showdeletedusers/do/1">{__b('Gelöschte Benutzer anzeigen')}</a>
+        {/if}
+    </li>
+</ul>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Übersicht der Benutzer')}
+        </div>
+        <div class="item-content">
+            {$grid}
+        </div>
+    </div>
+</div>
+
+<div class="hidden" id="yd-lang-backend-confirm-no-newsletter">{__b('Den Nutzer aus dem Newsletter Verteiler nehmen?')}</div>
+<div class="hidden" id="yd-lang-backend-confirm-newsletter">{__('Den Nutzer in den Newsletter Verteiler eintragen?')}</div>
+
+{/block}

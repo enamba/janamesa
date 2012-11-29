@@ -1,0 +1,1 @@
+alter table city_verbose change tp_logradouro tp_street varchar(255);

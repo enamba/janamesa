@@ -1,0 +1,22 @@
+{if $location}
+<form class="tr yd-form-toggle" action="/request_user_location/edit" method="post">
+    <input class="hidden" type="hidden" name="id" value="{$location->getId()}" />
+    <input class="hidden" type="hidden" name="cityId" value="{$location->getCity()->getId()}" />
+    <input class="hidden" type="hidden" name="plz" value="{$location->getPlz()}" />
+    <div class="td"><textarea style="width: 80px" name="street">{$location->getStreet()}</textarea></div>
+    <div class="td"><input style="width: 20px" type="text" value="{$location->getHausnr()}" name="hausnr" size="4" /></div>
+    <div class="td"><span style="display:block;padding:5px">{$location->getPlz()} {$location->getCity()->getCity()}</span></div>
+    <div class="td"><input style="width: 75px" type="text" value="{$location->getTel()}" name="tel" /></div>
+    <div class="td"><textarea style="width: 80px" name="comment">{$location->getComment()}</textarea></div>
+    <div class="td"><input style="width: 30px" type="text" value="{$location->getEtage()}" name="etage" /></div>             
+    <div class="td"><textarea style="width: 80px" name="companyName">{$location->getCompanyName()}</textarea></div>
+    <div class="td">
+        <span class="yd-please-wait hidden"><img src="{$domain_static}/images/ajax-loader-16-white.gif" />&nbsp;&nbsp;&nbsp;</span>
+        <a class="td-edit yd-form-toggle" title="{__('Adresse editieren')}" href="#location_{$location->getId()}" name="location_{$location->getId()}" id="location_{$location->getId()}"></a>
+        <a class="td-check yd-edit-location" title="{__('Speichern')}" style="display:none"></a>
+        <a class="td-heart yd-heart-location {if $location->isPrimary()}active{/if}" title="{__('Primäre Adresse')}" id="yd-heart-location-{$location->getId()}"></a>
+        <a href="/user/locations/del/{$location->getId()}" class="td-delete" title="{__('Adresse löschen')}" onclick="if(!confirm('{__('Adresse löschen?')}')){ldelim}return false;{rdelim}"></a>
+        <a class="td-letsgo yd-start-order-from-address" title="{__('Jetzt dorthin bestellen')}" id="yd-addr-{$location->getId()}-{$location->getCity()->getId()}" href="/{$location->getCity()->getRestUrl()}"></a>
+    </div>
+</form>
+{/if}

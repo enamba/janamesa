@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <meta charset="utf-8" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+
+        <title>
+            {if $config->domain->base == 'lieferando.de'}
+            DE -
+            {elseif $config->domain->base == 'lieferando.at'} 
+            AT -
+            {elseif $config->domain->base == 'lieferando.ch'} 
+            CH -
+            {elseif $config->domain->base == 'taxiresto.fr'} 
+            FR -
+            {elseif $config->domain->base == 'pyszne.pl'} 
+            PL -
+            {/if}
+            heyho Ticketsystem</title>
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-heyho.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-admin.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-gridbox.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-zendform.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-jquery.css" />
+        <script type="text/javascript" src="/media/javascript/compiled/backend-{$REVISION}.js"></script>        
+    </head>
+    <body class="de">
+        <div class="hidden" id="yd-lang-confirm-blacklist">{__b('Soll die Bestellung wirklich auf die Blacklist gesetzt werden?')}</div>
+        <div class="hidden" id="yd-lang-ticket-comment">{__b('Bitte geben sie zuerst ein Kommentar an!')}</div>
+        <div class="hidden" id="yd-lang-ticket-reason">{__b('Bitte geben sie zuerst einen Grund an!')}</div>
+        <div class="hidden" id="yd-lang-ticket-comment-default">{__b('Persönlichen Kommentar abgeben')}</div>
+        <div class="hidden" id="yd-lang-ticket-wait">{__b('... Bitte warten ...')}</div>
+        <div class="hidden" id="yd-lang-ticket-finish">{__b('Ticket Bearbeitung wurde beendet.')}</div>
+        <div class="hidden" id="yd-lang-ticket-action-wait">{__b('Aktion wird ausgeführt, bitte warten')}</div>
+        <div class="hidden" id="yd-lang-ticket-no-action">{__b('Keine Aktion wurde ausgeführt.')}</div>
+        <div class="hidden" id="yd-lang-ticket-confirm-oraly">{__b('Bestellung wurde mündlich bestätigt.')}</div>
+        <div class="hidden" id="yd-lang-ticket-confirm-fax">{__b('Fax wurde bestätigt.')}</div>
+        <div class="hidden" id="yd-lang-ticket-confirm">{__b('Bestellung wurde bestätigt.')}</div>
+        <div class="hidden" id="yd-lang-ticket-resend">{__b('Bestellung neu verschickt.')}</div>
+        <div class="hidden" id="yd-lang-ticket-fake">{__b('Bestellung wurde zur Blacklist hinzugefügt.')}</div>
+        <div class="hidden" id="yd-lang-ticket-cancel">{__b('Bestellung wurde storniert.')}</div>
+        <div class="hidden" id="yd-lang-ticket-from">{__b('von')}</div>
+        <div class="hidden" id="yd-lang-ticket-recently">{__b('Vor 1 Min: ')}</div>
+        <div class="hidden" id="yd-lang-ticket-comment-text">{__b('Comment: ')}</div>
+        <div class="hidden" id="yd-ticket-admin">{$adminName}</div>
+        <div id="yd-nonfooter" class="ticketsystem">
+
+            <div class="yd-header">
+                <div class="yd-inner">
+                    <h1><a></a></h1>
+                </div>
+            </div>
+
+            <div id="yd-content" class="yd-clearfix">
+
+                <ul class="yd-tickets-nav yd-clearfix" style="display: none">
+                    <li><a class="stats yd-tickets-all active"><span>{__b('Alle')}: <span id="All"></span></span></a></li>
+                    <li><a class="stats yd-tickets-prem"><span>{__b('Premium')}: <span id="Premium"></span></span></a></li>
+                    <li><a class="stats yd-tickets-fraud"><span>{__b('Betrugsverdacht')}: <span id="Fraud"></span></span></a></li>
+                    <li><a class="stats yd-tickets-fail"><span>{__b('Fehlerhaft')}: <span id="Error"></span></span></a></li>
+                    <li><a class="stats yd-tickets-notaffirmed"><span>{__b('Not affirmed')}: <span id="NotAffirmed"></span></span></a></li>
+                    <li><a class="stats yd-tickets-tel"><span>{__b('Neue Dienstleister')}: <span id="NotifyPaid"></span></span></a></li>
+                </ul>
+
+                <div class="content-left" id="yd-pull-in-ticket-here">
+
+                    <!-- pulled order will be placed in here -->
+
+                </div>
+
+                <div class="content-right">
+                    <span class="load">
+                        <img src="{$domain_static}/images/yd-backend/heyho/ajax-loader.gif" />
+                        <br />
+                        {__b('Tickets werden geladen')}...
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="yd-footer">
+            <div class="yd-inner yd-clearfix">
+
+                <div class="yd-footer-left">
+
+                    <div class="yd-footer-column">
+                        <ul>
+                            <li><a rel="follow" target="_blank" href="/service-terms">AGB für Dienstleister</a></li>
+                            <li><a rel="follow" target="_blank" href="/customer-terms">AGB für Kunden</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="yd-footer-column">
+                        <ul>
+                            <li><a rel="follow" target="_blank" href="/about">Impressum</a></li>
+                            <li><a rel="follow" target="_blank" href="/privacy">Datenschutz</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+</html>

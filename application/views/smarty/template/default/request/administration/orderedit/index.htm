@@ -1,0 +1,58 @@
+<div class="be-dialogs yd-order-edit-dialogs"><a class="be-dialogs-close yd-close-lightbox"></a>
+
+    <div class="be-dialogs-head">
+        <h2>{__b('Optionen für die Bestellung #%s', $order->getId())}</h2>
+    </div>
+
+    <div class="be-dialogs-body">
+
+        {if $order->getState() != Yourdelivery_Model_Order_Abstract::FAKE_STORNO}
+        <div id="yd-order-edit-storno">         
+            <div class="hidden" id="yd-lang-ticket-reason-lightbox">{__b('Bitte geben sie zuerst einen Grund an!')}</div>
+            {$stornoForm}
+        </div>
+        {/if}
+
+        {if $order->getState() < Yourdelivery_Model_Order_Abstract::AFFIRMED}
+        <div id="yd-order-edit-confirm">
+            {$confirmForm}
+        </div>
+        {/if}
+
+        {if $order->getPayerId() != false && $order->isBlacklisted() != false}
+        <div id="yd-order-edit-paypal">
+            {$paypalBlackListForm}
+        </div>
+        {/if}
+
+        <div id="yd-order-edit-resend">
+            <a class="button" href="/download/order/{Default_Helpers_Crypt::hash($order->getId())}">{__b('Fax Vorschau')}</a>
+
+            <!-- resend this orer -->
+            {$resendForm}
+
+            <!-- resend confirmation email -->
+            <input type="submit" class="yd-order-confirmationemail" id="yd-order-confirmationemail-{$order->getId()}" value="{__b('Bestätigungsemail erneut versenden')}" />
+
+            <!-- resend rating email -->
+            <input type="submit" class="yd-order-ratingemail" id="yd-order-ratingemail-{$order->getId()}" value="{__b('Bewertungsemail erneut versenden')}" />
+        </div>
+
+        <div id="yd-order-edit-fake">
+            <!-- mark order as fraud -->
+            <div class="hidden" id="yd-lang-confirm-blacklist-lightbox">{__b('Soll die Bestellung wirklich auf die Blacklist gesetzt werden?')}</div>
+            <input type="submit" class="yd-order-fake" id="yd-order-fake-{$order->getId()}" value="{__b('Blacklist')}" />
+        </div>
+
+        <div id="yd-order-edit-comment">
+            {$commentForm}
+        </div>
+        
+        {if $order->getPayment() != 'bar' && $order->getKind() == Yourdelivery_Model_Order_Abstract::PRIVATEORDER}
+            <div id="yd-order-edit-change-payment">
+                {$paymentForm}
+            </div>
+        {/if}
+
+    </div>
+</div>

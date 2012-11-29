@@ -1,0 +1,56 @@
+<form action="" method="post">
+
+    <div class="be-1-column">
+        <div class="be-box">
+            
+            <h2>{__b('Suche')}</h2>
+            
+            <div class="be-box-in">
+                <table class="user-tab">
+                    <tr>
+                        <td>
+                            {foreach $search['value'] as $i => $v}
+                            <div class="yd-service-meals-search">
+                                <select name="criteria[]" style="width:150px;">
+                                    <option value="like" {if $search['criteria'][$i] == "like"}selected="selected"{/if}>{__b("Enthält")}</option>
+                                    <option value="equals" {if $search['criteria'][$i] == "equals"}selected="selected"{/if}>{__b("Enthält genau")}</option>
+                                    <option value="notlike" {if $search['criteria'][$i] == "notlike"}selected="selected"{/if}>{__b("Enthält nicht")}</option>
+                                    <option value="notequals" {if $search['criteria'][$i] == "notequals"}selected="selected"{/if}>{__b("Enthält nicht genau")}</option>
+                                    <option value="startwith" {if $search['criteria'][$i] == "startwith"}selected="selected"{/if}>{__b("Beginnt mit")}</option>
+                                    <option value="endwith" {if $search['criteria'][$i] == "endwith"}selected="selected"{/if}>{__b("Endet mit")}</option>
+                                </select>
+
+                                <input type="text" name="value[]" value="{$search['value'][$i]}" style="width:200px;" />
+
+                                <a href="#" class="yd-service-meals-search-add">{__b("Suchfeld hinzufügen")}</a>
+                                | <a href="#" class="yd-service-meals-search-delete">{__b("Löschen")}</a>
+                            </div>
+                            {/foreach}
+                        </td>
+                        <td>
+                            <input type="checkbox" name="inName" {if $search['inName']}checked="checked"{/if} /> {__b("Name")}<br />
+                            <input type="checkbox" name="inDescription" {if $search['inDescription']}checked="checked"{/if} /> {__b("Beschreibung")}<br />
+                            <input type="checkbox" name="inCategory" {if $search['inCategory']}checked="checked"{/if} /> {__b("Speisenkategorie")}<br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {$r = [25, 50, 75, 100, 150, 200, 250, 500, 750]}
+                            <select name="records">
+                                {foreach $r as $i}
+                                <option value="{$i}" {if $search['records'] == $i}selected="selected"{/if}>{$i}</option>
+                                {/foreach}
+                            </select>
+                            
+                            <input type="submit" value="{__b('Suchen')}" />
+                        </td>
+                        <td>
+                            <input type="checkbox" name="withoutCategory" {if $search['withoutCategory']}checked="checked"{/if} /> {__b("Nur anzeigen wenn keine Kategorie vorhanden")}<br />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+</form>

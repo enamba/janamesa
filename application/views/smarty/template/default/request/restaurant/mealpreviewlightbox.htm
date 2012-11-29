@@ -1,0 +1,121 @@
+{if is_null($meal)}
+    <div class="yd-dialogs yd-dialogs-green"><a class="yd-dialogs-close"></a>
+
+        <div class="yd-dialogs-body">
+            <div class="yd-dialogs-box yd-dialogs-green">
+                <div class="yd-dialogs-box-body">
+                    <ul class="yd-clearfix">
+                        {{__b('Bei dieser Speise sind noch keine Preise angegeben.')}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+{else}
+
+    <!-- input fields with meal data -->
+    <div class="yd-dialogs yd-dialogs-green"><a class="yd-dialogs-close"></a>
+        <div class="yd-dialogs-head">
+            <div class="yd-clearfix">
+                <input type="text" />
+                <span>
+                    {$meal->getName()}
+                    {if $meal->hasAttribute('vegetarian')}<img title="{__('vegetarisch')}" src="{$config->domain->static}/images/yd-frontend-step3/menu-vegetarian.png" alt="" />{/if}
+                    {if $meal->hasAttribute('garlic')}<img title="{__('mit Knoblauch')}" src="{$config->domain->static}/images/yd-frontend-step3/menu-garlic.png" alt="" />{/if}
+                    {if $meal->hasAttribute('bio')}<img title="{__('Bioware')}" src="{$config->domain->static}/images/yd-frontend-step3/menu-bio.png" alt="" />{/if}
+                    {if $meal->hasAttribute('spicy')}<img title="{__('scharf gewürzt')}" src="{$config->domain->static}/images/yd-frontend-step3/menu-spicy.png" alt="" />{/if}
+                    {if $meal->hasAttribute('fish')}<img title="{__('mit Fisch')}" src="{$config->domain->static}/images/yd-frontend-step3/menu-fish.png" alt="" />{/if}
+                </span>
+                <span class="yd-dialogs-head-price">
+                    <span class="yd-current-meal-price">
+                        {$meal->getCost()|inttoprice}
+                    </span>
+                    &nbsp;
+                    <sup>{__('€')}</sup>
+                </span>
+            </div>
+            <small>{$meal->getDescription()}</small>
+        </div>
+
+        <div class="yd-dialogs-body">
+            {assign var=mealSizes value=$meal->getSizes()}
+            {if $mealSizes|@count > 1}
+            <div class="yd-dialogs-box yd-dialogs-green">
+                <div class="yd-dialogs-box-head">
+                    <span class="yd-dbh-choose">{__b('Wähle jetzt Deine Größe')}</span>
+                </div>
+                <div class="yd-dialogs-box-body">
+                    <ul class="yd-clearfix">
+                        {foreach $meal->getSizes() as $size}
+                        <input type="hidden" id="yd-sizes_{$size.id}_cost" value="{$size.cost}" />
+                        <li>
+                            <input type="radio" name="sizeId" value="{$size.id}" class="yd-preview-change-size" id="yd-change-size-{$size.id}" {if $meal->getCurrentSize() == $size.id}checked="checked"{/if} />
+                                &nbsp;&nbsp;{__('%s für %s €', $size.name, $size.cost|inttoprice)}
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+            {/if}
+
+            {if $meal->hasOptions()}
+            {assign var=mealOptionsFast value=$meal->getOptionsFast()}
+            {foreach $mealOptionsFast as $optrow}
+            <div class="yd-dialogs-box optrow" id="choices-{$optrow.id}-{$optrow.choices}">
+
+                <div class="yd-dialogs-box-head">
+                    <span class="yd-dbh-number">{counter}.</span>
+                    <span class="yd-dbh-choose">{__b('Wähle jetzt Dein %s',$optrow.name)}</span>
+                    <span class="yd-dbh-change yd-change-options hidden" id="yd-change-options-{$optrow.id}"></span>
+                    <span class="yd-dbh-price">
+                        <span class="yd-option-choices-selected">0</span>/
+                        <span class="yd-option-choices-needed">{$optrow.choices}</span>
+                    </span>
+                    <span class="yd-dbh-icon"></span>
+                    <span class="yd-dbh-choise"></span>
+                </div>
+
+                <div class="yd-dialogs-box-body" id="yd-change-options-box-{$optrow.id}">
+                    <ul class="yd-clearfix">
+                        {foreach $optrow.items as $optitem}
+                        <li>
+                            <input type="checkbox" disabled="1" />
+                                   <label for="row-{$optrow.id}-{$optitem.oid}-{$optrow.choices}">
+                                {$optitem.name}
+                                {if $optitem.cost > 0}<span class="price">({__('%s €', $optitem.cost|inttoprice)})</span>{/if}
+                            </label>
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+
+            </div>
+            {/foreach}
+            {/if}
+
+            {if $meal->hasAnyExtras()}
+                <h2>{__b('Lust auf Extras?')}</h2>
+                {foreach $mealSizes as $size}
+                {if $meal->hasExtras($size.id)}
+                <div class="yd-dialogs-box yd-current-extras" id="yd-current-extras-{$size.id}" {if $size.id != $meal->getCurrentSize()}style="display:none;"{/if}>
+                     <div class="yd-dialogs-box-head">
+                        <span class="yd-dbh-choose">{__b('Wähle jetzt Deine Extras')}</span>
+                    </div>
+                    <div class="yd-dialogs-box-body">
+                        <ul class="yd-clearfix">
+                            {foreach item=extra from=$meal->getExtrasFast($size.id)}
+                            <li>
+                                <input type="checkbox" disabled="1"/>
+                                {$extra.name}{if $extra.cost>0}<span class="price">({__('%s €', $extra.cost|inttoprice)})</span>{/if}
+                            </li>
+                            {/foreach}
+                        </ul>
+                    </div>
+                </div>
+                {/if}
+                {/foreach}
+            {/if}
+        </div> <!-- /yd-dialogs-body -->
+        <div class="yd-dialogs-footer"></div>
+    </div> <!-- /yd-dialogs -->
+{/if}  <!-- if is_null($meal) -->

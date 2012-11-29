@@ -1,0 +1,57 @@
+{extends file="company/base.htm"}
+
+{block name="content"}
+
+<div id="admincase">
+
+    {include file='company/_left_nav.htm'}
+
+    <div class="clear"></div>
+
+    <div id="main-content">
+
+    <!-- Page Head -->
+
+            <ul class="shortcut-buttons-set">
+
+                <li><a class="shortcut-button" href="/company/costcenters"><span>
+                        <img src="{$domain_static}/images/yd-icons/backend/orders_overview.png" alt="" /><br />
+                        {__('Kostenstelle auflisten')}
+                </span></a></li>
+
+                <li><a class="shortcut-button" href="/company/addcostcenter"><span>
+                        <img src="{$domain_static}/images/yd-icons/backend/project_number.png" alt="" /><br />
+                        {__('Kostenstelle erstellen')}
+                </span></a></li>
+
+			</ul><!-- End .shortcut-buttons-set -->
+
+    <div class="clear"></div>
+
+    <div class="content-box">
+
+        <div class="content-box-header">
+
+            <h3>{__('Abteilung hinzufügen')}</h3>
+
+            <div class="clear"></div>
+
+        </div>
+
+
+        <div id="content" class="right">
+            <!-- Anfang Meine Daten -->
+
+
+            <div id="tab1"> <!-- This is the target div. id must match the href of this div's tab -->
+                {$grid}
+            </div>
+
+        <!-- Ende Meine Daten -->
+        </div> <!-- content-box-content -->
+    </div> <!-- Content-Box -->
+    <div class="clear"></div>
+    </div> <!-- main Content -->
+</div> <!-- admincase -->
+
+{/block}

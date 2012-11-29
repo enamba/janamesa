@@ -1,0 +1,22 @@
+{if $APPLICATION_ENV == "production"}
+
+    {if $uadomain == 'lieferando.de'}
+        <IFRAME SRC="http://img-cdn.mediaplex.com/0/18421/universal.html?page_name=footer&footer=1&mpuid={time()}" HEIGHT=1 WIDTH=1 FRAMEBORDER=0></IFRAME>
+    {elseif $uadomain == 'lieferando.at'}
+        <iframe src="http://img-cdn.mediaplex.com/0/18589/universal.html?page_name=at_nwl_danke&at_nwl_danke=1&mpuid={time()}" HEIGHT=1 WIDTH=1 FRAMEBORDER=0></iframe>
+    {elseif $uadomain == 'lieferando.ch'}
+        <iframe src="http://img-cdn.mediaplex.com/0/18590/universal.html?page_name=ch_nwl_danke&ch_nwl_danke=1&mpuid={time()}" HEIGHT=1 WIDTH=1 FRAMEBORDER=0></iframe>
+    {elseif $uadomain == 'taxiresto.fr'}  
+        <iframe src="http://img-cdn.mediaplex.com/0/18591/universal.html?page_name=fr_nwl_danke&fr_nwl_danke=1&mpuid={time()}" HEIGHT=1 WIDTH=1 FRAMEBORDER=0></iframe>
+    {elseif $uadomain == 'elpedido.es'}
+    
+    {elseif $uadomain == 'appetitos.it'}
+
+    {elseif $uadomain == 'smakuje.pl'}
+    
+    {/if}
+    
+{else}
+
+
+{/if}

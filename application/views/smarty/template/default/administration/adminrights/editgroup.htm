@@ -1,0 +1,82 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<form action="/administration_adminrights/editgroup" method="post">
+    <input type="hidden" name="id" value="{$group->getId()}"/>
+    <input type="hidden" id="yd_editgroup_rescount" value="{count($resources)}"/>
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" />
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+                {__b("Gruppe: %s", $group->getName())}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="30%"><b>{__b("Name")}</b></td>
+                            <td width="70%"><input type="text" name="name" class="rund_set text" value="{$group->getName()}"/> *</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" height="30"></td>
+                        </tr>
+                    </table>
+
+                    <table class="user-tab">
+                        <tr>
+                            <th width="5%" height="20">{__b("Resourcen")}</th>
+                            <th width="25%"></th>
+                            <th width="30%">{__b("Beschreibung")}</th>
+                            <th width="40%"></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input value="1" type="checkbox" class="yd_editgroup_selectall" name="select_all"/>
+                            </td>
+                            <td>
+                                <b>{__b("check/uncheck all")}</b>
+                            </td>
+                            <td colspan="2"></td>
+                        </tr>
+                        {foreach from=$resources item=rc}
+                        <tr>
+                            <td>
+                                <input value="1" type="checkbox" class="yd_resource" id="yd_resource_{$rc.id}" name="resource{$rc.id}" {if $group->hasAccess($rc.id)}checked{/if}/>
+                            </td>
+                            <td>
+                                {$rc.action}
+                            </td>
+                            <td>
+                                <input type="text" class="yd-admingroup_desc" id="yd-admingroup-desc-{$rc.id}" size="40" value="{$rc.description}"/>
+                            </td>
+                            <td id="yd-save-{$rc.id}">
+                                <font color="#999999">{__b("Speichern")}</font>
+                            </td>
+                        </tr>
+                        {/foreach}
+                        <tr>
+                            <td>
+                                <input value="1" type="checkbox" class="yd_editgroup_selectall" name="select_all"/>
+                            </td>
+                            <td>
+                                <b>{__b("check/uncheck all")}</b>
+                            </td>
+                            <td colspan="2"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" />
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+</form>
+{/block}

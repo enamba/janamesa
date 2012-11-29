@@ -1,0 +1,76 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="be-2-column">
+    <div class="be-box">
+        <h2>{__b('Neuen Posten ins Lager eintragen')}</h2>
+        <div class="be-box-in yd-form1">
+
+            <form action="/administration_upselling_storage/add" method="post" name="form">
+
+                <label>{__b('Produkt')}</label>
+                <select name="product">
+                    <option value="Canton2626">{__b('Pizzakartons 26x26x4')}</option>
+                    <option value="Canton2626N">{__b('Pizzakartons 26x26x4 Notebooksbilliger')}</option>
+                    <option value="Canton2626D">{__b('Pizzakartons 26x26x4 Discotel')}</option>
+                    <option value="Canton2626S">{__b('Pizzakartons 26x26x4 DeutschlandSIM')}</option>
+                    <option value="Canton2626H">{__b('Pizzakartons 26x26x4 Hannover')}</option>
+                    <option value="Canton2828">{__b('Pizzakartons 28x28x4')}</option>
+                    <option value="Canton3232">{__b('Pizzakartons 32x32x4')}</option>
+                    <option value="Servicing">{__b('Servietten')}</option>
+                    <option value="Bags">{__b('Plastiktüten')}</option>
+                    <option value="Sticks">{__b('Chopstick')}s</option>
+                </select>
+
+                <hr />
+
+                <label>{__b('Größe der Lieferung')}</label>
+                <input type="text" name="count" class="yd-only-nr" />
+
+                <hr />
+
+                <label>{__b('Bestellt am')}</label>
+                <input type="text" name="orderedAt" class="yd-datepicker-default" />
+
+                <hr />
+
+                <label>{__b('Hersteller')}</label>
+                <input type="text" name="producer" value="" />
+
+                <hr />
+
+                <label>{__b('Kosten des Produkts')}</label>
+                <input type="text" name="costProduct" class="yd-money" />
+
+                <hr />
+
+                <label>{__b('Kosten der Lieferung')}</label>
+                <input type="text" name="costDelivery" class="yd-money" />
+
+                <hr />
+
+                <label>{__b('Voraussichtlicher Liefertermin')}</label>
+                <input type="text" name="deliverEstimation" class="yd-datepicker-default" />
+
+                <hr />
+
+                <label>{__b('Geliefert am')}</label>
+                <input type="text" name="delivered" class="yd-datepicker-default" />
+
+                <hr />
+
+                <label>{__b('Besondere Hinweise')}</label>
+                <textarea name="comment"></textarea>
+
+                <hr />
+
+                <input type="submit" value="{__b('hinzufügen')}" />
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+{/block}

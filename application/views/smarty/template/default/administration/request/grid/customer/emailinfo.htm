@@ -1,0 +1,5 @@
+<li><a href="/administration_order/index/type/view_grid_orders/Emailgrid/{$email|urlencode}/" target="_blank">{__b('E-Mail-Adresse in Bestellungen suchen')}</a></li>
+<li><a href="mailto:{$email}">{__b('E-Mail schreiben')}</a></li>
+<li><a href="/administration_order/index/type/view_grid_orders/Gutscheingrid/1/Emailgrid/{$email|urlencode}" target="_blank">{__b('Verwendete Gutscheine dieser E-Mail-Adresse')}</a></li>
+<li class="yd-grid-box-separation">{__b('Zum Newsletter angemeldet')} <input type="checkbox" class="yd-checkbox-newsletter" data-email="{$email}" value="1" {if $status}checked="checked"{/if} /></li>
+<li><a href="/administration_request_blacklist/email/email/{$email|urlencode}/orderId/{$orderId}" class="yd-blacklist-lightbox">{__b('E-Mail blacklisten & Bestellung stornieren')}</a></li>

@@ -1,0 +1,13 @@
+<form method="post" action="/request_administration_ticketsystem_message/closerestaurantfortoday" class="yd-message-callback-post">
+    <input type="hidden" name="mid" value="{$message->getId()}" />
+    <input type="hidden" name="pid" value="{$printer->getId()}" />
+    
+    {foreach $printer->getRestaurants() as $restaurant} 
+    <br />
+    <input type="checkbox" name="restaurants[]" value="{$restaurant->getId()}" /> 
+    <a href="/administration_service_edit/index/id/{$restaurant->getId()}" target="_blank">{$restaurant->getName()}</a> {__b('für Heute schließen.')}
+    {/foreach}
+    
+    <br /><br />
+    <input type="submit" value="{__b('Speichern')}" class="button" />
+</form>

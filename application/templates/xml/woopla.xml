@@ -1,0 +1,18 @@
+<scheduleDialog xmlns="https://woop.la/mywoopla/systemInterfaces/webservices/AlertCall/">
+    
+    <userDetails>
+        <login>yourdelivery</login>
+        <password>p89.,fg!</password>
+    </userDetails>
+    
+    <callDetails>
+        <numberToCall>4915114564408</numberToCall>
+        <numberToDisplay>4915114564408</numberToDisplay>
+        <launchTimeMinutes>0</launchTimeMinutes>
+        <serviceID>562</serviceID>
+        <externalID>123123</externalID>
+    </callDetails>
+    
+    <callParameters></callParameters>
+    
+</scheduleDialog>

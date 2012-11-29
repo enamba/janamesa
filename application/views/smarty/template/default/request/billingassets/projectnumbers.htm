@@ -1,0 +1,9 @@
+{if count($projectnumbers) > 0}
+    Projektcodes:
+    <select name="projectnumberId" style="width: 300px;">
+        <option value=""></option>
+        {foreach from=$projectnumbers item=prn}
+        <option value="{$prn->getId()}" {if !is_null($billasset) && ($billasset->getProjectnumberId()==$prn->getId())}selected{/if}>{$prn->getNumber()} (#{$prn->getId()})</option>
+        {/foreach}
+    </select>
+{/if}

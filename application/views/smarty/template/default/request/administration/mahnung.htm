@@ -1,0 +1,60 @@
+<h1>{__b('Mahnung erstellen')}</h1>
+<p>{__b('Bitte die Rechnungen markieren, für die eine Mahnung erstellt werden soll.')}
+{__b('Es werden nur als unbezahlt markierte Rechnungen angezeigt')}</p>
+
+<br /><br />
+
+<form action="" style="padding:5px;" method="post">
+    <div align="center" id="mahnung">
+
+        <table>
+            {foreach from=$billings item=bill}
+                {if $bill->getStatus() != 2}
+                        <tr>
+                            <td>
+                                {__b('Rechnung')} {$bill->getNumber()}
+                                <select name="billings[{$bill->getId()}]" class="yd-select-sent-bill" id="yd-select-sent-bill-{$bill->getId()}">
+                                    <option value="-1">{__b('nicht verwenden')}</option>
+                                    <option value="billself-{$bill->getId()}">{__b('aktuelle Rechnung')}</option>
+                                    {foreach from=$bill->getSendFiles() item=sent}
+                                        <option value="{$sent->id}">{__b('vom')} {$sent->on|date_format:'d.m.Y H:i:s'}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                            <td>
+                                <select name="step[{$bill->getId()}]" class="yd-select-step-bill">
+                                    <option value="1" {if $bill->getAdmonations()->count() == 1}selected="selected"{/if}>{__b('Mahnstufe 1')}</option>
+                                    <option value="2" {if $bill->getAdmonations()->count() == 2}selected="selected"{/if}>{__b('Mahnstufe 2')}</option>
+                                    <option value="3" {if $bill->getAdmonations()->count() > 2}selected="selected"{/if}>{__b('Mahnstufe 3')}</option>
+                                </select>
+                            </td>
+                            <td>{__b('Bisher')} <b>{$bill->getAdmonations()->count()}</b> {__b('mal gemahnt')}</td>
+                            <td><a href="#download-{$bill->getId()}" class="yd-download-selected-bill" id="yd-download-selected-bill-{$bill->getId()}">{__b('download')}</a></td>                            
+                        </tr>
+                {/if}
+            {/foreach}
+        </table>
+
+        <br /><br />
+        
+        <select name="heading">
+            <option>{__b('Zahlungserinnerung')}</option>
+            <option>{__b('Mahnung')}</option>
+        </select>
+        
+        <br /><br />
+        
+        {__b('Sehr geehrte Damen und Herren,')}<br />
+        <textarea cols="40" rows="10" name="text" id="yd-mahnung-text">{__b('scheinbar ist es Ihnen entfallen, dass Sie für die unten aufgelisteten Rechnungen noch keine Zahlungen geleistet haben:')} </textarea>
+    
+        <br /><br />
+    
+        {__b('Erneute Ermahnung')}
+        <select name="reminder">
+            <option value="7">{__b('Nach 1 Woche')}</option>
+            <option value="14" selected="selected">{__b('Nach 2 Wochen')}</option>
+            <option value="21">{__b('Nach 3 Wochen')}</option>
+            <option value="28">{__b('Nach 4 Wochen')}</option>
+        </select>
+    </div>
+</form>

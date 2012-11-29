@@ -1,0 +1,126 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{if isset($courier)}
+
+{include file='administration/courier/editnavigation.htm'}
+
+<div id="yd-admin-backend-wait" style="display:none;"><img src="{$domain_static}/images/yd-backend/yd-back-load.gif" /></div>
+
+<form action="/administration_courier/edit" method="post">
+    <input type="hidden" name="cid" value="{$courier->getId()}"/>
+    
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Kurierdienst')}
+            </div>
+            
+            <div class="item-content">
+                <table class="user-tab">
+                    <tr>
+                        <td width="30%">{__b('Name:')}</td>
+                        <td width="70%"><input type="text" name="name" class="rund_set text" value="{$courier->getName()}"/> *</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Straße:')}</td>
+                        <td><input type="text" name="street" class="rund_set text" value="{$courier->getStreet()}"/> *</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('HausNr:')}</td>
+                        <td><input type="text" name="hausnr" class="rund_set text" value="{$courier->getHausnr()}"/> *</td>
+                    </tr>
+                        <td>{__b('PLZ:')}</td>
+                        <td>
+                            {if strpos($config->domain->base, "janamesa")!==false}
+                                <input type="text" name="plz" value="{$courier->getPlz()}" />
+                            {else}
+                                {include file='administration/city_autocomplete.htm' city=$courier->getCity()}
+                            {/if}
+                        </td>
+                    </tr>
+                    <tr><td colspan="3" height="40px"></td></tr>
+                    <tr>
+                        <td>{__b('E-Mail:')}</td>
+                        <td><input type="text" name="email" class="rund_set text" value="{$courier->getEmail()}"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Mobile:')}</td>
+                        <td><input type="text" name="mobile" class="rund_set text" value="{$courier->getMobile()}"/> *</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Fax:')}</td>
+                        <td><input type="text" name="fax" class="rund_set text" value="{$courier->getFax()}"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Faxdienstleister')}</td>
+                        <td colspan="2">
+                            <select name="faxService">
+                                <option value="retarus" {if $courier->getFaxService() == "retarus"}selected{/if}>{__b('retarus')}</option>
+                                <option value="interfax" {if $courier->getFaxService() == "interfax"}selected{/if}>{__b('interfax')}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr><td colspan="3" height="40px"></td></tr>
+                    <tr>
+                        <td>{__b('Kontaktperson:')}</td>
+                        <td>
+                            <select name="contactId">
+                                <option value="-1" ></option>
+                                {foreach from=$contacts item=ci}
+                                <option value="{$ci.id}" {if $courier->getContactId() == $ci.id}selected="selected"{/if}>{$ci.name} {$ci.prename}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr><td>{__b('Benachrichtigung:')}</td>
+                        <td>
+                            <input type="checkbox" name="notify[]" value="1" {if ($courier->getNotify() & 1)}checked="checked"{/if}/> {__b('Email')}
+                            <input type="checkbox" name="notify[]" value="2" {if ($courier->getNotify() & 2)}checked="checked"{/if}/> {__b('Fax')}
+                            <input type="checkbox" name="notify[]" value="4" {if ($courier->getNotify() & 4)}checked="checked"{/if}/> {__b('SMS')}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Rechnungsversand:')}</td>
+                        <td>
+                            <select name="billDeliver" class="rund_set text">
+                                <option value="">Kein</option>
+                                <option value="fax" {if $courier->getBillDeliver() == "fax"}selected="selected"{/if}>{__b('Faxgerät')}</option>
+                                <option value="email" {if $courier->getBillDeliver() == "email"}selected="selected"{/if}>{__b('E-Mail')}</option>
+                                <option value="post" {if $courier->getBillDeliver() == "post"}selected="selected"{/if}>{__b('Post')}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Provision:')}</td>
+                        <td><input type="text" name="komm" class="rund_set text" value="{$courier->getKomm()}"/> %</td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Subvention:')}</td>
+                        <td><input type="text" name="subvention" class="rund_set text" value="{$courier->getSubvention()}"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('API:')}</td>
+                        <td>
+                            <select name="api">
+                                <option value="" >{__b('Kein')}</option>
+                                <option value="prompt" {if $courier->getApi() == "prompt"}selected="selected"{/if}>{__b('Prompt')}</option>
+                                <option value="interkep" {if $courier->getApi() == "interkep"}selected="selected"{/if}>{__b('Interkep')}</option>
+                            </select> *
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" />
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+</form>
+
+{/if}
+{/block}    

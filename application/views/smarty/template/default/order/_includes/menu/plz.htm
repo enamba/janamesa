@@ -1,0 +1,37 @@
+<div class="yd-dialogs"><a class="yd-dialogs-close yd-go-back"></a>
+
+    {assign var=ranges value=$service->getRanges()}
+    <div class="yd-dialogs-head">
+        <h2>{__('Bei %s bestellen', $service->getName())}</h2>
+    </div>
+
+    <div class="yd-lightbox-content-container">
+
+        <form id="yd-select-plz-form" action="">
+
+            <div style="text-align: center; background: #ffe; border: 1px solid #999; padding: 10px; -moz-border-radius: 4px; -webkit-border-radius: 4px; outline: 0; margin: 0 auto;">
+                <label for="cityId">
+                    {if isset($cityIds) && !count($cityIds)}
+                    {__('Dein Liefergebiet wurde nicht gefunden, bitte wähle ein anderes:')}
+                    {else}
+                    {__('Bitte wähle Dein Liefergebiet:')}
+                    {/if}
+                </label>
+
+                <br /><br />
+
+                <select name="cityId" style="width: 250px;" id="cityId">
+                    {foreach $ranges as $r}
+                    <option value="{$r.cityId}" {if isset($cityIds) && $cityIds.0 == $r.cityId}selected="selected"{/if}>{$r.cityname}</option>
+                    {/foreach}
+                </select>
+            </div>
+
+            <div class="yd-lightbox-buttons">
+                <input type="submit" value="{__('Bestellen')}" class="button" />
+                <input type="button" value="{__('Abbrechen')}" class="button yd-go-back" />
+            </div>
+            
+        </form>
+    </div>
+</div>

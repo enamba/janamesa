@@ -1,0 +1,36 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+    <ul class="be-tabs">
+        <li><a href="/administration_service_category_picture/list" class="tab" id="yd-this-tab-1">{__b('Bilderkategorie Liste')}</a></li>
+    </ul>
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Hinweis')}
+            </div>
+            <div class="item-content">
+                <table>
+                    <tr>
+                        <td>
+                            <i>{__b('Nach dem Speichern haben Sie die Möglichkeit, Bilder zu dieser Kategorie hochzuladen')}</i>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-head">
+                {__b('Neue Bilder Kategorie')}
+            </div>
+            <div class="item-content">
+                <form action="/administration_service_category_picture/create/" method="post">
+                    <table>
+                        <tr><td>{__b('Name')}:</td><td><input type="text" name="name" value="" /></td><td></td></tr>
+                        <tr><td>{__b('Beschreibung')}:</td><td><textarea cols="10" rows="5" name="description"></textarea></td></tr>
+                        <tr><td colspan="2"><input type="submit" value="{__b('speichern')}" /></td></tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+{/block}

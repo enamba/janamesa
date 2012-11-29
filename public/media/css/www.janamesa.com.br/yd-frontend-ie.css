@@ -1,0 +1,416 @@
+/*
+ * IE
+ **********************************************************/
+
+.ie6 #yd-nonfooter {
+    height: 100%;
+}
+
+.ie6 .yd-clearfix,
+.ie7 .yd-clearfix {
+    height: 1%;
+}
+
+.ie6 .yd-nav a {
+    line-height: 14px;
+    height: 36px;
+    padding-top: 10px;
+}
+
+.ie6 .yd-nav a.active {
+    height: 36px;
+}
+
+.ie6 input {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.ie6 .yd-header form input {
+    width: 80px;
+}
+
+
+
+.ie7 #yd-successarea-left-2 {
+    height: 200px;
+}
+
+.ie6 a {
+    border: 0 !important;
+}
+
+.ie6 .yd-box,
+.ie7 .yd-box{
+    border: 1px solid #ccc !important;
+}
+
+.ie6 .yd-menu-detail.yd-box, .ie7 .yd-menu-detail.yd-box,
+.ie6 #paymentDiv.yd-box, .ie7 #paymentDiv.yd-box,
+.ie6 .br-address.yd-box, .ie7 .br-address.yd-box,
+.ie6 #fidelity-box.yd-box, .ie7 #fidelity-box.yd-box{
+    border: 0 none!important;
+}
+
+.ie6 #yd-cust-addresses-select,
+.ie7 #yd-cust-addresses-select,
+.ie8 #yd-cust-addresses-select,
+.ie9 #yd-cust-addresses-select {
+    width: 150px;
+}
+
+.ie6 .time-picker { height: 150px; }
+.ie6 #account-nav a { width: 150px; }
+
+.ie6 .yd-payment-payp.active .ie-visible {
+    visibility: visible;
+}
+.ie6 .yd-bigbox-payment { height: 115px; }
+
+.ie6 .notification {
+    position: relative;
+}
+
+.ie6 #yd-sidebar .yd-box-body ul li {
+    text-align: left !important;
+}
+
+.ie6 #yd-sidebar .yd-box-body ul li em {
+    float: none !important;
+}
+
+.ie6 #yd-sidebar .yd-box-body ul li.yd-shopping-input {
+    float: none !important;
+}
+
+.ie6 #yd-sidebar .yd-box-body ul li.yd-shopping-article {
+    float: none !important;
+}
+
+.ie6 #yd-sidebar .yd-box-body ul li.yd-shopping-options {
+    float: none !important;
+}
+
+.ie6 #yd-sidebar .yd-box-body ul li.yd-shopping-options a {
+    float: none !important;
+    display: inline-block !important;
+}
+
+.ie6 #yd-sidebar .yd-box-body ul li.yd-shopping-price {
+    margin: 0 0 5px !important;
+}
+
+
+
+
+.ie6 .yd-box-title,
+.ie7 .yd-box-title{
+    margin: 0 !important;
+}
+
+.ie6  .yd-form-left,
+.ie7  .yd-form-left{
+    width: 190px !important;
+}
+.ie6 .yd-lightbox-content-container .block ,
+.ie7 .yd-lightbox-content-container .block{
+    float: left;
+}
+
+.ie6 #ie6-info{
+    background: url(/media/images/yd-icons/exclamation.png) 20px 10px no-repeat #fcc;
+    padding: 10px;
+    border: 1px solid red;
+    color: #000;
+    font-weight: bold;
+    text-align: center;  
+}
+.ie6 .fr #ie6-info{
+    height: 40px;
+}
+
+
+.ie6 #yd-rate-form #yd-rate-comment,
+.ie7 #yd-rate-form #yd-rate-comment,
+.ie8 #yd-rate-form #yd-rate-comment{
+    font-family: "trebuchet ms", arial, "nimbus sans l", sans-serif;
+}
+
+.ie6 #yd-add-budget,
+.ie7 #yd-add-budget{
+    width: 78px;
+}
+
+.ie6 #menu-nav ul li{
+    float: none;
+}
+
+.ie6 .yd-top-plz{
+    display: none;
+
+}
+
+.ie6 #yd-sidebar .yd-only-priv{
+    display: none;
+}
+
+
+
+.ie6 .tr,
+.ie7 .tr {
+    clear: left;
+}
+
+.ie6 .td,
+.ie6 .th,
+.ie7 .td,
+.ie7 .th {
+    float: left;
+}
+
+.ie6 .tr:after,
+.ie6 .thead:after,
+.ie7 .tr:after,
+.ie7 .thead:after {
+    content: ".";
+    display: block;
+    clear: both;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.ie6 .tr,
+.ie7 .tr {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.ie6 .yd-profile .tr {
+    height: 40px;
+}
+
+.ie7 .yd-profile .tr {
+    min-height: 40px;
+}
+
+.ie6 .yd-menu-modern .tr {
+    height: 80px;
+}
+
+.ie7 .yd-menu-modern .tr {
+    min-height: 80px;
+}
+
+.ie6 .td,
+.ie6 .th,
+.ie7 .td,
+.ie7 .th {
+    border: 0;
+}
+
+.ie6 .td div,
+.ie6 .td em,
+.ie6 .td strong,
+.ie7 .td div,
+.ie7 .td em,
+.ie7 .td strong {
+    display: none;
+}
+
+.ie6 .yd-profile .td,
+.ie6 .yd-profile .th,
+.ie7 .yd-profile .td,
+.ie7 .yd-profile .th {
+    width: 100px;
+}
+
+.ie6 .yd-profile .yd-awesome-rating .td,
+.ie6 .yd-profile .yd-awesome-rating .th,
+.ie7 .yd-profile .yd-awesome-rating .td,
+.ie7 .yd-profile .yd-awesome-rating .th {
+    width: 200px;
+
+}
+.ie6 a.yd-profile-blue-button,
+.ie7 a.yd-profile-blue-button {
+    display: block;
+    width: 150px;
+}
+
+.ie6 .yd-menu-modern .td,
+.ie6 .yd-menu-modern .th,
+.ie7 .yd-menu-modern .td,
+.ie7 .yd-menu-modern .th {
+    width: 50px;
+}
+
+.ie6 .yd-menu-modern .td.first,
+.ie6 .yd-menu-modern .th.first,
+.ie7 .yd-menu-modern .td.first,
+.ie7 .yd-menu-modern .th.first {
+    width: 350px;
+    text-align: left;
+}
+
+.ie6 ul.yd-menu-tabs li,
+.ie6 ul.yd-menu-tabs li a {
+    width: 100px;
+}
+
+.ie6 .yd-menu-modern ul.yd-menu-nav1 li a {
+    color: #333 !important;
+}
+
+
+/*
+* 1. Remove default vertical scrollbar in IE6/7/8/9
+* 2. Allow only vertical resizing
+*/
+
+.ie6 textarea,
+.ie7 textarea,
+.ie8 textarea,
+.ie9 textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+.ie6 .yd-dialogs-price .yd-button-190,
+.ie7 .yd-dialogs-price .yd-button-190 {
+    margin: 0 0 0 200px;
+}
+
+.ie6 .yd-successarea-right-chat,
+.ie6 .yd-awesome-rating .default,
+.ie6 .paper-head,
+.ie6 .paper-left,
+.ie6 .paper-foot,
+.ie6 .yd-rating-tesa,
+.ie6 #menu-nav,
+.ie6 #yd-sorting,
+.ie7 #yd-sorting,
+.ie8 #yd-sorting,
+.ie6 #yd-sorting-sidebar,
+.ie7 #yd-sorting-sidebar,
+.ie8 #yd-sorting-sidebar,
+.ie6 .yd-menu-modern-footer,
+.ie7 .yd-menu-modern-footer,
+.ie6 ul.yd-menu-tabs li.tab1.active a span,
+.ie6 .yd-service-list-balloon,
+.ie7 .yd-service-list-balloon,
+.ie6 .yd-box-premium .whatisapremium em,
+.ie7 .yd-box-premium .whatisapremium em,
+.ie6 .yd-service-list ul li.whatisabloomsburys em,
+.ie7 .yd-service-list ul li.whatisabloomsburys em,
+.ie6 .yd-dialogs-price strong,
+.ie7 .yd-dialogs-price strong,
+.ie6 .yd-profile-body h1 span,
+.ie7 .yd-profile-body h1 span,
+.ie8 .yd-profile-body h1 span,
+.ie9 .yd-profile-body h1 span {
+    display: none !important;
+}
+
+.ie6 .yd-profile-nav,
+.ie7 .yd-profile-nav{
+    margin-top: 0!important;
+}
+
+.ie7 .yd-top-plz-img, .ie8 .yd-top-plz-img,
+.ie7 .yd-menu-detail-img, .ie8 .yd-menu-detail-img,
+.ie7 .paper-img, .ie8 .paper-img,
+.ie8 .yd-profile-picture,
+.ie7 .yd-service-container form ul.yd-service-select .yd-sv3-1, .ie8 .yd-service-container form ul.yd-service-select .yd-sv3-1,
+.ie7 .yd-awesome-rating .paper-body .yd-rating-tesa .br-detail-img, .ie8 .yd-awesome-rating .paper-body .yd-rating-tesa .br-detail-img{
+    background: none transparent!important;
+    -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/media/css/www.janamesa.com.br/images/papre-img.png', sizingMethod='scale')!important;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/media/css/www.janamesa.com.br/images/papre-img.png', sizingMethod='scale')!important;
+}
+
+.ie7 .yd-profile-picture{
+    filter: none;
+    height: 190px;
+    background: url(/media/css/www.janamesa.com.br/images/profile-img-bg.png) no-repeat scroll 0 0 transparent!important;
+}
+
+.ie7 .yd-profile-picture img{
+    width: 197px!important;
+    height: 190px!important;
+    top: -190px;
+}
+
+.ie7 #ym-start-order-form ul li input[type="text"],
+.ie7 #ym-start-order-form ul li input[type="password"]{
+    position: relative;
+    left: -8px;
+    top: 0;
+}
+
+#ym-start-order-form ul li.br-submit input[type="submit"]{
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1005;
+}
+
+.ie7 .br-total{
+    margin: -2px 0 0 0;	
+}
+
+.ie7 #minamount{
+    padding: 0 0 11px 0!important;
+}
+
+.ie7 #yd-ordering .th{
+    display: none;
+}
+.ie7 #yd-ordering .th:first-child{
+    display: inline-block;
+    width: 100%;
+}
+.ie7 #yd-ordering .tr{
+    display: inline-block;
+    width: 100%;
+}
+.ie7 #yd-ordering .td{
+    float: right;
+    clear: none;
+    width: auto;
+    margin: 0 0 0 10px;
+    width: 108px;
+}
+.ie7 #yd-ordering .td:first-child{
+    float: left;
+    clear: none;
+    width: 250px;
+    margin: 0;
+}
+.ie7 .td a sup {
+    color: #127F00;
+    font-family: KGLoveYouThroughItRegular,Helvetica,Verdana,Arial,sans-serif;
+    font-size: 36px;
+    line-height: 1.2; 
+    vertical-align: middle;
+}
+.ie6 .br-cart-finish-bottom, .ie7 .br-cart-finish-bottom{
+    padding-top: 15px!important;
+}
+
+.ie8 #fidelity-box css3-container{
+    z-index: 0!important;
+}
+
+.ie6 #fidelity-box .br-inner-box .yd-box-body .daisy-duck,
+.ie7 #fidelity-box .br-inner-box .yd-box-body .daisy-duck,
+.ie6 #fidelity-box .br-inner-box .yd-box-body .title-daisy-duck,
+.ie7 #fidelity-box .br-inner-box .yd-box-body .title-daisy-duck{
+    display: none!important;
+}
+
+.ie6 select,
+.ie7 select{
+    height: auto;
+    background: 0 none;
+}

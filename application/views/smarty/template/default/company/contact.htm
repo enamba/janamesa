@@ -1,0 +1,91 @@
+{extends file="company/base.htm"}
+{block name="content"}
+
+<div id="admincase">
+
+    {include file='company/_left_nav.htm'}
+
+    <div class="clear"></div>
+
+    <div id="main-content">
+
+        <!-- Page Head -->
+
+        <ul class="shortcut-buttons-set">
+
+            <li><a class="shortcut-button" href="/company/contact"><span>
+                        <img src="{$domain_static}/images/yd-icons/backend/information.png" alt="" /><br />
+                        {__('Kontaktperson')}
+                    </span></a></li>
+
+        </ul><!-- End .shortcut-buttons-set -->
+
+        <div class="clear"></div>
+
+        <div class="content-box">
+
+            <div class="content-box-header">
+
+                <h3>{__('Kontaktperson')}</h3>
+
+                <div class="clear"></div>
+
+            </div>
+
+            <div id="content" class="right">
+                <form action="" method="post" class="fm yd-validation">
+                    <input type="hidden" name="id" value="{$company->getContact()->getId()}" />
+                    <input type="hidden" name="compId" value="{$company->getId()}" />
+                    <div class="settings_group">
+                        <div class="user-content">
+                            <label for="">{__('Vorname:')} <span style="color:red">*</span></label>
+                            <input type="text" class="text-input medium-input validate[prename]" name="prename" id="ccontactprename" value="{$company->getContact()->getPrename()}" />
+                        </div>
+                        <div class="user-content">
+                            <label for="">{__('Nachname:')} <span style="color:red">*</span></label>
+                            <input type="text" class="text-input medium-input validate[name]" name="name" id="ccontactname" value="{$company->getContact()->getName()}" />
+                        </div>
+                        <div class="user-content">
+                            <label for="">{__('Email:')} <span style="color:red">*</span></label>
+                            <input type="text" class="text-input medium-input validate[custom[email]]" name="email" id="ccontactemail" value="{$company->getContact()->getEmail()}" />
+                        </div>
+                        <div class="user-content">
+                            <label for="">{__('Position:')}</label>
+                            <input type="text" class="text-input medium-input" name="position" value="{$company->getContact()->getPosition()}" />
+                        </div>
+                        <div class="user-content">
+                            <label for="">{__('Straße:')}</label>
+                            <input type="text" class="text-input medium-input" name="street" value="{$company->getContact()->getStreet()}" />
+                        </div>
+                        <div class="user-content">
+                            <label for="">{__('Hausnummer:')}</label>
+                            <input type="text" class="text-input small-input" name="hausnr" value="{$company->getContact()->getHausnr()}" />
+                        </div>
+                        <div class="user-content">
+                            <label for="">{__('Postleitzahl:')}</label>
+                            <input type="hidden" name="cityId" value="{if is_object($company->getCity())}{$company->getCity()->getId()}{/if}" />
+                            <input type="text" class="yd-plz-autocomplete yd-only-nr text-input small-input" name="plz" value="{$company->getContact()->getPlz()}" />
+                        </div>
+                        <div class="user-content">
+                            <label for="">{__('Telefonnummer:')}</label>
+                            <input type="text" class="text-input medium-input" name="tel" value="{$company->getContact()->getTel()}" />
+                        </div>
+                        <div class="user-content">
+                            <label for="">{__('Fax:')}</label>
+                            <input type="text" class="text-input medium-input" name="fax" value="{$company->getContact()->getFax()}" />
+                        </div>
+                        <div class="user-content">
+                            <label for="">&nbsp;</label>
+                            <input type="submit" class="button" value="{__('Informationen speichern')}"/>
+                            <input type="hidden" name="send" value="{__('go')}" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div> <!-- content box -->
+        <div class="clear"></div>
+    </div> <!-- main content -->
+</div> <!-- admincase -->
+</div> <!-- yd-nonfooter -->
+
+{/block}

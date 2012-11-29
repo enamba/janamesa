@@ -1,0 +1,7 @@
+-- @author vpriem
+
+ALTER TABLE `upselling_goods` 
+ADD `countCanton2626D` INT UNSIGNED NOT NULL DEFAULT '0' AFTER `costCanton2626N`,
+ADD `costCanton2626D` INT UNSIGNED NOT NULL DEFAULT '0' AFTER `countCanton2626D`,
+ADD `countCanton2626S` INT UNSIGNED NOT NULL DEFAULT '0' AFTER `costCanton2626D`,
+ADD `costCanton2626S` INT UNSIGNED NOT NULL DEFAULT '0' AFTER `countCanton2626S`;

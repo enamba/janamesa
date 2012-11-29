@@ -1,0 +1,1 @@
+alter table orders add column `change` INTEGER DEFAULT 0 after payment;

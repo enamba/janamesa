@@ -1,0 +1,23 @@
+<div class="yd-dialogs br-para"><a class="yd-dialogs-close"></a>
+
+    <div class="yd-dialogs-head"><h2>{__('Lieferservice noch geschlossen')}</h2></div>
+
+    <div class="yd-dialogs-body">
+        <p style="text-align:center; font-size: 15px;">
+            
+            {if $type == "cater" || $type == "great"}
+                {__('Dieser Lieferservice hat eine Vorlaufzeit von %s. Möchtest Du vorbestellen?', $handlingtime|replace:'-':' ')}
+            {else}
+                {__('Dieser Lieferservice hat momentan noch geschlossen. Möchtest Du vorbestellen?')}
+            {/if}
+
+            <br /><br />
+            {if $config->domain->base == 'janamesa.com.br'}<div class="br-submit">{/if}
+            	<a class="yd-btn-confirm" href="#" id="yd-yes-i-want">{__('Ja')}</a>
+            	<a class="yd-button-140 yd-btn-decline yd-destroy-lightbox" href="#">{__('Nein')}</a>
+            {if $config->domain->base == 'janamesa.com.br'}</div>{/if}
+            <br /><br />
+        </p>
+    </div>
+
+</div>

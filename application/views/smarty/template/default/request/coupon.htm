@@ -1,0 +1,71 @@
+<div class="yd-dialogs"><a class="yd-dialogs-close"></a>
+
+    <ul class="coupon-accordion">
+        <li>
+            <a class="active">1. {__('WO kann ich meinen Gutschein eingeben?')}</a>
+            <div>
+                <ul>
+                    <li>{__('Der Gutscheincode kann im <strong>letzten Schritt</strong> auf der Bezahlseite eingegeben werden.')}</li>
+                    <li>{__('Bitte beachte, dass der Gutschein nur bei <strong>Online-Zahlung</strong> eingelöst werden kann.')}</li>
+                    <li>{__('Bei Barzahlung und Vorbestellungen kann der Gutschein <strong>nicht</strong> eingelöst werden.')}</li>
+                </ul>
+                {if $domain_base == 'lieferando.de'}<img src="{$domain_static}/images/yd-frontend-step2/coupon-step1.jpg" />{/if}
+                {if $domain_base == 'lieferando.at'}<img src="{$domain_static}/images/yd-frontend-step2/coupon-step1.jpg" />{/if}
+                {if $domain_base == 'lieferando.ch'}<img src="{$domain_static}/images/yd-frontend-step2/coupon-step1.jpg" />{/if}
+                {if $domain_base == 'taxiresto.fr'}<img src="{$domain_static}/images/yd-frontend-step2/coupon-step1-fr.jpg" />{/if}
+                {if $domain_base == 'pyszne.pl'}<img src="{$domain_static}/images/yd-frontend-step2/coupon-step1-pl22.jpg" />{/if}
+            </div>
+        </li>
+        <li>
+            <a>2. {__('Bei WELCHEN Lieferservices?')}</a>
+            <div>
+                <p>
+                    {__('Der Gutschein kann bei allen Lieferservices eingelöst werden, die 
+                    Online-Zahlung (Kreditkarte, Paypal, Sofort-Überweisung) akzeptieren. 
+                    Leider sind <strong>Vorbestellungen</strong> hier nicht möglich.')}
+                </p>
+                {if $domain_base == 'lieferando.de'}<img src="{$domain_static}/images/yd-frontend-step2/coupon-step2.jpg" />{/if}
+                {if $domain_base == 'lieferando.at'}<img src="{$domain_static}/images/yd-frontend-step2/coupon-step2.jpg" />{/if}
+                {if $domain_base == 'lieferando.ch'}<img src="{$domain_static}/images/yd-frontend-step2/coupon-step2.jpg" />{/if}
+                {if $domain_base == 'taxiresto.fr'}<img src="{$domain_static}/images/yd-frontend-step2/coupon-step2-fr.jpg" />{/if}
+                {if $domain_base == 'pyszne.pl'}<img src="/media/images/yd-frontend-step2/coupon-step2-pl2.jpg" />{/if}
+            </div>
+        </li>
+        <li>
+            <a>3. {__('WIE kann ich bezahlen?')}</a>
+            <div>
+                <ul>
+                    <li>
+                        {__('Um den Gutschein einzulösen, kannst Du bequem online bezahlen.')}
+                        <br />
+                        {if $domain_base == 'eat-star.de'}<img src="{$domain_static}/images/www.eat-star.de/payment.png" />{/if}
+                        {if $domain_base == 'lieferando.de'}<img src="{$domain_static}/images/www.lieferando.de/payment.png" />{/if}
+                        {if $domain_base == 'lieferando.at'}<img src="{$domain_static}/images/www.lieferando.at/payment.png" />{/if}
+                        {if $domain_base == 'lieferando.ch'}<img src="{$domain_static}/images/www.lieferando.ch/payment.png" />{/if}
+                        {if $domain_base == 'taxiresto.fr'}<img src="{$domain_static}/images/www.taxiresto.fr/payment.png" />{/if}
+                        {if $domain_base == 'pyszne.pl'}<img src="{$domain_static}/images/www.pyszne.pl/payment.png" />{/if}
+                    </li>
+                    <li>{__('Bei Vorbestellungen ist es nicht möglich, Gutscheine einzulösen.')}</li>
+                    <li>{__('Pro Bestellung kann nur ein Gutschein eingelöst werden.')}</li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+
+    <script>
+        jQuery(document).ready(function(){
+            $('li div').hide();
+            $('li:first-child div').show();
+            $('li a').click(function() {
+                if($(this).hasClass('active')){
+                    return false;
+                };
+                $('li div').hide();
+                $(this).next('div').show();
+                $('li a').removeClass('active');
+                $(this).toggleClass('active');
+            })
+        });
+    </script>
+
+</div>

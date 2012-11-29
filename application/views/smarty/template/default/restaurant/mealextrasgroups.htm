@@ -1,0 +1,55 @@
+{extends file="restaurant/base.htm"}
+{block name="content"}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {{__b('Gruppe hinzufügen')}}
+        </div>
+
+        <div class="item-content">
+            <form action="/restaurant_extras/createGroup" method="post" name="form">
+                <table class="user-tab">
+                    <tr>
+                        <td width="10%">{{__b('Name in Frontend:')}}</td>
+                        <td><input type="text" name="name" value=""/></td>
+                    </tr>
+                    <tr>
+                        <td width="10%">{{__b('Interner Name:')}}</td>
+                        <td><input type="text" name="internalName" value=""/> *</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" name="createextrasgroup" value="{{__b('Hinzufügen')}}"/></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+<form action="/restaurant_extras/deleteselectedgroups" method="post">
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {{__b('Extras Gruppen')}}
+            </div>
+            <div class="item-content">
+                <div id="yd-check-all-link"><input class="yd-check-all-checkboxes" id="yd-check-all-checkboxes" type="checkbox" value="1"/><label for="yd-check-all-checkboxes"> {{__b('alle auswählen')}} </label></div><br/>
+                {$grid}
+            </div>
+        </div>
+    </div>
+
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-content">
+                <table width="100%" class="user-tab">
+                    <tr>
+                        <td><input type="submit" name="deleteSelected" style="width: 220px;" value="{{__b('Markierte Gruppen löschen')}}" onclick="javascript:return confirm('{{__b('Sollen die markierten Gruppen wirklich gelöscht werden?')}}')"/></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>
+
+{/block}

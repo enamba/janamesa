@@ -1,0 +1,13 @@
+<select autocomplete="off" name="{$mode}" id="{$mode}" style="width:70px;" {if $submittable}onChange="this.form.submit()"{/if}>
+    {section name=time start=00 loop=24 step=1}
+      {assign var=hour value=$smarty.section.time.index|string_format:"%02d"}
+      {assign var=c1 value=$hour|cat:"00"}
+      {assign var=c2 value=$hour|cat:"15"}
+      {assign var=c3 value=$hour|cat:"30"}
+      {assign var=c4 value=$hour|cat:"45"}
+      <option value="{$hour}{$separator}00" {if ( $value == $hour|cat:$separator|cat:"00" )}{$found = true}selected{/if}>{$hour}:00</option>
+      <option value="{$hour}{$separator}15" {if ( $value == $hour|cat:$separator|cat:"15" )}{$found = true}selected{/if}>{$hour}:15</option>
+      <option value="{$hour}{$separator}30" {if ( $value == $hour|cat:$separator|cat:"30" )}{$found = true}selected{/if}>{$hour}:30</option>
+      <option value="{$hour}{$separator}45" {if ( $value == $hour|cat:$separator|cat:"45" )}{$found = true}selected{/if}{if !$found && (strcmp($mode, 'endTimeT')==0) && ($hour==23)}selected{/if}>{$hour}:45</option>
+    {/section}
+</select>

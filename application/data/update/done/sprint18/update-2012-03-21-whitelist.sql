@@ -1,0 +1,1 @@
+alter table customers add column whitelist tinyint(4) default 0;

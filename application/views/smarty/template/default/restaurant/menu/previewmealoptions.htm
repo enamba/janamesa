@@ -1,0 +1,47 @@
+{extends file="restaurant/popupbase.htm"}
+{block name="content"}
+
+<div style="font-size: 22px; font-weight: bold;">Optionen</div> für: <b>{$meal->getCategory()->getName()} &rarr; {$meal->getName()}</b>
+<br/><br/><br/>
+
+<table width="100%">
+    <tr>
+        <td height="50" width="50%">Gruppe</td>
+        <td width="30%">Preis, €</td>
+        <td width="20%"></td>
+    </tr>
+{foreach from=$restaurant->getMealOptionsRows() item=optionRow}
+    {if $meal->getCategory()->hasOptionsRow($optionRow->getId())}
+    <tr class="options-group">
+        <th>{$optionRow->getName()}<a name="{$optionRow->getId()}"></a> ({if $optionRow->getChoices() > 1}{$optionRow->getChoices()} Optionen{else}1 Option{/if})</th>
+        <td></td>
+        <td><small>Gehört zur Kategorie</small></td>
+    </tr>
+        {foreach from=$optionRow->getOptions() item=o}
+        <tr>
+            <td>{$o->getName()}</td>
+            <td>{if strlen($o->getCost()) != 0} {intToPrice($o->getCost())} € {/if}</td>
+            <td></td>
+        </tr>
+        {/foreach}
+        <tr><td colspan="3" height="50"><hr/></td></tr>
+    {else}
+        {if ($meal->hasOptionsRow($optionRow->getId())!= 0)}
+        <tr class="options-group">
+            <th>{$optionRow->getName()} ({if $optionRow->getChoices() > 1} {$optionRow->getChoices()} Optionen{else}1 Option{/if})</th>
+            <td></td>
+            <td></td>
+        </tr>
+        {foreach from=$optionRow->getOptions() item=o}
+            <tr>
+                <td>{$o->getName()}</td>
+                <td>{if strlen($o->getCost()) != 0} {intToPrice($o->getCost())} € {/if}</td>
+                <td></td>
+            </tr>
+        {/foreach}
+        <tr><td colspan="3" height="50"><hr/></td></tr>
+        {/if}
+    {/if}
+{/foreach}
+</table>
+{/block}

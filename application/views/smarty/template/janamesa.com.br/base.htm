@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="pt" xml:lang="pt" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="pt" xml:lang="pt" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="pt" xml:lang="pt" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="pt" xml:lang="pt" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="pt" xml:lang="pt">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="yourdelivery GmbH" />
+        <meta name="publisher" content="yourdelivery GmbH" />
+
+        <!-- custom meta tags -->
+        {foreach from=$additionalMetatags item=meta}
+        {$meta}
+        {/foreach}
+        
+        <meta name="viewport" content="width=1100">
+
+        <!-- page title -->
+        <title>Janamesa</title>
+
+        {if $canonical}
+        <link rel="canoncial" href="{$canonical}" />
+        {/if}
+
+        <link rel="SHORTCUT ICON" href="/media/css/www.janamesa.com.br/favicon.ico" type="image/x-icon" />
+
+        {include file='_cookies/janamesa/abtest.htm'}
+        
+        <link rel="stylesheet" type="text/css" href="/media/css/compiled/frontend-{$extra_css|default:'no'}-{$REVISION}.css" />
+        
+        <script type="text/javascript" src="/media/javascript/compiled/frontend-{$REVISION}.js"></script>
+        <!-- define global state of this page -->
+        <script type="text/javascript">
+            YdMode = "{$mode|default:'rest'}";
+            log('CURRENT MODE: ' + YdMode);
+        </script>
+        
+        {if $grid}
+            <script type='text/javascript' charset='UTF-8'>
+                /* <![CDATA[ */
+                    {$grid->getHeaderScript()}
+                /* ]]> */
+            </script>
+        {/if}
+
+        {include file='_cookies/google/analytics.htm'}
+        {if $trackGoogleEcomerce}
+            {include file='_cookies/google/ecommerce.htm'}
+        {/if}
+    </head>
+
+    <body class="br">
+
+        <div id="yd-group-fade" class="hidden"></div>
+        <a name="anchor-0"></a>
+        <div id="yd-nonfooter">
+
+            {include file='base_header.htm'}
+
+            <div id="yd-content" class="yd-clearfix">
+
+                {include file='notification.htm'}
+
+                {block name='content'}{/block}
+
+            </div>
+
+        </div>
+
+        {include file="base_footer.htm"}
+        
+        <div id="yd-discount-evaluation-wait" style="display:none;"><img src="{$domain_static}/images/yd-backend/yd-back-load.gif" /></div>
+        
+        {include file='_cookies/masterpixel/global.htm' uadomain=$domain_base}
+        {include file='_cookies/piwik/global.htm' uadomain=$domain_base}
+
+        {if $config->google->conversion}
+            {include file='_cookies/google/adwords.htm'}
+        {/if}
+    </body>
+</html>

@@ -1,0 +1,90 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+{include file='administration/user/edit/_navigation.htm'}
+
+
+<div id="yd-admin-backend-wait" style="display:none;"><img src="{$domain_static}/images/yd-backend/yd-back-load.gif" /></div>
+
+{foreach from=$customer->getLocations() item=location}
+<form action="/administration_user_edit/location/userid/{$customer->getId()}/locationid/{$location->getId()}" method="post" class="yd-form-toggle">
+    <input type="hidden" name="locationId" value="{$location->getId()}" />
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Adressdaten %sbearbeiten%s', '<a href="#" class="yd-form-toggle">', '</a>')}
+            </div>
+            <div class="item-content">
+                <table class="user-tab">
+                    <tr>
+                        <td width="20%">{__b('Straße')}:</td>
+                        <td width="80%"><input type="text" name="street" class="rund_set text" value="{$location->getStreet()}"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('HausNr')}:</td>
+                        <td><input type="text" name="hausnr" class="rund_set text" value="{$location->getHausnr()}"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('PLZ:')}</td>
+                        <td>
+                            {if strpos($config->domain->base, "janamesa")!==false}
+                                <input type="text" name="plz" value="{$location->getPlz()}" />
+                            {else}
+                                {include file='administration/city_autocomplete.htm' city=$location->getCity()}
+                            {/if}                
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{__b('Hinweis')}</td>
+                        <td><input type="text" name="comment" class="rund_set text" value="{$location->getComment()}"/></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="item-content">
+                <input type="submit" name="editaddress" value="{__b('Adresse ändern')}" class="button"/>
+                <input type="submit" name="deleteaddress" value="{__b('Adresse löschen')}" class="button"/>
+            </div>
+        </div>
+    </div>
+</form>
+{/foreach}
+
+<form action="/administration_user_edit/location/add/1/userid/{$customer->getId()}" method="post">
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Adressdaten hinzufügen')}
+            </div>
+            <div class="item-content">
+                <table class="user-tab">
+                    <tr>
+                        <td width="20%">{__b('Straße')}:</td>
+                        <td width="80%"><input type="text" name="street" class="rund_set text"/></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('HausNr')}:</td>
+                        <td><input type="text" name="hausnr" class="rund_set text" /></td>
+                    </tr>
+                    <tr>
+                        <td>{__b('PLZ:')}</td>
+                        <td>
+                            {if strpos($config->domain->base, "janamesa")!==false}
+                                <input type="text" name="plz"/> *
+                            {else}
+                                {include file='administration/city_autocomplete.htm'}
+                            {/if}
+                        </td>                        
+                    </tr>
+                    <tr>
+                        <td>{__b('Hinweis')}</td>
+                        <td><input type="text" name="comment" class="rund_set text"/></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="item-content">
+                <input type="submit" name="addadress" value="{__b('Adresse hinzufügen')}" class="button"/>
+            </div>
+        </div>
+    </div>
+</form>
+
+{/block}

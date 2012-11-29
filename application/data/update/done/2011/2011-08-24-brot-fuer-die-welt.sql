@@ -1,0 +1,1 @@
+alter table orders add column bread tinyint(4) default 0;

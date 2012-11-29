@@ -1,0 +1,168 @@
+{if is_object($item)}
+<table>
+    {if is_object($service)}
+    <tr>
+        <td>{__b('Dienstleister')}</td>
+        <td colspan="2">
+            {$service->getName()}
+        </td>
+    </tr>
+    {/if}
+    <tr>
+        <td>{__b('Erstellt am')}</td>
+        <td colspan="2">
+            {$item->getCreated()|date_format:'%d.%m.%Y %H:%M'}
+        </td>
+    </tr>
+    <tr>
+        <td>{__b('Erstellt von')}</td>
+        <td colspan="2">
+            {$item->getAdmin()->getName()}
+        </td>
+    </tr>
+    {if is_object($bill)}
+        <tr>
+            <td>{__b('Status')}</td>
+            <td colspan="2">
+                {$bill->getStatus()|billstatusToReadable}
+            </td>
+        </tr>
+        {foreach $bill->getSendFiles() as $file}
+        <tr>
+            <td colspan="3">{__b('Versendet am %s per %s', $file->created|date_format:'%d.%m.%Y %H:%M', $file->via)}{if $file->to} {__b('a')}n {$file->to}{/if}</td>
+        </tr>
+        {/foreach}
+    {/if}
+    {if $item->getCountCanton2626()}
+    <tr>
+        <td>{__b('Pizza Karton 26x26x4')}</td>
+        <td>
+            {$item->getCountCanton2626()} x {$item->getUnitCanton2626()}
+        </td>
+        <td>
+            {$item->getCostCanton2626()|inttoprice} {__b('€')}
+        </td>
+    </tr>
+    {/if}
+    {if $item->getCountCanton2626N()}
+    <tr>
+        <td>{__b('Pizza Karton 26x26x4 Notebooksbilliger')}</td>
+        <td>
+            {$item->getCountCanton2626N()} x {$item->getUnitCanton2626N()}
+        </td>
+        <td>
+            {$item->getCostCanton2626N()|inttoprice} {__b('€')}
+        </td>
+    </tr>
+    {/if}
+    {if $item->getCountCanton2626D()}
+    <tr>
+        <td>{__b('Pizza Karton 26x26x4 Discotel')}</td>
+        <td>
+            {$item->getCountCanton2626D()} x {$item->getUnitCanton2626D()}
+        </td>
+        <td>
+            {$item->getCostCanton2626D()|inttoprice} {__b('€')}
+        </td>
+    </tr>
+    {/if}
+    {if $item->getCountCanton2626S()}
+    <tr>
+        <td>{__b('Pizza Karton 26x26x4 DeutschlandSIM')}</td>
+        <td>
+            {$item->getCountCanton2626S()} x {$item->getUnitCanton2626S()}
+        </td>
+        <td>
+            {$item->getCostCanton2626S()|inttoprice} {__b('€')}
+        </td>
+    </tr>
+    {/if}
+    {if $item->getCountCanton2626H()}
+    <tr>
+        <td>{__b('Pizza Karton 26x26x4 Hannover')}</td>
+        <td>
+            {$item->getCountCanton2626H()} x {$item->getUnitCanton2626H()}
+        </td>
+        <td>
+            {$item->getCostCanton2626H()|inttoprice} {__b('€')}
+        </td>
+    </tr>
+    {/if}
+    {if $item->getCountCanton2828()}
+    <tr>
+        <td>{__b('Pizza Karton 28x28x4')}</td>
+        <td>
+            {$item->getCountCanton2828()} x {$item->getUnitCanton2828()}
+        </td>
+        <td>
+            {$item->getCostCanton2828()|inttoprice} {__b('€')}
+        </td>
+    </tr>
+    {/if}
+    {if $item->getCountCanton3232()}
+    <tr>
+        <td>{__b('Pizza Karton 32x32x4')}</td>
+        <td>
+            {$item->getCountCanton3232()} x {$item->getUnitCanton3232()}
+        </td>
+        <td>
+            {$item->getCostCanton3232()|inttoprice} {__b('€')}
+        </td>
+    </tr>
+    {/if}
+    {if $item->getCountServicing()}
+    <tr>
+        <td>{__b('Servietten 2lagig, 33x33')}</td>
+        <td>
+            {$item->getCountServicing()} x {$item->getUnitServicing()}
+        </td>
+        <td>
+            {$item->getCostServicing()|inttoprice} {__b('€')}
+        </td>
+    </tr>
+    {/if}
+    {if $item->getCountBags()}
+    <tr>
+        <td>{__b('Plastiktüten')}</td>
+        <td>
+            {$item->getCountBags()} x {$item->getUnitBags()}
+        </td>
+        <td>
+            {$item->getCostBags()|inttoprice} {__b('€')}
+        </td>
+    </tr>
+    {/if}
+    {if $item->getCountSticks()}
+    <tr>
+        <td>{__b('Chopsticks')}</td>
+        <td>
+            {$item->getCountSticks()} x {$item->getUnitSticks()}
+        </td>
+        <td>
+            {$item->getCostSticks()|inttoprice} {__b('€')}
+        </td>
+    </tr>
+    {/if}
+    <tr>
+        <td></td>
+        <td style="text-align:right;">{__b('Netto')}: </td>
+        <td>
+            <b>{$item->calculateNetto()|inttoprice} {__b('€')}</b>
+        </td>
+    </tr>
+     <tr>
+        <td></td>
+        <td style="text-align:right;">{__b('Mwst')}: </td>
+        <td>
+            <b>{$item->calculateTax()|inttoprice} {__b('€')}</b>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="text-align:right;">{__b('Brutto')} </td>
+        <td>
+            <b>{$item->calculateBrutto()|inttoprice} {__b('€')}</b>
+        </td>
+    </tr>
+</table>
+{/if}

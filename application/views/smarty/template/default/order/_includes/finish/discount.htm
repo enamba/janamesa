@@ -1,0 +1,39 @@
+{if $config->domain->base != 'eat-star.de'}
+    <ul class="yd-sidebar-list">
+        {* if we have a discount here, this is a permanent discount *}
+        <li class="codes {if !$discount}hidden{/if} valid-user-discount" id="valid-discount" >
+            <strong class="yd-valid-discount-code">
+                {if is_object($discount) && $discount instanceof Yourdelivery_Model_Rabatt_Code}
+                    {__('Ihr Benutzeraccount verfügt über einen permanenten Rabatt von')}
+                    {if $discount->getKind() == 0 && $discount->getParent()->getRabatt() > 0}
+                        <br /><span style="color: red;">{$discount->getParent()->getRabatt()}%</span>
+                    {elseif $discount->getKind() == 1 && $discount->getParent()->getRabatt() > 0}
+                        <br /><span style="color: red;">{__('%s €',$discount->getParent()->getRabatt()|inttoprice)}</span>
+                    {/if}
+                {/if}
+            </strong>
+            <span class="yd-valid-discount-kind"></span>
+            <span class="yd-valid-discount-minamount"></span><br />
+            <span class="yd-valid-discount-info"></span><br />
+            <input type="hidden" autocomplete="off" name="discount" value="{if is_object($discount) && $discount instanceof Yourdelivery_Model_Rabatt_Code}{$discount->getCode()}{/if}" />
+            <input type="hidden" autocomplete="off" name="fidelity" value="0" />
+            
+            {if $newCustomer && $oldCustomer}          
+                <p>{__('Achtung: Gutscheine werden bei der Bezahlung über PayPal oder Sofortüberweisung überprüft')} </p>
+            {elseif $newCustomer}
+                <p>{__('Danke für die Einlösung eines Gutscheins! Um Dich vor Mißbrauch zu schützen, wird dieser Code bei der Bezahlung noch einmal überprüft.')} </p>
+            {/if}
+            
+            {if $type!='read'}
+                <a href="#" class="yd-link-rabatt-delete">{__('Gutschein entfernen')}</a>
+            {/if}
+        </li>
+
+        <li class="valid-discount {if !is_object($discount)}hidden{/if}"><em>{__('Offener Betrag:')}</em> <strong class="yd-open-amount">{if is_object($order)}{__('%s €',$order->getAbsTotal()|inttoprice)}{/if}</strong></li>
+
+        <li class="codes hidden invalid-discount" id="invalid-discount">
+            <span class="yd-discount-msg"></span>
+            <a id="code-0" class="yd-link-rabatt-delete tooltip" title="Entfernen" href="#">{__('Erneut eingeben')}</a>
+        </li> 
+    </ul>
+{/if}

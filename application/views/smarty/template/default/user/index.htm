@@ -1,0 +1,74 @@
+{extends file='user/_base.htm'}
+
+{block name="content"}
+
+<div class="yd-profile yd-clearfix">
+
+    {include file='user/_header.htm' active=0 active_title=__('Profilübersicht')}
+
+    <div class="yd-profile-body index">
+
+        <h1>{__('Profil')}</h1>
+
+        {include file='user/_include/profileimage.htm'}
+
+        <ul class="yd-profile-infos-1">
+            <li>{$cust->getFullname()}</li>
+            {assign var=pLoc value=$cust->getLocations(null, true)}
+            {if $pLoc instanceof Yourdelivery_Model_Location}
+            <li>{$pLoc->getStreet()} {$pLoc->getHausnr()}, {$pLoc->getPlz()} {$pLoc->getCity()->getCity()}</li>
+            {else}
+            <li><a href="/user/locations">{__('Lege jetzt Deine primäre Adresse fest')}</a></li>
+            {/if}
+            <li>{$cust->getEmail()}</li>
+            <li>{$cust->getTel()}</li>
+        </ul>
+
+        <ul class="yd-profile-infos-2">
+            <li>{__('Bestellungen:')} <strong>{$ordered}</strong></li>
+            <li>{__('Bewertungen:')} <strong>{$rated}</strong></li>
+            <li>{__('Treuepunkte:')} <strong>{$cust->getFidelity()->getPoints()}</strong></li>
+        </ul>
+
+        <p class="yd-profile-infos-3">
+            <a href="/user/fidelity#available">{__('Sammle jetzt noch <strong>%d</strong> Treuepunkte für Gratisessen.', $cust->getFidelity()->getOpenActionPoints())}</a> <!--{__('Du kannst <a>hier noch %d Treuepunkte</a> mehr bekommen.',50)}-->
+        </p>
+
+        {assign var=favs value=$cust->getFavouriteRestaurants()}
+        <h1>{__('Deine Top %d Favoriten',count($favs))}</h1>
+
+        {foreach from=$favs item=fav}
+            {include file='order/_includes/service/services.htm' r=$fav isFavourite=1}
+        {foreachelse}
+            <div style="padding:15px 30px;">
+                {__('Du hast im Moment kein Restaurant als Favorit markiert.')}
+            </div>
+        {/foreach}
+
+        <br /><br />
+
+        <h1>{__('Deine lieferando News')}</h1>
+
+        <br /><br />
+
+        {if $config->domain->base == 'lieferando.de' || $config->domain->base == 'taxiresto.fr'}
+        <div class="yd-profile-news">
+
+            {foreach from=$news item=new}
+            <div class="yd-clearfix">
+                <!-- <img src="http://www.fotocommunity.de/gfx/profile/profile_m.gif" /> --->
+                <small></small>
+                <h1>{$new.title}</h1>
+                <p>{$new.description}</p>
+            </div>
+            {/foreach}
+
+            <a href="http://blog.{$config->domain->base}" class="button">{__('Weitere News anzeigen')}</a>
+
+        </div>
+        {/if}
+
+    </div>
+
+</div>
+{/block}

@@ -1,0 +1,11 @@
+CREATE TABLE `retarus_transactions` (
+`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`type` VARCHAR( 255 ) NOT NULL ,
+`uniqueId`  VARCHAR( 255 ) NOT NULL ,
+`documentName` VARCHAR( 255 ) NOT NULL ,
+`faxNumber` VARCHAR( 255 ) NOT NULL ,
+`response` TEXT NULL ,
+`created` TIMESTAMP NOT NULL DEFAULT 0 ,
+`updated` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;
+

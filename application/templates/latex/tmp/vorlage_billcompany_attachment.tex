@@ -1,0 +1,129 @@
+%
+%  order report template
+%
+%  Created by Matthias Laug on 2009-08-06.
+%
+\documentclass[landscape]{article}
+
+
+
+\renewcommand{\baselinestretch}{1.3}
+
+% set font to times
+\usepackage{mathptmx}
+\usepackage[scaled=0.9]{helvet}
+
+\renewcommand\familydefault{phv}
+
+% set margins 
+\usepackage[left=15mm, right=20mm, top=20mm, bottom=30mm] {geometry}
+
+% Use utf-8 encoding for foreign characters
+%\usepackage[applemac]{inputenc}
+\usepackage[utf8]{inputenc}
+
+% Use german language
+\usepackage[german]{babel}
+
+% Setup for fullpage use
+% multirow - rowspan in tables
+% graphicx - include graphics
+% fancyhdr - footer/header
+% booktabs - nice tables
+\usepackage{multirow, graphicx, fancyhdr, booktabs,array,colortbl}
+
+% define \EUR{amount}
+\usepackage[right]{eurosym}
+
+%booktabs settings
+\newcolumntype{V}[1]{
+	 >{\bfseries\huge}p{#1}
+} 							% tabellen�berschriften
+\newcolumntype{T}[1]{
+	>{\bfseries\large}p{#1}
+} 							% tabellen�berschriften
+\newcolumntype{v}[1]{
+	>{\raggedright}p{#1}
+} 							% verwende v{Xcm} f�r linksb�ndige Spalten fester Breite
+\newcolumntype{w}[1]{
+	>{\raggedleft}p{#1}
+} 							% verwende w{Xcm} f�r rechtsb�ndige Spalten fester Breite
+\newcolumntype{x}[1]{
+	>{\centering}p{#1}
+} 							% verwende x{Xcm} f�r zentrierte Spalten fester Breite
+
+% Define user colors using the RGB model
+	\definecolor{black}{rgb}{0,0,0}
+
+%------------------------HEADER
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\parindent}{0pt} 
+%header
+\fancyhead[L]{
+	Anhang zur Rechnung R-ezeueie000011, Kostenstelle 9083, WB
+}
+\fancyhead[R]{
+	Seite \thepage
+}
+
+
+
+%-------------------------------- content
+\begin{document}
+	\begin{tabular}{v{1.2cm}v{1.5cm}v{2cm}v{1.5cm}v{1.5cm}v{1.5cm}v{1.5cm}v{2cm}v{2cm}v{1.5cm}ll}
+		Bestell ID & Besteller & Lieferadresse & Kostenstelle & Projekt-Nr. & Best.-Art & Dienstleister & Zeitpunkt Bestellung & Zeitpunkt Lieferung & Rechnung Netto & MwSt 19\% & MwSt 7\% \\
+		\toprule
+				1918272 &
+				Gerber, Christoph & 
+				Chausseestr. 86, 10117 Berlin & 
+				9061 &
+				MB-Projekt & 
+				Catering & 
+				papa pene & 
+				13.07. 16:30 & 
+				14.07. 17:30 & 
+				\EUR{250,00} & 
+				\EUR{19,20} & 
+				\EUR{3,00} \\
+				
+				\cmidrule{5-12}
+				&&&& Nr 	& \multicolumn{3}{l}{Artikel} 			& Anzahl 	& Netto 		& MwSt 19\% 		& MwSt 7\% 	\\
+				\cmidrule{5-12}
+				&&&& 1	& \multicolumn{3}{l}{Pizza Mista}		& 1x		& \EUR{6,70}	& \EUR{1,20}		& \EUR{0,47}	\\
+				&&&& 1	& \multicolumn{3}{l}{Pizza Mista}		& 1x		& \EUR{6,70}	& \EUR{1,20}		& \EUR{0,47}	\\
+				&&&& 1	& \multicolumn{3}{l}{Pizza Mista}		& 1x		& \EUR{6,70}	& \EUR{1,20}		& \EUR{0,47}	\\
+				&&&& 1	& \multicolumn{3}{l}{Pizza Mista}		& 1x		& \EUR{6,70}	& \EUR{1,20}		& \EUR{0,47}	\\
+				&&&& 1	& \multicolumn{3}{l}{Pizza Mista}		& 1x		& \EUR{6,70}	& \EUR{1,20}		& \EUR{0,47}	\\
+				
+	\end{tabular}
+	
+	\vspace{1cm}
+	
+	\begin{tabular}{v{1.2cm}v{1.5cm}v{2cm}v{1.5cm}v{1.5cm}v{1.5cm}v{1.5cm}v{2cm}v{2cm}v{1.5cm}ll}
+		\toprule
+				1911111 &
+				Gerber, Christoph & 
+				Chausseestr. 86, 10117 Berlin & 
+				9061 &
+				MB-Projekt & 
+				Catering & 
+				papa pene & 
+				13.07. 16:30 & 
+				14.07. 17:30 & 
+				\EUR{250,00} & 
+				\EUR{19,20} & 
+				\EUR{3,00} \\
+				
+				\cmidrule{5-12}
+				&&&& Nr 	& \multicolumn{3}{l}{Artikel} 			& Anzahl 	& Netto 		& MwSt 19\% 		& MwSt 7\% 	\\
+				\cmidrule{5-12}
+				&&&& 1	& \multicolumn{3}{l}{Pizza Mista}		& 1x		& \EUR{6,70}	& \EUR{1,20}		& \EUR{0,47}	\\
+				&&&& 1	& \multicolumn{3}{l}{Pizza Mista}		& 1x		& \EUR{6,70}	& \EUR{1,20}		& \EUR{0,47}	\\
+				&&&& 1	& \multicolumn{3}{l}{Pizza Mista}		& 1x		& \EUR{6,70}	& \EUR{1,20}		& \EUR{0,47}	\\
+				&&&& 1	& \multicolumn{3}{l}{Pizza Mista}		& 1x		& \EUR{6,70}	& \EUR{1,20}		& \EUR{0,47}	\\
+				&&&& 1	& \multicolumn{3}{l}{Pizza Mista}		& 1x		& \EUR{6,70}	& \EUR{1,20}		& \EUR{0,47}	\\
+	\end{tabular}
+						
+				
+\end{document}

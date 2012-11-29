@@ -1,0 +1,18 @@
+{if is_object($order)}
+    <li>
+        <a id="yd-paypal-account-details" data-grid-orderId ="{$order->getId()}">{__b('PayPal-Account einsehen')}</a>
+    </li>
+    <li>
+        <a href="/administration_order?type=view_grid_orders&payerId={$payerId}" target="_blank" >{__b('Alle Bestellungen mit diesem PayPal Account anschauen')}</a>
+    </li>
+    <li class="yd-grid-box-separation">
+        <a id="yd-paypal-account-discounts" data-grid-payerId="{$payerId}">{__b('Verwendete Gutscheine mit dieser PayPal-ID ansehen')}</a>
+    </li>
+    <li>
+        <a  class="yd-blacklist-lightbox" data-grid-orderId ="{$order->getId()}" href="/request_administration_paypal/blacklist/orderId/{$order->getId()}">{__b('PayPal-Account blacklisten')}</a>
+    </li>
+{else}
+    <li>
+        {__b('Fehler beim Laden der Bestellung')}
+    </li>
+{/if}

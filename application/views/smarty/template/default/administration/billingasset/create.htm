@@ -1,0 +1,112 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div id="yd-admin-backend-wait" style="display:none;"><img src="{$domain_static}/images/yd-backend/yd-back-load.gif" /></div>
+
+<form action="/administration_billingasset/create" method="post">
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Rechnungsposten')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="20%">{__b('Firma')}</td>
+                            <td width="30%" valign="top">
+                                <select name="companyId" style="width: 350px;" id="yd-billingasset-company">
+                                    <option value=""></option>
+                                    {foreach from=$compIds item=ci}
+                                    <option value="{$ci.id}" {if $p.companyId == $ci.id}selected{/if} >{$ci.name} (#{$ci.id})</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                            <td width="20%">
+                                <div id="yd-billingasset-departments">
+                                </div>
+                                <div id="yd-billingasset-projectnumbers">
+                                </div>
+                            </td>
+                            <td width="20%"></td>
+                            <td width="10%"></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Restaurant')}</td>
+                            <td>
+                                <select name="restaurantId" style="width: 350px;">
+                                    {foreach from=$restIds item=ri}
+                                    <option value="{$ri.id}" {if $p.restaurantId == $ri.id}selected{/if}>{$ri.name} ({$ri.street} {$ri.hausnr}, {$ri.plz}) (#{$ri.id})</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                            <td>
+                                <div id="yd-billingasset-total-kind-text">{__b('Betrag (Netto):')}</div>
+                                <input type="text" name="total" style="width: 100px;" value="{$p.total}"/> {__b('€')} *
+                            </td>
+                            <td>
+                                {__b('Mwst, %')}
+                                <select name="mwst" style="width: 110px;">
+                                    {foreach from=Default_Helpers_Money::getAllVats() item=v}
+                                        <option value="{$v}">{$v}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                            <td><input value="1" type="checkbox" id="yd-billingasset-brutto-checkbox" name="brutto-checkbox"/> {__b('Brutto')}</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Kurierdienst')}</td>
+                            <td>
+                                <select name="courierId" style="width: 350px;">
+                                    <option value="0"></option>
+                                    {foreach from=$courierIds item=cu}
+                                        <option value="{$cu.id}" {if $p.courierId == $cu.id}selected{/if}>{$cu.name}  (#{$cu.id})</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                            <td>{__b('Betrag (Netto):')}<br/> <input type="text" name="couriertotal" style="width: 100px;" value="{$p.couriertotal}"/> {__b('€')}</td>
+                            <td colspan="2">
+                                {__b('Mwst, %')}
+                                <select name="couriermwst" style="width: 110px;">
+                                    {foreach from=Default_Helpers_Money::getAllVats() item=v}
+                                        <option value="{$v}">{$v}</option>
+                                    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Von')}</td>
+                            <td colspan="4"><input  name="timeFrom" type="text" value="{if isset($p.timeFrom)}{$p.timeFrom}{else}{$smarty.now|date_format:'%d.%m.%Y'}{/if}" id="yd-billingasset-create-start" style="width: 100px;"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Bis')}</td>
+                            <td colspan="4"><input  name="timeUntil" type="text" value="{if isset($p.timeUntil)}{$p.timeUntil}{else}{$smarty.now|date_format:'%d.%m.%Y'}{/if}" id="yd-billingasset-create-end" style="width: 100px;"/></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Provision: %')}</td>
+                            <td colspan="4">
+                                <select name="fee" style="width: 110px;">
+                                    {section name=fee start=0 loop=51}
+                                        <option value="{$smarty.section.fee.index}" {if $p.fee == $smarty.section.fee.index}selected{/if}>{$smarty.section.fee.index}</option>
+                                    {/section}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Beschreibung')}</td>
+                            <td colspan="4"><textarea class="rund_set text" name="description"  style="width: 300px;">{$p.description}</textarea></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" />
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+
+</form>
+{/block}    

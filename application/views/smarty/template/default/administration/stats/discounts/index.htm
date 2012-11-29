@@ -1,0 +1,97 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/stats/discounts/navigation.htm'}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Verwendete Gutscheine, ausführlich')}
+        </div>
+    </div>
+</div>
+
+<form action="/administration_stats_discounts" method="post">
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <td width="5%">{__b('Von')}</td>
+                    <td width="15%"><input type="text" name="from" id="yd-date-full-from" value="{$from}"/></td>
+                    <td width="5%">{__b('Bis')}</td>
+                    <td width="15%"><input type="text" name="until" id="yd-date-full-until" value="{$until}"/></td>
+                    <td width="60%"><input type="submit" value="{__b('filtern')}" class="button rund_set" /></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</form>
+
+<div class="one-column-box">
+    <div class="item-head">
+        {foreach from=$discounts_stats key=year item=yeardata}
+        <a href="#{$year}">{$year}</a>&nbsp;&nbsp;&nbsp;
+        {/foreach}
+    </div>
+</div>
+
+<br/><br/>
+
+{foreach from=$discounts_stats key=year item=yeardata}
+<div class="one-column-box">
+    <div class="item-head">
+        {$year} {__b('Rabatt (Anzahl Codes) (Gesamtrabatt)')}<a name="{$year}"></a>
+    </div>
+    <div class="item-content">
+        <table class="user-tab">
+            <tr>
+                <th width="4%" align="center"></th>
+                <th width="8%" align="center">{__b('Januar')}</th>
+                <th width="8%" align="center">{__b('Februar')}</th>
+                <th width="8%" align="center">{__b('März')}</th>
+                <th width="8%" align="center">{__b('April')}</th>
+                <th width="8%" align="center">{__b('Mai')}</th>
+                <th width="8%" align="center">{__b('Juni')}</th>
+                <th width="8%" align="center">{__b('Juli')}</th>
+                <th width="8%" align="center">{__b('August')}</th>
+                <th width="8%" align="center">{__b('September')}</th>
+                <th width="8%" align="center">{__b('Oktober')}</th>
+                <th width="8%" align="center">{__b('November')}</th>
+                <th width="8%" align="center">{__b('Dezember')}</th>
+            </tr>
+            <tr>
+                <td></td>
+                {section name=month start=1 loop=13}
+                {assign var=monthsum value=0}
+                <td valign="top">
+                    {if $yeardata[$smarty.section.month.index]['fidelity']['count'] > 0}
+                        {__b('Eingelöste Treuepunkte')}<br/>
+                        ({$yeardata[$smarty.section.month.index]['fidelity']['count']}) ({$yeardata[$smarty.section.month.index]['fidelity']['sum']|inttoprice} {__b('€')})<br/><br/>
+                        {$monthsum = $monthsum + $yeardata[$smarty.section.month.index]['fidelity']['sum']}
+                    {/if}
+
+                    {foreach from=$yeardata[$smarty.section.month.index] key=rabattId item=rabattData}
+                        {if strcmp($rabattData['name'], 'Eingelöste Treuepunkte') != 0}
+                            <a target="_blank" href='/administration/discounts/IDgrid/{$rabattId}'>{$rabattData['name']}</a><br/>
+                            ({$rabattData['count']}) ({$rabattData['sum']|inttoprice} {__b('€')})<br/><br/>
+                            {$monthsum = $monthsum + $rabattData['sum']}
+                        {/if}
+                    {/foreach}
+                </td>
+                {/section}
+            </tr>
+            <tr>
+                <td><b>{__b('Gesamt')}</b></td>
+                {section name=month start=1 loop=13}
+                <td>
+                    <b>{if {$discounts_stats_sum[$year][$smarty.section.month.index]}>0}{($discounts_stats_sum[$year][$smarty.section.month.index])|inttoprice} {__b('€')}{/if}</b></td>
+                {/section}
+            </tr>
+        </table>
+    </div>
+</div>
+{/foreach}
+
+{/block}

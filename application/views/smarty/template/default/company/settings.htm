@@ -1,0 +1,114 @@
+{extends file="company/base.htm"}
+{block name="content"}
+
+<div id="admincase">
+
+    {include file='company/_left_nav.htm'}
+
+    <div class="clear"></div>
+
+    <div id="main-content">
+
+    <!-- Page Head -->
+
+    <ul class="shortcut-buttons-set">
+
+        <li><a class="shortcut-button" href="/company/settings"><span>
+            <img src="{$domain_static}/images/yd-icons/backend/information.png" alt="" /><br />
+            {__('Firmendetails')}
+        </span></a></li>
+
+    </ul><!-- End .shortcut-buttons-set -->
+
+    <div class="clear"></div>
+
+    <div class="content-box">
+
+        <div class="content-box-header">
+
+            <h3>{__('Firmendetails für %s', $company->getName())}</h3>
+
+            <div class="clear"></div>
+
+        </div>
+            
+            <div id="content" class="right">
+                <form action="" method="post" class="fm yd-validation">
+                    <input type="hidden" name="compId" value="{$company->getId()}" />
+
+                    <div class="settings_group">
+                        <div class="title">{__('Einstellungen')}</div>
+                        <div class="user-content">
+                            <label for="">{__('Administrator über Bestellungen informieren')}</label>
+                            <input type="checkbox" class="text-input medium-input" name="informAdmin" value="1" {if $company->isInformAdmin()}checked="checked"{/if}"/>
+                        </div>
+                    </div>
+
+                    <div class="settings_group">
+                        <div class="title">{__('Allgemein')}</div>
+                        <div class="user-content">
+                            <label for="">{__('Steuernummer:')}</label>
+                            <input type="text" class="text-input medium-input" name="csteuerNr" value="{$company->getSteuerNr()}"/>
+                        </div>
+
+                        <div class="user-content">
+                            <label for="">{__('Industrie:')}</label>
+                            <input type="text" class="text-input medium-input" name="cindustry" value="{$company->getIndustry()}"/>
+                        </div>
+
+                        <div class="user-content">
+                            <label for="">{__('Website:')}</label>
+                            <input type="text" class="text-input medium-input" name="cwebsite" value="{$company->getWebsite()}"/>
+                        </div>
+                    </div>
+
+                    <div class="settings_group">
+                        <div class="title">{__('Adresse')}</div>
+                        <div class="user-content">
+                            <label for="">{__('Strasse:')} <span style="color:red">*</span></label>
+                            <input type="text" class="text-input medium-input validate[street]" name="cstreet" id="cstreet" value="{$company->getStreet()}" />
+                        </div>
+
+                        <div class="user-content">
+                            <label for="">{__('Hausnummer:')} <span style="color:red">*</span></label>
+                            <input type="text" class="text-input small-input validate[hausnr]" name="chausnr" id="chausnr" value="{$company->getHausnr()}" />
+						</div>
+						
+						<div class="user-content">
+                            <label for="">{__('Postleitzahl')}: <span style="color:red">*</span></label>
+                            <input type="hidden" name="cityId" value="{if is_object($company->getCity())}{$company->getCity()->getId()}{/if}" />
+                            <input type="text" class="yd-plz-autocomplete yd-only-nr text-input small-input validate[plz]" name="cplz" id="cplz" value="{$company->getPlz()}" />
+						</div>
+                    </div>
+
+
+                    <div class="settings_group">
+                        <div class="title">{__('Bankverbindung')}</div>
+                        <div class="user-content">
+                            <label for="">{__('Kontoinhaber:')}</label>
+                            <input type="text" class="text-input medium-input" name="cktoName" value="{$company->getKtoName()}"/>
+                        </div>
+
+                        <div class="user-content">
+                            <label for="">{__('Kontonummer:')}</label>
+                            <input type="text" class="text-input medium-input yd-only-nr" name="cktoNr" value="{$company->getKtoNr()}"/>
+                        </div>
+
+                        <div class="user-content">
+                            <label for="">{__('Bankleitzahl:')}</label>
+                            <input type="text" class="text-input medium-input yd-only-nr" name="cktoBlz" value="{$company->getKtoBlz()}"/>
+                        </div>
+
+                        <div class="user-content">
+                            <label for="">&nbsp;</label>
+                            <input type="submit" class="button" value="{__('Informationen speichern')}"/>
+                            <input type="hidden" name="send" value="go" />
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div> <!-- content box -->
+    <div class="clear"></div>
+</div> <!-- main content -->
+</div> <!-- admincase -->
+{/block}

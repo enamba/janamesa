@@ -1,0 +1,420 @@
+/*
+    8. ordering/finish
+***********************************************************/
+.finish-button-top{
+    display: none;
+}
+#paymentcontent input{
+    display: none;
+}
+.yd-payment-cash,
+.yd-payment-payp,
+.yd-payment-ec ,
+.yd-payment-card,
+.yd-payment-bill,
+.yd-payment-debit,
+.yd-payment-ebanking-de,
+.yd-payment-ebanking-atch,
+.yd-payment-ebanking-en {
+    cursor: pointer;
+    float: left;
+    display: block;
+    width: 155px;
+    height: 40px;
+    margin: 0 10px 10px 0;
+    padding: 10px 0 0 65px;
+    color: #333 !important;
+    background: url(/media/images/satellites/menu/yd-sprites.png);
+}
+
+.yd-payment-cash span,
+.yd-payment-ec span,
+.yd-payment-card span,
+.yd-payment-bill span,
+.yd-payment-debit span {
+    display: block;
+    margin: 0 0 5px;
+    font-size: 14px;
+}
+.yd-payment-payp small{
+    display: block;
+    margin: 0 0 5px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.yd-payment-cash small,
+.yd-payment-ec small,
+.yd-payment-payp small,
+.yd-payment-card small,
+.yd-payment-bill small,
+.yd-payment-debit small {
+    display: block;
+    font-size: 9px;
+}
+
+.yd-payment-cash { background-position: -440px -70px; }
+.yd-payment-ec { background-position: -440px -20px; }
+.yd-payment-payp { background-position: -440px -120px; }
+.yd-payment-card { background-position: -440px -170px; }
+.yd-payment-bill { background-position: -440px -220px; }
+.yd-payment-debit { background-position: -440px -270px; }
+.yd-payment-ebanking-de { background-position: -440px -320px; }
+.yd-payment-ebanking-atch { background-position: -440px -370px; }
+.yd-payment-ebanking-en { background-position: -440px -420px; }
+
+
+.yd-payment-cash:hover { background-position: -220px -70px; color: #000 !important;}
+.yd-payment-ec:hover { background-position: -220px -20px;}
+.yd-payment-payp:hover { background-position: -220px -120px; color: #000 !important;}
+.yd-payment-card:hover { background-position: -220px -170px; color: #000 !important;}
+.yd-payment-bill:hover { background-position: -220px -220px; color: #000 !important;}
+.yd-payment-debit:hover { background-position: -220px -270px;color: #000 !important; }
+.yd-payment-ebanking-de:hover { background-position: -220px -320px; color: #000 !important;}
+.yd-payment-ebanking-atch:hover { background-position: -220px -370px; color: #000 !important; }
+.yd-payment-ebanking-en:hover { background-position: -220px -420px; color: #000 !important; }
+
+
+.yd-payment-cash.active { background-position: 0px -70px; }
+.yd-payment-ec.active { background-position: 0px -20px; }                         
+.yd-payment-payp.active { background-position: 0px -120px; }
+.yd-payment-card.active { background-position: 0px -170px; }
+.yd-payment-bill.active { background-position: 0px -220px; }
+.yd-payment-debit.active { background-position: 0px -270px; }
+.yd-payment-ebanking-de.active { background-position: 0px -320px; }
+.yd-payment-ebanking-atch.active { background-position: 0px -370px; }
+.yd-payment-ebanking-en.active { background-position: 0px -420px; }
+
+#yd-finish-payment-debit-register {
+    float: left;
+    cursor: pointer;
+    display: block;
+    width: 454px;
+    height: 40px;
+    margin: 0 0 10px;
+    background: url(/media/images/satellites/menu/yd-debitregister.png) 0 0 no-repeat;
+}
+
+#yd-finish-payment-debit-register:hover {
+    background: url(/media/images/satellites/menu/yd-debitregister.png) 0 -40px no-repeat;
+}
+
+#yd-finish-remain {
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+
+.yd-opening-info {
+    display: block;
+    width: 100px;
+    margin: 0 0 0 10px;
+    padding: 5px 5px 5px 30px;
+    font-size: 10px;
+    border: 2px solid red;
+    background: url(/media/images/satellites/start/yd-sprites-icons.png) -17px -717px no-repeat #fff;
+}
+
+#verteilerpunkte-desc {
+    position: absolute;
+    top: 0;
+    right: -115px;
+    width: 70px;
+    margin: 0 0 0 10px;
+    padding: 5px 5px 5px 30px;
+    font-size: 10px;
+    border: 1px solid red;
+    background: url(/media/images/satellites/start/yd-sprites-icons.png) -17px -717px no-repeat #fff;
+}
+
+.yd-datepicker-info {
+    float: right;
+    font-style: normal;
+    width: 100px;
+    margin: 0 0 0 10px;
+    padding: 5px 5px 5px 30px;
+    font-size: 10px;
+    border: 2px solid red;
+    background: url(/media/images/satellites/start/yd-sprites-icons.png) -17px -717px no-repeat #fff;
+}
+
+.yd-form ul.yd-form-section {
+    border: none;
+}
+.yd-bigbox-body{
+    margin: 0 0 0 145px;
+}
+.yd-form-valid {
+    background: url("/media/images/satellites/start/yd-sprites-icons.png") no-repeat scroll 150px -1966px, url("/media/images/satellites/start/yd-input-text.png") repeat-x scroll left top #FFFFFF;
+}
+.yd-form-middle a, .yd-link-rabatt-delete{
+    background: none !important;
+    text-decoration: underline;
+}
+.yd-form .yd-form-middle textarea{
+    width: 370px;
+    height: 50px;
+}
+#yd-finish-deliver-time {
+    height: 24px;
+}
+/* 
+            Discount 
+***********************************/
+
+#discount-code {
+    width: 90px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+#check-discount {
+    display: inline-block;
+    padding: 5px 10px 4px;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: -moz-linear-gradient(top,#fff,#eee);
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+}
+
+#check-discount:hover {
+    background: -moz-linear-gradient(top,#eee,#fff);
+    background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff));
+}
+
+#check-discount.discount-load {
+    background: url(/media/images/satellites/menu/yd-load-small.gif) 23px 3px no-repeat;
+}
+
+#check-discount.discount-load span {
+    visibility: hidden;
+}
+
+li#valid-discount {
+    margin: 10px 0;
+    padding: 10px !important;
+    text-align: center !important;
+    border-top: 3px double #ccc;
+    border-bottom: 3px double #ccc;
+}
+
+li#valid-discount strong {
+    display: block;
+    margin: 0 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+li#valid-discount a {
+    display: block;
+    margin: 10px 0 0;
+}
+
+li#invalid-discount {
+    margin: 10px 0 !important;
+    padding: 10px !important;
+    text-align: center !important;
+    border: 1px solid red !important;
+    background: #ffcaca;
+    color: #000;
+}
+li#invalid-discount a:hover {
+    color: #000;
+}
+li#invalid-discount a {
+    color: #666;
+}
+
+li#invalid-discount strong {
+    display: block;
+    margin: 0 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+li#invalid-discount a {
+    display: block;
+    margin: 10px 0 0;
+}
+
+.yd-nothing-in-card {
+    display: block;
+    text-align: center;
+    font-size: 12px !important;
+    font-weight: normal !important;
+}
+
+.message_error {
+    display: block;
+    height: 30px;
+    padding: 10px 20px;
+    border: 1px solid #c50020;
+    background: #fcc;
+}
+/*
+ *+++++ Sidebar ++++++
+ *
+*/
+#yd-sidebar .yd-box-body ul li.yd-shopping-input {
+    float: left;
+    width: 40px;
+    text-align: left;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-input input {
+    width: 22px;
+    padding: 3px 4px;
+    text-align: center;
+    background: #fff;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-article {
+    float: left;
+    width: 150px;
+    padding: 2px 0;
+    text-align: left;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-article.readonly {
+    padding-top: 0;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-options {
+    float: right;
+    height: 16px;
+    padding: 4px 0 0;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-options a {
+    float: left;
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 0 0 0 2px;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-extra {
+    clear: left;
+    color: #aaa;
+    font-size: 11px;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-extra span {
+    display: block;
+    margin: 0 0 3px 5px;
+    padding: 0 0 0 40px;
+    text-align: right;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-extra span em {
+    width: 140px;
+    text-align: left;
+
+}
+#yd-sidebar .yd-box-body ul li.yd-shopping-extra span em a{
+    margin-left: 5px;
+}
+#yd-sidebar .yd-box-body ul li.yd-shopping-extra span.yd-shopping-edit {
+    margin: 0 0 -22px;
+    padding: 5px 0 0 40px;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-price {
+    margin: 10px 0 10px;
+    padding: 0 0 5px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    text-align: right;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-empty {
+    margin: 0 0 5px;
+    padding: 0 0 5px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-endprice {
+    padding: 10px 0;
+    font-size: 14px;
+    border-bottom: 3px double #ccc;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-endprice strong {
+    color: green;
+    text-align: right;
+}
+#yd-sidebar .yd-box-body ul li.yd-shopping-endprice em {
+    font-weight: normal;
+    float: left;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-canteen-edit {
+    margin: 0 0 5px;
+    padding: 0 0 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+#yd-sidebar .yd-box-body ul.yd-sidebar-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#yd-sidebar .yd-box-body ul.yd-sidebar-list li:last-child {
+    border: 0;
+}
+
+.yd-box .yd-box-head, .yd-box .yd-box-title{
+    padding-left: 10pxpx;
+    margin: -3px -15px;
+    border-radius: 5px 5px 0 0;
+    border-bottom: none;
+    padding: 12px 0 0 30px;
+    height: 28px;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-discount {
+    padding: 5px;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-discount em {
+    padding: 6px 0 0;
+    float: left;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-discount input {
+    width: 50px;
+}
+#yd-sidebar .yd-box-body{
+    margin-top: 10px;
+}
+#yd-sidebar .yd-box-body ul li em {
+    float: left;
+    font-style: normal;
+}
+#yd-sidebar .yd-box-body ul li{
+    text-align: right;
+}
+/*
+    *backbutton 
+*/
+.backbutton{
+    height: 20px;
+    padding: 5px 0 0 10px;
+    width: 230px;
+    font-size: 14px;
+    top: 20px;
+    left: 10px;
+    position: absolute;
+    text-align: center;
+    border-radius:5px;
+    text-shadow: 0 0 1px #000000;
+    font-weight: bold;
+    border: 1px solid;
+}
+.backbutton:hover{
+    border-radius:5px;
+    background: url(/media/images/satellites/menu/back_arrow.png) 5px 1px no-repeat;
+}

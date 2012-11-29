@@ -1,0 +1,61 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Wer was gemacht hat')}
+        </div>
+        <div class="item-content">
+            <form action="/administration_stats_support{if !empty($id)}/user/id/{$id}{/if}" method="post">
+                <table class="user-tab">
+                    <tbody>
+                        <tr class="even"><td>{__b('Von')}: </td><td><input id="yd-support-tracking-from" name="from" class="" type="text" value="{$from}"></td></tr>
+                        <tr class="odd"><td>{__b('Bis')}: </td><td><input id="yd-support-tracking-until" name="until" class="" type="text" value="{$until}"></td></tr>
+                        <tr class="even"> {if !$id}<td>{__b('Gruppen')}</td><td>{Yourdelivery_Helpers_Grid::adminGroupSelectBox('groups[]', $groups)}</td>{/if}</tr>
+                       
+                        <tr class="odd"><td colspan="2"><input id="yd-support-tracking-submit" class="button" type="submit" value="{__b('Anwenden')}"></td></tr>
+                    </tbody>
+                </table>
+            </form>                
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <th width="20%">{__b('Aktion')}</th>
+                    {foreach $stats as $supporter => $stat}
+                    <th><a href="/administration_stats_support/user/id/{$supporter}">{$stat['name']}</a></th>
+                    {/foreach}
+                    {if !empty($userStats)}
+                    <th>Ids</th>
+                    {/if}
+                </tr>
+                {foreach $actions as $a => $action}
+                <tr>
+                    <td>{$action}</td>
+                    {foreach $stats as $supporter => $stat}
+                    <td>{if !empty($stat[$a])}{$stat[$a]|intval}{/if}</td>
+                    {/foreach}
+                    {if !empty($userStats)}
+                    <td>{Default_Helpers_Human_Readable_Backend::linkToModel($userStats[$a])}</td>
+                    {/if}
+                </tr>
+                {/foreach}
+                <tr>
+                    <td colspan="0">
+                        <a href="{$url}/?export=csv"title="{__b('Export to csv format')}">
+                            <img border="0" src="{$domain_static}/images/yd-backend/grid/csv.gif" alt="csv">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+{/block}

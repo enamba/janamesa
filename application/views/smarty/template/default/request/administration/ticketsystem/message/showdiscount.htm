@@ -1,0 +1,14 @@
+<div style="margin:10px;padding:10px;background-color:#cde">   
+    <p><a href="#" id="yd-current-message-{$message->getId()}-{$order->getId()}" class="yd-message-to-ticket">{__b('Bestellung abrufen')}</a></p>
+    <p>{__b('Gutschein code: %s', $discount->getCode())}</p>
+    <p>{__b('Rabattaktion:')} <a href="/administration_discount/edit/id/{$discount->getParent()->getId()}">{$discount->getParent()->getName()}</a></p>
+    <p>
+        {__b('Gutscheincode ist nicht gültig')}<br/>
+        {if $discount->hasExpired()}
+            {__b('Rabattaktion ist abgelaufen')}<br/>
+        {/if}
+        {if $discount->usageCountIsReached()}
+            {__b('Maximale Anzahl für die Verwendung des Codes wurde erreicht')}<br/>
+        {/if}
+    </p>
+</div>

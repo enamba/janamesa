@@ -1,0 +1,22 @@
+<graph
+    caption="Bestellungen"
+    subCaption="studiVZ"
+    showvalues="1"
+    decimalPrecision="0"
+    decimalSeparator=","
+    thousandSeparator="."
+    formatNumberScale="0"
+    rotateNames="1">
+    <categories>
+        {foreach from=$cat item=c}
+        <category name="{$c}"/>
+        {/foreach}
+    </categories>
+    {foreach from=$dat key=u item=d}
+    <dataset seriesName="{$u}" color="{$col[{$u}]}">
+        {foreach from=$d item=o}
+        <set value="{$o}"/>
+        {/foreach}
+    </dataset>
+    {/foreach}
+</graph>

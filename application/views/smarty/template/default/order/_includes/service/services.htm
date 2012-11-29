@@ -1,0 +1,161 @@
+<div id="yd-service-{$r->getId()}-{$r->getType()}" class="yd-searchable yd-service-container yd-service-type-{$r->getType()}">
+
+    <form action="/{$r->getDirectLink()}" method="get" id="yd-service-submit-{$r->getId()}-{$r->getType()}" class="yd-service-submit {if !$r->isOnline()}service-offline{/if}">
+        {if !empty($isFavourite) && $r->getCurrentCityId()}<input type="hidden" name="cityId" value="{$r->getCurrentCityId()}" />{/if}
+        <ul class="yd-sv3
+            {if $r->isLieferblitz() || $r->isPremium()}
+                pr
+            {elseif $r->isBloomsburys()}
+                bb
+            {elseif $r->isNew()}
+                new
+            {/if}
+            yd-service-select">
+            <li class="yd-sv3-1" style="background: url({$r->getImg()});">
+                {if $withdelete}
+                    <a class="yd-delete-favourite td-delete" title="{__('Favorit entfernen')}" id="yd-delete-favourite-{$r->getId()}"></a>
+                {/if}
+
+                {if $r->getRating()->hasRating()}
+                <span class="yd-rated" id="yd-rate-{$r->getId()}">
+                    <span class="yd-rated-{($r->getRating()->getAverage()*2)|string_format:'%02d'}"></span>
+                    <span class="yd-rated-average">&oslash; {_n('%s Stern', '%s Sterne', $r->getRating()->getAverage()|string_format:"%.2f", $r->getRating()->getAverage()|string_format:"%.2f")}</span>
+                    <span class="yd-rated-total">{__('Total')} <span>{_n('%s Bewertung', '%s Bewertungen', $r->getRating()->count(null, true, false, true), $r->getRating()->count(null, true, false, true))}</span></span>
+                </span>
+                {else}
+                <span class="yd-rated" id="yd-rate-{$r->getId()}">
+                    <span class="yd-rated-10"></span>
+                    <span class="yd-rated-average"></span>
+                    <span class="yd-rated-total">{__('noch keine Bewertungen')}</span>
+                </span>
+                {/if}
+
+                <a class="yd-button-140 yd-service-select {if !$r->isOnline()}offline{/if}" href="/{$r->getDirectLink()}">
+                    {if $r->getType() == "rest"}{__('zur Speisekarte')}{/if}
+                    {if $r->getType() == "great"}{__('zur Auswahl')}{/if}
+                    {if $r->getType() == "cater"}{__('zu den Caterern')}{/if}
+                </a>
+
+                {if $r->isButler()}
+                    <span class="yd-sv3-1-butler"></span>
+                {else}
+                    {if $r->getMenuIsNewUntil() !== null}
+                        <span class="yd-sv3-1-new"></span>
+                    {/if}
+                {/if}
+
+            </li>
+            <li class="yd-sv3-2 yd-service-info" id="yd-service-info-{$r->getId()}">
+                {$r->getName()} {if $r->isLieferblitz() || $r->isPremium()}- {__('Restaurant')}{/if}
+                {if $r->getSpecialComment()}
+                    <span class="special-comment">
+                        <span class="special-comment-truncate">{$r->getSpecialComment()|truncate:23:" ..."}</span>
+                        <span class="special-comment-full" style="display:none;">{$r->getSpecialComment()}</span>
+                    </span>
+                {/if}
+            </li>
+            <li class="yd-sv3-3">{$r->getTagsWithMaxStringlength(25)|implode:', '}</li>
+            <li class="yd-sv3-4 {if $r->isOnline()}hidden{/if}">{__('Online-Bestellung momentan nicht möglich.')}</li>
+            {if $r->isOnline()}
+                {if $r->getType() != 'rest'}
+                    <li class="yd-sv3-4 yd-handling-time" data-handling-time="{$r->getDeliverTimeFormated()|replace:' ':'-'}">{__('Vorlaufzeit: ')}{$r->getDeliverTimeFormated()}<br />{$this->formatOpenings($r->getOpening()->getIntervalOfDay(time()))}</li>
+                {else}
+                    <li class="yd-sv3-4 yd-service-open">{$this->formatOpenings($r->getOpening()->getIntervalOfDay(time()))}</li>
+                    <li class="yd-sv3-4 yd-service-open-in hidden"></li>
+                {/if}
+                <li class="yd-sv3-5">
+                    {__('Mindestbestellwert:')} {__('%s €', $r->getMinCost()|inttoprice)}
+                    {if $r->isOnlyPickup()}
+                        {__('Nur Abholung!')}
+                    {else if $r->getDeliverCost() > 0}
+                        {if $r->isAvanti()}{__('Energiekostenaufschlag: ')}{else}{__('Lieferkosten: ')}{/if}{__('%s €', $r->getDeliverCost()|inttoprice)}
+                    {else}
+                        {if $r->isAvanti()}{__('Energiekostenaufschlag: ')}{else}{__('Lieferkosten: ')}{/if}{__('kostenlos')}
+                    {/if}
+                </li>
+                {if $r->isOnlycash() || $r->isNoContract()}
+                <li class="yd-sv3-6">
+                    <em>
+                        <span>{__('Nur Barzahlung möglich')}</span>
+                        <img src="{$domain_static}/images/yd-frontend-step2/payment-cash.png" alt="" />
+                    </em>
+                    {if $r->hasSmsNotify()}
+                        <small>
+                            <img src="{$domain_static}/images/yd-frontend-step2/yd-sv3-sms.png" alt="" />
+                            <small>{__('Dieser Lieferservice schickt Dir eine E-Mail und SMS mit der Lieferzeit.')}</small>
+                        </small>
+                    {/if}
+                </li>
+                {elseif !$r->isPaymentbar()}
+                <li class="yd-sv3-6">
+                    <em>
+                        <span>{__('Nur online Bezahlung möglich')}</span>
+                        <img src="{$domain_static}/images/yd-frontend-step2/payment-paypal.png" alt="" />
+                        <img src="{$domain_static}/images/yd-frontend-step2/payment-sofort.png" alt="" />
+                        <img src="{$domain_static}/images/yd-frontend-step2/payment-visa.png" alt="" />
+                        <img src="{$domain_static}/images/yd-frontend-step2/payment-mastercard.png" alt="" />
+                        <img src="{$domain_static}/images/yd-frontend-step2/payment-amex.png" alt="" />
+                        <img src="{$domain_static}/images/yd-frontend-step2/payment-discount.png" alt="" />
+                    </em>
+                    {if $r->hasSmsNotify()}
+                        <small>
+                            <img src="{$domain_static}/images/yd-frontend-step2/yd-sv3-sms.png" alt="" />
+                            <small>{__('Dieser Lieferservice schickt Dir eine E-Mail und SMS mit der Lieferzeit.')}</small>
+                        </small>
+                    {/if}
+                </li>
+                {else}
+                <li class="yd-sv3-6">
+                    <em>
+                        <span>{__('Bar oder online bezahlen')}</span>
+                        <img src="{$domain_static}/images/yd-frontend-step2/payment-cash.png" alt="" />
+                        <img src="{$domain_static}/images/yd-frontend-step2/payment-paypal.png" alt="" />
+                        <img src="{$domain_static}/images/yd-frontend-step2/payment-sofort.png" alt="" />
+                        <img src="{$domain_static}/images/yd-frontend-step2/payment-visa.png" alt="" />
+                        <img src="{$domain_static}/images/yd-frontend-step2/payment-mastercard.png" alt="" />
+                        <img src="{$domain_static}/images/yd-frontend-step2/payment-amex.png" alt="" />
+                        <img src="{$domain_static}/images/yd-frontend-step2/payment-discount.png" alt="" />
+                    </em>
+                    {if $r->hasSmsNotify()}
+                        <small>
+                            <img src="{$domain_static}/images/yd-frontend-step2/yd-sv3-sms.png" alt="" />
+                            <small>{__('Dieser Lieferservice schickt Dir eine E-Mail und SMS mit der Lieferzeit.')}</small>
+                        </small>
+                    {/if}
+                </li>
+                {/if}
+                {if $r->isBloomsburys()}
+                    <li class="yd-sv3-7">
+                        Was ist ein bloomsburys Restaurant?
+                        <ul>
+                            <li>Was ist ein bloomsburys Restaurant?</li>
+                            <li>bloomsburys ist der Restaurant Lieferservice für Qualität, Vielfalt &amp; Genuss.</li>
+                            <li>Aus beliebten und bekannten Restaurants wird leckeres Essen in 60 Minuten geliefert.</li>
+                            <li>Ausgewählte Getränke zu attraktiven Preisen ergänzen das Angebot.</li>
+                        </ul>
+                    </li>
+                {/if}
+                {if $r->isLieferblitz() || $r->isPremium()}
+                    <li class="yd-sv3-7">
+                        Was ist ein Premium Restaurant?
+                        <ul>
+                            <li>Was ist ein Premium Restaurant?</li>
+                            <li>Premium Restaurants sind Exklusivpartner im Restaurant Lieferservice von lieferando.</li>
+                            <li>Der Restaurant Lieferservice bringt Essen & Getränke der beliebtesten Restaurants der Stadt nach Hause oder in´s Büro.</li>
+                            <li>Den Restaurant Lieferservice gibt es in Frankfurt, Düsseldorf und München. In Hamburg und Berlin bietet lieferando den Restaurant Lieferservice mit bloomsbury an.</li>
+                        </ul>
+                    </li>
+                {/if}
+            {/if}
+
+        </ul>
+
+        {* show search results *}
+        <div class="menu-top3 hidden">
+            <table id="yd-service-menu-{$r->getId()}" class="yd-service-menu-results">
+                <tbody><tr class="even hidden"><td>&nbsp;</td></tr></tbody>
+            </table>
+        </div>
+
+    </form>
+</div>

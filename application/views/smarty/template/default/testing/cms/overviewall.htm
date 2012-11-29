@@ -1,0 +1,45 @@
+{include file="testing/cms/_testingCmsHeader.htm"}
+
+<div id="content">
+
+    <div class="yd-box">
+
+        <h2 class="yd-icon-cms1">
+            Overview
+            <a class="yd-testing-search">
+                <input type="hidden" type="text" name="yd-testing-search" id="yd-testing-search"></input>
+            </a>
+            <a class="button" href="/testing_cms/create">Create a new testcase</a>
+            <a class="button" href="/testing_cms/stats">Statistics</a>
+            <a class="button" href="/testing_cms/executorsoverview">Executors-Overview</a>
+        </h2>
+
+        <div class="yd-testing-testcase-overview" id="yd-testing-testcase-overview">
+            
+            {assign var=myCounter value=0}
+            
+            {foreach from=$testcases item=testcase}            
+                {assign var=myCounter value=$myCounter+1}
+                <div id="yd-testing-testcase-overview-{$myCounter}">
+                    {$myCounter}. Testcase: <a href="/testing_cms/overview/id/{$testcase['id']}">{$testcase['title']}</a>
+                    Priority: {$testcase['priority']}
+                    <br /><br />
+                    {$testcase['description']}
+                    <br /><br />
+                    created: {$testcase['created']}
+                    <br /><br />      
+                    <a class="button2" href="/testing_cms/deletetestcase/id/{$testcase['id']}" onclick="javascript:return confirm('Willst Du wirklich löschen?');">Delete</a>
+                    <a class="button" href="/testing_cms/edittestcase/id/{$testcase['id']}" >Edit</a>
+                    <hr />
+                </div>            
+            {/foreach}
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

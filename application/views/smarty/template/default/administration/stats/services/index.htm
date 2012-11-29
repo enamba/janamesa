@@ -1,0 +1,93 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/stats/services/navigation.htm'}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Anzahl der Dienstleister')}
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+            * {__b('Anzahl der Dienstleister in einer Kategorien zeigt, wie viele Dienstleister diesen Typ der Lieferung anbieten. Gesamtzanzahl der Dienstleister zeigt, wie viele Dienstleister es gibt, wobei ein Dienstleister kann mehrere Typen der Lieferung anbieten (Restaurant, Caterer)')}<br/>
+            * {__b('"Premium" ist kein Typ der Lieferung, sondern Typ des Dienstleisters')}<br/>
+            * {__b('Summe der Dienstleister nach Kategorien kann größer sein, als Gesamtanzahl der Dienstleister in diesem Gebiet, weil ein Dienstleister mehreren Kategorien zugeordnet werden kann.')}<br/>
+            * {__b('Gesamtzahl der offline Dienstleister kann größer sein, als die Summe der Dienstleister nach Kategorien, weil manche offline Dienstleister noch keiner Kategorie zugewiesen sind.')}<br/>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <td width="15%"></td>
+                    <td width="10%">{__b('Online')}</td>
+                    <td width="10%">{__b('Offline')}</td>
+                    <td width="10%">{__b('Gesamt')}</td>
+                    <td width="55%"></td>
+                </tr>
+                {foreach from=$servicesPerCategory key=k item=s}
+                    {if strlen($k) > 0}
+                    <tr>
+                        <td>{$k}: </td>
+                        <td>{$s['1']|intval}</td>
+                        <td>{$s['0']|intval}</td>
+                        <td>{($s['0'] + $s['1'])|intval}</td>
+                        <td></td>
+                    </tr>
+                    {/if}
+                {/foreach}
+                <tr style="color: #999;">
+                    <td>{__b('Keine Kategorie')}: </td>
+                    <td>{$servicesPerCategory[null]['1']|intval}</td>
+                    <td>{$servicesPerCategory[null]['0']|intval}</td>
+                    <td>{($servicesPerCategory[null]['0'] + $servicesPerCategory[null]['1'])|intval}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td height="20px;" colspan="5"></td>
+                </tr>
+                {foreach from=$premium item=r}
+                    <tr style="color: #6f6f6f;">
+                        <td>{__b('Premium')}: </td>
+                        <td>{$r.online|intval}</td>
+                        <td>{$r.offline|intval}</td>
+                        <td>{$r.count|intval}</td>
+                    </tr>
+                {/foreach}
+                <tr><td height="20px;" colspan="5"></td></tr>                             
+                <tr style="color: #6f6f6f;">
+                    <td>{__b('ohne Vertrag')}: </td>
+                    <td>{$noContract.online|intval}</td>
+                    <td>{$noContract.offline|intval}</td>
+                    <td>{$noContract.count|intval}</td>
+                </tr>
+                <tr><td height="20px;" colspan="5"></td></tr>
+                <tr>
+                    <td>{__b('nur Barzahlung %sauch online Zahlung', '<br/>')}</td>
+                    <td>{$servicesOnlyCash['1']['onlyCash']|intval}<br/>{$servicesOnlyCash['1']['notOnlyCash']|intval}</td>
+                    <td>{$servicesOnlyCash['0']['onlyCash']|intval}<br/>{$servicesOnlyCash['0']['notOnlyCash']|intval}</td>
+                    <td>{($servicesOnlyCash['0']['onlyCash'] + $servicesOnlyCash['1']['onlyCash'])|intval}<br/>{($servicesOnlyCash['0']['notOnlyCash'] + $servicesOnlyCash['1']['notOnlyCash'])|intval}</td>
+                    <td></td>
+                </tr>
+                <tr><td height="30px;" colspan="5"></td></tr>
+                <tr style="font-weight: bold;">
+                    <td height="40px;">{__b('Gesamt')}:</td>
+                    <td>{$servicesGlobal['1']['sum']|intval}</td>
+                    <td>{$servicesGlobal['0']['sum']|intval}</td>
+                    <td>{($servicesGlobal['1']['sum'] + $servicesGlobal['0']['sum'])|intval}</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+{/block}

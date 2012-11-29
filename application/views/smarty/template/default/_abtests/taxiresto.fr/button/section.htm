@@ -1,0 +1,9 @@
+<form name="plzAutocomplete" id="yd-start-order-form" method="post" action="{$formAction|default:'/order_private/start?mode=rest'}">
+    <input type="hidden" name="cityId" value="" />
+    <input id="yd-plz-search" class="yd-only-nr yd-empty-text" type="text" name="plz" value="" maxlength="5" title="{__('Postleitzahl')}" />
+    <a id="yd-start-order" class="yd-button-280" name="yd-start-order">
+        <script type="text/javascript">utmx_section("ButtonText")</script>
+        {__("Bestellung starten!")}
+        </noscript>
+    </a>
+</form>

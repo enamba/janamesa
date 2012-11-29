@@ -1,0 +1,25 @@
+
+{if $config->domain->base == 'taxiresto.fr'}
+    <div class="yd-payment-footer"></div>
+{/if}
+
+<p class="vz-rules">
+    {if $discountKind<1}
+    {assign var=discountAmountFormat value=$discountAmount|cat:'&nbsp;%'}
+    {else}
+    {assign var=discountAmountFormat value=$discountAmount|inttoprice|cat:__('&nbsp;€')}
+    {/if}
+
+    {__('Bestätige nun in den folgenden Schritten Deine angegebene Email und Telefonnummer.
+    Nach erfolgreicher Registrierung  erhältst Du Deinen persönlichen %s %s Gutscheincode per E-Mail zugesendet.
+    ', $config->domain->base, $discountAmountFormat)}
+    <br /><br />
+    {__('* Der Gutschein gilt ab Ausstellungsdatum bis einschließlich %s und nur bei
+    einer Neukundenregistrierung, ist einmalig einlösbar und kann auf jede Bestellung
+    mit Online-Zahlung (Paypal (verifizierter Account) oder SofortÜberweisung) ab einem Mindestbestellwert von %s € eingelöst werden.
+    Ausgeschlossen sind Premiumrestaurants und Firmenkunden. Gutschein kann nur mit dem
+    erstellten Account genutzt werden. Wir behalten uns vor, die Aktion bzw. einzelne
+    Gutscheine zu verändern, zu stoppen oder bei Verdacht auf Missbrauch zu stornieren.
+    Bei stornierten Aktionen gibt es keine Auszahlung der Gutscheine oder ähnliches.
+    ', $discountEnd|date_format:__('%d.%m.%Y'), $minimumOrderValue|inttoprice)}
+</p>

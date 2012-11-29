@@ -1,0 +1,1193 @@
+/*
+            Tooltip
+**************************************/
+#tooltip, #simpleTooltip{
+    border: none !important;
+    border-radius: 5px;
+    box-shadow: 2px 1px 3px #333;
+    max-width: 200px;
+    text-align: center;
+    padding: 5px;
+}
+#yd-sidebar .yd-gray-button .mincosttooltip{
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ccc;
+    color: #E10000;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 5px;
+    position: absolute;
+    font-family: arial,"nimbus sans l",sans-serif;
+    z-index: 1000;
+    line-height: normal;
+    box-shadow: 1px 0 1px #ccc;
+    text-shadow: none;
+    width: 240px;
+}
+
+#yd-sidebar .yd-gray-button{
+    position: relative;
+
+}
+#yd-sidebar .yd-gray-button:hover .mincosttooltip{
+    display: block !important;
+
+}
+
+#yd-main-teaser .yd-button-240 {
+    position: absolute;
+    top: 44px;
+    left: 300px;
+}
+
+
+/*
+    11. Sidebar (Shopping-Cart, Fidelity, Budget, Crosseling, Discount)
+***********************************************************/
+
+#yd-sidebar .yd-box-body ul li {
+    text-align: right;
+}
+
+#yd-sidebar .yd-box-body ul li em {
+    float: left;
+    font-style: normal;
+}
+
+#yd-sidebar .yd-box-body ul li.align-l {
+    text-align: left;
+}
+
+.yd-plus {
+    float: right;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(/media/images/satellites/start/yd-sprites-icons.png) 0 -880px no-repeat;
+}
+
+.yd-minus {
+    float: right;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(/media/images/satellites/start/yd-sprites-icons.png) 0 -920px no-repeat;
+}
+
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-input {
+    float: left;
+    width: 40px;
+    text-align: left;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-input input {
+    width: 22px;
+    padding: 3px 4px;
+    text-align: center;
+    background: #fff;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-article {
+    float: left;
+    width: 150px;
+    padding: 2px 0;
+    text-align: left;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-article.readonly {
+    padding-top: 0;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-options {
+    float: right;
+    height: 16px;
+    padding: 4px 0 0;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-options a {
+    float: left;
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 0 0 0 2px;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-extra {
+    clear: left;
+    color: #aaa;
+    font-size: 11px;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-extra span {
+    display: block;
+    margin: 0 0 3px 5px;
+    padding: 0 0 0 40px;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-extra span em {
+    width: 140px;
+    text-align: left;
+
+}
+#yd-sidebar .yd-box-body ul li.yd-shopping-extra span em a{
+    margin-left: 5px;
+}
+#yd-sidebar .yd-box-body ul li.yd-shopping-extra span.yd-shopping-edit {
+    margin: 0 0 -22px;
+    padding: 5px 0 0 40px;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-price {
+    margin: 10px 0 10px;
+    padding: 0 0 5px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-empty {
+    margin: 0 0 5px;
+    padding: 0 0 5px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-endprice {
+    padding: 10px 0;
+    font-size: 14px;
+    border-bottom: 3px double #ccc;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-shopping-endprice strong {
+    color: green;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-canteen-edit {
+    margin: 0 0 5px;
+    padding: 0 0 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+#yd-sidebar .yd-box-body ul.yd-sidebar-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#yd-sidebar .yd-box-body ul.yd-sidebar-list li:last-child {
+    border: 0;
+}
+
+#minamount {
+    position: relative;
+}
+
+#minamount div {
+    margin: 10px 0;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 11px;
+    color: #fff;
+    border-radius: 4px;
+    background: #f00;
+    background: -moz-linear-gradient(top,#f00,#c00);
+    background: -webkit-gradient(linear, left top, left bottom, from(#f00), to(#c00));
+}
+
+#minamount a {
+    display: block;
+    text-align: center;
+    margin: 0 0 20px;
+    text-decoration: none;
+}
+#minamount a:hover {
+    text-decoration: underline;
+}
+#minamount em {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 230px;
+    padding: 10px;
+    font-size: 11px;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    background: -moz-linear-gradient(top,#fff,#eee);
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+}
+
+.yd-rest-table:hover{
+    background:#ffc;
+    cursor:pointer;
+}
+
+.serviceOpenings:hover{
+    cursor:pointer;
+}
+
+#yd-menu-lieferando_logo{
+    position: relative;
+    background:  no-repeat #fd0000;
+    background:   60px 0px no-repeat, -moz-linear-gradient(top,#fd0000,#e20000);
+    background:  no-repeat, -webkit-gradient(linear, left top, left bottom, from(#fd0000), to(#e20000));
+    border-radius:5px;
+    border: 1px solid #e20000;
+    height: 40px;
+    width: 278px;
+    margin: 10px 0 20px 0;
+}
+
+#yd-menu-lieferando_logo .yd-flashlink{
+    position: absolute;
+    top:0px;
+    left:0px;
+    display: block;
+    width: 100%;
+    height:100%;
+}
+
+#yd-menu-lieferando_logo .yd-flashlink:focus{
+    outline: none;
+}
+
+#yd-sidebar a.yd-button-250{
+    color: #fff ;
+}
+
+
+
+/*
+                Siedebar
+****************************************/
+
+#minamount a {
+    background: url("/media/images/satellites/menu/yd-mincost-info.png") no-repeat scroll right transparent;
+    display: inline-block;
+    height: 16px;
+    margin-top: 1px;
+    position: absolute;
+    right: 5px;
+    text-align: center;
+    text-decoration: none;
+    top: 1px;
+    width: 240px;
+}
+#minamount a:hover{
+    background: url("/media/images/satellites/menu/yd-mincost-info.png") no-repeat scroll right transparent;
+}
+#minamount em {
+    box-shadow: 2px 2px 5px #000;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 11px;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    text-align: left;
+    top: 20px;
+    width: 230px;
+    z-index: 10;
+}
+#yd-menu-certification{
+    margin: 20px 0 0;
+    max-height: 300px;
+    width: 280px;
+}
+.yd-form strong.yd-form-tease {
+    display: none;
+}
+
+.yd-box-body{
+
+    padding-top: 12px;
+
+}
+.yd-box .yd-box-head, .yd-box .yd-box-title{
+    margin: -3px -15px;
+    border-radius: 5px 5px 0 0;
+    border-bottom: none;
+    padding: 10px 0 10px 20px;
+    font: 21px FuturaCondensedMedium,arial,"nimbus sans l",sans-serif;
+}
+#yd-sidebar .yd-box .yd-box-head span{
+    display: none;
+}
+.yd-successarea-left-3 a:hover{
+    background: none;
+
+}
+#yd-sidebar .yd-box-body ul li.yd-shopping-endprice {
+    border-bottom: 4px double;
+}
+#valid-points{
+    margin-top: 10px;
+}
+a.yd-option-trash{
+    background: url("/media/images/satellites/start/yd-sprites-icons.png") no-repeat scroll 0 -560px transparent !important;
+}
+a.yd-option-minus {
+    background: url("/media/images/satellites/start/yd-sprites-icons.png") no-repeat scroll 0 -640px transparent !important;
+}
+a.yd-option-plus {
+    background: url("/media/images/satellites/start/yd-sprites-icons.png") no-repeat scroll 0 -600px transparent !important;
+}
+#minamount div {
+    font-size: 11px;
+    padding: 4px 3px 3px;
+}
+
+
+
+/*
+                Lightbox
+*******************************************/
+
+.ui-widget-overlay {
+    background: none repeat scroll 0 0 #333333;
+    height: 100%;
+    left: 0;
+    opacity: 0.3;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.yd-dialogs {
+    position: relative;
+    width: 620px;
+    background: #fff;
+    box-shadow: 0 0 0 20px rgba(0,0,0,0.5);
+    border-radius: 2px;
+}
+
+.yd-dialogs-head {
+    position: relative;
+    padding: 10px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    text-shadow: 0 1px 0 #fff;
+    background: #f4f4f4; /* Old browsers */
+    background: -moz-linear-gradient(top, #f4f4f4 0%, #e7e7e7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f4f4), color-stop(100%,#e7e7e7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f4f4f4 0%,#e7e7e7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f4f4f4 0%,#e7e7e7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f4f4f4 0%,#e7e7e7 100%); /* IE10+ */
+    background: linear-gradient(top, #f4f4f4 0%,#e7e7e7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#e7e7e7',GradientType=0 ); /* IE6-9 */
+    box-shadow: 0 2px 2px #ccc;
+}
+
+.yd-dialogs-head small {
+    display: block;
+    margin: 10px 0 0;
+    font-size: 11px;
+}
+
+.yd-dialogs-head input {
+    float: left;
+    width: 40px;
+    margin: 0 20px 0 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.7);
+}
+.yd-dialogs .yd-add-to-card{
+    margin: 10px auto;
+}
+
+.yd-dialogs-head span {
+    float: left;
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 24px;
+}
+
+.yd-dialogs-head span img {
+    margin: 0 0 -6px 0;
+}
+
+.yd-dialogs-head span:last-child {
+    float: right;
+}
+
+.yd-dialogs-body {
+    padding: 40px 20px 20px 20px;
+}
+.yd-dialogs-body h2{
+    margin: 5px 0;
+}
+.yd-dialogs-box {
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.yd-dialogs-box-head {
+    position: relative;
+    padding: 8px 12px;
+    border-radius: 4px 4px 0 0;
+    background: #f4f4f4; /* Old browsers */
+    background: -moz-linear-gradient(top, #f4f4f4 0%, #ececec 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f4f4), color-stop(100%,#ececec)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f4f4f4 0%,#ececec 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f4f4f4 0%,#ececec 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f4f4f4 0%,#ececec 100%); /* IE10+ */
+    background: linear-gradient(top, #f4f4f4 0%,#ececec 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#ececec',GradientType=0 ); /* IE6-9 */
+    box-shadow: inset 0 1px 0 #fff;
+}
+
+.yd-dialogs-box-body {
+    background: #eee;
+    padding: 12px;
+    font-size: 12px;
+    border-top: 1px solid #ccc;
+    border-radius: 0 0 4px 4px;
+}
+
+.yd-dialogs-box.yd-dialogs-green {
+    border: 1px solid #a8e2a8;
+}
+
+.yd-dialogs-box.yd-dialogs-green .yd-dialogs-box-head {
+    background: #d8fdd7; /* Old browsers */
+    background: -moz-linear-gradient(top, #d8fdd7 0%, #c9f1c9 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d8fdd7), color-stop(100%,#c9f1c9)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #d8fdd7 0%,#c9f1c9 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #d8fdd7 0%,#c9f1c9 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #d8fdd7 0%,#c9f1c9 100%); /* IE10+ */
+    background: linear-gradient(top, #d8fdd7 0%,#c9f1c9 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8fdd7', endColorstr='#c9f1c9',GradientType=0 ); /* IE6-9 */
+}
+
+.yd-dialogs-box.yd-dialogs-green .yd-dialogs-box-body {
+    border-top: 1px solid #a8e2a8;
+}
+
+.yd-dialogs-box-head .yd-dbh-number {
+    margin: 0 10px 0 0;
+    color: #888;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.yd-dialogs-box.yd-dialogs-green .yd-dialogs-box-head .yd-dbh-number {
+    color: #65ba62;
+}
+
+.yd-dialogs-box-head .yd-dbh-choose {
+    margin: 0 10px 0 0;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.yd-dialogs-box-head .yd-dbh-choise {
+    display: block;
+    margin: 5px 0 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: red;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.yd-dialogs-box.yd-dialogs-green .yd-dialogs-box-head .yd-dbh-choise {
+    color: green;
+}
+
+.yd-dialogs-box-head .yd-dbh-extras {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.yd-dialogs-box-head .yd-dbh-extras a {
+    display: inline-block;
+    margin: 5px 5px 0 0;
+    padding: 3px 20px 3px 5px;
+    font-weight: normal;
+    font-size: 11px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: url(/media/images/yd-icons/extra-cross.png) 98% 4px no-repeat #ffffff; /* Old browsers */
+    background: url(/media/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+    background: url(/media/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: url(/media/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: url(/media/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Opera11.10+ */
+    background: url(/media/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* IE10+ */
+    background: url(/media/images/yd-icons/extra-cross.png) 98% 4px no-repeat, linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* W3C */
+}
+
+.yd-dialogs-box-head .yd-dbh-extras a:hover {
+    text-decoration: none;
+    background: url(/media/images/yd-icons/extra-cross.png) 98% 4px no-repeat #eeeeee; /* Old browsers */
+    background: url(/media/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -moz-linear-gradient(top, #eeeeee 0%, #ffffff 100%); /* FF3.6+ */
+    background: url(/media/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: url(/media/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -webkit-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: url(/media/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -o-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* Opera11.10+ */
+    background: url(/media/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -ms-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* IE10+ */
+    background: url(/media/images/yd-icons/extra-cross.png) 98% 4px no-repeat, linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* W3C */
+}
+
+.yd-dialogs-box-body .yd-extra-group span {
+    display: block;
+    margin: 0 0 10px;
+    padding: 0 0 5px;
+    font: 21px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    color: #999;
+    border-bottom: 1px dotted #ccc;
+}
+
+.yd-dialogs-box-body ul li {
+    float: left;
+    margin: 0 10px 10px 0;
+    width: 230px;
+}
+
+.yd-dialogs-box-body ul li button {
+    text-align: left;
+    white-space: normal;
+    display: block;
+    padding: 3px 5px 3px 20px;
+    color: #59d;
+    font-size: 11px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: url(/media/images/yd-icons/extra-add.png) 6px 4px no-repeat #ffffff; /* Old browsers */
+    background: url(/media/images/yd-icons/extra-add.png) 6px 4px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+    background: url(/media/images/yd-icons/extra-add.png) 6px 4px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: url(/media/images/yd-icons/extra-add.png) 6px 4px no-repeat, -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: url(/media/images/yd-icons/extra-add.png) 6px 4px no-repeat, -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Opera11.10+ */
+    background: url(/media/images/yd-icons/extra-add.png) 6px 4px no-repeat, -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* IE10+ */
+    background: url(/media/images/yd-icons/extra-add.png) 6px 4px no-repeat, linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* W3C */
+}
+
+.yd-dialogs-box-body ul li button:hover {
+    background: url(/media/images/yd-icons/extra-add.png) 6px 4px no-repeat #eeeeee; /* Old browsers */
+    background: url(/media/images/yd-icons/extra-add.png) 6px 4px no-repeat, -moz-linear-gradient(top, #eeeeee 0%, #ffffff 100%); /* FF3.6+ */
+    background: url(/media/images/yd-icons/extra-add.png) 6px 4px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: url(/media/images/yd-icons/extra-add.png) 6px 4px no-repeat, -webkit-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: url(/media/images/yd-icons/extra-add.png) 6px 4px no-repeat, -o-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* Opera11.10+ */
+    background: url(/media/images/yd-icons/extra-add.png) 6px 4px no-repeat, -ms-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* IE10+ */
+    background: url(/media/images/yd-icons/extra-add.png) 6px 4px no-repeat, linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* W3C */
+}
+
+.yd-dialogs-box-head .yd-dbh-change {
+    color: #05a;
+    font-size: 10px;
+    text-decoration: underline;
+}
+
+.yd-dialogs-box-head .yd-dbh-price {
+    position: absolute;
+    top: 11px;
+    right: 40px;
+    text-align: right;
+    font-weight: bold;
+    color: #999;
+}
+
+.yd-dialogs-box-head .yd-dbh-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: block;
+    width: 21px;
+    height: 21px;
+    background: url(/media/images/satellites/menu/yd-dialogs-gray.png);
+}
+
+.yd-dialogs-box.yd-dialogs-green .yd-dialogs-box-head .yd-dbh-icon {
+    background: url(/media/images/satellites/menu/yd-dialogs-green.png);
+}
+
+.yd-dialogs-comment {
+    width: 600px;
+    margin: 30px auto;
+    border: 1px solid #9ad4ee;
+    border-radius: 4px;
+    background: #d4f2ff; /* Old browsers */
+    background: -moz-linear-gradient(top, #d4f2ff 0%, #c0e9fb 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d4f2ff), color-stop(100%,#c0e9fb)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #d4f2ff 0%,#c0e9fb 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #d4f2ff 0%,#c0e9fb 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #d4f2ff 0%,#c0e9fb 100%); /* IE10+ */
+    background: linear-gradient(top, #d4f2ff 0%,#c0e9fb 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4f2ff', endColorstr='#c0e9fb',GradientType=0 ); /* IE6-9 */
+    box-shadow: inset 0 1px 0 #fff, 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.yd-dialogs-comment:hover {
+    background: #d4f2ff;
+}
+
+.yd-dialogs-comment-head {
+    cursor: pointer;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #1062ae;
+    text-shadow: 0 1px 0 #fff;
+    border-radius: 4px;
+}
+
+.yd-dialogs-comment-head span {
+    font: 19px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    padding: 0 0 0 25px;
+    background: url(/media/images/yd-frontend-step3/yd-dialogs-comment.png) 0 7px no-repeat;
+}
+
+.yd-dialogs-comment-body {
+    padding: 0 8px 8px 8px;
+}
+
+.yd-dialogs-comment-body textarea {
+    width: 570px;
+    height: 80px;
+    border: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.7);
+}
+
+.yd-dialogs-price {
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+    color: green;
+    font-size: 18px;
+    position: relative;
+}
+
+
+.ui-dialog-titlebar-close,
+.ui-dialog-titlebar-close:hover {
+    position: absolute !important;
+    top: -20px !important;
+    right: -20px !important;
+    z-index: 100 !important;
+    display: block !important;
+    width: 36px !important;
+    height: 36px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: none !important;
+}
+
+.yd-dialogs-close {
+    position: absolute;
+    top: -22px;
+    right: -22px;
+    z-index: 99;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(/media/images/yd-frontend-core/yd-sprite-core.png) 0 -520px;
+}
+
+.yd-dialogs-close:hover {
+    background-position: -40px -520px;
+}
+
+.yd-dialogs-close:focus,
+.yd-dialogs-close:active {
+    background-position: -80px -520px;
+}
+
+.ui-dialog-titlebar-close span {
+    display: none !important;
+}
+
+.yd-dialogs.warning {
+    box-shadow: 0 0 0 20px rgba(255,0,0,0.3);
+}
+
+.yd-dialogs.warning .yd-dialogs-box.warning {
+    border: 1px solid #c91b00;
+}
+
+.yd-dialogs.warning .yd-dialogs-box.warning .yd-dialogs-box-head {
+    background: #fff1f1; /* Old browsers */
+    background: -moz-linear-gradient(top, #fff1f1 0%, #ffadab 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff1f1), color-stop(100%,#ffadab)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fff1f1 0%,#ffadab 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #fff1f1 0%,#ffadab 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #fff1f1 0%,#ffadab 100%); /* IE10+ */
+    background: linear-gradient(top, #fff1f1 0%,#ffadab 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff1f1', endColorstr='#ffadab',GradientType=0 ); /* IE6-9 */
+}
+
+.yd-dialogs.warning .yd-dialogs-box.warning .yd-dialogs-box-body {
+    border-top: 1px solid #c91b00;
+}
+
+.yd-dialogs.warning .yd-dialogs-box.warning .yd-dialogs-box-head .yd-dbh-number {
+    color: #c91b00;
+}
+
+.yd-dialogs.warning .yd-dialogs-box.warning .yd-dialogs-box-head .yd-dbh-choose {
+    color: #c91b00;
+}
+.ui-resizable-handle {
+    display: none !important;
+}
+.yd-lightbox-content-container {
+    padding: 20px 50px;
+    position: relative;
+}
+
+.yd-dialogs-price strong {
+    font-size: 12px;
+    right: 425px;
+    position: absolute;
+    text-align: right;
+    top: 2px;
+}
+.yd-dialogs-price .yd-button-190 {
+    margin: 0 0 0 350px;
+}
+.yd-dialogs-price strong em {
+    color: green;
+    display: block;
+    font-size: 28px;
+    font-style: normal;
+    margin-right: 0px;
+}
+.yd-dialogs-price strong sup{   
+    display: inline;
+    font-size: 19px;
+    left: 103px;
+    position: absolute;
+    top: 15px;
+}
+.ui-dialog-content h1 {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 14px;
+    height: 30px;
+    padding: 16px 0 0 50px;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+.yd-form strong.yd-form-tease {
+    border-bottom: 1px dotted #CCCCCC;
+    color: #333333;
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 15px;
+    padding: 0 0 5px;
+}
+.yd-lightbox-content-container {
+    padding: 20px 50px;
+    position: relative;
+}
+.yd-select-plz .yd-dialogs-close, #yd-service-offline .yd-dialogs-close{
+    background: none;
+}
+/*
+    Dialog overlay background
+***********************************************************/
+
+.ui-widget-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: .5;
+    filter:Alpha(Opacity=50);
+}
+
+* html .ui-widget-overlay {
+    display: none !important;
+}
+
+/*
+    Dialog Container    min-width: 620px; min-height: 300px;
+***********************************************************/
+
+.ui-dialog {
+    position: absolute;
+    font-family: "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    padding: 0;
+    background: transparent !important;
+    border: none;
+}
+
+/*
+    Dialog Height and Position by Loading
+***********************************************************/
+
+.yd-lightbox-loading {
+    height: 400px;
+    background: url(/media/images/satellites/menu/ajax-loader.gif) 50% 50% no-repeat;
+}
+
+/*Service Closed*/
+#yd-service-offline .yd-lbicon-time{
+    padding: 10px;
+}
+#yd-service-offline #change-plz{
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+/*
+            Menu
+***********************************************/
+/* Grundstruktur der DIV-Tabelle */
+
+.table {
+    display: table;
+}
+
+.tr {
+    display: table-row;
+}
+
+.td {
+    display: table-cell;
+}
+
+.thead {
+    display: table-row;
+}
+
+.th {
+    display: table-cell;
+}
+
+.table {
+    width: 100%;
+}
+
+.tr {
+    cursor: pointer;
+}
+
+
+/* Kategorie und Größen (XL, XXL etc) */
+.thead {
+    background: #fcfcfc; /* Old browsers */
+    background: -moz-linear-gradient(top, #fcfcfc 0%, #f5f5f5 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#f5f5f5)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fcfcfc 0%,#f5f5f5 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #fcfcfc 0%,#f5f5f5 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #fcfcfc 0%,#f5f5f5 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#f5f5f5',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #fcfcfc 0%,#f5f5f5 100%); /* W3C */
+}
+
+.th {
+    padding: 10px 20px;
+    vertical-align: middle;
+    font-size: 21px;
+    text-align: center;
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.th:first-child {
+    font-size: 24px;
+    text-align: left;
+}
+
+/* Speisen */
+
+.td {
+    padding: 20px;
+    vertical-align: middle;
+    text-align: center;
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+}
+
+.td:first-child {
+    text-align: left;
+}
+
+/* Zoombare Bilder */
+
+.td div:first-child {
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: -20px 10px -20px -20px;
+    background: url(/media/images/satellites/menu/glas.png) 82px 82px transparent no-repeat;
+}
+
+.td div img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+}
+#yd-menu .td hr{
+    border: none;
+}
+
+/* Namen und Preise */
+
+.td a {
+    font-size: 24px;
+    white-space: nowrap;
+
+}
+
+.td:first-child a,
+.td:first-child span {
+    white-space: normal;
+}
+
+
+.td a sup {
+    font-size: 14px;
+    line-height: 15px;
+    vertical-align: top;
+}
+
+.td em {
+    display: inline-block;
+    height: 15px;
+    margin: 0 0 0 10px;
+}
+
+.td span, .th span {
+    display: block;
+    font-family: "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 11px;
+    color: #777;
+}
+
+.td-has-img span {
+    margin: 0 0 0 90px;
+}
+
+.td strong {
+    float: right;
+    margin: 5px 0 0 5px;
+}
+
+.td i { /* Pfand / Netto */
+    display: block;
+    margin: 5px 0 0;
+    font-style: normal;
+    color: #777;
+    font-size: 10px;
+    font-family: "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    white-space: nowrap;
+}
+
+.title {
+    position: absolute;
+    width: 150px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.8);
+}
+/* Wrapper */
+
+.yd-menu-modern {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    margin: 10px 0 100px 0;
+}
+
+/* Die großén Speisenbilder */
+
+.yd-menu-timcat {
+    position: relative;
+}
+
+.yd-menu-timcat:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+}
+
+.yd-menu-timcat img { max-width: 700px; } .ie6 .yd-menu-timcat { display: none; }
+
+/* Navigation für Kategorien */
+
+ul.yd-menu-nav1 {
+    padding: 10px 0 10px 10px;
+    position: absolute;
+    top: 0;
+    width: 600px;
+    z-index: 3;
+}
+
+
+
+.yd-menu-modern ul.yd-menu-nav1 li {
+    float: left;
+}
+
+.yd-menu-modern ul.yd-menu-nav1 li a {
+    display: block;
+    width: 150px;
+    font-size: 14px;
+    margin: 0 1px 1px 0;
+    padding: 4px 0 4px 20px;
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat -5px -732px;
+    border-radius: 4px;
+}
+
+.yd-menu-modern ul.yd-menu-nav1 li a.parent {
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat -4px -910px;
+}
+
+.yd-menu-modern ul.yd-menu-nav1 li a:hover {
+    font-weight: bold;
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat -5px -792px;
+}
+
+.yd-menu-modern ul.yd-menu-nav1 li a.parent:hover {
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat -4px -970px;
+}
+
+
+.yd-menu-modern ul.yd-menu-nav1 li a.active {
+    font-weight: bold;
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat -5px -850px;
+}
+
+.yd-menu-modern ul.yd-menu-nav1 li a.active.parent {
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat -4px -1028px;
+}
+
+.search-no-meal-in-cat {
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.search-no-meal-in-cat a {
+    display: block;
+    margin: 10px 0 0;
+}
+
+.category-lenght-toggle {
+    position: relative;
+}
+
+
+.category-lenght-toggle-full {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    display: block;
+    width: 150px;
+    font-size: 14px;
+    padding: 4px 0 4px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.5);
+}
+
+
+
+.yd-menu-modern .yd-menu-nav2 ul {
+    padding: 0 0 0 7px;
+}
+
+.yd-menu-modern .yd-menu-nav2 ul li {
+    float: left;
+}
+
+.yd-menu-modern .yd-menu-nav2 ul li a {
+    display: block;
+    padding: 5px 10px 5px 25px;
+    color: #fff;
+    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat 0 -1451px;
+    box-shadow: 1px 0 0 #444, 2px 0 0 #666;
+}
+
+.yd-menu-modern .yd-menu-nav2 ul li a:focus,
+.yd-menu-modern .yd-menu-nav2 ul li a:active {
+    padding: 6px 10px 4px 25px;
+}
+
+.yd-menu-modern .yd-menu-nav2 ul li a.active {
+    padding: 5px 10px 5px 25px;
+}
+
+.yd-flying-meal {
+    width: 250px;
+    position: absolute;
+}
+.yd-flying-meal  li.yd-shopping-options {
+    float: right;
+    height: 16px;
+    padding: 4px 0 0;
+}
+
+.yd-flying-meal  li.yd-shopping-options a {
+    float: left;
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 0 0 0 2px;
+}
+.yd-flying-meal li.yd-shopping-input input{
+    width: 22px;
+    padding: 3px 4px;
+    text-align: center;
+    background: #fff;
+}
+.yd-flying-meal li.yd-shopping-input {
+    float: left;
+    width: 40px;
+    text-align: left;
+}
+.yd-flying-meal li.yd-shopping-extra span em {
+    width: 140px;
+    float: left;
+    text-align: left;
+
+}
+.yd-flying-meal li.yd-shopping-extra span em a{
+    margin-left: 5px;
+}
+.yd-flying-meal li.yd-shopping-extra span {
+    display: block;
+    margin: 0 0 3px 5px;
+    padding: 0 0 0 40px;
+    text-align: right;
+}
+.yd-flying-meal li.yd-shopping-price {
+    margin: 10px 0 10px;
+    padding: 0 0 5px;
+    font-weight: bold;
+    text-align: right;
+    border-bottom: 1px solid #CCC;
+}
+.yd-flying-meal  li.yd-shopping-article {
+    float: left;
+    width: 150px;
+    padding: 2px 0;
+    text-align: left;
+    font-size: 14px;
+    margin-left: 5px;
+}
+

@@ -1,0 +1,21 @@
+{extends file='partner/_base.htm'}
+{block name="content"}
+
+{include file='partner/_includes/nav.htm'}
+
+<div class="be-partner be-partner-orders">
+
+    <h1 class="icon02">{__p('Bestellungen')}</h1>
+
+    <ul class="be-nav small">
+        <li class="icon08 {if $filter == 'today'}active{/if}"><a href="{$this->url(['action'=>'orders','filter'=>'today'],'partnerRoute',true)}"><span>{__p('nur heute')}</span></a></li>
+        <li class="icon08 {if $filter == 'week'}active{/if}"><a href="{$this->url(['action'=>'orders','filter'=>'week'],'partnerRoute',true)}"><span>{__p('diese Woche')}</span></a></li>
+        <li class="icon08 {if $filter == 'month'}active{/if}"><a href="{$this->url(['action'=>'orders','filter'=>'month'],'partnerRoute',true)}"><span>{__p('diesen Monat')}</span></a></li>
+        <li class="icon08 {if $filter == 'all'}active{/if}"><a href="{$this->url(['action'=>'orders','filter'=>'all'],'partnerRoute',true)}"><span>{__p('alle')}</span></a></li>
+    </ul>
+
+    <div id="yd-order-grid">{$grid}</div>
+
+</div>
+
+{/block}

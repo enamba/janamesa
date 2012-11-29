@@ -1,0 +1,267 @@
+{* THIS IS THE PRIVATE ORDERING TEMPLATE FOR A SINGLE CUSTOMER FOR RESTAURANTS *}
+
+{extends file='base.htm'}
+{block name="content"}
+
+{assign var=time value=time()}
+
+{include file="order/_includes/sidebar/howto_box.htm"}
+
+<div id="yd-sidebar">
+
+    {include file="order/_includes/chat/supportchat.htm" city=$location->getCity()->getCity()}
+
+    {include file="order/_includes/sidebar/coupon.htm"}
+
+    {if $domain_base == 'pyszne.pl'}
+    <div id="yd-howitworks-new" class="yd-box">
+        <span>{__('Wie funktioniert das Bestellen?')}</span>
+        <br />
+        {__('Hier klicken für die genaue Erklärung')}
+    </div>
+    {else}
+    <div id="yd-how-to-order" class="yd-box">
+        <span class="yd-how">{__('Wie funktioniert das Bestellen?')}</span>
+        <br/>
+        <span class="yd-how-click">{__('Hier klicken für die genaue Erklärung')}</span>
+    </div>
+    {/if}
+
+    {if $location->getBestServices()->count() > 0}
+    <div class="yd-box yd-only-priv">
+        <div class="yd-box-title">{__('Die besten Lieferservices in %s', $location->getPlz())}</div>
+        {foreach from=$location->getBestServices() item=service name=bestservices}
+        <form class="yd-top-plz" action="/{$service->getDirectLink()}" method="get" id="yd-service-submit-{$service->getId()}-rating">
+            <div class="yd-service-select yd-clearfix" id="yd-service-{$service->getId()}-rating">
+                <span class="yd-top-plz-img">
+                    <span class="yd-top-plz-{$smarty.foreach.bestservices.iteration}"></span>
+                    <img src="{$service->getImg('tiny')}" alt="" />
+                </span>
+
+                <span>
+                    <span class="yd-top-plz-name">{$service->getName()|truncate:18:"..."}</span>
+                    <span class="yd-rated" id="yd-rate-{$service->getId()}-1">
+                        <span class="yd-rated-{($service->getRating()->getAverage()*2)|string_format:'%02d'}"></span>
+                        <span class="yd-rated-average">&oslash; {_n('%s Stern', '%s Sterne', $service->getRating()->getAverage()|string_format:"%.2f", $service->getRating()->getAverage()|string_format:"%.2f")}</span>
+                        <span class="yd-rated-total">{__('Total')} <span>{_n('%s Bewertung', '%s Bewertungen', $service->getRating()->count(null, true, false, true), $service->getRating()->count(null, true, false, true))}</span></span>
+                    </span>
+                </span>
+            </div>
+        </form>
+        {/foreach}
+        <a id="yd-sorting-sidebar" class="yd-top-plz-sort-me" >
+            <span>{__('Sortieren nach ')}</span>
+            <span id="sort-ratingstars-1" class="do-sort revert">{__('höchster Bewertung')}</span>
+        </a>
+    </div>
+    {/if}
+
+    <div class="yd-box hidden" id="yd-my-last-order"></div>
+    
+    {include file="order/_includes/sidebar/payment.htm"}
+
+    {if $config->facebook->like->enabled}
+    <div class="fb-like-box" profile_id={$config->facebook->page_id}" data-width="280" data-height="290" data-show-faces="true" data-stream="true" data-header="true"></div>
+    {/if}
+
+</div>
+
+<div id="yd-ordering" class="yd-service-page">
+
+    <div class="hidden" id="yd-lang-no-meals-found">{__('Bei deiner Suche wurden leider keine Speisen gefunden.')}</div>
+    <div id="yd-sorting" class="yd-box yd-clearfix">
+
+        <div id="yd-sorting-left">
+            {*this should be included from order/_includes/plz.html :: http://ticket/browse/YD-1038*}
+            <div class="hidden" id="yd-lang-plzerror">{__('Diese Postleitzahl exisiert nicht!')}</div>
+            <div class="hidden" id="yd-lang-plz-not-given">{__('Bitte geben Sie eine Postleitzahl ein')}</div>
+            <form id="yd-start-order-form" method="get" action="/order_basis/plz">
+                <input type="hidden" name="cityId" value="" />
+                <input type="text" title="{if ($location->getDepth() == 'region' || $location->getDepth() == 'district')}{__('PLZ')}{else}{$city->getPlz()} {$city->getCity()}{/if}" class="yd-plz-autocomplete yd-plz-autocomplete-autosubmit yd-only-nr yd-empty-text ui-autocomplete-input yd-only-priv" name="plz" value="" />
+                <a id="yd-start-order" class="yd-only-priv" href="#">{__("ändern")}</a>
+            </form>
+        </div>
+
+        <div id="yd-sorting-middle" class="yd-sorting-middle-dropdown-box">
+            {__('Sortiert nach')} <span class="currently-sorted-by">{__('unseren Tipps')}</span>
+            <b class="yd-sorting-middle-dropdown"></b>
+            <div id="yd-sorting-middle-list" class="hidden">
+                <ul>
+                    <li>
+                        {__('Anzeige')}
+                        <ul>
+                            <li class="active do-sort" id="sort-alpha">{__('Alphabetisch')}</li>
+                            <li class="do-sort revert" id="sort-ratingstars">{__('Höchste Bewertung')}</li>
+                            <li class="do-sort revert" id="sort-ratingcount">{__('Meisten Bewertungen')}</li>
+                            <li class="do-sort revert" id="sort-ratingvotes">{__('Meisten Empfehlungen')}</li>
+                            <li class="do-sort" id="sort-mincost">{__('Mindestbestellwert')}</li>
+                            {if $domain_base != 'taxiresto.fr'}
+                            <li class="do-sort" id="sort-premium">{__('Restaurant Lieferservice')}</li>
+                            {/if}
+                            <li class="do-sort" id="sort-delivercost">{__('Niedrigste Lieferkosten')}</li>
+                        </ul>
+                    </li>
+                    <li>
+                        {__('Küchenart')}
+                        <ul>
+                            {foreach from=$ydcategories item=cat name=selectcats}
+                            <li class="do-sort-category" id="sort-{$cat.id}">{$cat.name} ({$cat.restcount})</li>
+                            {/foreach}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="yd-sorting-right">
+            <div id="yd-sorting-right-search">
+                <form id="yd-search-service-form">
+                    <input type="text" id="yd-search-service" title="{__('Pizza, Sushi, ...')}" class="yd-empty-text" name="search" />
+                </form>
+                <a class="yd-search-meals">suche</a>
+            </div>
+            <div id="yd-sorting-right-wait" class="hidden">
+                {__('Suche läuft...')}
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="yd-sorting-type hidden">
+        <span>{__('Was suchst du?')}</span>
+
+        <input type="checkbox" value="rest" id="yd-filter-service-type-rest" class="yd-filter-service-type" />
+        <label for="yd-filter-service-type-rest">{__('Lieferservices')}</label>
+
+        <input type="checkbox" value="cater" id="yd-filter-service-type-cater" class="yd-filter-service-type" />
+        <label for="yd-filter-service-type-cater">{__('Catering')}</label>
+
+        <input type="checkbox" value="great" id="yd-filter-service-type-great" class="yd-filter-service-type" />
+        <label for="yd-filter-service-type-great">{__('Supermarkt')}</label>
+
+        <span id="yd-disallow-company-rest" style="display:none;"><br />{__('Sie haben aktuell kein Budget mit dem sie bei einem Lieferdienst bestellen können')}</span>
+        <span id="yd-disallow-company-cater" style="display:none;"><br />{__('Sie haben aktuell nicht die Rechte, Catering über Ihren Firmenaccount zu bestellen.')}</span>
+        <span id="yd-disallow-company-great" style="display:none;"><br />{__('Sie haben aktuell nicht die Rechte, im Supermarkt über Ihren Firmenaccount zu bestellen.')}</span>
+
+    </div>    
+
+    <div id="yd-filter-found"></div>
+
+    <div id="yd-filter-found-closed"></div>
+
+    <div class="ordering-category-no hidden">
+        {__('Lieferdienste, die zu Ihnen liefern, aber nicht zu der Kategorie gehören')}:
+        <span class=""><a id="yd-reset-service-filter" class="cursor">{__('Filter zurücksetzen')}</a></span>
+    </div>
+
+    <div id="yd-filter-the-rest"></div>
+
+    <div class="hidden" id="yd-lang-minute">{__('%d Minute')}</div>
+    <div class="hidden" id="yd-lang-minutes">{__('%d Minuten')}</div>
+    <div class="hidden" id="yd-lang-hour">{__('%d Stunde')}</div>
+    <div class="hidden" id="yd-lang-hours">{__('%d Stunden')}</div>
+    <div class="hidden" id="yd-lang-open-in">{__('öffnet in %s')}</div>
+    <div class="hidden" id="yd-lang-is-closed">{__('heute geschlossen')}</div>
+
+    <div id="cat-filter">
+
+        <!-- add empty basis service json -->
+        <script type="text/javascript">
+            {if count($cityIds) == 1}
+                ydState.setCity({$city->getId()});
+            {/if}
+            var services = [];
+            var serviceIds = [];
+        </script>
+        
+        {foreach $services as $i => $r}
+            {include file='order/_includes/service/services.htm' r=$r}
+            
+            <!-- add to json for service {$r->getId()} -->
+            {include file='order/_includes/service/json.htm' r=$r}
+
+        {foreachelse}
+            {include file='_cookies/masterpixel/noservice.htm' uadomain=$domain_base}
+        {/foreach}
+
+    </div>
+
+    {if count($offlineServices) > 0}
+    <div>
+        <div class="yd-sv3-closed">
+            <p>{__('Weitere Lieferservices in %s %s, bei denen die Online-Bestellung momentan nicht möglich ist:', {$location->getOrt()->getPlz()}, {$location->getOrt()->getCity()})}</p>
+
+            <div id="yd-filter-offline">
+                {foreach $offlineServices as $i => $r}
+                {include file='order/_includes/service/services.htm' r=$r}
+                {/foreach}
+            </div>
+        </div>
+    </div>
+    {/if}
+
+    {if $domain_base == 'lieferando.de' || $domain_base == 'lieferando.at' || $domain_base == 'lieferando.ch'}
+        {if $services|count > 0}
+            <div class="yd-box yd-suggest">
+                <h1 style="top:30px">{__('Lieblingslieferdienst nicht dabei?')}</h1>
+                <h2 style="top:70px">{__('Hilf uns, unser Angebot in Deiner Lieferumgebung zu erweitern:')}</h2>
+                <a class="yd-button-280" href="/lieferdienst-vorschlagen">{__('Lieferdienst vorschlagen')}</a>
+            </div>
+        {else}
+            <div class="yd-box yd-suggest">
+                <h1 style="top:20px">{__('Leider haben wir keine Lieferdienste in diesem PLZ Gebiet')}</h1>
+                <h2 style="top:75px">{__('Hilf uns, unser Angebot in Deiner Lieferumgebung zu erweitern:')}</h2>
+                <a class="yd-button-280" href="/lieferdienst-vorschlagen">{__('Lieferdienst vorschlagen')}</a>
+            </div>
+        {/if}
+    {/if}
+
+    {if $domain_base == 'taxiresto.fr'}
+        {if $services|count > 0}
+            <div class="yd-box yd-suggest">
+                <h1 style="top:30px;width:370px;">{__('Lieblingslieferdienst nicht dabei?')}</h1>
+                <h2 style="top:70px">{__('Hilf uns, unser Angebot in Deiner Lieferumgebung zu erweitern:')}</h2>
+                <a class="yd-button-280" href="/proposer-service-de-livraison">{__('Lieferdienst vorschlagen')}</a>
+            </div>
+        {else}
+            <div class="yd-box yd-suggest">
+                <h1 style="top:20px;width:370px;">{__('Leider haben wir keine Lieferdienste in diesem PLZ Gebiet')}</h1>
+                <h2 style="top:75px">{__('Hilf uns, unser Angebot in Deiner Lieferumgebung zu erweitern:')}</h2>
+                <a class="yd-button-280" href="/proposer-service-de-livraison">{__('Lieferdienst vorschlagen')}</a>
+            </div>
+        {/if}
+    {/if}
+
+    {if $domain_base == 'pyszne.pl'}
+        {if $services|count > 0}
+            <div class="yd-box yd-suggest">
+                <h1 style="top:30px;width:370px;">{__('Lieblingslieferdienst nicht dabei?')}</h1>
+                <h2 style="top:70px">{__('Hilf uns, unser Angebot in Deiner Lieferumgebung zu erweitern:')}</h2>
+                <a class="yd-button-280" href="/polec-restauracje">{__('Lieferdienst vorschlagen')}</a>
+            </div>
+        {else}
+            <div class="yd-box yd-suggest">
+                <h1 style="top:20px;width:370px;">{__('Leider haben wir keine Lieferdienste in diesem PLZ Gebiet')}</h1>
+                <h2 style="top:75px">{__('Hilf uns, unser Angebot in Deiner Lieferumgebung zu erweitern:')}</h2>
+                <a class="yd-button-280" href="/polec-restauracje">{__('Lieferdienst vorschlagen')}</a>
+            </div>
+        {/if}
+    {/if}
+    {include file='order/_includes/seolinks.htm' region=$location->getRegion() district=$location->getDistrict() areas=$location->getNearAreas(12) plzs=$location->getNearPlzs(71)}
+    {include file='order/_includes/staticmap.htm' plz=$location->getPLz() geo=$location->getGeoCoordinates()}
+    {include file='order/_includes/seotext.htm' text=$location->getSeoText()}
+    {include file='order/_includes/rates.htm' ratings=$location->getRatings(5)}
+    {include file='order/_includes/aggregate_rating.htm' aggregate_rating=$location->getAggregateRating()}
+    {include file='order/_includes/seolinks_regions.htm'}
+    {include file='order/_includes/breadcrumb.htm' depth=$location->getDepth() region=$location->getRegion() district=$location->getDistrict()}
+</div>
+
+{include file='_cookies/masterpixel/orderflow.htm' uadomain=$domain_base step1=0 step2=1 step3=0 step4=0}
+{include file='_cookies/sociomatic/service.htm'}
+{include file='_cookies/adlantic/service.htm'}
+{include file='_cookies/monkeys/service.htm'}
+{include file='_cookies/criteo/service.htm'}
+{if $domain_base == 'lieferando.de'} 
+{include file='_cookies/cadreon/service.htm'}
+{/if}
+{/block}

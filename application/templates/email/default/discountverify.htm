@@ -1,0 +1,71 @@
+<html lang="en">
+    <head>
+
+        <title>{__("%s: Gutschein",$config->domain->base)}</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="yourdelivery GmbH" />
+        <meta name="publisher" content="yourdelivery GmbH" />
+
+    </head>
+    <body marginheight="0" topmargin="0" marginwidth="0" bgcolor="#F0F0F0" offset="0" leftmargin="0">
+
+        <table cellspacing="0" style="margin-top: 20px; font-size: 13px; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444;" bgcolor="#F0F0F0" cellpadding="0" width="98%">
+            <tr>
+                <td>
+
+                    <table rules="none" cellpadding="0" cellspacing="0" bordercolor="#c2c2c2" border="1" frame="border" align="center" style="border-color: #c2c2c2 #c2c2c2 #c2c2c2 #c2c2c2; font-size: 13px; background: #ffffff; border-collapse: collapse; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444; border-spacing: 0px; border-style: solid solid solid solid; border-width: 1px 1px 1px 1px;" bgcolor="#FFFFFF" width="600">
+                        <tr>
+                            <td>
+                                <table width="600" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td><img src="http://www.{$config->domain->base}/media/images/yd-mail/{$config->domain->base}/yd-mail-logoheader.jpg" /></td>
+                                    </tr>
+                                </table>
+                                <table width="560" style="margin: 0 auto;" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td>
+                                            <table width="560" style="font-size:11px;" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td>
+                                                        <br />
+                                                        <p style="font-size: 16px; text-align: center;">
+                                                            {__("Bitte klicke auf den Link um Deine E-Mail-Adresse zu bestätigen:")}
+                                                        </p>
+
+                                                        <p style="font-size: 24px; text-align: center;">
+                                                            <a href="http://www.{$config->domain->base}/{$discountPath}/confirm/code/{$code}">» {__("Jetzt bestätigen")}</a>
+                                                        </p>
+                                                        
+                                                        <p>
+                                                            {__("Wenn Dein Standardbrowser (Firefox, Explorer etc.) für E-Mails bei Outlook/Mozilla von dem zuvor genutzen Browser abweicht, 
+                                                            kopiere den oben stehenden Link und füge diesen in Deinen bereits geöffneten Browser in einen neuen Tab ein. In dem neuen Tab kannst Du dann
+                                                            die Registrierung abschließen. Bei Problemen empfehlen wir Dir, alle Fenster geöffnet zu lassen und den Vorgang zu wiederholen.")}
+                                                        </p>
+                                                        <br />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <table width="560" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td>
+                                                        <a href="http://www.{$config->domain->base}/" style="margin-left: -5px;"><img style="border:0 none;outline:0;cursor:pointer;" src="http://www.{$config->domain->base}/media/images/yd-mail/{$config->domain->base}/yd-mail-iphone-link1.jpg" /></a>
+                                                        <a href="http://www.{$config->domain->base}/" style="margin-left: -5px;"><img style="border:0 none;outline:0;cursor:pointer;" src="http://www.{$config->domain->base}/media/images/yd-mail/{$config->domain->base}/yd-mail-iphone-link2.jpg" /></a>
+                                                        <a href="http://www.{$config->domain->base}/" style="margin-left: -5px;"><img style="border:0 none;outline:0;cursor:pointer;" src="http://www.{$config->domain->base}/media/images/yd-mail/{$config->domain->base}/yd-mail-iphone-link3.jpg" /></a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                {include file="_email_footer.htm"}
+
+                            </td>
+                        </tr>
+                    </table>
+                    </body>
+                    </html>

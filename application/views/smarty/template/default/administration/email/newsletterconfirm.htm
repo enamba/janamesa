@@ -1,0 +1,57 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+    <div class="edit-newsletter">
+
+        <div class="one-column-box">
+
+            <div class="item">
+
+                <div class="item-head">
+                    {__b('Empfängerauswahl')}
+                </div>
+
+                <div class="item-content">
+                    <form action="/administration_email/newsletterconfirm" method="post" name="form" enctype="multipart/form-data">
+                        <input type="hidden" name="confirm" value="{$confirm}" />
+                        
+                            <b>{__b('4. Schritt:')}</b>
+                            <br>
+                            {__b('CSV-Datei hochladen (Felder müssen durch Semikolon ";" getrennt sein)')} <input type="file" name="csv" id="yd-admin-newsletter-recipients-csv" />
+                            <br /><br />
+                            <b>{__b('5. Schritt:')}</b>
+                            <br />
+                            {__b('Die Empfänger werden hochgeladen. Das Bestätigen und Absenden erfolgt im nächsten Schritt.')}
+                            <br /><br />
+                            <input type="submit" class="button" id="yd-admin-newsletter-recipients" value="{__b('weiter zur Bestätigung')}" />
+                            
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="one-column-box">
+
+            <div class="item" style="background:#f1f1f1;">
+
+                <div class="item-head">
+                    {__b('Vorschau')}
+                </div>
+
+                <div class="item-content">
+                    <div class="email-preview" id="yd-admin-newsletterpreview">
+                        {$html}
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{/block}

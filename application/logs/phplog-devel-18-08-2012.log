@@ -1,0 +1,38 @@
+[18-Aug-2012 09:44:54 UTC] PHP Notice:  Array to string conversion in /home/ydadmin/htdocs/lieferando/library/Zend/Session/Exception.php on line 58
+[18-Aug-2012 09:44:54 UTC] PHP Stack trace:
+[18-Aug-2012 09:44:54 UTC] PHP   1. {main}() /home/ydadmin/htdocs/lieferando/public/index.php:0
+[18-Aug-2012 09:44:54 UTC] PHP   2. Zend_Application->bootstrap() /home/ydadmin/htdocs/lieferando/public/index.php:116
+[18-Aug-2012 09:44:54 UTC] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:355
+[18-Aug-2012 09:44:54 UTC] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/BootstrapAbstract.php:582
+[18-Aug-2012 09:44:54 UTC] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/BootstrapAbstract.php:618
+[18-Aug-2012 09:44:54 UTC] PHP   6. Bootstrap->_initView() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/BootstrapAbstract.php:665
+[18-Aug-2012 09:44:54 UTC] PHP   7. Zend_Session_Namespace->__construct() /home/ydadmin/htdocs/lieferando/application/Bootstrap.php:818
+[18-Aug-2012 09:44:54 UTC] PHP   8. Zend_Session::start() /home/ydadmin/htdocs/lieferando/library/Zend/Session/Namespace.php:143
+[18-Aug-2012 09:44:54 UTC] PHP   9. session_start() /home/ydadmin/htdocs/lieferando/library/Zend/Session.php:480
+[18-Aug-2012 09:44:54 UTC] PHP  10. Yourdelivery_Session_Handler->read() /home/ydadmin/htdocs/lieferando/library/Zend/Session.php:480
+[18-Aug-2012 09:44:54 UTC] PHP  11. Zend_Session_SaveHandler_DbTable->read() /home/ydadmin/htdocs/lieferando/library/Yourdelivery/Session/Handler.php:33
+[18-Aug-2012 09:44:54 UTC] PHP  12. Yourdelivery_Session_Handler->destroy() /home/ydadmin/htdocs/lieferando/library/Zend/Session/SaveHandler/DbTable.php:324
+[18-Aug-2012 09:44:54 UTC] PHP  13. Zend_Session_SaveHandler_DbTable->destroy() /home/ydadmin/htdocs/lieferando/library/Yourdelivery/Session/Handler.php:72
+[18-Aug-2012 09:44:54 UTC] PHP  14. Zend_Session_SaveHandler_DbTable->_getPrimary() /home/ydadmin/htdocs/lieferando/library/Zend/Session/SaveHandler/DbTable.php:374
+[18-Aug-2012 09:44:54 UTC] PHP  15. Zend_Session_Exception::handleSessionStartError() /home/ydadmin/htdocs/lieferando/library/Zend/Session/SaveHandler/DbTable.php:536
+[18-Aug-2012 09:44:54 UTC] PHP Notice:  Array to string conversion in /home/ydadmin/htdocs/lieferando/library/Zend/Session/Exception.php on line 71
+[18-Aug-2012 09:44:54 UTC] PHP Stack trace:
+[18-Aug-2012 09:44:54 UTC] PHP   1. {main}() /home/ydadmin/htdocs/lieferando/public/index.php:0
+[18-Aug-2012 09:44:54 UTC] PHP   2. Zend_Application->bootstrap() /home/ydadmin/htdocs/lieferando/public/index.php:116
+[18-Aug-2012 09:44:54 UTC] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:355
+[18-Aug-2012 09:44:54 UTC] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/BootstrapAbstract.php:582
+[18-Aug-2012 09:44:54 UTC] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/BootstrapAbstract.php:618
+[18-Aug-2012 09:44:54 UTC] PHP   6. Bootstrap->_initView() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/BootstrapAbstract.php:665
+[18-Aug-2012 09:44:54 UTC] PHP   7. Zend_Session_Namespace->__construct() /home/ydadmin/htdocs/lieferando/application/Bootstrap.php:818
+[18-Aug-2012 09:44:54 UTC] PHP   8. Zend_Session::start() /home/ydadmin/htdocs/lieferando/library/Zend/Session/Namespace.php:143
+[18-Aug-2012 09:44:54 UTC] PHP   9. session_write_close() /home/ydadmin/htdocs/lieferando/library/Zend/Session.php:490
+[18-Aug-2012 09:44:54 UTC] PHP  10. Yourdelivery_Session_Handler->write() /home/ydadmin/htdocs/lieferando/library/Zend/Session.php:490
+[18-Aug-2012 09:44:54 UTC] PHP  11. Zend_Session_Exception::handleSilentWriteClose() /home/ydadmin/htdocs/lieferando/library/Zend/Session.php:43
+[18-Aug-2012 09:44:54 UTC] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Zend_Session::start() - /home/ydadmin/htdocs/lieferando/library/Zend/Session/SaveHandler/DbTable.php(Line:536): Error #8 Array to string conversion Array
+/home/ydadmin/htdocs/lieferando/library/Yourdelivery/Session/Handler.php(Line:43): Error #8 Array to string conversion Array' in /home/ydadmin/htdocs/lieferando/library/Zend/Session.php:493
+Stack trace:
+#0 /home/ydadmin/htdocs/lieferando/library/Zend/Session/Namespace.php(143): Zend_Session::start(true)
+#1 /home/ydadmin/htdocs/lieferando/application/Bootstrap.php(818): Zend_Session_Namespace->__construct('Default')
+#2 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/BootstrapAbstract.php(665): Bootstrap->_initView()
+#3 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/BootstrapAbstract.php(618): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('view')
+#4 /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/BootstrapAbstract.php(582): Zend_ in /home/ydadmin/htdocs/lieferando/library/Zend/Session.php on line 493

@@ -1,0 +1,51 @@
+<div class="yd-box">
+    <div class="yd-box-title" id="expand-repeat-head">
+        <a href="#" id="expand-repeat-plus" class="yd-plus"></a>
+        <a href="#" id="expand-repeat-minus" class="yd-minus"></a>
+        <img src="{$domain_static}/images/yd-icons/icon-repeat.png" alt="" />
+        <span class="tooltip" title="{__('Hier wird ihre letzte Bestellung angezeigt.')}" id="rec">{__('Wiederholende Bestellungen')}</span>
+    </div>
+    
+        <div id="expand-repeat">
+
+            <div class="yd-box-body">
+
+                <ul>
+                    {foreach from=$cust->getOrders() item=order}
+                        {if $order->hasRepeat()}
+                            {foreach from=$order->getRepeat() item=repeat}
+                                <li style="border-top: 2px solid #ddd;">{$order->getService()->getName()|truncate:22:" ..."}<strong>{$order->getTime()|date_format:__("%d.%m.%y um %H:%m")}</strong></li>
+                                <li>{__('Nächste Lieferung:')}<strong>{$repeat->next()|date_format:__("%d.%m.%y um %H:%M")}</strong></li>
+                                <li>{__('Bestellwert:')}<strong>{__('%s €',$order->getAbsTotal()|inttoprice)}</strong></li>
+                                <li>{__('Lieferadresse:')}<strong>{$order->getLocation()->getStreet()} {$order->getLocation()->getHausnr()}</strong></li>
+                                <li>&nbsp;<strong>{$order->getLocation()->getPlz()} {$order->getLocation()->getOrt()->getOrt()}</strong></li>
+                                <li>
+                                    {if $repeat->getStatus() == 1}
+                                        <a href="#" class="yd-repeat-action" style="display:none;" id="yd-repeat-pause-{$repeat->getId()}">« {__('Pausieren')}</a>
+                                        <a href="#" class="yd-repeat-action" id="yd-repeat-resume-{$repeat->getId()}">« {__('Fortsetzen')} <span style="font-size:10px;">{__('ist im Moment pausiert')}</span></a>
+                                    {else}
+                                        <a href="#" class="yd-repeat-action" id="yd-repeat-pause-{$repeat->getId()}">« {__('Pausieren')}</a>
+                                        <a href="#" class="yd-repeat-action" style="display:none;" id="yd-repeat-resume-{$repeat->getId()}">« {__('Fortsetzen')} <span style="font-size:10px;">{__('ist im Moment pausiert')}</span></a>
+                                    {/if}
+                                </li>
+                                <li><a href="/user/repeat">« {__('Bearbeiten')}</a></li>
+                                <li>
+                                    <a href="#" onClick="window.open('/ordercoupon/{$order->getHash()}', 'Bestellzettel', 'scrollvars=1,width=650,left=50,top=50')">« {__('Bestellzettel ansehen')}</a>
+                                </li>
+                            {/foreach}
+                        {/if}
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+
+       <!-- <div id="expand-repeat">
+            <div class="yd-box-body">
+                <ul>
+                    <li>
+                        Sie haben keine wiederholenden Bestellungen angelegt.
+                    </li>
+                </ul>
+            </div>
+        </div>-->
+ </div>

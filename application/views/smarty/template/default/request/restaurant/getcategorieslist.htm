@@ -1,0 +1,34 @@
+{if isset($restaurant)}
+<tr>
+    {$count = 1}
+    {foreach from=$restaurant->getMealCategoriesSortedAsArray() item=category}
+    <td align="center" width="10%" class="yd-category-link {if isset($selectedCategory) && ($selectedCategory->getId()==$category->getId())}yd-category-link-selected{else}yd-category-link-normal{/if}  {if ($category->getMealsCount())>0}yd-category-link-full{else}yd-category-link-empty{/if}">
+        <a href="#x" class="yd-categorylink-js" id="yd-categorylink-{$category->getId()}">{$category->getName()}<br/>
+            <small>(#{$category->getId()})</small>
+            {if !is_null($category->getParentMealCategory())}<br/><div style="font-size: 10px; color: #144500;">{$category->getParentMealCategory()->getName()}</div>{/if}
+        </a>
+        
+        {if $category->isMain()}<img src="{$domain_static}/images/yd-backend/main_cat.png">{assign var=is_main value=true}{/if}
+        {if $category->hasServiceType(1)}<img src="{$domain_static}/images/yd-backend/rest_cat.png">&nbsp;{assign var=has_rest value=true}{/if}
+        {if $category->hasServiceType(2)}<img src="{$domain_static}/images/yd-backend/cater_cat.png">&nbsp;{assign var=has_cater value=true}{/if}
+        {if $category->hasServiceType(3)}<img src="{$domain_static}/images/yd-backend/great_cat.png">{assign var=has_great value=true}{/if}
+    </td>
+        {if ($count++)%10 == 0}</tr><tr>{/if}
+    {/foreach}
+
+    {while ($count++)%10 > 0}
+      <td></td>
+    {/while}
+</tr>
+<tr>
+    <td colspan="10">
+        <br />
+        {if $is_main}<img src="{$domain_static}/images/yd-backend/main_cat.png"> {{__b('Voreingestellt')}} &nbsp;&nbsp;&nbsp;{/if}
+        {if $has_rest}<img src="{$domain_static}/images/yd-backend/rest_cat.png"> {{__b('Restaurant Kategorie')}} &nbsp;&nbsp;&nbsp;{/if}
+        {if $has_cater}<img src="{$domain_static}/images/yd-backend/cater_cat.png"> {{__b('Caterer Kategorie')}} &nbsp;&nbsp;&nbsp;{/if}
+        {if $has_great}<img src="{$domain_static}/images/yd-backend/great_cat.png"> {{__b('Großhändler Kategorie')}} &nbsp;&nbsp;&nbsp;{/if}
+    </td>
+</tr>
+{/if}
+
+

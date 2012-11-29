@@ -1,0 +1,19 @@
+<div class="descr">{__('Extras (optional):')}</span></div>
+{foreach item=extragroup from=$meal->getExtrasFast()}
+    {foreach item=extra from=$extragroup}
+        <div class="item">
+            <input type="checkbox"
+                   class="addExtra"
+                   name="extras[]"
+                   value="{$extra.id}"
+                   id="meal-extras-{$meal->getId()}-{$extra.id}-{$extra.cost}"
+                   {if in_array($extra.id,$extras)}checked{/if} />
+            <label for="meal-extras-{$meal->getId()}-{$extra.id}-{$extra.cost}">
+                {$extra.name}
+                {if $extra.cost>0}<span class="price">({__('%s €',$extra.cost|inttoprice)})</span>{/if}
+            </label><br />
+        </div>
+    {/foreach}
+{/foreach}
+
+

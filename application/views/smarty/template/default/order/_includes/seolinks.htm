@@ -1,0 +1,20 @@
+<div class="yd-voodoo-list">
+    <h2 class="yd-box-title">{__('Beliebte Liefergebiete in %s', $region->region3)}</h2>
+    {if ($areas && count($areas)>1)}
+    <ul class="yd-clearfix">
+        {foreach from=$areas item=d}
+        <li><a href="{$d->restUrl}" title="{__('Informationen für Lieferservice %s %s finden', $d->district1, $d->district2)}">{$d->city}</a></li>
+        {/foreach}
+    </ul>
+    {/if}
+</div>
+{if ($plzs && count($plzs)>1)}
+<div class="yd-voodoo-cityplz">
+    <ul class="yd-clearfix">
+        {foreach from=$plzs item=plz}
+        <li><a href="{$plz->restUrl}" title="{__('Informationen für Lieferservice %s %s finden', $plz->plz, $plz->city)}">{$plz->plz}</a>,</li>
+        {/foreach}
+        <li>...</li>
+    </ul>
+</div>
+{/if}

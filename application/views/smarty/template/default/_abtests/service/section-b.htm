@@ -1,0 +1,17 @@
+{if !is_object($cust) || (is_object($cust) && !$cust->isLoggedIn())}
+<script>utmx_section("Service")</script>
+    <style type="text/css">
+        .yd-service-v1 {
+            display: block;
+        }
+        .yd-service-v2 {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("div.yd-service-v2").remove();
+        });
+    </script>
+</noscript>
+{/if}

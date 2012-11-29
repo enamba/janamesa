@@ -1,0 +1,58 @@
+{if $config->domain->base == 'lieferando.de'}
+
+<script type="text/javascript">    
+    /*<![CDATA[*/
+    
+    function pcto_dis() {
+        if (document.createElement) {
+            var cto_dis_im = document.createElement('IFRAME');
+            if (cto_dis_im) {
+                cto_dis_im.width = '1px';
+                cto_dis_im.height = '1px';
+                cto_dis_im.style.display = 'none';
+                var cto_dis_im_src = document.location.protocol+'//dis.criteo.com/dis/dis.aspx?p=4296&c=2&cb=' + Math.floor(Math.random() * 99999999999);
+                try {
+                    cto_dis_im_src += '&ref=' + encodeURIComponent(document.referrer);
+                }
+                catch (e) { }
+                cto_dis_im.src = cto_dis_im_src.substring(0, 2000);
+                var cto_dis_doc = document.getElementById('pcto_dis_div');
+                if (cto_dis_doc !== null && cto_dis_doc.appendChild) {
+                    cto_dis_doc.appendChild(cto_dis_im);
+                }
+            }
+        }
+    }
+            
+    
+    function trackCriteo(first, second, third) {
+               
+        
+        log("trackCriteo: " +first + ", " + second +", " + third);
+              
+        var city = '{str_replace(" ", "-", $city->getFullname())}';
+        var plz = "{$city->getPlz()}";        
+        
+        var criteo_container = '<div id="pcto_dis_div" style="display:none"></div>';
+        
+        criteo_container +=  '<div style="display:none"> <img src="'
+                                         + document.location.protocol
+                                         +'\/\/'
+                                         +((document.location.protocol=='http:')?'lieferandode.widget':'sslwidget')
+                                         +'.criteo.com/pjl/display.js?p1='
+                                         + escape('v=2&wi=7716400&pt1=3&i1=' + first + '&i2=' + second + '&i3=' + third )
+                                         +'&p2='
+                                         +escape('v=2&wi=7716400&pt1=4&loc='
+                                         +encodeURI(city)
+                                         +'&nme=' + plz)
+                                         + '&t1=sendEvent&t2=sendEvent&resptype=gif&cb='
+                                         + Math.floor(Math.random() * 99999999999)
+                                         + '" onload="pcto_dis();"/> </div>';
+        
+            
+        $('body').append(criteo_container);
+    }
+
+    /* ]]> */
+</script>
+{/if}

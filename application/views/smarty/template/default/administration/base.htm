@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="de" xml:lang="de" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="de" xml:lang="de" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="de" xml:lang="de" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="de" xml:lang="de" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="de" xml:lang="de">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="yourdelivery GmbH" />
+        <meta name="publisher" content="yourdelivery GmbH" />
+
+        <meta name="robots" content="noindex, nofollow" />
+
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-core.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-admin.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-gridbox.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-zendform.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-jquery.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/jquery/colorpicker/colorpicker.css" />
+
+        <script type="text/javascript" src="/media/javascript/compiled/backend-{$REVISION}.js"></script>
+
+        {if is_object($grid)}
+        <script type='text/javascript' charset='UTF-8'>
+            /* <![CDATA[ */
+            {$grid->getHeaderScript()}
+            /* ]]> */
+        </script>
+        {/if}
+
+        <title>{__b('Administration-Backend')}</title>
+
+        <script>
+            $(document).ready(function() {
+
+                $('.be-quick a, .be-tabs a').wrapInner('<span></span>');
+                $('#menu ul').hide();
+                $('#menu li a').click(function(){
+                                             
+                    if(this.href.substr(-1,1).indexOf("#") === -1) {                                     
+                        return true;
+                    }
+                    
+                    var checkElement = $(this).next();
+                    if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+                        $('#menu li:not(.active) ul:visible').hide();
+                        return false;
+                    }
+                    if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+                        $('#menu li:not(.active) ul:visible').hide();
+                        checkElement.show();
+                        return false;
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+
+        <!--[if IE]>
+        <div class="fuck-off">
+            <div>
+                <h1>Are you kidding me!?</h1>
+                <h2>Internet Explorer is forbidden in our backend!</h2>
+                <h3>Please use Firefox only!</h3>
+            </div>
+        </div>
+        <![endif]-->
+
+        <div class="be-wrapper">
+
+            {if $loggedIn}
+            <div class="be-header">
+
+                <div class="be-profile" style="background: url(/media/images/yd-backend/2012/logo-{$HOSTNAME}.png) no-repeat;"></div>
+
+                <span class="be-user">
+                    {__b('Eingeloggt als:')}
+                    {if !is_null($smarty.session.Administration.admin)}
+                    <strong>{$smarty.session.Administration.admin->getName()}</strong>
+                    | {$smarty.session.Administration.admin->getEmail()}
+                    {else}
+                    {__b('Unbekannt ... strange')}
+                    {/if}
+                </span>
+
+                <a class="be-logout" href="/administration/logout/">{__b('Logout')}</a>
+                
+                <!--
+                <div class="be-quick">
+                    <a class="be-button">Blue Button <i>18</i></a>
+                    <a class="be-button red">Red Button <i>18</i></a>
+                    <a class="be-button green">Green Button <i>18</i></a>
+                    <a class="be-button grey">Grey Button <i>18</i></a>
+                </div>
+                -->
+
+                <div class="be-language">
+                    {foreach $locales as $lc => $nativeLabel}
+                        {if $lc == $currentLocale}
+                            <span>{$nativeLabel}</span>
+                        {else}
+                            <a href="/administration/setlocale/lc/{$lc}" class="yd-change-locale">{$nativeLabel}</a>
+                        {/if}
+                    {foreachelse}
+                        <strong class="forbidden">{__b('Sprachenauswahl in diesem Bereich ist nicht möglich')}</strong>
+                    {/foreach}
+                </div>
+ 
+            </div>
+            {/if}
+
+            {if $loggedIn}
+            <div class="be-content">
+                <div class="be-content-inner">
+                    {/if}
+
+                    {include file='administration/_notifications.htm'}
+
+                    {block name="content"}{/block}
+
+                    {if $loggedIn}
+                </div>
+            </div>
+            {/if}
+
+        </div>
+
+        {if $loggedIn}
+        <div class="be-sidebar">
+            <ul class="be-nav" id="menu">
+                {foreach $menuLinks as $menuParent => $container}
+                <li class="{$container.icon_class} {if strcmp($parentMenu, $menuParent)==0}active{/if}">
+                    <a href="{$container.url}"><span>{$menuParent}</span> {if isset($container.extra)}{$container.extra}{/if}</a>
+                    {if count($container.children)>0}
+                    <ul>
+                        {foreach $container.children as $menuName => $url}
+                        <li {if strcmp($requestUri, $url)==0}class="active"{/if}><a href="{$url}"><span>{$menuName}</span></a></li>
+                        {/foreach}
+                    </ul>
+                    {/if}
+                </li>
+                {/foreach}
+            </ul>
+        </div>
+        {/if}
+
+    </body>
+</html>

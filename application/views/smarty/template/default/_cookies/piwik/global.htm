@@ -1,0 +1,18 @@
+<!-- Piwik -->
+<script type="text/javascript">
+    try{   
+        _paq.push(['trackPageView'{if isset($GATrackPageview)}, '{$GATrackPageview}'{/if}]);
+        var d=document,
+        g=d.createElement('script'),
+        s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript';
+        g.defer=true;
+        g.async=true;
+        g.src=pkBaseURL+'piwik.js';
+        s.parentNode.insertBefore(g,s);
+        log('logging piwik');
+    }
+    catch ( err ){
+        log('error logging with piwik ' + err);
+    }
+</script>

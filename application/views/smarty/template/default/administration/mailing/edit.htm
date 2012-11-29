@@ -1,0 +1,67 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="be-1-column">
+    <div class="be-box">
+        <h2>{__b('Mailingaktion bearbeiten')}   </h2>
+        <div class="be-box-in be-discount-formulars be-discount-create">
+
+            <form action="/administration_mailing/edit/id/{$mailing->getId()}" method="post" enctype="multipart/form-data">
+
+                <ul>
+                    <li class="be-dc1">
+                        {$form->getElement('name')}
+                    </li>
+                    <li class="be-dc2">
+                        {$form->getElement('status')}
+                    </li>
+
+                    <li class="be-dc8">
+                        <label>{__b('Startzeitpunkt:')}</label>
+                        <input style="width: 205px" type="text" name="startTimeD" id="yd-discount-create-start" value="{$mailing->getStart()|strtotime|timestampYMD}" readonly/> *
+                        {include file='administration/timebit.htm' separator=':' mode='startTimeT' value=strtotime($mailing->getStart())|timestampHi}
+                    </li>
+                    <li class="be-dc9">
+                        <label>{__b('Endzeitpunkt:')}</label>
+                        <input style="width: 205px" type="text" name="endTimeD" id="yd-discount-create-end" value="{$mailing->getEnd()|strtotime|timestampYMD}" readonly/> *
+                        {include file='administration/timebit.htm' separator=':' mode='endTimeT' value=strtotime($mailing->getEnd())|timestampHi}
+                    </li>   
+                    <li class="be-dc1">
+                      {$form->getElement('mailingId')}
+                    </li>
+                    <li class="be-dc2">
+                        {$form->getElement('parameters')}
+                    </li>
+                    <li class="be-dc2">
+                        {$form->getElement('customerOrderCount')}
+                    </li>
+                    <li class="be-dc32" id="yd-admin-mailing-citys">
+                        <label>{__b('nur für bestimmte PLZ-Bereiche')}</label>                    
+                        <input id="yd-mailing-add-city"  type="text" value="" />
+
+                        <div class="yd-restaurants-list-container"  >
+                            <div id="yd-mailing-citys"> 
+                                 {foreach from=$mailing->getCitys() item=city}
+                                <strong id="yd-mailing-city-{$city->getId()}">{$city->getPlz()} {$city->getFullname()}<a class="yd-mailing-city-delete">x</a></strong>
+                                <input type="hidden" value="{$city->getId()}" name="cityIds[]">
+                                {/foreach}
+                            </div>
+                            <a id="yd-mailing-citys-delete-all" style="display:none">{__b('alle entfernen')}</a>
+                        </div>                                      
+                    </li>
+                    <li>
+                        {$form->getElement('invertCity')}   
+                    </li>
+                </ul>
+                <hr />
+
+                <input type="submit" value="{__b('Speichern')}" class="button" />
+                &nbsp;&nbsp;&nbsp;
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button cancel" />
+
+            </form>
+
+        </div>
+    </div>
+</div>
+{/block}

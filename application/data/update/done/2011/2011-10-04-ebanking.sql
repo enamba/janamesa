@@ -1,0 +1,7 @@
+CREATE TABLE `ebanking_transactions`(
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `orderId` INT UNSIGNED NOT NULL,
+    `data` TEXT NOT NULL,
+    `created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    INDEX `fkOrderId` (`orderId`)
+) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci

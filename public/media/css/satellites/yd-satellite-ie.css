@@ -1,0 +1,355 @@
+/*
+ * IE
+ **********************************************************/
+
+.ie6 #yd-nonfooter {
+    height: 100%;
+}
+
+.ie6 .yd-clearfix,
+.ie7 .yd-clearfix {
+    height: 1%;
+}
+
+.ie6 .ui-autocomplete { height: 190px; }
+
+.ie6 a {
+    border: 0 !important;
+}
+
+.ie6 input {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.ie9 * {
+    border-radius: 0 !important; /* works not with gradients */
+}
+
+.yd-button-140 span,
+.yd-button-190 span,
+.yd-button-240 span,
+.yd-button-250 span,
+.yd-button-280 span {
+    background: none !important;
+}
+
+/*
+ * Boxdesign
+ **********************************************************/
+
+.ie6 .yd-box,
+.ie7 .yd-box,
+.ie8 .yd-box,
+.ie9 .yd-box,
+.ie6 .yd-infocenter-box,
+.ie7 .yd-infocenter-box,
+.ie8 .yd-infocenter-box,
+.ie9 .yd-infocenter-box {
+    border: 1px solid #ccc !important;
+}
+
+.ie9 .yd-box,
+.ie9 .yd-infocenter-box {
+    border-radius: 4px !important;
+}
+
+.ie6 .yd-box-title,
+.ie7 .yd-box-title {
+    margin: 0 !important;
+}
+
+.ie6 #check-discount,
+.ie7 #check-discount,
+.ie8 #check-discount,
+.ie9 #check-discount {
+    padding: 0 !important;
+    display: inline !important;
+    color: #05a;
+    border: 0 !important;
+}
+
+.ie6 .time-picker { height: 150px; }
+
+.ie6 .yd-bigbox-body { height: 48px; }
+
+.ie6 .yd-adress.active { background: #ffb; }
+
+.ie6 .yd-payment-payp.active .ie-visible {
+    visibility: visible;
+}
+.ie6 .yd-bigbox-payment { height: 115px; }
+
+.ie6 .notification {
+    position: relative;
+}
+
+.ie6 #yd-sidebar .yd-box-body ul li {
+    text-align: left !important;
+}
+
+.ie6 #yd-sidebar .yd-box-body ul li em {
+    float: none !important;
+}
+
+.ie6 #yd-sidebar .yd-box-body ul li.yd-shopping-input {
+    float: none !important;
+}
+
+.ie6 #yd-sidebar .yd-box-body ul li.yd-shopping-article {
+    float: none !important;
+}
+
+.ie6 #yd-sidebar .yd-box-body ul li.yd-shopping-options {
+    float: none !important;
+}
+
+.ie6 #yd-sidebar .yd-box-body ul li.yd-shopping-options a {
+    float: none !important;
+    display: inline-block !important;
+}
+
+.ie6 #yd-sidebar .yd-box-body ul li.yd-shopping-price {
+    margin: 0 0 5px !important;
+}
+
+.ie6  .yd-form-left,
+.ie7  .yd-form-left{
+    width: 190px !important;
+}
+.ie6 .yd-lightbox-content-container .block ,
+.ie7 .yd-lightbox-content-container .block{
+    float: left;
+}
+
+.ie6 #ie6-info{
+    background: url(/media/images/yd-icons/exclamation.png) 20px 10px no-repeat #fcc;
+    padding: 10px;
+    border: 1px solid red;
+    color: #000;
+    font-weight: bold;
+    text-align: center;  
+}
+.ie6 .fr #ie6-info{
+    height: 40px;
+}
+
+
+.ie6 #yd-rate-form #yd-rate-comment,
+.ie7 #yd-rate-form #yd-rate-comment,
+.ie8 #yd-rate-form #yd-rate-comment{
+    font-family: "trebuchet ms", arial, "nimbus sans l", sans-serif;
+}
+
+.ie6 #yd-add-budget,
+.ie7 #yd-add-budget{
+    width: 78px;
+}
+
+.ie6 #menu-nav ul li{
+    float: none;
+}
+
+.ie6 .yd-top-plz{
+    display: none;
+   
+}
+
+.ie6 #yd-sidebar .yd-only-priv{
+    display: none;
+}
+
+
+
+.ie6 .tr,
+.ie7 .tr {
+    clear: left;
+}
+
+.ie6 .td,
+.ie6 .th,
+.ie7 .td,
+.ie7 .th {
+    float: left;
+}
+
+.ie6 .tr:after,
+.ie6 .thead:after,
+.ie7 .tr:after,
+.ie7 .thead:after {
+    content: ".";
+    display: block;
+    clear: both;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.ie6 .tr,
+.ie7 .tr {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.ie6 .yd-profile .tr {
+    height: 40px;
+}
+
+.ie7 .yd-profile .tr {
+    min-height: 40px;
+}
+
+.ie6 .yd-menu-modern .tr {
+    height: 80px;
+}
+
+.ie7 .yd-menu-modern .tr {
+    min-height: 80px;
+}
+
+.ie6 .td,
+.ie6 .th,
+.ie7 .td,
+.ie7 .th {
+    border: 0;
+}
+
+.ie6 .td div,
+.ie6 .td em,
+.ie6 .td strong,
+.ie7 .td div,
+.ie7 .td em,
+.ie7 .td strong {
+    display: none;
+}
+
+.ie6 .yd-profile .td,
+.ie6 .yd-profile .th,
+.ie7 .yd-profile .td,
+.ie7 .yd-profile .th {
+    width: 100px;
+}
+
+.ie6 .yd-profile .yd-awesome-rating .td,
+.ie6 .yd-profile .yd-awesome-rating .th,
+.ie7 .yd-profile .yd-awesome-rating .td,
+.ie7 .yd-profile .yd-awesome-rating .th {
+    width: 200px;
+
+}
+.ie6 a.yd-profile-blue-button,
+.ie7 a.yd-profile-blue-button {
+    display: block;
+    width: 150px;
+}
+
+.ie6 .yd-menu-modern .td,
+.ie6 .yd-menu-modern .th,
+.ie7 .yd-menu-modern .td,
+.ie7 .yd-menu-modern .th {
+    width: 50px;
+}
+
+.ie6 .yd-menu-modern .td.first,
+.ie6 .yd-menu-modern .th.first,
+.ie7 .yd-menu-modern .td.first,
+.ie7 .yd-menu-modern .th.first {
+    width: 350px;
+    text-align: left;
+}
+
+.ie6 ul.yd-menu-tabs li,
+.ie6 ul.yd-menu-tabs li a {
+    width: 100px;
+}
+
+.ie6 .yd-menu-modern ul.yd-menu-nav1 li a {
+    color: #333 !important;
+}
+
+
+/*
+* 1. Remove default vertical scrollbar in IE6/7/8/9
+* 2. Allow only vertical resizing
+*/
+
+.ie6 textarea,
+.ie7 textarea,
+.ie8 textarea,
+.ie9 textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+.ie6 .yd-dialogs,
+.ie7 .yd-dialogs,
+.ie8 .yd-dialogs {
+    border: 3px solid #ccc;
+}
+
+.ie6 .yd-dialogs-price .yd-button-190,
+.ie7 .yd-dialogs-price .yd-button-190 {
+    margin: 0 0 0 200px;
+}
+
+.ie6 .yd-successarea-right-chat,
+.ie6 .yd-awesome-rating .default,
+.ie6 .paper-head,
+.ie6 .paper-left,
+.ie6 .paper-foot,
+.ie6 .yd-rating-tesa,
+.ie6 #menu-nav,
+.ie6 #yd-sorting,
+.ie7 #yd-sorting,
+.ie8 #yd-sorting,
+.ie6 #yd-sorting-sidebar,
+.ie7 #yd-sorting-sidebar,
+.ie8 #yd-sorting-sidebar,
+.ie6 .yd-menu-modern-footer,
+.ie7 .yd-menu-modern-footer,
+.ie6 ul.yd-menu-tabs li.tab1.active a span,
+.ie6 .yd-box-premium .whatisapremium em,
+.ie7 .yd-box-premium .whatisapremium em,
+.ie6 .yd-dialogs-price strong,
+.ie7 .yd-dialogs-price strong,
+.ie6 .yd-profile-body h1 span,
+.ie7 .yd-profile-body h1 span,
+.ie8 .yd-profile-body h1 span,
+.ie9 .yd-profile-body h1 span {
+    display: none !important;
+}
+
+.ie6 .yd-profile-body,
+.ie7 .yd-profile-body,
+.ie8 .yd-profile-body,
+.ie9 .yd-profile-body {
+    width: 791px;
+}
+
+.ie6 .yd-form-info-left,
+.ie7 .yd-form-info-left,
+.ie8 .yd-form-info-left {
+    position: static;
+    display: block !important;
+    width: 234px;
+    min-height: 30px !important;
+    margin: 10px 0 0;
+    border: 1px solid red;
+    background: #fff;
+}
+.ie6 .yd-form-info-left:before,
+.ie6 .yd-form-info-left:after,
+.ie7 .yd-form-info-left:before,
+.ie7 .yd-form-info-left:after,
+.ie8 .yd-form-info-left:before,
+.ie8 .yd-form-info-left:after {
+    display: none;
+}
+
+.hidden{
+    display: none;
+}
+.invisible{
+    display: none;
+}

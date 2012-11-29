@@ -1,0 +1,250 @@
+<!--[if lt IE 7 ]> <html lang="pt" xml:lang="pt" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="pt" xml:lang="pt" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="pt" xml:lang="pt" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="pt" xml:lang="pt" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="pt" xml:lang="pt">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>{__('Bestellzettel')}</title>
+        <link rel="stylesheet" type="text/css" href="/media/css/www.{$config->domain->base}/yd-frontend-core.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/www.{$config->domain->base}/yd-frontend-orderslip.css" />
+        <script type="text/javascript" src="/media/javascript/compiled/frontend-{$REVISION}.js"></script>
+    </head>
+    <body class="de">
+
+        <div class="yd-slip">
+
+            <div id="wrapper-header" class="blue">
+                <div class="header-bg">
+                    <div class="yd-header">
+                        <div class="yd-inner">
+                            <span>{__('Bestellzettel')}</span>
+                            <a class="yd-sliplink1" href="#" onclick="javascript:window.print()">{__('Drucken')}</a>
+                            {if $config->domain->base != 'janamesa.com.br' && !$isServiceView}
+                            <a class="yd-sliplink3" href="/user/billrequest/hash/{$order->getHashtag()}" >{__('verifizierte Rechnung beantragen')}</a>
+                            {/if}
+                            <a class="yd-sliplink4" href="#" onclick="window.close()">{__('Fenster schließen')}</a>
+                        </div>
+                    </div>
+                </div>        
+                <div class="bottom-bg"></div>
+            </div>
+
+            <div class="yd-slip-content">
+
+
+
+                <div class="yd-box br-box">
+                    <div class="yd-box-title">
+                        {__('Lieferadresse')}
+                    </div>
+                    <div class="yd-box-body">
+                        <ul>
+                            <li>{$order->getCustomer()->getFullname()}</li>
+                            <li>{$order->getLocation()->getStreet()} {$order->getLocation()->getHausnr()}</li>
+                            {if strlen($order->getLocation()->getCompanyName())>0}
+                            <li>{__('Firma:')} {$order->getLocation()->getCompanyName()}</li>
+                            {/if}
+                            {if $order->getLocation()->getEtage()}
+                            <li>{__('Etage:')} {$order->getLocation()->getEtage()}</li>
+                            {/if}
+                            <li>{$order->getLocation()->getPlz()} {$order->getLocation()->getOrt()->getOrt()}</li>
+                            <li>{__('Tel:')} {$order->getLocation()->getTel()}</li>
+                            <li>{__('Bestellzeitpunkt:')} {$order->getTime()|date_format:__("%d.%m.%y um %H:%M")}</li>
+                            <li>{__('Lieferzeitpunkt:')} {$order->getDelivertimeFormated()|date_format:__("%d.%m.%y um %H:%M")}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="yd-box br-box">
+                    <div class="yd-box-title">
+                        {__('Lieferservice')}
+                    </div>
+                    <div class="yd-box-body">
+                        <ul>
+                            <li>{$order->getService()->getName()} </li>
+                            <li>{$order->getService()->getStreet()} {$order->getService()->getHausnr()}</li>
+                            <li>{$order->getService()->getPlz()} {$order->getService()->getOrt()->getOrt()}</li>
+                            <li>{__('Tel:')} {$order->getService()->getTel()}</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                {if $order->getLocation()->getComment()}
+                <div class="yd-slip-content-center yd-box br-box">
+                    <div class="yd-box-title">
+                        {__('Lieferhinweis:')}
+                    </div>
+                    <div class="yd-box-body">
+                        {$order->getLocation()->getComment()}
+                    </div>
+                </div>
+                {/if}
+
+
+
+                    {if $order->getKind() == "comp" && $order->getMode() == "rest"}
+                    <div class="yd-box br-box">
+                        <div class="yd-box-title">
+                            {__('Budget-Sharing')}
+                        </div>
+                        <div class="yd-box-body">
+                            <table>
+                                <tr>
+                                    <td><b>{__('Teilnehmer')}</b></td>
+                                    <td class="right"><b>Budgetanteil</b></td>
+                                </tr>
+
+                                {foreach item=c from=$order->getCompanyGroupMembers()}
+                                {assign var=customer value=$c.0}
+                                {assign var=amount value=$c.1}
+                                <tr>
+                                    <td>{$customer->getFullname()}</td>
+                                    <td class="right">{__('%s €',$amount|inttoprice)}</td>
+                                </tr>
+                                {/foreach}
+                            </table>
+                        </div>
+                    </div>
+                    {/if}
+
+                    <div class="yd-box br-box">
+                        <div class="yd-box-title">
+                            {__('Bezahlungs-Informationen')}
+                        </div>
+                        <div class="yd-box-body">
+                            {if !$isServiceView}
+                            <ul>
+                                <li>{__('Bezahlart:')}
+                                    <b>
+                                        {if $order->getPayment() == "bill"}{__('Rechnung')}{/if}
+                                        {if $order->getPayment() == "credit"}{__('Kreditkarte')}{/if}
+                                        {if $order->getPayment() == "bar"}{__('Barzahlung')}{/if}
+                                        {if $order->getPayment() == "paypal"}{__('PayPal')}{/if}
+                                    </b>
+                                </li>
+                                {if $order->getProject()->count() > 0}
+                                {foreach from=$order->getProject() item=project}
+                                <li>{__('Projektcode:')} <b>{$project->getNumber()} {$project->getAddition()}</b></li>
+                                {/foreach}
+                                {/if}
+                                {if $order->getCostcenter()->count() > 0}
+                                {foreach from=$order->getCostcenter() item=project}
+                                <li>{__('Kostenstelle:')} <b>{$project->getName()} {$project->getIdentNr()}</b></li>
+                                {/foreach}
+                                {/if}
+                                {if $order->getDiscount()}
+                                <li>{__('Rabatt')} ({$order->getDiscount()->getCode()}):
+                                    {if $order->getDiscount()->getKind() == 0}
+                                    {$order->getDiscount()->getParent()->getRabatt()}&nbsp;%
+                                    {/if}
+                                    <b>{__('%s €',$order->getDiscountAmount()|inttoprice)}</b>
+                                </li>
+                                {/if}
+                            </ul>
+                            {else}
+                            <ul>
+                                <li>{__('Bezahlart:')}
+                                    <b>{if $order->getPayment() == 'bar'} {__('Barzahlung')} {else} {__('Onlinezahlung')} {/if}</b>
+                                </li>
+                            </ul>
+                            {/if}
+                        </div>
+                    </div>
+
+
+
+                <div class="yd-slip-content-center yd-box br-box">
+                    <div class="yd-box-title">
+                        {__('Einkaufswagen')} ( {__('Bestellnummer')} {$order->getNr()} )
+                    </div>
+                    <div class="yd-box-body">
+                        <table>
+                            <tr>
+                                <td width="10%">{__('Menge')}</td>
+                                <td width="53%" class="left">{__('Ware')}</td>
+                                <td width="7%" class="left">{__('Nr.')}</td>
+                                <td width="15%" class="left">{__('Einzelpreis')}</td>
+                                <td width="15%">{__('Gesamtpreis')}</td>
+                            </tr>
+                            {foreach from=$order->getCard() item=customerBucket}
+                            {foreach from=$customerBucket item=bucket}
+                            {foreach from=$bucket item=elem}
+                            {assign var=meal value=$elem.meal}
+                            {assign var=mamount value=$meal->getCost()}
+                            <tr>
+                                <td>{$elem.count}</td>
+                                <td class="left">
+                                    {$meal->getName()} <br />{$meal->getDescription()}
+                                    <small>
+                                        {if $meal->getCurrentExtrasCount() > 0}
+                                        {foreach item=x from=$meal->getCurrentExtras()}
+                                        + {$x->getName()}<br />
+                                        {/foreach}
+                                        {/if}
+                                        {if $meal->getCurrentOptionsCount() > 0}
+                                        {foreach item=x from=$meal->getCurrentOptions()}
+                                        + {$x->getName()}<br />
+                                        {/foreach}
+                                        {/if}
+                                        {if $meal->getSpecial()}
+                                        {$meal->getSpecial()}
+                                        {/if}
+                                    </small>
+                                </td>
+                                <td class="left">{$meal->getNr()}</td>
+                                <td class="left">
+                                    {__('%s €',$mamount|inttoprice)}<br /><br />
+                                    <small>
+                                        {if $meal->getCurrentExtrasCount() > 0}
+                                        {foreach item=x from=$meal->getCurrentExtras()}
+                                        {assign var=mamount value=$mamount+$x->getCost()}
+                                        {__('%s €',$x->getCost()|inttoprice)}<br />
+                                        {/foreach}
+                                        {/if}
+                                        {if $meal->getCurrentOptionsCount() > 0}
+                                        {foreach item=x from=$meal->getCurrentOptions()}
+                                        {assign var=mamount value=$mamount+$x->getCost()}
+                                        {if $x->getCost() > 0}
+                                        {$x->getCost()|inttoprice}
+                                        {/if}
+                                        <br />
+                                        {/foreach}
+                                        {/if}
+                                      </small>
+                                </td>
+                                <td>{__('%s €',($mamount*$elem.count)|inttoprice)}</td>
+                            </tr>
+                            {/foreach}
+                            {/foreach}
+                            {/foreach}
+                            <tr><td colspan="5" class="no"></td></tr>
+                            <tr><td class="no"></td><td class="no"></td><td class="no"></td><td class="left">{__('Netto:')}</td><td><strong>{__('%s €',$order->getItem()|inttoprice)}</strong></td></tr>
+
+                            {if $config->domain->base != 'janamesa.com.br'}
+                            {foreach from=$taxes item=tax}
+                            {if $order->getTax($tax)>0}
+                            <tr><td class="no"></td><td class="no"></td><td class="no"></td><td class="left">{__('MwSt %s%%:', $tax)}</td><td><strong>{__('%s €',$order->getTax($tax)|inttoprice)}</strong></td></tr>
+                            {/if}
+                            {/foreach}
+                            {/if}
+
+                            {if $order->getDiscount()}
+                            <tr><td class="no"></td><td class="no"></td><td class="no"></td><td class="left">{__('Rabatt:')}</td><td><strong>{__('%s €',$order->getDiscountAmount()|inttoprice)}</strong></td></tr>
+                            {/if}
+
+                            {if $order->getDeliverCost() > 0}
+                            <tr><td class="no"></td><td class="no"></td><td class="no"></td><td class="left">{__('Lieferkosten:')}</td><td><strong>{__('%s €',$order->getDeliverCost()|inttoprice)}</strong></td></tr>
+                            {/if}
+
+                            <tr><td class="no"></td><td class="no"></td><td class="no"></td><td class="left green">{__('Gesamtpreis:')}</td><td class="green">{__('%s €',$order->getAbsTotal(false,true,true,true,false,false,true)|inttoprice)}</td></tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>  
+    </body>
+</html>

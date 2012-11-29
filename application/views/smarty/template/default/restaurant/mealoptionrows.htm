@@ -1,0 +1,82 @@
+{extends file="restaurant/base.htm"}
+{block name="content"}
+<div class="two-column-box">
+    <div class="item">
+        <div class="item-head">
+            {{__b('Optionsgruppe hinzufügen')}}
+        </div>
+        <div class="item-content">
+            
+            {$formOptionRow}
+            
+        </div>
+    </div>
+
+
+    <div class="item">
+        <div class="item-head">
+            {{__b('Optionsgruppe klonen')}}
+        </div>
+
+        <div class="item-content">
+            <form action="/restaurant_options/clonegroup" method="post" name="form">
+                <table class="user-tab">
+                    <tr>
+                        <td width="20%">{{__b('Optionsgruppe:')}}</td>
+                        <td width="80%">
+                            <select name="optRow">
+                                {foreach from=$restaurant->getMealOptionsRows() item=row}
+                                <option value="{$row->getId()}" {if isset($smarty.post.groupId) && $smarty.post.groupId == $row->getId()}selected{/if}>{$row->getName()} (#{$row->getId()}) {if $row->getInternalName()}({$row->getInternalName()}){/if} {if ($row->getCategoryId()>0) && (!is_null($row->getCategory()))}({$row->getCategory()->getName()}){/if}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{{__b('Nach Kategorie:')}}</td>
+                        <td>
+                            <select name="categoryId">
+                                <option value="-1"></option>
+                                {foreach from=$restaurant->getMealCategoriesSorted() key=catId item=name}
+                                <option value="{$catId}">{$name} (#{$catId})</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="{{__b('Klonen')}}"/>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+<form action="/restaurant_options/deleteselectedgroups" method="post">
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {{__b('Optionsgruppen')}}
+        </div>
+        <div class="item-content">
+            <div id="yd-check-all-link"><input class="yd-check-all-checkboxes" id="yd-check-all-checkboxes" type="checkbox" value="1"/><label for="yd-check-all-checkboxes"> {{__b('alle auswählen')}} </label></div><br/>
+            {$grid}
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+                <table width="100%" class="user-tab">
+                <tr>
+                    <td><input type="submit" name="deleteSelected" style="width: 220px;" value="{{__b('Markierte Gruppen löschen')}}" onclick="javascript:return confirm('{{__b('Sollen die markierten Gruppen wirklich gelöscht werden?')}}')"/></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</form>
+{/block}

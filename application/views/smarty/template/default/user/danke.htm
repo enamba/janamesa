@@ -1,0 +1,27 @@
+
+{extends file='base.htm'}
+
+{block name="content"}
+
+<div class="yd-thx-4-rating">
+
+    <h2>{__('Vielen Dank für Deine Bewertung!')}</h2>
+
+    <p>{__('Deine Bewertung ist nicht sofort sichtbar, da sie von unserem Support auf Inhalt und Sachlichkeit geprüft wird. Bitte habe einen Augenblick Geduld.')}</p>
+    {if $customer->isLoggedIn()}                                                
+    <p>
+        <a href="/user/ratings">{__('Zurück zur Bewertungsübersicht')}</a>
+        {if $unrated}
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="/rate/{Default_Helpers_Crypt::hash($unrated.order_id)}">{__('Weitere Bewertung abgeben!')}</a>
+        {/if}
+    </p>                    
+    {/if}
+</div>
+
+<script type="text/javascript">
+    <!--
+    setTimeout(function(){ window.location='/' }, 5000)
+    -->
+</script>
+
+{/block}

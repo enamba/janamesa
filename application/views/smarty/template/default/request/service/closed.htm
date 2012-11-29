@@ -1,0 +1,41 @@
+<div class="yd-dialogs"><a class="yd-dialogs-close"></a>
+
+    <div class="yd-dialogs-head">
+        <h2>{__('Vorbestellen')}</h2>
+    </div>
+
+    <div class="yd-lightbox-content-container">
+
+        {if is_object($service)}
+        <div id="closed">
+            {if $mode == "rest"}
+            <p class="not-open">
+                {$service->getName()} {__('hat im Moment nicht geöffnet.')}
+            </p>
+            <p>
+                {__('Die heutigen Öffnungszeiten sind:')} {$this->formatOpenings($service->getOpening()->getIntervalOfDay(time()))}<br />
+                {__('Den Lieferzeitpunkt kannst Du im letzten Bestellschritt verändern!')}<br />
+                {if $service->isOnlyPickup()}
+                {__('%s liefert nicht. Du musst die Gerichte nach der Bestellung selbst abholen.', $service->getName())}
+                {/if}
+            </p>
+            {else}
+            <p class="not-open">
+                {__('%s benötigt <b>%s</b> Vorlaufzeit.',$service->getName(), $service->getDeliverTimeFormated())}
+            </p>
+            <p>
+                {__('Bitte wähle einen Lieferzeitpunkt, der dieser Vorlaufzeit entspricht.')}<br />
+                {__('Eine Anpassung ist im letzten Bestellschritt möglich.')}
+            </p>
+            {/if}
+
+        </div>
+        {else}
+        <div id="vorbestellen">
+            <p>{__('Fehler beim Laden des Lieferservices.')}</p>
+        </div>
+        {/if}
+
+    </div>
+
+</div>

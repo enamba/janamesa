@@ -1,0 +1,51 @@
+<html lang="en">
+    <head>
+
+        <title>{__('%s: E-Mail bestätigen', $config->domain->base)}</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="yourdelivery GmbH" />
+        <meta name="publisher" content="yourdelivery GmbH" />
+
+    </head>
+    <body marginheight="0" topmargin="0" marginwidth="0" bgcolor="#F0F0F0" offset="0" leftmargin="0">
+
+        <table cellspacing="0" style="margin-top: 20px; font-size: 13px; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444;" bgcolor="#F0F0F0" cellpadding="0" width="98%">
+            <tr>
+                <td>
+
+                    <table rules="none" cellpadding="0" cellspacing="0" bordercolor="#c2c2c2" border="1" frame="border" align="center" style="border-color: #c2c2c2 #c2c2c2 #c2c2c2 #c2c2c2; font-size: 13px; background: #ffffff; border-collapse: collapse; line-height: 21px; font-family: 'Lucida Grande', Arial, sans-serif; color: #444444; border-spacing: 0px; border-style: solid solid solid solid; border-width: 1px 1px 1px 1px;" bgcolor="#FFFFFF" width="600">
+                        <tr>
+                            <td>
+                                <table width="600" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td><img src="http://www.{$config->domain->base}/media/images/yd-mail/{$config->domain->base}/yd-mail-logoheader.jpg" /></td>
+                                    </tr>
+                                </table>
+                                <table width="560" style="margin: 0 auto;" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td style="background:#f2fefd;">
+
+                                            <p style="padding: 20px; font-size: 12px;">
+                                                {__('Hallo %s', $cust->getPrename())},
+                                                <br /><br />
+                                                {__('um Deine Anmeldung zu bestätigen, klicke auf den folgenden Link
+                                                oder kopiere ihn in Deine Browserzeile:')}
+                                                <br /><br />
+                                                <a href="http://www.{$config->domain->base}/user/confirmemail/hash/{$hash}">{__('Newsletter Bestätigungslink')}</a>
+                                                <br /><br />
+                                                {__('Du wirst dann mit den Daten<br /> E-Mail: %s<br /> Vorname : %s<br /> Nachname: %s<br /><br />für den %s-Newsletter angemeldet.', $cust->getEmail(), $cust->getPrename(), $cust->getName(), $config->domain->base)}
+                                                <br /><br />
+                                                {__('Viel Vergnügen beim Lesen unserer Newsletter wünscht Dir<br /> Dein %s-Team', $config->domain->base)}
+                                            </p>
+
+                                        </td>
+                                    </tr>                                    
+                                </table>
+
+                                {include file="_email_footer.htm"}
+
+                            </td>
+                        </tr>
+                    </table>
+                    </body>
+                    </html>

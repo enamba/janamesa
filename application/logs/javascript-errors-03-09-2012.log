@@ -1,0 +1,21 @@
+TIME: 03-09-2012 15:49:41 
+ MESSAGE: TypeError: form["options_"   groupId   "_"   optionId   "_"   ydSizeName   "_cost"] is undefined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-296a86beed286a4f6ab63f9243937c31d3b9e55e.js 
+ LINE: 19402 
+ PARENTURL: http://www.yourdelivery.local/servico-de-entrega-funny-pizzas-sao-paulo 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0 
+
+TIME: 03-09-2012 15:50:35 
+ MESSAGE: ReferenceError: groupId is not defined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-296a86beed286a4f6ab63f9243937c31d3b9e55e.js 
+ LINE: 19399 
+ PARENTURL: http://www.yourdelivery.local/servico-de-entrega-funny-pizzas-sao-paulo 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0 
+
+TIME: 03-09-2012 15:51:16 
+ MESSAGE: TypeError: form["options_"   groupId   "_"   optionId   "_"   ydSizeName   "_cost"] is undefined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-296a86beed286a4f6ab63f9243937c31d3b9e55e.js 
+ LINE: 19403 
+ PARENTURL: http://www.yourdelivery.local/servico-de-entrega-funny-pizzas-sao-paulo 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0 
+

@@ -1,0 +1,35 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+<form action="/administration_service_category/edit/" method="post">
+    <input type="hidden" name="id" value="{$category->getId()}"/>
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Kategorie')} #({$category->getId()})
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="20%">{__b('Name')}:</td>
+                            <td width="80%"><input type="text" name="name" value="{$category->getName()}" style="width: 250px;"/> *</td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Beschreibung')}:</td>
+                            <td><textarea name="description" style="width: 250px;">{$category->getDescription()}</textarea></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-content">
+                <input type="submit" value="{__b('Bestätigen')}" class="button rund_set" id="yd-create-contact-button"/>
+                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+            </div>
+        </div>
+    </div>
+
+</form>
+{/block}

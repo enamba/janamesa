@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="pt" xml:lang="pt" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="pt" xml:lang="pt" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="pt" xml:lang="pt" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="pt" xml:lang="pt" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="pt" xml:lang="pt">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="viewport" content="width=1100">
+        <link rel="SHORTCUT ICON" href="/media/css/www.janamesa.com.br/favicon.ico" type="image/x-icon" />
+
+        <title>Newsletter - lieferando.de</title>
+
+        <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-core.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-infocenter.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-hidden.css" />
+
+        <script type="text/javascript" src="/media/javascript/compiled/frontend-infocenter.js"></script>	
+    </head>
+    <body class="br">
+
+        <!--#include virtual="_br_header.html" -->
+
+        <div id="yd-content" class="yd-clearfix">
+
+            <div id="yd-ordering" class="fright">
+
+                <h3 class="underlined">Ou escreva pra gente</h3>
+
+                <!-- Contact form -->
+                <div id="form-contact">
+                    <form action="#sendcontact">
+                        <dl class="line">
+                            <dt>Assunto</dt>
+                            <dd>
+                                <select name="">
+                                    <option>Duvida ou pergunta sobre o Jánamesa</option>
+                                </select>
+                            </dd>
+                        </dl>
+
+                        <dl class="line">
+                            <dt>Nome *</dt>
+                            <dd><input name="name" type="text" class="inputs" /></dd>
+                        </dl> 
+
+                        <dl class="line">
+                            <dt>E-mail *</dt>
+                            <dd><input name="email" type="text" class="inputs" /></dd>
+                        </dl> 
+
+                        <dl class="line">
+                            <dt>Telefone</dt>
+                            <dd><input name="tel" type="text" class="inputs" /></dd>
+                        </dl> 
+
+                        <!--
+                        <dl class="line">
+                        <dt>Empresa</dt>
+                        <dd><input name="" type="text" class="inputs" /></dd>
+                        </dl> 
+                        
+                        <dl class="line">
+                        <dt>Localização</dt>
+                        <dd><input name="" type="text" class="inputs" /></dd>
+                        </dl>
+                        -->
+
+                        <dl class="line">
+                            <dt>Mensagem</dt>
+                            <dd>
+                                <textarea name="message" cols="0" rows="0"></textarea>
+                                <span class="note">* campos obrigatórios</span>
+                            </dd>
+                        </dl>    
+
+                        <dl class="line">
+                            <dt>&nbsp;</dt>
+                            <dd><a href="#" class="btn-send fleft" id="infocenter-contact-submit">ENVIAR</a></dd>
+                        </dl>                                                                                                                                          
+                    </form>
+                </div>
+                <!-- /Contact form -->
+
+            </div>
+
+            <div id="yd-sidebar" class="fleft">
+
+                <h1>Alguma dúvida?</h1>
+                <br />
+
+                <!-- Call us Box -->
+                <div class="yd-box br-box call-us">
+                    <strong>(11)4063-1731</strong>
+                </div>              
+                <!-- /Call us Box -->                  
+
+            </div>		
+
+        </div>
+        </div>
+
+        <!--#include virtual="_br_footer.html" -->

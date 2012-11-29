@@ -1,0 +1,27 @@
+<div class="yd-dialogs"><a href="/" class="yd-dialogs-close"></a>
+
+    <div class="yd-dialogs-body yd-dialogs-discount">
+
+        <h2>{__('Bestätigung erfolgreich.')}</h2>
+
+        <span>{__('Dein Gutscheincode:')} <strong>{$code}</strong></span>
+        
+        <span>{__('Der Gutscheincode wurde Dir auch zugeschickt.')}</span>
+        
+        <span>
+            <a class="yd-discount-reset" id="send-code">{__('Code noch einmal schicken lassen')}</a>
+            <small><i id="timeout-code">120</i> {__('Sekunden Wartezeit')}</small>          
+        </span>
+
+        <br /><br />
+
+        <span>
+            <a href="/order_private/start" class="yd-discount-button">{__('Jetzt bestellen')}</a>
+            <a href="/user/index" class="yd-discount-button">{__('Profil bearbeiten')}</a>
+        </span>
+
+        <br /><br />
+
+    </div>
+
+</div>

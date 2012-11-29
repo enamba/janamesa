@@ -1,0 +1,36 @@
+<div class="yd-dialogs"><a class="yd-dialogs-close"></a>
+
+    <div class="yd-dialogs-head">
+        <h2>{__('Favorit hinzufügen')}</h2>
+    </div>
+
+    <div class="yd-lightbox-content-container">
+
+        <form method="post" id="dialog form" action="/request_user/addfavourite" class="yd-validation">
+
+            <p>
+                {__('Gib die Bezeichnung für Deine favorisierte Bestellung ein.
+                <br />
+                Du kannst diese Bestellung dann in wenigen Schritten wieder aufrufen.')}
+            </p>
+
+
+            <div id="yd-fav-div">
+                <label for="name">
+                    <span class="lb-left">
+                        <span class="red">*</span> {__('Name des Favoriten:')}
+                    </span>
+                </label>
+                <input type="text" name="favname" value="" class="rund rund_set" />
+            </div>
+
+            <div class="yd-lightbox-buttons">
+                <input type="submit" value="{__('Hinzufügen')}" class="button" />
+                <input type="button" value="{__('Schließen')}" class="button yd-close-lightbox" />
+            </div>
+
+        </form>
+
+    </div>
+
+</div>

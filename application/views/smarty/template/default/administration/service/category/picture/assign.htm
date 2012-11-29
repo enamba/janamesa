@@ -1,0 +1,60 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+    <div class="two-column-box">
+        <div class="item">
+            <div class="item-content">
+                <a href="/administration_service_category_picture/list">{__b('Bilderkategorie Liste')}</a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <form action="/administration_service_category_picture/assign" method="post">
+                    <select name="id">
+                        <option value="">{__b('bitte wählen')}</option>
+                        {foreach from=$restIds item=ri}
+                            <option value="{$ri.id}">{$ri.name} (#{$ri.id})</option>
+                        {/foreach}
+                    </select>
+                    <input type="submit" value="{__b('Zuordnen')}" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="one-column-box">
+        <div class="item">
+            <form action="/administration_service_category_picture/assign/id/{$service->getId()}" method="post" >
+                <input type="hidden" name="id" value="{$service->getId()}" />
+                <div class="item-head">
+                    {__b('Kategorien von %s zuordnen', $service->getName())}
+                </div>
+                <div align="right"><input type="submit" name="submitassign" value="{__b('Speichern')}" /></div>
+                <div class="item-content">
+                    <table>
+                        <tr>
+                            <th>{__b('Menukategorie')}</th>
+                            <th>{__b('Bildkategorie')}</th>
+                            <th></th>
+                        </tr>
+                        {foreach from=$service->getMealCategories() item=cat}
+                            <tr>
+                                <td>{$cat->getName()}</td>
+                                <td>
+                                    <select name="pcat[{$cat->getId()}][]">
+                                        <option value="">{__b('keine Zuordnung')}</option>
+                                        {foreach from=$picCat item=pcat}
+                                            <option value="{$pcat.id}"  {if $pcat.id == $cat->getCategoryPictureId()}selected{/if} >{$pcat.name}</option>
+                                        {/foreach}
+                                    </select>
+                                </td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        {/foreach}
+                    </table>
+                </div>
+                <div align="right"><input type="submit" value="{__b('Speichern')}" /></div>
+            </form>
+        </div>
+    </div>
+{/block}

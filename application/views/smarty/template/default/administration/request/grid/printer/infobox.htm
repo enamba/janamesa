@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        <th>{__b("Status")}</th>
+        <th>{__b("gesetzt am")}</th>
+    </tr>
+    {foreach $states_history as $historyEntry}
+        <tr>
+            <td>{$historyEntry['state']}</td>
+            <td>{date('d.m.Y H:i:s', strtotime($historyEntry['created']))}</td>
+        </tr>
+    {/foreach}
+
+</table>
+

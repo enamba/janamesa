@@ -1,0 +1,209 @@
+{extends file="restaurant/base.htm"}
+{block name="content"}
+
+{$extrasGroups = $restaurant->getMealExtrasGroups()}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {{__b('Speisekarte, Vorschaumodus')}}
+        </div>
+        <div class="item-content">
+            <a href="/restaurant/menu">{{__b('Speisekarte editieren')}}</a>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {{__b('Kategorien')}}
+        </div>
+        <div class="item-content">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <table width="100%" cellspacing="8">
+                            <tr>
+                                {$count = 1}
+                                {foreach from=$restaurant->getMealCategoriesSortedAsArray() item=category}
+                                    <td class="yd-category-link"><a href="#cat_{$category->getId()}">{if $category->getDef()}<b>{/if}{$category->getName()}{if $category->getDef()}</b>{/if}</a></td>
+                                    {if ($count++)%10 == 0}</tr><tr>{/if}
+                                {/foreach}
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<table width="100%" cellspacing="0">
+    <tr>
+        <td>
+            {foreach from=$restaurant->getMealCategoriesSortedAsArray() item=category}
+            <div class="one-column-box">
+                <div class="item">
+                    <div class="item-content" >
+                    <table width="100%" id="yd-restaurant-category-{$category->getId()}">
+                    {$sizes=$category->getSizesByRank()}
+                    <tr {if $category->getDef()}class="category-name-def"{else}class="category-name"{/if}>
+                        <td width="55%">
+                            <table width="100%">
+                                <tr>
+                                    <td width="85%">
+                                        <table>
+                                            <tr>
+                                                <td width="40%">
+                                                    <div style="font-size: 16px; font-weight: bold" >{$category->getName()}</div> <br/>{if strlen({$category->getDescription()})>0}({$category->getDescription()}){/if}<a name="cat_{$category->getId()}"></a>
+                                                </td>
+                                            </tr>
+                                            {if $category->getDef()}
+                                            <tr>
+                                                <td colspan="2">
+                                                    {{__b('Wird im Menü am Anfang ausgewählt')}}<br/>
+                                                </td>
+                                            </tr>
+                                            {/if}
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="45%">
+                            <table width="100%">
+                                <tr>
+                                {foreach from=$sizes item=size}
+                                    <td align="left" width="{100/count($sizes)}%">
+                                        <table width="100%">
+                                            <tr>
+                                                <td><b>{$size['name']}</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <small><a href="#x" class="yd-preview-popup" id="yd-preview-sizeextras-{$restaurant->getId()}-{$size['id']}-x">{{__b('Extras')}}</a></small>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                {/foreach}
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" height="10"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <table width="100%">
+                                <tr>
+                                    <th width="5%"  align="left">{{__b('Online')}}</th>
+                                    <th width="20%" align="left">{{__b('Speise')}}</th>
+                                    <th width="20%" align="left">{{__b('Beschreibung')}}</th>
+                                    <th width="10%"></th>
+                                    <th width="45%" align="left"></th>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" height="15"></td>
+                                </tr>
+                            </table>
+                            <table width="100%" id="yd-meals-table-nested-{$category->getId()}">
+                            {foreach from=$category->getMealsSorted() item=meal}
+                                <tr>
+                                    <td width="5%">
+                                        <input type="checkbox" class="yd-check-online yd-meal-element" id="yd-meal-online-x-{$category->getId()}" name="yd-meal-online[{$meal->getId()}]" disabled="disabled" {if $meal->getStatus() == 1}checked{/if} value="1" />
+                                    </td>
+                                    <td width="20%"><b>{$meal->getName()}</b></td>
+                                    <td width="20%"><i>{$meal->getDescription()}</i></td>
+                                    <td width="10%" align="center">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <small><a href="#x" class="yd-preview-popup" id="yd-preview-mealoptions-{$restaurant->getId()}-x-{$meal->getId()}">{{__b('Optionen')}}</a></small>
+                                                <td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td width="45%" align="left">
+                                        <table width="100%">
+                                            <tr>
+                                            {foreach from=$sizes item=size}
+                                                <td align="left" width="{100/count($sizes)}%">
+                                                    <table width="100%">
+                                                        <tr>
+                                                            <td width="10%" valign="top">
+                                                                <small>{$size['name']}</small>
+                                                            </td>
+                                                            {if $category->getHasPfand() == 1}
+                                                            <td  width="5%"></td>
+                                                            <td  width="10%" valign="top">
+                                                                <small>{{__b('Pfand')}}</small><br/>
+                                                            </td>
+                                                            {/if}
+                                                            <td width="75%"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td valign="top">
+                                                                {if !is_null($meal->getCostForSize($size['id']))}<b>{intToPrice($meal->getCostForSize($size['id']))}</b>{/if}
+                                                            </td>
+                                                            {if $category->getHasPfand() == 1}
+                                                            <td></td>
+                                                            <td valign="top">
+                                                                {if !is_null($meal->getPfandForSize($size['id']))}<b>{intToPrice($meal->getPfandForSize($size['id']))}</b>{/if}
+                                                            </td>
+                                                            {/if}
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <small><a href="#x" class="yd-preview-popup" id="yd-preview-mealextras-{$restaurant->getId()}-{$size['id']}-{$meal->getId()}">{{__b('Extras')}}</a></small>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            {/foreach}
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr class="yd-meal-types" id="yd-meal-types-{$meal->getId()}">
+                                    <td></td>
+                                    <td>
+                                        {{__b('Mwst:')}} {$meal->getMwst()}% &nbsp;&nbsp;&nbsp; {{__b('Interne Nr:')}} {$meal->getNr()} &nbsp;&nbsp;&nbsp;  {{__b('Minimale Anzahl:')}} {$meal->getMinAmount()}
+                                    </td>
+                                    <td colspan="2">
+                                        <small>{{__b('Vegetarisch')}}</small>
+                                        <input disabled type="checkbox" {if $meal->getVegetarian()==1}checked{/if}/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <small>{{__b('Bio')}}</small>
+                                        <input disabled type="checkbox" {if $meal->getBio()==1}checked{/if}/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <small>{{__b('Tabak')}}</small>
+                                        <input disabled type="checkbox" {if $meal->getTabaco()==1}checked{/if}/>
+                                        {if $category->getExcludeFromMinCost() != 1}
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <small>{{__b('Nicht im Mindestbestellwert')}}</small>
+                                        <input disabled type="checkbox" {if $meal->getExcludeFromMinCost()==1}checked{/if}/>
+                                        {/if}
+                                    </td>
+                                </tr>
+                                <tr id="yd-meal-underline-{$meal->getId()}">
+                                    <td colspan="6"><hr/></td>
+                                </tr>
+                            {/foreach}
+                            </table>                            
+                        </td>
+                    </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    {/foreach}
+    </td>
+    </tr>
+</table>
+
+{/block}

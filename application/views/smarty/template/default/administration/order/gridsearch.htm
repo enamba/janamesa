@@ -1,0 +1,58 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="one-column-box">
+    <a name="courier"></a>
+    <div class="item">
+        <div class="item-head">
+            {__b('Nach Bestellungen suchen')}
+        </div>
+        <div class="item-content">
+            <form action="" method="post">
+                <table>
+                    <tr>
+                        <td width="15%">{__b('ID')} *</td>
+                        <td width="15%">{__b('Nr.')}</td>
+                        <td width="15%">{__b('KundenID *')}</td>
+                        <td width="15%">{__b('Kundennname')}</td>
+                        <td width="15%">{__b('ipAddr *')}</td>
+                        <td width="40%">{__b('E-Mail')}</td>                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" name="orderId"/>
+                        </td>
+                        <td>
+                            <input type="text" name="orderNr"/>
+                        </td>
+                        <td>
+                            <input type="text" name="customerId"/>
+                        </td>
+                        <td>
+                            <input type="text" name="customerName"/>
+                        </td>
+                        </td>
+                        <td>
+                            <input type="text" name="ipAddr"/>
+                        </td>
+                        <td>
+                            <input type="text" name="customerEmail" class="yd-only-alphanumeric"/>
+                        </td>                        
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            <br/>
+                            {__b('Bei den * markierten Feldern muss die Sucheingabe mit dem entsprechenden Feld komplett übereinstimmen, <br/>
+                            bei den anderen reicht es, wenn die Eingabe in dem Feld enthalten ist.')}<br/><br/>
+                            <input type="submit" value="{__b('Zu den Suchergebnissen weiterleiten')}" class="button" ></a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div class="item">
+    </div>
+</div>
+{/block}
+

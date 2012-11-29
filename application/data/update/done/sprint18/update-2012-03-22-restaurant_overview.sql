@@ -1,0 +1,1 @@
+alter table restaurants add column `password` VARCHAR(255)  NULL  DEFAULT NULL

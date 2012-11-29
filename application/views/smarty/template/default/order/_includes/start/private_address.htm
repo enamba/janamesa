@@ -1,0 +1,20 @@
+{foreach name=it from=$cust->getLocations() item=location}
+    <span class="yd-adress {if $location->isPrimary() || (count($cust->getLastOrder())>0 && !$cust->hasPrimaryLocation() && $location->getCityId() == $cust->getLastOrder()->getLocation()->getCityId())}active{/if}"
+        id="yd-addr-{$location->getId()}-{$location->getCity()->getId()}" data="/{$location->getCity()->getUrl($mode)}">
+
+        {if $domain_base != 'taxiresto.fr'}
+            {$location->getStreet()} {$location->getHausnr()}, 
+        {else}
+            {$location->getHausnr()} {$location->getStreet()}, 
+        {/if}
+        {$location->getPlz()} {$location->getOrt()->getOrt()}
+
+        <a href="/user/locations#location_{$location->getId()}">{__('bearbeiten')}</a>
+
+        {if $location->getAddition()!=''}
+            <br />
+            <i>{$location->getAddition()|truncate:80:" ...":false}</i>
+        {/if}
+    </span>
+{/foreach}
+

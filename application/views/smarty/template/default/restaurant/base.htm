@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="yourdelivery GmbH" />
+        <meta name="publisher" content="yourdelivery GmbH" />
+
+        <meta name="robots" content="noindex, nofollow" />
+
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-core.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-restaurant.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-gridbox.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-zendform.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/yd-backend-jquery.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/www.lieferando.de/yd-frontend-jquery.css" />
+
+        <script type="text/javascript" src="/media/javascript/compiled/restaurant-{$REVISION}.js"></script>
+
+        {if $grid}
+        <script type='text/javascript' charset='UTF-8'>
+            /* <![CDATA[ */
+            {$grid->getHeaderScript()}
+            /* ]]> */
+        </script>
+        {/if}
+
+        <title>{__b('Restaurant-Backend')}</title>
+
+        <script>
+            $(document).ready(function() {
+                
+                $('.be-quick a, .be-tabs a').wrapInner('<span></span>');
+                $('#menu ul').hide();
+                $('#menu li a').click(function(){
+                    var checkElement = $(this).next();
+                    if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+                        $('#menu li:not(.active) ul:visible').hide();
+                        return false;
+                    }
+                    if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+                        $('#menu li:not(.active) ul:visible').hide();
+                        checkElement.show();
+                        return false;
+                    }
+                });
+                
+            });
+        </script>
+
+    </head>
+    <body>
+
+        <div class="be-wrapper">
+
+            {if $loggedIn}
+            <div class="be-header">
+
+                <div class="be-profile" style="background: url(/media/images/yd-backend/2012/logo-{$HOSTNAME}.png) no-repeat;"></div>
+
+                <span class="be-user">
+                    {__b('Eingeloggt als:')}
+                    {if !is_null($smarty.session.Administration.admin)}
+                    <strong>{$smarty.session.Administration.admin->getName()}</strong>
+                    {$smarty.session.Administration.admin->getEmail()}
+                    {else}
+                    {__b('Unbekannt ... strange')}
+                    {/if}
+                </span>
+
+                <a class="be-logout" href="/restaurant/logout/">Logout</a>
+
+            </div>
+            {/if}
+
+            {if $loggedIn}
+            <div class="be-content">
+                <div class="be-content-inner">
+                    {/if}
+
+                    {if !is_null($restaurant)}
+                    <div>
+                        <input type="hidden" id="restaurantId" value="{$restaurant->getId()}"/>
+                    </div>
+
+                    <div id="yd-change-checked-status-panel-0" class="yd-change-checked-status-panel status-red {if $restaurant->getChecked() != 0}hidden{/if}">
+                        {__b('Nicht geprüft!')}
+                        <a class="yd-change-checked-status" id="yd-change-checked-status-{$restaurant->getId()}">
+                            {__b('Hier klicken, um Status auf "geprüft" zu setzen!')}
+                        </a>
+                    </div>
+
+                    <div id="yd-change-checked-status-panel-1" class="yd-change-checked-status-panel status-green {if $restaurant->getChecked() == 0}hidden{/if}">
+                        {__b('Geprüft!')}
+                        <a class="yd-change-checked-status" id="yd-change-checked-status-{$restaurant->getId()}">
+                            {__b('Hier klicken, um Status auf "nicht geprüft" zu setzen!')}
+                        </a>
+                    </div>
+                    {/if}
+
+                    {include file='notification.htm'}
+                    {block name="content"}{/block}
+
+                    {if $loggedIn}
+                </div>
+            </div>
+            {/if}
+
+        </div>
+
+        {if $loggedIn}
+        <div class="be-sidebar">
+            <ul class="be-nav" id="menu">
+                {foreach $menuLinks as $menuParent => $container}
+                <li class="{$container.icon_class} {if strcmp($parentMenu, $menuParent)==0}active{/if}">
+                    <a href="{$container.url}"><span>{$menuParent}</span></a>
+                    {if count($container.children)>0}
+                    <ul>
+                        {foreach $container.children as $menuName => $url}
+                        <li {if strcmp($requestUri, $url)==0}class="active"{/if}><a href="{$url}"><span>{$menuName}</span></a></li>
+                        {/foreach}
+                    </ul>
+                    {/if}
+                </li>
+                {/foreach}                
+                <li class="icon07">
+                    <a><span>{if !is_null($restaurant)}{$restaurant->getName()} (#{$restaurant->getId()}){/if}</span></a>
+                </li>
+            </ul>
+        </div>
+        {/if}
+
+    </body>
+</html>

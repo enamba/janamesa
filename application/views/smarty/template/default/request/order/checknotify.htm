@@ -1,0 +1,81 @@
+{if $order instanceof Yourdelivery_Model_Order}
+
+<ul class="yd-success-message yd-box yd-order-notify-{$order->getState()}">
+
+    {if $order->getState() == Yourdelivery_Model_Order_Abstract::NOTAFFIRMED}
+
+    <li class="yd-notify-true">
+        {__("Deine Bestellung wurde übermittelt. In Kürze erscheint hier die Lieferzeit.")}
+    </li>
+
+    <li class="yd-notify-load">
+        {__("Bitte warte einen Moment auf die Bestätigung vom Dienstleister.")}&nbsp;
+        {__("Bitte kontaktiere uns, falls Du diese Meldung länger als 5 Minuten siehst.")}
+    </li>
+
+    {* for fake orders give the illusion that it has worked *}
+    {elseif $order->getState() > Yourdelivery_Model_Order_Abstract::NOTAFFIRMED || in_array($order->getState(), array(Yourdelivery_Model_Order_Abstract::FAKE, Yourdelivery_Model_Order_Abstract::FAKE_STORNO))}
+
+    <li class="yd-notify-true">
+        {if $order->isPreOrder()}
+        {__("Deine Bestellung wird am %s geliefert.", $order->computeArrivalTime()|date_format:__("d.m.Y H:i"))}
+        {else}
+        {__("Deine Bestellung wird in %s geliefert, um %s Uhr.", $order->getDeliverDelay()->computeDelayFormated(), $order->computeArrivalTime()|date_format:__("H:i"))}
+        {/if}
+    </li>
+
+    <li class="yd-notify-true">
+        {__("Die Bestätigung Deiner Bestellung wurde an die folgende E-Mail-Adresse gesendet: %s", $order->getCustomer()->getEmail())}
+    </li>
+
+    {elseif in_array($order->getState(), array(Yourdelivery_Model_Order_Abstract::BILL_NOT_AFFIRMED, Yourdelivery_Model_Order_Abstract::PAYMENT_NOT_AFFIRMED, Yourdelivery_Model_Order_Abstract::PAYMENT_PENDING))}
+
+    <li class="yd-notify-true">
+        {__("Bitte warte einen Moment auf die Zahlungsbestätigung.")}
+    </li>
+
+    <li class="yd-notify-load">
+        {__("Bitte kontaktiere uns, falls Du diese Meldung länger als 5 Minuten siehst.")}
+    </li>
+
+    {elseif $order->getState() == Yourdelivery_Model_Order_Abstract::REJECTED}
+
+    <li class="yd-notify-false">
+        {__("Der Dienstleister hat Deine Bestellung abgelehnt.")}
+    </li>
+
+    <li class="yd-notify-false">
+        {__("Bitte bestelle bei einem anderen Dienstleister.")}
+    </li>
+
+    {elseif $order->getState() == Yourdelivery_Model_Order_Abstract::INVALID_DISCOUNT}
+
+    <li class="yd-notify-false">
+        {__("Deine Bestellung wurde storniert.")}
+    </li>
+
+    <li class="yd-notify-false">
+        {__("Dein Gutscheincode ist nicht korrekt oder ungültig.")}
+    </li>
+
+    {elseif $order->getState() == Yourdelivery_Model_Order_Abstract::STORNO}
+
+    <li class="yd-notify-false">
+        {__("Deine Bestellung wurde storniert.")}
+    </li>
+
+    {elseif in_array($order->getState(), array(Yourdelivery_Model_Order_Abstract::DELIVERERROR, Yourdelivery_Model_Order_Abstract::FAX_ERROR_NO_TRAIN))}
+
+    <li class="yd-notify-false">
+        {__("Es ist ein Fehler bei der Bestellungsübermittlung aufgetreten.")}
+    </li>
+
+    <li class="yd-notify-false">
+        {__("Bitte versuche nochmals zu Bestellen oder kontaktiere den Dienstleister direkt unter der untenstehenden Nummer.")}
+    </li>
+
+    {/if}
+
+</ul>
+
+{/if}

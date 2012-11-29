@@ -1,0 +1,736 @@
+/*-------------------------------------------------------------
+
+CSS INDEX
+
+    1.Reset
+    2.HTML Tags
+    3.Head
+    4.JS Slideshow
+    5.Info bar
+    6.Text Box
+    7.Order Box
+    8.Jobs Form
+    7.Footer
+
+
+----------------------------------------------------------------*/
+/*-----Reset-----*/
+*{
+    margin: 0;
+    padding: 0;
+}
+* html #nonFooter
+{
+    height: 100%;
+}
+
+
+* + html .box_img_text img {
+    margin: 20px 0 0 0;
+    padding: 20px 0 0 0;
+
+}
+
+* + html .box_img_text {
+    width: 990px;
+    padding: 10px;
+    margin: 5px;
+}
+* + html .text_box2 {
+    margin: 0 0 0 300px;
+    padding: 5px;
+}
+* + html .order_box {
+    height: 170px;
+}
+
+.clearfix:after {  /* für Firefox, IE8, Opera, Safari, etc. */
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.yd-clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+/*HTML Tags*/
+html{
+    overflow-y: scroll;
+    height: 100%;
+}
+ul{
+    list-style: none;
+}
+table{
+    width: 100%;
+    border-collapse:collapse;
+}
+label{
+    display: block;
+    font-size: 10px;
+    margin: 5px;
+}
+h2{
+    font-size: 13px;
+}
+p{
+    font-size: 11px;
+}
+a{
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 3px;
+}
+input, textarea, select {
+    padding: 4px 5px;
+    font-size: 11px;
+    color: #333;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background: #fff;
+    outline: 0 none;
+}
+
+input:focus, textarea:focus, select:focus {
+    background: #fff;
+}
+
+body{
+    font-family: helvetica,sans-serif;
+    font-size: 11px;
+    height: 100%;
+}
+#yd-nonfooter {
+    min-height: 100%;
+    position: relative;
+}
+#page{
+
+    margin: 0 auto;
+    width:  1021px;
+    padding-bottom: 140px;
+}
+/*-----Head-----*/
+#header{
+    height: 171px;
+    width: 1021px;
+}
+#header ul{
+    padding: 136px 0 0 0;
+}
+#header li{
+    float: left;
+}
+#header a{
+    display: block;
+    font-size: 12px;
+    width: 120px;
+    text-align: center;
+    padding: 10px 0;
+    height: 15px;
+    border-radius: 7px 7px 0 0;
+    margin-left: 2px;
+}
+#header a span{
+    opacity: 1.0;
+
+}
+#header a.facebook{
+    width: 120px;
+
+}
+#header a.facebook:hover{
+    width: 120px;
+}
+.fb_edge_widget_with_comment{
+    margin-top: -3px;
+}
+
+
+/*-----JS Slidshow-----*/
+.clear {
+    clear:both;
+}
+#flash{
+    height: 300px;
+    position: relative;
+    margin: 10px 0;
+}
+#yd-satellite-gallery{
+    position: relative;
+}
+
+#yd-satellite-gallery img{
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    height: 300px;
+    width: 1000px;
+    margin: 0 auto;
+    border-radius:5px;
+}
+/*-----Info Bars-----*/
+#info{
+    height: 20px;
+    padding: 15px  10px 10px 10px;
+    width: 985px;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+#info h2{
+    display: inline;
+}
+#info a{
+    padding: 2px;
+}
+#info p{
+    display: inline;
+}
+/*-----Info Bars End-----*/
+/*Box*/
+.yd-box{
+    margin: 10px;
+    border-radius:5px;
+    padding: 5px;
+}
+.yd-box p , .yd-box h2{
+    padding: 10px;
+
+}
+.yd-box img{
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 5px;
+    float: left;
+}
+.yd-box-head {
+    position: relative;
+    margin: -5px -5px 10px;
+    font-size: 14px;
+    border-radius: 5px 5px 0 0;
+}
+
+/*-----TextBox-----*/
+.box_img_text{
+    margin: 10px;
+    border-radius:5px;
+    padding: 10px;
+
+}
+.text_box_img{
+    width: 300px;
+    height: 200px;
+    margin: 5px 15px 5px 5px;
+    border-radius: 5px;
+    float: left;
+
+}
+.box_img_text p{
+
+}
+.text_box2{
+    padding: 5px;
+}
+.text_box2_heading{
+    font-weight: bold;
+    padding: 5px ;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+
+}
+.box_img_text .text_box2 p{
+
+    border-radius: 0 5px 5px 5px;
+
+
+}
+.text_box{
+    padding: 130px 0 0 270px;
+    width: 200px;
+}
+.text_box p {
+    font-weight: bold;
+    padding: 10px ;
+    border-radius: 0 5px 5px 5px;
+
+}
+.text_box a{
+    margin: 0 0 0 10px;
+}
+
+/*-----Order Box (index.html)-----*/
+.order_box{
+    border: 1px solid;
+    border-radius:5px;
+    height: 150px;
+    top: 90px;
+    left: 650px;
+    position: absolute;
+    text-align: center;
+}
+.order_box h1{
+    padding: 20px 5px;
+    text-align: center;
+    margin-bottom: 17px;
+    font-size: 25px;
+    min-width: 250px;
+}
+.order_box p{
+    padding: 20px 5px;
+    text-align: center;
+}
+.order_box i{
+
+    font-weight: bold;
+    font-size: 13px;
+    padding: 10px;
+    top: 30px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+/*-----Background Content-----*/
+#info p, #impressum a, #impressum {
+    font-size: 13px;
+}
+#impressum a:hover{
+    padding: 0;
+}
+
+#impressum{
+    padding: 5px;
+    margin: 30px 90px 30px 100px;
+    border: 1px solid;
+    border-radius: 5px;
+    top: 300px;
+    width: 300px;
+    float: left;
+}
+#impressum i{
+    display: block;
+
+}
+#impressum h4{
+    padding: 5px 0 10px 1px;
+    line-height: 10px;
+}
+
+/*Footer*/
+#yd-menu-footer{
+    position: relative;
+    height: 30px;
+    font-weight: bold;
+    width: 1005px;
+    margin: 0 auto;
+    height: 50px;
+    margin-top: -50px;
+    border-radius: 5px 5px 0 0;
+
+}
+#yd-menu-footer #yd-menu-footer_content{
+    margin: 0 auto;
+    padding-top: 15px;
+    width: 1010px;
+    text-align: center;
+
+}
+#yd-menu-footer p, #yd-menu-footer a{
+    padding: 3px;
+    font-size: 10px;
+}
+#yd-menu-footer a{
+    text-decoration: underline;
+}
+#yd-menu-footer a:hover{
+    background: none;
+}
+/*Jobs*/
+.yd-box h3{
+    margin-top: 10px;
+}
+.yd-jobs-form {
+    width: 600px;
+    margin: 0 0 0 10px;
+    float: left;
+}
+.yd-jobs-form table td{
+    width: 100px;
+    vertical-align: middle;
+
+
+}
+.yd-jobs-form label{
+    width: 100px;
+    margin: 5px 0 0 0;
+    font-weight: bold;
+
+}
+.yd-jobs-form input {
+    width: 150px;
+    margin: 5px 0;
+
+}
+.yd-jobs-form select {
+    width: 200px;
+    text-align: center;
+    margin: 10px 0 20px 0;
+
+}
+.yd-jobs-form textarea{
+    margin: 5px 0 0 0;
+}
+.yd-jobs-form .submit {
+    cursor: pointer;
+    padding: 3px 20px 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid #066fc0;
+    text-shadow: 1px 1px 0px #000;
+    border-radius: 4px;
+    background: #62abef;
+    background: -moz-linear-gradient(top,#62abef,#066fc0);
+    background: -webkit-gradient(linear, left top, left bottom, from(#62abef), to(#066fc0));
+    margin: 30px 0 10px 0;
+}
+.yd-jobs-form .radio{
+    width: 20px;
+    margin-top:  12px;
+}
+.image_right img{
+    float: right;
+}
+
+/*Table Öffnungszeiten und Liefergebiete*/
+.yd-service_info{
+    text-align: left;
+}
+.yd-service_info .yd-box-head_2 .right{
+    padding-left:0;
+}
+.yd-service_info .yd-box-head_2 {
+    background: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+.yd-service_info td {
+    padding: 5px 0;
+    vertical-align: top;
+    min-width: 60px; 
+}
+.yd-service_info td b{
+    margin-right: 10px;
+
+}
+.yd-service_info .left{
+    width: 180px;
+    float: left;
+    margin: 5px;
+}
+.yd-service_info .right{
+    width: 750px;
+    float: left;
+    margin: 5px 5px 5px 10px;
+}
+.yd-service_info .left td{
+    width: 150px;
+    padding-left: 23px;
+}
+.yd-service_info .left table td{
+    min-width: 20px !important;
+    border: 1px solid #000;
+}
+/*
+    18. Ratings
+***********************************************************/
+#yd-service-rating{
+    width: 1000px;
+}
+#yd-service-rating .hreview .rating{
+    display: none;
+}
+#yd-service-rating img{
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+#yd-ratings {
+    margin: 20px 0;
+}
+
+#yd-ratings-all-wrapper {
+    margin: 10px auto;
+    padding: 0;
+    border: 1px solid ;
+    width: 800px;
+    color: #000;
+}
+
+#yd-ratings-all {
+    padding: 10px;
+    background: #fff;
+    border-radius:5px;
+
+}
+
+#yd-ratings-all ul {
+    float: left;
+    margin: 0 0 0 15px;
+}
+
+#yd-ratings-all ul li {
+    margin: 0 0 5px;
+}
+
+#yd-ratings-all ul li img {
+    vertical-align: middle;
+    margin: 5px 0 10px;
+}
+
+#yd-ratings-all ul li strong {
+    display: inline-block;
+    width: 100px;
+    font-weight: normal;
+    vertical-align: middle;
+    background-repeat: no-repeat; /* star bugfix */
+}
+
+#yd-ratings-all ul li span {
+    display: inline-block;
+    width: 75px;
+    height: 10px;
+    margin-right: 5px;
+    border: 1px solid #fdd15d;
+}
+
+#yd-ratings-all ul li span i {
+    display: block;
+    height: 10px;
+    background: #fdd15d;
+}
+
+#yd-ratings-all ul#yd-ratings-social {
+    margin: 0 30px 0 0;
+    font-size: 13px;
+    text-align: center;
+}
+
+#yd-ratings-all ul#yd-ratings-social i {
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin: 15px 0;
+    padding: 12px 25px 0 0;
+    color: #077400;
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    background: url(/media/images/satellites/start/yd-ratings-thumb-up.png) 20px 8px no-repeat #dafdd8;
+    border-radius: 4px;
+}
+.yd-opinion {
+    padding: 0;
+}
+#yd-ratings-detail{
+    margin: 10px 15px;
+}
+#yd-ratings-detail .item{
+    display: none;
+}
+
+#yd-ratings-detail .hreview {
+    font-size: 11px;
+    padding: 10px 0;
+    border-bottom: 1px dotted;
+    width: 970px;
+}
+#yd-ratings-detail .hreview:last-child{border-bottom: none;}
+
+#yd-ratings-detail .summary {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#yd-ratings-detail .description {
+    display: block;
+    font-size: 13px;
+    line-height: 150%;
+    width: 880px;
+    word-wrap: break-word;
+}
+
+#yd-ratings-detail i {
+    float: right;
+    padding: 10px;
+    margin-top: -47px;
+    margin-right:  10px;
+    border-radius: 5px;
+}
+
+#yd-ratings-detail .q0 {
+    display: block;
+    font-style: oblique;
+}
+
+#yd-ratings-detail .q1 {
+    display: block;
+    margin-top: 20px;
+    font-size: 11px;
+    font-style: oblique;
+}
+
+#yd-ratings-detail .q1 strong {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.yd-advise1,
+.yd-advise2,
+.yd-advise3,
+.yd-advise4 {
+    display: block;
+    height: 200px;
+    margin: 50px 0 0;
+    padding: 0;
+}
+/*
+.yd-advise1 { background: url(/media/images/yd-background/yd-advise1.png) 0 0 no-repeat; }
+.yd-advise2 { background: url(/media/images/yd-background/yd-advise2.png) 0 0 no-repeat; }
+.yd-advise3 { background: url(/media/images/yd-background/yd-advise3.png) 0 0 no-repeat; }
+.yd-advise4 { background: url(/media/images/yd-background/yd-advise4.png) 0 0 no-repeat; }
+
+.yd-advise1:hover { background: url(/media/images/yd-background/yd-advise1.png) 0 -200px no-repeat; }
+.yd-advise2:hover { background: url(/media/images/yd-background/yd-advise2.png) 0 -200px no-repeat; }
+.yd-advise3:hover { background: url(/media/images/yd-background/yd-advise3.png) 0 -200px no-repeat; }
+.yd-advise4:hover { background: url(/media/images/yd-background/yd-advise4.png) 0 -200px no-repeat; }
+.yd-service-rate-star {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    width: 180px;
+    height: 17px;
+    text-align: right;
+}
+*/
+.yd-service-rate-star span {
+    float: left;
+    color: #05a;
+    font-size: 11px;
+    line-height: 16px;
+    text-decoration: underline;
+}
+
+.yd-service-rate-star strong {
+    float: right;
+}
+
+.yd-rated-00,
+.yd-rated-01,
+.yd-rated-02,
+.yd-rated-03,
+.yd-rated-04,
+.yd-rated-05,
+.yd-rated-06,
+.yd-rated-07,
+.yd-rated-08,
+.yd-rated-09,
+.yd-rated-10 {
+    display: block;
+    width: 80px;
+    height: 15px;
+    background-image: url(/media/images/yd-frontend-core/yd-sprite-core.png);
+}
+
+.yd-rated-00 { background-position: 0 -340px; }
+.yd-rated-01 { background-position: 0 -356px; }
+.yd-rated-02 { background-position: 0 -372px; }
+.yd-rated-03 { background-position: 0 -388px; }
+.yd-rated-04 { background-position: 0 -404px; }
+.yd-rated-05 { background-position: 0 -420px; }
+.yd-rated-06 { background-position: 0 -436px; }
+.yd-rated-07 { background-position: 0 -452px; }
+.yd-rated-08 { background-position: 0 -468px; }
+.yd-rated-09 { background-position: 0 -484px; }
+.yd-rated-10 { background-position: 0 -500px; }
+
+
+
+#toTop {
+    display:none;
+    text-decoration:none;
+    position:fixed;
+    padding: 0;
+    bottom:10px;
+    right:10px;
+    overflow:hidden;
+    width:51px;
+    height:51px;
+    border:none;
+    text-indent:-999px;
+    background: url(/media/images/yd-frontend-core/yd-sprite-core.png) no-repeat 0 -185px;
+}
+
+#toTopHover {
+    background: url(/media/images/yd-frontend-core/yd-sprite-core.png) no-repeat 0 -236px;
+    width:51px;
+    height:51px;
+    display:block;
+    overflow:hidden;
+    float:left;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter:alpha(opacity=0);
+}
+
+#toTop:active, #toTop:focus {
+    outline:none;
+}
+
+#notfound{
+    position: relative;
+    width: 500px;
+    height: 155px;
+    padding: 0 0 0 300px;
+    margin: 30px auto 200px;
+    background: url(/media/images/yd-background/yd-fail-small.jpg) no-repeat;
+}
+#notfound div{
+    position: absolute;
+    top: 175px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    padding: 15px;
+    -moz-box-shadow: 1px 1px 5px #CCC;
+    -webkit-box-shadow:1px 1px 5px #CCC;
+
+}
+#notfound div p{
+    padding: 10px 0;
+    font-size: 18px;
+
+}
+
+
+/*hack for  www.frenchpizza.fr and www.pizza17.fr*/
+
+.satteliteid-104 #header ul li:first-child a:before{
+    content: "Menu";
+}
+.satteliteid-104 #header ul li:first-child span {display: none;}
+
+.satteliteid-105 #header ul li:first-child a:before{
+    content: "Menu";
+}
+.satteliteid-105 #header ul li:first-child span {display: none;}
+.ie7 .satteliteid-105 #header ul li span,.ie6 .satteliteid-105 #header ul li span {display: inline;}

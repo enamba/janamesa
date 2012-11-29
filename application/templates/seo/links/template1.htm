@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="{$link->description|escape}" />
+        <meta name="keywords" content="{$link->keywords|escape}" />
+        <meta name="language" content="de" />
+        <meta name="robots" content="{$link->robots}" />
+        <title>{$link->title|escape}</title>
+    </head>
+    <body>
+        <h1>{$link->h1}</h1>
+
+        {if $link->picture}<img src="/storage/landingpages/images/{$link->picture}" alt="{$link->pictureAlt}" />{/if}
+
+        <ul>
+            {if $link->text1}<li>
+                {if $link->h21}<h2>{$link->h21}</h2>{/if}
+                {if $link->h31}<h3>{$link->h31}</h3>{/if}
+
+                <p>{$link->text1}</p>
+            </li>{/if}
+
+            {if $link->text2}<li>
+                {if $link->h22}<h2>{$link->h22}</h2>{/if}
+                {if $link->h32}<h3>{$link->h32}</h3>{/if}
+
+                <p>{$link->text2}</p>
+            </li>{/if}
+
+            {if $link->text3}<li>
+                {if $link->h23}<h2>{$link->h23}</h2>{/if}
+                {if $link->h33}<h3>{$link->h33}</h3>{/if}
+
+                <p>{$link->text3}</p>
+            </li>{/if}
+
+            {if $link->text4}<li>
+                {if $link->h24}<h2>{$link->h24}</h2>{/if}
+                {if $link->h34}<h3>{$link->h34}</h3>{/if}
+
+                <p>{$link->text4}</p>
+            </li>{/if}
+
+            {if $link->text5}<li>
+                {if $link->h25}<h2>{$link->h25}</h2>{/if}
+                {if $link->h35}<h3>{$link->h35}</h3>{/if}
+
+                <p>{$link->text5}</p>
+            </li>{/if}
+        </ul>
+    </body>
+</html>

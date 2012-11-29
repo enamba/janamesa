@@ -1,0 +1,23 @@
+{if $APPLICATION_ENV == "production"}
+
+    {if $uadomain == 'lieferando.de'}
+        <iframe src="http://img-cdn.mediaplex.com/0/18421/universal.html?page_name=nodelivery&nodelivery=1&stadt={$location->getOrt()->getOrt()}&mpuid={$location->getPlz()};{time()}" HEIGHT=1 WIDTH=1 FRAMEBORDER=0></iframe>
+    {elseif $uadomain == 'lieferando.at'}
+        <iframe src="http://img-cdn.mediaplex.com/0/18589/universal.html?page_name=at_nodelivery&nodelivery=1&stadt={$location->getOrt()->getOrt()}&mpuid={$location->getPlz()};{time()}" HEIGHT=1 WIDTH=1 FRAMEBORDER=0></iframe>
+    {elseif $uadomain == 'lieferando.ch'}
+        <iframe src="http://img-cdn.mediaplex.com/0/18590/universal.html?page_name=ch_nodelivery&nodelivery=1&stadt={$location->getOrt()->getOrt()}&mpuid={$location->getPlz()};{time()}" HEIGHT=1 WIDTH=1 FRAMEBORDER=0></iframe>
+    {elseif $uadomain == 'taxiresto.fr'}  
+        <iframe src="http://img-cdn.mediaplex.com/0/18591/universal.html?page_name=fr_nodelivery&nodelivery=1&stadt={$location->getOrt()->getOrt()}&mpuid={$location->getPlz()};{time()}" HEIGHT=1 WIDTH=1 FRAMEBORDER=0></iframe>
+    {elseif $uadomain == 'elpedido.es'}
+        
+    {elseif $uadomain == 'appetitos.it'}
+
+    {elseif $uadomain == 'smakuje.pl'}
+    
+    {/if}
+    
+{else}
+
+    <iframe src="/null.php?page_name=nodelivery&nodelivery=1&stadt={$location->getOrt()->getOrt()}&mpuid={$location->getPlz()};{time()}" height="1" width="1"></iframe>
+
+{/if}

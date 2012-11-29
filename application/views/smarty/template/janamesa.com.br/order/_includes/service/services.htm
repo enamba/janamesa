@@ -1,0 +1,90 @@
+<div id="yd-service-{$r->getId()}-{$r->getType()}" class="yd-searchable yd-service-container yd-service-type-{$r->getType()}">          
+
+    <form action="/{$r->getDirectLink()}" method="get" id="yd-service-submit-{$r->getId()}-{$r->getType()}" class="yd-service-submit {if !$r->isOnline()}service-offline{/if}">
+        {if !empty($isFavourite) && $r->getCurrentCityId()}<input type="hidden" name="cityId" value="{$r->getCurrentCityId()}" />{/if}
+        <ul class="yd-sv3
+            {if $r->isNew()}
+                new
+            {/if}
+            yd-service-select">
+            <li class="yd-sv3-1" style="background: url({$r->getImg()});">
+              	
+                {if $withdelete}
+                    <a class="yd-delete-favourite td-delete" title="{__('Favorit entfernen')}" id="yd-delete-favourite-{$r->getId()}"></a>
+                {/if}
+               
+                {if $r->getRating()->hasRating()}
+                <span class="yd-rated" id="yd-rate-{$r->getId()}">
+                    <span class="yd-rated-{($r->getRating()->getAverage()*2)|string_format:'%02d'}"></span>
+                    
+                    <span class="yd-rated-total">({$r->getRating()->count(null, true, false, true)})</span>
+                </span>                
+                {else}
+                <span class="yd-rated" id="yd-rate-{$r->getId()}">
+                    <span class="yd-rated-10"></span>
+                    <span class="yd-rated-average"></span>
+                    <span class="yd-rated-total">{__('noch keine Bewertungen')}</span>
+                </span>
+                {/if}
+
+                <a class="yd-button-140 yd-service-select {if !$r->isOnline}offline{/if}" href="/{$r->getDirectLink()}">
+                    {if $r->getType() == "rest"}{__('zur Speisekarte')}{/if}
+                    {if $r->getType() == "great"}{__('zur Auswahl')}{/if}
+                    {if $r->getType() == "cater"}{__('zu den Caterern')}{/if}
+                </a>
+
+                {if $r->getMenuIsNewUntil() !== null}
+                    <span class="yd-sv3-1-new"></span>
+                {/if}
+
+            </li>
+            <li class="yd-sv3-2 yd-service-info" id="yd-service-info-{$r->getId()}">
+                {$r->getName()}
+                {if $r->getSpecialComment()}
+                    <span class="special-comment">
+                        <span class="special-comment-truncate">{$r->getSpecialComment()|truncate:23:" ..."}</span>
+                        <span class="special-comment-full" style="display:none;">{$r->getSpecialComment()}</span>
+                    </span>
+                {/if}
+            </li>
+            <li class="yd-sv3-3">{$r->getTagsWithMaxStringlength(25)|implode:', '}</li>
+            <li class="yd-sv3-4 {if $r->isOnline()}hidden{/if}">{__('Online-Bestellung momentan nicht möglich.')}</li>
+            {if $r->isOnline()}
+                {if $r->getType() != 'rest'}
+                    <li class="yd-sv3-4">{__('Vorlaufzeit: ')}{$r->getDeliverTimeFormated()}<br />{$this->formatOpenings($r->getOpening()->getIntervalOfDay(time()))}</li>
+                {else}   
+                    <li class="yd-sv3-4 yd-service-open">{$this->formatOpenings($r->getOpening()->getIntervalOfDay(time()))}</li>
+                    <li class="yd-sv3-4 yd-service-open-in hidden"></li>
+                {/if}
+                <li class="yd-sv3-5">
+                    <div class="br-item-sv3-5 first"><div>{__('Mindestbestellwert')}</div>{__('%s €', $r->getMinCost()|inttoprice)}</div>
+                    <div class="br-item-sv3-5">
+                        {if $r->isOnlyPickup()}
+                            <div>{__('Nur Abholung!')}</div>
+                        {else if $r->getDeliverCost() > 0}
+                            <div>{__('Lieferkosten')}</div>{__('%s €', $r->getDeliverCost()|inttoprice)}
+                        {else}
+                            <div>{__('Lieferkosten')}</div>{__('kostenlos')}
+                        {/if}
+                    </div>
+                </li>
+                {if $r->isOnlycash() || $r->isNoContract()}
+                <li class="yd-sv3-61"><span>{__('Nur Barzahlung möglich')}</span></li>
+                {elseif !$r->isPaymentbar()}
+                <li class="yd-sv3-62"><span>{__('Nur online Bezahlung möglich')}</span></li>
+                {else}
+                <li class="yd-sv3-63"><span>{__('Bar oder online bezahlen')}</span></li>
+                {/if}
+            {/if}
+
+        </ul>
+
+        {* show search results *}
+        <div class="menu-top3 hidden">
+            <table id="yd-service-menu-{$r->getId()}" class="yd-service-menu-results">
+                <tbody><tr class="even hidden"><td colspan="3"></td></tr></tbody>
+            </table>
+        </div>
+
+    </form>
+</div>

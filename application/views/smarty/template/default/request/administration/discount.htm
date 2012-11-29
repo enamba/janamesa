@@ -1,0 +1,28 @@
+<h1>{__b('GutscheinCodes für')} {$discount->getName()}</h1>
+    <form id="discount">
+        {if is_null($discount)}
+            {__b('Keine Liste verfügbar')}
+        {else}
+            <br />
+            <br />
+            <table class="noborder">
+                {foreach from=$discount->getCodes() item=code}
+                    <tr>
+                        <td width="10%"></td>
+                        <td width="10%"><a class="button" href="/administration_discount/checkdiscountcode/codeId/{$code->id}" target="_blank">{__b('prüfen')}</a></td>
+                        <td width="60%">
+                            <input style="width: 200px;" class="yd-discount-code-input" type="text" value="{$code->code}" id="yd-discount-code-{$code->id}">
+                        </td>
+                        <td id="yd-save-discount-code-{$code->id}"  width="20%">
+                            <span color="#999999">speichern</span>
+                        </td>
+                        <td width="20%"></td>
+                    </tr>
+                {foreachelse}
+                    <li>{__b('Keine Liste verfügbar')}</li>
+                {/foreach}
+            </table>
+            <br />
+            <br />
+        {/if}
+    </form>

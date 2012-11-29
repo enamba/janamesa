@@ -1,0 +1,80 @@
+{extends file='base.htm'}
+{block name="content"}
+
+<div id="yd-sidebar">
+    {include file="order/_includes/sidebar/fidelity.htm" propose=true}
+
+    {if $config->domain->base == 'janamesa.com.br'}<div class="yd-box br-box">{/if}
+
+        {include file="order/_includes/sidebar/lastorder.htm"}
+        {include file="order/_includes/sidebar/favorites.htm"}
+
+        {if $config->domain->base == 'janamesa.com.br'}</div>{/if}          
+
+    {include file="order/_includes/sidebar/payment.htm"}
+</div>
+
+<div id="yd-ordering">
+
+    {if $cust->isEmployee() && $domain_base != 'eat-star.de'}
+    <div class="yd-box">
+
+        <div class="yd-bigbox-head">
+            {__("Account wählen")}
+        </div>
+
+        <div class="yd-bigbox-body yd-clearfix">
+            <a id="nav_order_01" class="yd-account-priv yd-set-kind-priv active">
+                {__("Privataccount")}
+            </a>
+            <a href="/order_company/start" id="nav_order_02" class="yd-account-comp yd-set-kind-comp">
+                {__("Firmenaccount")}<br />
+                <i>{$cust->getCompany()->getName()|truncate:20:" ...":true}</i>
+            </a>
+        </div>
+
+    </div>
+    {/if}
+
+    <div class="yd-box br-address">
+
+        <div class="yd-bigbox-head">
+            {__('Lieferadresse wählen')}
+
+            <br />
+            <a id="yd-add-address" class="yd-start-adress-icon" href="/user/locations#new_address">{__('Adressen hinzufügen')}</a>
+        </div>
+
+        <div class="yd-bigbox-body {if $cust->getLocations()->count() > 0 || $cust->getCompanyLocations()->count() > 0} is-address {/if}">
+            {assign var=temp value=1}
+
+            {if $cust->getLocations()->count() == 0 && $cust->getCompanyLocations()->count() == 0}
+            {if $config->domain->base == 'janamesa.com.br'}
+            <p>Pedindo de casa ou do trabalho? Não importa, adicione quantos endereços quiser e faça seus próximos pedidos ainda máis rápidos.</p>
+
+            <a id="yd-add-address" href="/user/locations#new_address">{__('Adressen hinzufügen')}</a>
+            {else}
+            <a class="cursor yd-adress" id="yd-add-address-0">{__('Noch keine Adressen eingetragen.')}</a>
+            {/if}
+            {else}
+
+            {include file="order/_includes/start/company_address.htm"}
+
+            {include file="order/_includes/start/private_address.htm"}
+
+            {/if}
+        </div>
+
+    </div>
+    {if $cust->getLocations()->count() != 0 || $cust->getCompanyLocations()->count() != 0}
+    <a class="yd-button-240" id="yd-start-order-from-address" href="#" style="margin: 0 auto;">{__("Bestellung jetzt starten")}</a>
+
+    {if $config->domain->base == 'janamesa.com.br'}
+    <a id="yd-add-address" class="yd-button-240" href="/user/locations#new_address">{__('Adressen hinzufügen')}</a>
+    {/if}
+    {/if}
+</div>
+
+{include file='_cookies/masterpixel/orderflow.htm' uadomain=$domain_base step1=1 step2=0 step3=0 step4=0}
+
+{/block}

@@ -1,0 +1,31 @@
+{if $config->domain->base == 'lieferando.de'}
+<script id="sonar" type="text/javascript">
+    /*<![CDATA[*/
+    
+    if (ydState.maybeLoggedIn()) {
+        var sonar_customer = {
+            identifier: $.cookie('YD_UID')
+        };
+    }
+    
+    // called by $(document).ready()    
+    var track_sociomantic = function(){
+        var s=document.createElement('script');
+        s.id= 'sonar-adpan';
+        s.type= 'text/javascript';
+        s.async;
+        s.src=('https:'==document.location.protocol?'https://':'http://')
+            +'eu-sonar.sociomantic.com/js/2010-07-01/adpan/lieferando-de';
+        var x=document.getElementById('sonar');
+        x.parentNode.insertBefore(s,x);
+    };  
+    
+    $(document).ready(function(){
+        if (typeof no_sociomantic_auto_track == "undefined") {
+            track_sociomantic();
+        }      
+    });
+    
+    /* ]]> */
+</script>
+{/if}

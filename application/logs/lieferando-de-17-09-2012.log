@@ -1,0 +1,74 @@
+2012-09-17T09:40:05+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template phoneorder/index.htm 
+2012-09-17T10:42:51+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template index/index.htm 
+2012-09-17T10:42:52+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-09-17T10:46:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template index/index.htm 
+2012-09-17T10:46:39+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.test/index.html 
+2012-09-17T10:46:49+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing customer #258467 Jens Naie already a facebook user - facebookId 690363597 
+2012-09-17T10:46:49+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing updating model Default_Model_Base #258467 with modified data :: Array(    [title] => Herr/Frau    [name] => Naie    [prename] => Jens    [email] => jonz@kybernaut.de    [password] =>     [lang] => de    [sex] => m    [tel] =>     [privmail] =>     [autologin] => 0    [start] => 1    [lastlogin] => 2012-08-20 12:39:49    [countLogin] => 33    [deleted] => 0    [permanentDiscountId] =>     [ktoName] =>     [ktoNr] =>     [ktoBlz] =>     [updated] => 2012-09-17 10:46:49    [birthday] => 1971-09-03    [source] =>     [addition] =>     [facebookId] => 690363597    [facebookPost] => 1    [profileImage] => 1344438876.jpg    [nickname] =>     [whitelist] => 0    [anrede] => Herr) 
+2012-09-17T10:46:49+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing updating model Default_Model_Base #258467 with modified data :: Array(    [title] => Herr/Frau    [name] => Naie    [prename] => Jens    [email] => jonz@kybernaut.de    [password] =>     [lang] => de    [sex] => m    [tel] =>     [privmail] =>     [autologin] => 0    [start] => 1    [lastlogin] => 2012-09-17 10:46:49    [countLogin] => 34    [deleted] => 0    [permanentDiscountId] =>     [ktoName] =>     [ktoNr] =>     [ktoBlz] =>     [updated] => 2012-09-17 10:46:49    [birthday] => 1971-09-03    [source] =>     [addition] =>     [facebookId] => 690363597    [facebookPost] => 1    [profileImage] => 1344438876.jpg    [nickname] =>     [whitelist] => 0    [anrede] => Herr) 
+2012-09-17T10:46:49+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PIWIK: tracking customer variable customerId at value 258467 
+2012-09-17T10:46:49+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing User  successfully logged in 
+2012-09-17T10:46:50+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PIWIK: tracking customer variable customerId at value 258467 
+2012-09-17T10:46:50+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/settings.htm 
+2012-09-17T10:46:54+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template user/fidelity.htm 
+2012-09-17T10:46:55+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing search UNRATED ORDERS (limit 5 - start 0) for customer #258467 jonz@kybernaut.de - unratedOrderCount: 1 
+2012-09-17T10:46:55+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 5 points for action rate_high 
+2012-09-17T10:46:55+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 8 points for action accountimage 
+2012-09-17T10:46:55+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing FIDELITY - OPEN ACTIONS: Cache stored for id:  open0fidelity43a28b6df0a5a8bb018e642edbcc5e24 
+2012-09-17T10:46:55+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing FIDELITY - OPEN ACTIONS: variable was already set - don't recalculating 
+2012-09-17T15:15:58+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/login.htm 
+2012-09-17T15:16:07+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing Successfully loggged in admin #Supporter Jens Naie (417) 
+2012-09-17T15:16:07+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/dashboard.htm 
+2012-09-17T15:16:20+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-17T15:16:29+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/gridsearch.htm 
+2012-09-17T15:16:54+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-17T15:17:12+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-17T17:02:53+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/request/grid/service/options.htm 
+2012-09-17T17:03:18+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-17T17:03:21+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/request/grid/order/options.htm 
+2012-09-17T17:03:50+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/users.htm 
+2012-09-17T17:04:54+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/users.htm 
+2012-09-17T17:07:19+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/users.htm 
+2012-09-17T17:07:35+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/request/grid/customer/emailinfo.htm 
+2012-09-17T17:07:41+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/order/index.htm 
+2012-09-17T17:07:57+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/users.htm 
+2012-09-17T17:08:01+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/users.htm 
+2012-09-17T17:08:18+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-17T17:08:29+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-17T17:08:43+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-17T17:08:53+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-17T17:09:07+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-17T17:09:21+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-17T17:09:40+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/information.htm 
+2012-09-17T17:09:48+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/service.htm 
+2012-09-17T17:10:06+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/service.htm 
+2012-09-17T17:10:31+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/service.htm 
+2012-09-17T17:12:16+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/service.htm 
+2012-09-17T17:26:36+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/service.htm 
+2012-09-17T17:27:32+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/service.htm 
+2012-09-17T17:29:18+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/users.htm 
+2012-09-17T17:29:27+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/users.htm 
+2012-09-17T17:31:37+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/users.htm 
+2012-09-17T17:35:25+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/users.htm 
+2012-09-17T17:37:26+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/users.htm 
+2012-09-17T17:38:02+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/users.htm 
+2012-09-17T17:38:54+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/users.htm 
+2012-09-17T18:30:20+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/stats/sales/index.htm 
+2012-09-17T18:30:31+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/contacts.htm 
+2012-09-17T18:30:48+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/contacts.htm 
+2012-09-17T18:30:57+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/companys.htm 
+2012-09-17T18:31:04+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/companys.htm 
+2012-09-17T18:31:13+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-17T18:31:21+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/services.htm 
+2012-09-17T18:31:43+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/service.htm 
+2012-09-17T18:31:54+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/billing/service.htm 
+2012-09-17T18:32:02+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/emails.htm 
+2012-09-17T18:32:23+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/support.htm 
+2012-09-17T18:32:29+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/definitions.htm 
+2012-09-17T18:32:33+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/blacklist/keywords.htm 
+2012-09-17T18:32:43+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/blacklist/email.htm 
+2012-09-17T18:32:59+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/blacklist/email.htm 
+2012-09-17T18:33:12+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/salespersons.htm 
+2012-09-17T18:33:23+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/salespersons.htm 
+2012-09-17T18:33:32+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/inventory/overview.htm 
+2012-09-17T18:33:40+02:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template administration/inventory/overview.htm 

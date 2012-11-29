@@ -1,0 +1,112 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Statistik der Vertriebler')}
+        </div>
+        <div class="item-content">
+            <form action="/administration_stats_salespersons/index" method="post" name="form">
+            <table width="100%" class="user-tab">
+                <tr>
+                    <td width="5%">{__b('Von')}</td>
+                    <td width="15%"><input type="text" name="fromD" id="yd-statistics-start" value="{$from}"/></td>
+                    <td width="5%">{__b('Bis')}</td>
+                    <td width="15%"><input type="text" name="untilD" id="yd-statistics-end"  value="{$until}"/></td>
+                    <td width="50%"><input value="{__b('Zeitrahmen festlegen')}" type="submit" /></td>
+                </tr>
+            </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Insgesamt: %d Restaurants', $countAll)}
+        </div>
+    </div>
+</div>
+
+{foreach from=$salespersons key=cid item=c}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            <a href="/administration_salesperson/info/id/{$cid}" target="_blank">{$c['salespersonPrename']} {$c['salespersonName']}</a>
+            ({if $c['salespersonCallcenter']==1}{__b('Callcenter')}, {$c['salespersonSalary']} {__b('Euro')} {__b('pro Stunde')}{else}{__b('Aussendienst')}, {$c['salespersonSalary']} {__b('Euro')} {__b('pro Vertrag')}{/if}) : {$c['count']} {__b('Restaurants')} {if $c['noContractCount']>0}({$c['noContractCount']} {__b('ohne Vertrag')}){/if}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <th width="15%" height="30px">{__b('Restaurant')}</th>
+                    <th width="10%">{__b('Unter Vertrag seit')}</th>
+                    <th width="10%">{__b('Stadt')}</th>
+                    <th width="5%">{__b('Online')}</th>
+                    <th width="5%">{__b('Hat Vertrag')}</th>                    
+                    <th width="10%">{__b('Franchise Typ')}</th>                    
+                    <th width="5%">{__b('Bezahlt')}</th>
+                    <th width="10%">{__b('Provision')}, %</th>
+                    <th width="10%">{__b('Gebühr pro Bestellung')}, {__b('cents')}</th>
+                    <th width="10%"></th>
+                    <th width="10%"></th>
+                </tr>
+                {foreach from=$c['data'] item=d}
+                <tr>
+                    <td>
+                        <a href="/administration_service_edit/index/id/{$d['restaurantId']}">{$d['restaurantName']}</a>
+                    </td>
+                    <td>
+                        {$d['contractCreated']}
+                    </td>
+                    <td>
+                        {$d['restaurantOrt']}
+                    </td>
+                    <td>
+                        <img class="yd-state-center" src="{if $d['restaurantIsOnline']==1}{$domain_static}/images/yd-backend/yd-state-yes.png{else}{$domain_static}/images/yd-backend/yd-state-no.png{/if}">
+                        {if $d['restaurantIsOnline']==0} {$offlineStati[$d['restaurantStatus']]}{/if}
+                    </td>
+                    <td>
+                        <img class="yd-state-center" src="{if $d['hasContract']==1}{$domain_static}/images/yd-backend/yd-state-yes.png{else}{$domain_static}/images/yd-backend/yd-state-no.png{/if}">
+                    </td>
+                    <td>
+                        {$d['franchisetype']}
+                    </td>
+                    <td>
+                        {if $d['paid']}
+                            {if $smarty.session.Administration.admin->getGroupId()==1}
+                            <a href="#x" class="yd-salesperson-paid" id="yd-salesperson-paid-{$d['contractId']}">
+                                <img src="{$domain_static}/images/yd-backend/online_status_1.png"></div>
+                            </a>
+                            {else}
+                                <img src="{$domain_static}/images/yd-backend/online_status_1.png"></div>
+                            {/if}
+                        {else}
+                            <a href="#x" class="yd-salesperson-paid" id="yd-salesperson-paid-{$d['contractId']}">
+                                <img src="{$domain_static}/images/yd-backend/online_status_0.png"></div>
+                            </a>
+                        {/if}
+                    </td>
+                    <td>
+                        {if $d['restaurantKomm']>0}{$d['restaurantKomm']}{/if}
+                    </td>
+                    <td>
+                        {if $d['restaurantFee']>0}{$d['restaurantFee']}{/if}
+                    </td>
+                    <td>
+                        {if $d['restaurantOnlyCash']==1}{__b('nur Barzahlung')}{/if}
+                    </td>
+                    <td>
+                        {if $d['restaurantDeleted']==1}<span style="color:red">{__b('gelöscht')}</span>{/if}
+                    </td>
+                </tr>
+                {/foreach}
+            </table>
+        </div>
+    </div>
+</div>
+{/foreach}
+
+{/block}

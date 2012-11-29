@@ -1,0 +1,11 @@
+<li><a href="/administration_discount/checkdiscountcode?codeId={$rabattCode->getId()}" target="_blank">{__b('Gutschein prüfen')}</a></li>
+
+<li><a href="#" class="yd-edit-rabattcode" id="yd-edit-rabattcode-{$rabattCode->getId()}-{$orderId}" target="_blank">{__b('Gutschein-Aktion anzeigen')}</a></li>
+
+<li class="yd-grid-box-separation"><a href="/administration_discount/checkdiscount?rabattId={$rabattCode->getRabattId()}" target="_blank">{__b('Alle Bestellungen dieser Gutschein-Aktion')}</a></li>
+
+{if $rabattCode->getParent()->isNewCustomerDiscount() && $rabattCode->getParent()->getType() < 4}
+<li class="yd-grid-box-separation"><a href="http://{$config->domain->base}/{$rabattCode->getParent()->getReferer()}" target="_blank">{__b('Landing Page anzeigen')}</a></li>
+{/if}
+
+<li><a href="/administration_discount/deactivatediscountcode?code={$rabattCode->getCode()}" target="_blank">{__b('Gutschein sperren')}</a></li>

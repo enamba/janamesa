@@ -1,0 +1,14 @@
+TIME: 06-08-2012 17:22:38 
+ MESSAGE: TypeError: document.getElementById("fb-root") is null 
+ URL: http://www.yourdelivery.local/ 
+ LINE: 109 
+ PARENTURL: http://www.yourdelivery.local/ 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+
+TIME: 06-08-2012 17:23:06 
+ MESSAGE: TypeError: document.getElementById("fb-root") is null 
+ URL: http://www.yourdelivery.local/ 
+ LINE: 109 
+ PARENTURL: http://www.yourdelivery.local/ 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+

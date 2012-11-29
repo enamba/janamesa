@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="de" xml:lang="de" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="de" xml:lang="de" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="de" xml:lang="de" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="de" xml:lang="de" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="de" xml:lang="de">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        {if !$customTitle}
+            <title>Lieferservice, Catering, Getränke & Obstkisten ... Online bestellen - Bargeldlos bezahlen.</title>
+        {else}
+            {$customTitle}
+        {/if}
+
+        {if !$additionalMetatags}
+            <!-- static Metatags -->
+        {else}
+            {$additionalMetatags}
+        {/if}
+
+        <link rel="SHORTCUT ICON" href="/favicon.ico" type="image/x-icon" />
+
+        <link rel="stylesheet" type="text/css" href="/media/css/www.lieferando.de/yd-frontend-core.css" />
+
+        {include file='base_js.htm'}
+
+        <script type="text/javascript" src="/media/js/library/yourdelivery-prompts.js"></script>
+        <script type="text/javascript" src="/media/js/library/yourdelivery-timepicker.js"></script>
+        <script type="text/javascript" src="/media/js/library/yourdelivery-scrollfollow.js"></script>
+
+        <script type="text/javascript" src="/media/js/yourdelivery.js"></script>
+        <script type="text/javascript" src="/media/js/yourdelivery-errorHandler.js"></script>
+
+        <link rel="stylesheet" href="/media/js/library/rating/ui.stars.css" type="text/css" media="screen" />
+        <script type='text/javascript' src='/media/js/library/rating/ui.stars.js'></script>
+
+        {$additionalMetatags}
+
+        {foreach from=$additionalExternJs item=extFile}
+            <script type="text/javascript" src="{$extFile}"></script>
+        {/foreach}
+
+        {foreach from=$additionalJs item=file}
+            <script type="text/javascript" src="/media/js/{$file}"></script>
+        {/foreach}
+
+        {$xajaxJS}
+
+        {include file='localdata.htm'}
+
+    </head>
+
+    {if $APPLICATION_ENV == "production"}
+        <!-- GoogleAnalytics -->
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            try{
+                var pageTracker = _gat._getTracker("UA-7904955-1");
+                pageTracker._trackPageview();
+            }
+            catch(err){
+                // TODO log the error
+            }
+        </script>
+        <!-- AdWords -->
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var google_conversion_id = 1019477021;
+            var google_conversion_language = "en";
+            var google_conversion_format = "3";
+            var google_conversion_color = "666666";
+            var google_conversion_label = "b6zQCKukygEQnfiP5gM";
+            var google_conversion_value = 0;
+        /* ]]> */
+        </script>
+        <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js"></script>
+        <noscript>
+            <div style="display:inline;">
+                <img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1019477021/?label=b6zQCKukygEQnfiP5gM&amp;guid=ON&amp;script=0"/>
+            </div>
+        </noscript>
+    {/if}
+
+    <body id="hintergrund-02">
+        
+        <div id="yd-nonfooter">
+
+            <div id="ordering-header">
+
+                <a href="/" id="ordering-logo">&nbsp;</a>
+
+                {if !$cust->isLoggedIn()}
+                    <form name="login" action="/user/login" method="post" id="login">
+                        <span>E-Mail:</span> <input type="text" name="user" />
+                        <span>Passwort:</span> <input type="password" name="pass" />
+                        <input type="submit" value="Anmelden!" class="button" />
+                        <br /><br />
+                        <a href="#" class="yd-link-forgottenPass">&gt; Passwort vergessen</a>
+                        <a href="/user/register">&gt; Registrieren</a>
+                        <input type="hidden" name="login" value="1" />
+                    </form>
+                {/if}
+
+                {if $cust->isLoggedIn()}
+                    <div id="logout">
+                        {$cust->getFullname()} {$cust->getHidden()}
+
+                        {if $cust->isEmployee()}
+                            <em>| {$cust->getCompany()->getName()|escape:'htmlall'}</em>
+                        {/if}
+
+                        <a href="/user/logout">
+                            | <img src="{$domain_static}/images/yd-icons/schloss.png" alt="" /> Abmelden
+                        </a>
+                    </div>
+                {/if}
+
+                
+                {if $cust->isLoggedIn() && $cust->getCurrentCredit() > 0}
+                    <a href="/" id="ordering-guthaben">Guthaben: {__('%s €',$cust->getCurrentCredit()|inttoprice)}</a>
+                {/if}
+
+                {if $cust->isLoggedIn() && $cust->isEmployee()}
+                    <a id="ordering-budget">Budget: {__('%s €',$cust->getCurrentBudget()|inttoprice)}</a>
+
+                    <div id="ordering-budget-box" style="display: none;">
+                        <ul>
+                            {if not is_null($cust->getBudget())}
+                                {foreach from=$cust->getBudget()->getBudgetTimes() item=times}
+                                    {foreach from=$times item=ab}
+                                        <li>
+                                            <em>
+                                                <i>
+                                                    {$ab->day|date_weekday}
+                                                </i>
+                                                {$ab->from} - {$ab->until}
+                                            </em>
+                                            {__('%s €',$ab->amount|inttoprice)}
+                                        </li>
+                                    {/foreach}
+                                {/foreach}
+                            {/if}
+                        </ul>
+                    </div>
+                {/if}
+
+            </div> <!-- ordering-header -->
+
+            <div id="yd-content" class="yd-clearfix">
+                
+                {include file='notification.htm'}
+
+                {block name='content'}{/block}
+
+            </div>
+
+        </div>
+
+        {include file="base_footer.htm"}
+
+        <script type="text/javascript">
+            <!--
+            {foreach from=$this->getDisabledElements() item=dis}
+                if ( $("#{$dis}").length > 0 ){
+                    $("#{$dis}").hide();
+                }
+            {/foreach}
+            -->
+        </script>
+
+    </body>
+</html>

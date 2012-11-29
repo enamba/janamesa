@@ -1,0 +1,71 @@
+[06-Sep-2012 14:53:41 UTC] User Notice: function call 'get_template_vars' is unknown or deprecated. in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_wrapper.php on line 57
+ 0. handle_error() 
+ 1. trigger_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_wrapper.php:57
+ 2. Smarty_Internal_Wrapper->convert() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:765
+ 3. Smarty->__call() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:331
+ 4. Smarty->get_template_vars() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:331
+ 5. Default_View_Smarty->__get() /home/ydadmin/htdocs/lieferando/library/Default/Controller/AdministrationBase.php:34
+ 6. Default_Controller_AdministrationBase->init() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:133
+ 7. Zend_Controller_Action->__construct() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:262
+ 8. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 9. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 10. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 11. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:116
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0
+Url: /administration_service/copy
+Referer: http://www.yourdelivery.local/administration_service/copy
+[06-Sep-2012 14:53:41 UTC] User Notice: function call 'get_template_vars' is unknown or deprecated. in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_wrapper.php on line 57
+ 0. handle_error() 
+ 1. trigger_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_wrapper.php:57
+ 2. Smarty_Internal_Wrapper->convert() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:765
+ 3. Smarty->__call() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:331
+ 4. Smarty->get_template_vars() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:331
+ 5. Default_View_Smarty->__get() /home/ydadmin/htdocs/lieferando/library/Default/Controller/AdministrationBase.php:34
+ 6. Default_Controller_AdministrationBase->init() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:133
+ 7. Zend_Controller_Action->__construct() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:262
+ 8. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 9. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 10. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 11. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:116
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0
+Url: /administration_service/copy
+Referer: http://www.yourdelivery.local/administration_service/copy
+[06-Sep-2012 14:53:41 UTC] Notice: Array to string conversion in /home/ydadmin/htdocs/lieferando/library/Yourdelivery/Session/Handler.php on line 43
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Yourdelivery/Session/Handler.php:43
+ 1. Yourdelivery_Session_Handler->write() 
+ 2. session_write_close() /home/ydadmin/htdocs/lieferando/library/Zend/Session.php:701
+ 3. Zend_Session::writeClose() /home/ydadmin/htdocs/lieferando/library/Zend/Session/SaveHandler/DbTable.php:217
+ 4. Zend_Session_SaveHandler_DbTable->__destruct() 
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0
+Url: /administration_service/copy
+Referer: http://www.yourdelivery.local/administration_service/copy
+[06-Sep-2012 14:53:57 UTC] User Notice: function call 'load_filter' is unknown or deprecated. in /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_wrapper.php on line 57
+ 0. handle_error() 
+ 1. trigger_error() /home/ydadmin/htdocs/lieferando/library/Smarty/sysplugins/smarty_internal_wrapper.php:57
+ 2. Smarty_Internal_Wrapper->convert() /home/ydadmin/htdocs/lieferando/library/Smarty/Smarty.php:765
+ 3. Smarty->__call() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:216
+ 4. Smarty->load_filter() /home/ydadmin/htdocs/lieferando/library/Default/View/Smarty.php:216
+ 5. Default_View_Smarty->enableCache() /home/ydadmin/htdocs/lieferando/application/controllers/Request/ServiceController.php:63
+ 6. Request_ServiceController->preorderAction() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Action.php:513
+ 7. Zend_Controller_Action->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Dispatcher/Standard.php:289
+ 8. Zend_Controller_Dispatcher_Standard->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Controller/Front.php:954
+ 9. Zend_Controller_Front->dispatch() /home/ydadmin/htdocs/lieferando/library/Zend/Application/Bootstrap/Bootstrap.php:97
+ 10. Zend_Application_Bootstrap_Bootstrap->run() /home/ydadmin/htdocs/lieferando/library/Zend/Application.php:366
+ 11. Zend_Application->run() /home/ydadmin/htdocs/lieferando/public/index.php:116
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0
+Url: /request_service/preorder/type/rest
+Referer: http://www.yourdelivery.local/lieferservice-hamys-backstube-berlin
+[06-Sep-2012 14:53:57 UTC] Notice: Array to string conversion in /home/ydadmin/htdocs/lieferando/library/Yourdelivery/Session/Handler.php on line 43
+ 0. handle_error() /home/ydadmin/htdocs/lieferando/library/Yourdelivery/Session/Handler.php:43
+ 1. Yourdelivery_Session_Handler->write() 
+ 2. session_write_close() /home/ydadmin/htdocs/lieferando/library/Zend/Session.php:701
+ 3. Zend_Session::writeClose() /home/ydadmin/htdocs/lieferando/library/Zend/Session/SaveHandler/DbTable.php:217
+ 4. Zend_Session_SaveHandler_DbTable->__destruct() 
+Server: www.yourdelivery.local
+User agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0
+Url: /request_service/preorder/type/rest
+Referer: http://www.yourdelivery.local/lieferservice-hamys-backstube-berlin

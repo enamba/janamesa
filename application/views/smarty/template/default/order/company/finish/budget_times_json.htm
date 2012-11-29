@@ -1,0 +1,13 @@
+<script type="text/javascript">
+    <!--
+                                        
+    var btimes = [];
+    {foreach from=$cust->getBudget()->getBudgetTimes(time()) item=btime}
+    btimes.push({
+        from : '{$btime.from}',
+        until : '{$btime.until}'
+    });
+    {/foreach}
+                                        
+    -->
+</script>

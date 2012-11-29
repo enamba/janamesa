@@ -1,0 +1,15 @@
+<div class="be-1-column">
+    <div class="be-box">
+        <h2>
+            {__b('Firma: ')}{$company->getName()} (#{$company->getId()}) <a href="/administration/companylogin/id/{$company->getId()}">{__b('Login')}</a>
+        </h2>
+        <div class="be-box-in">
+            <ul class="be-tabs">
+                <li><a href="/administration_company_edit/index/companyid/{$company->getId()}">{__b('Informationen')}</a></li>
+                <li><a href="/administration_company_edit/contacts/companyid/{$company->getId()}">{__b('Firmenkontakte')}</a></li>
+                <li><a href="/administration_company_edit/assoc/companyid/{$company->getId()}">{__b('Zuordnungen')}</a></li>
+                <li><a href="/administration_company_edit/billing/companyid/{$company->getId()}">{__b('Rechnungen')}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

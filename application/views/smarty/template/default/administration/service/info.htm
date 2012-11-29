@@ -1,0 +1,582 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{if isset($restaurant)}
+
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            <h1>{__b('Dienstleister: %s #%d %s[bearbeiten]%s', $restaurant->getName(), $restaurant->getId(), '<a href="/administration_service/edit/id/{$restaurant->getId()}/">', '</a>')}</h1>
+            <h1 style="text-align: right;"><a href="/administration/servicelogin/id/{$restaurant->getId()}">{__b('Login')}</a></h1>
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr><td colspan="2">{__b('Direkte Links zu diesem Dienstleister')}:</td></tr>
+                {if (in_array(1, $serviceTypes))}
+                    <tr><td width="10%">{__b('Restaurant')}: </td><td width="90%"><b><a href="/{$restaurant->getDirectLink()}" target="_blank" >{$restaurant->getDirectLink()|default:'nicht angegeben'}</a></b></td></tr>
+                {/if}
+                {if (in_array(2, $serviceTypes))}
+                    <tr><td width="10%">{__b('Catering')}: </td><td width="90%"><b><a href="/{str_replace('lieferservice', 'catering', $restaurant->getDirectLink())}" target="_blank" >{str_replace('lieferservice', 'catering', $restaurant->getDirectLink())}</a></b></td></tr>
+                {/if}
+                {if (in_array(3, $serviceTypes))}
+                    <tr><td width="10%">{__b('Größhändler')}: </td><td width="90%"><b><a href="/{str_replace('lieferservice', 'getraenkemarkt', $restaurant->getDirectLink())}" target="_blank" >{str_replace('lieferservice', 'getraenkemarkt', $restaurant->getDirectLink())}</a></b></td></tr>
+                {/if}
+                {if (in_array(4, $serviceTypes))}
+                    <tr><td width="10%">{__b('Obstversand')}: </td><td width="90%"><b><a href="/{str_replace('lieferservice', 'obstversand', $restaurant->getDirectLink())}" target="_blank" >{str_replace('lieferservice', 'obstversand', $restaurant->getDirectLink())}</a></b></td></tr>
+                {/if}
+            </table>
+        </div>
+    </div>
+</div>
+
+{if !is_null($comments[0])}
+{$comment = $comments[0]}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+            {__b('Am')} {$comment['time']} {__b('von')} {if $comment['masterAdmin']}{$comment['aName']} ({$comment['aEmail']}){else}{$comment['cPrename']} {$comment['cName']} ({$comment['cEmail']}){/if}: <br/>
+            <b>{$comment['comment']}</b>
+        </div>
+    </div>
+</div>
+{/if}
+
+<div class="two-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Dienstleisterinformationen')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tbody>
+                    <tr>
+                        <td width="30%"><strong>{__b('Name')}</strong></td>
+                        <td width="70%">
+                            {$restaurant->getName()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Direkter Link')}: </strong></td>
+                        <td>{if $restaurant->isPremium()}{__b('ja')}{else}{__b('nein')}{/if}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Premium')}</strong></td>
+                        <td>{if $restaurant->isPremium()}{__b('ja')}{else}{__b('nein')}{/if}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Status')}</strong></td>
+                        <td>
+                            {if $restaurant->getIsOnline()==1}<span style="color:green">{__b('online')}</span>{/if}
+                            {if $restaurant->getIsOnline()==0}<span style="color:red">{__b('offline')}</span>{/if}
+                            {if $restaurant->getDeleted()==1}<span style="color:red"><b> {__b('(gelöscht)')}</b></span>{/if}
+                        </td>
+                    </tr>
+                    <tr><td colspan="2" height="40px"></td></tr>
+                    <tr>
+                        <td><strong>{__b('Anschrift')}</strong></td>
+                        <td>
+                            {$restaurant->getStreet()} {$restaurant->getHausnr()}<br />
+                            {$restaurant->getPlz()} {$restaurant->getOrt()->getOrt()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('E-Mail')}</strong></td>
+                        <td>
+                            {$restaurant->getEmail()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Telefon')}</strong></td>
+                        <td>
+                            {$restaurant->getTel()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Fax')}</strong></td>
+                        <td>
+                            {$restaurant->getFax()}
+                        </td>
+                    </tr>
+                    <tr><td colspan="2" height="40px"></td></tr>
+                    <tr>
+                        <td><strong>{__b('Kategorie')}</strong></td>
+                        <td>
+                            {$restaurant->getCategory()->name}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Beschreibung')}</strong></td>
+                        <td>
+                            {nl2br($restaurant->getDescription())}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Öffentlicher Vermerk')}</strong></td>
+                        <td>
+                            {nl2br($restaurant->getSpecialComment())}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('interner Vermerk')}</strong></td>
+                        <td>
+                            {nl2br($restaurant->getStatecomment())}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Benachrichtigungen per')}</strong></td>
+                        <td>
+                            {if $restaurant->getNotify()=="fax"}{__b('Fax')}{/if}
+                            {if $restaurant->getNotify()=="email"}{__b('Email')}{/if}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Google Kategorien')}</strong></td>
+                        <td>
+                            {if $restaurant->hasAllGoogleCategories()}
+                                <span style="color:green">{__b('komplett')}</span>
+                            {else}
+                                <span style="color:red">{__b('nicht komplett')}</span>
+                            {/if}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="item-head">
+            {__b('Öffnungszeiten')}
+        </div>
+        <div class="item-content">
+            <table width="100%">
+                <tr>
+                    <th width="49%">{__b('Reguläre Öffnungszeiten')}</th>
+                    <th width="2%"></th>
+                    <th width="49%">{__b('Spezielle Öffnungszeiten')}</th>
+                </tr>
+                <tr>
+                    <td height="20"></td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <table class="user-tab" width="100%">
+                            {$week = array('Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag')}
+                            {section name=day start=1 loop=8}
+                            <tr>
+                                <td>{$week[$smarty.section.day.iteration % 7]}</td>
+                                <td>
+                                    {foreach from=$restaurant->getOpeningsForDay($smarty.section.day.iteration % 7) item=open}
+                                    {$open->from|substr:0:5} - {$open->until|substr:0:5}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    {/foreach}
+                                </td>
+                            </tr>
+                            {/section}
+                            <tr>
+                                <td>{__b('Feiertage')}</td>
+                                <td>
+                                    {foreach from=$restaurant->getOpeningsForDay(10) item=open}
+                                    {$open->from|substr:0:5} - {$open->until|substr:0:5}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    {/foreach}
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td></td>
+                    <td valign="top">
+                        <table class="user-tab" width="100%">
+                        {$specialOpenings = Yourdelivery_Model_Servicetype_OpeningsSpecial::getSpecialOpening($restaurant->getId())}
+                        {if count($specialOpenings) > 0}
+                            {foreach from=$specialOpenings item=open}
+                            <tr>
+                                <td>
+                                    {$open.specialDate}
+                                </td>
+                                <td>
+                                    {if $open.closed == 1}
+                                    <font color="#999">{__b('Geschlossen')}</font>
+                                    {else}
+                                    {$open.from|substr:0:5} - {$open.until|substr:0:5}
+                                    {/if}
+                                </td>
+                            </tr>
+                            {/foreach}
+                            {/if}
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+<div class="two-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('System')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tbody>
+                    <tr>
+                        <td width="40%"><strong>{__b('Anzahl Bestellungen')}</strong></td>
+                        <td width="60%">
+                            {$restaurant->getOrdersCount()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Erstellt am')}</strong></td>
+                        <td>
+                            {$restaurant->getCreated()|date_format:"%D"}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Vertrieb durch')}</strong></td>
+                        <td>
+                            {if !is_null($restaurant->getSalesperson())}
+                                <a href="/administration_salesperson/info/id/{$restaurant->getSalesperson()->getId()}">{$restaurant->getSalesperson()->getPrename()} {$restaurant->getSalesperson()->getName()}</a>
+                            {/if}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Benachrichtigung bezahlte Bestellg.')}</strong></td>
+                        <td>
+                            {$restaurant->getNotifyPayed()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Provision (aktuell/statisch)')}</strong></td>
+                        <td>
+                            {$restaurant->getCommission()} / {$restaurant->getStaticCommission()} %
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Gebühr pro Bestellung (aktuell/statisch)')}</strong></td>
+                        <td>
+                            {$restaurant->getFee()|inttoprice} / {$restaurant->getStaticFee()|inttoprice} {__b('€')}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Gebühr pro Artikel (aktuell/statisch)')}</strong></td>
+                        <td>
+                            {$restaurant->getItem()|inttoprice} / {$restaurant->getStaticItem()|inttoprice} {__b('€')}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kundennummer</strong></td>
+                        <td>
+                            {$restaurant->getCustomerNr()}
+                        </td>
+                    </tr>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="item">
+        <div class="item-head">
+            {__b('Kontoinformationen')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tbody>
+                    {if $config->domain->base != "janamesa.com.br"}
+                    <tr>
+                        <td width="40%"><strong>{__b('Kontonummer')}:</strong></td>
+                        <td width="60%">
+                            {$restaurant->getKtoNr()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Bankleitzahl')}:</strong></td>
+                        <td>
+                            {$restaurant->getKtoBlz()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('IBAN')}:</strong></td>
+                        <td>
+                            {$restaurant->getKtoIban()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('BIC(SWIFT)')}:</strong></td>
+                        <td>
+                            {$restaurant->getKtoSwift()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Kontobesitzer')}:</strong></td>
+                        <td>
+                            {$restaurant->getKtoName()}
+                        </td>
+                    </tr>
+                    {else}
+                    <tr>
+                        <td width="40%"><strong>{__b('Bank')}:</strong></td>
+                        <td width="60%">
+                            {$restaurant->getKtoBank()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Agentur')}:</strong></td>
+                        <td>
+                            {$restaurant->getKtoAgentur()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Kontonummer')}:</strong></td>
+                        <td>
+                            {$restaurant->getKtoNr()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Ziffer')}:</strong></td>
+                        <td>
+                            {$restaurant->getKtoDigit()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Kontobesitzer')}:</strong></td>
+                        <td>
+                            {$restaurant->getKtoName()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('CPF')}:</strong></td>
+                        <td>
+                            {$restaurant->getUstIdNr()}
+                        </td>
+                    </tr>
+                    {/if}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="two-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Ansprechpartner')}
+        </div>
+        <div class="item-content">
+        {if !is_null($restaurant->getContact())} <!-- if contact exists START -->
+            <table class="user-tab">
+                <thead>
+                    <tr>
+                        <th colspan="2"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td width="40%"><strong>ID</strong></td>
+                        <td width="60%">
+                            {$restaurant->getContact()->getId()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Nachname')}, {__b('Vorname')}</strong></td>
+                        <td>
+                            <a href="/administration_contact/edit/id/{$restaurant->getContact()->getId()}">{$restaurant->getContact()->getName()}, {$restaurant->getContact()->getPrename()}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Email')}</strong></td>
+                        <td>
+                            <a href="mailto:{$restaurant->getContact()->getEmail()}">{$restaurant->getContact()->getEmail()}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Telefonnummer')}</strong></td>
+                        <td>
+                            {$restaurant->getContact()->getTel()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Fax')}</strong></td>
+                        <td>
+                            {$restaurant->getContact()->getFax()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Position')}</strong></td>
+                        <td>
+                            {$restaurant->getContact()->getPosition()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Anschrift')}</strong></td>
+                        <td>
+                            {$restaurant->getContact()->getStreet()} {$restaurant->getContact()->getHausnr()}<br />
+                            {if $restaurant->getContact()->getPlz()!=0}{$restaurant->getContact()->getPlz()} {$restaurant->getContact()->getOrt()}{/if}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            {else}
+                {__b('Kein Ansprechpartner angegeben')}
+            {/if} <!-- if contact exists END -->
+        </div>
+    </div>
+
+
+<div class="item">
+        <div class="item-head">
+            {__b('Rechungskontakt')}
+        </div>
+        <div class="item-content">
+        {if !is_null($restaurant->getBillingContact())} <!-- if contact exists START -->
+            <table class="user-tab">
+                <thead>
+                    <tr>
+                        <th colspan="2"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td width="40%"><strong>ID</strong></td>
+                        <td width="60%">
+                            {$restaurant->getBillingContact()->getId()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Nachname')}, {__b('Vorname')}</strong></td>
+                        <td>
+                            <a href="/administration_contact/edit/id/{$restaurant->getBillingContact()->getId()}">{$restaurant->getBillingContact()->getName()}, {$restaurant->getBillingContact()->getPrename()}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Email')}</strong></td>
+                        <td>
+                            <a href="mailto:{$restaurant->getBillingContact()->getEmail()}">{$restaurant->getBillingContact()->getEmail()}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Telefonnummer')}</strong></td>
+                        <td>
+                            {$restaurant->getBillingContact()->getTel()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Fax')}</strong></td>
+                        <td>
+                            {$restaurant->getBillingContact()->getFax()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Position')}</strong></td>
+                        <td>
+                            {$restaurant->getBillingContact()->getPosition()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>{__b('Anschrift')}</strong></td>
+                        <td>
+                            {$restaurant->getBillingContact()->getStreet()} {$restaurant->getBillingContact()->getHausnr()}<br />
+                            {if $restaurant->getBillingContact()->getPlz()!=0}{$restaurant->getBillingContact()->getPlz()} {$restaurant->getBillingContact()->getOrt()}{/if}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            {else}
+                {__b('Kein Rechungskontakt angegeben')}
+            {/if} <!-- if contact exists END -->
+        </div>
+    </div>
+</div>
+
+<div class="two-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Liefergebiete')}
+        </div>
+        <div class="item-content">
+            <table>
+                <tr>
+                    <td>
+                        {foreach from=$restaurant->getRanges() item=location}
+                            {$location.cityname}<br/>
+                        {/foreach}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="item-head">
+            {__b('Adminrechte')}
+        </div>
+        <div class="item-content">
+            <table>
+                <tr>
+                    <td>
+                        {foreach from=$admins item=a}
+                            <a href="/administration_user_edit/userid/{$a->getId()}">{$a->getPrename()} {$a->getName()}</a><br/>
+                        {/foreach}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Rechnungen')}
+        </div>
+        <div class="item-content">
+            <a href='/administration_billing/service/ordergrid/b.id_DESC/RestaurantIdgrid/{$restaurant->getId()}'>{__b('Alle Rechnungen von %s ansehen', $restaurant->getName())}</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Bestellungen')}:<a name="orders"></a>
+        </div>
+        <div class="item-content" id="yd-order-grid">
+            {$grid}
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="one-column-box">
+     <div class="item">
+        <div class="item-head">
+            {__b('Kommentare')}
+        </div>
+         <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <th width="15%">{__b('Eingetragen am')}</th>
+                    <th width="15%">{__b('Author')}</th>
+                    <th width="50%">{__b('Kommentar')}</th>
+                    <th width="10%">{__b('Eingeloggt')}</th>
+                    <th width="10%"></th>
+                </tr>
+                {foreach from=$comments item=comment}
+                <tr>
+                    <td>{$comment['time']}</td>
+                    <td>{if $comment['masterAdmin']}{$comment['aName']} ({$comment['aEmail']}){else}{$comment['cPrename']} {$comment['cName']} ({$comment['cEmail']}){/if} </td>
+                    <td>{$comment['comment']}</td>
+                    <td>{if $comment['masterAdmin']}{__b('aus Admin-backend')}{else}{__b('direkt')}{/if}</td>
+                    <td></td>
+                </tr>
+                {/foreach}
+            </table>
+         </div>
+    </div>
+</div>
+
+{/if}
+{/block}

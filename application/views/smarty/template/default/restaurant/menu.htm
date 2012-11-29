@@ -1,0 +1,148 @@
+{extends file="restaurant/base.htm"}
+{block name="content"}
+
+{if isset($restaurant)}
+<div id="yd-restaurant-backend-wait" style="display:none;"><img src="{$domain_static}/images/yd-backend/yd-back-load.gif" /></div>
+
+<div class="be-1-column">
+    <div class="be-box">
+        <h2><a href="#x" id="yd-add-category"><span>{__b('Kategorie hinzufügen')}</span><span class="hidden">{__b('Schließen')}</span></a></h2>
+
+        <div class="be-box-in">
+            <form action="" method="post" name="form" id="yd-new-category-form" class="hidden">
+                <input type="hidden" name="restaurantId" value="{$restaurant->getId()}"/>
+
+                <div class="yd-backend-newcategory" id="yd-new-category">
+                    <ul>
+                        <li>
+                            {__b('Typ')}
+                            <div>
+                                <input id="yd-addcathegory-st1" type="checkbox" name="servicetypes[1]" value="1" checked> {__b('Restaurant')}
+                                <input id="yd-addcathegory-st2" type="checkbox" name="servicetypes[2]" value="2"> {__b('Catering')}
+                                <input id="yd-addcathegory-st3" type="checkbox" name="servicetypes[3]" value="3"> {__b('Großhändler')}
+                            </div>
+                        </li>
+                        <li>
+                            {__b('Parent')}
+                            <div>
+                                <select name="parentMealCategoryId">
+                                    <option value="0"></option>
+                                    {foreach from=Yourdelivery_Model_DbTable_Meal_CategoriesParents::getAll() item=p}
+                                    <option value="{$p['id']}">{$p['name']}</option>
+                                    {/foreach}
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            {__b('Name *')}
+                            <div>
+                                <input type="text" name="name" class="inp broad-inp" value="" id="yd-addcathegory-name" />
+                            </div>
+                        </li>
+                        <li>
+                            {__b('Beschreibung')}
+                            <div>
+                                <textarea name="description" class="inp" id="yd-addcathegory-description"></textarea>
+                            </div>
+                        </li>
+                        <li>
+                            {__b('MwSt, %')}
+                            <div>
+                                <select name="mwst">
+                                    {foreach from=Default_Helpers_Money::getAllVats() item=v}
+                                    <option value="{$v}">{$v}</option>
+                                    {/foreach}
+                                </select>
+                                <small>
+                                    {__b('19% - Getränke, Eis, Zigaretten, etc')}<br />
+                                    {__b('7% - zubereitete Speisen')}
+                                </small>
+                            </div>
+                        </li>
+                        <li>
+                            {__b('Nicht im Mindestbestellwert')}
+                            <div>
+                                <input value="1" type="checkbox" name="excludeFromMinCost" id="yd-addcathegory-excludeFromMinCost" />
+                            </div>
+                        </li>
+                        <li>
+                            {__b('Pfand')}
+                            <div>
+                                <input value="1" type="checkbox" name="hasPfand" id="yd-addcathegory-hasPfand" />
+                            </div>
+                        </li>
+                        <li>
+                            {__b('Bestellzeit')}
+                            <div>
+                                {__b('Von')} {include file='administration/timebit.htm' separator=':' mode='from'} {__b('Bis')} {include file='administration/timebit.htm' separator=':' mode='until'}
+                                <br /><br />
+                                <input type="checkbox" name="weekdays[]" value="1" id="yd-addcathegory-mo" checked /> {__b('Mo')}
+                                <input type="checkbox" name="weekdays[]" value="2" id="yd-addcathegory-di" checked /> {__b('Di')}
+                                <input type="checkbox" name="weekdays[]" value="3" id="yd-addcathegory-mi" checked /> {__b('Mi')}
+                                <input type="checkbox" name="weekdays[]" value="4" id="yd-addcathegory-do" checked /> {__b('Do')}
+                                <input type="checkbox" name="weekdays[]" value="5" id="yd-addcathegory-fr" checked /> {__b('Fr')}
+                                <input type="checkbox" name="weekdays[]" value="6" id="yd-addcathegory-sa" checked /> {__b('Sa')}
+                                <input type="checkbox" name="weekdays[]" value="7" id="yd-addcathegory-so" checked /> {__b('So')}
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#" id="yd-save-new-category" class="button">{__b('Speichern')}</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="be-1-column">
+    <div class="be-box">
+        <h2>{__b('Markierung')}</h2>
+        <div class="be-box-in">
+            <input class="yd-mark-menu-as-new" id="yd-mark-menu-{$restaurant->getId()}" type="button" value="{__b('Karte als neu markieren')}" />
+            <input class="yd-mark-menu-as-old" id="yd-mark-menu-{$restaurant->getId()}" type="button" value="{__b('Karte als alt markieren')}" />
+
+            <span id="yd-setting-newmenu-status">
+                {if is_null($restaurant->getMenuIsNewUntil())}
+                {__b('Speisekarte ist nicht neu')}
+                {else}
+                {__b('Speisekarte ist bis %s als neu markiert', $restaurant->getMenuIsNewUntil()|date_format:__b('d.m.Y'))}
+                {/if}
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="be-1-column">
+    <div class="be-box">
+        <h2>{__b('Kategorien')}</h2>
+        <div class="be-box-in">
+            <table width="100%" id="yd-restaurant-categories-links" cellspacing="8">
+                {include file='request/restaurant/getcategorieslist.htm'}
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="be-1-column">
+    <div class="be-box">
+        <h2>{__b('Speisekarte')}</h2>
+        <div class="be-box-in">
+            <table>
+                <tr>
+                    <td id="yd-restaurant-selected-category">
+                        {__b('Bitte wählen Sie eine Kategorie!')}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+{else}
+{__b('Kein Restaurant wurde definiert!')}
+{/if}
+
+{/block}

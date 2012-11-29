@@ -1,0 +1,404 @@
+{extends file='administration/base.htm'}
+{block name="content"}
+<style type="text/css">
+
+    {if !$isdeveloper}
+    .yd-definitions td:nth-child(3) {
+        display: none;
+    }
+    {/if}
+
+</style>
+
+<div class="yd-definitions">
+    <table>
+        <tr>
+            <td>
+                Alle Statitiken über Bestellungen beziehen sich nur auf die bestätigte und gelieferte Bestellungen. Die momentan noch nicht bestätigte oder noch in prepayment sich befindende Bestellungen werden nicht berücksichtigt, das gilt auch für stornierte, fake Bestellungen und andere Sonderfälle.<br/><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Statistiken über meistverkaufte Speisen oder top-Restaurants beziehen sich auch auf inzwischen gelöschte Speisen/Dienstleister. Wenn nur aktive Speisen, Dienstleister benötigt werden, soll das erwähnt werden.<br/><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Bei den Anfragen zu Umsatz bitte unbedingt angeben, welche der folgenden Kennzahlen enthalten sein sollen:<br/><br/>
+                
+                <ul>
+                    <li>Transaktiongerbühren (paypal) (o.charge) - Standartmäßig nicht enthalten</li>
+                    <li>Kourierrabatt (o.courierDiscount) - Standartmäßig nicht abgezogen</li>
+                    <li>Rabattwert (o.discountAmount) - Standartmäßig nicht abgezogen</li>
+                </ul>
+            </td>
+        </tr>
+    </table>    
+        <br/><br/><br/><br/>
+
+        <table CELLPADDING=30>
+            <tr>
+                <td width="20%">
+                    1. Online Dienstleister, die in ein PLZ Gebiet liefern
+                </td>
+
+                <td width="40%">
+                    Die Liste der DL, die in dieses PLZ Gebiet liefern, nicht gelöscht sind und der Eintrag zu dem Liefergebiet bei dem DL nicht offline ist.
+                </td>
+
+                <td width="40%">
+                    <pre>
+select r.* from restaurants r 
+	join restaurant_plz rp on r.id=rp.restaurantId 
+		where r.deleted=0 and rp.plz='10115' and rp.status=1
+			group by r.id;
+
+                    </pre>
+                </td>
+            </tr>
+
+
+
+
+
+            <tr>
+                <td>
+                    2. Anzahl, Umsatz und durchschnittlicher Wert der Bestellungen bei bestimmten DL in einem bestimmten Monat. 
+                </td>
+                <td>
+                    In Umsatz eingeschlossen sind Bestellwert, Lieferkosten und Kourierkosten von allen Bestellungen die bestätigt sind. Rabattwert ist enthalten, Kourierrabatt ist nicht enthalten.
+                </td>
+
+                <td><pre>
+select
+	count(id) Anzahl,
+	round(sum(o.total + o.serviceDeliverCost + o.courierCost)/100,2) Umsatz,
+	round((sum(o.total + o.serviceDeliverCost + o.courierCost)/count(id))/100,2) DurchschnittswertDerBestellungen
+		from orders o
+		where
+			o.state>0 and
+			o.time>'2012-05-01' and
+			o.time<'2012-06-01' and
+			o.restaurantId in (...);
+                    </pre>
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td>
+                    3. Anzahl und Name der meist verkauften Produkte in einem bestimmten Monat.
+                </td>
+                <td>
+                    Es wird jede einzelne verkaufte Speise gezählt. Wenn also jemand in einer Bestellung vier Cola bestellt, dann werden 4xCola gezählt. Es werden auch die Speisen gezählt, die inzwischen gelöscht wurden. Wenn nur die Namen der aktiven Speisen benötigt werden, das muss extra erwähnt werden.
+                </td>
+                <td>
+                    <pre>
+select sum(obm.count) AnzahlSpeisen, m.name Speise
+	from orders o
+		join orders_bucket_meals obm on obm.orderId=o.id
+			join meals m on obm.mealId=m.id
+				where
+					o.state>0 and
+					o.time>'2012-05-01' and
+					o.time<'2012-06-01' and
+					o.restaurantId in (...)
+						group by m.name
+							order by AnzahlSpeisen desc
+								limit 100;
+                    </pre>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td>
+                    4. Alle Bestellungen nach Bezahlmethode sortiert in einem bestimmten Monat
+                </td>
+                <td></td>
+                <td>
+                    <pre>
+select o.id, o.nr, o.payment, o.time, o.restaurantId
+	from orders o
+		where
+			o.state>0 and
+			o.time>'2012-05-01' and
+			o.time<'2012-06-01' and
+			o.restaurantId in (...)
+				order by o.payment;
+                    </pre>
+                </td>
+            </tr>
+
+
+
+
+
+            <tr>
+                <td>
+                    5. Ein Ranking der Küchenarten nach der Anzahl der Bestellungen in einem bestimtmen Monat
+                </td>
+                <td>
+                    Es werden die Küchenarten verwendet, wie sie vom Benutzer zum Sortieren der Dienstleister in Frontend gewählt werden können. Gezählt wird die Anzahl der Speisen, nicht die Anzahl der Bestellungen.
+                </td>
+                <td>
+                    <pre>
+select sum(obm.count) AnzahlSpeisen, rc.name from orders o
+	join orders_bucket_meals obm on obm.orderId=o.id
+	join restaurants r on o.restaurantId=r.id
+	join restaurant_categories rc on rc.id=r.categoryId
+		where o.state>0 and o.time>'2012-03-01' and o.time<'2012-06-01'
+			group by rc.id
+				order by AnzahlSpeisen desc
+					limit 100
+                    </pre>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td>
+                    6. Die Top 100 der meinstverkauften Speisekategorien  in einem bestimtmen Monat
+                </td>
+                <td>
+                    Es werden die Namen der Kategorien als Kriterium verwendet. Es muss berücksichtig werden, dass für diese Statistik 'Pizza', 'Pizzas' und 'Pizzen' drei unterschiedliche Speisekategorien sind.
+                </td>
+                <td>
+                    <pre>
+select sum(obm.count) AnzahlSpeisen, mc.name Kategorie from orders o
+	join orders_bucket_meals obm on obm.orderId=o.id
+	join meals m on obm.mealId=m.id
+	join meal_categories mc on mc.id=m.categoryId
+		where o.state>0 and m.deleted=0 and o.time>'2012-03-01' and o.time<'2012-06-01'
+			group by mc.name
+				order by AnzahlSpeisen desc
+					limit 100;
+                    </pre>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td>
+                    7. Brutto und Nettowert der Bestellungen in einem bestimmten Monat
+                </td>
+                <td>
+                    Bruttowert ist die Zahl, die in Backend bei Bestellungen steht. Beim Nettowert werden die Steuer abgezogen. Die Zahl ist ungefähr, weil wir in diesem Fall davon ausgehen, dass mwst bei 7% liegt. Wenn eine absolut genaue Statistik benötigt wird, bitte ansagen, es wird anders berechnet.
+                </td>
+                <td>
+                    <pre>
+select 
+	o.id,  
+	round((o.total + o.serviceDeliverCost + o.courierCost)/100,2) `BruttoWert`,
+	round(sum((obm.cost * obm.count)/(100 + m.mwst)),2) `NettoWert`
+		from orders o 
+			join orders_bucket_meals obm on obm.orderId=o.id
+			join meals m on m.id=obm.mealId
+				where o.state > 0 and  o.time>'2012-05-01' and o.time<'2012-06-01'
+					group by o.id;
+                    </pre>
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td>
+                    8. Ein Ranking der unterschiedlichen Zahlunsmethoden nach der Anzahl der Bestellungen in einem bestimmten Monat.
+                </td>
+                <td></td>
+                <td>
+                    <pre>
+select count(o.id) AnzahlBestellungen, o.payment from orders o
+	where o.state>0 and o.time>'2012-03-01' and o.time<'2012-06-01'
+		group by o.payment
+			order by AnzahlSpeisen desc
+				limit 10;
+                    </pre>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td>
+                    9. Statistik pro DL:
+                    Anzahl aller bestätigten Bestellungen
+                    Anzahl bar
+                    Anzahl paypal
+                    Anzahl ebanking
+                    Anzahl bill
+                    Anzahl credit
+                    gesamt Umsatz
+                    Durchschnittsumsatz pro Bestellung 
+                </td>
+                <td></td>
+                <td>
+                    <pre>
+SELECT
+    o.restaurantId as 'DL-ID'
+    ,COUNT(o.id) as 'Anzahl aller bestätigten Bestellungen'
+    ,SUM(IF(o.payment = 'bar', 1, 0)) as 'Anzahl bar'
+    ,SUM(IF(o.payment = 'paypal', 1, 0)) as 'Anzahl paypal'
+    ,SUM(IF(o.payment = 'ebanking', 1, 0)) as 'Anzahl ebanking'
+    ,SUM(IF(o.payment = 'bill', 1, 0)) as 'Anzahl bill'
+    ,SUM(IF(o.payment = 'credit', 1, 0)) as 'Anzahl credit'
+    ,CAST(SUM(o.total + o.serviceDeliverCost + o.courierCost)/100 AS DECIMAL(7,2)) as 'gesamt Umsatz'
+    ,CAST((SUM(o.total + o.serviceDeliverCost + o.courierCost)/100) / COUNT(o.id) AS DECIMAL(7,2)) as 'Durchschnittsumsatz pro Bestellung'
+		FROM orders o
+			WHERE o.restaurantId IN(X) AND o.state > 0 AND o.id > 0 AND o.time>='2012-02-01' and o.time<'2012-03-01'
+				GROUP BY o.restaurantId
+                    </pre>
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td>
+                    10. Wie oft gehen die Drucker Offline in einem bestimmten Monat
+                </td>
+                <td></td>
+                <td>
+                    <pre>
+SELECT SUBSTRING(h.callbackAvailable, 18, 6) `printerId`, COUNT `countOffline`
+	FROM heyho_messages h
+		WHERE h.message = 'Drucker ging offline' AND YEAR(h.created) = YEAR(CURDATE()) AND MONTH(h.created) = 2
+			GROUP BY h.callbackAvailable
+				ORDER BY `printerId`;
+                    </pre>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td>
+                    11. Anzahl Positive/Negative Bewertungen in einem bestimtmen Monat.
+                </td>
+                <td>
+                    Eine positive Bewertung ist eine Bewertung mit Angabe "würden sie diesen DL weiterempfehlen" auf "ja". Die Sterne bei Qualität und Lieferung werden nicht berücksichtigt. Es werden alle Bewertungen gezählt, online und offline.
+                </td>
+                <td>
+                    <pre>
+select count(id) 
+	from `lieferando.de`.restaurant_ratings 
+		where advise=1 and created>='2012-02-01' and created<'2012-03-01';
+                    </pre>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td>
+                    12. Wie viele Gutscheincodes von einer Rabattaktion wurden eingelöst
+                </td>
+                <td>
+                    Es werden die bestätigten Bestellungen gezählt, die mit den Gutscheinen aus dieser Aktion gemacht wurden.
+                </td>
+                <td>
+                    <pre>
+select count(o.id) from `lieferando.de`.`orders` o
+	join  `lieferando.de`.rabatt_codes rc on o.rabattcodeId=rc.id
+		where o.state>0 and rc.rabattId=X;
+                    </pre>
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td>
+                    13. Bestellungen mit der Angabe der Provision in einem bestimmten Monat
+                </td>
+                <td>
+                </td>
+                <td>
+                    <pre>
+SELECT
+	o.id,
+    IF(o.contract = 1,IF(
+        o.domain = 'www.lieferando.de' OR o.domain = 'lieferando.de' OR o.domain is null OR o.domain = 'www.eat-star.de' OR o.domain = 'eat-star.de'
+        ,CAST((((o.total + o.serviceDeliverCost * r.billDeliverCost) * IF(rc.komm IS NOT NULL,rc.komm,r.komm) / 100) + IF(rc.fee IS NOT NULL, rc.fee, r.fee) + (SUM(obm.count) * IF(rc.item IS NOT NULL, rc.item, r.item)))/100 AS decimal(6,2))
+        ,CAST((((o.total + o.serviceDeliverCost * r.billDeliverCost) * r.kommSat / 100) + r.feeSat + (SUM(obm.count) * r.itemSat))/100 AS decimal(6,2))
+    ),0.00) as provi
+	FROM orders o
+		JOIN orders_bucket_meals obm on obm.orderId = o.id
+		LEFT JOIN restaurants r ON r.id = o.restaurantId
+		LEFT JOIN restaurant_commission rc ON rc.restaurantId = o.restaurantId AND o.deliverTime between rc.from AND rc.until
+			WHERE 1
+				AND o.state > 0
+				AND o.id > 0
+				AND o.time>'2012-06-01' AND o.time<'2012-07-01'
+					GROUP BY o.id;
+                    </pre>
+                </td>
+            </tr>
+            
+            
+            
+            
+            <tr>
+                <td>
+                    14. Upselling Rechnungen für einen bestimmten Monat
+                </td>
+                <td>
+                </td>
+                <td>
+                    <pre>
+                         select 
+                            'Belegnummer', 'Restaurant', 'Belegdatum', 'PLZ', 'verkauftes Brutto',
+                            'Kundennummer', 'Gutschrift', 'Rechnungsbetrag',
+                            'Brutto Provision inkl 19% MwSt.','Discount',
+                            '7% Netto', '7% Steuer', '19% Netto', '19% Steuer',
+                            'Pfand','PayPal', 'Kreditkarte',
+                            'Rechnung', 'Lastschrift', 'Überweibung', 'Bar'
+                        UNION
+
+                        select
+                            SUBSTR(b.number,14,6) as 'Belegnummer',
+                            r.name as 'Restaurant',
+                            SUBSTR(DATE_FORMAT(ug.created, '%Y.%m.%d'),1,10) as 'Belegdatum',
+                            r.plz as 'PLZ',
+                            REPLACE(FORMAT(ROUND(b.brutto/100,2),2),'.',',')  as 'Verkauftes Brutto',
+                            r.customerNr as 'Kundennummer',
+                            '0' as 'Gutschrift',
+                            REPLACE(FORMAT(ROUND(b.amount/100,2),2),'.',',') as 'Rechnungsbetrag',
+                            REPLACE(FORMAT(ROUND(b.prov/100,2),2),'.',',') as 'Brutto Provision inkl 19% MwSt.',
+                            REPLACE(FORMAT(ROUND(b.discount/100,2),2),'.',',') as 'Discount',
+
+                            REPLACE(FORMAT(ROUND(b.item2Value/100,2),2),'.',',') as '7% Netto',
+                            REPLACE(FORMAT(ROUND(b.tax2Value/100,2),2),'.',',') as '7% Steuer',
+                            REPLACE(FORMAT(ROUND(b.item1Value/100,2),2),'.',',') as '19% Netto',
+                            REPLACE(FORMAT(ROUND(b.tax1Value/100,2),2),'.',',') as '19% Steuer',
+
+                            REPLACE(FORMAT(ROUND(b.pfand/100,2),2),'.',',') as 'Pfand',
+
+                            REPLACE(FORMAT(ROUND(b.paypal/100,2),2),'.',',') as 'PayPal',
+                            REPLACE(FORMAT(ROUND(b.credit/100,2),2),'.',',') as 'Kreditkarte',
+                            REPLACE(FORMAT(ROUND(b.bill/100,2),2),'.',',') as 'Rechnung',
+                            REPLACE(FORMAT(ROUND(b.debit/100,2),2),'.',',') as 'Lastschrift',
+                            REPLACE(FORMAT(ROUND(b.ebanking/100,2),2),'.',',') as 'Überweisung',
+                            REPLACE(FORMAT(ROUND(b.cash/100,2),2),'.',',') as 'Bar'
+                        from billing b
+                        inner join upselling_goods ug on ug.id = b.refId
+                        inner join restaurants r on r.id = ug.restaurantId
+                        where mode = 'upselling_goods' and ug.created>'2012-07-01' and ug.created<'2012-07-31';
+                    </pre>
+                </td>
+            </tr>
+
+        </table>
+</div>
+{/block}

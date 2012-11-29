@@ -1,0 +1,184 @@
+<h2 style="font-weight: normal; font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #555555;">
+    {__("Deine Bestellung vom %s in der Übersicht:", $order->getTime()|date_format:__("%A, %d.%m.%G um %H:%M Uhr"))}
+</h2>
+
+{if $config->domain->base == 'lieferando.de' && ($order->getService()->getId()==12820 || $order->getService()->getId() == 13244)}
+<p style="padding:10px; border:1px solid #ccc;background:#f5f5f5;text-align:center;color:red;">
+    Leider können wir Dir Deine Bestellung nicht wie gewohnt liefern, da
+    Vapiano seit dem 01.01.2011 nur noch die Abholung durch den Kunden selbst
+    akzeptiert. Wir bitten Dich daher <b>gegen Vorlage dieser Bestellbestätigung</b> Dein
+    Essen in der Filiale {$order->getService()->getStreet()} {$order->getService()->getHausnr()} <b>selbst abzuholen</b>.
+</p>
+{/if}
+
+<p>
+
+    <strong>{__("Lieferzeitpunkt:")}</strong> {$order->getDeliverTimeFormated()|date_format:__("%A, %d.%m.%G um %H:%M Uhr")}<br />
+    <strong>{__("Lieferadresse:")}</strong> {$order->getLocation()->getStreet()} {$order->getLocation()->getHausnr()}, {$order->getLocation()->getPlz()} {$order->getLocation()->getOrt()->getOrt()}<br />
+
+    {if $order->getLocation()->getComment()!=''}<strong>{__("Lieferanweisungen:")} </strong>{$order->getLocation()->getComment()}<br />{/if}
+    {if $order->getLocation()->getCompany()!=''}<strong>{__("Firma:")} </strong>{$order->getLocation()->getCompany()}<br />{/if}
+    {if $order->getLocation()->getEtage()!=''}<strong>{__("Stockwerk:")} </strong>{$order->getLocation()->getEtage()}<br />{/if}
+    <br />
+
+    {if $order->getService()->isOnlyPickup()}
+    {__("Bitte hole Dir Deine Bestellung direkt bei %s in %s %s, %s %s ab.", $order->getService()->getName(), $order->getService()->getStreet(), $order->getService()->getHausnr(), $order->getService()->getPlz(), $order->getService()->getOrt()->getOrt())}
+    {else}
+    {__("Bitte beachte, dass es je nach Uhrzeit, Witterungsbedingungen etc. zu Verzögerungen bei der Lieferung kommen kann.")}
+    {/if}
+
+    <br /><br />
+
+<table style="font-size: 12px; width: 100%; color: #555555; border-collapse: collapse;">
+    <tr style="border-bottom: 1px solid #cccccc; font-weight: bold;">
+        <td width="5%"></td>
+        <td width="10%">{__("Menge")}</td>
+        <td width="65%">{__("Gericht")}</td>
+        <td width="10%">{__("Nr")}</td>
+        <td width="10%" align="right">{__("Preis")}</td>
+    </tr>
+
+    {assign var=card value=$order->getCard()}
+    {foreach from=$card.bucket item=custItems key=custId}
+    {foreach from=$custItems item=item key=hash name=meals}
+    <tr style="border-bottom: 1px solid #cccccc;">
+        <td valign="top">{$smarty.foreach.meals.iteration}.</td>
+        <td valign="top" align="right" style="padding-right: 10px;">{$item.count}x</td>
+        <td valign="top">
+            {$item.meal->getName()}, {$item.meal->getCurrentSizeName()}<br />
+            {if $item.meal->getSpecial() != ""}
+            <br />
+            {$item.meal->getSpecial()}
+            <br />
+            {/if}
+            {if $item.meal->getCurrentOptionsCount() > 0}
+            <br />
+            {foreach name=bo from=$item.meal->getCurrentOptions() item=option}
+            <span id="option-span-{$hash}-{$option->getId()}" style="color: #999; font-size:11px;">
+                1x {$option->getName()}
+                {if $option->getCost() > 0}
+                (+ {__('%s €', ($option->getCost() * $item.count)|inttoprice)})
+                {/if}<br />
+            </span>
+            {/foreach}
+            {/if}
+
+            {if $item.meal->getCurrentExtrasCount() > 0}
+            {foreach name=be from=$item.meal->getCurrentExtras() item=extra}
+            <span style="color: #999; font-size:11px;">
+                {$extra->getCount()}x {$extra->getName()}
+                {if $extra->getCost() > 0}(+ {__('%s €', ($extra->getCost() * $item.count)|inttoprice)}){/if}<br />
+            </span>
+            {/foreach}
+            {/if}
+        </td>
+        <td valign="top">{$item.meal->getNr()}</td>
+        <td valign="top" align="right" style="padding: 5px 0;">{__('%s €', ($item.meal->getAllCosts() * $item.count)|inttoprice)}</td>
+    </tr>
+    {/foreach}
+    {/foreach}
+
+    {if $order->getPayedAmount() > 0}
+    <tr style="border-bottom: 1px solid #cccccc; color: green;">
+        <td colspan="4">{__("Bereits gezahlt:")}</td>
+        <td align="right" style="padding: 5px 0;">{__('%s €', $order->getPayedAmount()|inttoprice)}</td>
+    </tr>
+    {/if}
+
+    {if $order->getServiceDeliverCost() > 0}
+    <tr style="border-bottom: 1px solid #cccccc; color: green;">
+        <td colspan="4">{__("Lieferkosten")}</td>
+        <td align="right" style="padding: 5px 0;">{__('%s €', $order->getServiceDeliverCost()|inttoprice)}</td>
+    </tr>
+    {/if}
+
+    {if $order->getCourierCost() > 0}
+    <tr style="border-bottom: 1px solid #cccccc; color: green;">
+        <td colspan="4">{__("Lieferkosten")}</td>
+        <td align="right" style="padding: 5px 0;">{__('%s €', ($order->getCourierCost() - $order->getCourierDiscount())|inttoprice)}</td>
+    </tr>
+    {/if}
+
+    {if $config->domain->base != 'janamesa.com.br'}
+        {foreach from=$taxes item=tax}
+        {if $order->getTax($tax)>0}
+        <tr style="border-bottom: 1px solid #cccccc; color: green;">
+            <td colspan="4">{__("inklusive %s%% MwSt", $tax)}</td>
+            <td align="right" style="padding: 5px 0;">{__('%s €', $order->getTax($tax)|inttoprice)}</td>
+        </tr>
+        {/if}
+        {/foreach}
+    {/if}
+    
+    {if $order->getDiscount()}
+    <tr style="border-bottom: 3px double #cccccc; color: green; font-weight: bold;">
+        <td colspan="4">{__("Rabatt")}</td>
+        <td align="right" style="padding: 5px 0;">{__('%s €', $order->getDiscountAmount()|inttoprice)}</td>
+    </tr>
+    {/if}
+
+    {if $order->getPayment() == "credit"}
+    <tr style="border-bottom: 3px double #cccccc; color: green;">
+        <td colspan="4"><span style="font-weight: bold;">{__("Bestellwert")}</span></td>
+        <td align="right" style="padding: 5px 0; font-weight: bold;">{__('%s €', $order->getAbsTotal(false,false,true,false,false)|inttoprice)}</td>
+    </tr>
+    {elseif $order->getPayment() == "paypal"}
+    <tr style="border-bottom: 3px double #cccccc; color: green; ">
+        <td colspan="4"><span style="font-weight: bold;">{__("Bestellwert")}</span></td>
+        <td align="right" style="padding: 5px 0; font-weight: bold;">{__('%s €', $order->getAbsTotal(false,false,true,false,false)|inttoprice)}</td>
+    </tr>
+    {else}
+    <tr style="border-bottom: 3px double #cccccc; color: green; font-weight: bold;">
+        <td colspan="4">{__("Bestellwert")}</td>
+        <td align="right" style="padding: 5px 0;">{__('%s €', $order->getAbsTotal(false,false,true,false,false)|inttoprice)}</td>
+    </tr>
+    {/if}
+
+    {if $order->getProject()->count() > 0}
+    {foreach from=$order->getProject() item=project}
+    <tr style="border-bottom: 1px solid #cccccc;">
+        <td colspan="2">{__("Projectcode")}</td>
+        <td colspan="3" align="right" style="padding: 5px 0;">{$project->getNumber()} {$project->getAddition()}</td>
+    </tr>
+    {/foreach}
+    {/if}
+    {if $order->getCostcenter()->count() > 0}
+    {foreach from=$order->getCostcenter() item=project}
+    <tr style="border-bottom: 1px solid #cccccc;">
+        <td colspan="2">{__("Kostenstelle")}</td>
+        <td colspan="3" align="right" style="padding: 5px 0;">{$project->getName()} {$project->getIdentNr()}</td>
+    </tr>
+    {/foreach}
+    {/if}
+
+    {if $order->getKind() == "comp" && $order->getMode() == "rest"}
+    <tr>
+        <td colspan="5"><b>{__("Teilnehmer")}</b></td>
+    </tr>
+    {foreach item=c from=$order->getCompanyGroupMembers()}
+    {assign var=customer value=$c.0}
+    {assign var=amount value=$c.1}
+    <tr>
+        <td>&nbsp;</td>
+        <td colspan="3">{$customer->getFullname()}</td>
+        <td align="right" style="padding: 5px 0;">{__('%s €', $amount|inttoprice)}</td>
+    </tr>
+    {/foreach}
+    {/if}
+</table>
+
+    {if $config->domain->base == 'lieferando.de'}
+    <p>
+        <a style="border:0 none;outline:0;cursor:pointer;" href="http://iphoneapp.lieferando.de/"><img style="border:0 none;outline:0;cursor:pointer;" src="http://www.{$config->domain->base}/media/images/yd-mail/{$config->domain->base}/yd-mail-iphone-linkbox1.jpg" alt="" /></a>
+        <a><img src="http://www.{$config->domain->base}/media/images/yd-mail/{$config->domain->base}/yd-mail-iphone-linkbox2.jpg" alt="" /></a>
+        <a style="border:0 none;outline:0;cursor:pointer;" href="http://itunes.apple.com/de/app/lieferando-de/id419724490"><img style="border:0 none;outline:0;cursor:pointer;" src="http://www.{$config->domain->base}/media/images/yd-mail/{$config->domain->base}/yd-mail-iphone-linkbox3.jpg" alt="" /></a>
+    </p>
+    {/if}
+
+<p>
+    <span style="color: red;">
+        {if $BADWEATHERINFO}
+        <strong>{__("Aufgrund der aktuellen Wetter- und Verkehrssituation kann es teilweise zu deutlichen Verzögerungen in der Auslieferung Ihrer Bestellung kommen. Wir bitten um Ihr Verständnis!")}</strong>
+        {/if}
+    </span>
+</p>

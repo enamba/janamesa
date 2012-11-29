@@ -1,0 +1,1 @@
+ALTER TABLE `order_status` ADD `message` VARCHAR(1024)  DEFAULT NULL;

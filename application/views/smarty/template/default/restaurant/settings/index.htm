@@ -1,0 +1,378 @@
+{extends file="restaurant/base.htm"}
+{block name="content"}
+
+{if ($restaurant->getIsOnline()==0)}
+<form action="/restaurant_settings/editstatus" method="post">
+<input type="hidden" name="restaurantId" value="{$restaurant->getId()}" />
+{$stati = Yourdelivery_Model_Servicetype_Abstract::getStati()}
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            Status:  {$stati[$restaurant->getStatus()]}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr id="yd-offlinestatus">
+                    <td width="20%">{{__b('Status ändern:')}}</td>
+                    <td width="80%">
+                        <select name="status" id="yd-offline-reason" style="width: 200px;">
+                            {foreach from=Yourdelivery_Model_Servicetype_Abstract::getStati() key=ind item=s}
+                                {if $ind==3 || $ind==9 || $ind==17 || $ind==20 || $ind==29}
+                                <option value="{$ind}" {if $restaurant->getStatus() == $ind}selected="selected"{/if}>{$s}</option>
+                                {/if}
+                            {/foreach}
+                        </select>
+                    </td>
+                </tr>
+                <tr id="yd-offline_change_reason">
+                    <td>{{__b('Status geändert weil:')}}</td>
+                    <td><textarea name="offline-change-reason-text" id="yd-offline-change-reason-text"></textarea></td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <div id="yd-status-changed-missing-reason"><b>{{__b('Status kann erst dann gespeichert werden, wenn ein Grund angegeben ist.')}}</b></div>
+                        <input type="submit" value="{{__b('Status speichern')}}" id="yd-save-status-button" style="display:none;"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</form>
+{/if}
+
+<div class="two-column-box">
+     <div class="item">
+        <div class="item-head">
+            {{__b('Lieferzeiten')}}
+        </div>
+
+        <div class="item-content">
+            {{__b('Bitte füllen Sie ihre exakten Öffnungszeiten aus. Die erste Zeit sollte die Zeit sein, ab der Sie anfangen können Bestellungen zu bearbeiten und die letzte Zeit sollte der letzte Zeitpunkt für eine Bestellung sein.
+            Beispiel: Wenn ihre Öffnungszeiten von 12:00 bis 22:30 sind, bedeutet dies, dass Sie eine Bestellung die um 22:30 eingeht noch bearbeiten und ausliefern')}}
+        </div>
+         
+        <div class="item-content">
+            <table class="user-tab">
+                <tr style="text-align: center;">
+                    <th width="30%">{{__b('Wochentag')}}</th>
+                    <th width="50%">{{__b('Uhrzeit')}}</th>
+                    <th width="20%"></th>
+                </tr>                
+            </table>
+        </div>
+         
+        {assign var=openingClass value='yd-opening-element'}
+         <div class="item-content">
+            {section name=day start=1 loop=8}
+            <table class="user-tab">
+            {foreach from=$openings item=open}
+            {assign var=from value=$open->from}
+            {assign var=until value=$open->until}
+            {if $open->day == $smarty.section.day.iteration % 7}
+            {assign var=openingId value=$open->id}
+                <tr id="yd-opening-{$open->id}-row" style="text-align: center;" class="yd-opening-element">
+                    <td width="30%">
+                        <select class="sel" id="yd-opening-{$open->id}-weekday" style="width:120px;">
+                        <option value="1" {if $open->day == 1}selected{/if}>{{__b('Montag')}}</option>
+                        <option value="2" {if $open->day == 2}selected{/if}>{{__b('Dienstag')}}</option>
+                        <option value="3" {if $open->day == 3}selected{/if}>{{__b('Mittwoch')}}</option>
+                        <option value="4" {if $open->day == 4}selected{/if}>{{__b('Donnerstag')}}</option>
+                        <option value="5" {if $open->day == 5}selected{/if}>{{__b('Freitag')}}</option>
+                        <option value="6" {if $open->day == 6}selected{/if}>{{__b('Samstag')}}</option>
+                        <option value="0" {if $open->day == 0}selected{/if}>{{__b('Sonntag')}}</option>
+                        <option value="10">{{__b('Feiertage')}}</option>
+                        </select>
+                    </td>
+                    <td width="50%">
+                        {include file='restaurant/timebit.htm' mode='from'} - {include file='restaurant/timebit.htm' mode='until'}
+                    </td>
+                    <td align="center" width="30%">
+                        <br/>
+                        <a href="#x" class="yd-update-opening-link" id="yd-update-opening-link-{$open->id}" active="0"><img src="{$domain_static}/images/yd-backend/icon-save-grey.png"/></a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="#x" class="yd-delete-opening-link" id="yd-delete-opening-link-{$open->id}" active="0"><img src="{$domain_static}/images/yd-backend/icon-delete.png" title="{{__b('Lieferzeit löschen')}}"/></a>
+                        <br/>
+                    </td>
+                </tr>
+                <tr id="yd-opening-{$open->id}-error-row">
+                    <td colspan="3" id="yd-openings-error-{$open->id}" class="yd-special-openings-error" style="display:none; background-color: #ff9999; font-size: larger; font-weight: bold;" ></td>
+                </tr>
+            {/if}
+            {/foreach}
+            </table>
+            <table>
+                <tr>
+                    <td><br/></td>
+                </tr>
+            </table>
+            {/section}
+
+            {foreach from=$holidayOpenings item=open}
+            {assign var=from value=$open->from}
+            {assign var=until value=$open->until}
+            {assign var=openingId value=$open->id}
+
+            <table class="user-tab">
+                <tr id="yd-opening-{$open->id}-row" style="text-align: center;">
+                    <td width="30%">
+                        <select class="yd-opening-element" id="yd-opening-{$open->id}-weekday" style="width:120px;">
+                            <option value="1">{{__b('Montag')}}</option>
+                            <option value="2">{{__b('Dienstag')}}</option>
+                            <option value="3">{{__b('Mittwoch')}}</option>
+                            <option value="4">{{__b('Donnerstag')}}</option>
+                            <option value="5">{{__b('Freitag')}}</option>
+                            <option value="6">{{__b('Samstag')}}</option>
+                            <option value="0">{{__b('Sonntag')}}</option>
+                            <option value="10" selected>{{__b('Feiertage')}}</option>
+                        </select>
+                    </td>
+                    <td width="50%">
+                        {include file='restaurant/timebit.htm' mode='from'} - {include file='restaurant/timebit.htm' mode='until'}
+                    </td>
+                    <td width="20%">
+                        <a href="#x" class="yd-update-opening-link" id="yd-update-opening-link-{$open->id}" active="0"><img src="{$domain_static}/images/yd-backend/icon-save-grey.png"/></a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="#x" class="yd-delete-opening-link" id="yd-delete-opening-link-{$open->id}" active="0"><img src="{$domain_static}/images/yd-backend/icon-delete.png" title="{{__b('Lieferzeit löschen')}}"/></a>
+                    </td>
+                </tr>
+                <tr id="yd-opening-{$open->id}-error-row">
+                    <td colspan="6" id="yd-openings-error-{$open->id}" class="yd-special-openings-error" style="display:none; background-color: #ff9999; font-size: larger; font-weight: bold;" ></td>
+                </tr>
+            </table>
+            {/foreach}
+            
+            <br><br><br><br>
+            
+            <form action="/restaurant_settings/addopening" method="post" enctype="multipart/form-data">
+            {assign var=openingClass value=''}
+            <table class="user-tab">
+                <tr style="text-align: center;">
+                    <th width="30%">{{__b('Wochentag')}}</th>
+                    <th width="50%">{{__b('Uhrzeit')}}</th>
+                    <th width="20%"></th>
+                </tr>
+                {assign var=from value=0}
+                {assign var=until value=0}
+                <tr style="text-align: center;">
+                    <td>
+                        <select class="sel" id="day" style="width:120px;" name="day">
+                            <option value="1">{{__b('Montag')}}</option>
+                            <option value="2" {if $smarty.cookies.addedOpeningDay==2}selected{/if}>{{__b('Dienstag')}}</option>
+                            <option value="3" {if $smarty.cookies.addedOpeningDay==3}selected{/if}>{{__b('Mittwoch')}}</option>
+                            <option value="4" {if $smarty.cookies.addedOpeningDay==4}selected{/if}>{{__b('Donnerstag')}}</option>
+                            <option value="5" {if $smarty.cookies.addedOpeningDay==5}selected{/if}>{{__b('Freitag')}}</option>
+                            <option value="6" {if $smarty.cookies.addedOpeningDay==6}selected{/if}>{{__b('Samstag')}}</option>
+                            <option value="0" {if $smarty.cookies.addedOpeningDay==0}selected{/if}>{{__b('Sonntag')}}</option>
+                            <option value="10" {if $smarty.cookies.addedOpeningDay==10}selected{/if}>{{__b('Feiertage')}}</option>
+                        </select>
+                    </td>
+                    <td>
+                        {include file='restaurant/timebit.htm' mode='addFrom'} - {include file='restaurant/timebit.htm' mode='addUntil'}
+                    </td>
+                    <td align="center"><input value="{{__b('hinzufügen')}}" type="submit" class="save-delivery" /></li>
+                </tr>
+            </table>
+            </form>
+
+            
+            <br><br><br><br>
+            
+            <form action="/restaurant_settings/addopeningsbatch" method="post" enctype="multipart/form-data">
+            {assign var=openingClass value=''}
+            <table class="user-tab">
+                <tr style="text-align: center;">
+                    <th width="30%">{{__b('Für mehrere Wochentage hinzufügen')}}</th>
+                    <th width="50%">{{__b('Uhrzeit')}}</th>
+                    <th width="20%"></th>
+                </tr>
+                {assign var=from value=0}
+                {assign var=until value=0}
+                <tr style="text-align: center;">
+                    <td>
+                        <select style="width:120px;" name="firstDay">
+                            <option value="1" selected>{{__b('Montag')}}</option>
+                            <option value="2">{{__b('Dienstag')}}</option>
+                            <option value="3">{{__b('Mittwoch')}}</option>
+                            <option value="4">{{__b('Donnerstag')}}</option>
+                            <option value="5">{{__b('Freitag')}}</option>
+                            <option value="6">{{__b('Samstag')}}</option>
+                            <option value="0">{{__b('Sonntag')}}</option>
+                        </select>
+                        <br/><br/>
+                        bis
+                        <br/><br/>
+                        <select style="width:120px;" name="lastDay">
+                            <option value="1">{{__b('Montag')}}</option>
+                            <option value="2">{{__b('Dienstag')}}</option>
+                            <option value="3">{{__b('Mittwoch')}}</option>
+                            <option value="4">{{__b('Donnerstag')}}</option>
+                            <option value="5">{{__b('Freitag')}}</option>
+                            <option value="6">{{__b('Samstag')}}</option>
+                            <option value="0" selected>{{__b('Sonntag')}}</option>
+                        </select>                        
+                    </td>
+                    <td>
+                        {include file='restaurant/timebit.htm' mode='addFrom'} - {include file='restaurant/timebit.htm' mode='addUntil'}
+                    </td>
+                    <td align="center"><input value="{{__b('hinzufügen')}}" type="submit" class="save-delivery" /></li>
+                </tr>
+            </table>
+            </form>
+            
+         </div>
+     </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <div class="item">
+        <div class="item-head">
+            {{__b('Spezielle Öffungszeiten')}}
+        </div>
+        <div class="item-content">
+            <table id="yd-special-openings-table" border="0" class="user-tab">
+                <tr>
+                    <th width="20%">{{__b('Datum')}}</th>
+                    <th width="40%">{{__b('Uhrzeit')}}</th>
+                    <th width="10%">{{__b('Geschlossen')}}</th>
+                    <th width="30%"><br/><br/><br/></th>
+                </tr>
+                {foreach from=$specialopenings item=op}
+                    <tr id="yd-opening-{$op.id}-row-special" style="text-align: center;">
+                        <td>
+                            <input type="text" class="yd-special-openings-edit yd-special-opening yd-opening-element" id="yd-opening-{$op.id}-date" value="{$op.specialDate|dateYMD}" style="width: 100px;"/>
+                        </td>
+                        <td style="text-align: center;">
+                            {assign var=openingId value=$op.id}
+                            {assign var=openingClass value='yd-opening-element yd-special-opening'}
+                            {assign var=postfix value='-special'}
+                            {if !$op.closed}
+                                {assign var=from value=$op.from}
+                                {assign var=until value=$op.until}
+                                {include file='restaurant/timebit.htm' mode='from'} - {include file='restaurant/timebit.htm' mode='until'}
+                            {else}
+                                {assign var=from value='0'}
+                                {assign var=until value='0'}
+                                {include file='restaurant/timebit.htm' mode='from' disabled='1'} - {include file='restaurant/timebit.htm' mode='until' disabled='1'}
+                            {/if}
+                        </td>
+                        <td>
+                            <input type="checkbox" class="yd-opening-element yd-special-opening yd-special-opening-time-checkbox" id="yd-opening-{$op.id}-closed" {if $op.closed}checked{/if}/>
+                        </td>
+                        <td>
+                            <a href="#x" class="yd-update-opening-link yd-special-opening" id="yd-update-opening-link-{$op.id}-special" active="0"><img src="{$domain_static}/images/yd-backend/icon-save-grey.png"/></a>
+                            &nbsp;&nbsp;&nbsp;
+                            <a href="#x" class="yd-delete-opening-link yd-special-opening" id="yd-delete-opening-link-{$op.id}-special" active="0"><img src="{$domain_static}/images/yd-backend/icon-delete.png" title="{{__b('Lieferzeit löschen')}}"/></a>
+                        </td>
+                    </tr>
+                    <tr id="yd-opening-{$op.id}-error-row-special">
+                        <td colspan="4" id="yd-openings-error-{$op.id}-special" class="yd-special-openings-error" style="display:none; background-color: #ff9999; font-size: larger; font-weight: bold;" ></td>
+                    </tr>
+                {/foreach}
+            </table>
+            <br/><br/><br/>
+            <form action="/restaurant_settings/addspecialopening" method="post" class="fe" enctype="multipart/form-data">
+            {assign var=openingClass value=''}
+            {assign var=postfix value=''}
+            <table class="user-tab">
+                <tr>
+                    <th width="20%">{{__b('Datum')}}</th>
+                    <th width="40%">{{__b('Uhrzeit')}}</th>
+                    <th width="10%">{{__b('Geschlossen')}}</th>
+                    <th width="30%"><br/><br/><br/></th>
+                </tr>
+                <tr style="text-align: center;">
+                    <td><input type="text" id="yd-special-openings" name="spec_date" style="width: 100px;"/></td>
+                    <td>{include file='restaurant/timebit.htm' mode='spectimeFrom'} - {include file='restaurant/timebit.htm' mode='spectimeUntil'}</td>
+                    <td><input type="checkbox" name="closed" value="1"/></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><input name="spec_time" value="{{__b('Spezielle Öffnungszeit hinzufügen')}}" type="submit" id="yd-add-opening" class="save-delivery" /></td>
+                </tr>
+            </table>
+            </form>
+        </div>
+
+        <div class="item-content">
+            <br/><br/><br/><br/>
+            <b>{{__b('Urlaub')}}</b><br/><br/>
+            {{__b('Für alle Tage in dem Zeitabschnitt wird spezielle Öffnungszeit eingetragen, mit der Angabe, dass das Restaurant geschlossen ist. Bereits eingetragene Öffnungszeiten für diese Tage werden überschrieben')}}<br><br/>
+            <form action="/restaurant_settings/addvacation" method="post" class="fe" enctype="multipart/form-data">
+            <table class="user-tab">
+                <tr>
+                    <td height="50" width="20%">{{__b('Von')}}</td>
+                    <td width="80%"><input type="text" id="yd-vacation-from" name="vacation-from" /></td>
+                </tr>
+                <tr>
+                    <td height="50">{{__b('Bis')}}</td>
+                    <td><input type="text" id="yd-vacation-until" name="vacation-until" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input name="vacation_button" value="{{__b('Urlaubszeit hinzufügen')}}" type="submit"/></td>
+                </tr>
+            </table>
+            </form>
+        </div>
+
+
+        <div class="item-content">
+            <br/><br/><br/><br/>
+            <form action="/restaurant_settings/deleteallspecialopenings" method="post" class="fe" enctype="multipart/form-data">
+            <table class="user-tab">
+                <tr align="right">
+                    <td colspan="2"><input name="vacation_button" value="{{__b('Alle spezielle Öffungszeiten löschen')}}" type="submit"  onclick="javascript:return confirm('Sollen alle spezielle Öffungszeiten wirklich gelöscht werden?')"/></td>
+                </tr>
+            </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {{__b('Tags')}}
+        </div>
+        <div class="item-content">
+            <a name="tags"></a>
+            <form action="/restaurant_settings/edittags" method="post" class="fe" enctype="multipart/form-data">
+            <table width="100%" class="user-tab">
+                <tr>
+                    <td width="30%">
+                            <input id="yd-check-all-tags" type="checkbox" value="1"/> <b>{{__b('Alle')}}</b><br/><br/>
+                            {$index = 1}
+                            <table class="user-tab">
+                                <tr>
+                                {foreach from=$tags key=tagId item=tagEntry}
+                                    <td width="14%"><input type="checkbox" name="tags[{$tagId}]" class="yd-restaurant-tag-checkbox" {if $tagEntry['flag']==1}checked{/if}> {$tagEntry['name']}</td>
+                                    {if $index++%7 == 0}
+                                    </tr>
+                                    <tr>
+                                    {/if}
+                                {/foreach}
+                                </tr>
+                            </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="70%">
+                        <input type="submit" value="{{__b('Tags speichern')}}"/>
+                    </td>
+                </tr>
+            </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+{/block}

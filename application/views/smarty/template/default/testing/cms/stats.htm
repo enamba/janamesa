@@ -1,0 +1,48 @@
+{include file="testing/cms/_testingCmsHeader.htm"}
+<script type="text/javascript" src="/media/javascript/compiled/backend-{$REVISION}.js"></script>
+
+<script type="text/javascript">
+        
+    function flushGraph () {
+        $('#my-chart-container-1-1').removeClass('FusionCharts-container');            
+        $('#my-chart-container-1-1').innerHTML('Bitte warten...');       
+    }
+    
+    $(document).ready(function(){
+        $('#my-chart-container-1-1').insertFusionCharts({
+            type: "stackedcolumn3d", width: "{$width}", height: "500",
+            data: "/testing_cms/stats",
+            dataFormat: "URIData",
+            swfPath: "/media/flash/fusion-charts"
+        });
+    });
+</script>    
+
+<div id="content">
+
+    <form method="post" action="/testing_cms/stats">
+
+        <div class="yd-box">
+
+            <b>Threshold</b>
+
+            <input type="text" name="threshold" id="threshold" value="{$threshold}" ></input>
+
+            <br /><br />
+
+            <input class="button" type="submit" name="submit" id="submit" onclick="flushGraph();" />
+
+        </div>
+
+    </form>
+
+</div>
+
+<div id="my-chart-container-1-1">Bitte warten...</div>                   
+
+{foreach from=$links item=link}
+{$link}
+{/foreach}
+
+
+</body></html>

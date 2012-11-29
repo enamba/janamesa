@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="de" xml:lang="de" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="de" xml:lang="de" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="de" xml:lang="de" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="de" xml:lang="de" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="de" xml:lang="de">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="viewport" content="width=1100">
+        <link rel="stylesheet" type="text/css" href="/media/css/www.lieferando.de/yd-frontend-core.css" />
+
+        <script type="text/javascript" src="/media/javascript/compiled/frontend-test.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                
+                $(".yd-basket-3 a, .yd-basket-title a, .yd-basket-2 li").simpletooltip();
+
+                $(".yd-basket-2 ul li").hover(
+                function () {
+                    $(this).addClass("hover");
+                },
+                function () {
+                    $(this).removeClass("hover");
+                });
+                
+                $(".yd-basket-2 ul li:first-child").hover(
+                function () {
+                    $(this).removeClass("hover");
+                    $(this).parent().addClass("hover");
+                },
+                function () {
+                    $(this).parent().removeClass("hover");
+                });
+
+            });
+        </script>
+
+        <style>
+
+            .yd-basket-title {
+                padding-left: 25px;
+                background: #ccc;
+            }
+
+            .yd-basket-title a {
+                position: absolute;
+                top: 2px;
+                right: 0;
+                display: block;
+                width: 15px;
+                height: 15px;
+                background: #ccc;
+            }
+
+            .yd-basket {
+                margin: 0 0 5px;
+                padding: 0 0 5px;
+                border-bottom: 1px solid #eee;
+            }
+
+            .yd-basket-1 {
+                float: left;
+                width: 40px;
+            }
+
+            .yd-basket-1 input {
+                width: 25px;
+                padding: 2px 5px;
+                font-size: 14px;
+                font-weight: bold;
+                text-align: center;
+                color: #68a0d5;
+                border: 1px solid #aaa;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+            }
+
+            .yd-basket-2 {
+                float: left;
+                width: 195px;
+            }
+
+            .yd-basket-2 ul {
+                padding: 2px 5px
+            }
+
+            .yd-basket-2 ul li {
+                text-align: right;
+                color: #999;
+            }
+
+            .yd-basket-2 ul li span {
+                float: left;
+            }
+
+            .yd-basket-2 ul li:first-child {
+                font-size: 14px;
+                font-weight: bold;
+                color: #68a0d5;
+            }
+
+            .yd-basket-2 ul li.hover,
+            .yd-basket-2 ul.hover {
+                cursor: pointer;
+                background: #eff6fb;
+                border-radius: 4px;
+                box-shadow: 0 0 0 1px #b7d1e9;
+            }
+
+            .yd-basket-3 {
+                float: left;
+                width: 15px;
+            }
+
+            .yd-basket-3 a {
+                display: block;
+                width: 15px;
+                height: 15px;
+                margin: 3px 0 0;
+                background: #ccc;
+            }
+
+        </style>
+
+    </head>
+
+    <body class="de">
+        <div id="yd-nonfooter">
+
+            <div class="yd-header">
+            </div>
+
+            <div id="yd-content" class="yd-clearfix">
+
+                <div id="yd-sidebar">
+
+                    <div class="yd-box">
+                        <div class="yd-box-title yd-basket-title">Bestellzettel <a title="Bestellzettel leeren"></a></div>
+
+                        <div class="yd-basket">
+
+                            <div class="yd-basket-1"><input type="text" value="12" /></div>
+
+                            <div class="yd-basket-2">
+                                <ul>
+                                    <li title="Speise bearbeiten"><span>Pizza Margaritha</span> 9,90 €</li>
+                                    <li title="Extras bearbeiten"><span>+ Mozarella</span> 0,50 €</li>
+                                    <li title="Extras bearbeiten"><span>+ Mozarella</span> 0,50 €</li>
+                                    <li title="Extras bearbeiten"><span>+ Mozarella</span> 0,50 €</li>
+                                </ul>
+                            </div>
+
+                            <div class="yd-basket-3"><a title="Gericht entfernen"></a></div>
+
+                        </div>
+
+                        <div class="yd-basket">
+
+                            <div class="yd-basket-1"><input type="text" value="12" /></div>
+
+                            <div class="yd-basket-2">
+                                <ul>
+                                    <li title="Speise bearbeiten"><span>Pizza Margaritha</span> 9,90 €</li>
+                                    <li title="Extras bearbeiten"><span>+ Mozarella</span> 0,50 €</li>
+                                    <li title="Extras bearbeiten"><span>+ Mozarella</span> 0,50 €</li>
+                                    <li title="Extras bearbeiten"><span>+ Mozarella</span> 0,50 €</li>
+                                </ul>
+                            </div>
+
+                            <div class="yd-basket-3"><a title="Gericht entfernen"></a></div>
+
+                        </div>
+
+                        <div class="yd-basket">
+
+                            <div class="yd-basket-1"><input type="text" value="12" /></div>
+
+                            <div class="yd-basket-2">
+                                <ul>
+                                    <li title="Speise bearbeiten"><span>Pizza Margaritha</span> 9,90 €</li>
+                                    <li title="Extras bearbeiten"><span>+ Mozarella</span> 0,50 €</li>
+                                    <li title="Extras bearbeiten"><span>+ Mozarella</span> 0,50 €</li>
+                                    <li title="Extras bearbeiten"><span>+ Mozarella</span> 0,50 €</li>
+                                </ul>
+                            </div>
+
+                            <div class="yd-basket-3"><a title="Gericht entfernen"></a></div>
+
+                        </div>
+
+                        <a class="yd-button-250">Bezahlmethode wählen</a>
+
+                    </div>
+
+                </div>
+
+                <div id="yd-ordering">
+
+                    <a class="yd-button-140">Test Button</a><br /><br />
+                    <a class="yd-button-190">Test Button</a><br /><br />
+                    <a class="yd-button-240">Test Button</a><br /><br />
+                    <a class="yd-button-250">Test Button</a><br /><br />
+                    <a class="yd-button-280">Test Button</a><br /><br />
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="yd-footer"></div>
+
+    </body>
+</html>

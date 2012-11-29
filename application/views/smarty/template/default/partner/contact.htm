@@ -1,0 +1,15 @@
+{extends file='partner/_base.htm'}
+{block name="content"}
+
+{include file='partner/_includes/nav.htm'}
+
+{include file='partner/_includes/contact_form.htm'}
+
+<!--
+    Anmerkung von Andre:
+    Wenn die Lightbox implementiert wird, bitte keine direkten URLs wie /partner/foo verwenden, sondern die partnerRoute
+
+    <a onclick="popup('/partner/contactlight','{__p('Kontaktformular')}', 850,600)">{__p('Kontaktformular')}</a>
+-->
+
+{/block}

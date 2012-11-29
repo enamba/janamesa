@@ -1,0 +1,1 @@
+{__('Der eingelöste Gutschein ist leider nur für Neukunden. Die Bestellung wurde storniert und der Betrag von %s€ wird Dir zurückgebucht. Das Lieferando-Team.', $absTotal|inttoprice)}

@@ -1,0 +1,10 @@
+{if $aggregate_rating['count']}
+<div class="yd-voodoo-rating yd-box" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+    <strong>{__('Zufriedenheit unserer Kunden in %s', $location->getTitle())}</strong>
+    <span id="yd-rate-0" class="yd-rated-aggegate">
+        <span class="yd-rated-{($aggregate_rating['points']*2)|round:0|string_format:"%02d"}"></span>
+        <span class="yd-rated-average">&oslash; <span itemprop="ratingValue">{$aggregate_rating['points']|number_format:2:',':'.'}</span> {__('Sterne')}</span>
+        {__('bei')} <span itemprop="reviewCount">{$aggregate_rating['count']}</span> {__('Bewertungen')}
+    </span>
+</div>
+{/if}

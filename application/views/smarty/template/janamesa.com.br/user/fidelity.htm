@@ -1,0 +1,141 @@
+{extends file='user/_base.htm'}
+
+{block name="content"}
+
+<div class="yd-profile yd-clearfix">
+
+	{if $config->domain->base == 'janamesa.com.br'}<div class="br-inner-box">{/if}
+
+    {include file='user/_header.htm' active=6 active_title=__('Treuepunkte')}
+
+    <div class="yd-profile-body yd-pf6">
+
+        <h1>{__('Dein aktueller Stand')}</h1>
+
+        <h2>
+            {assign var=need value=($cust->getFidelity()->getCashInNeed() - $cust->getFidelity()->getPoints())}
+            {if $need < 0}
+            {__('Du hast genug Treuepunkte für ein Gratisessen')}
+            {else}
+            {__('Du brauchst noch <span>%d Treuepunkte</span> bis zum <span>Gratisessen</span>', $need )}
+            {/if}
+            <small>{__('Bei %d Treuepunkten bekommst Du ein Essen Gratis*', $cust->getFidelity()->getCashInNeed())}</small>
+        </h2>
+
+        <ul class="yd-credit c{max(0,$cust->getFidelity()->getPoints())}">
+            <li class="yd-credit-01"></li>
+            <li class="yd-credit-02"></li>
+            <li class="yd-credit-03"></li>
+            <li class="yd-credit-04"></li>
+            <li class="yd-credit-05"></li>
+            <li class="yd-credit-06"></li>
+            <li class="yd-credit-07"></li>
+            <li class="yd-credit-08"></li>
+            <li class="yd-credit-09"></li>
+            <li class="yd-credit-10"></li>
+        </ul>
+
+        <h3>= {$cust->getFidelity()->getPoints()}<span>/{$cust->getFidelity()->getCashInNeed()}</span></h3>
+        
+        {if $config->domain->base == 'janamesa.com.br'}<div class="br-points">{$cust->getFidelity()->getPoints()}<span>pontos</span></div>{/if}
+
+        <hr style="border-top: 1px solid #ccc; margin: 20px 50px;" />
+
+        <h2 class="br-title-wycdfc">
+            {__('Du kannst jetzt noch <span>%d Treuepunkte</span> bekommen', $cust->getFidelity()->getOpenActionPoints())}
+        </h2>
+
+        <a name="available"></a>
+        <ul class="yd-what-you-can-do-for-credit yd-clearfix">
+
+            <!-- propose -->
+            {foreach from=$cust->getFidelity()->getOpenActions() item=openAction}
+            {foreach from=$openAction item=action}
+            <li>
+                <a href="{$action.call2action}">
+                    <span class="yd-coin">{$action.points}</span>
+                    {$action.info}
+                </a>
+            </li>
+            {/foreach}
+            {/foreach}
+        </ul>
+
+        <div class="yd-clearfix">
+
+            <ul class="daisy-duck daisy-duck-is-special">
+                <li class="daisy-duck-is-watching-you yd-clearfix">
+                    <span class="dd1">{__('Datum')}</span>
+                    <span class="dd2">{__('Aktion')}</span>
+                    <span class="dd3">{__('Treuepunkte')}</span>
+                </li>
+
+                {foreach from=$cust->getFidelity()->getTransactionsVerbose() item=trans}    
+                    {if $trans.status >= 0}
+                        <li class="daisy-duck-has-done-something yd-clearfix {if $trans.action=='usage'}daisy-duck-ordered-some-food{/if}">
+                            <span class="dd1">{$trans.created|date_format:"%d.%m.%Y"}</span>
+                            <span class="dd2">{$trans.message} {if $trans.status<0 && ($trans.action == 'rate_high' || $trans.action == 'rate_low')}<br /><strong>{__('Deine Bewertung muss noch freigeschalten werden.')}</strong>{/if}</span>
+                            <span class="dd3"><span class="yd-coin">{$trans.points}</span></span>
+                        </li>
+                    {/if}
+                {/foreach}
+                
+                {foreach from=$cust->getFidelity()->getTransactionsVerbose() item=trans}    
+                    {if $trans.status < 0}        
+                        <li class="daisy-duck-has-done-something yd-clearfix daisy-duck-has-forbidden">
+                            <span class="dd1">{$trans.created|date_format:"%d.%m.%Y"}</span>
+                            <span class="dd2">{assign var="split" value=" "|explode:$trans.message} {foreach $split item=name key=k}{if $k>0} {$name} {/if}{/foreach} 
+                                {if $trans.status<0 && ($trans.action == 'rate_high' || $trans.action == 'rate_low')}<br />
+                                    {if  Yourdelivery_Model_Customer_FidelityTransaction::isRatingDeleted($trans)}
+                                         <strong>{__('Deine Bewertung entspricht leider nicht unseren Richtlinien und wurde deshalb gelöscht.')}</strong>
+                                    {else}
+                                        <strong>{__('Deine Bewertung muss noch freigeschalten werden.')}</strong>
+                                    {/if}
+                                {/if}
+                            </span>
+                            <span class="dd3"><span class="yd-coin">{$trans.points}</span></span>
+                        </li>
+                    {/if}
+                {/foreach}
+            </ul>
+
+            <div class="yd-how-credit-work">
+                <strong>{__('Wie funktionieren die Treuepunkte?')}</strong>
+                <p>
+                    <strong>{__('Was sind Treuepunkte?')}</strong><br /><br />
+                    {__('Für Bestellungen und verschiedene Aktionen auf unserer Seite erhältst Du von uns Treuepunkte. Wenn Du 100 Treuepunkte gesammelt
+                    hast, kannst Du diese für ein Gericht Deiner Wahl mit einem Wert von bis zu 8,00 EUR einlösen. Weitere Gerichte oder eventuelle
+                    Restbeträge müssen online bezahlt werden, also nur mit PayPal, Kreditkarte oder Sofortüberweisung, jedoch nicht mit Barbezahlung.')}
+                    <br /><br />
+                    <strong>{__('Wieviel Treuepunkte kann ich erhalten?')}</strong><br /><br />
+                    - {__('Erstbestellung mit Registrierung')}: 35<br />
+                    - {__('Bestellung')}: 10<br />
+                    - {__('Restaurant-Bewertung (über 50 Zeichen)')}: 5<br />
+                    - {__('Restaurant-Bewertung (unter 50 Zeichen)')}: 2<br />
+                    - {__('spätere Registrierung')}: 20<br />
+                    - {__('Profilbild hochladen')}: 8<br />
+                    <!--- {__('Geschlecht angeben')}: 2<br />
+                    - {__('Geburtstag angeben')}: 2-->
+                    <!--<br />
+                     {__('Facebook-Seite liken: 10')}-->
+                    <br /><br />
+                    {__('Weitere Treuepunkte-Aktionen sind in Vorbereitung, lass Dich überraschen.')}
+                    <br /><br />
+                    <strong>{__('Wie löse ich meine Treuepunkte ein?')}</strong>
+                    <br /><br />
+                    {__('Wähle Dein Restaurant und Deine Speise. Gehe wie gewöhnlich auf "Bezahlmethode auswählen". Auf der Bezahlseite siehst Du rechts
+                    unter dem Warenkorb deine Treuepunkte. Gehe auf "Treuepunkte einlösen". Das System wählt dann das entsprechende Gericht aus.')}
+                    <br /><br />
+                    {__('Durch die Einlösung eines Gutscheines wird Dir bei der jeweiligen Bestellung kein Treuepunkt gut geschrieben.
+                    Du erhältst von uns  Treuepunkte wenn Deine Bestellung nicht mit einem Gutschein getätigt worden ist.')}
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+    
+    {if $config->domain->base == 'janamesa.com.br'}</div>{/if}
+
+</div>
+{/block}

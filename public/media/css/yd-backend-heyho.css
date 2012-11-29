@@ -1,0 +1,729 @@
+@font-face {
+    font-family: 'FuturaCondensedMedium';
+    src: url('/media/fonts/futura-condensed-medium.eot'); /* IE9 Compat Modes */
+    src: url('/media/fonts/futura-condensed-medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/media/fonts/futura-condensed-medium.woff') format('woff'), /* Modern Browsers */
+        url('/media/fonts/futura-condensed-medium.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('/media/fonts/futura-condensed-medium.svg#FuturaCondensedMedium') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'FuturaCondensedBold';
+    src: url('/media/fonts/futura-condensed-bold.eot'); /* IE9 Compat Modes */
+    src: url('/media/fonts/futura-condensed-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/media/fonts/futura-condensed-bold.woff') format('woff'), /* Modern Browsers */
+        url('/media/fonts/futura-condensed-bold.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('/media/fonts/futura-condensed-bold.svg#FuturaCondensedBold') format('svg'); /* Legacy iOS */
+}
+
+/*
+ * Reset
+ **********************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+html {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+body {
+    height: 100%;
+    font: 12px arial, "nimbus sans l", sans-serif;
+    color: #555;
+    background: url(/media/images/yd-backend/heyho/chris-header.jpg) repeat-x #f5f5f5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+a {
+    cursor: pointer;
+    color: #59d;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus, a:active {
+    color: #000;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+p {
+    margin: 0 0 10px;
+    line-height: 150%;
+    text-align: justify;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+input[type=button], input[type=submit], input[type=image], input[type=file], button {
+    cursor: pointer;
+    overflow: visible;
+}
+
+input[type=text], input[type=password], textarea, select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.yd-clearfix:after,
+.ticket-content ul li:after {
+    content: ".";
+    display: block;
+    clear: both;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+/*
+ * footerStickAlt
+ **********************************************************/
+
+#yd-nonfooter {
+    position: relative;
+    min-height: 100%;
+}
+
+.yd-footer {
+    position: relative;
+    height: 100px;
+    margin: -101px 0 0;
+    border-top: 1px dashed #b5b5b5;
+    background: #f2f2f2;
+}
+
+.yd-footer .yd-inner {
+    height: 80px;
+    padding: 20px 0 0;
+}
+
+.yd-footer .yd-footer-left {
+    float: left;
+    width: 740px;
+}
+
+.yd-footer .yd-footer-left .yd-footer-column {
+    float: left;
+}
+
+.yd-footer .yd-footer-left .yd-footer-column ul {
+    margin: 0 50px 0 0;
+}
+
+.yd-footer .yd-footer-left .yd-footer-column ul li {
+    margin: 0 0 5px;
+}
+
+/*
+ * Header
+ **********************************************************/
+
+.yd-header {
+    position: relative;
+    height: 70px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+}
+
+.yd-header .yd-inner {
+    height: 70px;
+    background: url(/media/images/yd-backend/heyho/chris-header-inner.jpg) no-repeat;
+}
+
+.yd-header h1 {
+    margin: 0;
+    font-size: 0;
+}
+
+.yd-header h1 a {
+    float: left;
+    display: block;
+    width: 290px;
+    height: 70px;
+    background: url(/media/images/yd-backend/heyho/heyho-logo.png);
+}
+
+/*
+ * Content
+ **********************************************************/
+
+#yd-content {
+    position: relative;
+    width: 1150px;
+    margin: 30px auto 0;
+    padding: 0 0 150px;
+}
+
+.yd-inner {
+    position: relative;
+    width: 1150px;
+    margin: 0 auto;
+}
+
+/*
+ * Buttons
+ **********************************************************/
+
+.button {
+    display: block;
+    margin: 0 0 10px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    background: #4baef2; /* Old browsers */
+    background: -moz-linear-gradient(top, #4baef2 0%, #3978cc 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4baef2), color-stop(100%,#3978cc)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #4baef2 0%,#3978cc 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #4baef2 0%,#3978cc 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #4baef2 0%,#3978cc 100%); /* IE10+ */
+    background: linear-gradient(top, #4baef2 0%,#3978cc 100%); /* W3C */
+    box-shadow: 0 0 0 1px #111, 0 1px 0 rgba(255,255,255,0.5) inset;
+    border-radius: 2px;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+}
+
+.button:hover {
+    text-decoration: none;
+    text-shadow: 0 0 5px #fff;
+}
+
+.button.green {
+    background: #9ac92c; /* Old browsers */
+    background: -moz-linear-gradient(top, #9ac92c 0%, #629722 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9ac92c), color-stop(100%,#629722)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #9ac92c 0%,#629722 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #9ac92c 0%,#629722 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #9ac92c 0%,#629722 100%); /* IE10+ */
+    background: linear-gradient(top, #9ac92c 0%,#629722 100%); /* W3C */
+}
+
+.button.red {
+    background: #e33333; /* Old browsers */
+    background: -moz-linear-gradient(top, #e33333 0%, #c51b1b 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e33333), color-stop(100%,#c51b1b)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #e33333 0%,#c51b1b 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #e33333 0%,#c51b1b 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #e33333 0%,#c51b1b 100%); /* IE10+ */
+    background: linear-gradient(top, #e33333 0%,#c51b1b 100%); /* W3C */
+}
+
+.button.black {
+    background: #aaaaaa; /* Old browsers */
+    background: -moz-linear-gradient(top, #aaaaaa 0%, #777777 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#aaaaaa), color-stop(100%,#777777)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #aaaaaa 0%,#777777 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #aaaaaa 0%,#777777 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #aaaaaa 0%,#777777 100%); /* IE10+ */
+    background: linear-gradient(top, #aaaaaa 0%,#777777 100%); /* W3C */
+}
+
+.button span {
+    display: block;
+    padding: 8px 8px 8px 40px;
+    background: url(/media/images/yd-backend/heyho/heyho-icons.png) no-repeat;
+}
+
+.button span.icon01 { background-position: -1px -6px; }
+.button span.icon02 { background-position: -1px -52px; }
+.button span.icon03 { background-position: -1px -97px; }
+.button span.icon04 { background-position: -1px -139px; }
+.button span.icon05 { background-position: -1px -181px; }
+.button span.icon06 { background-position: -1px -239px; }
+.button span.icon07 { background-position: -1px -286px; }
+.button span.icon08 { background-position: -1px -336px; }
+.button span.icon09 { background-position: -1px -382px; }
+.button span.icon10 { background-position: -1px -421px; }
+
+/*
+ * Tickets
+ **********************************************************/
+
+.content-left {
+    float: left;
+    width: 800px;
+}
+
+.content-right {
+    float: right;
+    width: 300px;
+    min-height: 500px;
+}
+
+.content-right .load {
+    display: block;
+    padding: 20px 0 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.content-left .ticket,
+.content-right .ticket {
+    position: relative;
+    margin: 0 0 20px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    background: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.content-right .ticket {
+    cursor: pointer;
+}
+
+.content-right .ticket:hover {
+    background: #ebf5ff;
+}
+
+.content-right .ticket small {
+    display: block;
+    padding: 0 0 8px;
+    text-align: right;
+    font-size: 11px;
+    font-style: normal;
+    color: #aaa;
+    border-bottom: 1px solid #ccc;
+    -webkit-box-shadow: 0 1px 0 #fff;
+    -moz-box-shadow: 0 1px 0 #fff;
+    box-shadow: 0 1px 0 #fff;
+}
+
+.content-right .ticket ul {
+    margin: 10px 0 0;
+}
+
+.content-right .ticket ul li {
+    margin: 0 0 5px;
+    font-size: 11px;
+    color: #aaa;
+}
+
+.content-right .ticket ul li:first-child {
+    font-size: 14px;
+    color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ticket-header {
+    margin: 0 0 20px;
+    padding: 10px 0;
+    font-size: 18px;
+    text-align: right;
+    border-bottom: 1px solid #ccc;
+    -webkit-box-shadow: 0 1px 0 #fff;
+    -moz-box-shadow: 0 1px 0 #fff;
+    box-shadow: 0 1px 0 #fff;
+}
+
+.ticket-header strong {
+    float: left;
+}
+
+.ticket-header strong small {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.ticket-content {
+    float: left;
+    width: 530px;
+}
+
+.ticket-content h2 {
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    -moz-box-shadow: 0 1px 0 #fff;
+    -webkit-box-shadow: 0 1px 0 #fff;
+}
+
+.ticket-content ul {
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+    font-size: 12px;
+}
+
+.ticket-content ul li {
+    margin: 8px 0;
+    word-wrap: break-word;
+}
+
+.trennlinie {
+    margin: 0 0 8px;
+    padding: 0 0 8px !important;
+    border-bottom: 1px solid #ccc;
+}
+
+.ticket-content ul li em {
+    float: left;
+    font-style: normal;
+}
+
+.ticket-content ul li strong,
+.ticket-content ul li .yd-grid {
+    display: block;
+    float: right;
+    width: 300px;
+}
+
+.ticket-content ul li .yd-ticket-log{
+    display: inline !important;
+    float: none !important;
+    width: auto !important;
+} 
+
+.ticket-content table {
+    width: 100%;
+}
+
+.ticket-content table tr td {
+    padding: 6px;
+    text-align: right;
+    border: 1px solid #ccc;
+    -moz-box-shadow: 1px 1px 0 #fff;
+    -webkit-box-shadow: 1px 1px 0 #fff;
+}
+
+.ticket-content table tr td.left {
+    text-align: left;
+}
+
+.ticket-sidebar {
+    float: right;
+    width: 200px;
+    padding: 0 0 0 20px;
+    border-left: 1px solid #fff;
+    -moz-box-shadow: -1px 0 0 #ccc;
+    -moz-border-radius: 4px;
+    -webkit-box-shadow: -1px 0 0 #ccc;
+    -webkit-border-radius: 4px;
+}
+
+.ticket-sidebar h2 {
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    -moz-box-shadow: 0 1px 0 #fff;
+    -webkit-box-shadow: 0 1px 0 #fff;
+}
+
+.ticket-sidebar p {
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+    -moz-box-shadow: 0 1px 0 #fff;
+    -webkit-box-shadow: 0 1px 0 #fff;
+}
+
+
+
+.ticket-content .button {
+    margin: 10px 0 30px;
+    padding: 8px;
+    max-width: 200px;
+    color: #fff !important;
+}
+
+
+
+
+
+
+.ticket-log {
+    padding: 15px;
+    border: 1px solid #999;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #ccc inset;
+}
+
+.ticket-log h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.ticket-log li {
+    margin: 8px 0;
+    padding: 8px 0;
+    border-bottom: 1px dotted #999;
+}
+
+
+
+
+
+
+
+
+
+.prio {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    display: block;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #000;
+    border: 1px solid #555;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+}
+
+.prio-0 { background: #00cc00; }
+.prio-1 { background: #00cc00; }
+.prio-2 { background: #74e600; }
+.prio-3 { background: #b1f100; }
+.prio-4 { background: #e9fb00; }
+.prio-5 { background: #ffec00; }
+.prio-6 { background: #ffd300; }
+.prio-7 { background: #ffbb00; }
+.prio-8 { background: #ffa100; }
+.prio-9 { background: #ff8100; }
+.prio-10 { background: #ff0000; }
+
+
+
+.footer {
+    position: relative;
+    height: 10px;
+    margin: -10px 0 0;
+}
+
+
+.content-warning {
+    text-align: center;
+    width: 500px;
+    padding: 25px;
+    font-size: 14px;
+    border: 3px solid #555;
+    font-weight: bold;
+    background: #fff;
+    z-index: 5;
+    border-radius: 4px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+
+#tabs {
+    margin-bottom: 10px;
+}
+
+.ui-widget-header {
+    background: -moz-linear-gradient(center top , #FFFFFF, #EEEEEE) repeat scroll 0 0 transparent !important;
+}
+
+.notification {
+    position: fixed !important;
+    z-index: 10000 !important;
+    top: 0 !important;
+    left: 50% !important;
+    width: 1150px !important;
+    margin: -1px 0 0 -575px !important;
+    padding: 20px 0 !important;
+    border: 1px solid #555 !important;
+    border-radius: 0 0 4px 4px !important;
+    background: #def !important;
+}
+
+.notification h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.closeNotification {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.premium {
+    border: 3px solid #fe0 !important;
+}
+
+.bloomsburys {
+    border: 3px solid #014631 !important;
+}
+
+.great {
+    border: 3px solid #2A2A2A !important;
+}
+
+.ticket-icon {
+    position: absolute;
+    right: -15px;
+    bottom: -18px;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+.yd-tickets-nav {
+    margin: 0 0 20px;
+    padding: 0 0 0 130px;
+    border-bottom: 1px solid #aaa;
+}
+
+.yd-tickets-nav li {
+    float: left;
+}
+
+.yd-tickets-nav li a {
+    position: relative;
+    display: block;
+    margin: 0 0 -1px 10px;
+    font-size: 12px;
+    border: 1px solid #aaa;
+    border-radius: 4px 4px 0 0;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* IE10+ */
+    background: linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* W3C */
+}
+
+.yd-tickets-nav li a:hover {
+    text-decoration: none;
+    background: #eeeeee; /* Old browsers */
+    background: -moz-linear-gradient(top, #eeeeee 0%, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* IE10+ */
+    background: linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* W3C */
+}
+
+.yd-tickets-nav li a.active {
+    color: #555;
+    background: #fff;
+}
+
+.yd-tickets-nav li a > span {
+    display: block;
+    padding: 8px 15px 8px 40px;
+    background: url(/media/images/yd-backend/heyho/yd-tickets-nav.png) no-repeat;
+}
+
+.yd-tickets-nav li a.yd-tickets-all > span { background-position: 5px 4px; }
+.yd-tickets-nav li a.yd-tickets-prem > span { background-position: 5px -28px; }
+.yd-tickets-nav li a.yd-tickets-fraud > span { background-position: 7px -64px; }
+.yd-tickets-nav li a.yd-tickets-fail > span { background-position: 7px -100px; }
+.yd-tickets-nav li a.yd-tickets-notaffirmed > span { background-position: 6px -134px; }
+.yd-tickets-nav li a.yd-tickets-tel > span { background-position: 6px -169px; }
+
+
+
+
+
+
+
+
+
+
+.be-dialogs .button {
+    width: 200px;
+    margin: 10px auto;
+    padding: 6px 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background: #4baef2; /* Old browsers */
+    background: -moz-linear-gradient(top, #4baef2 0%, #3978cc 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4baef2), color-stop(100%,#3978cc)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #4baef2 0%,#3978cc 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #4baef2 0%,#3978cc 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #4baef2 0%,#3978cc 100%); /* IE10+ */
+    background: linear-gradient(top, #4baef2 0%,#3978cc 100%); /* W3C */
+    box-shadow: 0 0 0 1px #15488b, 0 1px 0 rgba(255,255,255,0.5) inset;
+    border-radius: 2px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.6);
+}
+
+.be-dialogs .button.cancel {
+    background: #aaaaaa; /* Old browsers */
+    background: -moz-linear-gradient(top, #aaaaaa 0%, #777777 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#aaaaaa), color-stop(100%,#777777)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #aaaaaa 0%,#777777 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #aaaaaa 0%,#777777 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #aaaaaa 0%,#777777 100%); /* IE10+ */
+    background: linear-gradient(top, #aaaaaa 0%,#777777 100%); /* W3C */
+    box-shadow: 0 0 0 1px #555, 0 1px 0 rgba(255,255,255,0.5) inset;
+}
+
+.be-dialogs .button:hover {
+    text-shadow: 0 0 5px #fff;
+}
+
+.be-dialogs .be-discount-formulars ul {
+    float: none;
+}

@@ -1,0 +1,20 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<ul class="be-tabs">
+    <li><a href="/administration_seo_backlinks/edit">{__b('Backlink erstellen')}</a></li>
+    <li><a href="/administration_seo_backlinks/checkall">{__b('Alle prüfen')}</a></li>
+</ul>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Backlinks')}
+        </div>
+        <div class="item-content">
+            {$grid}
+        </div>
+    </div>
+</div>
+
+{/block}

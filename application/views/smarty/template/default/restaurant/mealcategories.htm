@@ -1,0 +1,46 @@
+{extends file="restaurant/base.htm"}
+{block name="content"}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+            <ul id="sortable">
+                {foreach from=$restaurant->getMealCategoriesSortedAsArray() item=category}
+                    <li class="ui-state-default" id="yd-category-item_{$category->getId()}">
+                        <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                        {if $category->isMain()}<b>{/if}{$category->getName()}{if $category->isMain()}</b>{/if}
+                        <small>(#{$category->getId()})
+                            {if !is_null($category->getParentMealCategory())}
+                                &nbsp;&nbsp;&nbsp;<font color= "#144500">{$category->getParentMealCategory()->getName()}</font>
+                            {/if}
+                        </small>
+                    </li>
+                {/foreach}
+            </ul>
+            <ul>
+                <li id="yd-categories-arrange-status" style="color: red;"><br/></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div style="display: none;" class="description">
+<p>
+	Enable a group of DOM elements to be sortable. Click on and drag an
+	element to a new spot within the list, and the other items will adjust to
+	fit. By default, sortable items share <code>draggable</code> properties.
+</p>
+</div>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {{__b('Kategorien')}} 
+        </div>
+        <div class="item-content">
+            {$grid}
+        </div>
+    </div>
+</div>
+
+{/block}

@@ -1,0 +1,86 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="one-column-box" style="width: 700px; margin: 0 auto;">
+    <div class="item">
+        <div class="item-content">
+            <a href="/administration_seo_sem/">{__b('Zurück zur Übersicht')}</a>
+        </div>
+    </div>
+</div>
+
+<form action="/administration_seo_sem/create" method="post" enctype="multipart/form-data">
+
+    <div class="one-column-box" style="width: 700px; margin: 0 auto;">
+        <div class="item">
+
+            <div class="item-head">{__b('SEM Seite erstellen')}</div>
+
+            <div class="item-content">
+
+                <div class="yd-create-sem">
+                    <h1>{__b('Herzlich Willkommen bei der SEM Kreation. Bitte die gewünschten Optionen auswählen')}:</h1>
+                    <ul>
+                        <li class="yd-create-sem-1">
+                            URL: <span>http://www.lieferando.de/sem/ <input type="text" name="url" value="" /></span>
+                        </li>
+
+                        <li class="yd-create-sem-2">
+                            {__b('Position top')}: <span class="sem-position"><input type="text" name="x" value="" /></span>
+                        </li>
+
+                        <li class="yd-create-sem-3">
+                            {__b('Position left')}: <span class="sem-position"><input type="text" name="y" value="" /></span>
+                        </li>
+
+                        <li class="yd-create-sem-4">
+                            {__b('Hintergrundbild')}:
+                            <span>
+                            <select name="background">
+                                <option value=""></option>
+                                {foreach from=$backgrounds item=background}
+                                <option value="{$background}">{$background}</option>
+                                {/foreach}
+                            </select>
+                            <input type="file" name="_background" />
+                            </span>
+                        </li>
+
+                        <li class="yd-create-sem-5">
+                            {__b('Vordergrundbild')}:
+                            <span>
+                            <select name="foreground">
+                                <option value=""></option>
+                                {foreach from=$foregrounds item=foreground}
+                                <option value="{$foreground}">{$foreground}</option>
+                                {/foreach}
+                            </select>
+                            <input type="file" name="_foreground" />
+                            </span>
+                        </li>
+
+                        <li class="yd-create-sem-6">
+                            {__b('Button')}:
+                            <span>
+                            <select name="button">
+                                <option value=""></option>
+                                {foreach from=$buttons item=button}
+                                <option value="{$button}">{$button}</option>
+                                {/foreach}
+                            </select>
+                            <input type="file" name="_button" />
+                            </span>
+                        </li>
+                    </ul>
+                    <br /><br />
+                    <input type="submit" value="{__b('Erstellen')}" class="button" />
+                    <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button" />
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</form>
+
+{/block}

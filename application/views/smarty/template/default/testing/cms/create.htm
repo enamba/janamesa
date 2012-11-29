@@ -1,0 +1,45 @@
+{include file="testing/cms/_testingCmsHeader.htm"}
+
+<div id="content">
+
+    <form action="/testing_cms/create" method="post" enctype="multipart/form-data">
+
+        <div class="yd-box">
+
+            <b>Titel:</b>
+            <input type="text" name="title" id="title" value="{$post['title']}" />
+
+            <b>Author:</b>
+            <input type="text" name="author" id="author" value="{$post['author']}" />
+                        
+            <b>Priority:</b>
+            <input type="text" name="priority" id="priority" value="{$post['priority']}" />
+            
+            <b>Tag:</b>
+            <input type="text" name="tag" id="tag" value="{$post['tag']}" />
+
+            <br /><br />
+
+            <b>Description:</b>
+            
+            <br /><br />
+
+            <textarea name="description" cols="50" rows="3">{$post['description']}</textarea>
+           
+            <br /><br />
+            
+            <input type="hidden" name="proceed" id="proceed" value="{$post['proceed']|default:'false'}" />
+
+            <input class="button" type="submit" name="submit" id="submit" />
+            {if $post['proceed']=='true'}
+            <b><= Daten trotzdem abschicken</b>
+            {/if}
+
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+{include file="testing/cms/_testingCmsHeader.htm"}
+
+<div id="content">
+
+    <form action="/testing_cms/add/id/{$id}" method="post" enctype="multipart/form-data">
+
+        <div class="yd-box">
+
+
+            <h2 class="yd-icon-cms1">Testcase: {$title}</h2>
+
+            <h4>Mission</h4>
+
+            <br />
+
+            <textarea name="mission" cols="50" rows="3"></textarea>
+            
+            <br /><br />
+
+            <h4>Upload - Screenshots</h4>
+
+            <br />
+
+            <input type="file" name="imagePath" size="chars"/>
+            
+            <br /><br />
+
+            <h4>Expectation</h4>
+            
+            <br />
+            
+            <textarea name="expectation" cols="30" rows="5"></textarea>
+            
+            <br /><br />
+
+            <h4>Additional Info</h4>
+            
+            <br />
+            
+            <textarea name="description" cols="30" rows="7"></textarea>
+
+            <br /><br />
+
+            <input class="button" type="submit" name="add" id="add" value="add & next"/>
+
+            <input class="button" type="submit" name="save" id="save" value="save & finish"/>
+
+            <input class="button" type="submit" name="finish" id="finish" value="end without saving"/>
+
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>

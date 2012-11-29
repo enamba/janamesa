@@ -1,0 +1,67 @@
+{extends file="restaurant/popupbase.htm"}
+{block name="content"}
+
+<div style="font-size: 22px; font-weight: bold;">Extras</div>
+für <b>{$meal->getCategory()->getName()} &rarr; {$meal->getName()}</b> <font color="#999"><small>(#{$meal->getId()})</small></font>, Größe: <b>{$size->getName()}</b> <font color="#999"><small>(#{$size->getId()})</small></font>
+<br/><br/><br/>
+
+
+{$extrasGroups = $restaurant->getMealExtrasGroups()}
+
+<table width="100%" class="extras-links-table">
+    {foreach from=$extrasGroups key=name item=extrasGroup}
+    <tr>
+        <td width="30%" height="10"><small><a href="#{$extrasGroup->getId()}" class="extras-link">{$extrasGroup->getName()|default:'FrontendName not set'} ({$extrasGroup->getInternalName()})</a></small></td>
+        <td width="30%"><font color="#999"><small>(#{$extrasGroup->getId()})</small></font></td>
+        <td width="40%"></td>
+    </tr>
+    {/foreach}
+</table>
+
+<br/><hr/><br/>
+
+{if $extrasGroups|@count}
+<form action="/restaurant_menu/manageextras" method="post" name="form" id="yd-meal-extras">
+<input type="hidden" name="mealId" value="{$meal->getId()}" />
+<input type="hidden" name="sizeId" value="{$size->getId()}" />
+<input type="hidden" name="categoryId" value="{$category->getId()}" />
+    <table>
+        <tr>
+            <td width="50%"><input type="submit" value="Speichern"/></td>
+            <td width="20%"><input onclick="window.close()" type="button" value="Abbrechen"></td>
+            <td width="50%"></td>
+        </tr>
+        <tr><td colspan="3" height="50"><hr/></td></tr>
+    {foreach from=$extrasGroups key=name item=extrasGroup}
+        <tr class="extras-group">
+            <th align="left">{$extrasGroup->getName()} {if strlen($extrasGroup->getInternalName())>0}({$extrasGroup->getInternalName()}) {/if}<font color="#999"><small>(#{$extrasGroup->getId()})</small></font><a name="{$extrasGroup->getId()}"></a></th>
+            <th align="left"><input type="text" size="5" id="yd-extrasgroup-cost-{$extrasGroup->getId()}" class="yd-extrasgroup-cost"/> <small>€</small></th>
+            <th></th>
+        </tr>
+        {foreach from=$extrasGroup->getExtras() item=e}
+            {if $category->hasExtra($e->getId(), $size->getId())}
+            <tr class="extra-disabled">
+                <td>{$e->getName()} <font color="#999"><small>(#{$e->getId()})</small></font></td>
+                <td><input type="text" size="5" class="cost" disabled="disabled" value="{intToPrice($category->getExtraCost($e->getId(), $size->getId()))}"/> <small>€</small></td>
+                <td><small>Gehört zur Speisegröße "{$size->getName()}"</small></td>
+            </tr>
+            {else}
+            <tr>
+                <td>{$e->getName()} <font color="#999"><small>(#{$e->getId()})</small></font></td>
+                <td><input class="yd-extras-cost-of-group-{$extrasGroup->getId()}" type="text" size="5" name="cost[{$e->getId()}]" {if ($meal->getExtraCost($e->getId(), $size->getId()) != '')}value="{intToPrice($meal->getExtraCost($e->getId(), $size->getId()))}"{/if}/> <small>€</small></td>
+                <td></td>
+            </tr>
+            {/if}
+        {/foreach}
+        <tr><td colspan="3" height="20"><hr/></td></tr>        
+    {/foreach}
+    <tr><td colspan="3" height="50"><hr/></td></tr>
+    <tr>
+        <td><input type="submit" value="Speichern"/></td>
+        <td><input type="button" onclick="window.close()" value="Abbrechen"></td>
+        <td></td>
+    </tr>
+    </table>
+</form>
+{/if}
+{/block}

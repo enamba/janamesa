@@ -1,0 +1,17 @@
+{extends file='administration/base.htm'}
+{block name="content"}
+{__b('Exportierte Leads Datei hochladen:')}
+<form enctype="multipart/form-data" method="post" action="/administration_analyze/start">
+<p>
+<input type="file" name="file">
+
+<br>
+<input type="submit" name="Abschicken" value="{__b('Datei hochladen')}">
+</p>
+</form>
+
+<br />
+
+<br />
+{__b('(Die zuletzt hochgeladene Datei wird zur Auswertung genommen.)')}
+{/block}

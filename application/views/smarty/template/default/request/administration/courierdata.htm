@@ -1,0 +1,83 @@
+<h1>{__b('Kurierdaten')}</h1>
+{if $msg}
+    <p>{$msg}</p>
+{/if}
+
+<form method="post" action="/request_administration/courierdata">
+    <input type="hidden" name="orderId" class="rund rund_set" value="{$order->getId()}"/>
+
+    <table class="user-tab" width="100%">
+        <tr>
+            <td width="50%" align="center">
+                {__b('Kurier angerufen')}
+            </td>
+            <td width="50%">
+                <select name="courierCalledH" class="rund rund_set" style="width:60px;" >
+                    <option></option>
+                    {foreach from=$hours item=hour}
+                    <option value="{$hour}" {if substr($courierState->courierCalled, 0, 2) eq $hour}selected="selected"{/if}>{$hour}</option>
+                    {/foreach}
+                </select> :
+                <select name="courierCalledM" class="rund rund_set" style="width:60px;" >
+                    <option></option>
+                    {foreach from=$minutes item=minute}
+                    <option value="{$minute}" {if substr($courierState->courierCalled, 3, 2) eq $minute}selected="selected"{/if}>{$minute}</option>
+                    {/foreach}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" align="center">
+                {__b('Kurier bei Restaurant')}
+            </td>
+            <td width="50%">
+                <select name="courierPickupH" class="rund rund_set" style="width:60px;" >
+                    <option></option>
+                    {foreach from=$hours item=hour}
+                    <option value="{$hour}" {if substr($courierState->courierPickup, 0, 2) eq $hour}selected="selected"{/if}>{$hour}</option>
+                    {/foreach}
+                </select> :
+                <select name="courierPickupM" class="rund rund_set" style="width:60px;" >
+                    <option></option>
+                    {foreach from=$minutes item=minute}
+                    <option value="{$minute}" {if substr($courierState->courierPickup, 3, 2) eq $minute}selected="selected"{/if}>{$minute}</option>
+                    {/foreach}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" align="center">
+                {__b('Restaurant angerufen')}
+            </td>
+            <td width="50%">
+                <select name="restaurantCalledH" class="rund rund_set" style="width:60px;" >
+                    <option></option>
+                    {foreach from=$hours item=hour}
+                    <option value="{$hour}" {if substr($courierState->restaurantCalled, 0, 2) eq $hour}selected="selected"{/if}>{$hour}</option>
+                    {/foreach}
+                </select> :
+                <select name="restaurantCalledM" class="rund rund_set" style="width:60px;" >
+                    <option></option>
+                    {foreach from=$minutes item=minute}
+                    <option value="{$minute}" {if substr($courierState->restaurantCalled, 3, 2) eq $minute}selected="selected"{/if}>{$minute}</option>
+                    {/foreach}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" align="center">
+                {__b('Sonstiges')}
+            </td>
+            <td width="50%">
+                <textarea name="miscellaneous" class="rund rund_set">{$courierState->miscellaneous}</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%" align="center" colspan="2">
+                <input type="submit" value="Speichern" />
+                {if $order->getService()->hasPromptCourier()}<input id="yd-view-prompt-{$order->getId()}" class="yd-view-prompt" type="button" value="Promptdaten" />{/if}
+                <br />
+            </td>
+        </tr>
+    </table>
+</form>

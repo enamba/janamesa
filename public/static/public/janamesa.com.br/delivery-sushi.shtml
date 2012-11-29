@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html>         <!--<![endif]-->
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+        <meta name="keywords" content="Jánamesa Delivery On-line sushi" />
+        <meta name="description" content="Entrega rápida da sua comida favorita. Peça pizza, sushi, temaki, bebidas e tudo o que você quiser e pague on-line ou em dinheiro." />
+        <meta name="robots" content="noindex, follow" />
+        <link rel="SHORTCUT ICON" href="/media/css/www.janamesa.com.br/favicon.ico" type="image/x-icon">
+
+            <title>Sushi delivery online</title>
+
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-core.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-home.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-jquery.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-ie.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-infocenter.css" />
+            <link rel="stylesheet" type="text/css" href="/media/css/www.janamesa.com.br/yd-frontend-hidden.css" />
+            
+            <script type="text/javascript" src="/media/javascript/compiled/frontend-sem.js"></script>
+    </head>
+    <body class="br">
+
+		<!--#include virtual="_br_header.html" -->
+
+            <div id="yd-content" class="yd-clearfix post" style="margin-top:-10px; padding-top:0px;">
+					<div style="background-image:url(/media/css/www.janamesa.com.br/images/sem-lps/sushi_1.jpg); width:1020px; height:600px; margin:0 auto;">
+                    <!--#include virtual="_br_cepbox.html" -->
+						</div>
+						
+						<h1>O melhor restaurante oriental pode estar na sua casa com o delivery sushi</h1>
+
+<p>Esteirinhas de bambu, facas bem afiadas, arroz, vinagre, saquê, folhas de alga nori, kumbu, pepino, frutas e peixes frescos: quem já foi para a cozinha preparar uma receita japonesa sabe que a lista de ingredientes é longa e o tempo de preparo também. Para quem prefere não arriscar, a oferta de restaurantes é grandes, mas é preciso ter paciência para enfrentar as filas nos melhores endereços. Mas existe uma terceira alternativa para quem quer saborear o melhor da comida oriental sem sair de casa: o serviço de delivery sushi. Receba junto ainda os sachês com molho de soja (shoyu), pasta de wassabi e o saboroso gengibre.
+Seu combo de sushis e sashimis será preparado pelos profissionais mais experientes da cozinha oriental, com ingredientes sempre frescos e de altíssima qualidade. Só quem entende muito saberá escolher os melhores peixes e fazer a combinação certa e assegurar a delicada harmonia dos sabores da terra do sol nascente. Para acessar o delivery sushi você só precisa estar conectado a internet, seja de casa, do escritório ou mesmo a caminho, através do seu celular. Faça a pesquisa por delivery sushi e comprove que a melhor opção da cidade está aqui.</p>
+
+<h2>Combos individuais ou uma festa oriental completa você só encontra com o delivery sushi</h2>
+
+<p>Cada fome tem o seu tamanho, certo? Por isso você encontra opções diferentes no delivery sushi. Pode ser uma bandeja com peças para uma pessoa ou um combinado para animar a sua festa. Tem sempre um menu do tamanho certo para a sua necessidade, a qualquer hora do dia, em qualquer dia da semana. Você pode ainda escolher entre os sushis com peixe ou as opções vegetarianas, receitas clássicas ou os inusitados sushis quentes para saborear com teryaki. Não fique mais só com a vontade de comer sushi: escolha no cardápio e peça agora mesmo através do delivery sushi.</p>
+						
+                </div>
+
+            </div>
+        </div>
+
+		<!--#include virtual="_br_footer.html" -->

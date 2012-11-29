@@ -1,0 +1,90 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+<div class="edit-newsletter">
+    <div class="one-column-box">
+
+        <div class="item">
+
+            <div class="item-head">
+                {__b('Empfängerkontrolle und Bestätigen')}
+            </div>
+
+            <div class="item-content">
+                <form id="yd-admin-news-send" method="post" action="/request_administration/newslettersend" >
+
+                    <textarea style="display:none" name="html" id="yd-newsletter-html">{$html}</textarea>
+
+                    <b>{__b('6. Schritt:')}</b>
+                    <br />
+                    {__b('Empfänger kontrollieren und ggf. abwählen')}
+                    <br />
+                    <select multiple name="recipients[]" size="10" id="recipients">
+                        {foreach from=$recipients item=recipient}
+                            <option value="
+                                    {foreach from=$recipient item=value}
+                                        {$value}|
+                                    {/foreach}
+                                    " selected>
+                                {foreach from=$recipient item=value}
+                                    {$value}|
+                                {/foreach}
+                            </option>
+                            {/foreach}
+                    </select>
+                    <span id="count-recipients">{$recipients|@count}</span> {__b('Empfänger ausgewählt')}
+                    <br />
+                    <a class="cursor" id="yd-newsletter-recipients-select-all">{__b('alle wählen')}</a> | <a class="cursor" id="yd-newsletter-recipients-deselect-all">{__b('alle abwählen')}</a>
+                    <br />
+                    {__b('Ersetzen')} <input type="text" id="replacement" name="replacement" value="" />
+                    <br />
+                    <hr />
+                    <br />
+                    <b>{__b('7. Schritt:')}</b><br />
+                    {__b('Dieses eMail-Template als Vorlage speichern ?')} <input type="checkbox" name="savepattern" value="1" checked /> <input type="text" name="patternname" id="patternname" value="{__b('Vorlage')}" /> ({__b('wird automatisch mit Datum versehen')})
+                    <br /><br />
+                    <hr />
+                    <br />
+                    <b>{__b('8. Schritt:')}</b><br />
+                    {__b('Geben Sie der Email einen Betreff')}
+                    <input type="text" id="subject" name="subject" value="" />
+                    <br /><br />
+                    <hr />
+                    <br />
+                    <b>{__b('9. Schritt:')}</b><br />
+                    {__b('Geben Sie der Kampagne einen Namen.')}
+                    <input type="text" id="campaign" name="campaign" value="" />
+                    <br /><br />
+                    <hr />
+                    <br />
+                    <b>{__b('10. Schritt:')}</b><br />
+                    <input type="submit" class="button" id="yd-newsletter-send" value="{__b('Newsletter senden')}" />
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="one-column-box">
+
+        <div class="item" style="background:#f1f1f1;">
+
+            <div class="item-head">
+                {__b('Vorschau')}
+            </div>
+
+            <div class="item-content">
+
+                <div class="email-preview" id="yd-newsletter-preview">
+                    {$html}
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+{/block}

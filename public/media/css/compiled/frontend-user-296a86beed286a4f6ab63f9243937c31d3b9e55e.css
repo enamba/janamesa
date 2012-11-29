@@ -1,0 +1,7051 @@
+/* Compiled on 2012-11-06 18:19:03 */
+/* include yd-frontend-core.css */
+/*
+ * New Frontend Fonts
+ **********************************************************/
+
+@font-face {
+    font-family: 'FuturaCM';
+    src: url('/media/fonts/futura-condensed-medium-ce.eot');
+    src: url('/media/fonts/futura-condensed-medium-ce.eot?#iefix') format('embedded-opentype'),
+        url('/media/fonts/futura-condensed-medium-ce.woff') format('woff'),
+        url('/media/fonts/futura-condensed-medium-ce.ttf') format('truetype'),
+        url('/media/fonts/futura-condensed-medium-ce.svg#FuturaCM') format('svg');
+}
+
+@font-face {
+    font-family: 'FuturaCB';
+    src: url('/media/fonts/futura-condensed-bold-ce.eot');
+    src: url('/media/fonts/futura-condensed-bold-ce.eot?#iefix') format('embedded-opentype'),
+        url('/media/fonts/futura-condensed-bold-ce.woff') format('woff'),
+        url('/media/fonts/futura-condensed-bold-ce.ttf') format('truetype'),
+        url('/media/fonts/futura-condensed-bold-ce.svg#FuturaCB') format('svg');
+}
+
+@font-face {
+    font-family: 'MavenProRegular';
+    src: url('/media/fonts/maven-pro-regular.eot');
+    src: url('/media/fonts/maven-pro-regular.eot?#iefix') format('embedded-opentype'),
+        url('/media/fonts/maven-pro-regular.woff') format('woff'),
+        url('/media/fonts/maven-pro-regular.ttf') format('truetype'),
+        url('/media/fonts/maven-pro-regular.svg#MavenProRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'MavenProBold';
+    src: url('/media/fonts/maven-pro-bold.eot');
+    src: url('/media/fonts/maven-pro-bold.eot?#iefix') format('embedded-opentype'),
+        url('/media/fonts/maven-pro-bold.woff') format('woff'),
+        url('/media/fonts/maven-pro-bold.ttf') format('truetype'),
+        url('/media/fonts/maven-pro-bold.svg#MavenProBold') format('svg');
+}
+
+@font-face {
+    font-family: 'MavenProBlack';
+    src: url('/media/fonts/maven-pro-black.eot');
+    src: url('/media/fonts/maven-pro-black.eot?#iefix') format('embedded-opentype'),
+        url('/media/fonts/maven-pro-black.woff') format('woff'),
+        url('/media/fonts/maven-pro-black.ttf') format('truetype'),
+        url('/media/fonts/maven-pro-black.svg#MavenProBlack') format('svg');
+}
+
+/*
+ * Old Frontend Fonts
+ **********************************************************/
+
+@font-face {
+    font-family: 'FuturaCondensedMedium';
+    src: url('/media/fonts/futura-condensed-medium.eot'); /* IE9 Compat Modes */
+    src: url('/media/fonts/futura-condensed-medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/media/fonts/futura-condensed-medium.woff') format('woff'), /* Modern Browsers */
+        url('/media/fonts/futura-condensed-medium.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('/media/fonts/futura-condensed-medium.svg#FuturaCondensedMedium') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'FuturaCondensedBold';
+    src: url('/media/fonts/futura-condensed-bold.eot'); /* IE9 Compat Modes */
+    src: url('/media/fonts/futura-condensed-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/media/fonts/futura-condensed-bold.woff') format('woff'), /* Modern Browsers */
+        url('/media/fonts/futura-condensed-bold.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('/media/fonts/futura-condensed-bold.svg#FuturaCondensedBold') format('svg'); /* Legacy iOS */
+}
+
+/*
+ * Reset
+ **********************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+html {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+body {
+    height: 100%;
+    font: 12px "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    color: #555;
+    background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+a {
+    cursor: pointer;
+    color: #59d;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus, a:active {
+    color: #000;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+p {
+    margin: 0 0 10px;
+    line-height: 150%;
+    text-align: justify;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+textarea {
+    overflow: auto; /* IE */
+    vertical-align: top;
+    resize: none;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+input[type=button], input[type=submit], input[type=image], input[type=file], button {
+    cursor: pointer;
+    overflow: visible;
+}
+
+input[type=text], input[type=password], textarea, select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.yd-clearfix:after,
+.yd-sv3:after {
+    content: ".";
+    display: block;
+    clear: both;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+/*
+ * footerStickAlt
+ **********************************************************/
+
+#yd-nonfooter {
+    position: relative;
+    min-height: 100%;
+}
+
+.yd-footer {
+    position: relative;
+    height: 220px;
+    margin: -221px 0 0;
+    border-top: 1px dashed #b5b5b5;
+    background: #f2f2f2;
+}
+
+.yd-footer .yd-inner {
+    position: relative;
+    height: 200px;
+    padding: 20px 0 0;
+}
+
+.yd-footer-apps {
+    position: absolute;
+    top: 0px;
+    left: 420px;
+    width: 320px;
+    height: 220px;
+    background: url(http://cdn.yourdelivery.de/images/www.lieferando.de/footer-apps.png) -120px 5px no-repeat;
+}
+
+.yd-footer-apps a {
+    position: absolute;
+    display: block;
+}
+
+.yd-footer-apps a.yd-footer-apps-iphone {
+    width: 112px;
+    height: 41px;
+    left: 200px;
+    top: 54px; 
+    background: url(http://cdn.yourdelivery.de/images/www.lieferando.de/footer-apps.png) 0 0 no-repeat;
+}
+
+.yd-footer-apps a.yd-footer-apps-iphone2 {
+    width: 87px;
+    height: 187px;
+    left: 18px;
+    top: 20px;
+}
+
+.yd-footer-apps a.yd-footer-apps-android {
+    width: 112px;
+    height: 41px;
+    left: 200px;
+    top: 102px; 
+    background: url(http://cdn.yourdelivery.de/images/www.lieferando.de/footer-apps.png) 0 -41px no-repeat;
+}
+
+.yd-footer-apps a.yd-footer-apps-android2 {
+    width: 71px;
+    height: 175px;
+    left: 112px;
+    top: 27px;
+}
+
+.yd-footer .yd-footer-left {
+    float: left;
+    width: 720px;
+}
+
+.yd-footer .yd-footer-right {
+    float: right;
+    width: 220px;
+}
+
+.yd-footer .yd-footer-title {
+    margin: 0 0 10px;
+    font: 21px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    text-transform: uppercase;
+}
+
+.yd-footer .yd-footer-left .yd-footer-column {
+    float: left;
+}
+
+.yd-footer .yd-footer-left .yd-footer-column ul {
+    margin: 0 50px 0 0;
+}
+
+.yd-footer .yd-footer-left .yd-footer-column ul li {
+    margin: 0 0 5px;
+}
+
+.yd-footer .yd-footer-right a {
+    display: block;
+    margin: 0 0 5px;
+    padding: 8px 8px 8px 40px;
+    color: #777;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) #ddd;
+    border-radius: 4px;
+}
+
+.yd-footer .yd-footer-right a.yd-footer-facebook { background-position: -55px -192px; }
+.yd-footer .yd-footer-right a.yd-footer-twitter { background-position: -55px -226px; }
+.yd-footer .yd-footer-right a.yd-footer-google { background-position: -55px -260px; }
+.yd-footer .yd-footer-right a.yd-footer-xing { background-position: -55px -294px; }
+
+.yd-footer .yd-footer-right a:hover {
+    text-decoration: none;
+    background-color: #ccc;
+}
+
+/*
+ * Header
+ **********************************************************/
+
+.yd-header {
+    height: 95px;
+    background: #ff0000;
+    background: -moz-linear-gradient(top, #ff0000 0%, #c80000 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff0000), color-stop(100%,#c80000));
+    background: -webkit-linear-gradient(top, #ff0000 0%,#c80000 100%);
+    background: -o-linear-gradient(top, #ff0000 0%,#c80000 100%);
+    background: -ms-linear-gradient(top, #ff0000 0%,#c80000 100%);
+    background: linear-gradient(to bottom, #ff0000 0%,#c80000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#c80000',GradientType=0 );
+    box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+}
+
+.yd-header .yd-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.yd-header .yd-inner .yd-logo {
+    float: left;
+    display: block;
+    width: 200px;
+    height: 95px;
+}
+
+.yd-bubble {
+    float: left;
+    width: 200px;
+    height: 50px;
+    margin: 20px 0 0 40px;
+    border: 1px dashed #fff;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) 0 0;
+}
+
+/*
+ * Content
+ **********************************************************/
+
+#yd-content {
+    position: relative;
+    width: 1020px;
+    margin: 20px auto 0;
+    padding: 0 0 250px;
+}
+
+.yd-inner {
+    width: 1020px;
+    margin: 0 auto;
+}
+
+#yd-ordering {
+    float: left;
+    width: 700px;
+}
+
+#yd-sidebar {
+    float: right;
+    width: 280px;
+}
+
+/*
+ * Login
+ **********************************************************/
+
+.yd-login-wrapper {
+    position: relative;
+    float: right;
+}
+
+.yd-header-login,
+.yd-header-register {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    float: left;
+    height: 32px;
+    margin: 32px 0 0 20px;
+    padding: 0 15px 0 35px;
+    font: bold 12px/32px arial, "nimbus sans l", sans-serif;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+    border-radius: 4px;
+}
+
+.yd-header-login {
+    padding: 0 44px 0 35px;
+    overflow: hidden;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat #a00a00;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -moz-linear-gradient(top, #c11c11 0%, #a00a00 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c11c11), color-stop(100%,#a00a00));
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -webkit-linear-gradient(top, #c11c11 0%,#a00a00 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -o-linear-gradient(top, #c11c11 0%,#a00a00 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -ms-linear-gradient(top, #c11c11 0%,#a00a00 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, linear-gradient(top, #c11c11 0%,#a00a00 100%);
+}
+
+.yd-header-login:hover {
+    text-decoration: none;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat #a00a00;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -moz-linear-gradient(top, #a00a00 0%, #c11c11 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a00a00), color-stop(100%,#c11c11));
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -webkit-linear-gradient(top, #a00a00 0%,#c11c11 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -o-linear-gradient(top, #a00a00 0%,#c11c11 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -ms-linear-gradient(top, #a00a00 0%,#c11c11 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, linear-gradient(top, #a00a00 0%,#c11c11 100%);
+}
+
+.yd-header-login.active {
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -130px no-repeat #a00a00;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -130px no-repeat, -moz-linear-gradient(top, #a00a00 0%, #c11c11 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -130px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a00a00), color-stop(100%,#c11c11));
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -130px no-repeat, -webkit-linear-gradient(top, #a00a00 0%,#c11c11 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -130px no-repeat, -o-linear-gradient(top, #a00a00 0%,#c11c11 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -130px no-repeat, -ms-linear-gradient(top, #a00a00 0%,#c11c11 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -130px no-repeat, linear-gradient(top, #a00a00 0%,#c11c11 100%);
+}
+
+.yd-header-login .yd-facebook-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    height: 100%;
+    width: 32px;
+    border-radius: 0 4px 4px 0;
+    box-shadow: -1px 0 1px rgba(0,0,0,0.1);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook-logo.png) 1px -2px no-repeat #99d;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook-logo.png) 1px -2px no-repeat, -moz-linear-gradient(top, #99d 0%, #57c 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook-logo.png) 1px -2px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#99d), color-stop(100%,#57c));
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook-logo.png) 1px -2px no-repeat, -webkit-linear-gradient(top, #99d 0%,#57c 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook-logo.png) 1px -2px no-repeat, -o-linear-gradient(top, #99d 0%,#57c 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook-logo.png) 1px -2px no-repeat, -ms-linear-gradient(top, #99d 0%,#57c 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook-logo.png) 1px -2px no-repeat, linear-gradient(top, #99d 0%,#57c 100%);
+}
+
+.yd-header-login:hover .yd-facebook-icon,
+.yd-header-login.active .yd-facebook-icon {
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook-logo.png) 1px -2px no-repeat #57c;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook-logo.png) 1px -2px no-repeat, -moz-linear-gradient(top, #57c 0%, #99d 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook-logo.png) 1px -2px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#57c), color-stop(100%,#99d));
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook-logo.png) 1px -2px no-repeat, -webkit-linear-gradient(top, #57c 0%,#99d 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook-logo.png) 1px -2px no-repeat, -o-linear-gradient(top, #57c 0%,#99d 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook-logo.png) 1px -2px no-repeat, -ms-linear-gradient(top, #57c 0%,#99d 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook-logo.png) 1px -2px no-repeat, linear-gradient(top, #57c 0%,#99d 100%);
+}
+
+.yd-header-register {
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat #7b910b;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -moz-linear-gradient(top, #aacc00 0%, #7b910b 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#aacc00), color-stop(100%,#7b910b));
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -webkit-linear-gradient(top, #aacc00 0%,#7b910b 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -o-linear-gradient(top, #aacc00 0%,#7b910b 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -ms-linear-gradient(top, #aacc00 0%,#7b910b 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, linear-gradient(top, #aacc00 0%,#7b910b 100%);
+}
+
+.yd-header-register:hover {
+    text-decoration: none;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat #7b910b;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -moz-linear-gradient(top, #7b910b 0%, #aacc00 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7b910b), color-stop(100%,#aacc00));
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -webkit-linear-gradient(top, #7b910b 0%,#aacc00 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -o-linear-gradient(top, #7b910b 0%,#aacc00 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -ms-linear-gradient(top, #7b910b 0%,#aacc00 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, linear-gradient(top, #7b910b 0%,#aacc00 100%);
+}
+
+.yd-header-login:focus,
+.yd-header-login:focus .yd-facebook-icon,
+.yd-header-login:active,
+.yd-header-login:active .yd-facebook-icon,
+.yd-header-register:focus,
+.yd-header-register:active {
+    color: #fff;
+    box-shadow: 0 0 2px #000 inset;
+}
+
+.yd-login-window {
+    position: absolute;
+    top: 60px;
+    left: -20px;
+    z-index: 1;
+    width: 280px;
+    height: 280px;
+    padding: 20px 10px 0;
+    text-shadow: 0 0 0;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login.png);
+}
+
+.yd-login-window input[type=text],
+.yd-login-window input[type=password] {
+    width: 210px;
+    margin: 0 0 10px;
+    padding: 6px 5px 6px 35px;
+    font-size: 14px;
+    color: #777;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -460px -6px #fff no-repeat;
+}
+
+.yd-login-window input[type=password] {
+    background-position: -460px -49px;
+}
+
+.yd-login-window input[type=text]:focus,
+.yd-login-window input[type=text]:active {
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -460px -6px #eeffe7 no-repeat;
+    box-shadow: 0 0 3px #00c800;
+    border: 1px solid #00c800;
+}
+
+.yd-login-window input[type=password]:focus,
+.yd-login-window input[type=password]:active {
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -460px -49px #eeffe7 no-repeat;
+    box-shadow: 0 0 3px #00c800;
+    border: 1px solid #00c800;
+}
+
+.yd-login-window input[type=submit] {
+    float: right;
+    width: 70px;
+    height: 28px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 28px;
+    color: #555;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+    background: #eee;
+    background: -moz-linear-gradient(top, #fff 0%, #eee 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#eee));
+    background: -webkit-linear-gradient(top, #fff 0%,#eee 100%);
+    background: -o-linear-gradient(top, #fff 0%,#eee 100%);
+    background: -ms-linear-gradient(top, #fff 0%,#eee 100%);
+    background: linear-gradient(top, #fff 0%,#eee 100%);
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px #aaa;
+}
+
+.yd-login-window input[type=submit]:hover {
+    background: #fff;
+    background: -moz-linear-gradient(top, #eee 0%, #fff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eee), color-stop(100%,#fff));
+    background: -webkit-linear-gradient(top, #eee 0%,#fff 100%);
+    background: -o-linear-gradient(top, #eee 0%,#fff 100%);
+    background: -ms-linear-gradient(top, #eee 0%,#fff 100%);
+    background: linear-gradient(top, #eee 0%,#fff 100%);
+}
+
+.yd-login-window input[type=submit]:focus,
+.yd-login-window input[type=submit]:active {
+    box-shadow: 0 0 2px #000 inset;
+}
+
+#logout {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 15px;
+    border-radius: 0 0 4px 4px;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* IE10+ */
+    background: linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* W3C */
+}
+
+#logout .yd-icon-account {
+    padding: 0 0 0 15px;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-icon-account.png) left 40% no-repeat;
+}
+
+#logout .yd-icon-logout {
+    padding: 0 0 0 17px;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-icon-logout.png) left 40% no-repeat;
+}
+
+#logout #yd-customer-company-admin {
+    margin: 5px 0 0;
+    padding: 5px 0 0;
+    text-align: center;
+    border-top: 1px dotted #aaa;
+}
+
+#logout #yd-customer-company-admin .yd-icon-company {
+    padding: 0 0 0 15px;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -96px -421px no-repeat;
+}
+
+/*
+ * Conversion Elements
+ **********************************************************/
+
+.button {
+    padding: 5px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+    border: 1px solid #26d;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+    background: #7bf;
+    background: -moz-linear-gradient(top, #7bf 0%, #48e 100%);
+    background: -webkit-linear-gradient(top, #7bf 0%,#48e 100%);
+    background: -o-linear-gradient(top, #7bf 0%,#48e 100%);
+    background: -ms-linear-gradient(top, #7bf 0%,#48e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77bbff', endColorstr='#4488ee',GradientType=0 );
+}
+
+.button:hover {
+    text-decoration: none;
+    background: #48e;
+    background: -moz-linear-gradient(top, #48e 0%, #7bf 100%);
+    background: -webkit-linear-gradient(top, #48e 0%,#7bf 100%);
+    background: -o-linear-gradient(top, #48e 0%,#7bf 100%);
+    background: -ms-linear-gradient(top, #48e 0%,#7bf 100%);
+    background: linear-gradient(to bottom, #48e 0%,#7bf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4488ee', endColorstr='#77bbff',GradientType=0 );
+}
+
+.button:focus, .button:active {
+    color: #fff;
+    box-shadow: 0 0 2px #000 inset;
+}
+
+#yd-plz-search {
+    width: 200px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0;
+    font-family: verdana, sans-serif;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    border: 1px solid #297e20;
+    background: #bae8a8;
+    border-radius: 0;
+    box-shadow: inset 3px 3px 3px rgba(0,0,0,0.3);
+}
+
+#yd-plz-search.ui-autocomplete-loading {
+    background: url(http://cdn.yourdelivery.de/images/ajax-loader-16-green.gif) no-repeat 15px 15px #bae8a8;
+}
+
+.ui-autocomplete {
+    position: absolute;
+    max-height: 190px;
+    overflow: auto;
+    background: #fff;
+    border-radius: 0 0 4px 4px;
+}
+
+.ui-autocomplete li a {
+    display: block;
+    padding: 8px 0 8px 10px;
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 19px;
+    color: #999;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+}
+
+.ui-autocomplete .ui-state-hover,
+.ui-autocomplete .ui-state-focus {
+    text-decoration: none;
+    background: #eee;
+}
+
+.yd-button-140,
+.yd-button-190,
+.yd-button-240,
+.yd-button-250,
+.yd-button-280 {
+    position: relative;
+    display: block;
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+    border: 1px solid #360;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+    background: #7c0;
+    background: -moz-linear-gradient(top, #7c0 0%, #6b0 50%, #5a0 51%, #590 100%);
+    background: -webkit-linear-gradient(top, #7c0 0%,#6b0 50%,#5a0 51%,#590 100%);
+    background: -o-linear-gradient(top, #7c0 0%,#6b0 50%,#5a0 51%,#590 100%);
+    background: -ms-linear-gradient(top, #7c0 0%,#6b0 50%,#5a0 51%,#590 100%);
+    background: linear-gradient(to bottom, #7c0 0%,#6b0 50%,#5a0 51%,#590 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77cc00', endColorstr='#559900',GradientType=0 );
+}
+
+.yd-button-140:hover,
+.yd-button-190:hover,
+.yd-button-240:hover,
+.yd-button-250:hover,
+.yd-button-280:hover {
+    text-decoration: none;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+
+.yd-button-140:focus, .yd-button-140:active,
+.yd-button-190:focus, .yd-button-190:active,
+.yd-button-240:focus, .yd-button-240:active,
+.yd-button-250:focus, .yd-button-250:active,
+.yd-button-280:focus, .yd-button-280:active {
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+    box-shadow: inset 0 0 4px #000;
+}
+
+.yd-button-140 span,
+.yd-button-190 span,
+.yd-button-240 span,
+.yd-button-250 span,
+.yd-button-280 span {
+    display: block;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) no-repeat;
+}.yd-button-140 span { background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) no-repeat; }
+
+.yd-button-140 span { background-position: -352px -280px; }
+.yd-button-190 span { background-position: -295px -223px; }
+.yd-button-240 span { background-position: -270px -220px; }
+.yd-button-250 span { background-position: -240px -223px; }
+.yd-button-280 span { background-position: -210px -220px; }
+
+.yd-button-140:focus span, .yd-button-140:active span,
+.yd-button-190:focus span, .yd-button-190:active span,
+.yd-button-240:focus span, .yd-button-240:active span,
+.yd-button-250:focus span, .yd-button-250:active span,
+.yd-button-280:focus span, .yd-button-280:active span {
+    background: url(http://cdn.yourdelivery.de/images/ajax-loader-16-buttons.gif) no-repeat;
+}
+
+.yd-button-140:focus span, .yd-button-140:active span { background-position: 105px 10px; }
+.yd-button-190:focus span, .yd-button-190:active span { background-position: 165px 16px; }
+.yd-button-240:focus span, .yd-button-240:active span { background-position: 190px 18px; }
+.yd-button-250:focus span, .yd-button-250:active span { background-position: 220px 16px; }
+.yd-button-280:focus span, .yd-button-280:active span { background-position: 250px 18px; }
+
+.yd-button-140.yd-gray-button,
+.yd-button-190.yd-gray-button,
+.yd-button-240.yd-gray-button,
+.yd-button-250.yd-gray-button,
+.yd-button-280.yd-gray-button {
+    color: #888;
+    text-shadow: 0 1px 0 #fff;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+    background: linear-gradient(top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 );
+}
+
+.yd-button-140.yd-gray-button:hover,
+.yd-button-190.yd-gray-button:hover,
+.yd-button-240.yd-gray-button:hover,
+.yd-button-250.yd-gray-button:hover,
+.yd-button-280.yd-gray-button:hover {
+    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+
+.yd-button-140.yd-gray-button:focus, .yd-button-140.yd-gray-button:active,
+.yd-button-190.yd-gray-button:focus, .yd-button-190.yd-gray-button:active,
+.yd-button-240.yd-gray-button:focus, .yd-button-240.yd-gray-button:active,
+.yd-button-250.yd-gray-button:focus, .yd-button-250.yd-gray-button:active,
+.yd-button-280.yd-gray-button:focus, .yd-button-280.yd-gray-button:active {
+    text-shadow: 0 1px 0 #fff;
+}
+
+.yd-button-140.yd-gray-button span,
+.yd-button-190.yd-gray-button span,
+.yd-button-240.yd-gray-button span,
+.yd-button-250.yd-gray-button span,
+.yd-button-280.yd-gray-button span {
+    background: none;
+}
+
+/********** New Button 140 px width **********/
+
+.yd-button-140 {
+    width: 130px;
+    padding-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 19px;
+}
+
+.yd-service-list .yd-button-140 {
+    position: absolute;
+    top: 65px;
+    right: 10px;
+}
+
+/********** New Button 190 px width **********/
+
+.yd-button-190 {
+    width: 190px;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    font-size: 21px;
+}
+
+/********** New Button 240 px width **********/
+
+.yd-button-240 {
+    width: 220px;
+    padding-left: 20px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 0 20px;
+    font-size: 26px;
+}
+
+/********** New Button 250 px width **********/
+
+.yd-button-250 {
+    width: 250px;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    margin: 10px 0 0;
+    font-size: 21px;
+}
+
+/********** New Button 280 px width **********/
+
+.yd-button-280 {
+    width: 280px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 0 20px;
+    font-size: 26px;
+}
+
+/*
+ * Scroll to top
+ **********************************************************/
+
+#toTop {
+    display:none;
+    text-decoration:none;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    overflow:hidden;
+    width:51px;
+    height:51px;
+    border:none;
+    text-indent:-999px;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) no-repeat 0 -185px;
+}
+
+#toTopHover {
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) no-repeat 0 -236px;
+    width:51px;
+    height:51px;
+    display:block;
+    overflow:hidden;
+    float:left;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter:alpha(opacity=0);
+}
+
+#toTop:active, #toTop:focus {
+    outline:none;
+}
+
+/*
+ * Payment logos landingpages
+ **********************************************************/
+
+.yd-payment-footer {
+    height: 90px
+}
+
+.de .yd-payment-footer { background: url(http://cdn.yourdelivery.de/images/www.lieferando.de/payment-footer.jpg); }
+.at .yd-payment-footer { background: url(http://cdn.yourdelivery.de/images/www.lieferando.at/payment-footer.jpg); }
+.ch .yd-payment-footer { background: url(http://cdn.yourdelivery.de/images/www.lieferando.ch/payment-footer.jpg); }
+.fr .yd-payment-footer { background: url(http://cdn.yourdelivery.de/images/www.taxiresto.fr/payment-footer.jpg); }
+.pl .yd-payment-footer { background: url(http://cdn.yourdelivery.de/images/www.pyszne.pl/payment-footer.jpg); }
+
+/*
+ * Silver tooltip
+ **********************************************************/
+
+#simpleTooltip {
+    padding: 5px;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border: 1px solid #999;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* W3C */
+    box-shadow: inset 0 0 0 1px #fff;
+}
+
+/*
+ * Shine Animation LP Buttons
+ **********************************************************/
+
+.shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 250px;
+    height: 50px;
+    background-image: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-button-shine.png);
+    background-position: -100px 0;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+}
+
+/*
+ * Box
+ **********************************************************/
+
+.yd-box {
+    position: relative;
+    margin: 0 0 20px;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    background: #fcfcfc; /* Old browsers */
+    background: -moz-linear-gradient(top, #fcfcfc 0%, #f9f9f9 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#f9f9f9)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fcfcfc 0%,#f9f9f9 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #fcfcfc 0%,#f9f9f9 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #fcfcfc 0%,#f9f9f9 100%); /* IE10+ */
+    background: linear-gradient(top, #fcfcfc 0%,#f9f9f9 100%); /* W3C */
+}
+
+.yd-box-title {
+    position: relative;
+    margin: -5px 0 10px;
+    padding: 0 0 5px;
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 19px;
+    text-shadow: 1px 1px 0 #fff;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 1px 0 #fff;
+}
+
+/*
+ * Notifications
+ **********************************************************/
+
+.notification {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 50%;
+    width: 940px;
+    margin: -1px 0 0 -510px;
+    padding: 12px 40px;
+    font-size: 12px;
+    border: 1px solid #555;
+    border-radius: 0 0 4px 4px;
+    background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 10px -2410px no-repeat #def;
+}
+
+.error {
+    background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 10px -2510px no-repeat #fcc;
+}
+
+.warn {
+    background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 10px -2610px no-repeat #ffe;
+}
+
+.success {
+    background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 10px -2710px no-repeat #dfc;
+}
+
+.notification a {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.notification-menu {
+    padding: 12px 20px 12px 40px;
+    font-size: 11px;
+    border: 1px solid #a2b4ee;
+    border-radius: 4px;
+    margin: 0 0 20px;
+    background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 10px -2410px no-repeat #def;
+}
+
+/*
+ * Rating Stars
+ **********************************************************/
+
+.yd-rated-00,
+.yd-rated-01,
+.yd-rated-02,
+.yd-rated-03,
+.yd-rated-04,
+.yd-rated-05,
+.yd-rated-06,
+.yd-rated-07,
+.yd-rated-08,
+.yd-rated-09,
+.yd-rated-10 {
+    float: left;
+    display: block;
+    width: 80px;
+    height: 15px;
+    background-image: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png);
+}
+
+.yd-rated-00 { background-position: 0 -340px; }
+.yd-rated-01 { background-position: 0 -356px; }
+.yd-rated-02 { background-position: 0 -372px; }
+.yd-rated-03 { background-position: 0 -388px; }
+.yd-rated-04 { background-position: 0 -404px; }
+.yd-rated-05 { background-position: 0 -420px; }
+.yd-rated-06 { background-position: 0 -436px; }
+.yd-rated-07 { background-position: 0 -452px; }
+.yd-rated-08 { background-position: 0 -468px; }
+.yd-rated-09 { background-position: 0 -484px; }
+.yd-rated-10 { background-position: 0 -500px; }
+
+.yd-rated {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 145px;
+    height: 40px;
+    font-size: 10px;
+    text-align: right;
+    color: #777;
+}
+
+.yd-sv3 .yd-rated {
+    top: 0;
+    right: -525px;
+}
+
+.yd-rated .yd-rated-average {
+    float: right;
+    margin: 1px 0 0;
+}
+
+.yd-rated .yd-rated-total {
+    display: block;
+    margin: 18px 0 0;
+}
+
+.yd-rated .yd-rated-total span {
+    color: #59d;
+}
+
+
+
+
+
+
+
+/*
+ * unsorted
+ **********************************************************/
+
+select {
+    text-align: left !important;
+}
+
+.noresult {
+    text-align: center;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+#tooltip {
+    padding: 5px;
+    border: 2px solid #f00;
+    border-radius: 4px;
+    background: #ffc;
+}
+
+#tooltip-mincost {
+    padding: 5px;
+    border: 1px solid #2e7fb3;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    background: #dcf0ff;
+}
+
+.yd-loading{
+    width:15px;
+    display:none;
+    position:absolute;top:3px;right:0;
+}
+
+.yd-loading-visible{
+    width:15px;
+}
+
+.yd-rest-table:hover{
+    background:#ffc;
+    cursor:pointer;
+}
+
+.serviceOpenings:hover{
+    cursor:pointer;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: #00c800 !important;
+}
+
+.yellow {
+    color: yellow;
+}
+
+ul.rating {
+    width: 180px !important;
+}
+
+#ratings #comment {
+    margin: 20px auto;
+    display: block;
+    width: 400px;
+    height: 30px;
+}
+
+/* Rich Snippets */
+
+div.hreview-aggregate,
+div.hreview span.item,
+div.hreview span.rating{
+    display: none;
+}
+
+.yd-nowrap {
+    white-space: nowrap;
+}
+
+.yd-plz-proposal {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.yd-plz-proposal strong {
+    display: block;
+    font-weight: normal;
+    padding: 0 0 10px;
+    margin: 0 0 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.yd-discount-faq-in-menu {
+    background: url("http://cdn.yourdelivery.de/images/yd-icons/yd-discount-info.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 16px;
+    text-align: center;
+    vertical-align: middle;
+    width: 16px;
+}
+.yd-discount-faq-in-menu:hover{
+    background: url("http://cdn.yourdelivery.de/images/yd-icons/yd-discount-info-hover.png") no-repeat scroll 0 0 transparent;
+}
+
+
+
+
+
+
+
+
+
+
+dl.zend_form {
+    position: relative;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    background: #fcfcfc; /* Old browsers */
+    background: -moz-linear-gradient(top, #fcfcfc 0%, #f9f9f9 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#f9f9f9)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fcfcfc 0%,#f9f9f9 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #fcfcfc 0%,#f9f9f9 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #fcfcfc 0%,#f9f9f9 100%); /* IE10+ */
+    background: linear-gradient(top, #fcfcfc 0%,#f9f9f9 100%); /* W3C */
+}
+
+dl.zend_form dt {
+    margin: 0 0 5px;
+}
+
+dl.zend_form dt label.required:after {
+    content: " *";
+    color: red;
+}
+
+dl.zend_form dt label.optional:after {
+    content: " (optional)";
+    color: #00c800;
+}
+
+dl.zend_form dd {
+    margin: 0 0 15px;
+}
+
+dl.zend_form dd input[type=text],
+dl.zend_form dd input[type=password] {
+    width: 200px;
+    box-shadow: 0 0 3px #ccc inset;
+}
+
+dl.zend_form dd input[type=text]:focus,
+dl.zend_form dd input[type=password]:focus {
+    border: 1px solid #00c800;
+    background: #f5fff5;
+    box-shadow: 0 0 0;
+}
+
+dl.zend_form dd input[type=submit] {
+    width: 212px;
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+    border: 1px solid #2a80d7;
+    border-radius: 4px;
+    background: #7abcff; /* Old browsers */
+    background: -moz-linear-gradient(top, #7abcff 0%, #4096ee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #7abcff 0%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #7abcff 0%,#4096ee 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #7abcff 0%,#4096ee 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #7abcff 0%,#4096ee 100%); /* W3C */
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+}
+
+dl.zend_form dd input[type=submit]:hover {
+    text-decoration: none;
+    background: #4096ee; /* Old browsers */
+    background: -moz-linear-gradient(top, #4096ee 0%, #7abcff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4096ee), color-stop(100%,#7abcff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #4096ee 0%,#7abcff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #4096ee 0%,#7abcff 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #4096ee 0%,#7abcff 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4096ee', endColorstr='#7abcff',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #4096ee 0%,#7abcff 100%); /* W3C */
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Facebook Connect
+ **********************************************************/
+
+.yd-facebook-login {
+    display: block;
+    height: 30px;
+    padding: 0 0 0 42px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 30px;
+    color: #fff;
+    text-shadow: 0 1px 0 #25458d;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px #25458d, inset 0 1px 0 rgba(255,255,255,0.3);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook.png) 2px 0 no-repeat #7493da;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook.png) 2px 0 no-repeat, -moz-linear-gradient(top, #7493da 0%, #5878c2 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook.png) 2px 0 no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7493da), color-stop(100%,#5878c2));
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook.png) 2px 0 no-repeat, -webkit-linear-gradient(top, #7493da 0%,#5878c2 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook.png) 2px 0 no-repeat, -o-linear-gradient(top, #7493da 0%,#5878c2 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook.png) 2px 0 no-repeat, -ms-linear-gradient(top, #7493da 0%,#5878c2 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook.png) 2px 0 no-repeat, linear-gradient(to bottom, #7493da 0%,#5878c2 100%);
+}
+
+.pl .yd-facebook-login {
+    font-size: 13px;
+}
+
+.yd-facebook-login:hover {
+    text-decoration: none;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook.png) 2px 0 no-repeat #5878c2;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook.png) 2px 0 no-repeat, -moz-linear-gradient(top, #5878c2 0%, #7493da 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook.png) 2px 0 no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5878c2), color-stop(100%,#7493da));
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook.png) 2px 0 no-repeat, -webkit-linear-gradient(top, #5878c2 0%,#7493da 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook.png) 2px 0 no-repeat, -o-linear-gradient(top, #5878c2 0%,#7493da 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook.png) 2px 0 no-repeat, -ms-linear-gradient(top, #5878c2 0%,#7493da 100%);
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-facebook.png) 2px 0 no-repeat, linear-gradient(to bottom, #5878c2 0%,#7493da 100%);
+}
+
+.yd-facebook-login:focus,
+.yd-facebook-login:active {
+    color: #fff;
+    box-shadow: 0 0 2px #000 inset;
+}
+
+.yd-login-window-top {
+    height: 236px;
+    background: #eaeaea;
+}
+
+.yd-login-window-top .yd-login-window-fb {
+    margin: 0 0 8px;
+    padding: 15px;
+    border-bottom: 1px solid #999;
+    background: #f9f9f9;
+}
+
+.yd-login-window-top .yd-login-window-fb span {
+    display: block;
+    width: 40px;
+    height: 25px;
+    margin: 12px auto -28px;
+    font-size: 11px;
+    text-align: center;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-choose.png);
+}
+
+.yd-login-window-top .yd-login-window-yd {
+    padding: 10px 15px;
+}
+
+.yd-login-window-top .yd-login-window-yd strong {
+    display: block;
+    margin: 0 0 10px;
+    font-weight: normal;
+}
+
+.yd-login-window-toggle {
+    display: block;
+    height: 30px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 30px;
+    color: #555;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+    border-top: 1px solid #999;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-up.png) 95% center no-repeat #f9f9f9;
+}
+
+.yd-login-window-toggle.active {
+    border: 0;
+    border-bottom: 1px solid #999;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-login-down.png) 95% center no-repeat #f9f9f9;
+}
+
+.yd-login-window-bottom {
+    height: 236px;
+    background: #f2f2f2;
+}
+
+.yd-login-window-bottom p {
+    margin: 0;
+    padding: 5px 15px;
+    text-align: left;
+}
+
+
+
+
+
+
+.yd-profile-social {
+    padding: 20px;
+}
+
+.yd-profile-social h2 {
+    font: 24px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    color: #666;
+}
+
+.yd-profile-social h3 {
+    font: 21px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    color: #aaa;
+}
+
+.yd-profile-social .yd-facebook-login {
+    width: 200px;
+    margin: 25px 0 15px;
+}
+
+.yd-profile-social table {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.yd-profile-social table td {
+    padding: 15px 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.yd-profile-social table td label[for=facebookId]{
+    position: relative;
+    padding-left: 40px;
+    text-align: left;
+}
+
+.yd-profile-social table td .facebookIcon{
+    position: absolute;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/social-fb-logo.png) 0 0 no-repeat;
+    height: 35px;
+    width: 32px;
+    top: -9px;
+    left: -10px;
+}
+
+.yd-profile-social table td .facebookIcon:hover{
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/social-fb-logo.png) 0 -35px no-repeat;
+}
+
+.yd-profile-social ul li {
+    margin: 0 0 5px;
+    padding: 8px 8px 8px 40px;
+    font: 18px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/social-check.png) no-repeat;
+}
+
+.yd-profile-social .hover {
+    position: relative;
+    width: 75px;
+    float: right;
+}
+
+.yd-profile-social .hover a {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    font-size: 12px;
+    text-align: right;
+    color: #555;
+    border-radius: 4px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/social-eye-small.png) 6px 0px no-repeat;
+}
+
+.yd-profile-social .hover a:hover {
+    text-decoration: none;
+}
+
+.yd-profile-social .hover .muster {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 480px;
+    height: 235px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.yd-profile-social .hover .muster strong {
+    display: block;
+    padding: 0 15px;
+    height: 40px;
+    font: normal 18px/40px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    border-radius: 4px 4px 0 0;
+    background: #eee;
+    background: -moz-linear-gradient(top, #fff 0%, #eee 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#eee));
+    background: -webkit-linear-gradient(top, #fff 0%,#eee 100%);
+    background: -o-linear-gradient(top, #fff 0%,#eee 100%);
+    background: -ms-linear-gradient(top, #fff 0%,#eee 100%);
+    background: linear-gradient(top, #fff 0%,#eee 100%);
+}
+
+.de .yd-profile-social .hover .muster { background: url(http://cdn.yourdelivery.de/images/yd-profile/social-muster-de.jpg) 0 40px; }
+.at .yd-profile-social .hover .muster { background: url(http://cdn.yourdelivery.de/images/yd-profile/social-muster-at.jpg) 0 40px; }
+.ch .yd-profile-social .hover .muster { background: url(http://cdn.yourdelivery.de/images/yd-profile/social-muster-ch.jpg) 0 40px; }
+.fr .yd-profile-social .hover .muster { background: url(http://cdn.yourdelivery.de/images/yd-profile/social-muster-fr.jpg) 0 40px; }
+.pl .yd-profile-social .hover .muster { background: url(http://cdn.yourdelivery.de/images/yd-profile/social-muster-pl.jpg) 0 40px; }
+.de.eatstar .yd-profile-social .hover .muster { background: url(http://cdn.yourdelivery.de/images/yd-profile/social-muster-eatstar.jpg) 0 40px; }
+
+.yd-profile-social .hover:hover .muster {
+    display: block;
+}
+
+.yd-login-failed {
+    width: 550px;
+    margin: 0 auto;
+    background: url(http://cdn.yourdelivery.de/images/yd-background/yd-login-failed.jpg) right 150px #fafafa no-repeat;
+}
+
+.yd-login-failed strong {
+    font: 28px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+}
+
+.yd-login-failed p {
+    margin: 10px 0 15px;
+    font-size: 14px;
+}
+
+.yd-login-failed .yd-facebook-login {
+    width: 240px;
+    margin: 0;
+}
+
+.yd-login-failed ul {
+    width: 280px;
+}
+
+.yd-login-failed ul li {
+    padding: 10px 0;
+}
+
+.yd-login-failed ul li:first-child {
+    border-bottom: 1px dotted #ccc;
+}
+
+.yd-login-failed ul li label {
+    float: left;
+    display: block;
+    width: 150px;
+    padding: 5px 0 0;
+    font-size: 14px;
+}
+
+.yd-login-failed ul li .yd-button-280 {
+    margin: 0;
+}
+
+/* Help Button */
+
+.yd-service-helpcenter {
+    display: block;
+    margin: 0 0 5px;
+    padding: 5px 0 5px 30px;
+    font: 22px FuturaCM, arial, "nimbus sans l", sans-serif;
+    background: url(/media/images/yd-background/helpcenter2.png) 0 5px no-repeat;
+}
+
+
+
+.yd-phoneorder-style .yd-box-title {
+    padding-left: 25px;
+    background: url(/media/images/tel.png) 2px 4px no-repeat;
+}
+
+.yd-phoneorder-style span {
+    display: block;
+    margin: 10px 0 0;
+    font: 24px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    text-align: center;
+}
+/* include yd-frontend-user.css */
+/*
+    Form toggle
+***********************************************************/
+
+.yd-form-toggled {
+    background: none !important;
+    border: none !important;
+    cursor: default !important;
+    box-shadow: 0 0 0 !important;
+    border-radius: 0 !important;
+}
+
+/*
+ * Thx 4 Rating
+ **********************************************************/
+
+.yd-thx-4-rating {
+    height: 140px;
+    margin: 20px 0;
+    padding: 110px 0 0 275px;
+    background: url(http://cdn.yourdelivery.de/images/yd-background/yd-success-rating.jpg) no-repeat;
+}
+
+.yd-thx-4-rating h2 {
+    width: 600px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.yd-thx-4-rating p {
+    width: 600px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.yd-thx-4-rating p a {
+    text-decoration: underline;
+}
+
+/*
+ * Register
+ **********************************************************/
+
+.yd-register {
+    margin: 30px 0 0;
+    padding: 0 50px;
+}
+
+.yd-register .yd-button-280 span {
+    background: none;
+}
+
+.yd-register .yd-register-form {
+    float: left;
+    width: 500px;
+    padding: 20px 30px;
+}
+
+.yd-register .yd-register-form .yd-form-tease {
+    font: 28px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    color: #555;
+}
+
+.yd-register .yd-register-form .yd-form-tease span {
+    margin: 5px 0 0;
+    font-size: 24px;
+    color: #aaa;
+}
+
+.yd-register-sidebar {
+    float: right;
+}
+
+.yd-register-sidebar .yd-box {
+    width: 300px;
+}
+
+#yd-register-teaser {
+    font-size: 14px;
+}
+
+.yd-register input.ui-autocomplete-loading {
+    background: url(http://cdn.yourdelivery.de/images/ajax-loader-16-white.gif) no-repeat 155px 5px #fff;
+}
+
+.yd-register-icon-1 { background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 0 -2019px no-repeat; }
+.yd-register-icon-2 { background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 0 -2054px no-repeat; }
+.yd-register-icon-3 { background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 0 -2094px no-repeat; }
+.yd-register-icon-4 { background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 0 -2134px no-repeat; }
+.yd-register-icon-5 { background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 0 -2174px no-repeat; }
+.yd-register-icon-6 { background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 0 -2214px no-repeat; }
+
+#yd-register-teaser .yd-box-head {
+    padding-left: 35px;
+}
+
+#yd-register-teaser ul li {
+    margin: 0 0 5px;
+    padding: 10px 0 7px 35px;
+}
+
+.yd-registerthx {
+    position: relative;
+    width: 500px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 30px 0 0 130px;
+}
+
+.yd-registerthx span {
+    position: absolute;
+    top: -30px;
+    left: -100px;
+    display: block;
+    width: 210px;
+    height: 180px;
+    background: url(http://cdn.yourdelivery.de/images/yd-background/yd-register-thx.png);
+}
+
+.yd-registerthx h1 {
+    margin: 0 0 10px;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.yd-registerthx h2 {
+    font-size: 20px;
+}
+
+/*
+ * Loginfail
+ **********************************************************/
+
+#yd-loginfail {
+    width: 520px;
+    height: 350px;
+    margin: 0 auto;
+    background: url(http://cdn.yourdelivery.de/images/yd-background/yd-loginfail.png) 0 bottom no-repeat;
+}
+
+#yd-loginfail div {
+    border: 1px solid red;
+}
+
+#yd-loginfail div strong {
+    display: block;
+    margin: 0 0 10px;
+    font: 21px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+}
+
+#yd-loginfail div p {
+    font-size: 14px;
+}
+
+#yd-loginfail ul {
+    margin: 10px 0 0 160px;
+}
+
+#yd-loginfail ul li {
+    margin: 0 0 10px;
+}
+
+#yd-loginfail ul li label {
+    display: block;
+    margin: 0 0 5px;
+}
+
+/*
+ * Cancel Newsletter
+ **********************************************************/
+
+.yd-news-off {
+    position: relative;
+    width: 835px;
+    height: 435px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: url(http://cdn.yourdelivery.de/images/yd-background/yd-news-off.jpg);
+}
+
+.yd-news-off h1 {
+    margin: 20px;
+    padding: 0 0 10px;
+    font: 24px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    border-bottom: 1px solid #ccc;
+}
+
+.yd-news-off ul {
+    position: absolute;
+    top: 80px;
+    left: 200px;
+}
+
+.yd-news-off ul li {
+    margin: 0 0 10px;
+    padding: 0 0 0 35px;
+    font: 24px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/check-24.png) no-repeat;
+}
+
+.yd-news-off p {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    width: 400px;
+}
+
+.yd-news-off .button {
+    color: #aaa;
+    font-weight: normal;
+    text-shadow: 0 0 0;
+    border: 1px solid #aaa;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* W3C */
+}
+
+#yd-newsletter-off1 {
+    position: absolute;
+    top: 300px;
+    left: 200px;
+    font-size: 14px;
+}
+
+#yd-newsletter-off2 {
+    position: absolute;
+    top: 300px;
+    left: 200px;
+}
+
+#yd-newsletter-off2 h2 {
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#yd-ratings {
+    margin: 20px 0;
+}
+
+
+
+
+
+
+/* Verifizierte Rechnungen */
+
+#yd-signed {
+    width: 400px;
+    margin: 0 auto;
+}
+
+#yd-signed h2 {
+    padding: 20px 0 20px 120px;
+    font-size: 24px;
+    background: url(http://cdn.yourdelivery.de/images/yd-background/yd-signed.png) 0px 0px no-repeat;
+}
+
+#yd-signed dl {
+    width: 215px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+.yd-profile {
+    width: 1018px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/faux.png) repeat-y;
+}
+
+.yd-profile-head {
+    height: 45px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 8px 8px 0 0;
+    background: #f9f9f9; /* Old browsers */
+    background: -moz-linear-gradient(top, #f9f9f9 0%, #e5e5e5 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f9f9), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f9f9f9 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f9f9f9 0%,#e5e5e5 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #f9f9f9 0%,#e5e5e5 100%); /* IE10+ */
+    background: linear-gradient(top, #f9f9f9 0%,#e5e5e5 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+}
+
+.yd-profile-head ul li {
+    float: left;
+}
+
+.yd-profile-head ul li a {
+    display: block;
+    height: 45px;
+    padding: 0 40px 0 30px;
+    line-height: 45px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #999;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.yd-profile-head ul li a span {
+    margin: 0 0 0 50px;
+    color: red;
+    font-size: 11px;
+}
+
+.yd-profile-head ul li:first-child a {
+    padding-left: 20px;
+}
+
+.yd-profile-head ul li a.active {
+    margin: 0 0 0 -30px;
+    color: #555;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/active.png) no-repeat;
+}
+
+.yd-profile-head ul li:first-child a:hover,
+.yd-profile-head ul li:first-child a.active {
+    margin: 0;
+    color: #fff;
+    background: #6db4f6; /* Old browsers */
+    background: -moz-linear-gradient(top, #6db4f6 0%, #0573c2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6db4f6), color-stop(100%,#0573c2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #6db4f6 0%,#0573c2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #6db4f6 0%,#0573c2 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #6db4f6 0%,#0573c2 100%); /* IE10+ */
+    background: linear-gradient(top, #6db4f6 0%,#0573c2 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db4f6', endColorstr='#0573c2',GradientType=0 ); /* IE6-9 */
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    border-radius: 6px 0 0 0;
+}
+
+.yd-profile-head ul li:first-child a:focus,
+.yd-profile-head ul li:first-child a:active {
+    line-height: 47px;
+}
+
+.yd-profile-head .yd-button-140 {
+    float: right;
+    margin: 5px 5px 0 0;
+}
+
+.yd-profile-nav {
+    float: left;
+    width: 225px;
+    min-height: 400px;
+    text-align: center;
+    border-radius: 0 0 0 8px;
+}
+
+.yd-profile-nav ul {
+    margin: 0 0 20px;
+    padding: 0 0 10px;
+    text-align: left;
+    box-shadow: 0 16px 0px -15px #ddd, 0 17px 0px -15px #fff;
+}
+
+.yd-profile-nav ul li a {
+    display: block;
+    color: #999;
+}
+
+.yd-profile-nav ul li a:hover {
+    text-decoration: none;
+    color: #0070b7;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #f1f7fd 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f1f7fd)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#f1f7fd 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#f1f7fd 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#f1f7fd 100%); /* IE10+ */
+    background: linear-gradient(top, #ffffff 0%,#f1f7fd 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f1f7fd',GradientType=0 ); /* IE6-9 */
+    box-shadow: inset 0 1px 0 #eee, inset 0 -1px 0 #eee;
+}
+
+.yd-profile-nav ul li a.active {
+    color: #fff;
+    font-weight: bold;
+    background: #6db4f6; /* Old browsers */
+    background: -moz-linear-gradient(top, #6db4f6 0%, #0573c2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6db4f6), color-stop(100%,#0573c2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #6db4f6 0%,#0573c2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #6db4f6 0%,#0573c2 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #6db4f6 0%,#0573c2 100%); /* IE10+ */
+    background: linear-gradient(top, #6db4f6 0%,#0573c2 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db4f6', endColorstr='#0573c2',GradientType=0 ); /* IE6-9 */
+    box-shadow: inset 0 1px 0 #0d76c4, inset 0 -1px 0 #00549d, inset 0 -2px 0 #3284cc;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+}
+
+.yd-profile-nav ul li a span {
+    display: block;
+    padding: 12px 15px;
+    background-image: url(http://cdn.yourdelivery.de/images/yd-profile/yd-profile-sprite-nav.png);
+    background-repeat: no-repeat;
+}
+
+.yd-pn1 span { background-position: 180px -44px; }
+.yd-pn2 span { background-position: 180px -244px; }
+.yd-pn3 span { background-position: 180px -445px; }
+.yd-pn4 span { background-position: 180px -650px; }
+.yd-pn5 span { background-position: 180px -859px; }
+.yd-pn6 span { background-position: 180px -1062px; }
+.yd-pn7 span { background-position: 180px -1267px; }
+
+.yd-pn1:hover span { background-position: 180px -94px; }
+.yd-pn2:hover span { background-position: 180px -294px; }
+.yd-pn3:hover span { background-position: 180px -495px; }
+.yd-pn4:hover span { background-position: 180px -700px; }
+.yd-pn5:hover span { background-position: 180px -909px; }
+.yd-pn6:hover span { background-position: 180px -1112px; }
+.yd-pn7:hover span { background-position: 180px -1317px; }
+
+.yd-pn1:focus span, .yd-pn1:active span,
+.yd-pn2:focus span, .yd-pn2:active span,
+.yd-pn3:focus span, .yd-pn3:active span,
+.yd-pn4:focus span, .yd-pn4:active span,
+.yd-pn5:focus span, .yd-pn5:active span,
+.yd-pn6:focus span, .yd-pn6:active span,
+.yd-pn7:focus span, .yd-pn7:active span { padding: 13px 15px 11px; color: #000; background: url(http://cdn.yourdelivery.de/images/ajax-loader-16-white.gif) 190px 11px no-repeat; }
+
+.yd-pn1.active span { background-position: 180px 6px; }
+.yd-pn2.active span { background-position: 180px -194px; }
+.yd-pn3.active span { background-position: 180px -395px; }
+.yd-pn4.active span { background-position: 180px -600px; }
+.yd-pn5.active span { background-position: 180px -809px; }
+.yd-pn6.active span { background-position: 180px -1012px; }
+.yd-pn7.active span { background-position: 180px -1217px; }
+
+.yd-pn1.active:focus span, .yd-pn1.active:active span,
+.yd-pn2.active:focus span, .yd-pn2.active:active span,
+.yd-pn3.active:focus span, .yd-pn3.active:active span,
+.yd-pn4.active:focus span, .yd-pn4.active:active span,
+.yd-pn5.active:focus span, .yd-pn5.active:active span,
+.yd-pn6.active:focus span, .yd-pn6.active:active span,
+.yd-pn7.active:focus span, .yd-pn7.active:active span { color: #fff; background: url(http://cdn.yourdelivery.de/images/ajax-loader-16-blue.gif) 190px 11px no-repeat; }
+
+.yd-profile-body {
+    position: relative;
+    float: right;
+    width: 792px;
+    min-height: 400px;
+    border-left: 1px solid #ccc;
+    border-radius: 0 0 8px 0;
+    background: #fff;
+}
+
+.yd-profile-body > h1,
+.yd-profile-body form h1 {
+    margin: 0;
+    padding: 12px 30px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #fff;
+    border-top: 1px solid #d4edf2;
+    border-bottom: 1px solid #d4edf2;
+    background: #f0fafc;
+}
+
+
+
+.yd-profile-button {
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2b5300;
+    text-shadow: 0 1px 0 #fff;
+    border: 1px solid #c3be23;
+    border-radius: 6px;
+    background: #e9e44d; /* Old browsers */
+    background: -moz-linear-gradient(top, #e9e44d 0%, #bfce32 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e9e44d), color-stop(100%,#bfce32)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #e9e44d 0%,#bfce32 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #e9e44d 0%,#bfce32 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #e9e44d 0%,#bfce32 100%); /* IE10+ */
+    background: linear-gradient(top, #e9e44d 0%,#bfce32 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9e44d', endColorstr='#bfce32',GradientType=0 ); /* IE6-9 */
+    box-shadow: inset 0 1px 1px #fff;
+}
+
+.yd-profile-button:hover {
+    background: #bfce32; /* Old browsers */
+    background: -moz-linear-gradient(top, #bfce32 0%, #e9e44d 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bfce32), color-stop(100%,#e9e44d)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #bfce32 0%,#e9e44d 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #bfce32 0%,#e9e44d 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #bfce32 0%,#e9e44d 100%); /* IE10+ */
+    background: linear-gradient(top, #bfce32 0%,#e9e44d 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfce32', endColorstr='#e9e44d',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+
+
+
+
+
+
+.yd-pf6 h2 {
+    margin: 20px 0 0;
+    font-size: 24px;
+    text-align: center;
+    font-family: FuturaCondensedBold, arial, "nimbus sans l", sans-serif;
+}
+
+.yd-pf6 h2 span {
+    color: green;
+}
+
+.yd-pf6 h2 small {
+    display: block;
+    padding: 5px 0 0 150px;
+    font: 10px arial, "nimbus sans l", sans-serif;
+}
+
+.yd-pf6 h3 {
+    position: relative;
+    margin: -25px 60px 0 0;
+    font-size: 22px;
+    text-align: right;
+    color: green;
+    font-family: FuturaCondensedBold, arial, "nimbus sans l", sans-serif;
+}
+
+.yd-pf6 h3 span {
+    color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.yd-how-credit-work {
+    float: right;
+    width: 250px;
+    margin: 20px 30px 20px 0;
+    padding: 10px;
+    border: 1px solid #d4edf2;
+    background: #f0fafc;
+}
+
+.yd-how-credit-work p {
+    margin: 10px 0;
+    text-align: left;
+    font-size: 10px;
+}
+
+.yd-what-you-can-do-for-credit {
+    margin: 20px 0 20px 50px;
+}
+
+.yd-what-you-can-do-for-credit li {
+    float: left;
+}
+
+.yd-what-you-can-do-for-credit li a {
+    display: block;
+    width: 300px;
+    margin: 0 5px 5px 0;
+    padding: 10px;
+}
+
+.yd-what-you-can-do-for-credit li a .yd-coin {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+
+
+.yd-credit {
+    position: relative;
+    width: 792px;
+    height: 180px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-wood-1.png) no-repeat 0 87px;
+}
+
+.yd-credit li {
+    position: absolute;
+    width: 75px;
+    height: 100px;
+    background-image: url(http://cdn.yourdelivery.de/images/yd-profile/yd-profile-sprite-credit.png);
+    background-position: 0px 0px;
+}
+
+.yd-credit-01 { top: 20px; left: 90px; }
+.yd-credit-02 { top: 30px; left: 150px; }
+.yd-credit-03 { top: 20px; left: 210px; }
+.yd-credit-04 { top: 30px; left: 270px; }
+.yd-credit-05 { top: 20px; left: 330px; }
+.yd-credit-06 { top: 30px; left: 390px; }
+.yd-credit-07 { top: 20px; left: 450px; }
+.yd-credit-08 { top: 30px; left: 510px; }
+.yd-credit-09 { top: 20px; left: 570px; }
+.yd-credit-10 { top: 30px; left: 630px; }
+
+
+
+
+
+
+
+.c1 .yd-credit-01 { background-position: -675px 0; }
+.c2 .yd-credit-01 { background-position: -600px 0; }
+.c3 .yd-credit-01 { background-position: -525px 0; }
+.c4 .yd-credit-01 { background-position: -450px 0; }
+.c5 .yd-credit-01 { background-position: -375px 0; }
+.c6 .yd-credit-01 { background-position: -300px 0; }
+.c7 .yd-credit-01 { background-position: -225px 0; }
+.c8 .yd-credit-01 { background-position: -150px 0; }
+.c9 .yd-credit-01 { background-position: -75px 0; }
+.c11 .yd-credit-02 { background-position: -675px 0; }
+.c12 .yd-credit-02 { background-position: -600px 0; }
+.c13 .yd-credit-02 { background-position: -525px 0; }
+.c14 .yd-credit-02 { background-position: -450px 0; }
+.c15 .yd-credit-02 { background-position: -375px 0; }
+.c16 .yd-credit-02 { background-position: -300px 0; }
+.c17 .yd-credit-02 { background-position: -225px 0; }
+.c18 .yd-credit-02 { background-position: -150px 0; }
+.c19 .yd-credit-02 { background-position: -75px 0; }
+.c21 .yd-credit-03 { background-position: -675px 0; }
+.c22 .yd-credit-03 { background-position: -600px 0; }
+.c23 .yd-credit-03 { background-position: -525px 0; }
+.c24 .yd-credit-03 { background-position: -450px 0; }
+.c25 .yd-credit-03 { background-position: -375px 0; }
+.c26 .yd-credit-03 { background-position: -300px 0; }
+.c27 .yd-credit-03 { background-position: -225px 0; }
+.c28 .yd-credit-03 { background-position: -150px 0; }
+.c29 .yd-credit-03 { background-position: -75px 0; }
+.c31 .yd-credit-04 { background-position: -675px 0; }
+.c32 .yd-credit-04 { background-position: -600px 0; }
+.c33 .yd-credit-04 { background-position: -525px 0; }
+.c34 .yd-credit-04 { background-position: -450px 0; }
+.c35 .yd-credit-04 { background-position: -375px 0; }
+.c36 .yd-credit-04 { background-position: -300px 0; }
+.c37 .yd-credit-04 { background-position: -225px 0; }
+.c38 .yd-credit-04 { background-position: -150px 0; }
+.c39 .yd-credit-04 { background-position: -75px 0; }
+.c41 .yd-credit-05 { background-position: -675px 0; }
+.c42 .yd-credit-05 { background-position: -600px 0; }
+.c43 .yd-credit-05 { background-position: -525px 0; }
+.c44 .yd-credit-05 { background-position: -450px 0; }
+.c45 .yd-credit-05 { background-position: -375px 0; }
+.c46 .yd-credit-05 { background-position: -300px 0; }
+.c47 .yd-credit-05 { background-position: -225px 0; }
+.c48 .yd-credit-05 { background-position: -150px 0; }
+.c49 .yd-credit-05 { background-position: -75px 0; }
+.c51 .yd-credit-06 { background-position: -675px 0; }
+.c52 .yd-credit-06 { background-position: -600px 0; }
+.c53 .yd-credit-06 { background-position: -525px 0; }
+.c54 .yd-credit-06 { background-position: -450px 0; }
+.c55 .yd-credit-06 { background-position: -375px 0; }
+.c56 .yd-credit-06 { background-position: -300px 0; }
+.c57 .yd-credit-06 { background-position: -225px 0; }
+.c58 .yd-credit-06 { background-position: -150px 0; }
+.c59 .yd-credit-06 { background-position: -75px 0; }
+.c61 .yd-credit-07 { background-position: -675px 0; }
+.c62 .yd-credit-07 { background-position: -600px 0; }
+.c63 .yd-credit-07 { background-position: -525px 0; }
+.c64 .yd-credit-07 { background-position: -450px 0; }
+.c65 .yd-credit-07 { background-position: -375px 0; }
+.c66 .yd-credit-07 { background-position: -300px 0; }
+.c67 .yd-credit-07 { background-position: -225px 0; }
+.c68 .yd-credit-07 { background-position: -150px 0; }
+.c69 .yd-credit-07 { background-position: -75px 0; }
+.c71 .yd-credit-08 { background-position: -675px 0; }
+.c72 .yd-credit-08 { background-position: -600px 0; }
+.c73 .yd-credit-08 { background-position: -525px 0; }
+.c74 .yd-credit-08 { background-position: -450px 0; }
+.c75 .yd-credit-08 { background-position: -375px 0; }
+.c76 .yd-credit-08 { background-position: -300px 0; }
+.c77 .yd-credit-08 { background-position: -225px 0; }
+.c78 .yd-credit-08 { background-position: -150px 0; }
+.c79 .yd-credit-08 { background-position: -75px 0; }
+.c81 .yd-credit-09 { background-position: -675px 0; }
+.c82 .yd-credit-09 { background-position: -600px 0; }
+.c83 .yd-credit-09 { background-position: -525px 0; }
+.c84 .yd-credit-09 { background-position: -450px 0; }
+.c85 .yd-credit-09 { background-position: -375px 0; }
+.c86 .yd-credit-09 { background-position: -300px 0; }
+.c87 .yd-credit-09 { background-position: -225px 0; }
+.c88 .yd-credit-09 { background-position: -150px 0; }
+.c89 .yd-credit-09 { background-position: -75px 0; }
+.c91 .yd-credit-10 { background-position: -675px 0; }
+.c92 .yd-credit-10 { background-position: -600px 0; }
+.c93 .yd-credit-10 { background-position: -525px 0; }
+.c94 .yd-credit-10 { background-position: -450px 0; }
+.c95 .yd-credit-10 { background-position: -375px 0; }
+.c96 .yd-credit-10 { background-position: -300px 0; }
+.c97 .yd-credit-10 { background-position: -225px 0; }
+.c98 .yd-credit-10 { background-position: -150px 0; }
+.c99 .yd-credit-10 { background-position: -75px 0; }
+
+.c0 li,
+.c1 .yd-credit-02,
+.c1 .yd-credit-03,
+.c1 .yd-credit-04,
+.c1 .yd-credit-05,
+.c1 .yd-credit-06,
+.c1 .yd-credit-07,
+.c1 .yd-credit-08,
+.c1 .yd-credit-09,
+.c1 .yd-credit-10,
+.c2 .yd-credit-02,
+.c2 .yd-credit-03,
+.c2 .yd-credit-04,
+.c2 .yd-credit-05,
+.c2 .yd-credit-06,
+.c2 .yd-credit-07,
+.c2 .yd-credit-08,
+.c2 .yd-credit-09,
+.c2 .yd-credit-10,
+.c3 .yd-credit-02,
+.c3 .yd-credit-03,
+.c3 .yd-credit-04,
+.c3 .yd-credit-05,
+.c3 .yd-credit-06,
+.c3 .yd-credit-07,
+.c3 .yd-credit-08,
+.c3 .yd-credit-09,
+.c3 .yd-credit-10,
+.c4 .yd-credit-02,
+.c4 .yd-credit-03,
+.c4 .yd-credit-04,
+.c4 .yd-credit-05,
+.c4 .yd-credit-06,
+.c4 .yd-credit-07,
+.c4 .yd-credit-08,
+.c4 .yd-credit-09,
+.c4 .yd-credit-10,
+.c5 .yd-credit-02,
+.c5 .yd-credit-03,
+.c5 .yd-credit-04,
+.c5 .yd-credit-05,
+.c5 .yd-credit-06,
+.c5 .yd-credit-07,
+.c5 .yd-credit-08,
+.c5 .yd-credit-09,
+.c5 .yd-credit-10,
+.c6 .yd-credit-02,
+.c6 .yd-credit-03,
+.c6 .yd-credit-04,
+.c6 .yd-credit-05,
+.c6 .yd-credit-06,
+.c6 .yd-credit-07,
+.c6 .yd-credit-08,
+.c6 .yd-credit-09,
+.c6 .yd-credit-10,
+.c7 .yd-credit-02,
+.c7 .yd-credit-03,
+.c7 .yd-credit-04,
+.c7 .yd-credit-05,
+.c7 .yd-credit-06,
+.c7 .yd-credit-07,
+.c7 .yd-credit-08,
+.c7 .yd-credit-09,
+.c7 .yd-credit-10,
+.c8 .yd-credit-02,
+.c8 .yd-credit-03,
+.c8 .yd-credit-04,
+.c8 .yd-credit-05,
+.c8 .yd-credit-06,
+.c8 .yd-credit-07,
+.c8 .yd-credit-08,
+.c8 .yd-credit-09,
+.c8 .yd-credit-10,
+.c9 .yd-credit-02,
+.c9 .yd-credit-03,
+.c9 .yd-credit-04,
+.c9 .yd-credit-05,
+.c9 .yd-credit-06,
+.c9 .yd-credit-07,
+.c9 .yd-credit-08,
+.c9 .yd-credit-09,
+.c9 .yd-credit-10,
+.c10 .yd-credit-02,
+.c10 .yd-credit-03,
+.c10 .yd-credit-04,
+.c10 .yd-credit-05,
+.c10 .yd-credit-06,
+.c10 .yd-credit-07,
+.c10 .yd-credit-08,
+.c10 .yd-credit-09,
+.c10 .yd-credit-10,
+.c11 .yd-credit-03,
+.c11 .yd-credit-04,
+.c11 .yd-credit-05,
+.c11 .yd-credit-06,
+.c11 .yd-credit-07,
+.c11 .yd-credit-08,
+.c11 .yd-credit-09,
+.c11 .yd-credit-10,
+.c12 .yd-credit-03,
+.c12 .yd-credit-04,
+.c12 .yd-credit-05,
+.c12 .yd-credit-06,
+.c12 .yd-credit-07,
+.c12 .yd-credit-08,
+.c12 .yd-credit-09,
+.c12 .yd-credit-10,
+.c13 .yd-credit-03,
+.c13 .yd-credit-04,
+.c13 .yd-credit-05,
+.c13 .yd-credit-06,
+.c13 .yd-credit-07,
+.c13 .yd-credit-08,
+.c13 .yd-credit-09,
+.c13 .yd-credit-10,
+.c14 .yd-credit-03,
+.c14 .yd-credit-04,
+.c14 .yd-credit-05,
+.c14 .yd-credit-06,
+.c14 .yd-credit-07,
+.c14 .yd-credit-08,
+.c14 .yd-credit-09,
+.c14 .yd-credit-10,
+.c15 .yd-credit-03,
+.c15 .yd-credit-04,
+.c15 .yd-credit-05,
+.c15 .yd-credit-06,
+.c15 .yd-credit-07,
+.c15 .yd-credit-08,
+.c15 .yd-credit-09,
+.c15 .yd-credit-10,
+.c16 .yd-credit-03,
+.c16 .yd-credit-04,
+.c16 .yd-credit-05,
+.c16 .yd-credit-06,
+.c16 .yd-credit-07,
+.c16 .yd-credit-08,
+.c16 .yd-credit-09,
+.c16 .yd-credit-10,
+.c17 .yd-credit-03,
+.c17 .yd-credit-04,
+.c17 .yd-credit-05,
+.c17 .yd-credit-06,
+.c17 .yd-credit-07,
+.c17 .yd-credit-08,
+.c17 .yd-credit-09,
+.c17 .yd-credit-10,
+.c18 .yd-credit-03,
+.c18 .yd-credit-04,
+.c18 .yd-credit-05,
+.c18 .yd-credit-06,
+.c18 .yd-credit-07,
+.c18 .yd-credit-08,
+.c18 .yd-credit-09,
+.c18 .yd-credit-10,
+.c19 .yd-credit-03,
+.c19 .yd-credit-04,
+.c19 .yd-credit-05,
+.c19 .yd-credit-06,
+.c19 .yd-credit-07,
+.c19 .yd-credit-08,
+.c19 .yd-credit-09,
+.c19 .yd-credit-10,
+.c20 .yd-credit-03,
+.c20 .yd-credit-04,
+.c20 .yd-credit-05,
+.c20 .yd-credit-06,
+.c20 .yd-credit-07,
+.c20 .yd-credit-08,
+.c20 .yd-credit-09,
+.c20 .yd-credit-10,
+.c21 .yd-credit-04,
+.c21 .yd-credit-05,
+.c21 .yd-credit-06,
+.c21 .yd-credit-07,
+.c21 .yd-credit-08,
+.c21 .yd-credit-09,
+.c21 .yd-credit-10,
+.c22 .yd-credit-04,
+.c22 .yd-credit-05,
+.c22 .yd-credit-06,
+.c22 .yd-credit-07,
+.c22 .yd-credit-08,
+.c22 .yd-credit-09,
+.c22 .yd-credit-10,
+.c23 .yd-credit-04,
+.c23 .yd-credit-05,
+.c23 .yd-credit-06,
+.c23 .yd-credit-07,
+.c23 .yd-credit-08,
+.c23 .yd-credit-09,
+.c23 .yd-credit-10,
+.c24 .yd-credit-04,
+.c24 .yd-credit-05,
+.c24 .yd-credit-06,
+.c24 .yd-credit-07,
+.c24 .yd-credit-08,
+.c24 .yd-credit-09,
+.c24 .yd-credit-10,
+.c25 .yd-credit-04,
+.c25 .yd-credit-05,
+.c25 .yd-credit-06,
+.c25 .yd-credit-07,
+.c25 .yd-credit-08,
+.c25 .yd-credit-09,
+.c25 .yd-credit-10,
+.c26 .yd-credit-04,
+.c26 .yd-credit-05,
+.c26 .yd-credit-06,
+.c26 .yd-credit-07,
+.c26 .yd-credit-08,
+.c26 .yd-credit-09,
+.c26 .yd-credit-10,
+.c27 .yd-credit-04,
+.c27 .yd-credit-05,
+.c27 .yd-credit-06,
+.c27 .yd-credit-07,
+.c27 .yd-credit-08,
+.c27 .yd-credit-09,
+.c27 .yd-credit-10,
+.c28 .yd-credit-04,
+.c28 .yd-credit-05,
+.c28 .yd-credit-06,
+.c28 .yd-credit-07,
+.c28 .yd-credit-08,
+.c28 .yd-credit-09,
+.c28 .yd-credit-10,
+.c29 .yd-credit-04,
+.c29 .yd-credit-05,
+.c29 .yd-credit-06,
+.c29 .yd-credit-07,
+.c29 .yd-credit-08,
+.c29 .yd-credit-09,
+.c29 .yd-credit-10,
+.c30 .yd-credit-04,
+.c30 .yd-credit-05,
+.c30 .yd-credit-06,
+.c30 .yd-credit-07,
+.c30 .yd-credit-08,
+.c30 .yd-credit-09,
+.c30 .yd-credit-10,
+.c31 .yd-credit-05,
+.c31 .yd-credit-06,
+.c31 .yd-credit-07,
+.c31 .yd-credit-08,
+.c31 .yd-credit-09,
+.c31 .yd-credit-10,
+.c32 .yd-credit-05,
+.c32 .yd-credit-06,
+.c32 .yd-credit-07,
+.c32 .yd-credit-08,
+.c32 .yd-credit-09,
+.c32 .yd-credit-10,
+.c33 .yd-credit-05,
+.c33 .yd-credit-06,
+.c33 .yd-credit-07,
+.c33 .yd-credit-08,
+.c33 .yd-credit-09,
+.c33 .yd-credit-10,
+.c34 .yd-credit-05,
+.c34 .yd-credit-06,
+.c34 .yd-credit-07,
+.c34 .yd-credit-08,
+.c34 .yd-credit-09,
+.c34 .yd-credit-10,
+.c35 .yd-credit-05,
+.c35 .yd-credit-06,
+.c35 .yd-credit-07,
+.c35 .yd-credit-08,
+.c35 .yd-credit-09,
+.c35 .yd-credit-10,
+.c36 .yd-credit-05,
+.c36 .yd-credit-06,
+.c36 .yd-credit-07,
+.c36 .yd-credit-08,
+.c36 .yd-credit-09,
+.c36 .yd-credit-10,
+.c37 .yd-credit-05,
+.c37 .yd-credit-06,
+.c37 .yd-credit-07,
+.c37 .yd-credit-08,
+.c37 .yd-credit-09,
+.c37 .yd-credit-10,
+.c38 .yd-credit-05,
+.c38 .yd-credit-06,
+.c38 .yd-credit-07,
+.c38 .yd-credit-08,
+.c38 .yd-credit-09,
+.c38 .yd-credit-10,
+.c39 .yd-credit-05,
+.c39 .yd-credit-06,
+.c39 .yd-credit-07,
+.c39 .yd-credit-08,
+.c39 .yd-credit-09,
+.c39 .yd-credit-10,
+.c40 .yd-credit-05,
+.c40 .yd-credit-06,
+.c40 .yd-credit-07,
+.c40 .yd-credit-08,
+.c40 .yd-credit-09,
+.c40 .yd-credit-10,
+.c41 .yd-credit-06,
+.c41 .yd-credit-07,
+.c41 .yd-credit-08,
+.c41 .yd-credit-09,
+.c41 .yd-credit-10,
+.c42 .yd-credit-06,
+.c42 .yd-credit-07,
+.c42 .yd-credit-08,
+.c42 .yd-credit-09,
+.c42 .yd-credit-10,
+.c43 .yd-credit-06,
+.c43 .yd-credit-07,
+.c43 .yd-credit-08,
+.c43 .yd-credit-09,
+.c43 .yd-credit-10,
+.c44 .yd-credit-06,
+.c44 .yd-credit-07,
+.c44 .yd-credit-08,
+.c44 .yd-credit-09,
+.c44 .yd-credit-10,
+.c45 .yd-credit-06,
+.c45 .yd-credit-07,
+.c45 .yd-credit-08,
+.c45 .yd-credit-09,
+.c45 .yd-credit-10,
+.c46 .yd-credit-06,
+.c46 .yd-credit-07,
+.c46 .yd-credit-08,
+.c46 .yd-credit-09,
+.c46 .yd-credit-10,
+.c47 .yd-credit-06,
+.c47 .yd-credit-07,
+.c47 .yd-credit-08,
+.c47 .yd-credit-09,
+.c47 .yd-credit-10,
+.c48 .yd-credit-06,
+.c48 .yd-credit-07,
+.c48 .yd-credit-08,
+.c48 .yd-credit-09,
+.c48 .yd-credit-10,
+.c49 .yd-credit-06,
+.c49 .yd-credit-07,
+.c49 .yd-credit-08,
+.c49 .yd-credit-09,
+.c49 .yd-credit-10,
+.c50 .yd-credit-06,
+.c50 .yd-credit-07,
+.c50 .yd-credit-08,
+.c50 .yd-credit-09,
+.c50 .yd-credit-10,
+.c51 .yd-credit-07,
+.c51 .yd-credit-08,
+.c51 .yd-credit-09,
+.c51 .yd-credit-10,
+.c52 .yd-credit-07,
+.c52 .yd-credit-08,
+.c52 .yd-credit-09,
+.c52 .yd-credit-10,
+.c53 .yd-credit-07,
+.c53 .yd-credit-08,
+.c53 .yd-credit-09,
+.c53 .yd-credit-10,
+.c54 .yd-credit-07,
+.c54 .yd-credit-08,
+.c54 .yd-credit-09,
+.c54 .yd-credit-10,
+.c55 .yd-credit-07,
+.c55 .yd-credit-08,
+.c55 .yd-credit-09,
+.c55 .yd-credit-10,
+.c56 .yd-credit-07,
+.c56 .yd-credit-08,
+.c56 .yd-credit-09,
+.c56 .yd-credit-10,
+.c57 .yd-credit-07,
+.c57 .yd-credit-08,
+.c57 .yd-credit-09,
+.c57 .yd-credit-10,
+.c58 .yd-credit-07,
+.c58 .yd-credit-08,
+.c58 .yd-credit-09,
+.c58 .yd-credit-10,
+.c59 .yd-credit-07,
+.c59 .yd-credit-08,
+.c59 .yd-credit-09,
+.c59 .yd-credit-10,
+.c60 .yd-credit-07,
+.c60 .yd-credit-08,
+.c60 .yd-credit-09,
+.c60 .yd-credit-10,
+.c61 .yd-credit-08,
+.c61 .yd-credit-09,
+.c61 .yd-credit-10,
+.c62 .yd-credit-08,
+.c62 .yd-credit-09,
+.c62 .yd-credit-10,
+.c63 .yd-credit-08,
+.c63 .yd-credit-09,
+.c63 .yd-credit-10,
+.c64 .yd-credit-08,
+.c64 .yd-credit-09,
+.c64 .yd-credit-10,
+.c65 .yd-credit-08,
+.c65 .yd-credit-09,
+.c65 .yd-credit-10,
+.c66 .yd-credit-08,
+.c66 .yd-credit-09,
+.c66 .yd-credit-10,
+.c67 .yd-credit-08,
+.c67 .yd-credit-09,
+.c67 .yd-credit-10,
+.c68 .yd-credit-08,
+.c68 .yd-credit-09,
+.c68 .yd-credit-10,
+.c69 .yd-credit-08,
+.c69 .yd-credit-09,
+.c69 .yd-credit-10,
+.c70 .yd-credit-08,
+.c70 .yd-credit-09,
+.c70 .yd-credit-10,
+.c71 .yd-credit-09,
+.c71 .yd-credit-10,
+.c72 .yd-credit-09,
+.c72 .yd-credit-10,
+.c73 .yd-credit-09,
+.c73 .yd-credit-10,
+.c74 .yd-credit-09,
+.c74 .yd-credit-10,
+.c75 .yd-credit-09,
+.c75 .yd-credit-10,
+.c76 .yd-credit-09,
+.c76 .yd-credit-10,
+.c77 .yd-credit-09,
+.c77 .yd-credit-10,
+.c78 .yd-credit-09,
+.c78 .yd-credit-10,
+.c79 .yd-credit-09,
+.c79 .yd-credit-10,
+.c80 .yd-credit-09,
+.c80 .yd-credit-10,
+.c81 .yd-credit-10,
+.c82 .yd-credit-10,
+.c83 .yd-credit-10,
+.c84 .yd-credit-10,
+.c85 .yd-credit-10,
+.c86 .yd-credit-10,
+.c87 .yd-credit-10,
+.c88 .yd-credit-10,
+.c89 .yd-credit-10,
+.c90 .yd-credit-10 { background-position: -750px 0; }
+
+
+
+
+
+
+
+
+
+
+
+
+.yd-coupon {
+    margin: 60px 0 30px;
+}
+
+.yd-coupon div {
+    position: relative;
+}
+
+.yd-coupon div div {
+    padding: 20px 170px 40px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-wood-5.png);
+}
+
+.yd-coupon div.yd-coupon-first span,
+.yd-coupon div.yd-coupon-second span,
+.yd-coupon div.yd-coupon-everything-else span {
+    display: block;
+    position: relative;
+}
+
+.yd-coupon div.yd-coupon-second span a,
+.yd-coupon div.yd-coupon-everything-else span a {
+    display: block;
+    width: 234px;
+    height: 43px;
+    line-height: 41px;
+    padding: 0 0 0 17px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-coupon-button.png) 0 0;
+    position: absolute;
+    top: -20px;
+    left: 170px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+}
+
+.yd-coupon div.yd-coupon-second span a:hover,
+.yd-coupon div.yd-coupon-everything-else span a:hover {
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-coupon-button.png) 0 -43px;
+}
+
+.yd-coupon div.yd-coupon-second span a:focus,
+.yd-coupon div.yd-coupon-everything-else span a:active,
+.yd-coupon div.yd-coupon-second span a:active,
+.yd-coupon div.yd-coupon-everything-else span a:active {
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-coupon-button.png) 0 -86px;
+}
+
+.yd-coupon div.yd-coupon-second span img,
+.yd-coupon div.yd-coupon-everything-else span img {
+    position: absolute;
+    right: 95px;
+    bottom: 40px;
+}
+
+.yd-coupon div.yd-coupon-first span {
+    height: 177px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-wood-2.png);
+}
+
+.yd-coupon div.yd-coupon-second span {
+    height: 83px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-wood-3.png);
+}
+
+.yd-coupon div.yd-coupon-everything-else span {
+    height: 92px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-wood-4.png);
+}
+
+.yd-coupon div.yd-coupon-second,
+.yd-coupon div.yd-coupon-everything-else {
+    margin: -25px 0 0;
+}
+
+.yd-coupon div.yd-coupon-first h2 {
+    margin: 0 0 -90px;
+    padding: 0 0 0 250px;
+    font-family: FuturaCondensedBold, arial, "nimbus sans l", sans-serif;
+    font-size: 23px;
+}
+
+.yd-coupon div.yd-coupon-first h2 strong {
+    display: block;
+    font-weight: normal;
+    color: green;
+}
+
+.yd-coupon div h3 {
+    font-family: FuturaCondensedBold, arial, "nimbus sans l", sans-serif;
+    font-size: 50px;
+    text-shadow:
+        0 3px 0 #fff,
+        0 -3px 0 #fff,
+        3px 0 0 #fff,
+        -3px 0 0 #fff,
+        -3px -3px 0 #fff,
+        3px 3px 0 #fff,
+        -3px 3px 0 #fff,
+        3px -3px 0 #fff,
+        0 0 8px #000;
+}
+
+.yd-coupon div h3 i {
+    font-style: normal;
+    color: green;
+}
+
+.yd-coupon div small {
+    font-size: 16px;
+    color: #777;
+}
+
+.yd-coupon div p {
+    margin: 10px 0 0;
+    padding: 0 150px 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.yd-awesome-rating {
+    position: relative;
+    margin: 20px;
+    padding: 80px 0;
+    border-radius: 10px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+}
+
+.yd-awesome-rating.default {
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-rating-default.jpg);
+}
+
+.yd-awesome-rating .default {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 1;
+    width: 140px;
+    height: 500px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-rating-default.png);
+}
+
+.paper-body {
+    position: relative;
+    width: 575px;
+    padding: 0 0 50px 75px;
+    margin: 0 auto;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/paper-repeat.png);
+    box-shadow: 0 0 5px #000;
+}
+
+.paper-head {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 650px;
+    height: 50px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/paper-head.png);
+}
+
+.paper-left {
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    width: 20px;
+    height: 525px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/paper-left.png);
+}
+
+.paper-right {
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    width: 250px;
+}
+
+.paper-foot {
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    width: 650px;
+    height: 30px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/paper-foot.png);
+}
+
+.paper-foot div {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 125px;
+    height: 125px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/paper-coffee.png);
+}
+
+.paper-right-head {
+    height: 20px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-rating-slip1.png);
+}
+
+.paper-right-foot {
+    height: 100px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-rating-slip3.png);
+}
+
+.paper-right-body {
+    padding: 10px;
+    font: 10px arial, "nimbus sans l", sans-serif;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-rating-slip2.png);
+}
+
+.paper-right-body h1 {
+    font-family: "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.paper-right-body h1 span {
+    display: block;
+    margin: 5px 0;
+    padding: 0 0 15px;
+    font: 10px arial, "nimbus sans l", sans-serif;
+    font-weight: normal;
+    border-bottom: 1px solid #ccc;
+}
+
+.paper-right-body div {
+    margin: 5px 0;
+    padding: 7px 0;
+    height: 16px;
+    text-align: right;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/star.png) repeat-x, url(http://cdn.yourdelivery.de/images/yd-profile/star.png) repeat-x 0 25px;
+}
+
+.paper-right-body div span {
+    float: left;
+}
+
+.paper-right-body ul li {
+    margin: 0 0 5px;
+    padding: 0 0 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.paper-right-body ul li .name {
+    float: left;
+    display: block;
+    width: 170px;
+}
+
+.paper-right-body ul li .price {
+    float: right;
+    display: block;
+    width: 55px;
+    text-align: right;
+}
+
+.paper-right-body ul li .desc {
+    display: block;
+    clear: both
+}
+
+.paper-right-body ul.details {
+    width: 170px;
+    margin: 0 0 0 60px;
+}
+
+.paper-right-body ul.details li {
+    text-align: right;
+}
+
+.paper-right-body ul.details li span {
+    float: left;
+    display: block;
+    width: 70px;
+    text-align: right;
+}
+
+.paper-right-body ul.details li.black {
+    padding-top: 3px;
+    color: #000;
+    border-top: 1px solid #000;
+    border-bottom: 3px double #000;
+}
+
+.paper-right-body ul.details a {
+    text-decoration: underline;
+}
+
+.paper-right-body ul.details li.none {
+    border: 0;
+    margin: 0;
+}
+
+
+
+
+#yd-rating-yes,
+#yd-rating-no {
+    display: inline-block;
+    height: 35px;
+    margin: 0 20px 0 0;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+}
+
+#yd-rating-yes span,
+#yd-rating-no span {
+    display: block;
+    min-width: 30px;
+    padding: 0 10px 0 70px;
+    height: 35px;
+    line-height: 35px;
+    background-image: url(http://cdn.yourdelivery.de/images/yd-profile/yd-rating-thumbs.png);
+    background-repeat: no-repeat;
+}
+
+#yd-rating-yes span { background-position: 0 -123px; }
+#yd-rating-yes:hover span { background-position: 0 -63px; }
+#yd-rating-yes.active span { background-position: 0 -3px; }
+#yd-rating-no span { background-position: 0 -307px; }
+#yd-rating-no:hover span { background-position: 0 -247px; }
+#yd-rating-no.active span { background-position: 0 -187px; }
+
+#yd-rating-yes {
+    color: #2b5300;
+    border: 1px solid #8bc128;
+    background: #b4ecae; /* Old browsers */
+    background: -moz-linear-gradient(top, #b4ecae 0%, #8bc128 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b4ecae), color-stop(100%,#8bc128)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #b4ecae 0%,#8bc128 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #b4ecae 0%,#8bc128 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #b4ecae 0%,#8bc128 100%); /* IE10+ */
+    background: linear-gradient(top, #b4ecae 0%,#8bc128 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ecae', endColorstr='#8bc128',GradientType=0 ); /* IE6-9 */
+}
+
+#yd-rating-yes:hover {
+    background: #8bc128; /* Old browsers */
+    background: -moz-linear-gradient(top, #8bc128 0%, #b4ecae 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8bc128), color-stop(100%,#b4ecae)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #8bc128 0%,#b4ecae 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #8bc128 0%,#b4ecae 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #8bc128 0%,#b4ecae 100%); /* IE10+ */
+    background: linear-gradient(top, #8bc128 0%,#b4ecae 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8bc128', endColorstr='#b4ecae',GradientType=0 ); /* IE6-9 */
+}
+
+#yd-rating-no {
+    color: #870a00;
+    border: 1px solid #f5827f;
+    background: #feaeac; /* Old browsers */
+    background: -moz-linear-gradient(top, #feaeac 0%, #f5827f 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feaeac), color-stop(100%,#f5827f)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #feaeac 0%,#f5827f 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #feaeac 0%,#f5827f 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #feaeac 0%,#f5827f 100%); /* IE10+ */
+    background: linear-gradient(top, #feaeac 0%,#f5827f 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feaeac', endColorstr='#f5827f',GradientType=0 ); /* IE6-9 */
+}
+
+#yd-rating-no:hover {
+    background: #f5827f; /* Old browsers */
+    background: -moz-linear-gradient(top, #f5827f 0%, #feaeac 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5827f), color-stop(100%,#feaeac)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f5827f 0%,#feaeac 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f5827f 0%,#feaeac 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f5827f 0%,#feaeac 100%); /* IE10+ */
+    background: linear-gradient(top, #f5827f 0%,#feaeac 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5827f', endColorstr='#feaeac',GradientType=0 ); /* IE6-9 */
+}
+
+.yd-rating-tesa {
+    position: relative;
+    top: 0;
+    left: -50px;
+    width: 250px;
+    height: 180px;
+}
+
+.yd-rating-tesa span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 250px;
+    height: 180px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-rating-tesa.png);
+}
+
+.yd-rating-tesa img {
+    position: absolute;
+    top: 36px;
+    left: 45px;
+    width: 159px;
+    height: 104px;
+}
+
+.yd-rating-tesa ul {
+    position: absolute;
+    top: 42px;
+    left: 245px;
+    width: 160px;
+}
+
+.yd-rating-tesa ul li {
+    margin: 0 0 10px;
+    font-size: 14px;
+    font-family: NoteThis, arial, "nimbus sans l", sans-serif;
+}
+
+.paper-body > h1 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    font-family: NoteThis, arial, "nimbus sans l", sans-serif;
+}
+
+.paper-body > h2 {
+    width: 320px;
+    margin: 0 0 20px;
+    font-size: 18px;
+    font-family: NoteThis, arial, "nimbus sans l", sans-serif;
+}
+
+.paper-body > h3, .paper-body > form h3 {
+    margin: 20px 0 10px;
+    font-size: 18px;
+    font-family: NoteThis, arial, "nimbus sans l", sans-serif;
+}
+
+.paper-body > h3 span, .paper-body > form h3 span {
+    color: green;
+}
+
+.paper-body .yd-please-write-your-name,
+.paper-body .yd-please-write-your-rating {
+    width: 330px;
+    padding: 5px !important;
+    font-size: 16px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+    border: 1px solid #999 !important;
+    background: #eeeeee; /* Old browsers */
+    background: -moz-linear-gradient(top, #eeeeee 0%, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* W3C */
+}
+
+.paper-body .yd-please-write-your-rating {
+    height: 100px;
+}
+
+.paper-body .yd-please-write-your-name:focus,
+.paper-body .yd-please-write-your-rating:focus {
+    background: #fff;
+}
+
+.paper-body .table {
+    width: 350px;
+}
+
+.paper-body .td {
+    vertical-align: middle;
+    padding: 20px 0;
+}
+
+.paper-body .td:last-child {
+    white-space: nowrap;
+    padding: 10px 0 10px 20px;
+}
+
+.paper-body img[src*="star"] {
+    cursor: pointer;
+    margin: 0 -5px 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.yd-profile-table table {
+    border-collapse: separate;
+}
+
+.yd-profile-table {
+    width: 742px;
+    margin: 0 auto 20px;
+}
+
+.yd-profile-table .td,
+.yd-profile-table .th,
+.yd-profile-table td,
+.yd-profile-table th {
+    padding: 5px;
+    font-size: 11px;
+}
+.ratings .yd-profile-table .td,
+.ratings .yd-profile-table .th {
+    padding: 10px 5px;
+}
+
+.yd-profile-table .th,
+.yd-profile-table th {
+    vertical-align: middle;
+    color: #aaa;
+    border-bottom: 1px dotted #ccc;
+}
+
+.yd-profile-table a[href*="ASC"],
+.yd-profile-table a[href*="DESC"] {
+    display: block;
+}
+
+.td-up,
+.td-down {
+    display: inline-block;
+    width: 7px;
+    height: 6px;
+    margin: 0 3px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-profile-sprite-nav.png);
+}
+
+.td-up { background-position: -100px -200px; }
+.td-down { background-position: -107px -206px; }
+.td-up.active { background-position: -100px -206px; }
+.td-down.active { background-position: -107px -200px; }
+
+.yd-profile-table .tr:nth-child(even),
+.yd-profile-table tr:nth-child(even) {
+    background: #f7f7f7;
+}
+
+.yd-profile-table .tr:hover,
+.yd-profile-table tr:hover {
+    background: #eee;
+}
+
+.yd-profile-table .tr.warning {
+    -webkit-background-size: 30px 30px;
+    -moz-background-size: 30px 30px;
+    -ms-background-size: 30px 30px;
+    -o-background-size: 30px 30px;
+    background-size: 30px 30px;
+    background-image: -webkit-gradient(linear, left top, right bottom,
+        color-stop(.25, rgba(255, 255, 255, .1)), color-stop(.25, transparent),
+        color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .1)),
+        color-stop(.75, rgba(255, 255, 255, .1)), color-stop(.75, transparent),
+        to(transparent));
+    background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, .1) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%,
+        transparent 75%, transparent);
+    background-image: -moz-linear-gradient(135deg, rgba(255, 255, 255, .1) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%,
+        transparent 75%, transparent);
+    background-image: -ms-linear-gradient(135deg, rgba(255, 255, 255, .1) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%,
+        transparent 75%, transparent);
+    background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, .1) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%,
+        transparent 75%, transparent);
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .1) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%,
+        transparent 75%, transparent);
+    background-color: #f77;
+    border-color: #c43d3d;
+}
+
+.yd-profile-table .tr.warning,
+.yd-profile-table .tr.warning a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.yd-profile-table .tr:nth-child(even) .td,
+.yd-profile-table tr:nth-child(even) td {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.yd-profile-table .tr:nth-child(odd) .td,
+.yd-profile-table tr:nth-child(odd) td {
+    border-top: 1px dotted #ccc;
+    border-bottom: 1px dotted #ccc;
+}
+
+.yd-profile-table .td:last-child,
+.yd-profile-table td:last-child {
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.td-edit,
+.td-delete,
+.td-show,
+.td-star,
+.td-repeat,
+.td-thumb,
+.td-check,
+.td-heart,
+.td-letsgo {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 0 0 10px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-profile-sprite-nav.png);
+}
+
+.td-edit { background-position: -100px 0px; }
+.td-edit:hover { background-position: -116px 0px; }
+.td-edit:focus, .td-edit:active { background-position: -148px 0; }
+
+.td-delete { background-position: -100px -16px; }
+.td-delete:hover { background-position: -116px -16px; }
+.td-delete:focus, .td-delete:active { background-position: -148px -16px; }
+
+.td-show { background-position: -100px -32px; }
+.td-show:hover { background-position: -116px -32px; }
+.td-show:focus, .td-show:active { background-position: -148px -32px; }
+
+.td-repeat { background-position: -100px -48px; }
+.td-repeat:hover { background-position: -116px -48px; }
+.td-repeat:focus, .td-repeat:active { background-position: -148px -48px; }
+
+.td-star { background-position: -132px -64px; }
+.td-star.inactive { background-position: -100px -64px; }
+.td-star:hover { background-position: -116px -64px; }
+.td-star:focus, .td-star:active { background-position: -148px -64px; }
+
+.td-thumb { background-position: -132px -80px; } /* unused */
+.td-thumb:hover { background-position: -116px -80px; }
+.td-thumb:focus, .td-thumb:active { background-position: -148px -80px; }
+.td-thumb.inactive { background-position: -100px -96px; }
+.td-thumb.inactive-error { background-position: -100px -160px; }
+
+.td-check { background-position: -100px -96px; }
+.td-check:hover { background-position: -116px -96px; }
+.td-check:focus, .td-check:active { background-position: -148px -96px; }
+
+.td-heart { background-position: -100px -112px; }
+.td-heart.active { background-position: -132px -112px; }
+.td-heart:hover { background-position: -116px -112px; }
+.td-heart:focus, .td-heart:active { background-position: -148px -112px; }
+
+.td-letsgo { background-position: -100px -128px; }
+.td-letsgo:hover { background-position: -116px -128px; }
+.td-letsgo:focus, .td-letsgo:active { background-position: -148px -128px; }
+
+.yd-profile-table .td-storno {
+    display: block;
+    color: red;
+}
+
+.yd-profile-table .td-discount {
+    display: block;
+    color: green;
+}
+
+.yd-profile-table .tr * {
+    vertical-align: top;
+}
+
+.yd-profile-table textarea {
+    height: 14px;
+}
+
+
+
+
+.yd-profile-body h1 {
+    font-size: 14px;
+}
+
+.yd-profile-body > h1 option {
+    padding: 0 10px;
+    text-align: left;
+}
+
+.yd-profile-body > h1 span {
+    float: right;
+}
+
+.yd-profile-body form h1 i {
+    float: right;
+    font-style: normal;
+    font-size: 11px;
+    color: #6fb5c3;
+}
+
+.yd-profile-body > h1 span form {
+    display: inline-block;
+}
+
+.yd-profile-body > h1 span input {
+    font-weight: normal;
+    color: #999;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+    border: 1px solid #aaa !important;
+}
+
+.yd-profile-body > h1 span a {
+    float: right;
+    margin: 5px 0 0 5px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-profile-sprite-nav.png) -100px -144px;
+}
+
+.yd-profile-body > h1 span a:hover {
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-profile-sprite-nav.png) -116px -144px;
+}
+
+.yd-profile-body > h1 strong,
+.yd-profile-infos-2 strong {
+    padding: 5px 8px;
+    color: #006bbb;
+    font-weight: bold;
+    font-size: 14px;
+    background: #d2edf2;
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 0 rgba(0,0,0,0.2), inset -1px -1px 0 #fff;
+}
+
+.yd-profile-body .yd-no-orders {
+    padding: 20px 30px;
+}
+
+
+
+
+
+
+
+
+
+
+a.yd-profile-blue-button {
+    padding: 8px 8px 8px 40px;
+    color: #006bbb;
+    font-weight: bold;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-profile-sprite-nav.png) -96px -216px #d2edf2 no-repeat;
+    border-radius: 4px;
+}
+
+a.yd-profile-blue-button:hover {
+    text-decoration: none;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-profile-sprite-nav.png) -96px -216px #9acefc no-repeat;
+}
+
+a.yd-profile-blue-button:focus,
+a.yd-profile-blue-button:active {
+    color: #fff;
+    text-shadow: 0 0 0;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-profile-sprite-nav.png) -96px -216px #9acefc no-repeat;
+}
+
+h1 a.yd-profile-blue-button {
+    float: right;
+    margin: -8px -8px 0 0;
+}
+
+.yd-profile-fidelity {
+    display: block;
+    width: 742px;
+    height: auto;
+    overflow: auto;
+    margin: 0 auto 20px;
+}
+
+.yd-profile-fidelity .yd-profile-fidelity-points{
+    float: left;
+    margin: 0;
+    padding: 9px 0 0 0;
+    width: 215px;
+}
+
+.yd-profile-fidelity .yd-profile-fidelity-explain{
+    float: right;
+    margin: 0 50px 0 0;
+    padding: 0;
+    width: 410px;
+}
+
+.yd-profile-fidelity .yd-profile-fidelity-explain p{
+    margin: 0;
+    padding: 0;    
+}
+
+
+
+
+
+
+.yd-profile-body .yd-service-list {
+    margin: 0 auto;
+}
+
+
+
+
+
+.yd-profile-picture {
+    position: relative;
+    top: -65px;
+    left: -15px;
+    width: 300px;
+    height: 280px;
+    margin: 0 0 -30px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/default_user.png) 40px 37px no-repeat;
+}
+
+.yd-profile-picture em {
+    position: absolute;
+    top: 175px;
+    left: 40px;
+    z-index: 0;
+    font-size: 16px;
+    font-style: normal;
+    text-align: center;
+    display: block;
+    width: 210px;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.index .yd-profile-picture p {
+    display: none;
+}
+
+.settings h1 {
+    position: relative;
+    z-index: 5;
+}
+
+.settings .yd-profile-picture p {
+    position: absolute;
+    top: 120px;
+    left: 300px;
+    width: 360px;
+    font-size: 11px;
+}
+
+.settings .yd-profile-picture {
+    top: -20px;
+    left: 50px;
+    z-index: 10;
+}
+
+.yd-profile-picture div.window {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 300px;
+    height: 280px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-profile-picture.png);
+}
+
+.yd-profile-picture a {
+    position: absolute;
+    top: 208px;
+    left: 96px;
+    z-index: 5;
+}
+
+.yd-profile-picture img {
+    position: absolute;
+    top: 37px;
+    left: 40px;
+    z-index: 1;
+    width: 210px;
+    height: 209px;
+}
+
+.yd-profile-infos-1 {
+    position: absolute;
+    top: 50px;
+    left: 260px;
+}
+
+.yd-profile-infos-1 li {
+    margin: 0 0 2px;
+    padding: 0 0 0 30px;
+    font-size: 14px;
+}
+
+.yd-profile-infos-1 li:nth-child(2) {
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-profile-sprite-nav.png) -96px -298px no-repeat;
+}
+
+.yd-profile-infos-1 li:nth-child(3) {
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-profile-sprite-nav.png) -96px -335px no-repeat;
+}
+
+.yd-profile-infos-1 li:nth-child(4) {
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-profile-sprite-nav.png) -96px -263px no-repeat;
+}
+
+.yd-profile-infos-1 li:first-child {
+    margin: 0 0 8px;
+    padding: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.yd-profile-infos-2 {
+    position: absolute;
+    top: 145px;
+    left: 250px;
+    width: 500px;
+    height: 45px;
+    padding: 20px 0 0 35px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-profile-infos.png);
+}
+
+.yd-profile-infos-2 li {
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 5px 0 5px 30px;
+    font-weight: bold;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-profile-sprite-nav.png) -96px -406px no-repeat;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.yd-profile-infos-2 li:first-child { background-position: -96px -368px; }
+.yd-profile-infos-2 li:last-child { background-position: -96px -445px; }
+
+.yd-profile-infos-2:after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 50px;
+    position: absolute;
+    top: 35px;
+    right: 5px;
+    background: url(http://cdn.yourdelivery.de/images/yd-profile/yd-profile-sprite-nav.png) -105px -500px no-repeat;
+}
+
+.yd-profile-infos-3 {
+    position: absolute;
+    top: 210px;
+    right: 60px;
+    font-size: 10px;
+}
+
+.yd-profile-infos-3 a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+.yd-profile-news {
+    margin: 0 25px;
+}
+
+.yd-profile-news div {
+    margin: 0 0 5px;
+    padding: 0 0 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.yd-profile-news div img {
+    float: left;
+    width: 75px;
+    height: 75px;
+    margin: 0 15px 0 0;
+    border: 3px solid #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+.yd-profile-news div small {
+    font-size: 10px;
+    color: #aaa;
+}
+
+.yd-profile-news div h1 {
+    margin: 8px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.yd-profile-news div a {
+    text-decoration: underline;
+}
+
+.yd-profile-news .button {
+    float: right;
+    margin: 10px 0;
+    padding: 8px 20px;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+.yd-profile-form ul {
+    padding: 20px 30px;
+}
+
+.yd-profile-form li {
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.yd-profile-form li label {
+    display: inline-block;
+    width: 140px;
+    padding: 0 20px 0 0;
+    text-align: right;
+}
+
+.yd-profile-form li.onelabel input[type=text],
+.yd-profile-form li.onelabel input[type=password] {
+    width: 526px;
+}
+
+.yd-profile-form li.twolabel input[type=text],
+.yd-profile-form li.twolabel input[type=password] {
+    width: 173px;
+}
+
+.yd-profile-form li.twolabel option {
+    width: 31px;
+}
+
+.yd-profile-form li input:focus,
+.yd-profile-form li textarea:focus {
+    border: 1px solid #00c800;
+    background: #eeffe7;
+    box-shadow: 0 0 3px #00c800;
+}
+
+.onelabel.facebook {
+    position: relative;
+    height: 25px;
+    border: 0;
+}
+
+.onelabel .fb-login-button {
+    position: absolute;
+    top: 0;
+    left: 90px;
+}
+
+.onelabel .desc {
+    position: absolute;
+    top: 3px;
+    right: 75px;
+}
+
+.yd-profile-form li input {
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    border: 1px solid #ccc;
+}
+
+.yd-profile-form option {
+    width: 28px;
+}
+
+.yd-profile-form .button {
+    float: right;
+    margin: 0 30px 0 0;
+    padding: 5px 15px;
+    font-size: 16px;
+}
+
+
+
+
+
+.yd-profile-notification {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -120px;
+    width: 90px;
+    min-height: 70px;
+    padding: 7px;
+    font-style: normal;
+    text-shadow: 0 1px 0px #fff;
+    font-size: 11px;
+    border: 1px solid #d2be00;
+    border-radius: 4px;
+    background: #ffffe5; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffe5 0%, #ffee9d 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffe5), color-stop(100%,#ffee9d)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* IE10+ */
+    background: linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffe5', endColorstr='#ffee9d',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+
+
+.yd-profile-not-logged-in .yd-profile-head,
+.yd-profile-not-logged-in .yd-profile-nav,
+.yd-profile-not-logged-in .yd-profile-body h1 {
+    display: none;
+}
+
+.yd-profile-not-logged-in {
+    border: 0;
+    background: none;
+}
+
+.yd-profile-not-logged-in .yd-profile-body {
+    float: none;
+    margin: 0 auto;
+    border: 0;
+}
+
+
+
+
+.menu-top3 {
+    width: 700px;
+    margin: 0 auto;
+}
+
+
+
+.yd-delete-favourite {
+    position: absolute;
+    top: 40px;
+    left: 695px;
+}
+
+
+
+
+
+
+.mealname-lenght-toggle {
+    position: relative;
+    padding: 5px;
+    cursor: default;
+}
+
+.mealname-lenght-toggle-full {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    display: block;
+    width: 150px;
+    padding: 5px;
+    background: #fff9e7;
+    border-radius: 4px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.5);
+}
+/* include yd-frontend-expansions.css */
+/*
+ * css tables
+ **********************************************************/
+
+.table {
+    display: table;
+}
+
+.tr, .thead {
+    display: table-row;
+}
+
+.td, .th {
+    display: table-cell;
+}
+
+/*
+ * breadcrumbs ordering process
+ **********************************************************/
+
+.yd-breadcrumbs-new {
+    margin: 0 0 10px;
+    font-size: 11px;
+}
+
+.yd-breadcrumbs-new a {
+    padding: 0 0 0 20px;
+    background: url(http://cdn.yourdelivery.de/images/yd-bread-arrow.png) 7px 4px no-repeat;
+}
+
+.yd-breadcrumbs-new a:first-child {
+    padding: 0;
+    background: none;
+}
+
+.yd-breadcrumbs-new a.active,
+.yd-breadcrumbs-new a.active_payment {
+    cursor: default;
+    color: #777;
+    text-decoration: none;
+}
+
+/*
+ * fidelity point design
+ **********************************************************/
+
+.yd-coin {
+    display: block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 11px;
+    color: #000;
+    background: #feed65; /* Old browsers */
+    background: -moz-linear-gradient(top, #feed65 0%, #f4bf00 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feed65), color-stop(100%,#f4bf00)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #feed65 0%,#f4bf00 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #feed65 0%,#f4bf00 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #feed65 0%,#f4bf00 100%); /* IE10+ */
+    background: linear-gradient(top, #feed65 0%,#f4bf00 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feed65', endColorstr='#f4bf00',GradientType=0 ); /* IE6-9 */
+    border-radius: 12px;
+    box-shadow: 0 0 0 1px #f4bf00, inset 0 1px 0 #fff;
+}
+
+/*
+ * fidelity point statistic
+ **********************************************************/
+
+.yd-100-container {
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.yd-100-container .yd-100-timeline {
+    position: relative;
+    width: 200px;
+    height: 15px;
+    margin: 0 auto;
+}
+
+.yd-100-container .yd-100-timeline .yd-100-current {
+    position: relative;
+    z-index: 1;
+    height: 15px;
+}
+
+.yd-100-container .yd-100-timeline .yd-100-current .yd-100-current-point {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 11px;
+    color: #000;
+}
+
+.yd-100-container .yd-100-timeline .yd-100-inactive-point {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 11px;
+    color: #f4bf00;
+}
+
+.yd-100-container .yd-100-timeline,
+.yd-100-container .yd-100-timeline .yd-100-inactive-point {
+    background: #fff9cf; /* Old browsers */
+    background: -moz-linear-gradient(top, #fff9cf 0%, #fcecb3 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff9cf), color-stop(100%,#fcecb3)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fff9cf 0%,#fcecb3 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #fff9cf 0%,#fcecb3 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #fff9cf 0%,#fcecb3 100%); /* IE10+ */
+    background: linear-gradient(top, #fff9cf 0%,#fcecb3 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff9cf', endColorstr='#fcecb3',GradientType=0 ); /* IE6-9 */
+    border-radius: 12px;
+    box-shadow: 0 0 0 1px #f4bf00, inset 0 1px 0 #fff;
+}
+
+.yd-100-container .yd-100-timeline .yd-100-current,
+.yd-100-container .yd-100-timeline .yd-100-current .yd-100-current-point {
+    background: #feed65; /* Old browsers */
+    background: -moz-linear-gradient(top, #feed65 0%, #f4bf00 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feed65), color-stop(100%,#f4bf00)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #feed65 0%,#f4bf00 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #feed65 0%,#f4bf00 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #feed65 0%,#f4bf00 100%); /* IE10+ */
+    background: linear-gradient(top, #feed65 0%,#f4bf00 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feed65', endColorstr='#f4bf00',GradientType=0 ); /* IE6-9 */
+    border-radius: 12px;
+    box-shadow: 0 0 0 1px #f4bf00, inset 0 1px 0 #fff;
+}
+
+.yd-100-container .yd-100-timeline .yd-100-inactive-point {
+    box-shadow: 0 0 0 1px #f4bf00, inset 0 1px 0 #fff, 0 0 5px 2px gold;
+}
+
+.yd-100-0 { width: 15px; }
+.yd-100-1 { width: 20px; }
+.yd-100-2 { width: 21px; }
+.yd-100-3 { width: 22px; }
+.yd-100-4 { width: 23px; }
+.yd-100-5 { width: 24px; }
+.yd-100-6 { width: 25px; }
+.yd-100-7 { width: 26px; }
+.yd-100-8 { width: 27px; }
+.yd-100-9 { width: 28px; }
+.yd-100-10 { width: 29px; }
+.yd-100-11 { width: 30px; }
+.yd-100-12 { width: 31px; }
+.yd-100-13 { width: 32px; }
+.yd-100-14 { width: 33px; }
+.yd-100-15 { width: 34px; }
+.yd-100-16 { width: 35px; }
+.yd-100-17 { width: 36px; }
+.yd-100-18 { width: 37px; }
+.yd-100-19 { width: 38px; }
+.yd-100-20 { width: 40px; }
+.yd-100-21 { width: 42px; }
+.yd-100-22 { width: 44px; }
+.yd-100-23 { width: 46px; }
+.yd-100-24 { width: 48px; }
+.yd-100-25 { width: 50px; }
+.yd-100-26 { width: 52px; }
+.yd-100-27 { width: 54px; }
+.yd-100-28 { width: 56px; }
+.yd-100-29 { width: 58px; }
+.yd-100-30 { width: 60px; }
+.yd-100-31 { width: 62px; }
+.yd-100-32 { width: 64px; }
+.yd-100-33 { width: 66px; }
+.yd-100-34 { width: 68px; }
+.yd-100-35 { width: 70px; }
+.yd-100-36 { width: 72px; }
+.yd-100-37 { width: 74px; }
+.yd-100-38 { width: 76px; }
+.yd-100-39 { width: 78px; }
+.yd-100-40 { width: 80px; }
+.yd-100-41 { width: 82px; }
+.yd-100-42 { width: 84px; }
+.yd-100-43 { width: 86px; }
+.yd-100-44 { width: 88px; }
+.yd-100-45 { width: 90px; }
+.yd-100-46 { width: 92px; }
+.yd-100-47 { width: 94px; }
+.yd-100-48 { width: 96px; }
+.yd-100-49 { width: 98px; }
+.yd-100-50 { width: 100px; }
+.yd-100-51 { width: 102px; }
+.yd-100-52 { width: 104px; }
+.yd-100-53 { width: 106px; }
+.yd-100-54 { width: 108px; }
+.yd-100-55 { width: 110px; }
+.yd-100-56 { width: 112px; }
+.yd-100-57 { width: 114px; }
+.yd-100-58 { width: 116px; }
+.yd-100-59 { width: 118px; }
+.yd-100-60 { width: 120px; }
+.yd-100-61 { width: 122px; }
+.yd-100-62 { width: 124px; }
+.yd-100-63 { width: 126px; }
+.yd-100-64 { width: 128px; }
+.yd-100-65 { width: 130px; }
+.yd-100-66 { width: 132px; }
+.yd-100-67 { width: 134px; }
+.yd-100-68 { width: 136px; }
+.yd-100-69 { width: 138px; }
+.yd-100-70 { width: 140px; }
+.yd-100-71 { width: 142px; }
+.yd-100-72 { width: 144px; }
+.yd-100-73 { width: 146px; }
+.yd-100-74 { width: 148px; }
+.yd-100-75 { width: 150px; }
+.yd-100-76 { width: 152px; }
+.yd-100-77 { width: 154px; }
+.yd-100-78 { width: 156px; }
+.yd-100-79 { width: 158px; }
+.yd-100-80 { width: 160px; }
+.yd-100-81 { width: 162px; }
+.yd-100-82 { width: 164px; }
+.yd-100-83 { width: 166px; }
+.yd-100-84 { width: 168px; }
+.yd-100-85 { width: 170px; }
+.yd-100-86 { width: 172px; }
+.yd-100-87 { width: 174px; }
+.yd-100-88 { width: 176px; }
+.yd-100-89 { width: 178px; }
+.yd-100-90 { width: 180px; }
+.yd-100-91 { width: 182px; }
+.yd-100-92 { width: 184px; }
+.yd-100-93 { width: 186px; }
+.yd-100-94 { width: 187px; }
+.yd-100-95 { width: 188px; }
+.yd-100-96 { width: 189px; }
+.yd-100-97 { width: 190px; }
+.yd-100-98 { width: 191px; }
+.yd-100-99 { width: 192px; }
+.yd-100-100 { width: 200px; }
+
+/*
+ * how to get fidelity points
+ **********************************************************/
+
+.daisy-duck {
+    float: left;
+    width: 425px;
+    margin: 5px 0 20px 40px;
+}
+
+.daisy-duck li {
+    margin: 0 0 3px;
+    border-bottom: 2px solid #fff;
+    box-shadow: 0 1px 0px #eee;
+}
+
+.daisy-duck li:nth-child(odd) {
+    background: #fff;
+}
+
+.daisy-duck li:nth-child(even) {
+    background: #f5f5f5;
+}
+
+.daisy-duck li.daisy-duck-ordered-some-food {
+    background: #d1ec96;
+}
+
+.daisy-duck li.daisy-duck-do-something {
+    background: #dce7f8;
+}
+
+.daisy-duck li.daisy-duck-has-forbidden {
+    background: #ffacac;
+}
+
+.daisy-duck li .dd1,
+.daisy-duck li .dd2,
+.daisy-duck li .dd3 {
+    display: block;
+    float: left;
+    min-height: 24px;
+    padding: 3px 0;
+}
+
+.daisy-duck li .dd1,
+.daisy-duck li .dd3 {
+    text-align: center;
+}
+
+.daisy-duck li .dd3 .yd-coin {
+    margin: 0 0 0 25px;
+}
+
+.daisy-duck li .dd1 { width: 80px; }
+.daisy-duck li .dd2 { width: 270px; }
+.daisy-duck li .dd3 { width: 75px; }
+
+.daisy-duck li.daisy-duck-is-watching-you span {
+    min-height: 15px !important;
+    font-weight: normal;
+    font-size: 11px;
+    color: #aaa;
+}
+.daisy-duck-is-special{
+    width: 430px;
+    margin-top: 20px;
+}
+.daisy-duck-is-special li.daisy-duck-has-forbidden{
+    box-shadow: none; 
+}
+.daisy-duck-is-special  li.daisy-duck-has-forbidden {
+
+    border: 1px solid #E87483;
+}
+.daisy-duck-is-special li.daisy-duck-has-forbidden .dd3{
+    padding: 10px 0;
+}
+.daisy-duck-is-special li.daisy-duck-has-forbidden .dd2, .daisy-duck-is-special li.daisy-duck-has-forbidden .dd1{
+    font-size: 13px;
+}
+.daisy-duck-is-special li.daisy-duck-has-forbidden .dd2 strong{
+    font-size: 11px;
+    line-height: 17px;
+}
+
+#yd-sidebar .daisy-duck {
+    float: none;
+    width: auto;
+    margin: 0;
+    background: none;
+}
+
+.ie6 #yd-sidebar .daisy-duck,
+.ie7 #yd-sidebar .daisy-duck {
+    display: none;
+}
+
+#yd-sidebar .daisy-duck li {
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+    background: none;
+    box-shadow: 0 0 0;
+}
+
+#yd-sidebar .daisy-duck li:hover a {
+    color: #000;
+}
+
+#yd-sidebar .daisy-duck li .dd2 {
+    width: 195px;
+    text-align: left;
+    font-size: 11px;
+}
+
+#yd-sidebar .daisy-duck li .dd3 {
+    width: 54px;
+}
+
+#yd-sidebar .daisy-duck li:last-child {
+    border: 0;
+}
+
+
+
+/*
+ * form styling
+ **********************************************************/
+
+.yd-form strong.yd-form-tease {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 15px;
+    padding: 0 0 5px;
+    color: #333;
+    border-bottom: 1px dotted #ccc;
+}
+
+.yd-form strong.yd-form-tease span {
+    display: block;
+    font-size: 11px;
+    color: #999;
+}
+
+.yd-form input.yd-form-valid,
+.yd-form textarea.yd-form-valid {
+    border: 1px solid #00c800;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -300px -374px no-repeat #fff;
+}
+
+.yd-form input.yd-form-invalid,
+.yd-form textarea.yd-form-invalid {
+    border: 1px solid red;
+}
+
+.yd-form input:focus,
+.yd-form textarea:focus {
+    border: 1px solid #00c800;
+    background: #eeffe7;
+    box-shadow: 0 0 3px #00c800;
+}
+
+.yd-form .yd-form-wrapper {
+    width: 380px;
+}
+
+.yd-form ul.yd-form-section {
+    margin: 0 0 10px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.yd-form li {
+    position: relative;
+    width: 185px;
+    margin: 0 0 10px;
+}
+
+.yd-form span {
+    display: block;
+    margin: 0 0 5px;
+}
+
+.yd-form span small {
+    font-size: 11px;
+    color: #aaa;
+}
+
+.yd-form i {
+    font-style: normal;
+    line-height: 25px;
+}
+
+.yd-form strong {
+    font-weight: normal;
+    line-height: 21px;
+    color: green;
+}
+
+.yd-form-left {
+    float: left;
+}
+
+.yd-form-left input,
+.yd-form-right input {
+    width: 173px;
+}
+
+.yd-form-left textarea,
+.yd-form-right textarea {
+    width: 173px;
+}
+
+.yd-form-right select {
+    width: 185px;
+    text-align: center;
+}
+
+.yd-form-right {
+    float: right;
+}
+
+.yd-form li.yd-form-middle {
+    float: left;
+    width: 380px;
+}
+
+.yd-form .yd-form-middle textarea {
+    width: 368px;
+    height: 70px;
+    max-height: 70px;
+}
+
+.yd-form textarea.yd-form-valid {
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -110px -374px no-repeat #fff;
+}
+
+.yd-form input[type=checkbox] {
+    width: 20px;
+}
+
+.yd-form-info {
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: -130px;
+    z-index: 1;
+    width: 90px;
+    min-height: 70px;
+    padding: 7px;
+    font-style: normal;
+    text-shadow: 0 1px 0px #fff;
+    font-size: 11px;
+    border: 1px solid #d2be00;
+    border-radius: 4px;
+    background: #ffffe5; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffe5 0%, #ffee9d 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffe5), color-stop(100%,#ffee9d)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* IE10+ */
+    background: linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffe5', endColorstr='#ffee9d',GradientType=0 ); /* IE6-9 */
+}
+
+.yd-form-info:before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 30px;
+    z-index: 1;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 5px solid #fff7c4;
+}
+
+.yd-form-info:after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: -6px;
+    z-index: 0;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 5px solid #d2be00;
+}
+
+.yd-form-yquery img {
+    vertical-align: middle;
+}
+
+.yd-form-yquery input {
+    width: 140px;
+}
+
+.yd-form-yquery input:focus {
+    border: 1px solid #555;
+}
+
+#yd-finish-deliver-time {
+    width: 150px;
+}
+
+#debit-reg-name-info,
+#debit-reg-nr-info,
+#debit-reg-blz-info {
+    top: -27px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * system sidebar
+ **********************************************************/
+
+#yd-sidebar .yd-box-body ul li,
+.yd-flying-meal li {
+    text-align: right;
+}
+
+#yd-sidebar .yd-box-body ul li em,
+.yd-flying-meal li em {
+    float: left;
+    font-style: normal;
+}
+
+#yd-sidebar .yd-box-body ul li.align-l,
+.yd-flying-meal li.align-l {
+    text-align: left;
+}
+
+.yd-plus {
+    float: right;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 0 -880px no-repeat;
+}
+
+.yd-minus {
+    float: right;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 0 -920px no-repeat;
+}
+
+/* Floatbox Budget & Crossselling */
+
+.yd-box-head.yd-float-head {
+    cursor: pointer;
+    height: 50px;
+    padding: 6px 0 0 50px;
+    font-size: 13px;
+    text-shadow: 0 1px 0px #fff;
+    border-bottom: 1px dotted #ccc;
+}
+
+.yd-box-head.yd-float-head .yd-plus,
+.yd-box-head.yd-float-head .yd-minus {
+    margin: 15px 0 0;
+}
+
+.yd-box-head.yd-float-head small {
+    font-size: 10px;
+    color: #aaa;
+    line-height: 15px;
+}
+
+.yd-box-body.yd-float-body {
+    padding: 5px 0 20px 50px;
+    font-size: 11px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.yd-float-head#yd-expand-cater-head { background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 0 -1226px no-repeat; }
+.yd-float-head#yd-expand-fruit-head { background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 0 -1284px no-repeat; }
+.yd-float-head#yd-expand-great-head { background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 0 -1344px no-repeat; }
+.yd-float-head#expand-order-head { background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 0 -1055px no-repeat; }
+.yd-float-head#yd-expand-fav-head { background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 0 -1112px no-repeat; }
+.yd-float-head#yd-expand-premium-head { background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 0 -1168px no-repeat; }
+.yd-float-head#yd-expand-budget-head { background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 0 -1000px no-repeat; }
+
+/* Budget */
+
+#yd-sidebar .yd-box-body ul li.yd-budget-time {
+    font-size: 11px;
+    line-height: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-budget-time em {
+    display: block;
+    width: 180px;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-budget-time em b {
+    float: left;
+    font-weight: normal;
+}
+
+#yd-sidebar .yd-box-body ul li.yd-budget-adress {
+    font-size: 11px;
+    line-height: 20px;
+}
+
+#yd-expand-budget-head.yd-float-head {
+    margin: -10px -5px 0;
+}
+
+
+#yd-sidebar li.yd-budget-yes-or-no {
+    padding: 5px 0;
+}
+
+#yd-sidebar li.yd-budget-yes-or-no span {
+    padding: 5px 0 5px 25px;
+    font-weight: bold;
+}
+
+#yd-sidebar li.yd-budget-yes-or-no span.yd-budget-yes {
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/yd-budget-yes.png) 1px 4px no-repeat;
+}
+
+#yd-sidebar li.yd-budget-yes-or-no span.yd-budget-no {
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/yd-budget-no.png) 1px 4px no-repeat;
+}
+
+/* //Budget */
+
+/* Shopping-Cart */
+
+li.yd-shopping-input {
+    float: left;
+    width: 40px;
+    text-align: left !important;
+}
+
+li.yd-shopping-input input {
+    width: 22px;
+    padding: 3px 4px;
+    text-align: center;
+    background: #fff;
+}
+
+li.yd-shopping-article {
+    float: left;
+    width: 150px;
+    padding: 5px 0;
+    text-align: left !important;
+}
+
+li.yd-shopping-article.readonly {
+    padding-top: 0;
+}
+
+li.yd-shopping-article .yd-shopping-notmincost{
+    font-size:10px;
+    display:block;
+    color: red;
+}
+
+li.yd-shopping-options {
+    float: right;
+    height: 16px;
+    padding: 4px 0 0;
+}
+
+li.yd-shopping-extra {
+    clear: left;
+    color: #aaa;
+    font-size: 11px;
+}
+
+li.yd-shopping-extra span {
+    display: block;
+    margin: 0 0 3px;
+    padding: 0 0 0 40px;
+}
+
+li.yd-shopping-extra span em {
+    width: 140px;
+    text-align: left;
+}
+
+li.yd-shopping-extra span.yd-shopping-edit {
+    margin: 0 0 -22px;
+    padding: 5px 0 0 40px;
+}
+
+li.yd-shopping-price {
+    margin: 10px 0 5px;
+    padding: 0 0 5px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+
+li.yd-shopping-empty {
+    margin: 0 0 5px;
+    padding: 0 0 5px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+li.yd-shopping-discount {
+    position: relative;
+    padding: 0 0 5px;
+    border-bottom: 3px double #ccc;
+}
+
+li.yd-shopping-discount em {
+    padding: 6px 0 0;
+}
+
+li.yd-shopping-discount input {
+    width: 45px;
+}
+
+.yd-form-info-left {
+    bottom: -10px;
+    left: -120px;
+    text-align: left;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 90px;
+    min-height: 70px;
+    padding: 7px;
+    font-style: normal;
+    text-shadow: 0 1px 0px #fff;
+    font-size: 11px;
+    border: 1px solid #d2be00;
+    border-radius: 4px;
+    background: #ffffe5; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffe5 0%, #ffee9d 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffe5), color-stop(100%,#ffee9d)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* IE10+ */
+    background: linear-gradient(top, #ffffe5 0%,#ffee9d 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffe5', endColorstr='#ffee9d',GradientType=0 ); /* IE6-9 */
+}
+
+.yd-form-info-left:before {
+    content: "";
+    position: absolute;
+    right: -5px;
+    top: 30px;
+    z-index: 1;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 5px solid #fff7c4;
+}
+
+.yd-form-info-left:after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: -6px;
+    z-index: 0;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 5px solid #d2be00;
+}
+
+li.yd-shopping-endprice {
+    padding: 10px 0;
+    font-size: 14px;
+    border-bottom: 3px double #ccc;
+}
+
+li.yd-shopping-endprice strong {
+    color: green;
+}
+
+li.yd-canteen-edit {
+    margin: 0 0 5px;
+    padding: 0 0 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+#yd-sidebar .yd-box-body ul.yd-sidebar-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#yd-sidebar .yd-box-body ul.yd-sidebar-list li:last-child {
+    border: 0;
+}
+
+#minamount {
+    position: relative;
+}
+
+#minamount div {
+    margin: 10px 0;
+    padding: 2px 0 4px;
+    text-align: center;
+    font-size: 10px;
+    color: #fff;
+    border-radius: 4px;
+    -webkit-background-size: 20px 20px;
+    -moz-background-size: 20px 20px;
+    -ms-background-size: 20px 20px;
+    -o-background-size: 20px 20px;
+    background-size: 20px 20px;			
+    background-image: -webkit-gradient(linear, left top, right bottom,
+        color-stop(.25, rgba(255, 255, 255, .05)), color-stop(.25, transparent),
+        color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .05)),
+        color-stop(.75, rgba(255, 255, 255, .05)), color-stop(.75, transparent),
+        to(transparent));
+    background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,
+        transparent 75%, transparent);
+    background-image: -moz-linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,
+        transparent 75%, transparent);
+    background-image: -ms-linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,
+        transparent 75%, transparent);
+    background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,
+        transparent 75%, transparent);
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,
+        transparent 75%, transparent);
+    background-color: #de4343;
+    border-color: #c43d3d;
+}
+
+#minamount a {
+    background: url("http://cdn.yourdelivery.de/images/yd-icons/yd-mincost-info.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin-top: 1px;
+    position: absolute;
+    right: 5px;
+    text-align: center;
+    text-decoration: none;
+    top: 1px;
+
+}
+
+#minamount em {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 230px;
+    padding: 10px;
+    font-size: 11px;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    z-index: 10;
+}
+
+#minamount strong {
+    font-weight: normal;
+}
+
+#yd-fidelity-register {
+    display: block;
+    margin: 5px 0 0;
+    font-size: 11px;
+}
+
+#how-fidelity-works {
+    background: url("http://cdn.yourdelivery.de/images/yd-icons/yd-discount-info.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    right: 2px;
+    vertical-align: middle;
+    width: 16px;
+}
+#how-fidelity-works:hover{
+    background: url("http://cdn.yourdelivery.de/images/yd-icons/yd-discount-info-hover.png") no-repeat scroll 0 0 transparent;
+}
+#how-fidelity-works-content p {
+    margin: 5px 0 0;
+    padding: 5px;
+    font-size: 11px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+}
+
+/*
+ * step 1 & 4 boxes
+ **********************************************************/
+
+.yd-bigbox-head {
+    position: absolute;
+    top: 18px;
+    left: -10px;
+    padding: 0 0 0 15px;
+    width: 165px;
+    height: 40px;
+    line-height: 42px;
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 19px;
+    background: url(http://cdn.yourdelivery.de/images/yd-background/yd-bigbox-head.png) no-repeat;
+}
+
+.yd-bigbox-head em {
+    font-style: normal;
+}
+
+.yd-bigbox-head a {
+    margin: 0 0 0 25px;
+    font-family: "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 11px;
+}
+
+.yd-bigbox-head img {
+    vertical-align: middle;
+}
+
+.yd-start-adress-icon {
+    padding: 5px 0 5px 20px;
+    background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) 0 -597px no-repeat;
+}
+
+.yd-bigbox-body {
+    margin: 0 0 0 180px;
+    min-height: 48px;
+}
+
+.yd-bigbox-body .yd-finish-times {
+    padding: 10px 0 0;
+}
+
+.yd-bigbox-body .yd-finish-times img {
+    vertical-align: middle;
+}
+
+.yd-bigbox-payment {
+    position: relative;
+}
+
+/*
+ * presuccess
+ **********************************************************/
+
+.yd-finish-presuccess {
+    width: 670px;
+    height: 310px;
+    margin: 0 auto;
+    padding: 30px 0 0 30px;
+    background: url(http://cdn.yourdelivery.de/images/yd-background/yd-presuccess.jpg);
+}
+
+.yd-finish-presuccess p {
+    padding: 10px 10px 10px 50px;
+    font-weight: bold;
+    font-size: 18px;
+    background: url(http://cdn.yourdelivery.de/images/yd-background/yd-load-presuccess.gif) 0 20px no-repeat;
+}
+
+.yd-finish-presuccess p span {
+    display: block;
+    color: #bbb;
+}
+
+/*
+ * step 4 & 5 restaurant info box
+ **********************************************************/
+
+.yd-rest-info h2 {
+    font: 24px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+}
+
+.yd-rest-info small {
+    display: block;
+    margin: 5px 0 15px;
+    font-size: 16px;
+}
+
+.yd-rest-info span {
+    display: block;
+    padding: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background: #777; /* Old browsers */
+    background: -moz-linear-gradient(top, #777 0%, #555 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#777), color-stop(100%,#555)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #777 0%,#555 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #777 0%,#555 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #777 0%,#555 100%); /* IE10+ */
+    background: linear-gradient(top, #777 0%,#555 100%); /* W3C */
+    border: 1px solid #444;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.3) inset;
+    text-shadow: 0 1px 0 #222;
+}
+
+.yd-rest-info img {
+    float: left;
+    display: block;
+    width: 120px;
+    height: 72px;
+    margin: 20px 0 0;
+    border: 3px solid #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+.yd-rest-info strong {
+    float: right;
+    margin: 20px 0 0;
+    display: block;
+    width: 520px;
+    height: 76px;
+    text-align: center;
+    font: 34px/76px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    color: #777;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* W3C */
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.yd-rest-stop {
+    height: 100px;
+    padding: 22px 20px 0 150px;
+    background: url(http://cdn.yourdelivery.de/images/yd-background/yd-finish-stop.jpg) 20px 0 no-repeat #fffde1;
+}
+
+.yd-rest-stop h1 {
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 19px;
+}
+
+.yd-rest-stop p {
+    font-size: 14px;
+}
+
+/*
+ * Shoppic Cart Icons
+ **********************************************************/
+
+.yd-bucket-title {
+    padding-left: 25px;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -458px -332px no-repeat;
+}
+
+.yd-bucket-title #yd-clear-bucket {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) -345px -160px;
+}
+
+.yd-bucket-title #yd-clear-bucket:hover { background-position: -345px -175px; }
+.yd-bucket-title #yd-clear-bucket:focus, .yd-bucket-title a:active { background-position: -345px -190px; }
+
+li.yd-shopping-options a {
+    float: left;
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin: 0 0 0 2px;
+    background-image: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png);
+}
+
+.yd-option-plus { background-position: -300px -160px; }
+.yd-option-minus { background-position: -315px -160px; }
+.yd-option-trash { background-position: -330px -160px; }
+
+.yd-option-plus:hover { background-position: -300px -175px; }
+.yd-option-minus:hover { background-position: -315px -175px; }
+.yd-option-trash:hover { background-position: -330px -175px; }
+
+.yd-option-plus:focus, .yd-option-plus:active { background-position: -300px -190px; }
+.yd-option-minus:focus, .yd-option-minus:active { background-position: -315px -190px; }
+.yd-option-trash:focus, .yd-option-trash:active { background-position: -330px -190px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Internal Links
+ **********************************************************/
+
+.yd-voodoo-main {
+    height: 530px;
+    background: url(http://cdn.yourdelivery.de/images/yd-voodoo/map-berlin.jpg);
+    border-radius: 4px;
+    box-shadow: 0 0 3px #000 inset;
+}
+
+.yd-voodoo-main form {
+    position: relative;
+    height: 150px;
+    background: rgba(0,0,0,0.75);
+    border-radius: 4px 4px 0 0;
+}
+
+.yd-voodoo-main form strong {
+    display: block;
+    padding: 15px 0 0;
+    font: normal 28px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+}
+
+.yd-voodoo-main form #yd-plz-search {
+    position: absolute;
+    top: 65px;
+    left: 235px;
+    width: 335px;
+    height: 70px;
+    padding: 0;
+    font: 34px/70px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: #999;
+    border: 0;
+    background: #fff;
+    -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,0.5) inset, 0 0 0 1px #000;
+    -moz-box-shadow: 3px 3px 3px rgba(0,0,0,0.5) inset, 0 0 0 1px #000;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.5) inset, 0 0 0 1px #000;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.yd-voodoo-main form #yd-plz-search.ui-autocomplete-loading {
+    background: url(http://cdn.yourdelivery.de/images/ajax-loader-16-white.gif) no-repeat 22px 26px #fff;
+}
+
+.yd-voodoo-main form #yd-start-order {
+    position: absolute;
+    top: 65px;
+    left: 580px;
+    display: block;
+    width: 200px;
+    height: 70px;
+    font: 34px/70px FuturaCondensedBold, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    color: #fff;
+    -webkit-box-shadow: 0 0 0 1px #222, 0 1px 0 rgba(255,255,255,0.5) inset;
+    -moz-box-shadow: 0 0 0 1px #222, 0 1px 0 rgba(255,255,255,0.5) inset;
+    box-shadow: 0 0 0 1px #222, 0 1px 0 rgba(255,255,255,0.5) inset;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: #81e200; /* Old browsers */
+    background: -moz-linear-gradient(top, #81e200 0%, #3f6f00 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#81e200), color-stop(100%,#3f6f00)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #81e200 0%,#3f6f00 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #81e200 0%,#3f6f00 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #81e200 0%,#3f6f00 100%); /* IE10+ */
+    background: linear-gradient(top, #81e200 0%,#3f6f00 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81e200', endColorstr='#3f6f00',GradientType=0 ); /* IE6-9 */
+}
+
+.yd-voodoo-main form #yd-start-order:hover {
+    text-decoration: none;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+
+.yd-voodoo-main form #yd-start-order:focus,
+.yd-voodoo-main form #yd-start-order:active {
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 0 0 1px #222, 0 0 5px rgba(0,0,0,0.8) inset;
+    -moz-box-shadow: 0 0 0 1px #222, 0 0 5px rgba(0,0,0,0.8) inset;
+    box-shadow: 0 0 0 1px #222, 0 0 5px rgba(0,0,0,0.8) inset;
+}
+
+
+
+.yd-voodoo-list {
+    margin: 30px 0;
+}
+
+.yd-voodoo-list ul {
+    list-style: disc;
+    margin: 0 0 20px 0;
+}
+
+.yd-voodoo-list ul li {
+    float: left;
+    width: 155px;
+    margin: 0 0 5px 15px;
+    font-size: 11px;
+}
+
+.yd-voodoo-cityplz ul {
+    list-style: none;
+}
+
+.yd-voodoo-cityplz ul li {
+    float: left;
+    width: auto;
+    margin: 0 5px 5px 0;
+    font-size: 11px;
+}
+
+.yd-voodoo-list-toggle,
+.yd-voodoo-cityplz-toggle {
+    display: block;
+    float: right;
+    padding: 0 0 0 30px;
+    background: url(http://cdn.yourdelivery.de/images/yd-voodoo/icons.png) 0 -199px no-repeat;
+}
+
+
+
+
+/*
+ * SEO - Default Settings
+ **********************************************************/
+
+.yd-voodoo-cube {
+    position: relative;
+    margin: 30px 0;
+}
+
+.yd-voodoo-topservice .yd-box-title {
+    padding-left: 30px;
+    background: url(http://cdn.yourdelivery.de/images/yd-voodoo/icons.png) -6px -3px no-repeat;
+}
+
+.yd-voodoo-lastrate .yd-box {
+    overflow: hidden;
+}
+
+.yd-voodoo-lastrate .yd-box-title {
+    padding-left: 30px;
+    background: url(http://cdn.yourdelivery.de/images/yd-voodoo/icons.png) -6px -51px no-repeat;
+}
+
+.yd-voodoo-topfood .yd-box-title {
+    padding-left: 30px;
+    background: url(http://cdn.yourdelivery.de/images/yd-voodoo/icons.png) -5px -96px no-repeat;
+}
+
+.yd-voodoo-text h1,
+.yd-voodoo-text h2,
+.yd-voodoo-text h3,
+.yd-voodoo-text h4,
+.yd-voodoo-text h5,
+.yd-voodoo-text h6 {
+    font: 21px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+}
+
+.yd-voodoo-text p {
+    margin: 0 0 30px;
+}
+
+.yd-voodoo-text ul {
+    list-style: disc;
+    margin: 0 0 20px 15px;
+}
+
+.yd-voodoo-text ul li {
+    margin: 0 0 5px;
+}
+
+
+
+.yd-voodoo-lastrate a {
+    position: relative;
+    display: block;
+    margin: 0 0 15px;
+    padding: 5px;
+    color: #333;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+.yd-voodoo-lastrate a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 4px;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #eaf0f9 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eaf0f9)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#eaf0f9 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#eaf0f9 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#eaf0f9 100%); /* IE10+ */
+    background: linear-gradient(top, #ffffff 0%,#eaf0f9 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaf0f9',GradientType=0 ); /* IE6-9 */
+    box-shadow: inset 0 0 0 1px lightblue, 0 -1px 0 #eee;
+}
+
+.yd-voodoo-lastrate a small {
+    display: block;
+    margin: 5px 0 0;
+    font-style: italic;
+    color: #aaa;
+}
+
+
+
+
+
+.yd-voodoo-rating {
+    text-align: center;
+}
+
+.yd-voodoo-rating strong {
+    display: block;
+    margin: 0 0 10px;
+    font: normal 21px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+}
+
+.yd-voodoo-rating .yd-rated-aggegate {
+}
+
+.yd-voodoo-rating .yd-rated-aggegate span {
+    float: none;
+    display: inline-block;
+    font: bold 13px arial;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Internal Links - Random Generator Result 1
+ **********************************************************/
+
+.yd-voodoo-cube-result-1 .yd-voodoo-topservice {
+    float: left;
+    width: 720px;
+    height: 490px;
+    margin: 0 20px 20px 0;
+}
+
+.yd-voodoo-cube-result-1 .yd-voodoo-topservice .yd-box { height: 460px; }
+
+.yd-voodoo-cube-result-1 .yd-voodoo-lastrate {
+    float: left;
+    width: 280px;
+    height: 490px;
+    margin: 0 0 20px 0;
+}
+
+.yd-voodoo-cube-result-1 .yd-voodoo-lastrate .yd-box { height: 460px; }
+
+.yd-voodoo-cube-result-1 .yd-voodoo-topfood {
+    float: left;
+    width: 280px;
+    height: 490px;
+    margin: 0 20px 0 0;
+}
+
+.yd-voodoo-cube-result-1 .yd-voodoo-topfood .yd-box { height: 460px; }
+
+.yd-voodoo-cube-result-1 .yd-voodoo-text {
+    float: left;
+    width: 720px;
+}
+
+/*
+ * Internal Links - Random Generator Result 2
+ **********************************************************/
+
+.yd-voodoo-cube-result-2 .yd-voodoo-topservice {
+    width: 720px;
+    height: 490px;
+    margin: 0 0 20px;
+}
+
+.yd-voodoo-cube-result-2 .yd-voodoo-topservice .yd-box { height: 460px; }
+
+.yd-voodoo-cube-result-2 .yd-voodoo-lastrate {
+    float: right;
+    width: 280px;
+    height: 490px;
+}
+
+.yd-voodoo-cube-result-2 .yd-voodoo-lastrate .yd-box { height: 460px; }
+
+.yd-voodoo-cube-result-2 .yd-voodoo-topfood {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 490px;
+}
+
+.yd-voodoo-cube-result-2 .yd-voodoo-topfood .yd-box { height: 460px; }
+
+.yd-voodoo-cube-result-2 .yd-voodoo-text {
+    width: 720px;
+}
+
+/*
+ * Internal Links - Random Generator Result 3
+ **********************************************************/
+
+.yd-voodoo-cube-result-3 {
+    padding: 190px 0 0;
+}
+
+.yd-voodoo-cube-result-3 .yd-voodoo-topservice {
+    width: 720px;
+    height: 360px;
+    margin: 0 0 20px;
+}
+
+.yd-voodoo-cube-result-3 .yd-voodoo-topservice .yd-box { height: 330px; }
+
+.yd-voodoo-cube-result-3 .yd-voodoo-lastrate {
+    position: absolute;
+    top: 190px;
+    right: 0;
+    width: 280px;
+    height: 360px;
+}
+
+.yd-voodoo-cube-result-3 .yd-voodoo-lastrate .yd-box { height: 330px; }
+
+.yd-voodoo-cube-result-3 .yd-voodoo-topfood {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1020px;
+    height: 170px;
+}
+
+.yd-voodoo-cube-result-3 .yd-voodoo-topfood .yd-box { height: 140px; }
+
+.yd-voodoo-cube-result-3 .yd-voodoo-topfood ol li {
+    float: left;
+}
+
+.yd-voodoo-cube-result-3 .yd-voodoo-topfood ol li img {
+    display: block;
+}
+
+.yd-voodoo-cube-result-3 .yd-voodoo-text {
+}
+
+/*
+ * Internal Links - Random Generator Result 4
+ **********************************************************/
+
+.yd-voodoo-cube-result-4 .yd-voodoo-topservice {
+    width: 720px;
+    height: 360px;
+    margin: 0 0 20px;
+}
+
+.yd-voodoo-cube-result-4 .yd-voodoo-topservice .yd-box { height: 330px; }
+
+.yd-voodoo-cube-result-4 .yd-voodoo-lastrate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 360px;
+}
+
+.yd-voodoo-cube-result-4 .yd-voodoo-lastrate .yd-box { height: 330px; }
+
+.yd-voodoo-cube-result-4 .yd-voodoo-topfood {
+    height: 170px;
+    margin: 0 0 20px;
+}
+
+.yd-voodoo-cube-result-4 .yd-voodoo-topfood .yd-box { height: 140px; }
+
+.yd-voodoo-cube-result-4 .yd-voodoo-topfood ol li {
+    float: left;
+}
+
+.yd-voodoo-cube-result-4 .yd-voodoo-topfood ol li img {
+    display: block;
+}
+
+.yd-voodoo-cube-result-4 .yd-voodoo-text {
+}
+
+.yd-voodoo-map img {
+    padding: 15px 15px 0;
+}
+
+.yd-voodoo-map-address {
+    margin: -24px 0 24px 90px;
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #444;
+}
+/* include yd-frontend-jquery.css */
+/*
+ * jQuery UI Datepicker
+ **********************************************************/
+
+.ui-datepicker {
+    position: absolute;
+    width: 216px;
+    height: auto;
+    margin: 5px auto 0;
+    font: 9pt Arial, sans-serif;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    background: #fff;
+}
+
+.ui-datepicker a {
+    text-decoration: none;
+}
+
+.ui-datepicker table {
+    width: 100%;
+}
+
+.ui-datepicker-header {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 1px 0px #000;
+    filter: dropshadow(color=#000, offx=1, offy=-1);
+    line-height: 30px;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: #555;
+    background: #222;
+    background: -moz-linear-gradient(top, #444 0%, #222 100%);
+    background: -webkit-linear-gradient(top, #444 0%,#222 100%);
+    background: -o-linear-gradient(top, #444 0%,#222 100%);
+    background: -ms-linear-gradient(top, #444 0%,#222 100%);
+    background: linear-gradient(top, #444 0%,#222 100%);
+}
+
+.ui-datepicker-title {
+    text-align: center;
+}
+
+.ui-datepicker-prev, .ui-datepicker-next {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    background-image: url(/media/images/yd-frontend-core/ui-datepicker-arrows.png);
+    background-repeat: no-repeat;
+    line-height: 600%;
+    overflow: hidden;
+}
+
+.ui-datepicker-prev {
+    float: left;
+    background-position: center -30px;
+}
+
+.ui-datepicker-prev.ui-state-disabled {
+    opacity: 0.4;
+}
+
+.ui-datepicker-next {
+    float: right;
+    background-position: center 0px;
+}
+
+.ui-datepicker thead {
+    background-color: #f7f7f7;
+    background-image: -moz-linear-gradient(top,  #f7f7f7 0%, #f1f1f1 100%);
+    background-image: -webkit-linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+    background-image: -o-linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+    background-image: -ms-linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+    background-image: linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+    border-bottom: 1px solid #bbb;
+}
+
+.ui-datepicker th {
+    text-transform: uppercase;
+    font-size: 6pt;
+    padding: 5px 0;
+    color: #666666;
+    text-shadow: 1px 0px 0px #fff;
+    filter: dropshadow(color=#fff, offx=1, offy=0);
+}
+
+.ui-datepicker tbody td {
+    padding: 0;
+    border-right: 1px solid #bbb;
+}
+
+.ui-datepicker tbody td:last-child {
+    border-right: 0px;
+}
+
+.ui-datepicker tbody tr {
+    border-bottom: 1px solid #bbb;
+}
+
+.ui-datepicker tbody tr:last-child {
+    border-bottom: 0px;
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: #666666;
+    text-shadow: 1px 1px 0px #fff;
+    filter: dropshadow(color=#fff, offx=1, offy=1);
+}
+
+.ui-datepicker-calendar .ui-state-default {
+    background: #ededed;
+    background: -moz-linear-gradient(top,  #ededed 0%, #dedede 100%);
+    background: -webkit-linear-gradient(top,  #ededed 0%,#dedede 100%);
+    background: -o-linear-gradient(top,  #ededed 0%,#dedede 100%);
+    background: -ms-linear-gradient(top,  #ededed 0%,#dedede 100%);
+    background: linear-gradient(top,  #ededed 0%,#dedede 100%);
+    box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, .5);
+}
+
+.ui-datepicker-calendar .ui-state-hover {
+    background: #f7f7f7;
+}
+
+.ui-datepicker-calendar .ui-state-active {
+    background: #6eafbf;
+    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+    color: #e0e0e0;
+    text-shadow: 0px 1px 0px #4d7a85;
+    filter: dropshadow(color=#4d7a85, offx=0, offy=1);
+    border: 1px solid #55838f;
+    position: relative;
+    margin: -1px;
+}
+
+.ui-datepicker-unselectable .ui-state-default {
+    background: #f4f4f4;
+    color: #b4b3b3;
+}
+
+.ui-datepicker-calendar td:first-child .ui-state-active {
+    width: 29px;
+    margin-left: 0;
+}
+
+.ui-datepicker-calendar td:last-child .ui-state-active {
+    width: 29px;
+    margin-right: 0;
+}
+
+.ui-datepicker-calendar tr:last-child .ui-state-active {
+    height: 29px;
+    margin-bottom: 0;
+}
+
+/*
+ * jQuery UI Dialog
+ **********************************************************/
+
+.ui-dialog {
+    position: absolute;
+}
+
+.ui-dialog-titlebar {
+    display: none;
+}
+
+.ui-dialog-content {
+    height: auto !important;
+}
+
+.yd-dialogs-close {
+    position: absolute;
+    top: -22px;
+    right: -22px;
+    z-index: 1;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-core/yd-sprite-core.png) 0 -520px;
+}
+
+.yd-dialogs-close:hover {
+    background-position: -40px -520px;
+}
+
+.yd-dialogs-close:focus,
+.yd-dialogs-close:active {
+    background-position: -80px -520px;
+}
+
+.ui-dialog-buttonpane {
+    padding: 15px 0 !important;
+    text-align: center !important;
+    border: 0;
+    border-top: 1px solid #ccc !important;
+    background: #eee;
+}
+
+.ui-dialog-buttonset {
+    float: none !important;
+}
+
+.ui-dialog-buttonpane button, .ui-dialog-buttonpane .button {
+    margin: 0 10px;
+}
+
+/*
+ * Lightbox Overlay
+ **********************************************************/
+
+.ui-widget-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: .5;
+    filter:Alpha(Opacity=50);
+}
+
+* html .ui-widget-overlay {
+    display: none !important;
+}
+
+/*
+ * Lightbox Loading
+ **********************************************************/
+
+.yd-lightbox-loading {
+    height: 400px;
+    background: url(http://cdn.yourdelivery.de/images/ajax-loader-16-white.gif) 50% 50% no-repeat;
+}
+
+/*
+    Dialog scrollable Content
+***********************************************************/
+
+.yd-lightbox-content-container {
+    position: relative;
+    padding: 20px 50px;
+}
+
+
+
+.yd-lightbox-content-container .item {
+    float: left;
+    width: 230px;
+    padding: 5px 0;
+    margin: 0 5px;
+    border-bottom: 1px dotted #ccc;
+}
+.yd-lightbox-content-container .item:last-child{
+    float: none;
+    width: 230px;
+    display: inline-block;
+    padding: 5px 0;
+    margin: 0 5px;
+    border-bottom: 1px dotted #ccc;
+}
+
+
+
+.yd-lightbox-content-container #yd-special-input {
+    width: 458px;
+    height: 30px;
+    padding: 10px;
+    font-size: 12px;
+    color: #555;
+}
+
+
+
+
+
+.yd-lightbox-buttons {
+    padding: 10px 0;
+    text-align: center;
+    border-top: 1px dotted #ccc;
+}
+
+.yd-lightbox-content-container .yd-lightbox-buttons {
+    margin: 40px 0 0;
+    padding: 10px 0 0;
+}
+
+.yd-lightbox-buttons .button {
+    padding: 5px 20px;
+    font-size: 14px;
+    font-family: "trebuchet ms", arial, "nimbus sans l", sans-serif;
+}
+
+
+
+
+
+
+
+#yd-ratinglightbox {
+    width: 500px;
+    height: 230px;
+    margin: 0 0 25px;
+    background: url(http://cdn.yourdelivery.de/images/yd-background/yd-ratinglightbox.png) no-repeat;
+}
+
+#yd-ratinglightbox .yd-rating-people {
+    float: left;
+    display: block;
+    width: 240px;
+    margin: 108px 0 0 5px;
+    font-size: 15px;
+    font-weight: normal;
+    text-align: center;
+}
+
+#yd-ratinglightbox .yd-rating-people b {
+    font-size: 22px;
+    padding-left: 30px;
+    color: green;
+}
+
+#yd-ratinglightbox div {
+    float: right;
+    width: 200px;
+    height: 200px;
+    padding: 15px;
+    font-size: 13px;
+    text-align: center;
+}
+
+#yd-ratinglightbox div h2 {
+    font-size: 14px;
+    margin: 0 0 20px;
+    border-bottom: 1px dotted #ccc;
+}
+
+#yd-ratinglightbox div strong {
+    float: none;
+    margin: 10px auto 30px;
+}
+
+.ui-widget-content .yd-button-280,
+.ui-widget-content .button {
+    color: #fff !important;
+    margin: 10px auto;
+
+}
+.ui-widget-content .yd-button-280-back{
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/yd-button-280back.png) 0 0 no-repeat transparent;
+}
+
+.ui-widget-content .yd-button-280-back:active, 
+.ui-widget-content .yd-button-280-back:focus{
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/yd-button-280back.png) 0 -50px no-repeat transparent;
+}
+
+
+
+#extrahead {
+    padding: 16px 50px;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+    background: url(http://cdn.yourdelivery.de/images/yd-sprites-icons.png) -40px -2983px no-repeat #eee;
+}
+
+#extrahead #extramenu {
+    text-align: right;
+    padding: 0 0 8px;
+    border-bottom: 1px dotted #aaa;
+}
+
+#extrahead #extramenu .extraleft {
+    float: left;
+}
+
+#extrahead #extramenu .extraleft input#eingabefeld {
+    width: 30px;
+    height: 15px;
+    text-align: center;
+    font-size: 10px;
+    margin: 0 5px 2px 0;
+    padding: 1px;
+}
+
+#extrahead #extradesc {
+    font-weight: normal;
+    font-size: 10px;
+    color: #555;
+    padding: 5px 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+#yd-service-offline #yd-plz-search {
+    display: block;
+    width: 280px;
+    margin: 0 auto 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+#change-plz {
+    height: 100px;
+}
+
+#change-plz #yd-plz-search {
+    position: absolute;
+    top: 72px;
+    left: 70px;
+    width: 200px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0;
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+    background: #e2f9c8;
+}
+
+#change-plz .yd-button-280 {
+    position: absolute;
+    top: 70px;
+    left: 280px;
+    color: #fff !important;
+}
+
+
+
+
+.change-plz {
+    height: 250px !important;
+    background: url(http://cdn.yourdelivery.de/images/yd-background/yd-changeplz-satellite.jpg) 25px 15px no-repeat !important;
+}
+
+.change-plz span {
+    display: block;
+    width: 400px;
+    padding: 50px 0 0 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.change-plz #yd-plz-search {
+    top: 180px !important;
+}
+
+.change-plz .yd-button-240 {
+    top: 180px !important;
+}
+
+
+
+
+
+
+
+
+
+/* Validation Engine
+----------------------------------*/
+
+.formError {
+    position:absolute;
+    top:300px; left:300px;
+    padding-bottom:13px;
+    display:block;
+    z-index:5000;
+    cursor:pointer;
+}
+#debugMode{
+    background:#000;
+    position:fixed;
+    width:100%; height:200px;
+    top:0; left:0;
+    overflow:scroll;
+    opacity:0.8;
+    display:block;
+    padding:10px;
+    color:#fff;
+    font-size:14px;
+    z-index:100000;
+}
+
+.ajaxSubmit{ padding:20px; background:#55ea55;border:1px solid #999;display:none}
+.formError .formErrorContent {
+    width:100%;
+    color:#fff;
+    width:150px; /* Breite der Blase */
+    font-family:tahoma;
+    font-size:11px;
+    border:2px solid #ddd;
+    box-shadow: 0px 0px 6px #000;
+    padding:4px 10px 4px 10px;
+    border-radius: 6px;
+    background: url(http://cdn.yourdelivery.de/images/yd-background/validationengine-close.png) 154px 0 no-repeat #d7413a;
+}
+
+
+
+
+.greenPopup .formErrorContent {background:#33be40;}
+.blackPopup .formErrorContent {background:#393939;color:#FFF;}
+
+
+.formError .formErrorArrow{
+    position:absolute;
+    bottom:0;left:20px;
+    width:15px; height:15px;
+    z-index:5001;
+}
+.formError .formErrorArrowBottom{top:0;margin:-6px;}
+
+.formError .formErrorArrow div{
+    border-left:2px solid #ddd;
+    border-right:2px solid #ddd;
+    box-shadow: 0px 2px 3px #444;
+    font-size:0px; height:1px; background:#d7413a;margin:0 auto;line-height:0px; font-size:0px; display:block;
+}
+.formError .formErrorArrowBottom div{
+    box-shadow: none;
+}
+
+.greenPopup .formErrorArrow div{background:#33be40;}
+.blackPopup .formErrorArrow div{background:#393939;color:#FFF;}
+
+.formError .formErrorArrow .line10{width:15px;border:none;}
+.formError .formErrorArrow .line9{width:13px;border:none;}
+.formError .formErrorArrow .line8{width:11px;}
+.formError .formErrorArrow .line7{width:9px;}
+.formError .formErrorArrow .line6{width:7px;}
+.formError .formErrorArrow .line5{width:5px;}
+.formError .formErrorArrow .line4{width:3px;}
+.formError .formErrorArrow .line3{width:1px;
+                                  border-left:2px solid #ddd;
+                                  border-right:2px solid #ddd;
+                                  border-bottom:0px solid #ddd;}
+.formError .formErrorArrow .line2{width:3px;border:none;background:#ddd;}
+.formError .formErrorArrow .line1{width:1px;border:none;background:#ddd;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.yd-dialogs {
+    position: relative;
+    width: 620px;
+    background: #fff;
+    box-shadow: 0 0 0 20px rgba(0,0,0,0.5);
+    border-radius: 2px;
+}
+
+.yd-dialogs-head {
+    position: relative;
+    padding: 10px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    text-shadow: 0 1px 0 #fff;
+    background: #f4f4f4; /* Old browsers */
+    background: -moz-linear-gradient(top, #f4f4f4 0%, #e7e7e7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f4f4), color-stop(100%,#e7e7e7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f4f4f4 0%,#e7e7e7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f4f4f4 0%,#e7e7e7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f4f4f4 0%,#e7e7e7 100%); /* IE10+ */
+    background: linear-gradient(top, #f4f4f4 0%,#e7e7e7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#e7e7e7',GradientType=0 ); /* IE6-9 */
+    box-shadow: 0 2px 2px #ccc;
+}
+
+.yd-dialogs-head h2 {
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 24px;
+    margin: 0;
+    padding: 5px 10px;
+}
+
+.yd-dialogs-head small {
+    display: block;
+    margin: 10px 0 0;
+    font-size: 11px;
+    color: #777;
+}
+
+.yd-dialogs-head input {
+    float: left;
+    width: 40px;
+    margin: 0 20px 0 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.7);
+}
+
+.yd-dialogs-head span {
+    float: left;
+    margin: 4px 0 0;
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 24px;
+    color: #559dd4;
+}
+
+.yd-dialogs-head span img {
+    margin: 0 0 -6px 0;
+}
+
+.yd-dialogs-head span.yd-dialogs-head-price {
+    float: right;
+}
+
+.yd-dialogs-head span.yd-dialogs-head-price sup {
+    font-size: 14px;
+    line-height: 20px;
+    vertical-align: top;
+}
+
+.yd-dialogs-body {
+    padding: 20px 20px 0;
+}
+
+.yd-dialogs-box {
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.yd-dialogs-box-head {
+    cursor: pointer;
+    position: relative;
+    padding: 8px 12px;
+    border-radius: 4px 4px 0 0;
+    background: #f4f4f4; /* Old browsers */
+    background: -moz-linear-gradient(top, #f4f4f4 0%, #ececec 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f4f4), color-stop(100%,#ececec)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f4f4f4 0%,#ececec 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f4f4f4 0%,#ececec 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f4f4f4 0%,#ececec 100%); /* IE10+ */
+    background: linear-gradient(top, #f4f4f4 0%,#ececec 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#ececec',GradientType=0 ); /* IE6-9 */
+    box-shadow: inset 0 1px 0 #fff;
+}
+
+.yd-dialogs-box-head:hover {
+    background: #ececec; /* Old browsers */
+    background: -moz-linear-gradient(top, #ececec 0%, #f4f4f4 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ececec), color-stop(100%,#f4f4f4)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ececec 0%,#f4f4f4 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ececec 0%,#f4f4f4 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ececec 0%,#f4f4f4 100%); /* IE10+ */
+    background: linear-gradient(top, #ececec 0%,#f4f4f4 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-9 */
+}
+
+.yd-dialogs-box-body {
+    padding: 12px;
+    border-top: 1px solid #ccc;
+    border-radius: 0 0 4px 4px;
+}
+
+.yd-dialogs-box.yd-dialogs-green {
+    border: 1px solid #a8e2a8;
+}
+
+.yd-dialogs-box.yd-dialogs-green .yd-dialogs-box-head {
+    cursor: pointer;
+    background: #d8fdd7; /* Old browsers */
+    background: -moz-linear-gradient(top, #d8fdd7 0%, #c9f1c9 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d8fdd7), color-stop(100%,#c9f1c9)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #d8fdd7 0%,#c9f1c9 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #d8fdd7 0%,#c9f1c9 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #d8fdd7 0%,#c9f1c9 100%); /* IE10+ */
+    background: linear-gradient(top, #d8fdd7 0%,#c9f1c9 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8fdd7', endColorstr='#c9f1c9',GradientType=0 ); /* IE6-9 */
+}
+
+.yd-dialogs-box.yd-dialogs-green .yd-dialogs-box-head:hover {
+    background: #c9f1c9; /* Old browsers */
+    background: -moz-linear-gradient(top, #c9f1c9 0%, #d8fdd7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9f1c9), color-stop(100%,#d8fdd7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #c9f1c9 0%,#d8fdd7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #c9f1c9 0%,#d8fdd7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #c9f1c9 0%,#d8fdd7 100%); /* IE10+ */
+    background: linear-gradient(top, #c9f1c9 0%,#d8fdd7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9f1c9', endColorstr='#d8fdd7',GradientType=0 ); /* IE6-9 */
+}
+
+.yd-dialogs-box.yd-dialogs-green .yd-dialogs-box-body {
+    border-top: 1px solid #a8e2a8;
+}
+
+.yd-dialogs-box-head .yd-dbh-number {
+    margin: 0 10px 0 0;
+    color: #888;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.yd-dialogs-box.yd-dialogs-green .yd-dialogs-box-head .yd-dbh-number {
+    color: #65ba62;
+}
+
+.yd-dialogs-box-head .yd-dbh-choose {
+    margin: 0 10px 0 0;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.yd-dialogs-box-head .yd-dbh-choise {
+    display: block;
+    margin: 5px 0 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: red;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.yd-dialogs-box.yd-dialogs-green .yd-dialogs-box-head .yd-dbh-choise {
+    color: green;
+}
+
+.yd-dialogs-box-head .yd-dbh-extras {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.yd-dialogs-box-head .yd-dbh-extras a {
+    display: inline-block;
+    margin: 5px 5px 0 0;
+    padding: 3px 20px 3px 5px;
+    font-weight: normal;
+    font-size: 11px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-cross.png) 98% 4px no-repeat #ffffff; /* Old browsers */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Opera11.10+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* IE10+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-cross.png) 98% 4px no-repeat, linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* W3C */
+}
+
+.yd-dialogs-box-head .yd-dbh-extras a:hover {
+    text-decoration: none;
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-cross.png) 98% 4px no-repeat #eeeeee; /* Old browsers */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -moz-linear-gradient(top, #eeeeee 0%, #ffffff 100%); /* FF3.6+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -webkit-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -o-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* Opera11.10+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-cross.png) 98% 4px no-repeat, -ms-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* IE10+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-cross.png) 98% 4px no-repeat, linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* W3C */
+}
+
+.yd-dialogs-box-body .yd-extra-group span {
+    display: block;
+    margin: 0 0 10px;
+    padding: 0 0 5px;
+    font: 21px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    color: #999;
+    border-bottom: 1px dotted #ccc;
+}
+
+.yd-dialogs-box-body ul li {
+    float: left;
+    margin: 0 10px 10px 0;
+    width: 230px;
+}
+
+.yd-dialogs-box-body ul li button {
+    text-align: left;
+    white-space: normal;
+    display: block;
+    padding: 3px 5px 3px 20px;
+    color: #59d;
+    font-size: 11px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-add.png) 6px 4px no-repeat #ffffff; /* Old browsers */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-add.png) 6px 4px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-add.png) 6px 4px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-add.png) 6px 4px no-repeat, -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-add.png) 6px 4px no-repeat, -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Opera11.10+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-add.png) 6px 4px no-repeat, -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* IE10+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-add.png) 6px 4px no-repeat, linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* W3C */
+}
+
+.yd-dialogs-box-body ul li button:hover {
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-add.png) 6px 4px no-repeat #eeeeee; /* Old browsers */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-add.png) 6px 4px no-repeat, -moz-linear-gradient(top, #eeeeee 0%, #ffffff 100%); /* FF3.6+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-add.png) 6px 4px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-add.png) 6px 4px no-repeat, -webkit-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-add.png) 6px 4px no-repeat, -o-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* Opera11.10+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-add.png) 6px 4px no-repeat, -ms-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* IE10+ */
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/extra-add.png) 6px 4px no-repeat, linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* W3C */
+}
+
+.yd-dialogs-box-head .yd-dbh-change {
+    color: #05a;
+    font-size: 10px;
+    text-decoration: underline;
+}
+
+.yd-dialogs-box-head .yd-dbh-price {
+    position: absolute;
+    top: 11px;
+    right: 40px;
+    text-align: right;
+    font-weight: bold;
+    color: #999;
+}
+
+.yd-dialogs-box-head .yd-dbh-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: block;
+    width: 21px;
+    height: 21px;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-step3/yd-dialogs-gray.png);
+}
+
+.yd-dialogs-box.yd-dialogs-green .yd-dialogs-box-head .yd-dbh-icon {
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-step3/yd-dialogs-green.png);
+}
+
+.yd-dialogs-comment {
+    width: 600px;
+    margin: 30px auto;
+    border: 1px solid #9ad4ee;
+    border-radius: 4px;
+    background: #d4f2ff; /* Old browsers */
+    background: -moz-linear-gradient(top, #d4f2ff 0%, #c0e9fb 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d4f2ff), color-stop(100%,#c0e9fb)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #d4f2ff 0%,#c0e9fb 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #d4f2ff 0%,#c0e9fb 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #d4f2ff 0%,#c0e9fb 100%); /* IE10+ */
+    background: linear-gradient(top, #d4f2ff 0%,#c0e9fb 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4f2ff', endColorstr='#c0e9fb',GradientType=0 ); /* IE6-9 */
+    box-shadow: inset 0 1px 0 #fff, 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.yd-dialogs-comment:hover {
+    background: #d4f2ff;
+}
+
+.yd-dialogs-comment-head {
+    cursor: pointer;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #1062ae;
+    text-shadow: 0 1px 0 #fff;
+    border-radius: 4px;
+}
+
+.yd-dialogs-comment-head span {
+    font: 19px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    padding: 0 0 0 25px;
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-step3/yd-dialogs-comment.png) 0 7px no-repeat;
+}
+
+.yd-dialogs-comment-body {
+    padding: 0 8px 8px 8px;
+}
+
+.yd-dialogs-comment-body textarea {
+    width: 570px;
+    height: 80px;
+    border: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.7);
+}
+
+.yd-dialogs-price {
+    position: relative;
+    margin: 20px 0;
+}
+
+.yd-dialogs-price strong {
+    position: absolute;
+    top: -3px;
+    left: 150px;
+    text-align: right;
+    font-size: 12px;
+    color: #aaa;
+    font-weight: normal;
+}
+
+.yd-dialogs-price strong em {
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    display: block;
+    margin: 5px 0 0;
+    font-size: 28px;
+    color: green;
+    font-style: normal;
+}
+
+.yd-dialogs-price .yd-button-190 {
+    margin: 0 0 0 380px;
+}
+
+
+
+
+
+
+
+
+.yd-dialogs.warning {
+    box-shadow: 0 0 0 20px rgba(255,0,0,0.3);
+}
+
+.yd-dialogs.warning-is-gone {
+    box-shadow: 0 0 0 20px rgba(100,255,100,0.3);
+}
+
+.yd-dialogs.warning .yd-dialogs-box.warning {
+    border: 1px solid #c91b00;
+}
+
+.yd-dialogs.warning .yd-dialogs-box.warning .yd-dialogs-box-head {
+    background: #fff1f1; /* Old browsers */
+    background: -moz-linear-gradient(top, #fff1f1 0%, #ffadab 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff1f1), color-stop(100%,#ffadab)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fff1f1 0%,#ffadab 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #fff1f1 0%,#ffadab 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #fff1f1 0%,#ffadab 100%); /* IE10+ */
+    background: linear-gradient(top, #fff1f1 0%,#ffadab 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff1f1', endColorstr='#ffadab',GradientType=0 ); /* IE6-9 */
+}
+
+.yd-dialogs.warning .yd-dialogs-box.warning .yd-dialogs-box-head:hover {
+    background: #ffadab; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffadab 0%, #fff1f1 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffadab), color-stop(100%,#fff1f1)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffadab 0%,#fff1f1 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffadab 0%,#fff1f1 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffadab 0%,#fff1f1 100%); /* IE10+ */
+    background: linear-gradient(top, #ffadab 0%,#fff1f1 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffadab', endColorstr='#fff1f1',GradientType=0 ); /* IE6-9 */
+}
+
+.yd-dialogs.warning .yd-dialogs-box.warning .yd-dialogs-box-body {
+    border-top: 1px solid #c91b00;
+}
+
+.yd-dialogs.warning .yd-dialogs-box.warning .yd-dialogs-box-head .yd-dbh-number {
+    color: #c91b00;
+}
+
+.yd-dialogs.warning .yd-dialogs-box.warning .yd-dialogs-box-head .yd-dbh-choose {
+    color: #c91b00;
+}
+
+.yd-dialogs-body h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #999;
+}
+
+
+
+
+
+
+.yd-dialogs-footer {
+    height: 40px;
+    background: #fff;
+    background: -moz-linear-gradient(top, #fff 0%, #eee 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#eee));
+    background: -webkit-linear-gradient(top, #fff 0%,#eee 100%);
+    background: -o-linear-gradient(top, #fff 0%,#eee 100%);
+    background: -ms-linear-gradient(top, #fff 0%,#eee 100%);
+    background: linear-gradient(top, #fff 0%,#eee 100%);
+}
+
+.yd-dialogs-footer #yd-error-mincount {
+    width: 565px;
+    margin: 0 auto;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 5px 5px 5px 30px;
+    background: url(http://cdn.yourdelivery.de/images/yd-icons/yd-error-mincount.png) 7px 4px no-repeat #fff;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+
+
+
+
+
+
+
+.yd-dialogs-discount h2 {
+    margin: 0 0 20px;
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+    color: #555;
+}
+
+.yd-dialogs-discount span {
+    position: relative;
+    display: block;
+    padding: 12px 0;
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 24px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.yd-dialogs-discount a#show-howto {
+    display: block;
+    width: auto;
+    text-align: center;    
+    margin: 0 0 10px 0;
+}
+
+.yd-dialogs-discount a#show-howto span {
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-step2/coupon-toggle.png) no-repeat 0px 4px;
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 22px;
+    display: inline;
+    padding: 0 0 0 25px;
+}
+
+.yd-dialogs-discount a#show-howto.active span {
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-step2/coupon-toggle.png) no-repeat 0px -82px;
+    color: #828282;
+}
+
+.yd-dialogs-discount .yd-discount-howto {
+    text-align: center;
+    display: none;
+    overflow: hidden;
+}
+
+.yd-dialogs-discount .yd-discount-howto ul li {
+    margin: 0 0 3px 0;
+}
+
+.yd-dialogs-discount .yd-discount-howto ul li strong {
+    display: inline;
+    width: auto;
+    background: none;
+    font-weight: bold;
+    text-align: left;
+    font-size: 12px;
+    padding: 0px;
+}
+
+.yd-dialogs-discount a.yd-discount-reset {
+    margin: 0 5px;
+    padding: 5px 5px 5px 30px;
+}
+
+.yd-dialogs-discount a.yd-discount-reset {
+    background: url(http://cdn.yourdelivery.de/images/yd-frontend-discount/yd-icon-mail.png) 0px 5px no-repeat;
+}
+
+.yd-dialogs-discount strong {
+    width: 260px;
+    display: inline-block;
+    text-align: center;
+    padding: 12px;
+    font-size: 31px;
+    background: #eee;
+}
+
+.yd-dialogs-discount span a {
+    font-family: "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 14px;
+}
+
+.yd-dialogs-discount span small {
+    position: absolute;
+    top: 40px;
+    left: 218px;
+    font-family: "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 14px;
+    color: #999;
+}
+
+.yd-dialogs-discount span small i {
+    font-style: normal;
+}
+
+.yd-dialogs-discount a.yd-discount-button {
+    margin: 0 10px;
+    padding: 10px 6px;
+    color: #fff;
+    display: inline-block;
+    width: 180px;
+    text-align: center;
+    text-shadow: 0 -1px 0 green;
+    background: #72cb00; /* Old browsers */
+    background: -moz-linear-gradient(top, #72cb00 0%, #63b900 50%, #5baa00 51%, #579b00 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#72cb00), color-stop(50%,#63b900), color-stop(51%,#5baa00), color-stop(100%,#579b00)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #72cb00 0%,#63b900 50%,#5baa00 51%,#579b00 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #72cb00 0%,#63b900 50%,#5baa00 51%,#579b00 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #72cb00 0%,#63b900 50%,#5baa00 51%,#579b00 100%); /* IE10+ */
+    background: linear-gradient(top, #72cb00 0%,#63b900 50%,#5baa00 51%,#579b00 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#72cb00', endColorstr='#579b00',GradientType=0 ); /* IE6-9 */
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 0 0 1px #529a00;
+    font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    font-size: 19px;
+}
+
+.yd-dialogs-discount a.yd-discount-button:hover {
+    text-decoration: none;
+    text-shadow: 0 0 5px #fff;
+}
+
+/* Postal Request */
+
+.yd-dialogs-postalrequest form {
+    position: relative;
+    width: 640px;
+    height: 130px;
+    margin: 0 auto;
+    padding: 0 0 30px;
+}
+
+.yd-dialogs-postalrequest form strong {
+    display: block;
+    font: normal 25px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    text-align: center;
+    padding: 9px 0 0;
+}
+
+.yd-dialogs-postalrequest form #yd-plz-search {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: 335px;
+    height: 70px;
+    padding: 0;
+    font: 34px/70px FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: #999;
+    border: 0;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5) inset, 0 0 0 1px #777;
+    border-radius: 4px 0 0 4px;
+    -webkit-appearance: none; /* ipad bug */
+}
+
+.yd-dialogs-postalrequest form #yd-plz-search.ui-autocomplete-loading {
+    background: url(http://cdn.yourdelivery.de/images/ajax-loader-16-white.gif) no-repeat 22px 26px #fff;
+}
+
+.yd-dialogs-postalrequest form #yd-start-order {
+    position: absolute;
+    top: 50px;
+    left: 345px;
+    display: block;
+    width: 285px;
+    height: 70px;
+    font: 34px/70px FuturaCondensedBold, "trebuchet ms", arial, "nimbus sans l", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    color: #fff;
+    box-shadow: 0 0 0 1px #3f6f00;
+    border-radius: 0 4px 4px 0;
+    background: #81e200; /* Old browsers */
+    background: -moz-linear-gradient(top, #81e200 0%, #3f6f00 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#81e200), color-stop(100%,#3f6f00)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #81e200 0%,#3f6f00 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #81e200 0%,#3f6f00 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #81e200 0%,#3f6f00 100%); /* IE10+ */
+    background: linear-gradient(top, #81e200 0%,#3f6f00 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81e200', endColorstr='#3f6f00',GradientType=0 ); /* IE6-9 */
+}
+
+.yd-dialogs-postalrequest form #yd-start-order:hover {
+    text-decoration: none;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+
+.yd-dialogs-postalrequest form #yd-start-order:focus,
+.yd-dialogs-postalrequest form #yd-start-order:active {
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 0 0 1px #3f6f00, 0 0 5px rgba(0,0,0,0.8) inset;
+}
+/* include yd-frontend-ie.css */
+/*
+ * Support for IE 7-10
+ **********************************************************/
+
+.ie6 .yd-drop-ie6 {
+    width: 850px;
+    margin: 15px auto;
+    padding: 15px;
+    font: bold 16px arial, sans-serif;
+    color: #000;
+    text-align: center;
+    border: 2px solid red;
+    background: #f5f5f5;
+}
+
+.ie6 .yd-drop-ie6 a {
+    display: block;
+    margin: 10px 0 0;
+}
+
+.ie6 .yd-bubble,
+.ie6 .yd-login-wrapper,
+.ie6 .yd-dagobert,
+.ie6 .yd-goofy,
+.ie6 #yd-content,
+.ie6 .yd-footer {
+    display: none;
+}
+
+.ie7 .yd-clearfix {
+    height: 1%;
+}
+
+.ie9 * {
+    border-radius: 0 !important; /* works not with gradients */
+}
+
+/*
+ * Conversion Area
+ **********************************************************/
+
+.ie9 .yd-dagobert form {
+    border-radius: 10px !important;
+}
+
+.ie7 .yd-dagobert form,
+.ie8 .yd-dagobert form,
+.ie7 .yd-dagobert form #yd-plz-search,
+.ie8 .yd-dagobert form #yd-plz-search,
+.ie7 .yd-dagobert form #yd-start-order,
+.ie8 .yd-dagobert form #yd-start-order {
+    border: 1px solid #333;
+}
+
+.ie9 .yd-goofy .yd-csh-autocomplete-wrapper {
+    border-radius: 10px !important;
+}
+
+.ie9 .yd-goofy .yd-csh-autocomplete-wrapper strong {
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.ie7 .yd-csh-autocomplete-helper1,
+.ie8 .yd-csh-autocomplete-helper1,
+.ie7 .yd-csh-autocomplete-helper2,
+.ie8 .yd-csh-autocomplete-helper2,
+.ie7 .yd-csh-autocomplete-helper3,
+.ie8 .yd-csh-autocomplete-helper3,
+.ie7 .yd-csh-autocomplete-button,
+.ie8 .yd-csh-autocomplete-button {
+    border: 1px solid #333;
+}
+
+/*
+ * Facebook Connect
+ **********************************************************/
+
+.ie7 .yd-facebook-icon,
+.ie7 .yd-login-window-fb,
+.ie7 .yd-login-window-toggle,
+.ie7 .yd-form-facebook-block,
+.ie7 .yd-profile-nav ul li a.yd-pn7 {
+    display: none !important;
+}
+
+/*
+ * Boxdesign
+ **********************************************************/
+
+.ie7 .yd-box,
+.ie8 .yd-box,
+.ie9 .yd-box,
+.ie7 .yd-infocenter-box,
+.ie8 .yd-infocenter-box,
+.ie9 .yd-infocenter-box {
+    border: 1px solid #ccc !important;
+}
+
+.ie9 .yd-box,
+.ie9 .yd-infocenter-box {
+    border-radius: 4px !important;
+}
+
+.ie7 .yd-box-title {
+    margin: 0 !important;
+}
+
+/*
+ * Content
+ **********************************************************/
+
+.ie7 #check-discount,
+.ie8 #check-discount,
+.ie9 #check-discount {
+    padding: 0 !important;
+    display: inline !important;
+    color: #05a;
+    border: 0 !important;
+}
+
+.ie7  .yd-form-left{
+    width: 190px !important;
+}
+
+.ie7 .yd-lightbox-content-container .block{
+    float: left;
+}
+
+.ie7 #yd-rate-form #yd-rate-comment,
+.ie8 #yd-rate-form #yd-rate-comment{
+    font-family: "trebuchet ms", arial, "nimbus sans l", sans-serif;
+}
+
+.ie7 #yd-add-budget{
+    width: 78px;
+}
+
+.ie7 .tr {
+    clear: left;
+}
+
+.ie7 .td,
+.ie7 .th {
+    float: left;
+}
+
+.ie7 .tr:after,
+.ie7 .thead:after {
+    content: ".";
+    display: block;
+    clear: both;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.ie7 .tr {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.ie7 .yd-profile .tr {
+    min-height: 40px;
+}
+
+.ie7 .yd-menu-modern .tr {
+    min-height: 80px;
+}
+
+.ie7 .td,
+.ie7 .th {
+    border: 0;
+}
+
+.ie7 .td div,
+.ie7 .td em,
+.ie7 .td strong {
+    display: none;
+}
+
+.ie7 .yd-profile .td,
+.ie7 .yd-profile .th {
+    width: 100px;
+}
+
+.ie7 .yd-profile .yd-awesome-rating .td,
+.ie7 .yd-profile .yd-awesome-rating .th {
+    width: 200px;
+}
+
+.ie7 a.yd-profile-blue-button {
+    display: block;
+    width: 150px;
+}
+
+.ie7 .yd-menu-modern .td,
+.ie7 .yd-menu-modern .th {
+    width: 50px;
+}
+
+.ie7 .yd-menu-modern .td.first,
+.ie7 .yd-menu-modern .th.first {
+    width: 350px;
+    text-align: left;
+}
+
+.ie7 .yd-dialogs,
+.ie8 .yd-dialogs {
+    border: 5px solid #999;
+}
+
+.ie7 .yd-profile-body,
+.ie8 .yd-profile-body,
+.ie9 .yd-profile-body {
+    width: 791px;
+}
+
+.ie7 .yd-form-info-left,
+.ie8 .yd-form-info-left {
+    position: static;
+    width: 234px;
+    min-height: 30px !important;
+    margin: 10px 0 0;
+    border: 1px solid red;
+    background: #fff;
+}
+
+.ie7 #yd-sorting,
+.ie8 #yd-sorting,
+.ie7 #yd-sorting-sidebar,
+.ie8 #yd-sorting-sidebar,
+.ie7 .yd-menu-modern-footer,
+.ie7 .yd-box-premium .whatisapremium em,
+.ie7 .yd-profile-body h1 span,
+.ie8 .yd-profile-body h1 span,
+.ie9 .yd-profile-body h1 span,
+.ie7 .yd-form-info-left:before,
+.ie7 .yd-form-info-left:after,
+.ie8 .yd-form-info-left:before,
+.ie8 .yd-form-info-left:after,
+.ie7 .fb-like-box {
+    display: none !important;
+}
+/* include yd-frontend-hidden.css */
+.hidden {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.paymentHidden {
+    visibility: hidden;
+    position: absolute;
+}
+
+img[alt*=plex],
+img[src*=turn],
+iframe[src*=footer],
+iframe[src*=mediaplex],
+iframe[src*=analytics],
+iframe[src*=avazudsp],
+iframe[src*=mnkys] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}

@@ -1,0 +1,65 @@
+{extends file="restaurant/popupbase.htm"}
+{block name="content"}
+
+<div style="font-size: 22px; font-weight: bold;">Optionen</div> für: <b>{$meal->getCategory()->getName()} &rarr; {$meal->getName()}</b> <font color="#999"><small>(#{$meal->getId()})</small></font>
+<br/><br/><br/>
+
+<table width="100%" class="options-links-table">
+    {foreach from=$restaurant->getMealOptionsRows() item=optionRow}
+    <tr>
+        <td width="30%" height="10"><small><a href="#{$optionRow->getId()}" class="option-link">{$optionRow->getName()}</a> <br/>({if $optionRow->getChoices()>1}{$optionRow->getChoices()} Auswahlmöglichkeiten{else}1 Auswahlmöglichkeit{/if})</small></td>
+        <td width="30%"><font color="#999"><small>(#{$optionRow->getId()})</small></font></td>
+        <td width="40%"></td>
+    </tr>
+    {/foreach}
+</table>
+
+<br/><br/>
+
+<form action="/restaurant_menu/manageoptionsmeal" method="post" name="form" id="yd-meal-options">
+<input type="hidden" name="mealId" value="{$meal->getId()}" />
+<input type="hidden" name="categoryId" value="{$categoryId}" />
+<input type="hidden" name="restaurantId" value="{$restaurant->getId()}" />
+    <table width="100%">
+        <tr>
+            <td width="40%"><input type="submit" value="Speichern"/></td>
+            <td width="30%"><input type="button" onclick="window.close()" value="Abbrechen"/></td>
+            <td width="30%"></td>
+        </tr>
+        <tr><td colspan="3" height="80"><hr/></td></tr>
+        <tr>
+            <td align="left">Gruppe</td>
+            <td align="left">Preis, €</td>
+            <td align="left">Zuweisung</td>
+        </tr>
+    {foreach from=$restaurant->getMealOptionsRows() item=optionRow}
+        {if $meal->getCategory()->hasOptionsRow($optionRow->getId())}
+        <tr class="options-group optionsgroup-disabled">
+            <th align="left">{$optionRow->getName()} <font color="#999"><small>(#{$optionRow->getId()})</small></font><a name="{$optionRow->getId()}"></a> <br/>({if $optionRow->getChoices()>1}{$optionRow->getChoices()} Auswahlmöglichkeiten{else}1 Auswahlmöglichkeit{/if})</th>
+            <th align="left"></th>
+            <th><input type="checkbox" name="check[{$optionRow->getId()}]" checked disabled="disabled"/> <small>Gehört zur Kategorie</small></th>
+        </tr>
+        {else}
+        <tr class="options-group">
+            <th align="left">{$optionRow->getName()} <font color="#999"><small>(#{$optionRow->getId()})</small></font><a name="{$optionRow->getId()}"></a><br/>({if $optionRow->getChoices() > 1}{$optionRow->getChoices()} Auswahlmöglichkeiten{else}1 Auswahlmöglichkeit{/if})</th>
+            <th align="left"></th>
+            <th><input type="checkbox" name="check[{$optionRow->getId()}]" {if ($meal->hasOptionsRow($optionRow->getId())!= 0) || $catRow}checked{/if}/></th>
+            {/if}
+        </tr>
+        {foreach from=$optionRow->getOptions() item=o}
+            <tr>
+                <td>{$o->getName()} <font color="#999"><small>(#{$o->getId()})</small></font></td>
+                <td>{if strlen($o->getCost()) != 0} {intToPrice($o->getCost())} € {/if}</td>
+                <td></td>
+            </tr>
+        {/foreach}
+        <tr><td colspan="3"><hr/></td></tr>
+    {/foreach}
+    <tr>
+        <td><input type="submit" value="Speichern"/></td>
+        <td><input type="button" onclick="window.close()" value="Abbrechen"/></td>
+        <td></td>
+    </tr>
+    </table>
+</form>
+{/block}

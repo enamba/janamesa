@@ -1,0 +1,18 @@
+2012-08-13T04:32:35-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: did not find template index/index.htm in lieferando.de layout, switching successfully back to default 
+2012-08-13T04:32:35-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template index/index.htm 
+2012-08-13T04:32:35-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/index.html 
+2012-08-13T04:33:03-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 61 online and 5 offline services in #744 
+2012-08-13T04:33:03-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: did not find template order/basis/service.htm in lieferando.de layout, switching successfully back to default 
+2012-08-13T04:33:03-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/service.htm 
+2012-08-13T04:33:38-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing found 61 online and 5 offline services in #744 
+2012-08-13T04:33:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: did not find template order/basis/service.htm in lieferando.de layout, switching successfully back to default 
+2012-08-13T04:33:38-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/service.htm 
+2012-08-13T04:33:55-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/lieferservice-berlin-12437.html 
+2012-08-13T09:21:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: did not find template order/basis/menu.htm in lieferando.de layout, switching successfully back to default 
+2012-08-13T09:21:31-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: rendering template order/basis/menu.htm 
+2012-08-13T09:21:33-03:00 DEBUG (7): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing SMARTY: caching /home/ydadmin/htdocs/lieferando/application/../public/cache/html/www.yourdelivery.local/lieferservice-cao-vietnam-und-sushi-berlin.html 
+2012-08-13T11:40:21-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CRONJOB : sending csv with online restaurants for seo 
+2012-08-13T11:44:55-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CRONJOB : sending csv with online restaurants for seo 
+2012-08-13T11:48:02-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CRONJOB : sending csv with online restaurants for seo 
+2012-08-13T11:57:23-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CRONJOB : sending csv with online restaurants for seo 
+2012-08-13T11:58:14-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing CRONJOB : sending csv with online restaurants for seo 

@@ -1,0 +1,291 @@
+<div  class="ticket yd-clearfix {if $ticket->getService()->isPremium()}premium{/if} {if $ticket->getService()->isBloomsburys()}bloomsburys{/if} {if $ticket->getService()->isGreat()}great{/if} {if $ticket->getService()->isNoContract()}nocontract{/if}">
+
+    <div class="ticket-header">
+        <strong>
+            {if $ticket->getService()->isNoContract()}
+            {__b('Dienstleister ohne Vertrag')}
+            {else}
+            {$ticket->getState()|intToStatusOrders}
+            {/if}
+        </strong>
+        {__b('ID:')} {$ticket->getId()}
+
+        {__b('seit %s Uhr', $ticket->getLastStateChange()|date_format:'%d.%m. - %H:%M')}
+    </div>
+
+    <div class="ticket-content">
+
+        <h2>
+            {__b('In Arbeit seit')} <span id="yd-timeout">{$timeout|default:1}</span> {__b('von maximal 300 Sekunden')}
+        </h2>
+
+        {if $ticket->getService()->getNotifyPayed() > 0 && $ticket->getPayment() != 'bar'}
+        <strong style="color:red">{__b('Bei diesem Dienstleister muss wegen Onlinezahlung angerufen werden!!!')}</strong>
+        {/if}
+
+        {if $ticket->getService()->getSmsPrinter() && $ticket->getService()->getNotify() == 'sms'}
+        <strong style="color:red">{__b('Dieser Dienstleister ist an einen SMS Printer angeschlossen')}</strong>
+        {/if}
+
+        {if $ticket->getService()->isNoContract()}
+        <strong style="color:red">{__b('Dieser Dienstleister hat keinen Vertrag! Bitte anrufen')}</strong>
+        {/if}
+
+        <ul>
+            <li class="trennlinie">
+                <em>{__b('Bestellzeitpunkt:')}</em>
+                <strong>{$ticket->getTime()|date_format:'%d.%m. - %H:%M Uhr'}</strong>
+            </li>
+            <li>
+                <em>{__b('Lieferzeitpunkt')}</em>
+                <strong>{$ticket->getDeliverTime()|date_format:'%d.%m. - %H:%M Uhr'}</strong>
+            </li>
+            <li>
+                <em>{__b('Bestellung über')}</em>
+                <strong>{$ticket->getDomain()}</strong>
+            </li>
+            <li>
+                <em>{__b('IP Adresse')}</em>
+                <div class="yd-grid">
+                    <a class="yd-grid-trigger"><strong>{$ticket->getIpAddr()}</strong></a>
+                    <div class="hidden yd-grid-box">
+                        <a href="#" class="yd-grid-box-close"></a>
+                        <ul class="yd-grid-box-content">
+                            <li><a href="/administration_order/index/type/view_grid_orders/ipAddrgrid/{$ticket->getIpAddr()}/" target="_blank">{__b('Alle Bestellungen mit dieser IP anzeigen')}</a></li>
+                            <li class="yd-grid-box-separation"><a href="/administration_order/index/type/view_grid_orders/ipAddrgrid/{$ticket->getIpAddr()}s/Gutscheingrid/1" target="_blank">{__b('Verwendete Gutscheine mit dieser IP')}</a></li>
+                            <li><a href="/administration_request_blacklist/keyword/ip/{$ticket->getIpAddr()}" class="yd-blacklist-lightbox">{__b('IP Adresse sperren')}</a></li>
+                        </ul>
+                    </div>
+                </div>                    
+            </li>
+            <li>
+                <em>{__b('Name:')}</em>
+                <div class="yd-grid">
+                    <a class="yd-grid-trigger"  data-grid-callback="customerinfo" data-customer-name="{$ticket->getCustomer()->getFullname()}" data-customerid="{$ticket->getCustomer()->getId()}" data-email="{$ticket->getCustomer()->getEmail()}" >
+                        <strong>{$ticket->getCustomer()->getFullname()}</strong>
+                    </a>
+                    <div class="yd-grid-box hidden" >                            
+                    </div>                            
+                </div>
+            </li>
+            <li>
+                <em>{__b('eMail:')}</em>
+                <div class="yd-grid">
+                    <a class="yd-grid-trigger" data-grid-callback="emailinfo" data-email="{$ticket->getCustomer()->getEmail()}">{$ticket->getCustomer()->getEmail()}</a>
+                    <div class="yd-grid-box hidden" ></div>
+                </div>
+            </li>
+            <li>
+                <em>{__b('Straße:')}</em>
+                <strong>{$ticket->getLocation()->getStreet()} {$ticket->getLocation()->getHausnr()}</strong>
+            </li>
+            <li>
+                <em>{__b('Postleitzahl:')}</em>
+                <strong>{$ticket->getLocation()->getPlz()} {$ticket->getLocation()->getOrt()->getOrt()}</strong>
+            </li>
+            <li>
+                <em>{__b('Lieferanweisungen:')}</em>
+                <strong>{$ticket->getLocation()->getComment()|default:__b('-')}</strong>
+            </li>
+            <li>
+                <em>{__b('Offener Betrag:')}</em>
+                <strong>{__('%s €',$ticket->getAbsTotal()|intToPrice)}</strong>
+            </li>
+            <li>
+                <em>{__b('Bezahlart:')}</em>
+                <strong> {paymentToReadable($ticket->getPayment(),$ticket->getId())} 
+                    {if $ticket->getPayment() != "bar"}
+                    ({$ticket->isPaid()|isPaidToReadable} )
+                    {/if}
+                </strong>
+            </li>
+            {if $ticket->getPaymentAddition()}
+            <li>
+                <em>{__b('Zusatzinformationen zur Bezahlung')}</em>
+                <strong>{$ticket->getPaymentAddition()}</strong>
+            </li>
+            {/if}
+            <li>
+                <em>{__b('Firma:')}</em>
+                <strong>{$ticket->getLocation()->getCompanyNamed()|default:__b('-')}</strong>
+            </li>
+            <li>
+                <em>{__b('Stockwerk:')}</em>
+                <strong>{$ticket->getLocation()->getEtage()|default:__b('-')}</strong>
+            </li>
+            <li class="trennlinie">
+                <em>{__b('Telefon:')}</em>
+                <strong><a class="telified yd-sip" nr="{$ticket->getLocation()->getTel()}" href="sip:{$ticket->getLocation()->getTel()}" target="_blank">{$ticket->getLocation()->getTel()}</a></strong>
+            </li>
+            <li>
+                <em>{__b('Dienstleister')}</em>
+                <strong><a href="/administration_service_edit/index/id/{$ticket->getService()->getId()}" target="_blank">{$ticket->getService()->getName()}</a> ({$ticket->getService()->getId()}) 
+                    <span id="yd-ticket-service-comment">{$ticket->getService()->getTicketComments()}</span>
+                </strong>
+            </li>
+            <li class="trennlinie">
+                <em>{__b('Dienstleister Telefon')}</em>
+                <strong><a class="telified yd-sip" nr="{$ticket->getService()->getTel()}" href="sip:{$ticket->getService()->getTel()}" target="_blank">{$ticket->getService()->getTel()}</a></strong>
+            </li>
+            <li class="trennlinie">
+                <em>{__b('Dienstleister Öffnungszeiten')}</em>
+                {if $serviceIsOpen}                  
+                <strong style="color: green">{$openingTimes} {__b('geöffnet')}</strong>                    
+                {else}
+                     <p class="red"">
+                    <strong style="color: red">{$openingTimes} {__b('geschlossen')}</strong>                    
+                {/if}
+                
+            </li>
+            <li class="trennlinie">
+                <em>{__b('Dienstleister MBW')}</em>
+                <strong>{__('%s €',$ticket->getService()->getMinCost($ticket->getLocation()->getCity()->getId())|inttoprice)}</strong>
+            </li>
+            <li class="trennlinie">
+                <em>{__b('Fax Dienstleister')}</em>
+                <div class="yd-grid">
+                    <a class="yd-grid-trigger" data-grid-callback="faxServiceSelect" data-grid-service-id="{$ticket->getService()->getId()}">{$ticket->getService()->getFaxService()}</a>                                          
+                </div>
+            </li>
+
+            {if is_object($ticket->getService()->getCourier())}            
+            <li>    
+                <em>{__b('Kurier Telefon')}</em>
+                <strong>{$ticket->getService()->getCourier()->getMobile()}</strong>
+            </li>
+            <li class="trennlinie">
+                <em>{__b('Kurier eMail')}</em>
+                <strong><a href="/administration_courier/info/id/{$ticket->getService()->getId()}">{$ticket->getService()->getCourier()->getEmail()}</a></strong>
+            </li>
+            {/if}
+
+            {if is_object($ticket->getDiscount())}            
+            <li class="trennlinie">
+                <em>{__b('Gutschein:')}</em>
+                <div class="yd-grid">
+                    <a class="yd-grid-trigger" data-orderid="{$ticket->getId()}" data-rabattcodeid="{$ticket->getDiscount()->getId()}" data-grid-callback="discountInfo">
+                        {$ticket->getDiscount()->getParent()->getName()} :: {$ticket->getDiscount()->getCode()}
+                    </a>
+                    <div class="yd-grid-box hidden" ></div>
+                </div>
+            </li>
+            {/if}
+
+        </ul>
+
+        <div class="ticket-log">
+            <h3>Log:</h3>
+            <ul class="ticket-log-entries">
+                {foreach from=$ticket->getTable()->getStateHistory() item=log}
+                <li>
+                    <b>{$log.created|dateFull}</b><br />
+                    {Default_Helpers_Ticket::parseOrderLog($log.comment, $ticket->getId())}
+                </li>
+                {/foreach}
+            </ul>
+        </div>
+
+        <br /><br /><br />
+
+        <div id="tabs">
+            <ul>
+                <li><a href="#fragment-1"><span>{__b('Bestellung')}</span></a></li>
+                <li><a href="#fragment-2"><span>{__b('Dienstleister')}</span></a></li>
+            </ul>
+            <div id="fragment-1">
+                <br />
+                <textarea cols="50" rows="5" name="comment" id="yd-ticket-comment" class="yd-empty-text" title="{__b('Persönlichen Kommentar abgeben')}"></textarea>
+                <br />
+                <a href="#save-comment" class="button yd-ticket-save-comment" id="yd-save-comment-{$ticket->getId()}">{__b('Kommentar jetzt speichern')}</a>
+            </div>
+            <div id="fragment-2">               
+                <input type="radio" name="yd-service-comment" value="{__b('heute nicht mehr anrufen')} " />{__b('heute nicht mehr anrufen')}<br />
+                <input id="yd-service-comment-until"  type="radio" name="yd-service-comment" value="{__b('nicht mehr anrufen bis:')} " />{__b('nicht mehr anrufen bis:')} <input type="text" name="yd-service-comment-time" value="" /><br />
+                <input id="yd-service-comment-allwayCall" type="radio" name="yd-service-comment" value="{__b('heute immer anrufen')} " /> {__b('heute immer anrufen')}<br />         
+                <input id="yd-service-comment-text-other" type="radio" name="yd-service-comment" value="other" />{__b("anderer Hinweis:")}<br />       
+                <textarea id="yd-service-comment-text" name="yd-service-comment-text" disabled="disabled">{__b("Schreib was...")}</textarea>
+                <input type="hidden" id="yd-service-comment-callInput" value="0" />
+                <br />
+                <a href="#save-comment" class="button yd-ticket-save-comment-service" id="yd-save-comment-service-{$ticket->getService()->getId()}">{__b("Kommentar jetzt speichern")}</a>                
+            </div>
+        </div>
+
+    </div>
+
+    <div class="ticket-sidebar yd-ticket-action">
+        <h2>{__b('Zusätzliche Infos')}</h2>
+        <a class="button" onclick="javascript:return popup('/order/bestellzettel/order/{$ticket->getId()}', 'Bestellzettel', 800, 600);"><span class="icon01">{__b("Bestellzettel aufrufen")}</span></a>
+        <a class="button" onclick="javascript:return popup('/download/order/{$ticket->getHash()}', 'PDF', 400, 300);" href=""><span class="icon02">{__b("PDF herunterladen")}</span></a>      
+        {if is_object($ticket->getService()->getCourier())}
+        <a class="button" href="/download/courier/{$ticket->getHash()}"><span>{__b('Kurier PDF herunterladen')}</span></a>
+        {/if}
+        <br /><br />
+        <h2>System Aktionen</h2>
+        <!--<p class="yd-current-action"></p>-->
+        <a class="button green yd-ticket-order-confirm" id="yd-confirm-{$ticket->getId()}"><span class="icon03">{__b('Bestätigen')}</span></a>
+        <a class="button yd-ticket-order-confirmfax" id="yd-confirmfax-{$ticket->getId()}"><span class="icon04">{__b('Fax ist durchgegangen')}</span></a>
+        <a class="button yd-ticket-order-confirmoraly" id="yd-confirmoraly-{$ticket->getId()}"><span class="icon05">{__b('Bestellung ist mündlich durchgegeben')}</span></a>
+        <a class="button yd-ticket-order-resend" id="yd-resend-{$ticket->getId()}"><span class="icon06">{__b('Fax erneut verschicken')}</span></a>
+
+        <input type="checkbox" id="yd-order-resend-service" value="1" checked/>&nbsp;&nbsp;{__b('Lieferservice')}
+        {if $ticket->getService()->hasCourier()}
+        <input type="checkbox" id="yd-order-resend-courier" value="1"/>&nbsp;&nbsp;{__b('Kurier')}
+        {/if}
+        <br /><br /><br />
+
+        <a class="button red yd-ticket-order-cancel" id="yd-cancle-{$ticket->getId()}"><span class="icon07">{__b('Bestellung stornieren')}</span></a>
+
+        <input type="checkbox" name="informcustomer" id="yd-cancel-informcustomer" value="1" checked/>&nbsp;&nbsp;{__b('Kunde benachrichtigen')}
+        <br />
+        <input type="checkbox" name="informrestaurant" id="yd-cancel-informrestaurant" value="1" checked/>&nbsp;&nbsp;{__b('Restaurant benachrichtigen')}
+        <br />
+        
+        {if $ticket->getPayment() == "paypal"}
+            {if $ticket->isRefunded()}
+                {__b('Paypal bereits zurückgebucht!')}<br /><br />
+            {else}   
+                <input type="checkbox" name="paypal" value="1" id="yd-paypal-cancel" />
+                {__b('Paypal zurückbuchen')}<br /><br />
+            {/if}
+        {elseif $ticket->getPayment() == 'ebanking'}
+            {if $ticket->isRefunded()}
+                {__b('bei Sofortüberweisung bereits vorgemerkt!')}<br /><br />
+            {else}
+                <input type="checkbox" name="ebanking" value="1" id="yd-ebanking-cancel" />
+                {__b('bei Sofortüberweisung vormerken')}<br /><br />
+            {/if}
+        {elseif $ticket->getPayment() == "credit"}
+            {if $ticket->isRefunded()}
+                {__b('Kreditkartenzahlung bereits zurückgebucht!')}<br /><br />
+            {else}        
+                <input type="checkbox" name="credit" value="1" id="yd-credit-cancel" />
+                {__b('Kreditkarte zurückbuchen')}<br /><br />
+            {/if}
+        {/if}
+        
+        {__b('Grund:')}
+        <select id="yd-orderedit-storno-reason" class="rund rund_set" style="width:100px;">
+            <option></option>
+            {foreach from=Yourdelivery_Model_Order_Abstract::getStornoReasons() key=ind item=reason}
+                <option value="{$ind}">{$reason}</option>
+            {/foreach}
+        </select>
+
+        <br /><br /><br /><br />
+        <a class="button black yd-ticket-order-fake" id="yd-fake-{$ticket->getId()}"><span class="icon08">{__b('Blacklist')}</span></a>
+        <br /><br />
+        <!-- <a class="button yd-order-fake" id="yd-fake-{$ticket->getId()}"><span>Als Fake markieren</span></a> -->
+        <a class="button yd-ticket-push-this-ticket" id="yd-push-this-ticket-{$ticket->getId()}"><span class="icon09">{__b('Ticket zurückgeben')}</span></a>
+        <br /><br />
+        <h2>{__b('Support Ticket')}</h2>
+        <textarea id="yd-osticket-body" class="hidden"></textarea>
+        <br /><br />
+        <a href="#" class="button hidden yd-osticket-send"><span class="icon03">{__b('Senden')}</span></a>
+        <br /><br /><br />
+        <a href="#" class="button yd-ticket-changecard" id="yd-changecard-{$ticket->getId()}"><span class="icon10">{__b('DL anrufen wegen Kartenänderung')}</span></a>
+        <a href="#" class="button yd-ticket-location" id="yd-location-{$ticket->getId()}"><span class="icon10">{__b('DL anrufen wegen Liefergebieten')}</span></a>
+        <a href="#" class="button yd-ticket-bill" id="yd-bill-{$ticket->getId()}"><span class="icon10">{__b('DL anrufen wegen Abrechnung')}</span></a>
+        <a href="#" class="button yd-ticket-payment" id="yd-nocash-{$ticket->getId()}"><span class="icon10">{__b('DL anrufen wegen bargeldloser Zahlung')}</span></a>
+    </div>
+
+</div>

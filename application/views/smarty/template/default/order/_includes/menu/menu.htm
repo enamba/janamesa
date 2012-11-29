@@ -1,0 +1,211 @@
+
+    {include file="order/_includes/menu/category_list.htm" ul_classes="yd-menu-nav1 yd-clearfix" a_classes="" postfix="1" list_children=true}
+
+    <!-- and now for the fun the rest of the menu -->
+    <div style="display:none;" id="yd-search-found-info" class="notification-menu yd-menu-nav-search-tab success">
+        <span id="yd-search-found-all-text">
+            {__('Bei der Suche nach <b>%s</b> wurden %d Speise(n) gefunden')}
+        </span>
+        <span class="yd-search-reset">
+            <br /><br /><a class="cursor">{__('Suche zurücksetzen')}</a>
+        </span>
+    </div>
+
+    {if $service->useTopseller() && $mode == 'rest' && count($service->getBestseller(10)) > 0 && count($menu) > 0}
+    <!-- first the topseller -->
+    <div class="menu-box hidden" id="yd-category-0">
+
+        <div class="yd-menu-timcat">
+            <div><img src="{$config->domain->static}/images/yd-frontend-step3/topseller.jpg" alt="" width="700" /></div>
+        </div>
+
+        <div class="table">
+
+            <div class="thead">
+
+                <div class="th">
+                    {__('Gericht')}
+                    <span>{__('Die %d beliebtesten Gerichte von %s', count($service->getBestSeller(10)), $service->getName())}</span>
+                </div>
+
+                {section name=foo start=0 loop=$topSellerCountSizes step=1}
+                    <div class="th">&nbsp;</div>
+                {/section}
+
+            </div>
+
+            {foreach from=$service->getBestSeller(10) item=meal name=topseller}
+                <div class="tr add-to-card yd-menu-search" id="meal-{$meal->getId()}-{$meal->getCurrentSize()|default:0}-{if $meal->getCurrentSize() > 0}{$meal->hasSpecials()*1}{else}1{/if}-0-topseller">
+
+                    <div class="td yd-menu-search {if $meal->getHasExistingPicture()}td-has-img{/if}">
+
+                        {if $meal->getHasExistingPicture()}
+                            <div><img src="{$meal->getImg()}" alt="" /></div>
+                        {/if}
+
+                        <strong>
+                            {if $meal->hasAttribute('vegetarian')}
+                                <img title="{__('vegetarisch')}" src="{$domain_static}/images/yd-frontend-step3/menu-vegetarian.png" alt="" />
+                            {/if}
+                            {if $meal->hasAttribute('garlic')}
+                                <img title="{__('mit Knoblauch')}" src="{$domain_static}/images/yd-frontend-step3/menu-garlic.png" alt="" />
+                            {/if}
+                            {if $meal->hasAttribute('bio')}
+                                <img title="{__('Bioware')}" src="{$domain_static}/images/yd-frontend-step3/menu-bio.png" alt="" />
+                            {/if}
+                            {if $meal->hasAttribute('spicy')}
+                                <img title="{__('scharf gewürzt')}" src="{$domain_static}/images/yd-frontend-step3/menu-spicy.png" alt="" />
+                            {/if}
+                            {if $meal->hasAttribute('fish')}
+                                <img title="{__('mit Fisch')}" src="{$domain_static}/images/yd-frontend-step3/menu-fish.png" alt="" />
+                            {/if}
+                        </strong>
+
+                        <a>{$meal->getName()}</a>
+
+                        <span>
+                            {$meal->getDescription()|nl2br}
+                        </span>
+
+                        <input type="hidden" id="yd-mealName-{$meal->getId()}-topseller" value="{$meal->getName()}" />
+                        <input type="hidden" id="yd-mealExMinCost-{$meal->getId()}-topseller" value="{$meal->getExcludeFromMinCost()}" />
+                    </div>
+
+                    <!-- list all sizes of this topseller -->
+                    {foreach from=$meal->getSizes() item=size}
+
+                        <div class="td">
+                            <input type="hidden" id="yd-mealCost-{$meal->getId()}-{$size.id}-topseller" value="{$size.cost}" />
+                            {if ($meal->getPriceType() == 'normal')}
+                            <a href="#{$meal->getId()}" class="add-to-card tooltip" id="meal-{$meal->getId()}-{$size.id}-{$meal->hasSpecials()*1}-topseller" title="{__('%s (%s) zur Bestellung hinzufügen', $meal->getName(), $size.name)}{if $meal->getExcludeFromMinCost() == 1}{'<br /><span style=font-size:10px;color:red;>'}{__('Diese Speise wird nicht zum Mindestbestellwert gerechnet')}{'</span>'}{/if}">
+                                {__('%s <sup>€</sup>',$size.cost|inttoprice)|nobreak}
+                            </a>
+                            {/if}
+                        </div>
+
+                    {/foreach}
+                    
+                    <!-- finalize tds with empty loops -->
+                    {section name=foo start=0 loop=($topSellerCountSizes - count($meal->getSizes())) step=1}
+                        <div class="td">&nbsp;</div>
+                    {/section}
+
+                </div>
+            {/foreach}
+
+        </div>
+
+        <div class="search-no-meal-in-cat hidden" id="search-no-meal-in-cat-0">
+            {__('kein Treffer in der Kategorie "%s"', $category.name)} <a class="yd-search-reset">{__('Suche zurücksetzen')}</a>
+        </div>
+
+    </div>
+    {/if}
+
+    <!-- and finally the default menu -->
+    {foreach name=o from=$menu key=catId item=category name=catsmiddle}
+
+    <div class="menu-box {if $smarty.foreach.catsmiddle.first}first-menu-box{/if} {if !$smarty.foreach.catsmiddle.first}hidden{/if} yd-category-{$category.parent}" id="yd-category-{$catId}">
+
+         <div class="yd-menu-timcat">
+            <!-- RANDOM -->
+            <div>{if $category.imageExists}<img src="{$category.image}" alt="" width="700" />{/if}</div>
+         </div>
+
+         <div class="table">
+
+            <div class="thead">
+                <div class="th">
+                    {$category.name}
+                    <span>{$category.desc}</span>
+                </div>
+                {assign var=countSizes value=count($category.sizes)}
+                {foreach from=$category.sizes item=size}
+                <div class="th" id="yd-sizeName-{$size.id}">
+                    {if ($countSizes>1) || strcasecmp($size.name, 'normal')!=0}{$size.name}{/if}
+                    <input type="hidden" id="yd-sizeName-{$size.id}-hidden" value="{$size.name}" />
+                </div>
+                {/foreach}
+            </div>
+
+            {foreach from=$category.meals key=mealId item=mealSize}
+            {assign var=firstSizeId value=key($mealSize)}
+
+            <div class="tr add-to-card yd-menu-search" id="meal-{$mealId}-{if count($mealSize) == 1}{$firstSizeId}-{$mealSize.$firstSizeId.hasSpecials*1}{else}0-1{/if}-{$catId}">
+                {foreach name=mealIter from=$mealSize key=sizeId item=meal}
+
+                {if $smarty.foreach.mealIter.iteration == 1}
+                <div class="td yd-menu-search {if $meal.imageExists}td-has-img{/if}">
+
+                    {if $meal.imageExists}
+                        <div><img src="{$meal.image}" alt="" /></div>
+                    {/if}
+
+                    <strong>
+                        {if $meal.vegetarian}
+                            <img title="{__('vegetarisch')}" src="{$domain_static}/images/yd-frontend-step3/menu-vegetarian.png" alt="" />
+                        {/if}
+                        {if $meal.garlic}
+                            <img title="{__('mit Knoblauch')}" src="{$domain_static}/images/yd-frontend-step3/menu-garlic.png" alt="" />
+                        {/if}
+                        {if $meal.bio}
+                            <img title="{__('Bioware')}" src="{$domain_static}/images/yd-frontend-step3/menu-bio.png" alt="" />
+                        {/if}
+                        {if $meal.spicy}
+                            <img title="{__('scharf gewürzt')}" src="{$domain_static}/images/yd-frontend-step3/menu-spicy.png" alt="" />
+                        {/if}
+                        {if $meal.fish}
+                            <img title="{__('mit Fisch')}" src="{$domain_static}/images/yd-frontend-step3/menu-fish.png" alt="" />
+                        {/if}
+                    </strong>
+
+                    <a>{$meal.name}</a>
+
+                    <span>
+                        {$meal.desc|nl2br}
+                    </span>
+
+                    <input type="hidden" id="yd-mealName-{$meal.id}" value="{$meal.name}" />
+                    <input type="hidden" id="yd-mealExMinCost-{$meal.id}" value="{$meal.excludeFromMinCost}" />
+                </div>
+                {/if}
+
+                {if not is_null($meal.cost)}
+
+                <div class="td add-to-card tooltip" id="meal-{$meal.id}-{$sizeId}-{$meal.hasSpecials*1}" title="{__('%s (%s) zur Bestellung hinzufügen', $meal.name, $meal.sizeName)}{if $meal.excludeFromMinCost == 1}{'<br /><span style=font-size:10px;color:red;>'}{__('Diese Speise wird nicht zum Mindestbestellwert gerechnet')}{'</span>'}{/if}">
+                    <input type="hidden" id="yd-mealCost-{$meal.id}-{$sizeId}" value="{$meal.cost}" />
+                    {if ($meal.priceType == 'normal')}
+                    <a href="#{$meal.id}" class="add-to-card " id="meal-{$meal.id}-{$sizeId}-{$meal.hasSpecials*1}-0" >
+                        {__('%s <sup>€</sup>',$meal.cost|inttoprice)|nobreak}
+                    </a>
+                    {/if}
+
+                    {if $meal.pfand > 0}
+                    <i class="pfand {if $meal.excludeFromMinCost == 1}tooltip-mincost{else}tooltip{/if}"
+                       title="{__('Der angegebene Preis von ')}<b>{__('%s €',$meal.cost|inttoprice)}</b> {__('beinhaltet einen Pfandwert von ')}<b>{__('%s €',$meal.pfand|inttoprice)}</b>">
+                        {__('inkl. Pfand:')} {__('%s €',$meal.pfand|inttoprice)}
+                    </i>
+                    {/if}
+                    {if $mode != "rest"}
+                    <i class="netto {if $meal.excludeFromMinCost == 1}tooltip-mincost{else}tooltip{/if}" title="{__('Der Nettopreis beinhaltet kein Pfand')}">{__('Netto:')} {__('%s €',$meal.netto|inttoprice|nobreak)}</i>
+                    {/if}
+                </div>
+                {else}
+                <div class="td"></div>
+                {/if}
+                {/foreach}
+            </div>
+            {/foreach}
+
+            <div class="search-no-meal-in-cat hidden" id="search-no-meal-in-cat-{$catId}">
+                {__('kein Treffer in der Kategorie "%s"', $category.name)} <a class="yd-search-reset">{__('Suche zurücksetzen')}</a>
+            </div>
+
+        </div>
+
+    </div>
+    {/foreach}
+
+{if $service->isOnlyPickup()}
+<div class="yd-success-pickup"></div>
+{/if}

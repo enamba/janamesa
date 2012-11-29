@@ -1,0 +1,97 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{include file='administration/satellite/_editnavigation.htm'}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Bilder und SEO-Text für die Startseite')}
+        </div>
+    </div>
+</div>
+
+{foreach from=$satellite->getPictures() item=pic}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content">
+            <div>
+                <table class="user-tab">
+                    <tr>
+                        <td width="20%">{__b('Bild')}</td>
+                        <td width="75%">{__b('Beschreibung')}</td>
+                        <td width="5%">{__b('Löschen')}</td>
+                    </tr>
+                    <form action="/administration_satellite/editpicture/" method="post" name="form" enctype="multipart/form-data">
+                    <tr>
+                        <td>
+                            <input type="hidden" name="pictureId" value="{$pic->getId()}" />
+                            <input type="hidden" name="id" value="{$satellite->getId()}" />
+                            {if strlen($pic->getPicture())==0}
+                            {__b('Kein Bild wurde angegeben')}
+                            {else}
+                            <img src="{$pic->getPicture()}" name="_picture" width="150"/>
+                            {/if}
+                            <br/>
+                        </td>
+                        <td>
+                            <textarea name="description" style="width: 80%; text-align: left;">{$pic->getDescription()}</textarea>
+                        </td>
+                        <td align="center">
+                            <a href="/administration_satellite/deletepicture/id/{$satellite->getId()}?pictureId={$pic->getId()}"><img src="{$domain_static}/images/yd-backend/del-cat.gif" onclick="javascript:return confirm(__b('Soll dieses Bild wirklich gelöscht werden?'));" alt="Louml;schen" /></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {__b('Bild ersetzen')}
+                            <br/>
+                            <input type="file" name="_picture" />
+                        </td>
+                        <td align="right">
+                            <input type="submit" value="{__b('Speichern')}"/>
+                        </td>
+                    </tr>
+                    </form>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{/foreach}
+
+<br/><br/><br/>
+
+<form action="/administration_satellite/addpicture/" method="post" name="form" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="{$satellite->getId()}" />
+    
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {__b('Neues Bild hochladen')}
+            </div>
+            <div class="item-content">
+                <div>
+                    <table class="user-tab">
+                        <tr>
+                            <td width="20%">{__b('Bild')}</td>
+                            <td width="80%"><input type="file" name="_picture" /></td>
+                        </tr>
+                        <tr>
+                            <td>{__b('Beschreibung')}</td>
+                            <td><textarea name="description" style="width: 50%;"/></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" value="{__b('Hinzufügen')}" class="button rund_set" />
+                                <input type="submit" name="cancel" value="{__b('Abbrechen')}" class="button rund_set" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+{/block}    

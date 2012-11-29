@@ -1,0 +1,58 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Bewertungen freischalten')}
+        </div>
+        <div class="item-content">
+            <form action="/administration_service_ratings/batchactivate" method="post" name="form">
+                <table class="user-tab">
+                    <tr>
+                        <td width="20%">{__b('Von')}:</td>
+                        <td width="20%">{__b('Bis')}:</td>
+                        <td width="60%">{__b('Empehlung')}:</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="yd-datepicker-default" name="from" readonly="readonly"/> 00:00</td>
+                        <td><input type="text" class="yd-datepicker-default" name="until" readonly="readonly"/> 23:59</td>
+                        <td>
+                            <select name="advise" style="width: 200px;">
+                                <option value="1">{__b('Ja')}</option>
+                                <option value="0">{__b('Nein')}</option>
+                                <option value="2">{__b('Alle')}</option>
+                            </select>                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="submit" value="{__b('Freischalten')}">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            
+            <b style="display:block;margin:20px 0 0;color:red">
+                Bewertungen, die Fremdwerbung oder Schimpfwörter enthalten, dürfen nicht online geschaltet werden!
+                Solche Bewertungen sollen gelöscht oder korrigiert werden - bitte die IT kontaktieren!
+            </b>
+            
+        </div>
+    </div>
+</div>
+
+<ul class="be-tabs">
+    <li><a href="/administration_service_ratings/create">{__b('Bewertung erstellen')}</a></li>
+</ul>
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-content" id="yd-ratings-grid">
+            {$grid}
+        </div>
+    </div>
+</div>
+
+{/block}

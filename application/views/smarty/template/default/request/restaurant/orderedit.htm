@@ -1,0 +1,50 @@
+{if ( is_null($order) || ($order->getId()==0) )}
+{{__b('Keine Bestellung wurde angegeben')}}
+{else}
+
+{if ($lightboxstate != -1)}
+    <h1 style="margin-bottom:0px;">{{__b('Optionen für die Bestellung')}} #{$order->getId()}</h1>
+{/if}
+
+<form>
+    <table class="user-tab" width="100%">
+    {if ($lightboxstate == -1)}
+        <tr>
+            <td colspan="4" align="center">
+                <h1>{{__b('Fehlerhafte Bestellung wurde angegeben')}}</h1>
+            </td>
+        </tr>
+    {else}
+        {if ($order->getState() == 0)}
+        <tr>
+            <td>
+                {{__b('Lieferzeit:')}}
+            </td>
+            <td><input type="text" id="yd-order-delivertime-d" name="deliverTimeD" value="{$order->getDeliverTime()|date_format:'%d.%m.%Y'}" style="width: 100px;"/></td>
+            <td><input type="text" id="yd-order-delivertime-t" name="deliverTimeT" value="{$order->getDeliverTime()|date_format:'%H:%m'}" style="width: 50px;"/></td>
+            <td>
+                <input type="button" class="yd-order-deliverTime" id="yd-order-pfand-{$order->getId()}" value="{{__b('Lieferzeit bestätigen')}}" style="width: 150px;"/><br>
+            </td>
+        </tr>
+        {/if}
+        {if ($order->getState() > 0)}
+        <tr>
+            <td>
+                Pfand:
+            </td>
+            <td colspan="2"><input type="text" id="yd-order-pfand-value" value="{$order->getPfand()|inttoprice}" name="{{__b('Pfand')}}"/> €</td>
+            <td>
+                <input type="button" class="yd-order-pfand" id="yd-order-pfand-{$order->getId()}" value="{{__b('Pfand eintragen')}}" style="width: 150px;"/><br>
+            </td>
+        </tr>
+        {/if}
+        <tr>
+            <td colspan="4" align="center">
+                <input type="button" class="yd-orderedit-cancel" value="{{__b('Abbrechen')}}" style="width: 150px;"/><br>
+            </td>
+        </tr>
+    {/if}
+    </table>
+</form>
+
+{/if}

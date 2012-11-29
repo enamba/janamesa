@@ -1,0 +1,106 @@
+{extends file="administration/base.htm"}
+{block name="content"}
+
+{if isset($restaurant)}
+{include file='administration/service/edit/_navigation.htm'}
+
+<div class="one-column-box">
+    <div class="item">
+        <div class="item-head">
+            {__b('Provision')}
+        </div>
+        <div class="item-content">
+            <table class="user-tab">
+                <tr>
+                    <th colspan="2" height="40px">{__b('Die aktuelle Provision für dieses Restaurant beträgt')}:</th>
+                </tr>
+                <tr>
+                    <td width="20%">{__b('Komission')}</td>
+                    <td>{$restaurant->getCommission()} %</td>
+                </tr>
+                <tr>
+                    <td>{__b('Gebühren je Bestellung')}</td>
+                    <td>{$restaurant->getFee()} &cent;</td>
+                </tr>
+                <tr>
+                    <td>{__b('Gebühren je Artikel')}</td>
+                    <td>{$restaurant->getItem()} &cent;</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="item-head">
+            {__b('Hier können Sie besondere Provisionsdaten für bestimmte Zeitabschnitte definieren. %sDie allgemeine Provisionsdaten des Restaurants für diese Zeitabschnitte werden dabei überschrieben.', '<br/>')}
+        </div>
+        <div class="item-content">
+            <b>
+            </b>
+            <br/><br/><br/>
+
+            <table class="user-tab">
+                <tr>
+                    <th width="20%">{__b('Zeitabschnitt')}</th>
+                    <th width="10%">{__b('Kommission')}</th>
+                    <th width="10%">{__b('Gebühren je Bestellung')}</th>
+                    <th width="10%">{__b('Gebühren je Artikel')}</th>
+                    <th width="59%"></th>
+                </tr>
+                {foreach from=$commissions item=com}
+                    <tr>
+                        <td>{date('d.m.Y' , strtotime($com.from))} - {date('d.m.Y' , strtotime($com.until))}</td>
+                        <td>{$com.komm} %</td>
+                        <td>{$com.fee} &cent;</td>
+                        <td>{$com.item} &cent;</td>
+                        <td>
+                            <a href="/administration_service/deletecomission/serviceId/{$restaurant->getId()}/commissionId/{$com.id}">
+                                <img src="{$domain_static}/images/yd-backend/del-cat.gif" onclick="javascript:return confirm(__b('Sollen dieses Provisionsdaten wirklich gelöscht werden?'));" alt="{__b('Louml;schen')}" />
+                            </a>
+                        </td>
+                    </tr>
+                {/foreach}
+            </table>
+
+            <br/><br/>
+            <b>{__b('Provisionsdaten hinzufügen')}</b>
+            <br/><br/>
+
+            <form action="/administration_service/addcommission" method="post">
+            <input type="hidden" name="restaurantId" value="{$restaurant->getId()}"/>
+            <table class="user-tab">
+                <tr>
+                    <td width="20">{__b('Gültig von')}:</td>
+                    <td><input type="text" name="startTimeD" id="yd-additional-comission-start" readonly value="{time()|timestampYMD}"/></td>
+                </tr>
+                <tr>
+                    <td>{__b('bis')}:</td>
+                    <td><input type="text" name="endTimeD" id="yd-additional-comission-end" readonly value="{time()|timestampYMD}"/></td>
+                </tr>
+
+
+                <tr>
+                    <td width="20%">{__b('Kommission')}:</td>
+                    <td width="80%"><input type="text" name="komm" value="0"/> %</td>
+                </tr>
+                <tr>
+                    <td>{__b('Gebühren je Bestellung')}</td>
+                    <td><input type="text" name="fee" value="0"/> &cent;</td>
+                </tr>
+                <tr>
+                    <td>{__b('Gebühren je Artikel')}</td>
+                    <td><input type="text" name="item" value="0"/> &cent;</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" name="addcomission" value="{__b('Hinzufügen')}" class="button"/>
+                    </td>
+                </tr>
+            </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+{/if}
+{/block}

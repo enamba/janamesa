@@ -1,0 +1,8 @@
+2012-09-29T22:34:49+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PaymentHelper: OrderNr 15970799, ServiceId 16851, CustomerId 1348950889, Nachricht: Barzahlung zugestimmt 
+2012-09-29T22:34:50+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PaymentHelper: OrderNr 65938152, ServiceId 16851, CustomerId 1348950889, Nachricht: Barzahlung zugestimmt 
+2012-09-29T22:48:12+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PaymentHelper: OrderNr 89557730, ServiceId 16851, CustomerId 1348951692, Nachricht: Barzahlung zugestimmt 
+2012-09-29T22:49:05+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PaymentHelper: OrderNr 12382530, ServiceId 16851, CustomerId 1348951745, Nachricht: Barzahlung zugestimmt 
+2012-09-29T22:49:46+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PaymentHelper: OrderNr 21795266, ServiceId 16851, CustomerId 1348951786, Nachricht: Barzahlung zugestimmt 
+2012-09-29T22:50:10+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PaymentHelper: OrderNr 21920284, ServiceId 16851, CustomerId 1348951810, Nachricht: Barzahlung zugestimmt 
+2012-09-29T23:02:14+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PaymentHelper: OrderNr 35810960, ServiceId 16851, CustomerId 1348952534, Nachricht: Barzahlung zugestimmt 
+2012-09-29T23:02:14+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving lieferando.de.testing PaymentHelper: OrderNr 40804561, ServiceId 16851, CustomerId 1348952534, Nachricht: Barzahlung zugestimmt 

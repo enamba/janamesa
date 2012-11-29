@@ -1,0 +1,20 @@
+<table class="user-tab">
+    <tr>
+        <td width="15%" colspan="2">{__b('Feiertag')}</td>
+        {foreach from=$states item=s}
+        <td width="5%" align="center">{$s['state']}</td>
+        {/foreach}
+    </tr>
+    {foreach from=$holidays key=date item=statessarray}
+    <tr>
+        <td>
+            {$date}&nbsp;&nbsp;&nbsp;
+            <a href="#x" id="yd_delete_holidaydate_{$date}" class="yd-delete-holidaydate"><img src=\"{$domain_static}/images/yd-backend/del-cat.gif\"/>
+        </td>
+        <td>{$holiday_names[$date]}</td>
+        {foreach from=$states item=s}
+        <td align="center">{if $statessarray[$s['stateId']] > 0}<a href="#x" id="yd-delete-holiday-{$statessarray[$s['stateId']]}" class="yd-delete-holiday"><img src=\"{$domain_static}/images/yd-backend/del-cat.gif\"/>{/if}</td>
+        {/foreach}
+    </tr>
+{/foreach}
+</table>

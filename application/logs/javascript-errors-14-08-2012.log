@@ -1,0 +1,56 @@
+TIME: 14-08-2012 15:16:12 
+ MESSAGE: ReferenceError: services is not defined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-test.js 
+ LINE: 18377 
+ PARENTURL: http://www.yourdelivery.local/user/favourites 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+
+TIME: 14-08-2012 15:16:20 
+ MESSAGE: ReferenceError: services is not defined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-test.js 
+ LINE: 18377 
+ PARENTURL: http://www.yourdelivery.local/user/favourites?search=pizza 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+
+TIME: 14-08-2012 15:16:54 
+ MESSAGE: ReferenceError: services is not defined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-test.js 
+ LINE: 18377 
+ PARENTURL: http://www.yourdelivery.local/user/favourites?search=sushi 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+
+TIME: 14-08-2012 15:17:06 
+ MESSAGE: ReferenceError: services is not defined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-test.js 
+ LINE: 18377 
+ PARENTURL: http://www.yourdelivery.local/user/favourites?search=sushi 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+
+TIME: 14-08-2012 15:17:09 
+ MESSAGE: ReferenceError: services is not defined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-test.js 
+ LINE: 18377 
+ PARENTURL: http://www.yourdelivery.local/user/favourites?search=sushi 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+
+TIME: 14-08-2012 15:17:10 
+ MESSAGE: ReferenceError: services is not defined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-test.js 
+ LINE: 18377 
+ PARENTURL: http://www.yourdelivery.local/user/favourites?search=sushi 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+
+TIME: 14-08-2012 15:17:14 
+ MESSAGE: ReferenceError: services is not defined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-test.js 
+ LINE: 18377 
+ PARENTURL: http://www.yourdelivery.local/user/favourites?search=sushi 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+
+TIME: 14-08-2012 15:17:16 
+ MESSAGE: ReferenceError: services is not defined 
+ URL: http://www.yourdelivery.local/media/javascript/compiled/frontend-test.js 
+ LINE: 18377 
+ PARENTURL: http://www.yourdelivery.local/user/favourites?search=sushi 
+ USERAGENT: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:14.0) Gecko/20100101 Firefox/14.0.1 
+

@@ -1,0 +1,20 @@
+{extends file="restaurant/base.htm"}
+{block name="content"}
+
+{if isset($restaurant)}
+    <div class="one-column-box">
+        <div class="item">
+            <div class="item-head">
+                {{__b('Optionsgruppe')}}  #{$optionsgroup->getId()}
+            </div>
+            <div class="item-content">
+                <div>
+                    
+                    {$form}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+{/if}
+{/block}

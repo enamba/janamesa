@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+@author mlaug
+@since 23.10.2011
+
+Create a new version and upload to servers and put into staging for further testing
+
+Examples:
+
+1. create a new version for all domains
+phing -f staging.xml staging-all
+
+2. create a new version for one domain (e.g. lieferando.de)
+phing -f staging-xml staging -Dcurrent_domain=lieferando.de
+
+you should not do that often, since every other domain will skip a version number
+in its staging folder. That means, if you put version 1.0.5 into staging for lieferando.de
+you may only deploy this version for lieferando.de and no other domain
+
+Optional:
+
+You may or may not update the views and deploy the update statements of the staging database
+-Ddo_update=yes|no Default no
+-->
+
+<project name="yourdelivery" default="staging-all" description="Build process for any yourdelivery system">
+
+    <property file="properties.ini" />
+
+    <tstamp>
+        <format property="build_time" pattern="%Y-%m-%d-%H-%I-%S" />
+    </tstamp>
+
+    <!-- ============================================  -->
+    <!-- Target: prepare a current repository          -->
+    <!-- ============================================  -->
+    <target name="prepare">
+
+        <!-- create build dir if not existent -->
+        <mkdir dir="${build_dir}" />
+        <mkdir dir="${build_dir}/releases" />
+
+        <!-- get current master -->
+        <exec command="rm -rf ${repo}" />
+        <mkdir dir="${repo}" />
+        <gitclone
+            repository="${git.url}"
+            targetPath="${repo}" />
+
+        <gitcheckout
+            repository="${repo}"
+            branchname="${branch}" quiet="true" />
+
+        <!-- delete unecessary files and dirs -->
+        <delete dir="${repo}/storage" />
+        <delete dir="${repo}/application/configs/application.ini" />
+        <delete dir="${repo}/application/logs" />
+        <delete dir="${repo}/vorlage" />
+        <delete dir="${repo}/tests" />
+        <delete file="${repo}/public/.htaccess" />
+        <delete dir="${repo}/.git" />
+
+        <!-- start to minify js -->
+        <move file="${repo}/public/media/javascript" tofile="${repo}/public/media/javascript_not_minified" overwrite="true"/>
+        <move file="${repo}/public/media/javascript_not_minified/external/tiny_mce" tofile="${repo}/public/media/javascript/external/tiny_mce" overwrite="true"/>
+        <jsMin targetDir="${repo}/public/media/javascript">
+            <fileset dir="${repo}/public/media/javascript_not_minified">
+                <include name="**/js" />
+            </fileset>
+        </jsMin>
+
+        <!-- move some files, which need to stay the same -->
+        <move file="${repo}/public/media/javascript_not_minified/library/jquery/ui/1.8.7/themes" tofile="${repo}/public/media/javascript/library/jquery/ui/1.8.7/themes" overwrite="true" />
+        <move file="${repo}/public/media/javascript/base-min.js" tofile="${repo}/public/media/javascript/base.js" />
+        <move file="${repo}/public/media/javascript/library/jquery/1.5.2/jquery.min-min.js" tofile="${repo}/public/media/javascript/library/jquery/1.5.2/jquery.min.js" />
+        <move file="${repo}/public/media/javascript/library/jquery/1.7/jquery.min-min.js" tofile="${repo}/public/media/javascript/library/jquery/1.7/jquery.min.js" />
+        <delete dir="${repo}/public/media/javascript_not_minified" />
+                
+        <!-- fix permissions -->
+        <exec command="find . -type d -exec chmod 755 {} \;" dir="${repo}/public/media/javascript" />
+        <exec command="find . -type f -exec chmod 644 {} \;" dir="${repo}/public/media/javascript" />
+
+        <!-- create caching dir -->
+        <mkdir dir="${repo}/public/media/javascript/compiled" />
+        <mkdir dir="${repo}/public/media/javascript/container" />
+
+        <!-- create link for fcgi -->
+        <exec command="ln -nfs public public_fcgi" dir="${repo}" />
+        
+        <!-- create links for gelbeseiten -->
+        <echo msg="setting links for gelbeseiten" />
+        <exec command="ln -nfs gelbeseiten.lieferando.de gelbeseiten.staging.lieferando.de" dir="${repo}/public/media/javascript" />
+        <exec command="ln -nfs gelbeseiten gelbeseiten.staging" dir="${repo}/application/views/smarty/template/default/satellite" />
+
+        <!-- compress release -->
+        <echo msg="starting to compress release" />
+        <exec command="tar zcf ${build_dir}/releases/yd-${version}.tar.gz ." dir="${repo}" />           
+    </target>
+
+    <!-- ============================================  -->
+    <!-- Target: prepare a current mobile repository   -->
+    <!-- ============================================  -->
+    <target name="mobile">
+        
+        <fail unless="server" message="no server defined" />
+        <echo msg="staging mobile version to staging directory of ${server}" />
+        
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="mkdir -p /home/ydadmin/logs/system/mobile/staging" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="mkdir -p /home/ydadmin/logs/apache/mobile/staging" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="mkdir -p /home/ydadmin/staging/mobile" />
+            
+        <exec command="rsync --partial --progress --rsh=ssh --archive /tmp/mobile/ ydadmin@${server}:/home/ydadmin/staging/mobile/" />  
+        
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="forever stop /home/ydadmin/staging/mobile/index.js" />  
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="forever start /home/ydadmin/staging/mobile/index.js -l /home/ydadmin/logs/system/mobile/staging" />           
+    </target>
+
+
+    <!-- ============================================  -->
+    <!-- Target: staging                               -->
+    <!-- ============================================  -->
+    <target name="staging-all">
+
+        <!-- create a new version number -->
+        <version releasetype="${release.type}" file="${build_dir}/releases/version.txt" property="version"/>
+
+        <!-- first prepare -->
+        <phingcall target="prepare" />
+
+        <!-- call for all  domains -->
+        <foreach list="${domains}" param="current_domain" target="staging" />
+
+        <!-- update the cdn -->     
+        <if>
+            <equals arg1="${do_cdn}" arg2="yes" trim="true" />
+            <then>
+                <phingcall target="cdn" />
+            </then>
+        </if>
+        
+        <!-- update the mobile app -->
+        <if>
+            <equals arg1="${do_mobile}" arg2="yes" trim="true" />
+            <then>
+                
+                <!-- checkout mobile version -->
+                <!-- ####################### -->
+                <mkdir dir="${build_dir}/releases/mobile" />
+               
+                <!-- get current master -->
+                <exec command="rm -rf /tmp/mobile" />
+                <mkdir dir="/tmp/mobile" />
+                <gitclone
+                    repository="${git.url}"
+                    targetPath="/tmp/mobile" />
+
+                <gitcheckout
+                    repository="/tmp/mobile"
+                    branchname="master" quiet="true" />   
+            
+                <delete dir="/tmp/mobile/.git" />   
+                <foreach list="${servers}" param="server" target="mobile" />
+                              
+                <!-- prepare image structure for cdn -->
+                <mkdir dir="/tmp/mobile/cdn/mobile/newDevices/images" />    
+                <copy todir="/tmp/mobile/cdn/mobile/newDevices/images" >
+                    <fileset dir="/tmp/mobile/newDevices/public/images">
+                        <include name="**/*" />
+                    </fileset>
+                </copy>
+        
+                <mkdir dir="/tmp/mobile/cdn/mobile/oldDevices/images" />
+                <copy todir="/tmp/mobile/cdn/mobile/oldDevices/images" >
+                    <fileset dir="/tmp/mobile/oldDevices/public/images">
+                        <include name="**/*" />
+                    </fileset>
+                </copy>
+        
+                <!-- upload images for mobile devices -->
+                <property name="amazon.key" value="" />
+                <property name="amazon.secret" value="" /> 
+                <property name="amazon.bucket" value="" />
+                <s3put>
+                    <fileset dir="/tmp/mobile/cdn">
+                        <include name="**/*" />
+                    </fileset>
+                </s3put>
+                
+            </then>
+        </if>
+        
+        <!-- reset varnish cache -->
+        <if>
+            <equals arg1="${do_varnish}" arg2="yes" />   
+            <then>
+                <phingcall target="varnish" />
+            </then>
+        </if>
+        
+        <!-- reset memcache -->
+        <if>
+            <equals arg1="${do_memcache}" arg2="yes" />   
+            <then>
+                <phingcall target="memcache" />
+            </then>
+        </if>
+
+        <!-- send out email to it -->
+        <mail tolist="it@lieferando.de" subject="Staging completed" from="build@lieferando.de">System pushed into staging for ${domains}</mail>
+    </target>
+    
+    <target name="varnish">
+        <echo msg="purging staging varnish server" />
+        <ssh username="${varnish.staging.username}" password="${varnish.staging.password}" host="${varnish.staging.server}" port="${varnish.staging.port}" command="/usr/bin/varnishadm 'ban.url .'" />
+    </target>
+    
+    <target name="memcache">
+        <echo msg="clearing memcache on port 11212" />
+        <ssh username="${memcache.username}" password="${memcache.password}" host="${memcache.server}" command="echo 'flush_all' | nc ${memcache.ip} 11212" />
+    </target>
+    
+    <!-- ============================================  -->
+    <!-- Target: create domain specifics for domain    -->
+    <!-- ============================================  -->
+    <target name="staging">
+        <!-- setting property -->
+        <echo msg="setting property to ${current_domain}" />
+        <property name="domain" value="${current_domain}" />
+
+        <!-- check if property domain and version is set -->
+        <fail unless="domain" message="no value set for property domain" />
+        <fail unless="version" message="no version defined" />
+
+        <!-- unfold version to modify for this domain -->
+        <property name="tmp" value="/tmp/${domain}/${version}-${build_time}" />
+        <delete dir="/tmp/${domain}" />
+        <delete dir="${tmp}" />
+        <mkdir dir="${tmp}" />
+        <echo msg="untar release ${version}" />
+        <exec command="tar xzf ${build_dir}/releases/yd-${version}.tar.gz -C ${tmp}" />
+
+        <!-- if no exists, we at least create an empty one -->
+        <mkdir dir="${tmp}/public/static/public/${domain}" />
+        <copy todir="${tmp}/public" haltonerror="false" overwrite="true">
+            <fileset dir="${tmp}/public/static/public/${domain}/">
+                <include name="**/*" />
+            </fileset>
+        </copy>
+        
+        <!-- use different htaccess in varnish, avoid html cache on each server -->
+        <property name="htaccess"  value=".htaccess" override="true" />
+        <if>
+            <equals arg1="${do_varnish}" arg2="yes" />   
+            <then>
+                <property name="htaccess"  value="htaccess_varnish" override="true" />
+            </then>
+        </if>
+        
+        <!-- add htaccess file -->
+        <exec command="echo ${current_domain} | sed -e 's/\./\\./g'" outputProperty="domain_regex" />
+        <copy file="config/${htaccess}" tofile="${tmp}/public/.htaccess" overwrite="true">
+            <filterchain>
+                <replacetokens begintoken="%%" endtoken="%%">
+                    <token key="ENV" value="development" />
+                    <token key="DOMAIN_REGEX" value="${domain_regex}" />
+                    <token key="DOMAIN_NAME" value="${current_domain}" />
+                </replacetokens>
+            </filterchain>
+        </copy>
+        <copy file="config/${htaccess}" tofile="${tmp}/public/.htaccess_live" overwrite="true">
+            <filterchain>
+                <replacetokens begintoken="%%" endtoken="%%">
+                    <token key="ENV" value="production" />
+                    <token key="DOMAIN_REGEX" value="${domain_regex}" />
+                    <token key="DOMAIN_NAME" value="${current_domain}" />
+                </replacetokens>
+            </filterchain>
+        </copy>
+
+        <!-- add config file and alter index.php to add config file of domain -->
+        <copy file="config/application.ini" tofile="${tmp}/application/configs/application.ini" overwrite="true">
+            <filterchain>
+                <replacetokens begintoken="%%" endtoken="%%">
+                    <token key="DOMAIN_REGEX" value="${domain_regex}" />
+                    <token key="DOMAIN_NAME" value="${current_domain}" />
+                    <token key="MEMCACHE_IP" value="${memcache.ip}" />
+                </replacetokens>
+            </filterchain>
+        </copy>
+        
+        <copy file="config/domains/${current_domain}/application.ini" tofile="${tmp}/application/configs/${current_domain}.ini" overwrite="true" />
+        <copy file="config/domains/${current_domain}/fidelity.ini" tofile="${tmp}/application/configs/fidelity.ini" overwrite="true" />
+        
+        <copy file="${tmp}/public/index.php" tofile="${tmp}/public/index.php.domain" overwrite="true">
+            <filterchain>
+                <replacetokens begintoken="%%" endtoken="%%">
+                    <token key="DOMAIN_REGEX" value="${domain_regex}" />
+                    <token key="DOMAIN_NAME" value="${current_domain}" />
+                    <token key="MEMCACHE_IP" value="${memcache.ip}" />
+                </replacetokens>
+            </filterchain>
+        </copy>
+        <move file="${tmp}/public/index.php.domain" tofile="${tmp}/public/index.php" overwrite="true"/>
+        
+        <!-- add correct config file for domain to cronjobs/base.php -->
+        <copy file="${tmp}/cronjobs/base.php" tofile="${tmp}/cronjobs/base.php.domain" overwrite="true">
+            <filterchain>
+                <replacetokens begintoken="%%" endtoken="%%">
+                    <token key="DOMAIN_REGEX" value="${domain_regex}" />
+                    <token key="DOMAIN_NAME" value="${current_domain}" />
+                </replacetokens>
+            </filterchain>
+        </copy>
+        <move file="${tmp}/cronjobs/base.php.domain" tofile="${tmp}/cronjobs/base.php" overwrite="true"/>
+        
+        <!-- add correct config file for domain to cron/start.php -->
+        <copy file="${tmp}/cron/start.php" tofile="${tmp}/cron/start.php.domain" overwrite="true">
+            <filterchain>
+                <replacetokens begintoken="%%" endtoken="%%">
+                    <token key="DOMAIN_REGEX" value="${domain_regex}" />
+                    <token key="DOMAIN_NAME" value="${current_domain}" />
+                </replacetokens>
+            </filterchain>
+        </copy>
+        <move file="${tmp}/cron/start.php.domain" tofile="${tmp}/cron/start.php" overwrite="true"/>
+        
+        <!-- add correct config file for domain to scripts/base.php -->
+        <copy file="${tmp}/scripts/base.php" tofile="${tmp}/scripts/base.php.domain" overwrite="true">
+            <filterchain>
+                <replacetokens begintoken="%%" endtoken="%%">
+                    <token key="DOMAIN_REGEX" value="${domain_regex}" />
+                    <token key="DOMAIN_NAME" value="${current_domain}" />
+                </replacetokens>
+            </filterchain>
+        </copy>
+        <move file="${tmp}/scripts/base.php.domain" tofile="${tmp}/scripts/base.php" overwrite="true"/>
+     
+        <!-- check if there needs to be encoding -->
+        <if>
+            <equals arg1="${do_encode}" arg2="yes" />   
+            <then>
+                <!-- Encode if flag is set  -->                
+                <phingcall target="encode" >
+                    <property name="fromdir" value="${tmp}" />
+                    <property name="todir" value="${repo-compiled}" />          
+                    <property name="onlyCopy" value="${encoder.ignore}" />
+                    <property name="passphrase" value="${encoder.pass}" />
+                    <property name="encoderdir" value="${encoder.dir}" />
+                </phingcall>  
+                <property name="tmp" value="${repo-compiled}" override="true" />
+            </then>
+        </if>
+
+        <foreach list="${servers}" param="server" target="server_copy" />
+
+        <!-- updating database -->
+        <if>
+            <and>
+                <equals arg1="${do_update}" arg2="yes" trim="true" />
+                <not>
+                    <equals arg1="${current_domain}" arg2="eat-star.de" trim="true" />
+                </not>
+                <not>
+                    <equals arg1="${current_domain}" arg2="pyszne.pl" trim="true" />
+                </not>
+            </and>
+            <then>
+                <!-- deploy updates -->
+                <echo msg="updating database" />
+                <pdosqlexec
+                    onerror="continue"
+                    url="mysql:host=${mysql.devel.ip};dbname=staging.${current_domain}"
+                    userid="${mysql.devel.user}"
+                    password="${mysql.devel.pass}">
+                    <fileset dir="${tmp}/application/data/update">
+                        <include name="*.sql" />
+                    </fileset>
+                </pdosqlexec>
+
+                <!-- updating views -->
+                <echo msg="updating views" />
+                <pdosqlexec
+                    onerror="continue"
+                    url="mysql:host=${mysql.devel.ip};dbname=staging.${current_domain}"
+                    userid="${mysql.devel.user}"
+                    password="${mysql.devel.pass}">
+                    <fileset dir="${tmp}/application/data/views">
+                        <include name="*.sql" />
+                    </fileset>
+                </pdosqlexec>
+            </then>
+        </if>
+
+    </target>
+
+    <!-- ============================================  -->
+    <!-- Target: copy code to servers                  -->
+    <!-- ============================================  -->
+    <target name="server_copy">
+        
+        <!-- preparing server and create log dirs -->
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="mkdir -p /home/ydadmin/logs/system/${domain}/staging" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="mkdir -p /home/ydadmin/logs/system/${domain}/live" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="mkdir -p /home/ydadmin/logs/apache/${domain}/staging" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="mkdir -p /home/ydadmin/logs/apache/${domain}/live" />
+              
+        <!-- move to version into staging -->
+        <echo msg="compressing..." />
+        <exec command="tar zcf release-${build_time}.tar.gz ." dir="${tmp}" />
+        <echo msg="moving staging release to servers" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="mkdir -p /home/ydadmin/staging/${domain}/${version}" />
+
+        <!-- rsync to remote server -->
+        <exec command="rsync --partial --progress --rsh=ssh --archive ${tmp}/release-${build_time}.tar.gz ydadmin@${server}:/tmp" />
+
+        <!-- pack release and link new staging -->
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="tar xzf /tmp/release-${build_time}.tar.gz -C /home/ydadmin/staging/${domain}/${version}" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="ln -nfs /home/ydadmin/staging/${domain}/${version} /home/ydadmin/staging/${domain}/current" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="ln -nfs /home/ydadmin/logs/system/${domain}/staging /home/ydadmin/staging/${domain}/current/application/logs" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="ln -nfs /home/ydadmin/storage/${domain}/staging /home/ydadmin/staging/${domain}/current/storage" />
+        
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="rm /tmp/release-${build_time}.tar.gz" />   
+    </target> 
+    
+    <!-- ============================================  -->
+    <!-- Target: encode php and uglify javascript      -->
+    <!-- ============================================  -->
+    <target name="encode">
+        <echo msg="encoding..." />	
+        <echo msg="${encoderdir}/ioncube_encoder53 ${fromdir} -o ${todir} --binary --replace-target --with-license license.txt --passphrase ${passphrase} --copy index.php base.php" />
+        <exec command="${encoderdir}/ioncube_encoder53 ${fromdir} -o ${todir} --binary --replace-target --with-license license.txt --passphrase ${passphrase} --copy index.php base.php" /> 
+        <echo msg="${encoderdir}/make_license -o ${todir}/license.txt --passphrase ${passphrase}"  />
+        <exec command="${encoderdir}/make_license -o ${todir}/license.txt --passphrase ${passphrase}" /> 
+    </target>
+    
+    <!-- ============================================  -->
+    <!-- Target: update s3 storage                     -->
+    <!-- ============================================  -->
+    <target name="cdn">
+        <property name="amazon.key" value="" />
+        <property name="amazon.secret" value="" /> 
+        <property name="amazon.bucket" value="" />
+        <s3put>
+            <fileset dir="${repo}/public/media/">
+                <include name="**/*" />
+            </fileset>
+        </s3put>
+    </target>  
+
+    <!-- cleanup -->
+    <target name="cleanup">          
+        <echo msg="clearing deploy server" />
+        <delete dir="${repo}" />              
+        <foreach list="${domains}" param="domain" target="cleanup_domain" />
+    </target>
+    
+    <target name="cleanup_domain">
+        <echo msg="clearing ${domain}" />
+        <delete dir="/tmp/${domain}" />
+        <foreach list="${servers}" param="server" target="cleanup_staging" />
+    </target>
+    
+    <target name="cleanup_staging">
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="find /home/ydadmin/staging/${domain} -maxdepth 1 -type d -mtime +7 -exec rm -r {} \;" />     
+    </target>
+
+</project>

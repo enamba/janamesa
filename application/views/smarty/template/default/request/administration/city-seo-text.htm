@@ -1,0 +1,34 @@
+<div class="be-dialogs"><a class="be-dialogs-close yd-close-lightbox"></a>
+
+    <div class="be-dialogs-head">
+        <h2>{__b('SEO-Text editieren')}</h2>
+    </div>
+
+    <div class="be-dialogs-body">
+        <p class="item-warning hidden"></p>
+
+        <form method="post" action="/request_administration/city-seo-text">
+            <input type="hidden" name="id" class="rund rund_set" value="{$city->getId()}"/>
+            <table class="user-tab" width="100%">
+               <tr>
+                    <td width="20%" align="center">
+                        {__b('SEO-Text Headline')}
+                    </td>
+                    <td width="80%" align="center">
+                        <input type="text" name="seoHeadline" class="rund rund_set" value="{$city->getSeoHeadline()}" style="width: 90%"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2">
+                        <textarea name="seoText" class="rund_set text big">{$city->getSeoText()}</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2">
+                        <input type="submit" value="{__b('Speichern')}" /><br>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
