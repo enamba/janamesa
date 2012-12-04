@@ -1,4 +1,0 @@
-2012-08-23T21:23:28+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PaymentHelper: OrderNr 98430231, ServiceId 351, CustomerId 1345749807, Nachricht: Barzahlung zugestimmt 
-2012-08-23T21:23:28+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PaymentHelper: OrderNr 98430231, ServiceId 351, CustomerId 1345749807, Nachricht: Sofortüberweisung abgelehnt, weil systemweit deaktiviert 
-2012-08-23T21:23:28+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PaymentHelper: OrderNr 98430231, ServiceId 351, CustomerId 1345749807, Nachricht: Paypalbezahlung zugestimmt 
-2012-08-23T21:23:28+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PaymentHelper: OrderNr 98430231, ServiceId 351, CustomerId 1345749807, Nachricht: Kreditkartenzahlung zugestimmt 

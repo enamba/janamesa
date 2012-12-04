@@ -1,6 +1,0 @@
-2012-07-06T11:35:55-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PaymentHelper: OrderNr 97191360, ServiceId 288, CustomerId 1341585353, Nachricht: O pagamento à vista foi aceito 
-2012-07-06T11:35:55-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PaymentHelper: OrderNr 97191360, ServiceId 288, CustomerId 1341585353, Nachricht: A transferência imediata foi recusada, porque o sistema foi desativado  
-2012-07-06T11:35:55-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PaymentHelper: OrderNr 97191360, ServiceId 288, CustomerId 1341585353, Nachricht: Paypalbezahlung zugestimmt 
-2012-07-06T11:35:55-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PaymentHelper: OrderNr 97191360, ServiceId 288, CustomerId 1341585353, Nachricht: O pagamento com cartão de crédito foi aceito 
-2012-07-06T11:36:25-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PaymentHelper: OrderNr 37487426, ServiceId 288, CustomerId 1341585385, Nachricht: O pagamento à vista foi aceito 
-2012-07-06T11:36:26-03:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PaymentHelper: OrderNr 41073987, ServiceId 288, CustomerId 1341585386, Nachricht: O pagamento à vista foi aceito 

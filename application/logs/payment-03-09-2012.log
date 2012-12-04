@@ -1,4 +1,0 @@
-2012-09-03T17:47:14+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PaymentHelper: OrderNr 23187001, ServiceId 351, CustomerId 1346687233, Nachricht: Barzahlung zugestimmt 
-2012-09-03T17:47:14+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PaymentHelper: OrderNr 23187001, ServiceId 351, CustomerId 1346687233, Nachricht: Sofortüberweisung abgelehnt, weil systemweit deaktiviert 
-2012-09-03T17:47:14+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PaymentHelper: OrderNr 23187001, ServiceId 351, CustomerId 1346687233, Nachricht: Paypalbezahlung zugestimmt 
-2012-09-03T17:47:14+02:00 INFO (6): ydadmin-ThinkPad-X220-Tablet serving janamesa.com.br.testing PaymentHelper: OrderNr 23187001, ServiceId 351, CustomerId 1346687233, Nachricht: Kreditkartenzahlung zugestimmt 
