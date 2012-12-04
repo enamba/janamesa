@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: yd-partner\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-31 17:07+0200\n"
+"POT-Creation-Date: 2012-08-24 06:07+0200\n"
 "PO-Revision-Date: 2012-07-23 13:00-0300\n"
 "Last-Translator: caspar <caspar@janamesa.com.br>\n"
 "Language-Team: none\n"
@@ -21,47 +21,6 @@ msgstr ""
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:194
 msgid "Gesamt"
 msgstr "tudo"
-
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/Partner/CustomerController.php:143
-#, fuzzy
-msgid "Dieses Restaurant gibt es nicht!"
-msgstr "Conta não existe!"
-
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/Partner/CustomerController.php:152
-#, fuzzy
-msgid "Unbekannter Fehler"
-msgstr "Erro desconhecido!"
-
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/Partner/CustomerController.php:158
-#, php-format
-msgid ""
-"Ihr Passwort wurde kürzlich zurückgesetzt. Bitte legen Sie über die Webseite "
-"http://%s/partner zuerst ihr eigenes Passwort fest"
-msgstr ""
-
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/Partner/CustomerController.php:170
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:128
-msgid "Das Passwort ist falsch!"
-msgstr "Senha errada!"
-
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/Partner/CustomerController.php:179
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:150
-msgid "Unbekannter Fehler!"
-msgstr "Erro desconhecido!"
-
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/Partner/OrderController.php:367
-msgid "Es wurde kein Fahrer für diese Bestellung angegeben"
-msgstr ""
-
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/Partner/OrderController.php:403
-#, php-format
-msgid "Diese Bestellung ist schon vom Fahrer \"%s\" in der Auslieferung"
-msgstr ""
-
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/Partner/OrderController.php:408
-#, fuzzy
-msgid "Konnte Bestellung nicht finden"
-msgstr "Entrou um novo pedido!"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Partner/Request/BillingController.php:38
 #, fuzzy
@@ -82,7 +41,7 @@ msgid "Kommentar"
 msgstr "Comentário"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:107
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:888
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:877
 #, fuzzy
 msgid "Benutzerdaten sind fehlerhaft!"
 msgstr "Email do usuário errado!"
@@ -91,41 +50,49 @@ msgstr "Email do usuário errado!"
 msgid "Diesen Account gibt es nicht!"
 msgstr "Conta não existe!"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:267
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:128
+msgid "Das Passwort ist falsch!"
+msgstr "Senha errada!"
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:150
+msgid "Unbekannter Fehler!"
+msgstr "Erro desconhecido!"
+
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:257
 msgid "BestellNr"
 msgstr "N° do pedido"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:268
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:258
 msgid "Kundenname"
 msgstr "Nome do cliente"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:269
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:259
 msgid "Ort"
 msgstr "Cidade"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:274
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:264
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:351
 msgid "€"
 msgstr "R$"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:275
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:265
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:263
 msgid "Status"
 msgstr "Status"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:280
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:270
 msgid "Storno"
 msgstr "Estorno"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:281
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:271
 msgid "Bestätigt"
 msgstr "Confirmado"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:282
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:272
 msgid "Alle"
 msgstr "Todos"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:300
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:291
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/7a10a7343c6b45a973468bfac0e06d260c4f535a.file.nav.htm.php:25
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:162
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:158
@@ -146,151 +113,149 @@ msgstr "Todos"
 msgid "Bestellungen"
 msgstr "Pedidos"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:301
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:292
 msgid "Als Webseite ansehen"
 msgstr "Ver como página de web"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:302
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:293
 msgid "Als pdf speichern"
 msgstr "Salvar como PDF"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:302
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:293
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/74107af3eb858466256baa016ae0e23cc9518024.file.billing.htm.php:286
 msgid "PDF"
 msgstr "PDF"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:445
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:436
 msgid "Dienstleister Nr."
 msgstr "N° do Prestador de Serviços"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:459
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:450
 msgid "Ihre Anfrage wurde erfolgreich versandt"
 msgstr "Proposta enviado com sucesso"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:462
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:453
 msgid "Ein Fehler ist aufgetreten!"
 msgstr "Ocorreu um erro!"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:521
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:512
 #, fuzzy
-msgid "Email wurde erfolgreich gesetzt"
+msgid "Email wurde erfolreich gesetzt"
 msgstr "Endereço de email alterado com sucesso"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:524
-#, fuzzy
-msgid "Email wurde erfolgreich geändert"
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:515
+msgid "Email wurde erfolreich geändert"
 msgstr "Endereço de email alterado com sucesso"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:529
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:520
 msgid ""
 "Ihre Email konnte nicht gesetzt werden. Bitte kontaktieren Sie unseren "
 "Support!"
 msgstr ""
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:552
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:543
 #, fuzzy
 msgid "Mobilnummer wurde erfolgreich gesetzt"
 msgstr "Endereço de email alterado com sucesso"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:555
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:546
 #, fuzzy
 msgid "Mobilnummer wurde erfolgreich geändert"
 msgstr "Endereço de email alterado com sucesso"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:560
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:551
 msgid ""
 "Ihre Mobilnummer konnte nicht gesetzt werden. Bitte kontaktieren Sie unseren "
 "Support!"
 msgstr ""
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:569
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:559
 #, fuzzy
 msgid "Das alte Passwort ist nicht korrekt"
 msgstr "Senha errada!"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:590
-#, fuzzy
-msgid "Passwort wurde erfolgreich geändert"
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:581
+msgid "Passwort wurde erfolreich geändert"
 msgstr "Senha alterada com sucesso"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:602
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:594
 msgid "Ihre Einstellungen wurden gespeichert"
 msgstr "Salvou configurações"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:631
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:620
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:263
 msgid "Extrazutaten"
 msgstr ""
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:632
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:621
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:244
 #: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Contact.php:21
 msgid "Öffnungszeiten"
 msgstr "Horário de funcionamento"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:633
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:622
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:228
 #, fuzzy
 msgid "Datenänderung"
 msgstr "Alterar cardápio"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:634
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:623
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:231
 msgid "Inhaberwechsel"
 msgstr ""
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:635
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:624
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:234
 #, fuzzy
 msgid "Kontodatenänderung"
 msgstr "Alterar cardápio"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:636
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:625
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:260
 #: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Contact.php:21
 msgid "Kartenänderung"
 msgstr "Alterar cardápio"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:637
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:626
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:247
 msgid "Umbau - Umzug"
 msgstr ""
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:638
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:627
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:337
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/5b0b6d511e7da8e13841232dd61158300cbdc415.file.documents.htm.php:250
 msgid "Liefergebiete"
 msgstr ""
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:737
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:726
 msgid ""
 "Vielen Dank! Du kannst deine Email, Telefonnummer und das Passwort jederzeit "
 "unter \"Konto\" ändern."
 msgstr ""
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:740
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:787
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:729
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:776
 msgid ""
 "Ihre Daten konnten nicht gesetzt werden. Bitte kontaktieren Sie unseren "
 "Support!"
 msgstr ""
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:784
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:773
 msgid "Vielen Dank! Ihr neues Passwort wurde gesetzt!"
 msgstr ""
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:820
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:809
 #, fuzzy
 msgid "Bitte geben Sie Ihre E-Mail oder Ihre Mobilnummer ein!"
 msgstr "Por favor, coloque seu n° de cliente"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:841
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:830
 msgid ""
 "Sie haben bereits ein Passwort angefordert! Bitte warten Sie bis zum "
 "nächsten Versuch!"
 msgstr ""
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:891
+#: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/PartnerController.php:880
 msgid "Diese Kundennummer wurde nicht gefunden!"
 msgstr ""
 
@@ -614,16 +579,11 @@ msgstr ""
 msgid "Fax: %s"
 msgstr ""
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:225
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:226
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:222
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/90f3c13ae0d30c3bdf8c27ef37b193a244c0ed64.file.contact.htm.php:223
 #, fuzzy
 msgid "Kontaktformular"
 msgstr "Contato"
-
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/cfaf9a0c883d8a2f9f1dcb875f9e434008c94837.file.login.htm.php:148
-#, fuzzy
-msgid "Passwort vergessen?"
-msgstr "Senha"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a3ba1bb521aaf9ec9942d6339b6a6944cbb923a9.file.index.htm.php:186
 msgid "Restaurant Status:"
@@ -763,16 +723,16 @@ msgstr ""
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:329
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:356
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:376
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:693
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:705
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:717
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:729
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:741
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:753
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:765
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:778
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:790
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:802
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:690
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:702
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:714
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:726
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:738
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:750
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:762
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:775
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:787
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:799
 #, fuzzy, php-format
 msgid "%s €"
 msgstr "R$"
@@ -901,7 +861,7 @@ msgid "Auf eigener Domain"
 msgstr ""
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:410
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:619
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:616
 #, php-format
 msgid "Umsätze %s"
 msgstr ""
@@ -921,61 +881,61 @@ msgstr ""
 msgid "Übersicht %s"
 msgstr "Sumário"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:624
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:653
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:820
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:849
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:621
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:650
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:816
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:845
 #, php-format
 msgid "%s | Online Zahlung"
 msgstr ""
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:628
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:657
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:824
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:853
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:625
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:654
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:820
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:849
 #, php-format
 msgid "%s | Bar Zahlung"
 msgstr ""
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:632
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:661
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:828
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:857
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:629
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:658
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:824
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:853
 #, fuzzy, php-format
 msgid "%s | Gesamt"
 msgstr "tudo"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:636
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:836
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:633
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:832
 msgid "Eigene Domain | Bar Zahlung"
 msgstr ""
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:640
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:832
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:637
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:828
 msgid "Eigene Domain | Online Zahlung"
 msgstr ""
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:644
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:840
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:641
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:836
 msgid "Eigene Domain | Gesamt"
 msgstr ""
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:648
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:645
 #, fuzzy
 msgid "Gesamtumsatz"
 msgstr "tudo"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:815
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:811
 #, fuzzy, php-format
 msgid "Bestellungen %s"
 msgstr "Pedidos"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:844
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:840
 #, fuzzy
 msgid "Gesamtbestellungen"
 msgstr "Pedidos"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:1010
+#: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/03e15e7164fae59fdef1b7d20f9cf7787a3db4f0.file.stats.htm.php:1006
 msgid "Kalenderwoche"
 msgstr ""
 
@@ -1029,18 +989,11 @@ msgstr "Cadastrar"
 msgid "E-Mail"
 msgstr ""
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Requestpassword.php:41
-#, fuzzy
-msgid "Bitte geben Sie eine gültige E-Mail-Adresse ein."
-msgstr "Por favor, coloque um mensagem"
-
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Requestpassword.php:44
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Mobile.php:18
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Data.php:24
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Requestpassword.php:42
 msgid "Mobilnummer"
 msgstr ""
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Requestpassword.php:52
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Requestpassword.php:50
 #, fuzzy
 msgid "Anfordern"
 msgstr "Outros"
@@ -1081,50 +1034,11 @@ msgstr "Anexo"
 msgid "Kontaktanfrage abschicken"
 msgstr "Enviar pedido de contato"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Mobile.php:20
-#, fuzzy
-msgid "Bitte geben Sie eine Mobilnummer ein."
-msgstr "Por favor, coloque seu n° de cliente"
-
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Mobile.php:24
-#, fuzzy
-msgid "Neue Mobilnummer wiederholen"
-msgstr "Repetir senha nova"
-
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Mobile.php:28
-#, fuzzy
-msgid "Bitte bestätigen Sie Ihre Mobilnummer."
-msgstr "Por favor, coloque seu n° de cliente"
-
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Mobile.php:32
-#, fuzzy
-msgid "Die Mobilnummern stimmen nicht überein."
-msgstr "As senhas não são iguais."
-
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Mobile.php:43
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Email.php:42
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Mobile.php:26
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Email.php:30
 #: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Config.php:31
 msgid "Ändern"
 msgstr "Alterar"
-
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Email.php:19
-msgid "E-Mail-Adresse"
-msgstr ""
-
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Email.php:23
-#, fuzzy
-msgid "Neue E-Mail-Adresse wiederholen"
-msgstr "Repetir senha nova"
-
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Email.php:27
-#, fuzzy
-msgid "Bitte bestätigen Sie Ihre E-Mail-Adresse."
-msgstr "Por favor, coloque um mensagem"
-
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Email.php:31
-#, fuzzy
-msgid "Die E-Mail-Adressen stimmen nicht überein."
-msgstr "As senhas não são iguais."
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Config.php:14
 msgid "Benachrichtigung bei neuer Bestellung"
@@ -1134,11 +1048,7 @@ msgstr "Recado no caso de novo pedido"
 msgid "Sound an"
 msgstr "Ligar o som"
 
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Data.php:20
-msgid "Email"
-msgstr ""
-
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Data.php:28
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Partner/Data.php:26
 msgid "Speichern"
 msgstr "Salvar"
 
@@ -1155,13 +1065,13 @@ msgid "Post (6 € pro Rechnung)"
 msgstr ""
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Administration/Service/Edit.php:196
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Administration/Service/Create.php:283
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Administration/Service/Create.php:288
 #, php-format
 msgid "%s Lieferservice %s %s, %s bestellen"
 msgstr "%s Delivery %s %s, %s pedir"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Administration/Service/Edit.php:206
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Administration/Service/Create.php:293
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Administration/Service/Create.php:298
 #, php-format
 msgid ""
 "%s Lieferservice %s %s essen bestellen Kreditkarte bargeldlos Heimservice "
@@ -1171,7 +1081,7 @@ msgstr ""
 "delivery entrega"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Administration/Service/Edit.php:216
-#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Administration/Service/Create.php:303
+#: /home/ydadmin/translation/yd/bin/locale/../../application/forms/Administration/Service/Create.php:308
 #, php-format
 msgid ""
 "%s %s Lieferservice %s im Überblick. Alle Informationen auf einen Blick. "
@@ -1216,6 +1126,12 @@ msgstr ""
 
 #~ msgid "neues Passwort"
 #~ msgstr "Senha nova"
+
+#~ msgid "neues Passwort wiederholen"
+#~ msgstr "Repetir senha nova"
+
+#~ msgid "Die Passwörter stimmen nicht überein."
+#~ msgstr "As senhas não são iguais."
 
 #~ msgid "Daten für das Restaurants wurden nicht gesetzt!"
 #~ msgstr "Dados não colocados para esse restaurante!"

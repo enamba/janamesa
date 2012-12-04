@@ -162,6 +162,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
             $locale = $config->locale->toArray();
 
             // init locale
+            putenv("LC_ALL=".$locale['name'] . ".UTF-8"); 
             setlocale(LC_ALL, $locale['name'] . ".UTF-8");
             date_default_timezone_set($locale['timezone']);
 
