@@ -67,8 +67,10 @@ function handle_fatal_error() {
                 $error = array_merge($error, get_error_source());
                 $error = implode("\n", $error);
                 
-                mail("error@lieferando.de", "Yourdelivery Developer: Error", $error, 'From: noreply@lieferando.de');
+                mail("namba@janamesa.com.br", "Janamesa Developer: Error", $error, 'From: noreply@janamesa.com.br');
                 if (PHP_SAPI != 'cli') {
+                print_r($error);
+                die();
                     header('location: /error/throw');
                 }
                 die();

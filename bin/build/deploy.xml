@@ -57,7 +57,7 @@ You may or may not start/stop the topup server
         </if>
         
         <!-- send out email to confirm build process -->
-        <mail tolist="it@lieferando.de" subject="Deployment of version ${version} completed" from="build@lieferando.de">System deployed for ${domains}</mail>
+        <mail tolist="admin@janamesa.com.br" subject="Deployment of version ${version} completed" from="build@janamesa.com.br">System deployed for ${domains}</mail>
         
     </target> 
     
