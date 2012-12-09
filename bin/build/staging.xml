@@ -315,17 +315,6 @@ You may or may not update the views and deploy the update statements of the stag
         </copy>
         <move file="${tmp}/cronjobs/base.php.domain" tofile="${tmp}/cronjobs/base.php" overwrite="true"/>
         
-        <!-- add correct config file for domain to cron/start.php -->
-        <copy file="${tmp}/cron/start.php" tofile="${tmp}/cron/start.php.domain" overwrite="true">
-            <filterchain>
-                <replacetokens begintoken="%%" endtoken="%%">
-                    <token key="DOMAIN_REGEX" value="${domain_regex}" />
-                    <token key="DOMAIN_NAME" value="${current_domain}" />
-                </replacetokens>
-            </filterchain>
-        </copy>
-        <move file="${tmp}/cron/start.php.domain" tofile="${tmp}/cron/start.php" overwrite="true"/>
-        
         <!-- add correct config file for domain to scripts/base.php -->
         <copy file="${tmp}/scripts/base.php" tofile="${tmp}/scripts/base.php.domain" overwrite="true">
             <filterchain>
