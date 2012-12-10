@@ -20130,7 +20130,7 @@ msgstr "Impressora está sem papel ainda"
 #~ msgstr "Pedidos:"
 
 #~ msgid "Bestellzettel als Html ansehen"
-#~ msgstr "Ver recado de pedido como HTML"
+#~ msgstr "Ver último pedido como HTML"
 
 #~ msgid "Auswahl:"
 #~ msgstr "Seleção:"

@@ -3263,7 +3263,7 @@ msgstr "Não foi possível concluir o pedido"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/models/Order/Company.php:179
 #: /home/ydadmin/translation/yd/bin/locale/../../application/models/Order/Abstract.php:2103
 msgid "bestellzettel.pdf"
-msgstr "Recado de pedido PDF"
+msgstr "Último pedido em PDF"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/models/Order/Company.php:326
 #, php-format
@@ -7273,7 +7273,7 @@ msgstr "Por favor, coloque seu número de telefone sem o primeiro 0"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/f34061bb918cc05bf5dd3c53dd50e3bc370100e2.file.lastorder.htm.php:50
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/1302e716f726daea02ac56481220af9f7db5075a.file.bewerten.htm.php:199
 msgid "Bestellzettel"
-msgstr "Recado de pedido"
+msgstr "Último pedido"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/janamesa.com.br/189f8601e6215679c4a3ee81bdb7bd16b9247421.file.bewerten.htm.php:180
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/1302e716f726daea02ac56481220af9f7db5075a.file.bewerten.htm.php:200
