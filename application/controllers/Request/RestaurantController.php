@@ -916,7 +916,7 @@ class Request_RestaurantController extends Default_Controller_RequestRestaurantB
             
             $type = $post['type'];
             $openingId = $post['openingId'];
-            $openingSpecial = new Yourdelivery_Model_Servicetype_OpeningsSpecial($openingId);
+            $openingSpecial = new Yourdelivery_Model_Servicetype_Openings(null, $openingId);
             $from = $post['from'];
             $until = $post['until'];
             $date = $post['date'];
