@@ -349,12 +349,6 @@
                                     {__b('Nicht im Mindestbestellwert')}
                                     <input type="checkbox" name="excludeFromMinCost" value="1" id="yd-addmeal-excludeFromMinCost-{$category->getId()}"/>
                                     {/if}
-                                    {{__b('Preistyp:')}}
-                                    <select class="yd-meal-element" name="yd-meal-priceType[{$meal->getId()}]" id="yd-meal-priceType-{$meal->getId()}-{$category->getId()}">
-                                        <option value="normal">{__b('Normal')}</option>
-                                        <option value="options_avg">{__b('Durchschnittswert der Menüs als Optionen')}</option>
-                                        <option value="options_max">{__b('Maximalwert der Menüs als Optionen')}</option>
-                                    </select>
                                 </td>
                             </tr>
                         </table>
