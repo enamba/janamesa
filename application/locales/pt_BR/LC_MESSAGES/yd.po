@@ -1821,7 +1821,7 @@ msgstr "SAC:"
 #, php-format
 msgid "%s, Mo. - Fr. 09:00 - 24:00 Uhr, Sa. - So. 11:00 - 24:00 Uhr"
 msgstr ""
-"%s, Segunda - Sexta. 09:00 - 23:00 Uhr, Sábado - Domingo 11:00 - 23:00 Uhr"
+"%s, Segunda - Sexta. 09:00 - 23:00 hr, Sábado - Domingo 11:00 - 23:00 hr"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/c085f085454242760fcf8d60d017bdf86d48be00.file.bestellzettel_courier.tpl.php:88
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/4fdfb65b9618f320aabd8fc1d3169f920e1aba15.file.bestellzettel_courier.tpl.php:88
@@ -2578,7 +2578,7 @@ msgstr "Atenção, %s está transferindo este pedido gratuitamente"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/f4744eb278d20fe03e0d0891a2b7471ad5bebb78.file.bestellzettel.tpl.php:175
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/email/cc3c60d99f2dfbfafae268a69e0fa85ebfd839ca.file.orderrest.htm.php:96
 msgid "ACHTUNG: OFFENER BETRAG:"
-msgstr "CUIDADO: MONTANTE ABERTO:"
+msgstr "ATENÇÃO: <br>O PEDIDO AINDA NÃO FOI PAGO:"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/19d74c811c7c782fb8e8c1498b724165ab10bd64.file.bestellzettel.tpl.php:175
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/f4744eb278d20fe03e0d0891a2b7471ad5bebb78.file.bestellzettel.tpl.php:179
@@ -2646,7 +2646,7 @@ msgid ""
 "030 609 88 548"
 msgstr ""
 "Caro funcionário do restaurante, em breve você receberá um telefonema "
-"datendimento ao cliente. Nós pedimos a você para determinar com o nosso "
+"do atendimento ao cliente. Nós pedimos a você para determinar com o nosso "
 "funcionário um horário exato para a busca do pedido.\n"
 "                Assim o entregador não precise esperar, pedimos que o tempo "
 "de entrega seja mantido como combinado. Em caso de dúvidas, o nosso telefone "
@@ -2681,12 +2681,12 @@ msgstr "N° do cliente:"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/f4744eb278d20fe03e0d0891a2b7471ad5bebb78.file.bestellzettel.tpl.php:258
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/ede99a87030c959ba981915f3d86e8455ba15a85.file.storno.tpl.php:213
 msgid "Artikel & Zutaten"
-msgstr "Artigo & Ingredientes"
+msgstr "Itens & Opções"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/19d74c811c7c782fb8e8c1498b724165ab10bd64.file.bestellzettel.tpl.php:261
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/f4744eb278d20fe03e0d0891a2b7471ad5bebb78.file.bestellzettel.tpl.php:259
 msgid "Art.Nr."
-msgstr "N° do artigo"
+msgstr "Código"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/19d74c811c7c782fb8e8c1498b724165ab10bd64.file.bestellzettel.tpl.php:262
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/87a56baff572931b070ae8b946e929d260da440d.file.standard.tpl.php:265
@@ -2695,7 +2695,7 @@ msgstr "N° do artigo"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/janamesa.com.br/4fd2c03b047bf5e4cecfaccb159be645487f8082.file.bestellzettel.htm.php:265
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/fc7fa3ad020236af33833ecbba7e3f67daa99ec1.file.bestellzettel.htm.php:298
 msgid "Einzelpreis"
-msgstr "Preço da unidade"
+msgstr "Preço Unitário"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/19d74c811c7c782fb8e8c1498b724165ab10bd64.file.bestellzettel.tpl.php:263
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/87a56baff572931b070ae8b946e929d260da440d.file.standard.tpl.php:266
@@ -2747,7 +2747,7 @@ msgstr "Inclusive ICMS %s%%:"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/f4744eb278d20fe03e0d0891a2b7471ad5bebb78.file.bestellzettel.tpl.php:343
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/ede99a87030c959ba981915f3d86e8455ba15a85.file.storno.tpl.php:296
 msgid "Gesamtbetrag:"
-msgstr "Montante total:"
+msgstr "Valor Total:"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/87a56baff572931b070ae8b946e929d260da440d.file.standard.tpl.php:139
 msgid ""
@@ -12052,6 +12052,10 @@ msgstr "Próxima entrega:"
 msgid "Lieferadresse:"
 msgstr "Endereço da entrega:"
 
+
+msgid "Neue Bestellung - Bestellnummer: %s"
+msgstr "Novo Pedido - Número do Pedido: %s "
+
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/scripts/ba3fbcf6f38a1f1c6970870b79d850f5aa78ecdd.file.sidebar-repeat.htm.php:69
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/scripts/ba3fbcf6f38a1f1c6970870b79d850f5aa78ecdd.file.sidebar-repeat.htm.php:77
 msgid "Pausieren"
@@ -12326,7 +12330,7 @@ msgstr "Conclusão do pedido:"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/email/cc3c60d99f2dfbfafae268a69e0fa85ebfd839ca.file.orderrest.htm.php:90
 msgid "Gewünschte Lieferzeit:"
-msgstr "tempode entrega desejado:"
+msgstr "Tempo de entrega desejado:"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/email/cc3c60d99f2dfbfafae268a69e0fa85ebfd839ca.file.orderrest.htm.php:101
 msgid "KUNDE MÖCHTE MIT EC KARTE BEZAHLEN"
@@ -12776,9 +12780,9 @@ msgstr ""
 "\n"
 "confirmamos que o pedido foi estornado.\n"
 "\n"
-"Se você pagou com PayPal bereits, vamos devolver o montante, no caso de "
-"pagamento com transferência ou cartão de crédito, avisamos a contabilidade "
-"para devolver o montante.\n"
+"Se você pagou com PayPal já devolvemos o valor pago, no caso de "
+"pagamento com transferência ou cartão de crédito, a contabilidade "
+"foi avisada para devolver o montante.\n"
 "\n"
 "Trata-se de um email automático. Perguntas ou dúvidas, entre em contato com "
 "nossa central de atendimento.\n"
@@ -14211,7 +14215,7 @@ msgstr ""
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Helpers/Payment.php:503
 msgid "Lastschrift abgelehnt, weil offener Betrag <= 0"
-msgstr "Débito recusado, porque existe um montante aberto <= 0"
+msgstr "Débito recusado, porque existe um valor em aberto <= 0"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Helpers/Payment.php:516
 msgid "Lastschrift standardmäßig zugestimmt"
@@ -14223,7 +14227,7 @@ msgstr "Fatura recusada, porque sistema desativado"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Helpers/Payment.php:551
 msgid "Rechnung abgelehnt, weil offener Betrag <= 0"
-msgstr "Fatura recusada, porque existe um montante aberto <= 0"
+msgstr "Fatura recusada, porque existe um valor em aberto <= 0"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Helpers/Payment.php:560
 msgid ""
@@ -14270,7 +14274,7 @@ msgstr ""
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Helpers/Payment.php:621
 msgid "Sofortüberweisung abgelehnt, weil offeneer Betrag <= 0"
 msgstr ""
-"A transferência imediata foi recusada, porque existe um montante aberto <= 0"
+"A transferência imediata foi recusada, porque existe um valor em aberto <= 0"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Helpers/Payment.php:626
 msgid "Sofortüberweisung abgelehnt, weil Betrag <= 10 cents"

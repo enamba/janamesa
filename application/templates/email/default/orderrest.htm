@@ -60,7 +60,7 @@
                                                 {elseif $order->getPaymentAddition() == 'vr'}
                                                 <strong>o cliente vai pagar com VR no ato da entrega.</strong>
                                                 {elseif $order->getChange() > 0}
-                                                <strong>o cliente vai pagar com dinheiro no ato da entrega e precisa troco para {$order->getChange()|inttoprice} R$</strong>
+                                                <strong>o cliente vai pagar com dinheiro no ato da entrega e precisa troco para R$ {$order->getChange()|inttoprice}</strong>
                                                 {/if}
 
                                                 <br />
@@ -73,9 +73,9 @@
                                             <table style="font-size: 11px; width: 100%; color: #444444; border-collapse: collapse;">
                                                 <tr style="border-bottom: 1px solid #cccccc; font-weight: bold;">
                                                     <td width="5%"></td>
-                                                    <td width="10%">{__("Anzahl")}</td>
+                                                    <td width="10%">QTD</td>
                                                     <td width="65%">{__("Gericht")}</td>
-                                                    <td width="10%">{__("Nr")}</td>
+                                                    <td width="10%">C&oatile;digo</td>
                                                     <td width="10%" align="right" style="padding: 5px 0;">{__("Preis")}</td>
                                                 </tr>
 

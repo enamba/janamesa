@@ -242,7 +242,7 @@ You may or may not start/stop the topup server
     <!-- rollback -->
     <target name="rollback-all">
         <foreach list="${domains}" param="current_domain" target="rollback" />
-        <mail tolist="it@lieferando.de" subject="Rollback to version ${version} completed" from="build@lieferando.de">System deployed for ${domains}</mail>
+        <mail tolist="namba@janamesa.com.br" subject="Rollback to version ${version} completed" from="build@janamesa.com.br">System deployed for ${domains}</mail>
     </target> 
     
     <target name="rollback">

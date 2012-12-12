@@ -49,11 +49,7 @@
                                                                         {__("Bei Fragen zur Bestellung wähle bitte folgende Telefonnummer:")}
                                                                         {/if}
                                                                         <br /><br />
-                                                                        {if $config->domain->base == 'janamesa.com.br'}
-                                                                            <div style="text-align: center; font-size:26px; color: blue;">{$config->locale->tel->support}</div>
-                                                                        {else}
-                                                                            <div style="text-align: center; font-size:26px; color: blue;">{if strlen($order->getService()->getTel())>5}{$order->getService()->getTel()}{else}{$config->locale->email->support}{/if}</div>
-                                                                        {/if}
+                                                                        <div style="text-align: center; font-size:26px; color: blue;">{$config->locale->tel->support}</div>
                                                                     </div>
                                                                 </td>
                                                             </tr>

@@ -1556,10 +1556,10 @@ abstract class Yourdelivery_Model_Order_Abstract extends Default_Model_Base {
     protected function sendEmailToUser() {
         $order = new Yourdelivery_Model_Order($this->getId());
         $email = new Yourdelivery_Sender_Email_Template('order');
-        $email->setSubject(__('%s: Deine Bestellung bei %s.', $this->config->domain->base, $order->getService()->getName()));
+        $email->setSubject(__('%s: Seu pedido com %s.'), $this->config->domain->base, $order->getService()->getName());
         // give hash of order number per HTTP-GET in email
         // every customer gets this link to rate an order no matter, if he is logged in or not
-        $email->assign('rateorderlink', __('%s: Deine Bestellung wurde an %s übermittelt.', $this->config->domain->base, $order->getService()->getName()));
+        $email->assign('rateorderlink', __('%s: Enviar o pedido no dia %s.', $this->config->domain->base, $order->getService()->getName()));
 
         //load piwik goal for opening email
         $piwik = Yourdelivery_Model_Piwik_Tracker::getInstance();
@@ -1693,11 +1693,7 @@ abstract class Yourdelivery_Model_Order_Abstract extends Default_Model_Base {
         // send out notification
         $service = $this->getService();
         if ($service->isPremium() || $service->isBloomsburys()) {
-            $cc = array("dreber@lieferando.de", "gerbig@lieferando.de");
-
-            if ($service->isInCity('München')) {
-                $cc[] = "tammena@lieferando.de";
-            }
+            $cc = array("namba@janamesa.com.br", "caspar@janamesa.com.br");
 
             $courier = $service->getCourier();
             if (is_object($courier)) {

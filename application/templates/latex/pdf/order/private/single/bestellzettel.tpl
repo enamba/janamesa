@@ -132,7 +132,7 @@
         <</if>>
         
         <<if $order->getChange() > 0 && $config->domain->base == 'janamesa.com.br'>>
-            \huge{\textbf{Troco para: <<$order->getChange()|inttoprice|escape_latex>>}} \\
+            \huge{\textbf{Troco para: R$ <<$order->getChange()|inttoprice|escape_latex>>}} \\
             \normalsize
         <</if>>
         
@@ -175,7 +175,7 @@
             <<assign var=card value=$order->getCard()>>
             <<assign var=bucket value=$card.bucket>>
 
-            \textbf{<<__('Anzahl')|escape_latex>>}	& \textbf{<<__('Artikel & Zutaten')|escape_latex>>}	& \textbf{<<__('Art.Nr.')|escape_latex>>}	& \textbf{<<__('Einzelpreis')|escape_latex>>}	& \textbf{<<__('Summe')|escape_latex>>} \\
+            \textbf{QTD}	& \textbf{<<__('Artikel & Zutaten')|escape_latex>>}	& \textbf{<<__('Art.Nr.')|escape_latex>>}	& \textbf{<<__('Einzelpreis')|escape_latex>>}	& \textbf{<<__('Summe')|escape_latex>>} \\
             \midrule
             <<foreach from=$order->getCard() item=card>>
                 <<foreach from=$card item=bucket>>

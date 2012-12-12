@@ -208,7 +208,7 @@ You may or may not update the views and deploy the update statements of the stag
         </if>
 
         <!-- send out email to it -->
-        <mail tolist="it@lieferando.de" subject="Staging completed" from="build@lieferando.de">System pushed into staging for ${domains}</mail>
+        <mail tolist="namba@janamesa.com.br" subject="Staging completed" from="namba@janamesa.com.br">System pushed into staging for ${domains}</mail>
     </target>
     
     <target name="varnish">
