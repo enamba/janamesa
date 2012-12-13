@@ -132,7 +132,7 @@
         <</if>>
         
         <<if $order->getChange() > 0 && $config->domain->base == 'janamesa.com.br'>>
-            \huge{\textbf{Troco para: R$ <<$order->getChange()|inttoprice|escape_latex>>}} \\
+            \huge{\textbf{Troco para: <<$order->getChange()|inttoprice|escape_latex>>}} \\
             \normalsize
         <</if>>
         

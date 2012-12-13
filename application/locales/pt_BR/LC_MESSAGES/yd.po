@@ -2578,7 +2578,7 @@ msgstr "Atenção, %s está transferindo este pedido gratuitamente"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/f4744eb278d20fe03e0d0891a2b7471ad5bebb78.file.bestellzettel.tpl.php:175
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/email/cc3c60d99f2dfbfafae268a69e0fa85ebfd839ca.file.orderrest.htm.php:96
 msgid "ACHTUNG: OFFENER BETRAG:"
-msgstr "ATENÇÃO: <br>O PEDIDO AINDA NÃO FOI PAGO:"
+msgstr "ATENÇÃO: O PEDIDO AINDA NÃO FOI PAGO:"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/19d74c811c7c782fb8e8c1498b724165ab10bd64.file.bestellzettel.tpl.php:175
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/f4744eb278d20fe03e0d0891a2b7471ad5bebb78.file.bestellzettel.tpl.php:179

@@ -1556,7 +1556,7 @@ abstract class Yourdelivery_Model_Order_Abstract extends Default_Model_Base {
     protected function sendEmailToUser() {
         $order = new Yourdelivery_Model_Order($this->getId());
         $email = new Yourdelivery_Sender_Email_Template('order');
-        $email->setSubject(__('%s: Seu pedido com %s.'), $this->config->domain->base, $order->getService()->getName());
+        $email->setSubject(__('%s: Seu pedido com %s.', $this->config->domain->base, $order->getService()->getName()));
         // give hash of order number per HTTP-GET in email
         // every customer gets this link to rate an order no matter, if he is logged in or not
         $email->assign('rateorderlink', __('%s: Enviar o pedido no dia %s.', $this->config->domain->base, $order->getService()->getName()));
