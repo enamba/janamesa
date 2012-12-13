@@ -832,7 +832,7 @@ $(document).ready(function(){
     // set field content to empty when no content was entered yet
     $(".yd-change-all-fields").live('click',function() {
         var content = $(this).val();
-        if (content == 'Nicht ändern')
+        if (content == 'Não alterar')
             $(this).css('color','#555');
         $(this).val('');
     });
@@ -842,7 +842,7 @@ $(document).ready(function(){
         var content = $(this).val();
         if (content == '') {
             $(this).css('color','#999');
-            $(this).val('Nicht ändern');
+            $(this).val('Não alterar');
         }
     });
 

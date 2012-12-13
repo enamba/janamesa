@@ -395,6 +395,14 @@ form table textarea, form table .text {
     width: 200px;
 }
 
+form.restaurant_locations .text {
+    width: 110px;
+}
+
+form.restaurant_locations input {
+    width: 110px;
+}
+
 form table select {
     width: 180px;
 }

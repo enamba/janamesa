@@ -356,7 +356,7 @@ class AdministrationController extends Default_Controller_AdministrationBase {
             'smsemail' => __b('GPRS Drucker und eMail'),
             'dominos' => __b('Dominos Schnittstelle'),
             'ecletica' => __b('Ecletica Schnittstelle'),
-            'phone' => __b('Telefon')
+            'phone' => "Telefone"
         );
 
         $franchises = Yourdelivery_Model_Servicetype_Franchise::all();

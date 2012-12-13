@@ -9,19 +9,20 @@ class Yourdelivery_Form_Administration_Service_Payments extends Default_Forms_Ba
 
         $subForm = new Zend_Form_SubForm();
         $payments = array_merge(
-            Yourdelivery_Payment_Abstract::getPayments(), 
+            Yourdelivery_Payment_Abstract::getPayments(),
             Yourdelivery_Payment_Abstract::getAdditions()
         );
         foreach ($payments as $payment => $paymentName) {
             $subForm->addElement('select', $payment, array(
                 'belongsTo' => "payments",
+                'value' => $payment,
                 'label' => $paymentName,
                 'required' => false,
                 'multiOptions' => array(
-                    99 => __b("Standardeinstellung"),
-                    1 => __b("Aktiviert"),
-                    0 => __b("Deaktiviert")),
-            ));
+                    99 => "Padrão",
+                    1 =>  "Ativado",
+                    0 =>  "Desativado"
+            )));
         }
         $this->addSubForm($subForm, 'payments');
         
@@ -29,7 +30,7 @@ class Yourdelivery_Form_Administration_Service_Payments extends Default_Forms_Ba
             'label' => __b('Standard Zahlart'),
             'required' => true,
             'multiOptions' => array_merge(
-                array('none' => "Kein"), 
+                array('none' => "Não selecionado"),
                 Yourdelivery_Payment_Abstract::getPayments(), 
                 Yourdelivery_Payment_Abstract::getAdditions()),
         ));

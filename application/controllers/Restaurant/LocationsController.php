@@ -269,8 +269,17 @@ class Restaurant_LocationsController extends Default_Controller_RestaurantBase {
 
             // just edit deliverTime for courier restaurant
             if ($restaurant->hasCourier()) {
-                if (strcmp($time, 'Nicht ändern') == 0) {
+                if (strcmp($time, 'Não alterar') == 0) {
                     $time = null;
+                }
+                if (strcmp($mincost, 'Não alterar') == 0) {
+                    $mincost = null;
+                }
+                if (strcmp($delcost, 'Não alterar') == 0) {
+                    $delcost = null;
+                }
+                if (strcmp($noDeliverCostAbove, 'Não alterar') == 0) {
+                    $noDeliverCostAbove = null;
                 }
                 if ($isOnline == -1) {
                     $isOnline = null;
@@ -296,19 +305,16 @@ class Restaurant_LocationsController extends Default_Controller_RestaurantBase {
                     }
                     else {
                         // test if we should change this fields
-                        if (strcmp($time, 'Nicht ändern') == 0) {
+                        if (strcmp($time, 'Não alterar') == 0) {
                             $time = null;
                         }
-
-                        if (strcmp($mincost, 'Nicht ändern') == 0) {
+                        if (strcmp($mincost, 'Não alterar') == 0) {
                             $mincost = null;
                         }
-
-                        if (strcmp($delcost, 'Nicht ändern') == 0) {
+                        if (strcmp($delcost, 'Não alterar') == 0) {
                             $delcost = null;
                         }
-
-                        if (strcmp($noDeliverCostAbove, 'Nicht ändern') == 0) {
+                        if (strcmp($noDeliverCostAbove, 'Não alterar') == 0) {
                             $noDeliverCostAbove = null;
                         }
 

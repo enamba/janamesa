@@ -133,13 +133,11 @@ abstract class Yourdelivery_Payment_Abstract {
     public static function getAdditions() {
 
         return array(
-            'ec' => __("EC Kartenzahlung"),
-            'creditcardathome' => __("cartão de crédito"),
-            'vr' => __("vale refeição"),
-            'cheque' => __("Chèque"),
-            'chequeVacances' => __("Chèque Vacances"),
-            'carteBleu' => __("Carte Bleu"),
-            'ticketRestaurant' => __("Ticket Restaurant"),
+            'ec' => "Cartão de Débito (Aparelho em domicílio)",
+            'creditcardathome' => "Cartão de Crédito (Aparelho em domicílio)",
+            'vr' => __("Vale Refeição"),
+            'cheque' => __("Cheque"),
+            'ticketRestaurant' => __("Ticket Restaurante"),
         );
     }
 

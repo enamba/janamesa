@@ -18,58 +18,9 @@
         </div>
         <div class="item-content">
             <table width="100%" class="user-tab">
-            <form action="/restaurant_locations/create" method="post">
-                <tr>
-                    <td width="18%">{{__b('Postleitzahl:')}}</td>
-                    <td width="18%">{{__b('Lieferzeit, (Minuten):')}}</td>
-                    <td width="18%">{{__b('Mindestbestellwert, €')}}</td>
-                    <td width="18%">{{__b('Lieferkosten, €')}}</td>
-                    <td width="18%">{{__b('Keine Lieferkosten ab, €')}}</td>
-                    <td width="10%"></td>
-                </tr>
-                <tr>
-                    <td>
-                        {include file='restaurant/city_autocomplete.htm'}
-                    </td>
-                    <td><input type="text" name="deliverTime" value="" maxlength="5" /></td>
-                    <td><input type="text" name="mincost" maxlength="6" value="0,00" /></td>
-                    <td><input type="text" name="delcost" maxlength="6" value="0,00" /></td>
-                    <td><input type="text" name="noDeliverCostAbove" maxlength="6" value="0,00" /></td>
-                    <td align="right"><input type="submit" style="width: 250px;" class="button-locations" value="{{__b('Liefergebiet hinzufügen')}}" id="yd-add-plz-button" /></td>
-                </tr>
-                <tr>
-                    <td colspan="6" id="yd-plz-status" height="15"></td>
-                </tr>
-            </form>
-            <tr>
-                <td colspan="6" height="20"></td>
-            </tr>
-            <form action="/restaurant_locations/addcity" method="post" class="fe">
-                <tr>
-                    <td>{{__b('Ganze Stadt hinzufügen:')}}</td>
-                    <td>{{__b('Lieferzeit (Minuten):')}}</td>
-                    <td>{{__b('Mindestbestellwert, €')}}</td>
-                    <td>{{__b('Lieferkosten, €')}}</td>
-                    <td>{{__b('Keine Lieferkosten ab, €')}}</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <select name="city" style="width: 220px;" >
-                            {foreach from=Yourdelivery_Model_City::getAllCities() item=city}
-                            <option value="{$city}">{$city}</option>
-                            {/foreach}
-                        </select>
-                    </td>
-                    <td><input type="text" name="deliverTime" value="" class="rund_set text" /></td>
-                    <td><input type="text" name="mincost" class="rund_set text" maxlength="6" value="0,00" /></td>
-                    <td><input type="text" name="delcost" class="rund_set text" maxlength="6" value="0,00" /></td>
-                    <td><input type="text" name="noDeliverCostAbove" class="rund_set text" maxlength="6" value="0,00" /></td>
-                    <td align="right"><input type="submit" style="width: 250px;" class="button-locations" value="{{__b('Stadt hinzufügen')}}"/></td>
-                </tr>
-            </form>
+
             {if strpos($config->domain->base, "janamesa")!==false}            
-            <form action="/restaurant_locations/addprefixplz" method="post" class="fe">
+            <form action="/restaurant_locations/addprefixplz" class="restaurant_locations"  method="post" class="fe">
                 <tr>
                     <td>{{__b('Alle PLZ hinzufügen, die mit der angegebenen Zeichenkette anfangen:')}}</td>
                     <td>{{__b('Lieferzeit (Minuten):')}}</td>
@@ -79,12 +30,12 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td><input type="text" name="plzprefix" value="" class="rund_set text" /></td>
-                    <td><input type="text" name="deliverTime" value="" class="rund_set text" /></td>
+                    <td><input type="text" name="plzprefix"  class="rund_set text" /></td>
+                    <td><input type="text" name="deliverTime"  class="rund_set text" /></td>
                     <td><input type="text" name="mincost" class="rund_set text" maxlength="6" value="0,00" /></td>
                     <td><input type="text" name="delcost" class="rund_set text" maxlength="6" value="0,00" /></td>
                     <td><input type="text" name="noDeliverCostAbove" class="rund_set text" maxlength="6" value="0,00" /></td>
-                    <td align="right"><input type="submit" style="width: 250px;" class="button-locations" value="{{__b('Alle PLZ hinzufügen')}}"/></td>
+                    <td align="right"><input type="submit" class="button-locations" value="{{__b('Alle PLZ hinzufügen')}}"/></td>
                 </tr>
             </form>
             {/if}
@@ -95,7 +46,7 @@
         </div>
     </div>
 </div>
-<form action="/restaurant_locations/changeall" method="post">
+<form action="/restaurant_locations/changeall" class="restaurant_locations" method="post">
 <div class="one-column-box">
     <div class="item">
         <div class="item-content">
