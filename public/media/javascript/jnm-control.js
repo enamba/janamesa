@@ -1,0 +1,2 @@
+window.load();
+window.ready();

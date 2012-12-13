@@ -1,0 +1,82 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body.home div.banner {
+    background-image: url("/media/images/jnm-frontend/home-banner/donald4.jpg");
+    width: 100%;
+    height: 700px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body.home div.banner div.headerBanner {
+    background-image: url("/media/images/jnm-frontend/transparencia_header.png");
+    width: 100%;
+    height: 55px;
+    background-position: center;
+}
+
+body.home div.banner div.footerBanner {
+    background-image: url("/media/images/jnm-frontend/divisor_home.png");
+    background-position: center center;
+    height: 30px;
+    position: absolute;
+    top: 675px;
+    width: 100%;
+}
+
+body.home div.suggestions {
+    border: 1px solid red;
+    float: left;
+    height: 100%;
+    width: 70%;
+}
+
+body.home div.col-right {
+    border: 1px solid black;
+    float: left;
+    height: 100%;
+    width: 29%;
+
+}
+
+body.home div.content {
+    height: 570px;
+    margin: 5px auto auto;
+    width: 800px;
+}
+
+.suggestions table td {
+    border: 1px solid green;
+    height: 120px;
+    width: 120px;
+    text-align: center;
+}
+
+.suggestions table {
+    margin: 10px auto;
+}
+
+body.home div.suggestions div.publicidade {
+    border: 1px solid green;
+    height: 150px;
+    margin: auto;
+    width: 490px;
+}
+
+body.home div.col-right div.menu {
+    border: 1px solid #9ACD32;
+    height: 110px;
+    margin: 12px auto;
+    width: 200px;
+}
+
+body.home div.col-right div.facebook {
+    border: 1px solid #00008b;
+    background-color: #00008b;
+    height: 180px;
+    margin: 12px auto;
+    width: 200px;
+}
