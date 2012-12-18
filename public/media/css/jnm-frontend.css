@@ -1,14 +1,153 @@
 * {
     margin:0;
     padding:0;
+    font-family: Museo300;
+}
+
+a {
+    text-decoration: none;
+    cursor:pointer;cursor:hand;
+    color: #FFFFFF;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@font-face {
+    font-family: KGLoveYouThroughItRegular;
+    src: url('/media/css/www.janamesa.com.br/fonts/kgloveyouthroughit.eot');
+    src: url('/media/css/www.janamesa.com.br/fonts/kgloveyouthroughit.eot?#iefix') format('embedded-opentype'), url('/media/css/www.janamesa.com.br/fonts/kgloveyouthroughit.woff') format('woff'), url('/media/css/www.janamesa.com.br/fonts/kgloveyouthroughit.ttf') format('truetype'), url('/media/css/www.janamesa.com.br/fonts/kgloveyouthroughit.svg#KGLoveYouThroughItRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Museo700;
+    src: url('/media/css/www.janamesa.com.br/fonts/museo700-regular.eot');
+    src: url('/media/css/www.janamesa.com.br/fonts/museo700-regular.eot?#iefix') format('embedded-opentype'), url('/media/css/www.janamesa.com.br/fonts/museo700-regular.woff') format('woff'), url('/media/css/www.janamesa.com.br/fonts/museo700-regular.ttf') format('truetype'), url('/media/css/www.janamesa.com.br/fonts/museo700-regular.svg#Museo700') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Museo300;
+    src: url('/media/css/www.janamesa.com.br/fonts/museo300-regular.eot');
+    src: url('/media/css/www.janamesa.com.br/fonts/museo300-regular.eot?#iefix') format('embedded-opentype'), url('/media/css/www.janamesa.com.br/fonts/museo300-regular.woff') format('woff'), url('/media/css/www.janamesa.com.br/fonts/museo300-regular.ttf') format('truetype'), url('/media/css/www.janamesa.com.br/fonts/museo300-regular.svg#Museo300') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+body.home .container .header {
+    background-color: black;
+}
+
+body.home div.headerBanner div.contentHeader {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+body.home div.headerBanner div.logoJanamesa img {
+    z-index: 90;
+}
+
+
+body.home div.headerBanner div.logoJanamesa {
+    height: 50px;
+    width: 100px;
+    float: left;
+}
+
+body.home div.headerBanner div.cep {
+    height: 50px;
+    width: 100px;
+    float: right;
+}
+
+body.home div.headerBanner div.acesso {
+    float: right;
+    font-family: helvetica;
+    font-size: 13px;
+    height: 20px;
+    margin-top: 17px;
+    width: 450px;
+}
+
+body.home div.headerBanner div.acesso div.cadastrar {
+    color: white;
+    margin: 4px 10px;
+    float: left;
+}
+
+body.home div.headerBanner div.acesso div.entrar {
+    color: white;
+    margin: 4px 18px;
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+
+body.home div.headerBanner div.acesso div.facebook {
+    color: white;
+    margin: 0 10px;
+    float: left;
+    margin: -8px 18px 0 65px;
+}
+
+body.home div.headerBanner div.entrar_modal {
+    background-image: url("/media/images/jnm-frontend/entrar.png");
+    height: 140px;
+    margin-left: 686px;
+    padding: 60px 32px 8px;
+    position: absolute;
+    top: -5px;
+    width: 234px;
+}
+
+body.home div.headerBanner div.entrar_modal form ul {
+    maring: 0px;
+    padding:6px;
+}
+
+body.home div.headerBanner div.entrar_modal form ul li {
+    margin: 0 0 4px 0;
+    border: 1px solid #666;
+    padding: 4px;
+    background-color: white;
+}
+
+body.home div.headerBanner div.entrar_modal form ul li.naked {
+    border:0;
+    padding:0;
+    background-color: transparent;
+}
+
+input, textarea {
+    border: 0;
+    width: 99%;
+}
+
+input.submitLogin {
+    background: url("/media/images/jnm-frontend/btnheader2.png") repeat scroll 0 0 transparent;
+    color: white;
+    font-family: museo300;
+    height: 31px;
+    padding: 6px;
+    width: 220px;
 }
 
 body.home div.banner {
-    background-image: url("/media/images/jnm-frontend/home-banner/donald4.jpg");
     width: 100%;
     height: 700px;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 body.home div.banner div.headerBanner {
@@ -16,6 +155,7 @@ body.home div.banner div.headerBanner {
     width: 100%;
     height: 55px;
     background-position: center;
+    position: relative;
 }
 
 body.home div.banner div.footerBanner {
@@ -27,56 +167,121 @@ body.home div.banner div.footerBanner {
     width: 100%;
 }
 
-body.home div.suggestions {
-    border: 1px solid red;
-    float: left;
-    height: 100%;
-    width: 70%;
-}
-
-body.home div.col-right {
-    border: 1px solid black;
-    float: left;
-    height: 100%;
-    width: 29%;
-
-}
 
 body.home div.content {
-    height: 570px;
+    height: 850px;
     margin: 5px auto auto;
-    width: 800px;
+    width: 1000px;
 }
 
-.suggestions table td {
-    border: 1px solid green;
-    height: 120px;
-    width: 120px;
-    text-align: center;
-}
 
-.suggestions table {
-    margin: 10px auto;
-}
+body.home div.col-right {
+    float: left;
+    height: 100%;
+    width: 330px;
 
-body.home div.suggestions div.publicidade {
-    border: 1px solid green;
-    height: 150px;
-    margin: auto;
-    width: 490px;
 }
 
 body.home div.col-right div.menu {
-    border: 1px solid #9ACD32;
-    height: 110px;
-    margin: 12px auto;
-    width: 200px;
+    width: 100%;
 }
 
 body.home div.col-right div.facebook {
-    border: 1px solid #00008b;
-    background-color: #00008b;
-    height: 180px;
-    margin: 12px auto;
-    width: 200px;
+    height: 290px;
+    margin: -24px 0 0 11px;
+    width: 280px;
+}
+
+body.home div.banner div.headerBanner div.box_header {
+    background: url("/media/images/jnm-frontend/bgboxheader.png") no-repeat scroll 0 0 transparent;
+    color: white;
+    font-family: museo700;
+    font-size: 26px;
+    height: 231px;
+    margin: 290px 0 0 60px;
+    padding: 30px 0 0 42px;
+    position: absolute;
+    width: 828px;
+}
+
+
+
+body.home div.banner div.headerBanner div.box_fake {
+    margin: 175px 0 0;
+    position: absolute;
+}
+
+body.home div.banner div.input_cep .findRestaurant {
+    background: url("/media/images/jnm-frontend/btnheader.png") repeat scroll 0 0 transparent;
+    color: white;
+    font-size: 18px;
+    height: 48px;
+    margin: 0 0 0 7px;
+    padding-left: 29px;
+    width: 263px;
+    cursor:pointer;cursor:hand;
+}
+
+body.home div.banner div.input_cep .cep {
+    border: 2px solid black;
+    font-size: 17px;
+    height: 43px;
+    text-align: center;
+    width: 257px;
+}
+
+body.home div.banner div.input_cep {
+    margin: 9px 0 0;
+    float:left;
+}
+
+body.home #footer {
+    background: url("/media/images/jnm-frontend/footer_pattern.png") repeat scroll 0 0 transparent;
+    height: 200px;
+}
+
+body.home div.footer_efect {
+    background: url("/media/images/jnm-frontend/footer.png") repeat scroll 0 0 transparent;
+    height: 50px;
+
+}
+
+body.home #footer .footer-inner {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+body.home #footer .footer-inner .navigation-footer .col-item {
+    float: left;
+    margin-left: 60px;
+
+}
+
+body.home #footer .footer-inner .navigation-footer .col-item ul li{
+    margin-top: 10px;
+    color: white;
+
+}
+
+body.home #footer .footer-inner .navigation-footer {
+    padding-top: 40px;
+}
+
+.iphone {
+    float: left;
+    margin: -175px 0 0 24px;
+}
+
+.buscarCep {
+    cursor:pointer;cursor:hand;
+    font-size: 10px;
+    text-align: center;
+    width: 255px;
+}
+.buscarCep:hover {
+    text-decoration: underline;
+}
+
+.suggestions td {
+    cursor:pointer;cursor:hand;
 }

@@ -1,0 +1,168 @@
+
+.suggestions table td {
+    text-align: center;
+    padding: 10px;
+}
+
+.suggestions table td.title_category span.title_pipe {
+    color: #EADDCD;
+    font-size: 27px;
+    margin: 0 10px;
+}
+
+.suggestions table td.title_category a {
+    color: #AE3314;
+    font-family: helvetica;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.suggestions table td.title_category span.title_text {
+    font-family: Museo700,Helvetica,Verdana,Arial,sans-serif;
+    font-size: 30px;
+    margin-left: 15px;
+    color: #6A5542;
+}
+
+body.home div.suggestions {
+    float: left;
+    height: 100%;
+    width: 590px;
+}
+
+.suggestions table td.title_category {
+    text-align: left;
+}
+
+.suggestions table {
+    margin: 10px auto;
+}
+
+.category_1, .category_mask_1{
+    background-image: url('/media/images/jnm-frontend/category/categoria_arabe_img.jpg');
+    height: 120px;
+    width: 120px;
+}
+
+.category_mask_1:hover {
+    background-image: url('/media/images/jnm-frontend/category/categoria_arabe.png');
+    height: 120px;
+    width: 120px;
+    z-index: 10;
+}
+
+.category_2,.category_mask_2 {
+    background-image: url('/media/images/jnm-frontend/category/categoria_brasileira_img.jpg');
+    height: 120px;
+    width: 120px;
+}
+
+.category_mask_2:hover {
+    background-image: url('/media/images/jnm-frontend/category/categoria_brasileira.png');
+    height: 120px;
+    width: 120px;
+}
+
+.category_3,.category_mask_3 {
+    background-image: url('/media/images/jnm-frontend/category/categoria_chinesa_img.jpg');
+    height: 120px;
+    width: 120px;
+}
+
+.category_mask_3:hover {
+    background-image: url('/media/images/jnm-frontend/category/categoria_chinesa.png');
+    height: 120px;
+    width: 120px;
+}
+
+.category_4,.category_mask_4 {
+    background-image: url('/media/images/jnm-frontend/category/categoria_doces_img.jpg');
+    height: 120px;
+    width: 120px;
+}
+
+.category_mask_4:hover {
+    background-image: url('/media/images/jnm-frontend/category/categoria_doces.png');
+}
+
+.category_5,.category_mask_5 {
+    background-image: url('/media/images/jnm-frontend/category/categoria_espanhola_img.jpg');
+    height: 120px;
+    width: 120px;
+}
+
+.category_mask_5:hover {
+    background-image: url('/media/images/jnm-frontend/category/categoria_espanhola.png');
+}
+
+.category_6,.category_mask_6 {
+    background-image: url('/media/images/jnm-frontend/category/categoria_italiana_img.jpg');
+    height: 120px;
+    width: 120px;
+}
+
+.category_mask_6:hover {
+    background-image: url('/media/images/jnm-frontend/category/categoria_italiana.png');
+}
+
+.category_7,.category_mask_7 {
+    background-image: url('/media/images/jnm-frontend/category/categoria_japonesa_img.jpg');
+    height: 120px;
+    width: 120px;
+}
+
+.category_mask_7:hover {
+    background-image: url('/media/images/jnm-frontend/category/categoria_japonesa.png');
+}
+
+.category_8,.category_mask_8 {
+    background-image: url('/media/images/jnm-frontend/category/categoria_lanches_img.jpg');
+    height: 120px;
+    width: 120px;
+}
+
+.category_mask_8:hover {
+    background-image: url('/media/images/jnm-frontend/category/categoria_lanches.png');
+}
+
+.category_9,.category_mask_9 {
+    background-image: url('/media/images/jnm-frontend/category/categoria_mexicana_img.jpg');
+    height: 120px;
+    width: 120px;
+}
+
+.category_mask_9:hover {
+    background-image: url('/media/images/jnm-frontend/category/categoria_mexicana.png');
+}
+
+.category_10,.category_mask_10 {
+    background-image: url('/media/images/jnm-frontend/category/categoria_pizza_img.jpg');
+    height: 120px;
+    width: 120px;
+}
+
+.category_mask_10:hover {
+    background-image: url('/media/images/jnm-frontend/category/categoria_pizza.png');
+}
+
+.category_11,.category_mask_11 {
+    background-image: url('/media/images/jnm-frontend/category/categoria_portuguesa_img.jpg');
+    height: 120px;
+    width: 120px;
+}
+
+.category_mask_11:hover {
+    background-image: url('/media/images/jnm-frontend/category/categoria_portuguesa.png');
+}
+
+.category_12,.category_mask_12 {
+    background-image: url('/media/images/jnm-frontend/category/categoria_vegetariana_img.jpg');
+    height: 120px;
+    width: 120px;
+}
+
+.category_mask_12:hover {
+    background-image: url('/media/images/jnm-frontend/category/categoria_vegetariana.png');
+}
+

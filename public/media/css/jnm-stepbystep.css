@@ -1,0 +1,46 @@
+.step_by_step .step, .step_by_step .title  {
+    float:left;
+}
+
+body.home div.banner div.headerBanner div.step_by_step {
+    height: 95px;
+    margin: 458px 0 0 75px;
+    position: absolute;
+    width: 845px;
+    font-family: museo500;
+    font-size: 15px;
+}
+
+.step_by_step .title {
+    color: #C61A26;
+    font-family: museo700;
+    font-size: 23px;
+    height: 87px;
+    padding: 0 17px 0 0;
+    text-align: right;
+    width: 103px;
+    margin-top: -10px;
+}
+
+.step_by_step .step_1 {
+    height: 40px;
+    padding: 20px 0 0 60px;
+    width: 80px;
+}
+
+.step_by_step .step_2 {
+    height: 40px;
+    padding: 20px 0 0 88px;
+    width: 138px;
+}
+
+.step_by_step .step_3 {
+    height: 40px;
+    padding: 20px 0 0 95px;
+    width: 86px;
+}
+.step_by_step .step_4 {
+    height: 40px;
+    padding: 20px 0 0 76px;
+    width: 97px;
+}
