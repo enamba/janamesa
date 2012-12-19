@@ -3,8 +3,8 @@
 }
 
 body.home div.banner div.headerBanner div.step_by_step {
-    height: 95px;
-    margin: 458px 0 0 75px;
+    height: 100px;
+    margin: 445px 0 0 75px;
     position: absolute;
     width: 845px;
     font-family: museo500;
@@ -19,7 +19,6 @@ body.home div.banner div.headerBanner div.step_by_step {
     padding: 0 17px 0 0;
     text-align: right;
     width: 103px;
-    margin-top: -10px;
 }
 
 .step_by_step .step_1 {

@@ -1,5 +1,5 @@
-var qtdBanner = 3;
-var activeBanner = 0;
+var qtdBanner = 4;
+var activeBanner = 1;
 $ab = null;
 function slideSwitch(setActive){
     if (!$ab) {
@@ -27,7 +27,7 @@ function slideSwitch(setActive){
         });
     activeBanner++;
     if (activeBanner > qtdBanner){
-        activeBanner = 0;
+        activeBanner = 1;
     }
 
     if (setActive) {
@@ -40,7 +40,7 @@ function slideSwitch(setActive){
 function proximo(){
     activeBanner++;
     if (activeBanner > qtdBanner){
-        activeBanner = 0;
+        activeBanner = 1;
     }
     slideSwitch(activeBanner);
 }

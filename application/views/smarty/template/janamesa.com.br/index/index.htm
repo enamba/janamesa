@@ -13,8 +13,9 @@
     <meta name="viewport" content="width=1100">
     <title>Janamesa - Delivery Online de Sushi, Pizza, Massa, etc..</title>
 
-    <link rel="stylesheet" type="text/css" href="/media/css/compiled/frontend-{$extra_css|default:'no'}-{$REVISION}.css" />
+
     <script type="text/javascript" src="/media/javascript/compiled/frontend-{$REVISION}.js"></script>
+    <link rel="stylesheet" type="text/css" href="/media/css/compiled/frontend-{$extra_css|default:'no'}-{$REVISION}.css" />
     {include file='_cookies/google/analytics.htm'}
 </head>
 <body class="home">
@@ -30,23 +31,35 @@
              <div class="headerBanner">
                  <div class="contentHeader">
                      <div class="logoJanamesa"><img src="/media/images/jnm-frontend/logonatal.png" /></div>
-                     <div class="acesso"><div class="facebook"><a href="http://www.janamesa.com.br/user/fb-login/?redirect_url=http://www.janamesa.com.br/"><img src="/media/images/jnm-frontend/facebooklogin.png" /></a></div><div class="cadastrar"><a href="http://www.janamesa.com.br/user/register">CADASTRE-SE</a></div><div class="entrar">ENTRAR<img src="/media/images/jnm-frontend/seta.png" /></div></div>
-                     <div class="entrar_modal" style="display:none;" >
-                         <form action="/user/login?redirect_url=http://www.janamesa.com.br/" method="post">
-                             <ul>
-                                 <li><input type="text" placeholder="E-mail"></li>
-                                 <li><input type="password" placeholder="Senha"></li>
-                                 <li class="naked"><input class="submitLogin" type="submit" name="ACESSAR" value="ACESSAR"></li>
-                             </ul>
-                         </form>
+                     <div class="acesso">
+                         <div class="facebook"><a href="http://www.janamesa.com.br/user/fb-login/?redirect_url=http://www.janamesa.com.br/"><img src="/media/images/jnm-frontend/facebooklogin.png" /></a></div>
+                         <div class="cadastrar"><a href="http://www.janamesa.com.br/user/register">CADASTRE-SE</a></div>
+                         <div class="entrar">ENTRAR<img src="/media/images/jnm-frontend/seta.png" /></div>
+                         <div class="entrar_modal" style="display:none;" >
+                             <form name="login" action="/user/login" method="post" id="login">
+                                 <input type="hidden" name="login" value="1" />
+                                 <ul>
+                                     <li>
+                                         <input class="yd-empty-text" type="text" name="user" value="" title="{__('E-Mail-Adresse')}" />
+
+                                         {include file='order/_includes/form_order.htm' postfix='login'}
+                                     </li>
+                                     <li>
+                                         <input class="yd-empty-text" type="password" name="pass" value="" title="{__('Passwort')}" />
+                                     </li>
+                                     <li class="naked"><input class="submitLogin" type="submit" name="ACESSAR" value="ACESSAR"></li>
+                                     {include file='order/_includes/form_order.htm' postfix='login'}
+                                 </ul>
+                             </form>
+                         </div>
                      </div>
                      <div class="cep"></div>
                      <div class="box_header">
                          PEÇA ONLINE SUA COMIDA
                          <div class="input_cep">
-                             <form action="/order_basis/plz" name="cep_form" method="GET" >
-                                 <input type="hidden" value="" name="cityId" />
-                                 <input id="yd-plz-search" class="cep yd-plz-autocomplete yd-plz-autocomplete-autosubmit yd-only-nr yd-empty-text ui-autocomplete-input" type="text" name="plz" placeholder="INSIRA SEU CEP" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true" />
+                             <form id="yd-start-order-form" method="get" name="cep_form" action="/order_basis/plz">
+                                 <input type="hidden" name="cityId" value="" />
+                                 <input id="yd-plz-search" class="cep yd-plz-autocomplete yd-plz-autocomplete-autosubmit yd-only-nr yd-empty-text" type="text" name="plz" value="" title="{__('Postleitzahl')}" />
                                  <input class="findRestaurant" type="submit" name="BUSCAR RESTAURANTES" value="BUSCAR RESTAURANTES" />
                              </form>
                                  <div class="buscarCep"><a id="br-cep-autocomplete2" href="javascript:void(0)">NÃO SABE SEU CEP? CLIQUE AQUI!</a></div>
@@ -56,9 +69,7 @@
                              <a href="https://itunes.apple.com/us/app/janamesa/id532193039?mt=8" target="_blank"><img src="/media/images/jnm-frontend/iphone.png" /> </a>
                          </div>
                      </div>
-                     <div class="step_by_step">
-                         <div class="title">COMO COMER BEM</div>
-                     </div>
+                     <div class="step_by_step"></div>
                  </div>
              </div>
              <div class="footerBanner"></div>
@@ -68,83 +79,89 @@
              <div class="right" onclick="proximo();"><img src="/media/images/jnm-frontend/seta-dir.png" /></div>
          </div>
      </div>
-     <div class="content">
-         <div class="suggestions">
-             <table>
-                 <tr>
-                     <td colspan="4" class="title_category">
-                         <span class="title_text">Especialidades</span>
-                     </td>
-                 </tr>
-                 <tr>
-                     <td onclick="parent.location='http://www.janamesa.com.br/kebab-a-domicilio';"><div class="category_1"><div class="category_mask_1"></div></div></td>
-                     <td onclick="parent.location='http://www.janamesa.com.br/feijoada-delivery';"><div class="category_2"><div class="category_mask_2"></div></div></td>
-                     <td onclick="parent.location='http://www.janamesa.com.br/yakisoba-delivery';"><div class="category_3"><div class="category_mask_3"></div></div></td>
-                     <td onclick="parent.location='http://www.janamesa.com.br/torta-delivery';"><div class="category_4"><div class="category_mask_4"></div></div></td>
-                 </tr>
-                 <tr>
-                     <td onclick="parent.location='http://www.janamesa.com.br/comida-espanhola';"><div class="category_5"><div class="category_mask_5"></div></div></td>
-                     <td onclick="parent.location='http://www.janamesa.com.br/comida-italiana';"><div class="category_6"><div class="category_mask_6"></div></div></td>
-                     <td onclick="parent.location='http://www.janamesa.com.br/comida-japonesa';"><div class="category_7"><div class="category_mask_7"></div></div></td>
-                     <td onclick="parent.location='http://www.janamesa.com.br/fast-food';"><div class="category_8"><div class="category_mask_8"></div></div></td>
-                 </tr>
-                 <tr>
-                     <td onclick="parent.location='http://www.janamesa.com.br/comida-mexicana';"><div class="category_9"><div class="category_mask_9"></div></div></td>
-                     <td onclick="parent.location='http://www.janamesa.com.br/pizzeria';"><div class="category_10"><div class="category_mask_10"></div></div></td>
-                     <td onclick="parent.location='http://www.janamesa.com.br/peixe-restaurante';"><div class="category_11"><div class="category_mask_11"></div></div></td>
-                     <td onclick="parent.location='http://www.janamesa.com.br/salada-delivery';"><div class="category_12"><div class="category_mask_12"></div></div></td>
-                 </tr>
-             </table>
-             <div class="district">
-                 <div class="head-district">
-                     <span>Bairros</span>
-                 </div>
-                 <div class="body-district">
-                     <div class="wrapper-photo-district">
-                         <div class="col-item">
-                             <div class="photo-district paper-img">
-                                 <div class="inner-photo-district">
-                                     <img src="/media/css/www.janamesa.com.br/images/site-img/city273x180.jpg" alt="São Paulo" title="São Paulo" />
-                                     <div>São Paulo</div>
+
+         <div class="mainContent">
+             <div class="content">
+             <div class="suggestions">
+                 <table>
+                     <tr>
+                         <td colspan="4" class="title_category">
+                             <span class="title_text">Especialidades</span>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td onclick="parent.location='http://www.janamesa.com.br/kebab-a-domicilio';"><div class="category_1"><div class="category_mask_1"></div></div></td>
+                         <td onclick="parent.location='http://www.janamesa.com.br/feijoada-delivery';"><div class="category_2"><div class="category_mask_2"></div></div></td>
+                         <td onclick="parent.location='http://www.janamesa.com.br/yakisoba-delivery';"><div class="category_3"><div class="category_mask_3"></div></div></td>
+                         <td onclick="parent.location='http://www.janamesa.com.br/torta-delivery';"><div class="category_4"><div class="category_mask_4"></div></div></td>
+                     </tr>
+                     <tr>
+                         <td onclick="parent.location='http://www.janamesa.com.br/comida-espanhola';"><div class="category_5"><div class="category_mask_5"></div></div></td>
+                         <td onclick="parent.location='http://www.janamesa.com.br/comida-italiana';"><div class="category_6"><div class="category_mask_6"></div></div></td>
+                         <td onclick="parent.location='http://www.janamesa.com.br/comida-japonesa';"><div class="category_7"><div class="category_mask_7"></div></div></td>
+                         <td onclick="parent.location='http://www.janamesa.com.br/fast-food';"><div class="category_8"><div class="category_mask_8"></div></div></td>
+                     </tr>
+                     <tr>
+                         <td onclick="parent.location='http://www.janamesa.com.br/comida-mexicana';"><div class="category_9"><div class="category_mask_9"></div></div></td>
+                         <td onclick="parent.location='http://www.janamesa.com.br/pizzeria';"><div class="category_10"><div class="category_mask_10"></div></div></td>
+                         <td onclick="parent.location='http://www.janamesa.com.br/peixe-restaurante';"><div class="category_11"><div class="category_mask_11"></div></div></td>
+                         <td onclick="parent.location='http://www.janamesa.com.br/salada-delivery';"><div class="category_12"><div class="category_mask_12"></div></div></td>
+                     </tr>
+                 </table>
+                 <div class="district">
+                     <div class="head-district">
+                         <span>Bairros</span>
+                     </div>
+                     <div class="body-district">
+                         <div class="wrapper-photo-district">
+                             <div class="col-item">
+                                 <div class="photo-district paper-img">
+                                     <div class="inner-photo-district">
+                                         <img src="/media/css/www.janamesa.com.br/images/site-img/city273x180.jpg" alt="São Paulo" title="São Paulo" />
+                                         <div>São Paulo</div>
+                                     </div>
                                  </div>
                              </div>
-                         </div>
-                         <div class="col-item">
-                             <ul class="col-item list-ci">
-                                 <li><a href="servico-de-entrega-sao-paulo-01305-000" title="Bela Vista">Bela Vista</a></li>
-                                 <li><a href="servico-de-entrega-sao-paulo-04616-002" title="Campo Belo">Campo Belo</a></li>
-                                 <li><a href="servico-de-entrega-sao-paulo-01233-000" title="Consolação">Consolação</a></li>
-                                 <li><a href="servico-de-entrega-sao-paulo-04532-010" title="Itaim Bibi">Itaim Bibi</a></li>
-                                 <li><a href="servico-de-entrega-sao-paulo-01415-000" title="Jardins">Jardins</a></li>
-                                 <li><a href="servico-de-entrega-sao-paulo-01543-000" title="Liberdade">Liberdade</a></li>
-                             </ul>
-                             <ul class="col-item list-ci">
-                                 <li><a href="servico-de-entrega-sao-paulo-04524-002" title="Moema">Moema</a></li>
-                                 <li><a href="servico-de-entrega-sao-paulo-05045-020" title="Perdizes">Perdizes</a></li>
-                                 <li><a href="servico-de-entrega-sao-paulo-05435-050" title="Pinheiros">Pinheiros</a></li>
-                                 <li><a href="servico-de-entrega-sao-paulo-01006-030" title="Sé">Sé</a></li>
-                                 <li><a href="servico-de-entrega-sao-paulo-05413-011" title="Vila Madalena">Vila Madalena</a></li>
-                                 <li><a href="servico-de-entrega-sao-paulo-04077-020" title="Vila Mariana">Vila Mariana</a></li>
-                             </ul>
+                             <div class="col-item">
+                                 <ul class="col-item list-ci">
+                                     <li><a href="servico-de-entrega-sao-paulo-01305-000" title="Bela Vista">Bela Vista</a></li>
+                                     <li><a href="servico-de-entrega-sao-paulo-04616-002" title="Campo Belo">Campo Belo</a></li>
+                                     <li><a href="servico-de-entrega-sao-paulo-01233-000" title="Consolação">Consolação</a></li>
+                                     <li><a href="servico-de-entrega-sao-paulo-04532-010" title="Itaim Bibi">Itaim Bibi</a></li>
+                                     <li><a href="servico-de-entrega-sao-paulo-01415-000" title="Jardins">Jardins</a></li>
+                                     <li><a href="servico-de-entrega-sao-paulo-01543-000" title="Liberdade">Liberdade</a></li>
+                                 </ul>
+                                 <ul class="col-item list-ci">
+                                     <li><a href="servico-de-entrega-sao-paulo-04524-002" title="Moema">Moema</a></li>
+                                     <li><a href="servico-de-entrega-sao-paulo-05045-020" title="Perdizes">Perdizes</a></li>
+                                     <li><a href="servico-de-entrega-sao-paulo-05435-050" title="Pinheiros">Pinheiros</a></li>
+                                     <li><a href="servico-de-entrega-sao-paulo-01006-030" title="Sé">Sé</a></li>
+                                     <li><a href="servico-de-entrega-sao-paulo-05413-011" title="Vila Madalena">Vila Madalena</a></li>
+                                     <li><a href="servico-de-entrega-sao-paulo-04077-020" title="Vila Mariana">Vila Mariana</a></li>
+                                 </ul>
+                             </div>
                          </div>
                      </div>
                  </div>
              </div>
-         </div>
 
-         <div class="col-right">
-             <div class="menu pagecom"><img src="/media/images/jnm-frontend/col-right/paguecom.png" /></div>
-             <div class="menu"><a href="https://www.facebook.com/Janamesa.delivery"><img src="/media/images/jnm-frontend/col-right/socializando.png" /></a></div>
-             <div class="menu"><a href="http://www.janamesa.com.br/contact"><img src="/media/images/jnm-frontend/col-right/ajuda.png" /></a></div>
-             <div class="facebook">
-                 <script src="http://connect.facebook.net/{$config->locale->name}/all.js#xfbml=1"></script>
-                 <fb:like-box profile_id={$config->facebook->page_id}" connections="8" stream="0" width="300" height="290" logobar="0"></fb:like-box>
+
+
+             <div class="col-right">
+                 <div class="menu pagecom"><img src="/media/images/jnm-frontend/col-right/paguecom.png" /></div>
+                 <div class="menu"><a href="https://www.facebook.com/Janamesa.delivery"><img src="/media/images/jnm-frontend/col-right/socializando.png" /></a></div>
+                 <div class="menu"><a href="http://www.janamesa.com.br/contact"><img src="/media/images/jnm-frontend/col-right/ajuda.png" /></a></div>
+                 <div class="facebook">
+                     <script src="http://connect.facebook.net/{$config->locale->name}/all.js#xfbml=1"></script>
+                     <fb:like-box profile_id={$config->facebook->page_id}" connections="8" stream="0" width="300" height="290" logobar="0"></fb:like-box>
+                 </div>
              </div>
+             </div>
+
          </div>
 
      </div>
          {include file="jnm_base_footer.htm"}
-     </div>
  </div>
  {if $config->google->conversion}
      {include file='_cookies/google/adwords.htm'}

@@ -8,6 +8,11 @@ a {
     text-decoration: none;
     cursor:pointer;cursor:hand;
     color: #FFFFFF;
+    border:medium none;
+}
+
+img {
+    border:medium none;
 }
 
 ul {
@@ -106,10 +111,18 @@ body.home div.headerBanner div.acesso div.facebook {
 body.home div.headerBanner div.entrar_modal {
     background-image: url("/media/images/jnm-frontend/entrar.png");
     height: 140px;
-    margin-left: 665px;
+    margin-left: 115px;
+    _margin-left: 70px;
+    *margin-left: 70px;
     padding: 60px 32px 8px;
+    _padding: 60px 32px 25px;
+    *padding: 60px 32px 25px;
     position: absolute;
+    _position: relative;
+    *position: relative;
     top: -2px;
+    _top: -45px;
+    *top: -45px;
     width: 234px;
 }
 
@@ -127,6 +140,13 @@ body.home div.headerBanner div.entrar_modal form ul li.naked {
     border:0;
     padding:0;
     background-color: transparent;
+}
+
+body.home div.headerBanner div.entrar_modal form ul li input {
+    height: 30px;
+    width: 220px;
+    _padding-top: 5px;
+    *padding-top: 5px;
 }
 
 input, textarea {
@@ -150,10 +170,12 @@ body.home div.banner {
 
 body.home div.banner div.headerBanner {
     background-image: url("/media/images/jnm-frontend/transparencia_header.png");
+    background-repeat: repeat-x;
     width: 100%;
     height: 55px;
-    background-position: center;
+    background-position: center top;
     position: relative;
+    text-align: center;
 }
 
 body.home div.banner div.footerBanner {
@@ -169,9 +191,13 @@ body.home div.banner div.footerBanner {
 body.home div.content {
     height: 850px;
     margin: 5px auto auto;
-    width: 1000px;
+    width: 925px;
 }
 
+body.home div.mainContent {
+    _text-align: center;
+    *text-align: center;
+}
 
 body.home div.col-right {
     float: left;
@@ -199,14 +225,31 @@ body.home div.banner div.headerBanner div.box_header {
     color: white;
     font-family: museo700;
     font-size: 26px;
-    height: 231px;
+    height: 270px;
     margin: 290px 0 0 60px;
     padding: 30px 0 0 42px;
     position: absolute;
-    width: 828px;
+    _position: relative;
+    *position: relative;
+    width: 860px;
+    text-align: left;
 }
 
+.wrapper-plz-br #yd-start-order-form #br-cep-autocomplete{
+    color: #FFFFFF;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    display: inline-block;
+    white-space: nowrap;
+    margin: 7px 60px 0 60px;
+}
 
+.yd-register .yd-register-form .yd-form-wrapper #br-cep-autocomplete{
+    position: relative;
+    top: -5px;
+    left: 0;
+    margin: 0 0 0 5px;
+    font-size: 12px;
+}
 
 body.home div.banner div.headerBanner div.box_fake {
     margin: 175px 0 0;
@@ -227,9 +270,13 @@ body.home div.banner div.input_cep .findRestaurant {
 body.home div.banner div.input_cep .cep {
     border: 2px solid black;
     font-size: 17px;
+    _font-size: 19px;
+    *font-size: 19px;
     height: 43px;
     text-align: center;
     width: 257px;
+    _padding-top: 10px;
+    *padding-top: 10px;
 }
 
 body.home div.banner div.input_cep {
@@ -240,12 +287,13 @@ body.home div.banner div.input_cep {
 body.home #footer {
     background: url("/media/images/jnm-frontend/footer_pattern.png") repeat scroll 0 0 transparent;
     height: 200px;
+    _text-align: center;
+    *text-align: center;
 }
 
 body.home div.footer_efect {
     background: url("/media/images/jnm-frontend/footer.png") repeat scroll 0 0 transparent;
     height: 50px;
-
 }
 
 body.home #footer .footer-inner {
@@ -256,6 +304,8 @@ body.home #footer .footer-inner {
 body.home #footer .footer-inner .navigation-footer .col-item {
     float: left;
     margin-left: 60px;
+    _text-align: left;
+    *text-align: left;
 
 }
 
@@ -272,6 +322,8 @@ body.home #footer .footer-inner .navigation-footer {
 .iphone {
     float: left;
     margin: -175px 0 0 24px;
+    height: 251px;
+    position: relative;
 }
 
 .buscarCep {

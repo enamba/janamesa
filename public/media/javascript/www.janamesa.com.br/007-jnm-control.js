@@ -1,4 +1,4 @@
-$(window).load( function () {
+$(document).ready( function () {
     $('.entrar').click(function(){
         showLoginModal();
     });

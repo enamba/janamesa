@@ -22,7 +22,10 @@
 .district .body-district {
     margin-top: 10px;
 }
-
+.district .head-district {
+    _text-align: left;
+    *text-align: left;
+}
 .district .head-district span {
     color: #6A5542;
     font-family: Museo700;
