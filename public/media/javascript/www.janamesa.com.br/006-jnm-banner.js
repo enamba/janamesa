@@ -1,22 +1,10 @@
-var qtdBanner = 4;
-var activeBanner = 1;
-$ab = null;
-function slideSwitch(setActive){
-    if (!$ab) {
-        console.log('definiu');
-
-        $ab = setInterval( "slideSwitch()", 7000 );
-    }
-    if (setActive){
-        console.log('limpou');
-        clearInterval($ab);
-    }
-
-    if (setActive){
-        activeBanner = setActive;
-    }
+function slideSwitch() {
     var $active = $('#slideshow LI.active');
-    var $next =  $('#slideshow LI:nth-child(' + activeBanner + ')');
+
+    if ( $active.length == 0 ) $active = $('#slideshow LI:last');
+
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow LI:first');
 
     $active.addClass('last-active');
 
@@ -25,53 +13,8 @@ function slideSwitch(setActive){
         .animate({opacity: 1.0}, 1000, function() {
             $active.removeClass('active last-active');
         });
-    activeBanner++;
-    if (activeBanner > qtdBanner){
-        activeBanner = 1;
-    }
-
-    if (setActive) {
-        console.log('redefiniu');
-        $ab = setInterval( "slideSwitch()", 7000 );
-    }
-
 }
 
-function proximo(){
-    activeBanner++;
-    if (activeBanner > qtdBanner){
-        activeBanner = 1;
-    }
-    slideSwitch(activeBanner);
-}
-
-function anterior(){
-    activeBanner--;
-    if (activeBanner < 1){
-        activeBanner = qtdBanner;
-    }
-    slideSwitch(activeBanner);
-}
-
-function startCiclo() {
-    return setInterval( "slideSwitch()", 7000 );
-}
-
-function stopCiclo(){
-    clearInterval(ciclo);
-}
-
-function resetCiclo() {
-    clearInterval(ciclo);
-    return startCiclo();
-}
-
-var ciclo = startCiclo();
-
-function slideTo(number){
-    slideSwitch(number);
-}
-
-function selectSeletor(number){
-
-}
+$(function() {
+    setInterval( "slideSwitch()", 6000 );
+});
