@@ -95,8 +95,6 @@ if ($compiletype == 'satellite') {
     $files[] = sprintf('%s/media/css', PUBLIC_PATH) . '/gelbeseiten/gelbeseiten-frontend-hidden.css';
     
 } else {
-
-
     // Add css frontend
     $files = array();
     $files[] = CSS_PATH . '/yd-frontend-core.css';
@@ -107,6 +105,11 @@ if ($compiletype == 'satellite') {
     $files[] = CSS_PATH . '/yd-frontend-jquery.css';
     $files[] = CSS_PATH . '/yd-frontend-ie.css';
     $files[] = CSS_PATH . '/yd-frontend-hidden.css';
+    $files[] = CSS_PATH . '/jnm-banner.css';
+    $files[] = CSS_PATH . '/jnm-category.css';
+    $files[] = CSS_PATH . '/jnm-district.css';
+    $files[] = CSS_PATH . '/jnm-frontend.css';
+    $files[] = CSS_PATH . '/jnm-stepbystep.css';
 }
 
 

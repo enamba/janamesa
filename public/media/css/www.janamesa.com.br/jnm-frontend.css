@@ -100,29 +100,27 @@ body.home div.headerBanner div.acesso div.facebook {
     color: white;
     margin: 0 10px;
     float: left;
-    margin: -8px 18px 0 65px;
+    margin: 0px 18px 0 65px;
 }
 
 body.home div.headerBanner div.entrar_modal {
     background-image: url("/media/images/jnm-frontend/entrar.png");
     height: 140px;
-    margin-left: 686px;
+    margin-left: 665px;
     padding: 60px 32px 8px;
     position: absolute;
-    top: -5px;
+    top: -2px;
     width: 234px;
 }
 
 body.home div.headerBanner div.entrar_modal form ul {
     maring: 0px;
-    padding:6px;
+    padding:0 6px;
 }
 
 body.home div.headerBanner div.entrar_modal form ul li {
     margin: 0 0 4px 0;
-    border: 1px solid #666;
     padding: 4px;
-    background-color: white;
 }
 
 body.home div.headerBanner div.entrar_modal form ul li.naked {
@@ -186,9 +184,13 @@ body.home div.col-right div.menu {
     width: 100%;
 }
 
+body.home div.col-right div.pagecom {
+    margin:5px 14px;
+}
+
 body.home div.col-right div.facebook {
     height: 290px;
-    margin: -24px 0 0 11px;
+    margin: 0px 0 0 11px;
     width: 280px;
 }
 

@@ -1,15 +1,20 @@
 var qtdBanner = 3;
-var activeBanner = 2;
-
+var activeBanner = 0;
+$ab = null;
 function slideSwitch(setActive){
+    if (!$ab) {
+        console.log('definiu');
+
+        $ab = setInterval( "slideSwitch()", 7000 );
+    }
+    if (setActive){
+        console.log('limpou');
+        clearInterval($ab);
+    }
+
     if (setActive){
         activeBanner = setActive;
     }
-    var $selectorActive = $('.seletor LI.active');
-    var $selectorNext = $('.seletor LI:nth-child(' + activeBanner + ')');
-    $selectorActive.removeClass('active');
-    $selectorNext.addClass('active')
-
     var $active = $('#slideshow LI.active');
     var $next =  $('#slideshow LI:nth-child(' + activeBanner + ')');
 
@@ -22,8 +27,30 @@ function slideSwitch(setActive){
         });
     activeBanner++;
     if (activeBanner > qtdBanner){
-        activeBanner = 1;
+        activeBanner = 0;
     }
+
+    if (setActive) {
+        console.log('redefiniu');
+        $ab = setInterval( "slideSwitch()", 7000 );
+    }
+
+}
+
+function proximo(){
+    activeBanner++;
+    if (activeBanner > qtdBanner){
+        activeBanner = 0;
+    }
+    slideSwitch(activeBanner);
+}
+
+function anterior(){
+    activeBanner--;
+    if (activeBanner < 1){
+        activeBanner = qtdBanner;
+    }
+    slideSwitch(activeBanner);
 }
 
 function startCiclo() {

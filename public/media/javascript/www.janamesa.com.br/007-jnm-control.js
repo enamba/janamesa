@@ -9,6 +9,20 @@ $(window).load( function () {
         hideLoginModal()
     });
 
+//    $('.banner').mouseenter(function () {
+//        $('.seletor').css({opacity: 0.0})
+//            .animate({opacity: 1.0}, 1000, function() {
+//                $('.seletor').css({opacity: 1.0})
+//            });
+//    });
+
+//    $('.banner').mouseleave(function () {
+//        $('.seletor').css({opacity: 1.0})
+//            .animate({opacity: 0.0}, 1000, function() {
+//                $('.seletor').css({opacity: 0.0})
+//            });
+//    });
+
 });
 //window.ready(alert('ready'));
 

@@ -1,515 +1,150 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="de" xml:lang="de" class="ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="de" xml:lang="de" class="ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="de" xml:lang="de" class="ie8"> <![endif]-->
-<!--[if gt IE 8 ]> <html lang="de" xml:lang="de" class="ie9"> <![endif]-->
-<!--[!IE]>   <!--> <html lang="de" xml:lang="de">         <!--<![endif]-->
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="author" content="yourdelivery GmbH" />
-        <meta name="publisher" content="yourdelivery GmbH" />
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="expires" content="7200" />
+    <meta name="author" content="Janamesa Team" />
+    <meta name="publisher" content="Janamesa Team" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
 
-        <meta name="robots" content="index,follow" />
-        <meta name="description" content="Mit Lieferando.de schnell den passenden Lieferservice oder Pizzaservice finden! Bestellen Sie Pizza, Pasta, Sushi & mehr - zahlen Sie online oder bar!" />
-        <meta name="keywords" content="Lieferservice online finden, Sushi online bestellen, Pizza Lieferdienst, Burger liefern lassen, bargeldlos zahlen" />
-        <meta name="viewport" content="width=1100">
-        <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57x57-precomposed.png" /> <!-- iPhone -->
-        <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-72x72-precomposed.png" sizes="72x72" /> <!-- iPad -->
-        <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-114x114-precomposed.png" sizes="114x114" /> <!-- iPhone 4+ -->
-        <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-144x144-precomposed.png" sizes="144x144" /> <!-- iPad 3+ -->
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="Jánamesa você encontra o melhor delivery online de Pizzas, Massas, comida Japonesa com muita rapidez e facilidade, bem perto de você" />
+    <meta name="keywords" content="delivery Online, comida, sushi, pizza, delivery, lanche" />
+    <meta name="viewport" content="width=1100">
+    <title>Janamesa - Delivery Online de Sushi, Pizza, Massa, etc..</title>
 
-        <title>Lieferando.de – Lieferservice, Pizzaservice, Sushi, Burger & mehr!</title>
+    <link rel="stylesheet" type="text/css" href="/media/css/compiled/frontend-{$extra_css|default:'no'}-{$REVISION}.css" />
+    <script type="text/javascript" src="/media/javascript/compiled/frontend-{$REVISION}.js"></script>
+</head>
+<body class="home">
+ <div class="container">
+     <div class="header">
+         <div class="banner">
+             <ul id="slideshow">
+                 <li class="active"><img src="/media/images/jnm-frontend/home-banner/shushi_air.jpg" alt="" /></li>
+                 <li ><img src="/media/images/jnm-frontend/home-banner/burguer_air.jpg" alt="" /></li>
+                 <li><img src="/media/images/jnm-frontend/home-banner/frango_air.jpg" alt="" /></li>
+                 <li><img src="/media/images/jnm-frontend/home-banner/pizza_air.jpg" alt="" /></li>
+             </ul>
+             <div class="headerBanner">
+                 <div class="contentHeader">
+                     <div class="logoJanamesa"><img src="/media/images/jnm-frontend/logonatal.png" /></div>
+                     <div class="acesso"><div class="facebook"><a href="http://www.janamesa.com.br/user/fb-login/?redirect_url=http://www.janamesa.com.br/"><img src="/media/images/jnm-frontend/facebooklogin.png" /></a></div><div class="cadastrar"><a href="http://www.janamesa.com.br/user/register">CADASTRE-SE</a></div><div class="entrar">ENTRAR<img src="/media/images/jnm-frontend/seta.png" /></div></div>
+                     <div class="entrar_modal" style="display:none;" >
+                         <form action="/user/login?redirect_url=http://www.janamesa.com.br/" method="post">
+                             <ul>
+                                 <li><input type="text" placeholder="E-mail"></li>
+                                 <li><input type="password" placeholder="Senha"></li>
+                                 <li class="naked"><input class="submitLogin" type="submit" name="ACESSAR" value="ACESSAR"></li>
+                             </ul>
+                         </form>
+                     </div>
+                     <div class="cep"></div>
+                     <div class="box_header">
+                         PEÇA ONLINE SUA COMIDA
+                         <div class="input_cep">
+                             <form action="/order_basis/plz" name="cep_form" method="GET" >
+                                 <input type="hidden" value="" name="cityId" />
+                                 <input id="yd-plz-search" class="cep yd-plz-autocomplete yd-plz-autocomplete-autosubmit yd-only-nr yd-empty-text ui-autocomplete-input" type="text" name="plz" placeholder="INSIRA SEU CEP" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true" />
+                                 <input class="findRestaurant" type="submit" name="BUSCAR RESTAURANTES" value="BUSCAR RESTAURANTES" />
+                             </form>
+                                 <div class="buscarCep"><a id="br-cep-autocomplete2" href="javascript:void(0)">NÃO SABE SEU CEP? CLIQUE AQUI!</a></div>
+                         </div>
 
-        <link rel="SHORTCUT ICON" href="/favicon.ico" type="image/x-icon" />
+                         <div class="iphone">
+                             <a href="https://itunes.apple.com/us/app/janamesa/id532193039?mt=8" target="_blank"><img src="/media/images/jnm-frontend/iphone.png" /> </a>
+                         </div>
+                     </div>
+                     <div class="step_by_step">
+                         <div class="title">COMO COMER BEM</div>
+                     </div>
+                 </div>
+             </div>
+             <div class="footerBanner"></div>
+         </div>
+         <div class="seletor">
+             <div class="left" onclick="anterior();"><img src="/media/images/jnm-frontend/seta-esq.png" /></div>
+             <div class="right" onclick="proximo();"><img src="/media/images/jnm-frontend/seta-dir.png" /></div>
+         </div>
+     </div>
+     <div class="content">
+         <div class="suggestions">
+             <table>
+                 <tr>
+                     <td colspan="4" class="title_category">
+                         <span class="title_text">Especialidades</span>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td onclick="parent.location='http://www.janamesa.com.br/kebab-a-domicilio';"><div class="category_1"><div class="category_mask_1"></div></div></td>
+                     <td onclick="parent.location='http://www.janamesa.com.br/feijoada-delivery';"><div class="category_2"><div class="category_mask_2"></div></div></td>
+                     <td onclick="parent.location='http://www.janamesa.com.br/yakisoba-delivery';"><div class="category_3"><div class="category_mask_3"></div></div></td>
+                     <td onclick="parent.location='http://www.janamesa.com.br/torta-delivery';"><div class="category_4"><div class="category_mask_4"></div></div></td>
+                 </tr>
+                 <tr>
+                     <td onclick="parent.location='http://www.janamesa.com.br/comida-espanhola';"><div class="category_5"><div class="category_mask_5"></div></div></td>
+                     <td onclick="parent.location='http://www.janamesa.com.br/comida-italiana';"><div class="category_6"><div class="category_mask_6"></div></div></td>
+                     <td onclick="parent.location='http://www.janamesa.com.br/comida-japonesa';"><div class="category_7"><div class="category_mask_7"></div></div></td>
+                     <td onclick="parent.location='http://www.janamesa.com.br/fast-food';"><div class="category_8"><div class="category_mask_8"></div></div></td>
+                 </tr>
+                 <tr>
+                     <td onclick="parent.location='http://www.janamesa.com.br/comida-mexicana';"><div class="category_9"><div class="category_mask_9"></div></div></td>
+                     <td onclick="parent.location='http://www.janamesa.com.br/pizzeria';"><div class="category_10"><div class="category_mask_10"></div></div></td>
+                     <td onclick="parent.location='http://www.janamesa.com.br/peixe-restaurante';"><div class="category_11"><div class="category_mask_11"></div></div></td>
+                     <td onclick="parent.location='http://www.janamesa.com.br/salada-delivery';"><div class="category_12"><div class="category_mask_12"></div></div></td>
+                 </tr>
+             </table>
+             <div class="district">
+                 <div class="head-district">
+                     <span>Bairros</span>
+                 </div>
+                 <div class="body-district">
+                     <div class="wrapper-photo-district">
+                         <div class="col-item">
+                             <div class="photo-district paper-img">
+                                 <div class="inner-photo-district">
+                                     <img src="/media/css/www.janamesa.com.br/images/site-img/city273x180.jpg" alt="São Paulo" title="São Paulo" />
+                                     <div>São Paulo</div>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="col-item">
+                             <ul class="col-item list-ci">
+                                 <li><a href="servico-de-entrega-sao-paulo-01305-000" title="Bela Vista">Bela Vista</a></li>
+                                 <li><a href="servico-de-entrega-sao-paulo-04616-002" title="Campo Belo">Campo Belo</a></li>
+                                 <li><a href="servico-de-entrega-sao-paulo-01233-000" title="Consolação">Consolação</a></li>
+                                 <li><a href="servico-de-entrega-sao-paulo-04532-010" title="Itaim Bibi">Itaim Bibi</a></li>
+                                 <li><a href="servico-de-entrega-sao-paulo-01415-000" title="Jardins">Jardins</a></li>
+                                 <li><a href="servico-de-entrega-sao-paulo-01543-000" title="Liberdade">Liberdade</a></li>
+                             </ul>
+                             <ul class="col-item list-ci">
+                                 <li><a href="servico-de-entrega-sao-paulo-04524-002" title="Moema">Moema</a></li>
+                                 <li><a href="servico-de-entrega-sao-paulo-05045-020" title="Perdizes">Perdizes</a></li>
+                                 <li><a href="servico-de-entrega-sao-paulo-05435-050" title="Pinheiros">Pinheiros</a></li>
+                                 <li><a href="servico-de-entrega-sao-paulo-01006-030" title="Sé">Sé</a></li>
+                                 <li><a href="servico-de-entrega-sao-paulo-05413-011" title="Vila Madalena">Vila Madalena</a></li>
+                                 <li><a href="servico-de-entrega-sao-paulo-04077-020" title="Vila Mariana">Vila Mariana</a></li>
+                             </ul>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
 
-        <link rel="stylesheet" type="text/css" href="/media/css/compiled/frontend-{$extra_css|default:'no'}-{$REVISION}.css" />
+         <div class="col-right">
+             <div class="menu pagecom"><img src="/media/images/jnm-frontend/col-right/pagecom.png" /></div>
+             <div class="menu"><a href="https://www.facebook.com/Janamesa.delivery"><img src="/media/images/jnm-frontend/col-right/socializando.png" /></a></div>
+             <div class="menu"><a href="http://www.janamesa.com.br/contact"><img src="/media/images/jnm-frontend/col-right/ajuda.png" /></a></div>
+             <div class="facebook">
+                 <script src="http://connect.facebook.net/{$config->locale->name}/all.js#xfbml=1"></script>
+                 <fb:like-box profile_id={$config->facebook->page_id}" connections="8" stream="0" width="300" height="290" logobar="0"></fb:like-box>
+             </div>
+         </div>
 
-        <script type="text/javascript" src="/media/javascript/compiled/frontend-{$REVISION}.js"></script>
-        <!-- define global state of this page -->
-        <script type="text/javascript">
-            YdMode = "{$mode|default:'rest'}";
-            log('CURRENT MODE: ' + YdMode);
-        </script>
+     </div>
+         {include file="jnm_base_footer.htm"}
+     </div>
+ </div>
+</body>
 
-        {include file='_cookies/monetate/global.htm'}
-
-        {if $APPLICATION_ENV == "production"}
-        {include file='_cookies/wingify/vwo.htm'}
-        {/if}
-        {include file='_cookies/google/analytics.htm'}
-        {include file='_cookies/veinteractive/global.htm' journeycode=$config->veinteractive->code}
-
-        <link href="https://plus.google.com/114849467427479787318" rel="publisher" />
-
-        {literal}
-        <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-            {lang: 'de'}
-        </script>
-        {/literal}
-
-        <script>
-
-            $(document).ready(function() {
-                $('#slides').slides();
-            });
-
-        </script>
-        
-        <style>
-            .yd-header-login,
-            .yd-header-register {
-                cursor: pointer;
-                position: relative;
-                display: block;
-                float: left;
-                height: 32px;
-                margin: 32px 0 0 20px;
-                font: bold 12px/32px arial, "nimbus sans l", sans-serif;
-                color: #fff;
-                text-align: center;
-                text-shadow: 0 1px 0 rgba(0,0,0,0.5);
-                border-radius: 4px;
-            }
-
-            .yd-header-login {
-                padding: 0 44px 0 35px;
-                overflow: hidden;
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat #a00a00;
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -moz-linear-gradient(top, #c11c11 0%, #a00a00 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c11c11), color-stop(100%,#a00a00));
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -webkit-linear-gradient(top, #c11c11 0%,#a00a00 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -o-linear-gradient(top, #c11c11 0%,#a00a00 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -ms-linear-gradient(top, #c11c11 0%,#a00a00 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, linear-gradient(top, #c11c11 0%,#a00a00 100%);
-            }
-
-            .yd-header-login .yd-facebook-icon {
-                position: absolute;
-                top: 0;
-                right: 0;
-                display: block;
-                height: 100%;
-                width: 32px;
-                border-radius: 0 4px 4px 0;
-                box-shadow: -1px 0 1px rgba(0,0,0,0.1);
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat #7493DA;
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat, -moz-linear-gradient(top, #7493DA 0%, #5878C2 100%);
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7493DA), color-stop(100%,#5878C2));
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat, -webkit-linear-gradient(top, #7493DA 0%,#5878C2 100%);
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat, -o-linear-gradient(top, #7493DA 0%,#5878C2 100%);
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat, -ms-linear-gradient(top, #7493DA 0%,#5878C2 100%);
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat, linear-gradient(top, #7493DA 0%,#5878C2 100%);
-            }
-
-            .yd-header-login:hover {
-                text-decoration: none;
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat #a00a00;
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -moz-linear-gradient(top, #a00a00 0%, #c11c11 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a00a00), color-stop(100%,#c11c11));
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -webkit-linear-gradient(top, #a00a00 0%,#c11c11 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -o-linear-gradient(top, #a00a00 0%,#c11c11 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, -ms-linear-gradient(top, #a00a00 0%,#c11c11 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -90px no-repeat, linear-gradient(top, #a00a00 0%,#c11c11 100%);
-            }
-
-            .yd-header-login:hover .yd-facebook-icon {
-                position: absolute;
-                top: 0;
-                right: 0;
-                display: block;
-                height: 100%;
-                width: 32px;
-                border-radius: 0 4px 4px 0;
-                box-shadow: -1px 0 1px rgba(0,0,0,0.1);
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat #7493DA;
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat, -moz-linear-gradient(top, #5878C2 0%, #7493DA 100%);
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5878C2), color-stop(100%,#7493DA));
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat, -webkit-linear-gradient(top, #5878C2 0%,#7493DA 100%);
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat, -o-linear-gradient(top, #5878C2 0%,#7493DA 100%);
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat, -ms-linear-gradient(top, #5878C2 0%,#7493DA 100%);
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat, linear-gradient(top, #5878C2 0%,#7493DA 100%);
-            }
-
-            .yd-header-login.active {
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -130px no-repeat #a00a00;
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -130px no-repeat, -moz-linear-gradient(top, #a00a00 0%, #c11c11 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -130px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a00a00), color-stop(100%,#c11c11));
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -130px no-repeat, -webkit-linear-gradient(top, #a00a00 0%,#c11c11 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -130px no-repeat, -o-linear-gradient(top, #a00a00 0%,#c11c11 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -130px no-repeat, -ms-linear-gradient(top, #a00a00 0%,#c11c11 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -130px no-repeat, linear-gradient(top, #a00a00 0%,#c11c11 100%);
-            }
-
-            .yd-header-login.active .yd-facebook-icon {
-                position: absolute;
-                top: 0;
-                right: 0;
-                display: block;
-                height: 100%;
-                width: 32px;
-                border-radius: 0 4px 4px 0;
-                box-shadow: -1px 0 1px rgba(0,0,0,0.1);
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat #7493DA;
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat, -moz-linear-gradient(top, #5878C2 0%, #7493DA 100%);
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5878C2), color-stop(100%,#7493DA));
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat, -webkit-linear-gradient(top, #5878C2 0%,#7493DA 100%);
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat, -o-linear-gradient(top, #5878C2 0%,#7493DA 100%);
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat, -ms-linear-gradient(top, #5878C2 0%,#7493DA 100%);
-                background: url(/media/images/yd-frontend-core/yd-login-facebook-logo.png) 0 -2px no-repeat, linear-gradient(top, #5878C2 0%,#7493DA 100%);
-            }
-
-            .yd-header-register {
-                padding: 0 15px 0 35px;
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat #7b910b;
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -moz-linear-gradient(top, #aacc00 0%, #7b910b 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#aacc00), color-stop(100%,#7b910b));
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -webkit-linear-gradient(top, #aacc00 0%,#7b910b 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -o-linear-gradient(top, #aacc00 0%,#7b910b 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -ms-linear-gradient(top, #aacc00 0%,#7b910b 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, linear-gradient(top, #aacc00 0%,#7b910b 100%);
-            }
-
-            .yd-header-register:hover {
-                text-decoration: none;
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat #7b910b;
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -moz-linear-gradient(top, #7b910b 0%, #aacc00 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7b910b), color-stop(100%,#aacc00));
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -webkit-linear-gradient(top, #7b910b 0%,#aacc00 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -o-linear-gradient(top, #7b910b 0%,#aacc00 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, -ms-linear-gradient(top, #7b910b 0%,#aacc00 100%);
-                background: url(/media/images/yd-frontend-core/yd-sprite-core.png) -446px -178px no-repeat, linear-gradient(top, #7b910b 0%,#aacc00 100%);
-            }
-
-            .yd-header-login:focus,
-            .yd-header-login:focus .yd-facebook-icon,
-            .yd-header-login:active,
-            .yd-header-login:active .yd-facebook-icon,
-            .yd-header-register:focus,
-            .yd-header-register:active {
-                color: #fff;
-                box-shadow: 0 0 2px #000 inset;
-            }
-        </style>
-
-    </head>
-
-    <body class="de yd-index-page">
-
-        <img src="{$domain_static}/images/www.lieferando.de/facebook.jpg" style="display:none;" alt="Essen online bestellen" />
-
-        <div id="yd-nonfooter">
-
-            {include file='base_header.htm'}
-
-            <!--[if lt IE 7 ]>
-                <div class="yd-drop-ie6">
-                    Wir haben die Unterstützung für den Internet Explorer 6 eingestellt. Bitte aktualisiere Deinen Browser.
-                    <a href="http://windows.microsoft.com/de-DE/internet-explorer/products/ie/home">www.microsoft.com</a>
-                </div>
-            <![endif]-->
-
-            <div class="yd-goofy">
-                {include file="order/_includes/error.htm"}
-                <form name="plzAutocomplete" id="yd-start-order-form" method="get" action="/order_basis/plz">
-                    <strong>Bestelle bei Deinem Lieblingslieferservice in Deiner Umgebung!</strong>
-                    <input type="hidden" name="cityId" value="" />
-                    <input id="yd-plz-search" class="yd-only-nr yd-empty-text" type="text" name="plz" value="" title="Postleitzahl" />
-                    <a id="yd-start-order" name="yd-start-order" href="">weiter</a>
-                </form>
-
-                <a target="_blank" class="yd-trust-seal" rel="nofollow" href="https://www.trustedshops.de/bewertung/info_XCD9D6FFDAE1492EB84FA67E884E10FB0.html" title="Kundenbewertungen von lieferando.de einsehen">
-                    <img class="bewertung" alt="Kundenbewertungen von lieferando.de" border="0" src="https://www.trustedshops.com/bewertung/widget/widgets/XCD9D6FFDAE1492EB84FA67E884E10FB0.gif"/>
-                </a>
-
-                <div class="yd-goofy-check">
-                    <ul>
-                        <li>6.500 Lieferservices</li>
-                        <li>Bargeldlos bezahlen</li>
-                        <li>Treuepunkte sammeln</li>
-                    </ul>
-                </div>
-
-                <div id="slides" style="background: url(http://landing.yourdelivery.de/donald1.jpg);">
-                    <div class="slides_container">
-                        <img src="http://landing.yourdelivery.de/donald1.jpg" style="display: none;" />
-                        <img src="http://landing.yourdelivery.de/donald2.jpg" style="display: none;" />
-                        <img src="http://landing.yourdelivery.de/donald3.jpg" style="display: none;" />
-                        <img src="http://landing.yourdelivery.de/donald4.jpg" style="display: none;" />
-                        <img src="http://landing.yourdelivery.de/donald5.jpg" style="display: none;" />
-                    </div>
-                </div>
-            </div>
-
-            <div id="yd-content" class="yd-clearfix">
-
-                <div class="yd-dagobert-facebook">
-                    <span>Folge uns!</span>
-                    <a rel="nofollow" href="http://www.facebook.com/lieferando" target="_blank"></a>
-                    <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Flieferando&amp;send=false&amp;layout=standard&amp;width=600&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=tahoma&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:600px; height:80px;" allowTransparency="true"></iframe>
-                </div>
-
-                <div id="yd-main-company-customers" class="yd-clearfix">
-
-                    <div id="yd-main-customers">
-                        <div></div>
-                        <p>
-                            <em>
-                                "Mit lieferando haben wir die Buchhaltung von 1500 Belegen auf 2 pro Monat reduziert.
-                                lieferando ist das Tool für uns um Catering, Getränke und die Mitarbeiterverpflegung
-                                zu organisieren."
-                            </em>
-                        </p>
-                        <p>
-                            Jasper Stahl, vormalig Leiter Finanzen, Agentur Jung von Matt
-                        </p>
-                    </div>
-
-                    <div id="yd-main-company">
-                        <div class="yd-box-title">Auch als Firmenlösung:</div>
-                        <ul>
-                            <li class="yd-mainlist-1">
-                                <a class="yd-index-slider active" id="yd-index-slider-1" >Unsere Services</a>
-                                <ul class="yd-index-slider-content" id="yd-index-slider-1-content">
-                                    <li>Lieferservice</li>
-                                    <li>Getränkelieferung</li>
-                                    <li>Obstlieferung</li>
-                                    <li>Catering</li>
-                                </ul>
-                            </li>
-                            <li class="yd-mainlist-2">
-                                <a class="yd-index-slider" id="yd-index-slider-2">Kostenvorteile</a>
-                                <ul class="yd-index-slider-content hidden" id="yd-index-slider-2-content">
-                                    <li>Reduzierter Buchungsaufwand</li>
-                                    <li>Volle Kostenkontrollen</li>
-                                    <li>Per Rechnung bezahlen</li>
-                                    <li>Mitarbeiter Budgets festlegen</li>
-                                </ul>
-                            </li>
-                            <li class="yd-mainlist-3">
-                                <a class="yd-index-slider" id="yd-index-slider-3">Individuelle Lösungen</a>
-                                <ul class="yd-index-slider-content hidden" id="yd-index-slider-3-content">
-                                    <li>Automatisierte Bestellungen</li>
-                                    <li>Gruppenbestellungen</li>
-                                    <li>Spätverpflegung</li>
-                                    <li>Online Lunch</li>
-                                </ul>
-                            </li>
-                            <li class="yd-mainlist-4">
-                                <a class="yd-index-slider" id="yd-index-slider-4">Sicherheit</a>
-                                <ul class="yd-index-slider-content hidden" id="yd-index-slider-4-content">
-                                    <li>Komplett validierte Abrechnung</li>
-                                    <li>Zeitliche und örtliche Beschränkung von Budgets</li>
-                                    <li>256Bit SSL-Verschlüsselung</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <a href="/firmenloesungen.shtml" class="button">Mehr Infos</a>
-                    </div>
-
-                </div>
-
-                <div id="yd-texting">
-
-                    <div id="yd-intro-social" class="yd-clearfix" style="position:relative;left:18px;">
-
-                        <div class="yd-box">
-                            <div class="yd-box-title">Ihre Vorteile</div>
-                            <ul>
-                                <li>6.500 Lieferservices in Deutschland</li>
-                                <li>Bequem bargeldlos bezahlen</li>
-                                <li>Treuepunkte sammeln und sparen</li>
-                            </ul>
-                        </div>
-
-                        <div class="yd-box">
-                            <div class="yd-box-title">Newsletter</div>
-                            Immer auf dem Laufenden bleiben!
-                            <a href="/user/register" class="button">Jetzt anmelden!</a>
-                        </div>
-
-                        <div class="yd-box">
-                            <div class="yd-box-title">Unser Kundendienst</div>
-                            {include file="order/_includes/chat/supportchat.htm"}
-                        </div>
-
-                        <div class="yd-box">
-                            <div class="yd-box-title">Lieferservice in deiner Stadt</div>
-                            <ul>
-                                <li><a href="/lieferservice-liste" title="Lieferservice von A bis G">Lieferservice von A bis G</a></li>
-                                <li><a href="/lieferservice-liste-2" title="Lieferservice von H bis N">Lieferservice von H bis N</a></li>
-                                <li><a href="/lieferservice-liste-3" title="Lieferservice von O bis Z">Lieferservice von O bis Z</a></li>
-                            </ul>
-                            <br /><br />
-                            <div class="yd-box-title">Beliebteste Städte</div>
-                            <ul>
-                                <li><a href="/lieferservice-berlin" title="Lieferservice Berlin">Lieferservice Berlin</a></li>
-                                <li><a href="/lieferservice-hamburg" title="Lieferservice Hamburg">Lieferservice Hamburg</a></li>
-                                <li><a href="/lieferservice-koeln" title="Lieferservice Köln">Lieferservice Köln</a></li>
-                                <li><a href="/lieferservice-frankfurt" title="Lieferservice Frankfurt">Lieferservice Frankfurt</a></li>
-                                <li><a href="/lieferservice-muenchen" title="Lieferservice München">Lieferservice München</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="yd-box">
-                            <div class="yd-box-title">Pizzaservice in deiner Stadt</div>
-                            <ul>
-                                <li><a href="/pizzaservice-liste" title="Pizzaservice von A bis G">Pizzaservice von A bis G</a></li>
-                                <li><a href="/pizzaservice-liste-2" title="Pizzaservice von H bis N">Pizzaservice von H bis N</a></li>
-                                <li><a href="/pizzaservice-liste-3" title="Pizzaservice von O bis Z">Pizzaservice von O bis Z</a></li>
-                            </ul>
-                            <br /><br />
-                            <div class="yd-box-title">Beliebteste Städte</div>
-                            <ul>
-                                <li><a href="/pizzaservice-berlin" title="Pizzaservice Berlin">Pizzaservice Berlin</a></li>
-                                <li><a href="/pizzaservice-hamburg" title="Pizzaservice Hamburg">Pizzaservice Hamburg</a></li>
-                                <li><a href="/pizzaservice-koeln" title="Pizzaservice Köln">Pizzaservice Köln</a></li>
-                                <li><a href="/pizzaservice-frankfurt" title="Pizzaservice Frankfurt">Pizzaservice Frankfurt</a></li>
-                                <li><a href="/pizzaservice-muenchen" title="Pizzaservice München">Pizzaservice München</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="yd-box">
-                            <div class="yd-box-title">Essen bestellen in deiner Stadt</div>
-                            <ul>
-                                <li><a href="/essen-bestellen-liste" title="Essen bestellen von A bis G">Essen bestellen von A bis G</a></li>
-                                <li><a href="/essen-bestellen-liste-2" title="Essen bestellen von H bis N">Essen bestellen von H bis N</a></li>
-                                <li><a href="/essen-bestellen-liste-3" title="Essen bestellen von O bis Z">Essen bestellen von O bis Z</a></li>
-                            </ul>
-                            <br /><br />
-                            <div class="yd-box-title">Beliebteste Städte</div>
-                            <ul>
-                                <li><a href="/essen-bestellen-berlin" title="Essen bestellen Berlin">Essen bestellen Berlin</a></li>
-                                <li><a href="/essen-bestellen-hamburg" title="Essen bestellen Hamburg">Essen bestellen Hamburg</a></li>
-                                <li><a href="/essen-bestellen-koeln" title="Essen bestellen Köln">Essen bestellen Köln</a></li>
-                                <li><a href="/essen-bestellen-frankfurt" title="Essen bestellen Frankfurt">Essen bestellen Frankfurt</a></li>
-                                <li><a href="/essen-bestellen-muenchen" title="Essen bestellen München">Essen bestellen München</a></li>
-                            </ul>
-                        </div>
-                        <!-- -->
-                        <div class="yd-box">
-                            <div class="yd-box-title">Gerichte nach Länderküchen:</div>
-                            <ul>
-                                <li><a href="/italienische-kueche" title="Mamma mia! - Italienische Küche" >Italienische Küche</a></li>
-                                <li><a href="/deutsche-kueche" title="Deutsche Küche - Kartoffelsuppe und Co." >Deutsche Küche</a></li>
-                                <li><a href="/griechische-kueche" title="Von Gyros bis Tsatziki- Die griechische Küche" >Griechische Küche</a></li>
-                                <li><a href="/franzoesische-kueche" title="vous aimez? Hier geht´s zur Französischen Küche" >Französische Küche</a></li>
-                                <li><a href="/indische-kueche" title="Lust auf Indisch Curry? Hier geht´s zur indischen Küche" >Indische Küche</a></li>
-                                <li><a href="/kueche-liste" title="Gerichte nach Länderküche" ><em>alle Länderküchen von A - D</em></a></li>
-                                <li><a href="/kueche-liste-2" title="Gerichte nach Länderküche Teil 2" ><em>alle Länderküchen von E - I</em></a></li>
-                                <li><a href="/kueche-liste-3" title="Gerichte nach Länderküche Teil 3" ><em>alle Länderküchen von J - Z</em></a></li>
-                            </ul>
-                            <br /><br />
-                            <div class="yd-box-title">Beliebteste Gerichte nach Länderküchen:</div>
-                            <ul>
-                                <li><a href="/spaghetti-bolognese" title="Das Original - Spaghetti Bolognese jetzt bestellen und genießen" >Spaghetti Bolognese</a></li>
-                                <li><a href="/currywurst" title="Currywurst hier finden" >Currywurst</a></li>
-                                <li><a href="/gyros" title="Gyros finden Sie hier online" >Gyros</a></li>
-                                <li><a href="/croque-hawaii" title="Crocque Hawai online bestellen" >Croque Hawaii</a></li>
-                                <li><a href="/chicken-tikka-masala" title="Ein Chicken Tikka Masala sorgt für Freudestrahlen" >Chicken Tikka Masala</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="yd-box">
-                            <div class="yd-box-title">Gerichte nach Warengruppen:</div>
-                            <ul>
-                                <li><a href="/brot" title="Brot und Sandwich - Infos & Gerichte" >Brot und Sandwich</a></li>
-                                <li><a href="/fisch" title="Alles zu Fisch & Meerefrüchten" >Fisch und Meeresfrüchte</a></li>
-                                <li><a href="/nudeln" title="Nudeln und Pasta jetzt online bestellen" >Nudeln und Pasta Gerichte</a></li>
-                                <li><a href="/salat" title="Salat - ebenso gesund wie wohlschmeckend" >Salat Gerichte</a></li>
-                                <li><a href="/suppe" title="Suppe - jetzt informieren und bestellen" >Suppe</a></li>
-                                <li><a href="/gerichte-liste" title="Gerichte nach Warengruppen" ><em>alle Warengruppen von A - F</em></a></li>
-                                <li><a href="/gerichte-liste-2" title="Gerichte nach Warengruppen Teil 2" ><em>alle Warengruppen von G - O</em></a></li>
-                                <li><a href="/gerichte-liste-3" title="Gerichte nach Warengruppen Teil 3" ><em>alle Warengruppen von P - Z</em></a></li>
-                            </ul>
-                            <br /><br />
-                            <div class="yd-box-title">Beliebteste Gerichte nach Warengruppen:</div>
-                            <ul>
-                                <li><a href="/pizzabroetchen" title="Pizzabrötchen vom Pizza Lieferservice" >Pizzabrötchen</a></li>
-                                <li><a href="/ebi" title="Ebi - Garnelen in der japanischen Küche" >Ebi</a></li>
-                                <li><a href="/tortellini" title="Tortellini nach Omas Art, hier beim italienischen Lieferdienst bestellen" >Tortellini</a></li>
-                                <li><a href="/gurkensalat" title="Hier sich einen Gurkensalat genehmigen" >Gurkensalat</a></li>
-                                <li><a href="/tomatensuppe" title="hier gibt es Tomatensuppe" >Tomatensuppe</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="yd-box">
-                            <div class="yd-box-title">Gerichte von A bis Z</div>
-                            <ul>
-                                <li><a href="/bratkartoffeln" title="Hausgemachte Bratkartoffeln nach Omas Rezeot hier bestellen und genießen." >Bratkartoffeln</a></li>
-                                <li><a href="/bruschetta" title="Bruschetta & mehr online bestellen" >Bruschetta</a></li>
-                                <li><a href="/chili-con-carne" title="Chili con Carne hier finden" >Chili con Carne</a></li>
-                                <li><a href="/lasagne" title="Italien ganz nah - Lasagne hier bestellen" >Lasagne</a></li>
-                                <li><a href="/tiramisu" title="Tiramisu vom Italienisch Lieferdienst" >Tiramisu</a></li>
-                                <li><a href="/alphabet-liste-1" title="Gerichte nach Alphabet" ><em>alle Gerichte von A - H</em></a></li>
-                                <li><a href="/alphabet-liste-2" title="Gerichte nach Alphabet Teil 2" ><em>alle Gerichte von I - P</em></a></li>
-                                <li><a href="/alphabet-liste-3" title="Gerichte nach Alphabet Teil 3" ><em>alle Gerichte von Q - Z</em></a></li>
-                            </ul>
-                            <br /><br />
-                            <div class="yd-box-title">Am häufigsten bestellte Gerichte</div>
-                            <ul>
-                                <li><a href="/doener" title="Döner vom Döner Lieferservice finden Sie hier" >Döner</a></li>
-                                <li><a href="/hamburger" title="Hamburger online bestellen" >Hamburger</a></li>
-                                <li><a href="/pizza" title="Pizza - einfach online bestellen" >Pizza</a></li>
-                                <li><a href="/spaghetti-carbonara" title="Spaghetti Carbonara aus der italienischen Küche hier bestellen" >Spaghetti Carbonara</a></li>
-                                <li><a href="/sushi" title="Sushi - hier Lieferservice finden" >Sushi</a></li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-                    <div>
-                        <h1>Die Suche nach dem Lieferservice: Darf es heute vielleicht ein Pizzaservice sein?</h1>
-                        <p>
-                            Mithilfe von lieferando.de haben Sie die tolle Möglichkeit, kostenlos beim besten <a href="/lieferservice" title="Hier den passenden Lieferservice online finden">Lieferservice</a> in Ihrer Umgebung zu bestellen. Wenn Sie beispielsweise Lust auf leckeres italienisches Essen haben, können Sie ganz bequem per Mausklick einen <a href="/pizzaservice" title="Pizzaservice in Ihrer Stadt online finden">Pizzaservice</a> in Ihrer Stadt oder Region kontaktieren und Ihre Bestellung aufgeben. Der Lieferservice zeichnet sich aus durch seine herausragende Schnelligkeit: Auf den einsatzbereiten Boten vom <a href="/pizza-lieferservice" title="Hunger? Ein Pizza Lieferservice ist schnell gefunden!">Pizza Lieferservice</a> können Sie zählen, ob zu Hause oder am Arbeitsplatz. Sie bringen Ihnen die Lieferung direkt an die Tür, so dass Sie mit dem Lieferservice eine Menge Zeit sparen, die Sie ansonsten für den Weg ins Restaurant aufwenden würden.
-                        </p>
-                        <p class="yd-read-more">
-                            Stellen Sie sich vor, Sie sind beruflich stark eingespannt und finden an hektischen Tagen keine freie Minute, bei ihrem Lieblings-Italiener zu speisen. Trotzdem verspüren Sie Appetit auf frisch zubereitete Pizza. Wir von lieferando.de bieten Ihnen eine praktische Lösung: Einfach online <a href="/pizza-bestellen" title="Pizza bestellen online – schnell und bequem!">Pizza bestellen</a>! Falls Sie es wünschen, stattet Ihnen der <a href="/pizza-express-berlin" title="Pizza Express Berlin: wenns schnell gehen soll!">Pizza Express Berlin</a> während Ihrer Mittagspause einen herzlichen Besuch ab. Davon können auch Ihre Kollegen profitieren: Empfehlen Sie den <a href="/pizza-online" title="Pizza online bestellen – Genuss ohne Aufwand!">Pizza online</a> Service weiter! Sollte der eine oder andere Kollege keine Pizza mögen, kann er zum Beispiel auch bei einem Lieferservice für thailändisches <a href="/essen-bestellen" title="Lieblingsgericht wählen und Essen bestellen">Essen bestellen</a> aus dem Netzwerk von yourdelivery.de bestellen. Der <a href="/lieferdienst" title="Lieferdienst hier wählen">Lieferdienst</a> ist rund um die Uhr verfügbar. Ist es Ihnen schon einmal passiert, dass Sie zu später Stunde von einem Hungergefühl verfolgt wurden? Das ist völlig in Ordnung, sagen wir von lieferando.de! Jeder in unsere Web-Plattform eingebundene Lieferservice lässt sich an sämtlichen Orten der Welt rund um die Uhr im Internet aufrufen und kontaktieren. Ob Pizzaservice oder ein aufwendiges <a href="/catering" title="Catering hier finden und online buchen">Catering</a> vom <a href="/partyservice" title="Partyservice für Ihre Feste hier finden">Partyservice</a>: Mithilfe von lieferando.de werden Sie garantiert satt! Probieren Sie es aus und lassen Sie sich von der Zuverlässigkeit des <a href="/pizza-man" title="Pizza Man – hier finden Sie Ihr Lieblingsgericht">Pizza Man</a> begeistern. Der Lieferservice punktet außerdem mit Freundlichkeit und erstklassiger Qualität der bestellten Speisen. Bei <a href="/call-a-pizza" title="Probiere es aus: Call a Pizza!">Call a Pizza</a> z. B. bekommen Sie alle Sorten von Pizza, die Ihr Herz begehrt: Pizza Margherita, Pizza Funghi, Pizza Salami, American Pizza, Pizza Vier Jahreszeiten, Pizza Quattro Formaggi und vieles mehr. Die Liste der vorzüglichen Spezialitäten vom Lieferservice ließe sich endlos fortsetzen. Der Pizzaservice bietet häufig auch leckere Pasta-Gerichte und <a href="/fingerfood" title="Fingerfood: Antipasti, Sushi, Sandwiches und mehr">Fingerfood</a>, welche Sie frisch zubereitet in Empfang nehmen. Unter dem Dach von yourdelivery.de versammeln sich allerdings nicht nur <a href="/bringdienste" title="Bringdienste für jede Gelegenheit hier ordern">Bringdienste</a> für warme Mahlzeiten wie etwa der <a href="/flying-pizza" title="Flying Pizza Lieferservice – so kommen Sie blitzschnell zu Ihrer Mahlzeit">Flying Pizza</a> Lieferservice: Kennen Sie schon den Lieferservice für Obst und Gemüse? Ebenfalls sehr empfehlenswert ist der <a href="/bestellservice" title="Bestellservice gesucht? Hier finden Sie das passende Angebot!">Bestellservice</a> für Frischfleisch, wenn Sie vorhaben, eine Grill-Party zu veranstalten. Als 1-A-Lieferanten für einen italienischen Abend schlägt Ihnen lieferando.de aber auf jeden Fall einen <a href="/pizza-service" title="Pizza Service jetzt suchen">Pizza Service</a> vor.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h2>Lieferservice - jetzt auch bargeldlos zahlen!</h2>
-                        <p>
-                            Allein in diesen Beispielen wird deutlich, wie der <a href="/heimservice" title="Heimservice: Essen bequem nach hause liefern lassen!">Heimservice</a> Ihr Leben bunter macht und jederzeit Ihren kulinarischen Vorlieben entgegenkommt. Heutzutage kann bereits jeder Pizzaservice mit einer breit gefächerten Speisekarte auftrumpfen, die vor 30 Jahren für ein italienisches Feinschmecker-Lokal typisch gewesen wäre. Der Lieferservice passt sich somit dem Fortschritt und Ihren ständig wachsenden Bedürfnissen an – gleichgültig, ob es sich um <a href="/pizza-berlin" title="Pizza Berlin – der Pizzaservice für die Hauptstadt">Pizza Berlin</a>, um eine <a href="/pizza-muenchen" title="Pizza München: so gut wie in Italien!">Pizza München</a>, um die beliebte <a href="/pizza-frankfurt" title="Pizza Frankfurt – so isst man italienisch am Main">Pizza Frankfurt</a> oder vielleicht um die <a href="/pizza-hamburg" title="Pizza Hamburg – italienisch genießen in der Hansestadt">Pizza Hamburg</a> handelt. Auch der Zeitfaktor spielt eine immer größere Rolle. Stehen Sie manchmal vor dem Problem, dass der <a href="/getraenkemarkt" title="Getränkemarkt: hier informieren">Getränkemarkt</a> bereits geschlossen hat, wenn Sie abends das Büro verlasssen? Wenn ja, dann bestellen Sie noch heute beim Getränke-Lieferservice und verzichten Sie in Zukunft auf das Schleppen von schweren Flaschen.
-                        </p>
-                        <p class="yd-read-more">
-                            Auch wenn Sie sich vorher mit nahrhaftem Essen vom <a href="/pizzamax" title="Pizzamax: maximaler Pizzagenuss!">Pizzamax</a> Pizzaservice gestärkt haben sollten, haben Sie sich nach einem anstrengenden Arbeitstag in Ihrer Freizeit ein hohes Maß an Bequemlichkeit redlich verdient! yourdelivery.de unterstützt Sie dabei, dass Sie zu diesem Recht kommen: Der Lieferservice bzw. der <a href="/caterer" title="Caterer für Ihre Party hier buchen">Caterer</a> ist Ihr Einkaufspartner der Zukunft, stets flexibel und immer auf Pünktlichkeit bedacht. Essen vom Pizzaservice ist außerdem gesund, denn dort werden frische Zutaten für den Belag verwendet: beispielsweise frische Tomaten, Champignons, Paprika, Zwiebeln und Brokkoli. Mit dem Lieferservice, der klugen Alternative zum Ladengeschäft, gelangen Sie spielend an Ihre Tagesration an lebenswichtigen Vitaminen, Mineralstoffen, Proteinen und Kohlenhydraten (vgl. auch das lieferando <a href="/lexikon" title="lieferando Lexikon: für alle Fragen rund um Lebensmittel und Ernährung">Lexikon</a> und den <a href="/ernaehrungsberater" title="lieferando Ernährungsberater: Alles über Ernährung, Kalorien, Vitamine etc.">Ernährungsberater</a>). Löst dieses Wissen in Ihnen Appetit auf Essen vom Pizzaservice aus? Mittlerweile bietet jeder Lieferservice aus dem Netzwerk von yourdelivery.de bargeldlose Zahlungsoptionen. Sobald Sie beim Pizzaservice – vielleicht bei <a title="Informationen zu Pizza Jack" href="/pizza-jack">Pizza Jack</a> oder beim <a href="/pizza-flitzer" title="Pizza Flitzer – schneller geht’s nicht!">Pizza Flitzer</a> (besonders schnell!) bestellen, verwenden Sie am besten unmittelbar nach der Bestellung Online-Banking, PayPal oder Kreditkarte. Geben Sie einfach Ihre Daten ein, bestätigen Sie und warten Sie ganz gemütlich auf den Lieferservice! Sollten Sie es dennoch wünschen, etwas bei Partnern wie <a href="/pizza-avanti" title="Pizza avanti: garantiert schnelle Lieferung!">Pizza avanti</a> oder <a title="Informationen zu Dinos Pizza" href="/dinos-pizza">Dinos Pizza</a> mit Bargeld zu bezahlen, akzeptieren die kundenfreundlichen Boten selbstverständlich auch Papier- und Münzgeld. Es liegt jedoch ein enormer Vorteil darin, den <a href="/pizza-bringdienst" title="Pizza Bringdienst hier suchen und in kürzester Zeit finden!">Pizza Bringdienst</a> online zu entlohnen: Der Weg zur Bank gehört auf diese Weise der Vergangenheit an! Schließlich gehen Sie auch nicht persönlich zum Pizzaservice, sondern Sie lehnen sich so lange auf dem Schreibtischstuhl zurück oder verrichten andere Tätigkeiten, bis der Lieferservice an Ihrer Tür läutet. Sehen Sie nun, wie wunderbar es ist <a href="/lebensmittel-online-bestellen" title="Lebensmittel online bestellen – was könnte einfacher sein?">Lebensmittel online bestellen</a> zu können und wie sehr es Ihr Alltagsleben erleichtert?
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3>In jeder Lage und für jeden Geschmack: das richtige Angebot!</h3>
-                        <p>
-                            Sie sind auf der Suche nach einem schnellen <a href="/asia-lieferservice" title="Asia Lieferservice: gutes Essen, exotischer Geschmack">Asia Lieferservice</a> oder einen <a href="/china-lieferservice" title="China Lieferservice: Frühlingsrolle, Peking Ente, Wan Tan &amp; mehr">China Lieferservice</a>? Sie wollen abwechslungsreiches und leckeres Essen bestellen für Ihre Mittagspause, frisch <a href="/belegte-broetchen" title="Frisch belegte Brötchen Catering buchen">belegte Brötchen</a> als Business Lunch für ein Meeting, oder eine komplette Spätverpflegung für Ihre Mitarbeiter? Herzlichen Glückwunsch, Sie haben Ihr Ziel erreicht: lieferando.de ist eine Plattform, auf der Sie als Privatperson oder Unternehmen ganz leicht mit wenigen Klicks Lebensmittel online bestellen können.
-                        </p>
-                        <p class="yd-read-more">
-                            In unserem vielfältigen Angebot finden Sie für jeden Anlass den perfekten Anbieter (z. B. als <a href="/catering-berlin" title="Catering Berlin gesucht? Kein Problem!">Catering Berlin</a>, als <a href="/catering-hamburg" title="Catering Hamburg – so feiert man richtig!">Catering Hamburg</a>, als <a href="/catering-muenchen" title="Catering München – hier klicken und buchen!">Catering München</a> . Neben dem <a title="Informationen zu Pizza Lieferservice Berlin" href="/pizza-lieferservice-berlin">Pizza Lieferservice Berlin</a> und zahlreichen weiteren Lieferdiensten in vielen deutschen Städten bieten wir Ihnen die Möglichkeit aus gesunden und verschiedensten kulinarischen Köstlichkeiten beispielsweise ein eigenes <a href="/" title="Fingerfood Buffet: Canapees, Sushi, Antipasti und viel mehr">Fingerfood Buffet</a> Ihr Menü zusammenzustellen. Da wir mit hunderten Restaurants deutschlandweit zusammenarbeiten, ist für jeden Gaumen garantiert das passende Gericht dabei. Ob chinesisch, italienisch, griechisch oder <a href="/chinesisch-essen" title="Chinesisch Essen: einfach hier bestellen!">chinesisch essen</a>: bei uns finden Sie Menüs aus allen Länderküchen. Verspüren Sie beispielsweise gerade Appetit auf Sushi, findet lieferando.de einen Sushi Bestellservice in Ihrer Stadt. Bedienen Sie sich beim <a href="/partyservice-berlin" title="Partyservice Berlin: Für ein gelungenes Fest!">Partyservice Berlin</a>, beim <a href="/lieferservice-duesseldorf" title="Lieferservice Düsseldorf: Hier haben Sie die Auswahl!">Lieferservice Düsseldorf</a> oder beim <a href="/partyservice-hamburg" title="Partyservice Hamburg hier ganz einfach finden">Partyservice Hamburg</a>. Auch der <a href="/partyservice-muenchen" title="Partyservice München – feiern wie auf der Wies'n!">Partyservice München</a> und viele mehr in ganz Deutschland befinden sich in unserer Datenbank! Geben Sie einfach Ihre Postleitzahl ein und Sie finden jeden verfügbaren Bringdienst in Ihrer Nähe. Da wir primär mit lokalen Lieferanten zusammenarbeiten, können wir lange Wartezeiten beinah gänzlich vermeiden. Testen Sie unseren <a title="Finden Sie Bestellservice Berlin" href="/bestellservice-berlin">Bestellservice Berlin</a> oder <a title="Finden Sie Bestellservice Hamburg" href="/bestellservice-hamburg">Bestellservice Hamburg</a> und ebenfalls <a href="/catering-frankfurt" title="Catering Frankfurt – das rcihtige Angebot hier finden">Catering Frankfurt</a>! Eine übersichtliche Auflistung aller Anbieter erleichtert Ihnen das Vergleichen der einzelnen Angebote. Außerdem sehen Sie sowohl die Speisekarte, Preise und Lieferzeiten, als auch Kundenbewertungen ein und wählen den für Sie passendsten Bestellservice bequem aus. Essen bestellen war nie übersichtlicher, Kein Heimservice zuverlässiger. Ein weiterer Vorteil von lieferando.de ist die praktische bargeldlose Bezahlung! Wählen Sie, ob Sie per Kreditkarte oder PayPal zahlen wollen. Für Unternehmen bieten wir zudem den Service einer einzigen Fakturierung für alle gebuchten Leistungen in einem Turnus von 14 Tagen. Damit ersparen wir Ihnen einen hohen Abrechnungsaufwand und bieten dennoch ein individuelles Bestellsystem, in dem jeder einzelne Mitarbeiter seine Gerichtauswahl selbst treffen und die Bestellung eigenständig durchführen kann. Die einzelnen Budgets können Sie dabei individuell verwalten und behalten dabei die volle Kostenkontrolle.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h4>Sushi - der kulinarische Trend aus Japan:</h4>
-                        <p>
-                            Sushi erfreut sich immer größerer Beliebtheit. Nun brauchen Sie für Ihr Lieblingssushi nicht einmal mehr das Büro verlassen. Wie das geht? lieferando.de macht es möglich:Wir kooperieren nicht nur mit einem <a title="Finden Sie Sushi Lieferservice" href="/sushi-lieferservice">Sushi Lieferservice</a>, sondern mit hunderten und das deutschlandweit. Entdecken Sie beispielsweise <a title="Finden Sie Mister Sushi" href="/mister-sushi">Mister Sushi</a>, <a title="Finden Sie Mikado Sushi" href="/mikado-sushi">Mikado Sushi</a>, <a title="Finden Sie Sushi Express" href="/sushi-express">Sushi Express</a> und viele weitere! So können Sie sich Ihr Nigiri oder Maki Sushi für die Mittagspause bequem liefern lassen und anstelle des üblichen Fastfoods etwas Gesundes essen.
-                        </p>
-                        <p class="yd-read-more">
-                            Ab sofort stehen für Sie <a title="Finden Sie Sushi Frankfurt" href="/sushi-frankfurt">Sushi Frankfurt</a>, <a title="Finden Sie Sushi Hamburg" href="/sushi-hamburg">Sushi Hamburg</a>, <a title="Finden Sie Sushi Köln" href="/sushi-koeln">Sushi Köln</a> und viele andere Städte bereit und warten auf Ihre Bestellung. Entdecken Sie beispielsweise den <a title="Finden Sie Sushi Express Köln" href="/sushi-express-koeln">Sushi Express Köln</a> und den <a title="Finden Sie Sushi Express München" href="/sushi-express-muenchen">Sushi Express München</a>. Dazu geben Sie einfach Ihre Postleitzahl ein und erhalten sofort eine übersichtliche Auflistung aller verfügbaren lokalen Lieferdienste. Dank einsehbarer Kundenbewertungen wählen Sie nur zuverlässige und schnelle Lieferdienste. Auch Speisekarte, Preise und Lieferzeiten können Sie einsehen und so Ihre Bestellung ganz nach Ihren Wünschen zusammenstellen. Unserer besonderer Service für Sie: Sie wählen, ob Sie in Bar, bargeldlos per Kreditkarte oder PayPal zahlen. lieferando.de bietet die optimale Lösung für Firmen, die Ihre Mitarbeiterverpflegung vereinfachen wollen. Ihre Mitarbeiter erhalten ein limitiertes Budget und können davon online entweder Einzel- oder sogar Gruppenbestellungen aufgeben. Dauerbestellungen ermöglichen automatische Essenslieferungen, ohne dass Sie jeden Tag extra bestellen müssen. Anstatt hunderter einzelner Rechnungen, erhält Ihre Firma alle vierzehn Tagen eine Rechnung von uns, auf der alle Bestellungen aufgelistet sind. lieferando.de ist natürlich auch für Privatkunden geeignet, die sich Sushi nach Hause liefern lassen wollen. Schnelle Lieferdienste bringen Ihnen Ihr Gericht direkt an die Haustür. Auf diese Weise genießen Sie <a title="Finden Sie Sushi in Berlin" href="/sushi-berlin">Sushi Berlin</a> oder <a title="Finden Sie My Sushi Frankfurt" href="/my-sushi-frankfurt">My Sushi Frankfurt</a> ohne das Haus oder Büro zu verlassen. Probieren Sie es aus und bestellen Sie gleich online bei einem <a title="Finden Sie Sushi Service" href="/sushi-service">Sushi Service</a> von lieferando.de.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        {include file="base_footer.htm"}
-        {include file='_cookies/sociomatic/global.htm'}
-        {include file='_cookies/masterpixel/global.htm' uadomain=$domain_base}
-        {include file='_cookies/masterpixel/orderflow.htm' uadomain=$domain_base step1=1 step2=0 step3=0 step4=0}
-        {include file='_cookies/piwik/global.htm' uadomain=$domain_base}
-        {include file='_cookies/avazu/global.htm'}
-        {include file='_cookies/nextPerformance/start.htm'}
-        {include file='_cookies/cadreon/start.htm'}
-    </body>
 </html>

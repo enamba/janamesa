@@ -6,7 +6,7 @@
  * @author mlaug
  * @copyright Yourdelivery
  */
-class NewController extends Default_Controller_Base {
+class IndexController extends Default_Controller_Base {
 
     /**
      * @author mlaug

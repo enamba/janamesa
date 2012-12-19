@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="pt" xml:lang="pt" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="pt" xml:lang="pt" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="pt" xml:lang="pt" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="pt" xml:lang="pt" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="pt-br" xml:lang="pt-br">         <!--<![endif]-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="expires" content="7200" />
+        <meta name="author" content="yourdelivery GmbH" />
+        <meta name="publisher" content="yourdelivery GmbH" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+
+        <meta name="robots" content="index,follow" />
+        <meta name="description" content="No Jánamesa você pode encontrar serviços de entrega online com muita rapidez e facilidade, bem perto de você. Peça Pizzas, Massas e muito mais, pagando online com muita facilidade!" />
+        <meta name="keywords" content="Servico de entrega Online pedir Sushi Pizza janamesa" />
+        <meta name="viewport" content="width=1100">
+
+        <title>janamesa.com.br - No Jánamesa você pode pedir online Pizza, Sushi, Sanduíches e muito mais.</title>
+
+        <link rel="SHORTCUT ICON" href="/media/css/www.janamesa.com.br/favicon.ico" type="image/x-icon" />
+
+        <!-- autocomplete style -->
+        <style>
+            .br-results table tr{
+                border-bottom: 1px solid #ccc;
+            }
+			
+			.ie7 .br-results table tr{
+                border-bottom: 0 none; 
+            }
+			
+			.ie7 .br-results table tr td{
+                border-bottom: 1px solid #ccc;
+            }
+
+            .br-results table tr:nth-child(odd) {
+                background: #f5f5f5;
+            }
+
+            .br-results table tr:nth-child(even) {
+                background: #fafafa;
+            }
+
+            .br-results table td {
+                padding: 5px;
+            }
+
+            #ym-start-order-form ul li {
+                margin: 0 0 5px;
+            }
+
+            #ym-start-order-form ul li label {
+                display: inline-block;
+                width: 200px;
+            }
+        </style>
+        {include file='_cookies/janamesa/abtest.htm'}
+        
+        <link rel="stylesheet" type="text/css" href="/media/css/compiled/frontend-{$extra_css|default:'no'}-{$REVISION}.css" />
+        <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key={$config->google->maps->apikey}"></script>
+        <script type="text/javascript" src="/media/javascript/compiled/frontend-{$REVISION}.js"></script>
+        <script src="http://webspace.noebels.de/janamesa/mylocation.js"></script>
+        <!-- define global state of this page -->
+        <script type="text/javascript">
+            YdMode = "{$mode|default:'rest'}";
+            log('CURRENT MODE: ' + YdMode);
+        </script>
+
+        {include file='_cookies/google/analytics.htm'}
+    </head>
+
+    <body class="br yd-index-page">
+
+        <div id="yd-group-fade" class="hidden"></div>
+        <a name="anchor-0"></a>
+        <div id="yd-nonfooter">
+
+            {include file='base_header.htm'}
+
+            <div id="yd-content" class="yd-clearfix">
+
+                {include file='notification.htm'}
+
+                <div id="yd-sidebar">                	
+                    
+                    {include file='order/_includes/sidebar/payment.htm'}
+                    
+                    <a href="https://www.facebook.com/Janamesa.delivery" target="_blank" class="yd-box br-box lateral social" title="Socializando">
+                    	<div class="br-inner">
+                            <p class="tp">Socializando</p>
+                            <p class="mp">na mesa</p>
+                            <p class="bp">Apaixonados<br /> por comer bem</p>
+                        </div>
+                    </a>
+                    
+                    <!--<a href="#" class="yd-box br-box lateral newsletter" title="Newsletter">-->
+                    <!--	<div class="br-inner">-->
+                        <!--    <p class="tp">assine nossa</p>-->
+                            <!--<p class="mp">Newsletter</p>-->
+                            <!--<p class="bp">Fique por dentro<br /> de nossas promoções</p>-->
+                        <!--	</div>-->
+                    <!--</a>-->
+                    
+                    <a href="/contact" class="yd-box br-box lateral ajuda" title="Ajuda?">
+                    	<div class="br-inner">
+                            <p class="tp">Precisa de</p>
+                            <p class="mp">Ajuda?</p>
+                            <p class="bp">Esclareça suas duvidas<br />com nossa equipe!</p>
+                        </div>
+                    </a>
+                    
+                </div>
+                
+                <div id="yd-ordering">
+                	
+                    <div class="wrapper-rw-block">
+                        <div class="rw-block">
+                            <div class="inner-rw-block">
+                                <div class="rhead">
+                                    <h3>Bairros</h3>
+                                    <div>
+                                        <a href="#" title="" class="link2127">Veja todos</a>
+                                    </div>
+                                </div>
+                                <div class="rbody">
+                                    <div class="wrapper-photo-block">
+                                        <div class="col-item">
+                                            <div class="photo-block paper-img">
+                                                <div class="inner-photo-block">
+                                                    <img src="/media/css/www.janamesa.com.br/images/site-img/city273x180.jpg" width="273" height="180" alt="Rio de Janeiro" title="Rio de Janeiro" />
+                                                    <table>
+                                                        <tr><td><div>São Paulo</div></td></tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-item">
+                                            <ul class="col-item list-ci">
+                                            	<li><a href="servico-de-entrega-sao-paulo-01305-000" title="Bela Vista">Bela Vista</a></li>
+                                                <li><a href="servico-de-entrega-sao-paulo-04616-002" title="Campo Belo">Campo Belo</a></li>
+                                                <li><a href="servico-de-entrega-sao-paulo-01233-000" title="Consolação">Consolação</a></li>
+                                                <li><a href="servico-de-entrega-sao-paulo-04532-010" title="Itaim Bibi">Itaim Bibi</a></li>
+                                                <li><a href="servico-de-entrega-sao-paulo-01415-000" title="Jardins">Jardins</a></li>
+                                                <li><a href="servico-de-entrega-sao-paulo-01543-000" title="Liberdade">Liberdade</a></li>
+                                            </ul>
+                                            <ul class="col-item list-ci">
+                                                <li><a href="servico-de-entrega-sao-paulo-04524-002" title="Moema">Moema</a></li>
+                                                <li><a href="servico-de-entrega-sao-paulo-05045-020" title="Perdizes">Perdizes</a></li>
+                                                <li><a href="servico-de-entrega-sao-paulo-05435-050" title="Pinheiros">Pinheiros</a></li>
+                                                <li><a href="servico-de-entrega-sao-paulo-01006-030" title="Sé">Sé</a></li>
+                                                <li><a href="servico-de-entrega-sao-paulo-05413-011" title="Vila Madalena">Vila Madalena</a></li>
+                                                <li><a href="servico-de-entrega-sao-paulo-04077-020" title="Vila Mariana">Vila Mariana</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper-rw-block">
+                        <div class="rw-block">
+                            <div class="inner-rw-block">
+                                <div class="rhead">
+                                    <h3>Especialidades</h3>
+                                    <div>
+                                        <a href="#" title="" class="link2127">Veja todos</a>
+                                    </div>
+                                </div>
+                                <div class="rbody">
+                                    <div class="wrapper-list-block">
+                                        <ul class="col-item list-ci">
+                                            <li><a href="/beirut-delivery" title="Beirut">Beirut</a></li>
+                                            <li><a href="/chicken-delivery" title="Chicken">Chicken</a></li>
+                                            <li><a href="/feijoada-delivery" title="Feijoada">Feijoada</a></li>
+                                            <li><a href="/restaurantes-frutos-do-mar" title="Frutos do Mar">Frutos do Mar</a></li>
+                                        </ul>
+                                        <ul class="col-item list-ci">
+                                            <li><a href="/hamburger-delivery" title="Hamburger">Hamburger</a></li>
+                                            <li><a href="/hot-dog-delivery" title="Hot Dog">Hot Dog</a></li>
+                                            <li><a href="/kebab-a-domicilio" title="Kebab">Kebab</a></li>
+                                            <li><a href="/massas-delivery" title="Massas">Massas</a></li>
+                                        </ul>
+                                        <ul class="col-item list-ci">
+                                            <li><a href="/delivery-paella" title="Paella">Paella</a></li>
+                                            <li><a href="/peixe-restaurante" title="Peixe">Peixe</a></li>
+                                            <li><a href="/pizzeria" title="Pizza">Pizza</a></li>
+                                            <li><a href="/salada-delivery" title="Salada">Salada</a></li>
+                                        </ul>
+                                        <ul class="col-item list-ci">
+                                            <li><a href="/sandwich-a-domicilio" title="Sandwich">Sandwich</a></li>
+                                            <li><a href="/sopa-restaurante" title="Sopa">Sopa</a></li>
+                                            <li><a href="/delivery-sushi" title="Sushi">Sushi</a></li>
+                                            <li><a href="/yakisoba-delivery" title="Yakisoba">Yakisoba</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper-rw-block iphone-block">
+                        <div class="iphone-block">
+                            <div class="star-left"></div>
+                            <div class="star-right"></div>
+                            <div class="inner-iphone-block">
+                                <div class="col-1">
+                                    <p class="tp">Tem um</p>
+                                    <p class="mp">iPhone?</p>
+                                </div>
+                                <div class="col-2">
+                                    <p>Em breve<br /> disponível</p>
+                                </div>
+                                <div class="col-3">
+                                    <img src="/media/css/www.janamesa.com.br/images/big-iphone.png" alt="" title="Baixe Nosso Aplicativo" width="89" height="171px" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div id="wrapper-bottom-content">
+                    <div class="bottom-content">
+                        <div class="inner-bottom-content">
+                            <div class="wrapper-left-sidebar">
+                                <div class="left-sidebar">
+                                	<div class="wrapper-seo-block">
+                                    	<div class="seo-block">
+                                        	<div class="inner-seo-block">
+                                            	<div class="rw-block">
+                                                	<div class="col-item">
+                                                    	<h4>Especialidades de outros paises</h4>
+                                                        <ul>
+                                                        	<li><a href="/comida-alema">Comida Alemã</a></li>
+                                                            <li><a href="/comida-americana">Comida Americana</a></li>
+                                                            <li><a href="/comidas-arabes">Comida Arabe</a></li>
+                                                            <li><a href="/comida-chinesa">Comida Chinesa</a></li>
+                                                            <li><a href="/comida-espanhola">Comida Espanhola</a></li>
+                                                            <li><a href="/comida-italiana">Comida Italiana</a></li>
+                                                            <li><a href="/comida-japonesa">Comida Japonesa</a></li>
+                                                            <li><a href="/comida-mexicana">Comida Mexicana</a></li>
+                                                            <li><a href="/comida-oriental">Comida Oriental</a></li>
+                                                            <li><a href="/comida-peruana">Comida Peruana</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-item">
+                                                    	<h4>Categorias mais procuradas</h4>
+                                                        <ul>
+                                                        	<li><a href="/buffet">Buffet</a></li>
+                                                        	<li><a href="/comida-caseira">Comida Caseira</a></li>
+                                                        	<li><a href="/fast-food">Comida Fast Food</a></li>
+                                                        	<li><a href="/comida-saudavel-delivery">Comida Saudavel</a></li>
+                                                        	<li><a href="/comida-vegetariana-delivery">Comida Vegetariana</a></li>
+                                                        	<li><a href="/delivery-bebidas">Delivery Bebidas</a></li>
+                                                        	<li><a href="/delivery-gourmet">Delivery Gourmet</a></li>
+                                                        	<li><a href="/guia-de-restaurantes">Guia de Restaurantes</a></li>
+                                                        	<li><a href="/nomes-de-restaurantes-famosos">Restaurantes Famosos</a></li>
+                                                        	<li><a href="/takeaway-delivery">Takeaway Delivery</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-item">
+                                                    	<h4>Restaurantes na<br /> sua cidade</h4>
+                                                        <ul>
+                                                        	<li><a href="#">Deliverys de A a G</a></li>
+                                                            <li><a href="#">Deliverys de H a N</a></li>
+                                                            <li><a href="#">Deliverys de O a Z</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                 
+                                    </div>                                                                        
+                                    <div class="wrapper-seo2-block">
+                                        <div class="seo2-block">
+                                            <div id="yd-texting" class="inner-seo2-block">
+                                                <div class="col-item">
+                                                    <h4>Pizza e sushi! A escolha nacional</h4>
+                                                    <p>
+                                                    	Não é sem um bom motivo que as duas palavras mais buscadas pelos internautas que procuram comida na internet sejam “Pizza” e “Sushi”. Ambas verdadeiras relíquias culinárias trazidas ao Brasil por imigrantes Japoneses e italianos, que além de suas vocações gastronômicas, pouco levavam consigo para o novo país. Hoje em dia, quase um século após a chegada desta dupla no Brasil, ambos se tornaram muito mais do que um simples prato estrangeiro, se incorporaram de maneira definitiva à cultura local, e além de mudarem os hábitos gastronômicos dos próprios brasileiros, mudaram também alguns de seus  ingredientes. O sushi, por exemplo após sua chegada no estado o Ceará, ganhou bizarríssimas versões, como o tekamaki de morango ou o sushi de berinjela com queijo. Estranho, certo? Mas a pizza por sua vez não ficou para trás, na maioria das pizzarias do país é possível encontrar alternativas muito diferentes à receita tradicional italiana, como pizza de brigadeiro, ou pizza de palmito. 
+                                                    </p>
+                                                    <div class="yd-read-more-br">                                                                                    
+                                                        <h4>A história da pizza e do sushi</h4>                            
+                                                        <p>
+                                                        	A história da comida japonesa e do sushi estiveram presentes na cultura japonesa desde seu início. Ainda que o hábito de misturar peixe e arroz tenha surgido de imediato, em um primeiro momento o arroz era usado para a conservação do file de peixe. O arroz cozido liberava ácido acético e lático e o tornava um conservante ideal. Por volta do século XIV o arroz deixou de ser um simples conservante e se tornou uma parte autêntica da receita, nascendo assim o sushi.
+                                                        </p>
+                                                        <p>
+                                                        	O surgimento da pizza é um pouco mais controverso do que o do sushi, uma vez que a mistura de carne e molhos a uma fatia de massa de trigo possam ter sido feitos diversas vezes em diferentes momentos históricos. Contudo, o primeiro povo a adicionar molho de tomate a essa massa, foram os italianos, e por tanto recebem o título de criadores da pizza, ainda que durante muito tempo, sua massa não fosse uma fatia redonda como nós a conhecemos hoje e sim uma espécie de sanduiche ou calzone.
+                                                        </p>                        
+                                                    </div>
+                                                </div>
+                                                <div class="col-item">
+                                                    <h4>Pizza e sushi já na mesa!</h4>
+                                                    <p>
+                                                    	Ainda que a Pizza e o Sushi tenham uma história interessante, ler sobre eles não é tão bom quanto come-los, e para isso temos o Jánamesa Hoje em dia, ambos os pratos, pizza e sushi, são alternativas saudáveis e saborosas aos típicos fast food americanos, além de rivalizarem várias outras escolhas de lugares para se comer como um restaurante mexicano ou um restaurante chinês. Mas para aqueles que acharem esta escolha um dilema muito difícil há o Jánamesa, no qual uma imensa variedade culinária esta a apenas um click de distância de você.
+                                                    </p>
+                                                    <p>
+                                                    	O Jánamesa é uma das maiores empresas de delivery do Brasil, que oferece serviços de online pizza delivery. Claro que pizza e sushi não são as únicas escolhas, para quem preferir chinese food, paella, comida espanhola, kebab a domicíclio  ou comidas árabes o Jánamesa também é a melhor escolha.
+                                                    </p>
+                                                    <div class="yd-read-more-br">                                
+                                                        <h4>Delivery de pizza, sushi e o que mais lhe apetecer!</h4>                            
+                                                        <p>
+                                                        Hoje em dia, uma das maiores necessidades da nossa sociedade é a economia de tempo, as vezes parece ser quase tão essencial quanto a alimentação em si. Ai entra em cena o Jánamesa, um dos maiores e melhores portais de delivery de comida do mundo, que combina ambas estas necessidades em uma solução prática e rápida: o delivery. A necessidade de se locomover até um restaurante ou até mesmo de cozinhar está ultrapassada, cada vez mais quem cozinha ou vai até um restaurante o faz por puro prazer, já que comida rápida e para pronta entrega esta a sua disposição. 
+                                                        </p>                          
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+        {include file="base_footer.htm"}
+
+        {include file='_cookies/masterpixel/orderflow.htm' uadomain=$domain_base step1=1 step2=0 step3=0 step4=0}
+        {include file='_cookies/masterpixel/global.htm' uadomain=$domain_base}
+        {include file='_cookies/piwik/global.htm' uadomain=$domain_base}
+        {if $config->google->conversion}
+            {include file='_cookies/google/adwords.htm'}
+        {/if}
+
+    </body>
+</html>

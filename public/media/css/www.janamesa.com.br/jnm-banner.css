@@ -1,0 +1,46 @@
+#slideshow {
+    position:relative;
+    height: 0px;
+    z-index: 0;
+}
+
+#slideshow LI {
+    position:absolute;
+    top:0;
+    z-index:1;
+    overflow: hidden;
+    width: 100%;
+}
+
+#slideshow li > img {
+    left:50%;
+    margin-left: -800px;
+    position: relative;
+}
+
+#slideshow LI.active {
+    z-index:3;
+}
+
+#slideshow LI.last-active {
+    z-index:2;
+}
+
+.seletor .left {
+    height: 10px;
+    float: left;
+    margin-left: 20px;
+}
+
+.seletor .right {
+    height: 10px;
+    float: right;
+    margin-right: 20px;
+}
+
+.seletor {
+    display: none;
+    margin-top: -380px;
+    position: absolute;
+    width: 100%;
+}
