@@ -1601,7 +1601,7 @@ class Yourdelivery_Model_Meals extends Default_Model_Base {
 
     /**
      * get boolean if there are extras or options for that meal
-     * @author Felix Haferkorn <haferkorn@lieferando.de>   
+     * @author Felix Haferkorn <haferkorn@lieferando.de>
      * @since 03.08.2011
      */
     public function hasSpecials() {
@@ -1616,6 +1616,16 @@ class Yourdelivery_Model_Meals extends Default_Model_Base {
             return (boolean) $relation->getHasSpecials();
         }
         return true;
+    }
+
+    /**
+     * get the special content
+     * @author Eduardo Namba <namba@janamesa.com.br>
+     * @since 20.12.2012
+     */
+    public function getSpecial() {
+        $specialContent = $this->_data['special'];
+        return $specialContent;
     }
 
     /**

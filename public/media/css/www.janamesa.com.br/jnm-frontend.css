@@ -7,8 +7,11 @@
 a {
     text-decoration: none;
     cursor:pointer;cursor:hand;
-    color: #FFFFFF;
     border:medium none;
+}
+
+html {
+    background-color: #F3F3F3;
 }
 
 img {
@@ -51,34 +54,34 @@ body {
     background-color: #f2f2f2;
 }
 
-body.home .container .header {
+.container .header {
     background-color: black;
 }
 
-body.home div.headerBanner div.contentHeader {
+div.headerBanner div.contentHeader {
     width: 1000px;
     margin: 0 auto;
     position: relative;
 }
 
-body.home div.headerBanner div.logoJanamesa img {
+div.headerBanner div.logoJanamesa img {
     z-index: 90;
 }
 
 
-body.home div.headerBanner div.logoJanamesa {
+div.headerBanner div.logoJanamesa {
     height: 50px;
     width: 100px;
     float: left;
 }
 
-body.home div.headerBanner div.cep {
+div.headerBanner div.cep {
     height: 50px;
     width: 100px;
     float: right;
 }
 
-body.home div.headerBanner div.acesso {
+div.headerBanner div.acesso {
     float: right;
     font-family: helvetica;
     font-size: 13px;
@@ -87,13 +90,13 @@ body.home div.headerBanner div.acesso {
     width: 450px;
 }
 
-body.home div.headerBanner div.acesso div.cadastrar {
+div.headerBanner div.acesso div.cadastrar {
     color: white;
     margin: 4px 10px;
     float: left;
 }
 
-body.home div.headerBanner div.acesso div.entrar {
+div.headerBanner div.acesso div.entrar {
     color: white;
     margin: 4px 18px;
     float: left;
@@ -101,14 +104,14 @@ body.home div.headerBanner div.acesso div.entrar {
     z-index: 1;
 }
 
-body.home div.headerBanner div.acesso div.facebook {
+div.headerBanner div.acesso div.facebook {
     color: white;
     margin: 0 10px;
     float: left;
     margin: 0px 18px 0 65px;
 }
 
-body.home div.headerBanner div.entrar_modal {
+div.headerBanner div.entrar_modal {
     background-image: url("/media/images/jnm-frontend/entrar.png");
     height: 140px;
     margin-left: 115px;
@@ -126,23 +129,23 @@ body.home div.headerBanner div.entrar_modal {
     width: 234px;
 }
 
-body.home div.headerBanner div.entrar_modal form ul {
+div.headerBanner div.entrar_modal form ul {
     maring: 0px;
     padding:0 6px;
 }
 
-body.home div.headerBanner div.entrar_modal form ul li {
+div.headerBanner div.entrar_modal form ul li {
     margin: 0 0 4px 0;
     padding: 4px;
 }
 
-body.home div.headerBanner div.entrar_modal form ul li.naked {
+div.headerBanner div.entrar_modal form ul li.naked {
     border:0;
     padding:0;
     background-color: transparent;
 }
 
-body.home div.headerBanner div.entrar_modal form ul li input {
+div.headerBanner div.entrar_modal form ul li input {
     height: 30px;
     width: 220px;
     _padding-top: 5px;
@@ -163,12 +166,12 @@ input.submitLogin {
     width: 220px;
 }
 
-body.home div.banner {
+div.banner {
     width: 100%;
     height: 700px;
 }
 
-body.home div.banner div.headerBanner {
+div.banner div.headerBanner {
     background-image: url("/media/images/jnm-frontend/transparencia_header.png");
     background-repeat: repeat-x;
     width: 100%;
@@ -178,7 +181,7 @@ body.home div.banner div.headerBanner {
     text-align: center;
 }
 
-body.home div.banner div.footerBanner {
+div.banner div.footerBanner {
     background-image: url("/media/images/jnm-frontend/divisor_home.png");
     background-position: center center;
     height: 30px;
@@ -188,39 +191,39 @@ body.home div.banner div.footerBanner {
 }
 
 
-body.home div.content {
+div.content {
     height: 850px;
     margin: 5px auto auto;
     width: 925px;
 }
 
-body.home div.mainContent {
+div.mainContent {
     _text-align: center;
     *text-align: center;
 }
 
-body.home div.col-right {
+div.col-right {
     float: left;
     height: 100%;
     width: 330px;
 
 }
 
-body.home div.col-right div.menu {
+div.col-right div.menu {
     width: 100%;
 }
 
-body.home div.col-right div.pagecom {
+div.col-right div.pagecom {
     margin:5px 14px;
 }
 
-body.home div.col-right div.facebook {
+div.col-right div.facebook {
     height: 290px;
     margin: 0px 0 0 11px;
     width: 280px;
 }
 
-body.home div.banner div.headerBanner div.box_header {
+div.banner div.headerBanner div.box_header {
     background: url("/media/images/jnm-frontend/bgboxheader.png") no-repeat scroll 0 0 transparent;
     color: white;
     font-family: museo700;
@@ -251,12 +254,12 @@ body.home div.banner div.headerBanner div.box_header {
     font-size: 12px;
 }
 
-body.home div.banner div.headerBanner div.box_fake {
+div.banner div.headerBanner div.box_fake {
     margin: 175px 0 0;
     position: absolute;
 }
 
-body.home div.banner div.input_cep .findRestaurant {
+div.banner div.input_cep .findRestaurant {
     background: url("/media/images/jnm-frontend/btnheader.png") repeat scroll 0 0 transparent;
     color: white;
     font-size: 18px;
@@ -267,7 +270,7 @@ body.home div.banner div.input_cep .findRestaurant {
     cursor:pointer;cursor:hand;
 }
 
-body.home div.banner div.input_cep .cep {
+div.banner div.input_cep .cep {
     border: 2px solid black;
     font-size: 17px;
     _font-size: 19px;
@@ -279,29 +282,29 @@ body.home div.banner div.input_cep .cep {
     *padding-top: 10px;
 }
 
-body.home div.banner div.input_cep {
+div.banner div.input_cep {
     margin: 9px 0 0;
     float:left;
 }
 
-body.home #footer {
+#footer {
     background: url("/media/images/jnm-frontend/footer_pattern.png") repeat scroll 0 0 transparent;
     height: 200px;
     _text-align: center;
     *text-align: center;
 }
 
-body.home div.footer_efect {
+div.footer_efect {
     background: url("/media/images/jnm-frontend/footer.png") repeat scroll 0 0 transparent;
     height: 50px;
 }
 
-body.home #footer .footer-inner {
+#footer .footer-inner {
     width: 1000px;
     margin: 0 auto;
 }
 
-body.home #footer .footer-inner .navigation-footer .col-item {
+#footer .footer-inner .navigation-footer .col-item {
     float: left;
     margin-left: 60px;
     _text-align: left;
@@ -309,13 +312,13 @@ body.home #footer .footer-inner .navigation-footer .col-item {
 
 }
 
-body.home #footer .footer-inner .navigation-footer .col-item ul li{
+#footer .footer-inner .navigation-footer .col-item ul li{
     margin-top: 10px;
     color: white;
 
 }
 
-body.home #footer .footer-inner .navigation-footer {
+#footer .footer-inner .navigation-footer {
     padding-top: 40px;
 }
 
@@ -338,4 +341,11 @@ body.home #footer .footer-inner .navigation-footer {
 
 .suggestions td {
     cursor:pointer;cursor:hand;
+}
+.body-district a {
+    color:#000;
+}
+
+.cadastrar a, #footer li a {
+    color:#fff;
 }

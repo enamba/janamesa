@@ -34,11 +34,16 @@
 {foreach name=be from=$item.meal->getCurrentExtras() item=extra}
 0|{$extra->getName()}|1|{$extra->getCost()|inttoprice:2:","}
 {/foreach}
+0|{$item.meal->getSpecial()}|1|0,00
 {/foreach}
 {/foreach}
 [FIM DADOS PEDIDO]
 [INICIO PAGAMENTO]
-{$order->getAbsTotal()|inttoprice:2:","}|{$order->getChange()|inttoprice:2:","}|{if $order->getPaymentAddition() == 'vr'}{$order->getAbsTotal()|inttoprice:2:","}{else}0{/if}|0|0|{if $order->getPaymentAddition() == 'creditCardAtHome'}{$order->getAbsTotal()|inttoprice:2:","}{else}0{/if}|0|{if $order->getPayment() != 'bar'}{$order->getAbsTotal()|inttoprice:2:","}{else}0{/if}|0|{if $order->getPayment() == 'bar' && !$order->getPaymentAddition()}{($order->getChange()-$order->getAbsTotal())|inttoprice:2:","}{else}0{/if}|0|{$order->getDeliverCost()|inttoprice:2:","}|1|*|D|{if $order->getPayment() != 'bar'}ja pago online{/if}
+{if $order->getChange() > 0}
+{$order->getAbsTotal()|inttoprice:2:","}|{$order->getChange()|inttoprice:2:","}|{if $order->getPaymentAddition() == 'vr'}{$order->getAbsTotal()|inttoprice:2:","}{else}0{/if}|0|0|{if $order->getPaymentAddition() == 'creditCardAtHome'}{$order->getAbsTotal()|inttoprice:2:","}{else}0{/if}|0|{if $order->getPayment() != 'bar'}{$order->getAbsTotal()|inttoprice:2:","}{else}0{/if}|0|{if $order->getPayment() == 'bar' && !$order->getPaymentAddition()}{($order->getChange()-$order->getAbsTotal())|inttoprice:2:","}{else}0{/if}|0|{$order->getDeliverCost()|inttoprice:2:","}|1|*|D|{if $order->getPayment() != 'bar'}Ja pago online - {/if}{$order->getLocation()->getComment()}
+{else}
+{$order->getAbsTotal()|inttoprice:2:","}|{$order->getAbsTotal()|inttoprice:2:","}|{if $order->getPaymentAddition() == 'vr'}{$order->getAbsTotal()|inttoprice:2:","}{else}0{/if}|0|0|{if $order->getPaymentAddition() == 'creditCardAtHome'}{$order->getAbsTotal()|inttoprice:2:","}{else}0{/if}|0|{if $order->getPayment() != 'bar'}{$order->getAbsTotal()|inttoprice:2:","}{else}0{/if}|0|{if $order->getPayment() == 'bar' && !$order->getPaymentAddition()}{($order->getChange()-$order->getAbsTotal())|inttoprice:2:","}{else}0{/if}|0|{$order->getDeliverCost()|inttoprice:2:","}|1|*|D|{if $order->getPayment() != 'bar'}Ja pago online - {/if}{$order->getLocation()->getComment()}
+{/if}
 
 [FIM PAGAMENTO]
 [INICIO DETALHE BANDEIRA]

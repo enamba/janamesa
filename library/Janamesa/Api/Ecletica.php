@@ -30,6 +30,7 @@ class Janamesa_Api_Ecletica {
         $this->_smarty->config_dir = $config->smarty->config_dir;
         $this->_smarty->cache_dir = $config->smarty->cache_dir;
         $this->_smarty->caching = false;
+        $location = $order->getLocation();
 
         $this->_smarty->assign('order', $order);
         

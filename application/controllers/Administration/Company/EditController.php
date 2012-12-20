@@ -108,8 +108,8 @@ class Administration_Company_EditController extends Default_Controller_Administr
         $contTable = new Yourdelivery_Model_DbTable_Contact();
         $this->view->assign('contacts', $contTable->getDistinctNameId());
 
-        $rabattTable = new Yourdelivery_Model_DbTable_RabattCodes();
-        $this->view->assign('rabattIds', $rabattTable->getOnlyCompanyIds());
+//        $rabattTable = new Yourdelivery_Model_DbTable_RabattCodes();
+//        $this->view->assign('rabattIds', $rabattTable->getOnlyCompanyIds());
 
         $this->view->assign('contact', $contact);
         $this->view->assign('billingContact', $billingContact);  
