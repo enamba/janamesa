@@ -2,7 +2,7 @@
     float:left;
 }
 
-body.home div.banner div.headerBanner div.step_by_step {
+div.banner div.headerBanner div.step_by_step {
     height: 100px;
     margin: 445px 0 0 75px;
     position: absolute;

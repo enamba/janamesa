@@ -54,6 +54,10 @@ body {
     background-color: #f2f2f2;
 }
 
+.header {
+    text-align: left;
+}
+
 .container .header {
     background-color: black;
 }
@@ -348,4 +352,12 @@ div.footer_efect {
 
 .cadastrar a, #footer li a {
     color:#fff;
+}
+
+
+div.mainContent {
+    background-color: #F3F3F3;
+    margin-top: 0px;
+    position: relative;
+    z-index: 9999;
 }

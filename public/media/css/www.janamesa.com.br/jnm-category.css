@@ -25,7 +25,7 @@
     color: #6A5542;
 }
 
-body.home div.suggestions {
+div.suggestions {
     float: left;
     height: 100%;
     width: 590px;
