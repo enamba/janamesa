@@ -1,65 +1,31 @@
-<div class="header">
-    <div class="banner">
-        <ul id="slideshow">
-            <li class="item active"><img src="/media/images/jnm-frontend/home-banner/shushi_air.jpg" alt="" /></li>
-            <li class="item"><img src="/media/images/jnm-frontend/home-banner/burguer_air.jpg" alt="" /></li>
-            <li class="item"><img src="/media/images/jnm-frontend/home-banner/frango_air.jpg" alt="" /></li>
-            <li class="item"><img src="/media/images/jnm-frontend/home-banner/pizza_air.jpg" alt="" /></li>
-            <ul class="navigation">
-                <li class="active">1</li>
-                <li class="">2</li>
-                <li class="">3</li>
-                <li class="">4</li>
-            </ul>
-        </ul>
-        <div class="headerBanner">
-            <div class="contentHeader">
-                <div class="logoJanamesa"><img src="/media/images/jnm-frontend/logonatal.png" /></div>
-                <div class="acesso">
-                    <div class="facebook"><a href="http://www.janamesa.com.br/user/fb-login/?redirect_url=http://www.janamesa.com.br/"><img src="/media/images/jnm-frontend/facebooklogin.png" /></a></div>
-                    <div class="cadastrar"><a href="http://www.janamesa.com.br/user/register">CADASTRE-SE</a></div>
-                    <div class="entrar">ENTRAR<img src="/media/images/jnm-frontend/seta.png" /></div>
-                    <div class="entrar_modal" style="display:none;" >
-                        <form name="login" action="/user/login" method="post" id="login">
-                            <input type="hidden" name="login" value="1" />
-                            <ul>
-                                <li>
-                                    <input class="yd-empty-text" type="text" name="user" value="" title="{__('E-Mail-Adresse')}" />
+<div id="wrapper-header" class="blue">
+    <div class="header-bg">
+        <div class="yd-header">
+            <div class="yd-inner">
+                <a class="yd-logo" href="/"><img src="/media/images/jnm-frontend/logonatal.png" title="jáNAMESA" alt="jáNAMESA" /></a>
 
-                                    {include file='order/_includes/form_order.htm' postfix='login'}
-                                </li>
-                                <li>
-                                    <input class="yd-empty-text" type="password" name="pass" value="" title="{__('Passwort')}" />
-                                </li>
-                                <li class="naked"><input class="submitLogin" type="submit" name="ACESSAR" value="ACESSAR"></li>
-                                {include file='order/_includes/form_order.htm' postfix='login'}
-                            </ul>
-                        </form>
+                <div class="yd-login">
+                    {include file='_header/login.htm'}
+                </div>
+
+                <div class="wrapper-plz-br hidden">
+                    <h3>Está com fome ?</h3>
+                    <h4>Peça sua<br> comida preferida<br>online</h4>
+                    {include file='order/_includes/plz.htm'}
+                </div>
+
+                <div class="wrapper-benefits-block hidden">
+                    <div class="benefits-block">
+                        <div class="inner-benefits-block">
+                            <p>Pague no cartão ou a vista</p>
+                            <p>Pizza, Sushi e muito mais</p>
+                            <p>Ganhe pontos de fidelidade</p>
+                            <p>Sem nenhum custo extra</p>
+                        </div>
                     </div>
                 </div>
-                <div class="cep"></div>
-                <div class="box_header">
-                    PEÇA ONLINE SUA COMIDA
-                    <div class="input_cep">
-                        <form id="yd-start-order-form" method="get" name="cep_form" action="/order_basis/plz">
-                            <input type="hidden" name="cityId" value="" />
-                            <input id="yd-plz-search" class="cep yd-plz-autocomplete yd-plz-autocomplete-autosubmit yd-only-nr yd-empty-text" type="text" name="plz" value="" title="{__('Postleitzahl')}" />
-                            <input class="findRestaurant" type="submit" name="BUSCAR RESTAURANTES" value="BUSCAR RESTAURANTES" />
-                        </form>
-                        <div class="buscarCep"><a id="br-cep-autocomplete2" href="javascript:void(0)">NÃO SABE SEU CEP? CLIQUE AQUI!</a></div>
-                    </div>
-
-                    <div class="iphone">
-                        <a href="https://itunes.apple.com/us/app/janamesa/id532193039?mt=8" target="_blank"><img src="/media/images/jnm-frontend/iphone.png" /> </a>
-                    </div>
-                </div>
-                <div class="step_by_step"></div>
             </div>
         </div>
-        <div class="footerBanner"></div>
     </div>
-    <ul class="seletor">
-        <li class="left" onclick="$('#slideshow').slideSwitch($('#slideshow'), null, 'previous');"><img src="/media/images/jnm-frontend/seta-esq.png" /></li>
-        <li class="right" onclick="$('#slideshow').slideNext();"><img src="/media/images/jnm-frontend/seta-dir.png" /></li>
-    </ul>
+    <div class="bottom-bg"></div>
 </div>

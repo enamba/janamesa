@@ -2,8 +2,5 @@
 <form id="yd-start-order-form" method="get" name="cep_form" action="/order_basis/plz">
     <input type="hidden" name="cityId" value="" />
     <input id="yd-plz-search" class="yd-plz-autocomplete yd-plz-autocomplete-autosubmit yd-only-nr yd-empty-text" type="text" name="plz" value="" title="{__('Postleitzahl')}" />
-    <span id="br-cep-autocomplete">Não sabe o seu CEP ?</span>
-    <a id="br-cep-autocomplete2" class="link1554 yd-button-280" name="yd-start-order" href="javascript:void(0)">Buscar CEP pelo nome da rua</a>        
-    <a class="link1555 yd-button-280" name="yd-start-order" href="javascript:void(0)">{__("Bestellung starten!")}</a> 
-    <a class="buscar-btn" href="#" onclick="document.cep_form.submit();">Buscar Restaurantes</a>
+    <input type="submit" class="link1555 yd-button-280" href="javascript:document.cep_form.submit();" value="Buscar Restaurantes" />
 </form>

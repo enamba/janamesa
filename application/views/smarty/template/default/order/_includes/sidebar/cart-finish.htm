@@ -43,7 +43,7 @@
                         {/if}
                     </li>
                     <li class="yd-shopping-price" id="yd-shopping-price-{$hash}">
-                        {__('%s&nbsp;€',($count*$meal->getAllCosts())|inttoprice)}
+                        {__('R$&nbsp;%s',($count*$meal->getAllCosts())|inttoprice)}
                     </li>                       
 
                 {/foreach}
@@ -53,14 +53,14 @@
         
         <ul id="delivercost" class="{if $order->getService()->getDeliverCost($cityId, null, $order) <= 0}hidden{/if}">
             <li>
-                <em>{if $order->getService()->isAvanti()}{__('Energiekostenaufschlag:')}{else}{__('Lieferkosten:')}{/if}</em> <span class="yd-deliver-cost">{__('%s €', $order->getService()->getDeliverCost($cityId, null, $order)|inttoprice)}</span>
+                <em>{if $order->getService()->isAvanti()}{__('Energiekostenaufschlag:')}{else}{__('Lieferkosten:')}{/if}</em> <span class="yd-deliver-cost">{__('R$ %s', $order->getService()->getDeliverCost($cityId, null, $order)|inttoprice)}</span>
             </li> 
         </ul>
         
         <ul>
             <li class="yd-shopping-endprice">
                 <em>{__('Bestellwert:')}</em> 
-                <strong class="yd-full-amount">{__('%s €',$order->getAbsTotal(false,false,true,false,false,false)|inttoprice)}</strong>           
+                <strong class="yd-full-amount">{__('R$ %s',$order->getAbsTotal(false,false,true,false,false,false)|inttoprice)}</strong>
                 <input type="hidden" name="amount" value="{$order->getAbsTotal(false,false,true,false,false,false)}" />
             </li>
         </ul>

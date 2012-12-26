@@ -27,21 +27,8 @@ class Yourdelivery_Model_DbTable_Link extends Zend_Db_Table_Abstract{
     public static function getDomains(){
 
         $domains = array(
-            "www.lieferando.de",
-            "www.lieferando.at",
-            "www.lieferando.ch",
-            "www.taxiresto.fr",
-            "www.elpedido.es",
-            "www.appetitos.it",
-            "www.smakuje.pl",
-            "www.janamesa.com.br",
-            "www.eat-star.de",
-            "pyszne.pl"
-            // RIP "www.yourdelivery.de",
+            "www.janamesa.com.br"
         );
-        if (!IS_PRODUCTION) {
-            $domains[] = "www.yourdelivery.local";
-        }
         return $domains;
 
     }

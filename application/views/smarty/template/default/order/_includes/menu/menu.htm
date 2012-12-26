@@ -78,7 +78,7 @@
                             <input type="hidden" id="yd-mealCost-{$meal->getId()}-{$size.id}-topseller" value="{$size.cost}" />
                             {if ($meal->getPriceType() == 'normal')}
                             <a href="#{$meal->getId()}" class="add-to-card tooltip" id="meal-{$meal->getId()}-{$size.id}-{$meal->hasSpecials()*1}-topseller" title="{__('%s (%s) zur Bestellung hinzufügen', $meal->getName(), $size.name)}{if $meal->getExcludeFromMinCost() == 1}{'<br /><span style=font-size:10px;color:red;>'}{__('Diese Speise wird nicht zum Mindestbestellwert gerechnet')}{'</span>'}{/if}">
-                                {__('%s <sup>€</sup>',$size.cost|inttoprice)|nobreak}
+                                {__('<sup>R$</sup> %s',$size.cost|inttoprice)|nobreak}
                             </a>
                             {/if}
                         </div>
@@ -176,18 +176,18 @@
                     <input type="hidden" id="yd-mealCost-{$meal.id}-{$sizeId}" value="{$meal.cost}" />
                     {if ($meal.priceType == 'normal')}
                     <a href="#{$meal.id}" class="add-to-card " id="meal-{$meal.id}-{$sizeId}-{$meal.hasSpecials*1}-0" >
-                        {__('%s <sup>€</sup>',$meal.cost|inttoprice)|nobreak}
+                        {__('<sup>R$</sup> %s',$meal.cost|inttoprice)|nobreak}
                     </a>
                     {/if}
 
                     {if $meal.pfand > 0}
                     <i class="pfand {if $meal.excludeFromMinCost == 1}tooltip-mincost{else}tooltip{/if}"
-                       title="{__('Der angegebene Preis von ')}<b>{__('%s €',$meal.cost|inttoprice)}</b> {__('beinhaltet einen Pfandwert von ')}<b>{__('%s €',$meal.pfand|inttoprice)}</b>">
-                        {__('inkl. Pfand:')} {__('%s €',$meal.pfand|inttoprice)}
+                       title="{__('Der angegebene Preis von ')}<b>{__('R$ %s',$meal.cost|inttoprice)}</b> {__('beinhaltet einen Pfandwert von ')}<b>{__('R$ %s',$meal.pfand|inttoprice)}</b>">
+                        {__('inkl. Pfand:')} {__('R$ %s',$meal.pfand|inttoprice)}
                     </i>
                     {/if}
                     {if $mode != "rest"}
-                    <i class="netto {if $meal.excludeFromMinCost == 1}tooltip-mincost{else}tooltip{/if}" title="{__('Der Nettopreis beinhaltet kein Pfand')}">{__('Netto:')} {__('%s €',$meal.netto|inttoprice|nobreak)}</i>
+                    <i class="netto {if $meal.excludeFromMinCost == 1}tooltip-mincost{else}tooltip{/if}" title="{__('Der Nettopreis beinhaltet kein Pfand')}">{__('Netto:')} {__('R$ %s',$meal.netto|inttoprice|nobreak)}</i>
                     {/if}
                 </div>
                 {else}

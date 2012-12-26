@@ -23,17 +23,17 @@
      <div class="header">
          <div class="banner">
              <ul id="slideshow">
-                 <li class="item active"><img src="/media/images/jnm-frontend/home-banner/shushi_air.jpg" alt="" /></li>
-                 <li class="item"><img src="/media/images/jnm-frontend/home-banner/burguer_air.jpg" alt="" /></li>
-                 <li class="item"><img src="/media/images/jnm-frontend/home-banner/frango_air.jpg" alt="" /></li>
-                 <li class="item"><img src="/media/images/jnm-frontend/home-banner/pizza_air.jpg" alt="" /></li>
+                 <li class="item active"><img src="/media/images/jnm-frontend/home-banner/shushi_air_fire.jpg" alt="" /></li>
+                 <li class="item"><img src="/media/images/jnm-frontend/home-banner/burguer_air_fire.jpg" alt="" /></li>
+                 <li class="item"><img src="/media/images/jnm-frontend/home-banner/frango_air_fire.jpg" alt="" /></li>
+                 <li class="item"><img src="/media/images/jnm-frontend/home-banner/pizza_air_fire.jpg" alt="" /></li>
              </ul>
              <div class="headerBanner">
                  <div class="contentHeader">
                      <div class="logoJanamesa"><img src="/media/images/jnm-frontend/logonatal.png" /></div>
                      <div class="acesso">
-                         <div class="facebook"><a href="http://www.janamesa.com.br/user/fb-login/?redirect_url=http://www.janamesa.com.br/"><img src="/media/images/jnm-frontend/facebooklogin.png" /></a></div>
-                         <div class="cadastrar"><a href="http://www.janamesa.com.br/user/register">CADASTRE-SE</a></div>
+                         <div class="facebook"><a href="/user/fb-login/?redirect_url=http://www.janamesa.com.br/"><img src="/media/images/jnm-frontend/facebooklogin.png" /></a></div>
+                         <div class="cadastrar"><a href="/user/register">CADASTRE-SE</a></div>
                          <div class="entrar">ENTRAR<img src="/media/images/jnm-frontend/seta.png" /></div>
                          <div class="entrar_modal" style="display:none;" >
                              <form name="login" action="/user/login" method="post" id="login">
@@ -72,7 +72,6 @@
                      <div class="step_by_step"></div>
                  </div>
              </div>
-             <div class="footerBanner"></div>
          </div>
          <div class="seletor">
              {literal}
@@ -80,10 +79,11 @@
              <div class="right" onclick="if (exec == false ) {exec=true;  $('#slideshow').slideNext();} exec = false;"><img src="/media/images/jnm-frontend/seta-dir.png" /></div>
              {/literal}
          </div>
+         <div class="footerBanner"></div>
      </div>
 
-         <div class="mainContent">
-             <div class="content">
+     <div class="mainContent">
+         <div class="content">
              <div class="suggestions">
                  <table>
                      <tr>
@@ -92,22 +92,22 @@
                          </td>
                      </tr>
                      <tr>
-                         <td onclick="parent.location='http://www.janamesa.com.br/kebab-a-domicilio';"><div class="category_1"><div class="category_mask_1"></div></div></td>
-                         <td onclick="parent.location='http://www.janamesa.com.br/feijoada-delivery';"><div class="category_2"><div class="category_mask_2"></div></div></td>
-                         <td onclick="parent.location='http://www.janamesa.com.br/comida-chinesa';"><div class="category_3"><div class="category_mask_3"></div></div></td>
-                         <td onclick="parent.location='http://www.janamesa.com.br/tortas-delivery';"><div class="category_4"><div class="category_mask_4"></div></div></td>
+                         <td onclick="parent.location='/kebab-a-domicilio';"><div class="category_1"><div class="category_mask_1"></div></div></td>
+                         <td onclick="parent.location='/feijoada-delivery';"><div class="category_2"><div class="category_mask_2"></div></div></td>
+                         <td onclick="parent.location='/comida-chinesa';"><div class="category_3"><div class="category_mask_3"></div></div></td>
+                         <td onclick="parent.location='/tortas-delivery';"><div class="category_4"><div class="category_mask_4"></div></div></td>
                      </tr>
                      <tr>
-                         <td onclick="parent.location='http://www.janamesa.com.br/comida-espanhola';"><div class="category_5"><div class="category_mask_5"></div></div></td>
-                         <td onclick="parent.location='http://www.janamesa.com.br/comida-italiana';"><div class="category_6"><div class="category_mask_6"></div></div></td>
-                         <td onclick="parent.location='http://www.janamesa.com.br/comida-japonesa';"><div class="category_7"><div class="category_mask_7"></div></div></td>
-                         <td onclick="parent.location='http://www.janamesa.com.br/fast-food';"><div class="category_8"><div class="category_mask_8"></div></div></td>
+                         <td onclick="parent.location='/comida-espanhola';"><div class="category_5"><div class="category_mask_5"></div></div></td>
+                         <td onclick="parent.location='/comida-italiana';"><div class="category_6"><div class="category_mask_6"></div></div></td>
+                         <td onclick="parent.location='/comida-japonesa';"><div class="category_7"><div class="category_mask_7"></div></div></td>
+                         <td onclick="parent.location='/fast-food';"><div class="category_8"><div class="category_mask_8"></div></div></td>
                      </tr>
                      <tr>
-                         <td onclick="parent.location='http://www.janamesa.com.br/comida-mexicana';"><div class="category_9"><div class="category_mask_9"></div></div></td>
-                         <td onclick="parent.location='http://www.janamesa.com.br/pizzeria';"><div class="category_10"><div class="category_mask_10"></div></div></td>
-                         <td onclick="parent.location='http://www.janamesa.com.br/restaurantes-frutos-do-mar';"><div class="category_11"><div class="category_mask_11"></div></div></td>
-                         <td onclick="parent.location='http://www.janamesa.com.br/salada-delivery';"><div class="category_12"><div class="category_mask_12"></div></div></td>
+                         <td onclick="parent.location='/comida-mexicana';"><div class="category_9"><div class="category_mask_9"></div></div></td>
+                         <td onclick="parent.location='/pizzeria';"><div class="category_10"><div class="category_mask_10"></div></div></td>
+                         <td onclick="parent.location='/restaurantes-frutos-do-mar';"><div class="category_11"><div class="category_mask_11"></div></div></td>
+                         <td onclick="parent.location='/salada-delivery';"><div class="category_12"><div class="category_mask_12"></div></div></td>
                      </tr>
                  </table>
                  <div class="district">
@@ -150,21 +150,20 @@
 
 
              <div class="col-right">
-                 <div class="menu pagecom"><img src="/media/images/jnm-frontend/col-right/paguecom.png" /></div>
-                 <div class="menu"><a href="https://www.facebook.com/Janamesa.delivery"><img src="/media/images/jnm-frontend/col-right/socializando.png" /></a></div>
-                 <div class="menu"><a href="http://www.janamesa.com.br/contact"><img src="/media/images/jnm-frontend/col-right/ajuda.png" /></a></div>
+                 <div class="menu pagecom"><img src="/media/images/jnm-frontend/col-right/paguecom_fire.jpg" /></div>
+                 <div class="menu"><a href="https://www.facebook.com/Janamesa.delivery"><img src="/media/images/jnm-frontend/col-right/socializando_fire.gif" /></a></div>
+                 <div class="menu"><a href="/contact"><img src="/media/images/jnm-frontend/col-right/ajuda_fire.gif" /></a></div>
                  <div class="facebook">
                      <script src="http://connect.facebook.net/{$config->locale->name}/all.js#xfbml=1"></script>
                      <fb:like-box profile_id={$config->facebook->page_id}" connections="8" stream="0" width="300" height="290" logobar="0"></fb:like-box>
                  </div>
              </div>
-             </div>
-
          </div>
 
      </div>
-         {include file="jnm_base_footer.htm"}
+
  </div>
+         {include file="jnm_base_footer.htm"}
  {if $config->google->conversion}
      {include file='_cookies/google/adwords.htm'}
  {/if}

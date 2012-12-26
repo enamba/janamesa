@@ -595,13 +595,13 @@ h2{
 
 .yd-inner, .yd-nav ul, #yd-content {
     width: 1020px;
-    display: inline-block;
     text-align: left;
+    display: inline-block;
 }
 
 #yd-content {
     position: relative;
-    margin-top: 60px;
+    margin-top: 60px auto auto;
     padding-bottom: 212px;
 }
 

@@ -12,10 +12,11 @@
     width: 100%;
 }
 
-#slideshow li > img {
+#slideshow li img {
     left:50%;
     margin-left: -800px;
     position: relative;
+    overflow: hidden;
 }
 
 #slideshow LI.active {
@@ -39,7 +40,7 @@
 }
 
 .seletor {
-    margin-top: -380px;
     position: absolute;
+    top: 360px;
     width: 100%;
 }

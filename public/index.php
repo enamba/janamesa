@@ -10,10 +10,10 @@
 define('START_TIME', microtime(true));
 
 // Define default timezone
-date_default_timezone_set('Europe/Berlin');
+date_default_timezone_set('America/Sao_Paulo');
 
 // Define locales
-setlocale(LC_ALL, "de_DE.UTF-8");
+setlocale(LC_ALL, "pt_BR.UTF-8");
 
 // Define path to application directory
 defined('APPLICATION_PATH')
@@ -36,10 +36,6 @@ set_include_path(implode(PATH_SEPARATOR, array(
             get_include_path(),
         )));
 
-if ($_SERVER['REQUEST_URI'] == '/' && HOSTNAME == 'pp.lieferando.de') {
-    die();
-}
-
 require_once APPLICATION_PATH . '/functions/errors.php';
 require_once APPLICATION_PATH . '/functions/functions.php';
 require_once APPLICATION_PATH . '/functions/grid.function.php';
@@ -50,17 +46,7 @@ require_once APPLICATION_PATH . '/functions/grid.function.php';
 function isIndex($checkForParameters = true) {
     $uri = @parse_url($_SERVER['REQUEST_URI']);
     if (is_array($uri) && $uri['path'] == '/') {
-        if (strstr(HOSTNAME, "elpedido") ||
-                strstr(HOSTNAME, ".yourdelivery") ||
-                strstr(HOSTNAME, ".lieferando") ||
-                strstr(HOSTNAME, ".appetitos") ||
-                strstr(HOSTNAME, ".smakuje") ||
-                strstr(HOSTNAME, ".pyszne") ||
-                strstr(HOSTNAME, ".eat-star") ||
-                strstr(HOSTNAME, ".janamesa") ||
-                strstr(HOSTNAME, ".taxiresto")) {
-
-
+        if (strstr(HOSTNAME, ".janamesa")) {
             if ($checkForParameters && count($_GET) == 0 && count($_POST) == 0) {
                 return true;
             } elseif ($checkForParameters === false) {
@@ -96,7 +82,7 @@ require_once 'Zend/Application.php';
 require_once 'Zend/Config.php';
 
 $configs = array(APPLICATION_PATH . '/configs/application.ini');
-$domain_config = APPLICATION_PATH . '/configs/%%DOMAIN_NAME%%.ini';
+$domain_config = APPLICATION_PATH . '/configs/janamesa.com.br.ini';
 if (file_exists($domain_config)) {
     $configs[] = $domain_config;
 }

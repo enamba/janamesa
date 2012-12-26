@@ -3,7 +3,7 @@
  * @since 08.07.2011
  */
 if (CURRENCY === undefined) {
-    var CURRENCY = "€";
+    var CURRENCY = "R$";
 }
 function int2price(price, currency, decimals, dec_point, thousands_sep) {
     
@@ -40,5 +40,5 @@ function int2price(price, currency, decimals, dec_point, thousands_sep) {
     if (!decimals) {
         p = p.splice(0, 1);
     }
-    return p.join(dec_point) + (currency ? '&nbsp;' + CURRENCY : '');
+    return (currency ? CURRENCY + '&nbsp;' : '') + p.join(dec_point);
 }

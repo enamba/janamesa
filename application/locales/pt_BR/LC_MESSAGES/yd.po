@@ -6338,7 +6338,7 @@ msgstr "Agora escolha os extras"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c1182a5b62e225193ccc3cb5a4d8ab6c182eb48d.file.callmeal.htm.php:261
 #, php-format
 msgid "%s&nbsp;€"
-msgstr "%s&nbsp;R$"
+msgstr "R$&nbsp;%s"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/janamesa.com.br/50bf19aff3806e429c3104119eff9232e7927cd9.file.callmeal.htm.php:292
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/c1182a5b62e225193ccc3cb5a4d8ab6c182eb48d.file.callmeal.htm.php:278
@@ -9104,7 +9104,7 @@ msgstr "Este prato não será contado ao valor pedido mínimo"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/aec0e7ea40bb0ce6b2b1475393e08674ed4203da.file.menu.htm.php:682
 #, php-format
 msgid "%s <sup>€</sup>"
-msgstr "%s <sup>R$</sup>"
+msgstr "<sup>R$</sup> %s"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/cdd2f10b4088be9d32847b1ee0969b0b5725cc71.file.menu.htm.php:218
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/cdd2f10b4088be9d32847b1ee0969b0b5725cc71.file.menu.htm.php:403
@@ -9561,7 +9561,7 @@ msgstr ""
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/8b81df0d66b181e0611c5b12fbb783b182f9c862.file.confirm.htm.php:237
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a35526d1f0779f0c3bb770befff35659c9a98d36.file._standard_rules.htm.php:31
 msgid "&nbsp;€"
-msgstr "&nbsp;R$"
+msgstr "R$&nbsp;"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/05b63c1927097946c6cad632a9ff6bd3f3b5a6da.file.index.htm.php:329
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/8b81df0d66b181e0611c5b12fbb783b182f9c862.file.confirm.htm.php:240
@@ -12691,7 +12691,7 @@ msgid ""
 "selbstverständlich zurücküberwiesen. In der Regel erfolgen Rückerstattungen "
 "jedoch innerhalb von 7 Arbeitstagen."
 msgstr ""
-"Infelizmente, esse Voucher não vale mais. Isso signifcia que alguem outro "
+"Infelizmente, esse Voucher não vale mais. Isso significa que já "
 "utilizou o Voucher.\n"
 "Se nós erramos sem querer, por favor, envie um email com seu nome e dados "
 "sobre a ação, e os detalhes sobre a ação para %s.\n"
