@@ -398,19 +398,29 @@ You may or may not update the views and deploy the update statements of the stag
         <!-- move to version into staging -->
         <echo msg="compressing..." />
         <exec command="tar zcf release-${build_time}.tar.gz ." dir="${tmp}" />
-        <echo msg="moving staging release to servers" />
+        <echo msg="creating a new directory: /home/ydadmin/staging/${domain}/${version}" />
         <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="mkdir -p /home/ydadmin/staging/${domain}/${version}" />
 
         <!-- rsync to remote server -->
+        <echo msg="moving staging release to servers" />
         <exec command="rsync --partial --progress --rsh=ssh --archive ${tmp}/release-${build_time}.tar.gz ydadmin@${server}:/tmp" />
 
         <!-- pack release and link new staging -->
-        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="tar xzf /tmp/release-${build_time}.tar.gz -C /home/ydadmin/staging/${domain}/${version}" />
+        <echo msg="decompressing: tar xzvf /tmp/release-${build_time}.tar.gz -C /home/ydadmin/staging/${domain}/${version}" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="tar xzvf /tmp/release-${build_time}.tar.gz -C /home/ydadmin/staging/${domain}/${version}" />
+        <echo msg="creating simbols links 1" />
         <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="ln -nfs /home/ydadmin/staging/${domain}/${version} /home/ydadmin/staging/${domain}/current" />
+        <echo msg="creating simbols links 2" />
         <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="ln -nfs /home/ydadmin/logs/system/${domain}/staging /home/ydadmin/staging/${domain}/current/application/logs" />
+        <echo msg="creating simbols links 3" />
         <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="ln -nfs /home/ydadmin/storage/${domain}/staging /home/ydadmin/staging/${domain}/current/storage" />
-        
-        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="rm /tmp/release-${build_time}.tar.gz" />   
+<!--
+        ln -nfs /home/ydadmin/staging/janamesa.com.br/1.1.145 /home/ydadmin/staging/janamesa.com.br/current
+        ln -nfs /home/ydadmin/logs/system/janamesa.com.br/staging /home/ydadmin/staging/janamesa.com.br/current/application/logs
+        ln -nfs /home/ydadmin/storage/janamesa.com.br/staging /home/ydadmin/staging/janamesa.com.br/current/storage
+-->
+        <echo msg="removing compact file" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="rm /tmp/release-${build_time}.tar.gz" />
     </target> 
     
     <!-- ============================================  -->
