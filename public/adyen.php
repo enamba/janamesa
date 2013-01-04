@@ -1,4 +1,4 @@
-<?
+<?php
 /*
    ========================================================================================
    ========================================================================================
@@ -18,9 +18,9 @@
 	$sharedSecret
 		The shared HMAC key.
 */
-	$skinCode 			= "3fP3PsJA";
-	$merchantAccount    = "MyMerchantAccount";
-	$sharedSecret       = "testKeyx";            // shared HMAC secret for TEST environment
+	$skinCode 	    = "WMQ8fNZJ";
+	$merchantAccount    = "JanamesaCieCom";
+	$sharedSecret       = "janamesa";            // shared HMAC secret for TEST environment
     //  $sharedSecret       = "liveKeyx";            // shared HMAC secret for LIVE environment
 
 
@@ -46,11 +46,11 @@
         The email of the shopper
 */
 
-	$merchantReference = "TestOrder12345"; // The transaction reference you assign to the payment
+	$merchantReference = "JanamesaCieCom"; // The transaction reference you assign to the payment
 	$paymentAmount     = 10000;  // Amount in minor units (10000 for 100.00 EUR)
-	$currencyCode      = "EUR";  // 3 Digit ISO Currency Code  (e.g. GBP, USD)
+	$currencyCode      = "BRL";  // 3 Digit ISO Currency Code  (e.g. GBP, USD)
 	$shipBeforeDate    = date("Y-m-d" , mktime(date("H"), date("i"), date("s"), date("m"), date("j")+5, date("Y"))); // example: ship in 5 days
-	$shopperLocale     = "en_GB"; // Locale (language) to present to shopper (e.g. en_US, nl, fr, fr_BE)
+	$shopperLocale     = "pt_BR"; // Locale (language) to present to shopper (e.g. en_US, nl, fr, fr_BE)
 	$orderDataRaw	   = "<b>1 <i>iPod</i> MP3 Player</b>"; // A description of the payment which is displayed to shoppers
 	$sessionValidity   = date(DATE_ATOM	, mktime(date("H")+1, date("i"), date("s"), date("m"), date("j"), date("Y"))); // example: shopper has one hour to complete
 	$shopperReference  = "shopper123"; // the shopper id in our system 
@@ -89,18 +89,18 @@
 </head>
 <body>
 	<form name="adyenForm" action="https://test.adyen.com/hpp/pay.shtml" method="post">
-		<input type="hidden" name="merchantReference" value="<?=$merchantReference?>" />
-		<input type="hidden" name="paymentAmount"     value="<?=$paymentAmount?>" />
-		<input type="hidden" name="currencyCode"      value="<?=$currencyCode?>" />
-		<input type="hidden" name="shipBeforeDate"    value="<?=$shipBeforeDate?>" />
-		<input type="hidden" name="skinCode"          value="<?=$skinCode?>" />
-		<input type="hidden" name="merchantAccount"   value="<?=$merchantAccount?>" />
-		<input type="hidden" name="shopperLocale"     value="<?=$shopperLocale?>" />
-		<input type="hidden" name="orderData"         value="<?=$orderData?>" />
-		<input type="hidden" name="sessionValidity"   value="<?=$sessionValidity?>" />
-		<input type="hidden" name="merchantSig"       value="<?=$merchantSig?>" />
-		<input type="hidden" name="shopperEmail"      value="<?=$shopperEmail?>" />
-		<input type="hidden" name="shopperReference"  value="<?=$shopperReference?>" />
+		<input type="hidden" name="merchantReference" value="<?php echo $merchantReference?>" />
+		<input type="hidden" name="paymentAmount"     value="<?php echo $paymentAmount?>" />
+		<input type="hidden" name="currencyCode"      value="<?php echo $currencyCode?>" />
+		<input type="hidden" name="shipBeforeDate"    value="<?php echo $shipBeforeDate?>" />
+		<input type="hidden" name="skinCode"          value="<?php echo $skinCode?>" />
+		<input type="hidden" name="merchantAccount"   value="<?php echo $merchantAccount?>" />
+		<input type="hidden" name="shopperLocale"     value="<?php echo $shopperLocale?>" />
+		<input type="hidden" name="orderData"         value="<?php echo $orderData?>" />
+		<input type="hidden" name="sessionValidity"   value="<?php echo $sessionValidity?>" />
+		<input type="hidden" name="merchantSig"       value="<?php echo $merchantSig?>" />
+		<input type="hidden" name="shopperEmail"      value="<?php echo $shopperEmail?>" />
+		<input type="hidden" name="shopperReference"  value="<?php echo $shopperReference?>" />
 		<input type="submit" name="submit" value="Submit" />
 	</form>
 </body>
