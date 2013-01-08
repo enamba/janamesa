@@ -561,7 +561,7 @@ class Yourdelivery_Model_Billing_Restaurant extends Yourdelivery_Model_Billing_A
                     }
 
                     if ($order->getState() < 0) {
-                        $this->logger->debug(sprintf('Ignoring order %d because of state %d', $order->getId(), $order->getState()));
+                        $this->logger->debug(sprintf('Ignoring order %d of restId %d because of state %d', $order->getId(), $sid, $order->getState()));
                         continue;
                     }
 
@@ -1122,7 +1122,7 @@ class Yourdelivery_Model_Billing_Restaurant extends Yourdelivery_Model_Billing_A
                     $this->_storage->store($this->getNumber() . '.pdf', file_get_contents($file), null, true);
                 } else {
                     $this->logger->err('Could not create bill pdf');
-                    return false;
+                    //return false;
                 }
             }
 
@@ -1179,6 +1179,7 @@ class Yourdelivery_Model_Billing_Restaurant extends Yourdelivery_Model_Billing_A
 
             //only store if this is not a test
             $billId = $row->save();
+            $this->logger->debug(sprintf('[NMB] Saving billId:%d', $billId ));
             if (!$billId) {
                 return false;
             }

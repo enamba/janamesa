@@ -538,7 +538,7 @@ abstract class Yourdelivery_Model_Servicetype_Abstract extends Default_Model_Bas
             if (intval($c->id) == 0) {
                 continue;
             }
-            $restaurant = new Yourdelivery_Model_Servicetype_Restaurant($c->id, $c);
+            $restaurant = new Yourdelivery_Model_Servicetype_Restaurant($c->id);
             if ($all || $restaurant->isOnline()) {
                 $restaurants->attach($restaurant);
             }

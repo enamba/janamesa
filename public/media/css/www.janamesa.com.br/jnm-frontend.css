@@ -200,6 +200,7 @@ div.footerBanner {
     width: 100%;
     position: relative;
     margin-bottom: -5px;
+    background-repeat: repeat-x;
 }
 
 

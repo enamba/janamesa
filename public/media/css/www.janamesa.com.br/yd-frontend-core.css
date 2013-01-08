@@ -1088,7 +1088,7 @@ li.yd-shopping-price{
 }
 
 li.yd-shopping-price:after{
-    content: 'Unitário';
+    content: 'Unitario';
     float: left;
     padding: 0 5px 0 0;
     clear: none;
@@ -1720,7 +1720,7 @@ div.hreview span.rating{
 
 
 .yd-breadcrumbs-new {
-    margin: 0 360px 10px 20px;
+    margin: 20px 360px 10px 20px;
     padding: 0 0 17px 0;
     font-family: Georgia,"Times New Roman",Times,serif;
     font-size: 14px;
