@@ -1122,7 +1122,7 @@ class Yourdelivery_Model_Billing_Restaurant extends Yourdelivery_Model_Billing_A
                     $this->_storage->store($this->getNumber() . '.pdf', file_get_contents($file), null, true);
                 } else {
                     $this->logger->err('Could not create bill pdf');
-                    //return false;
+                    return false;
                 }
             }
 
