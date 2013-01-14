@@ -24,7 +24,7 @@
 
             <ul id="delivercost">
                 <li>
-                    <em>{if is_object($service) && $service->isAvanti()}{__('Energiekostenaufschlag:')}{else}{__('Lieferkosten:')}{/if}</em> <span class="yd-deliver-cost">{__('%s €', 0|inttoprice)}</span>
+                    <em>{if is_object($service) && $service->isAvanti()}{__('Energiekostenaufschlag:')}{else}{__('Lieferkosten:')}{/if}</em> <span class="yd-deliver-cost">{__('R$ %s', 0|inttoprice)}</span>
                 </li>
             </ul>
 

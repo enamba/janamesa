@@ -38,8 +38,8 @@
                 {if $service->isOnlyPickup()}
                 <li class="yd-menu-detail-cost">{__('Nur Abholung!')}</li>
                 {else}
-                <li class="yd-menu-detail-cost">{if $service->isAvanti()}{__('Energiekostenaufschlag: ')}{else}{__('Lieferkosten: ')}{/if}<span class="yd-deliver-cost">{__('%s €', 0|inttoprice)}</span></li>
-                <li>{__('Lieferung ab:')} <span class="yd-delivery-from">{__('%s €', 0|inttoprice)}</span></li>
+                <li class="yd-menu-detail-cost">{if $service->isAvanti()}{__('Energiekostenaufschlag: ')}{else}{__('Lieferkosten: ')}{/if}<span class="yd-deliver-cost">{__('R$ %s', 0|inttoprice)}</span></li>
+                <li>{__('Lieferung ab:')} <span class="yd-delivery-from">{__('R$ %s', 0|inttoprice)}</span></li>
                 {/if}
             </ul>
 

@@ -134,7 +134,23 @@ class Yourdelivery_Model_DbTable_Restaurant_Openings extends Default_Model_DbTab
         $selectFillup = $this->getAdapter()->select()
                 ->from(array('rod' => 'restaurant_openings_default'))
                 ->where('rod.day IN(?)', $generatedDays);
+        if ($serviceId == 31){
+            $a = 'a';
+        }
 
+        //find if today is holiday
+        $selectHoliday = $this->getAdapter()->select()
+                ->from(array('ro' => 'restaurant_openings_holidays'))
+                ->where('ro.date = ?', $fromDate);
+        
+        $resultHoliday = $this->getAdapter()->fetchAll($selectHoliday);
+        
+        if (count($resultHoliday) > 0) {
+            //if today is holiday then change the day of week to holiday.
+            // 10 == holiday
+            $generatedDays = array (10);
+        }
+        
         //get all regular openings
         $selectRegularOpenings = $this->getAdapter()->select()
                 ->from(array('ro' => 'restaurant_openings'), array(

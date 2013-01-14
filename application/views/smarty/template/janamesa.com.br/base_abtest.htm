@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="pt-br" xml:lang="pt-br" class="ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="pt-br" xml:lang="pt-br" class="ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="pt-br" xml:lang="pt-br" class="ie8"> <![endif]-->
-<!--[if gt IE 8 ]> <html lang="pt-br" xml:lang="pt-br" class="ie9"> <![endif]-->
-<!--[!IE]>   <!--> <html lang="pt-br" xml:lang="pt-br">         <!--<![endif]-->
+<!--[if lt IE 7 ]> <html lang="pt" xml:lang="pt" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="pt" xml:lang="pt" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="pt" xml:lang="pt" class="ie8"> <![endif]-->
+<!--[if gt IE 8 ]> <html lang="pt" xml:lang="pt" class="ie9"> <![endif]-->
+<!--[!IE]>   <!--> <html lang="pt" xml:lang="pt">         <!--<![endif]-->
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="author" content="janamesa Team" />
-        <meta name="publisher" content="janamesa Team" />
+        <meta name="author" content="yourdelivery GmbH" />
+        <meta name="publisher" content="yourdelivery GmbH" />
 
         <!-- custom meta tags -->
         {foreach from=$additionalMetatags item=meta}
@@ -19,10 +19,14 @@
         <!-- page title -->
         <title>Janamesa</title>
 
-        <link rel="canoncial" href="http://www.janamesa.com.br/" />
+        {if $canonical}
+        <link rel="canoncial" href="{$canonical}" />
+        {/if}
 
         <link rel="SHORTCUT ICON" href="/media/css/www.janamesa.com.br/favicon.ico" type="image/x-icon" />
 
+        {include file='_cookies/janamesa/abtest.htm'}
+        
         <link rel="stylesheet" type="text/css" href="/media/css/compiled/frontend-{$extra_css|default:'no'}-{$REVISION}.css" />
         
         <script type="text/javascript" src="/media/javascript/compiled/frontend-{$REVISION}.js"></script>

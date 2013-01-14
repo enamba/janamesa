@@ -364,7 +364,7 @@ h2{
 }
 
 #wrapper-header.blue {
-    background: url(/media/css/www.janamesa.com.br/images/bg-header-blue.jpg) center 0 repeat #60a2a9;
+    background: url("/media/css/www.janamesa.com.br/images/bg-header-redred.jpg") repeat scroll center 0 #CA3F42 !important;
 }
 
 #wrapper-header .bottom-bg {
