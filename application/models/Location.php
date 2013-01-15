@@ -107,6 +107,7 @@ class Yourdelivery_Model_Location extends Default_Model_Base {
         // get lat lng
         $lat = $this->_data['latitude'];
         $lng = $this->_data['longitude'];
+        $district = null;
 
         //
         if ($lat === null || $lng === null || !intval($lat) || !intval($lng)) {
@@ -131,6 +132,33 @@ class Yourdelivery_Model_Location extends Default_Model_Base {
             }
         }
         return $this->_latlng = array($lat, $lng);
+    }
+
+    /**
+     * Get district via google maps
+     * @author enamba
+     * @since 14.01.2013
+     * @return string
+     */
+    public function getDistrictByGoogleMaps() {
+
+        // build address
+        $address = "";
+        if ($this->getStreet() !== null) {
+            $address .= $this->getStreet();
+            if ($this->getHausnr() !== null) {
+                $address .= " " . $this->getHausnr();
+            }
+        }
+        $address .= ( $address ? ", " : "") . $this->getPlz();
+
+        // ask the one who knows everything
+        $geo = new Default_Api_Google_Geocoding();
+        if ($geo->ask($address)) {
+            return $geo->getDistrict();
+        } else {
+            return '';
+        }
     }
 
     /**

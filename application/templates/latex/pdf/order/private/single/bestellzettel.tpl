@@ -99,6 +99,7 @@
             <<else>>
                 <<__('Stadt:')|escape_latex>>                  & \textbf{<<__("k.A.")|escape_latex>>}\\
             <</if>>
+            <<__('Bairro')|escape_latex>>                & \textbf{<<$location->getDistrictByGoogleMaps()|default:__("k.A.")|escape_latex>>}\\
             <<__('Lieferanweisungen:')|escape_latex>>      & \multicolumn{1}{v{13.5cm}}{\textbf{<<$location->getComment()|default:__("k.A.")|escape_latex>>}}\\
             <<__('Firma:')|escape_latex>>                  & \textbf{<<$location->getCompanyName()|default:__("k.A.")|escape_latex>>}\\
             <<__('Stockwerk:')|escape_latex>>              & \textbf{<<$location->getEtage()|default:__("k.A.")|escape_latex>>}\\

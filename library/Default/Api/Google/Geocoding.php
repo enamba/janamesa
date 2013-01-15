@@ -165,6 +165,23 @@ class Default_Api_Google_Geocoding {
         }
         return null;
     }
+    
+    /**
+     * @author namba
+     * @since 14.01.2013
+     * @param interger $i
+     * @return string
+     */
+    public function getDistrict($i = 0){
+        if (count($this->_response->results)) {
+            foreach($this->_response->results[$i]->address_components as $key => $component){
+                if (in_array("sublocality",$component->types) ){
+                    return $component->long_name;
+                }
+            }
+        }
+        return null;
+    }
 
     /**
      * Get lat lng
