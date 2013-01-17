@@ -227,13 +227,18 @@ div.col-right div.menu {
     width: 100%;
 }
 
+div.col-right div.menu_faleconosco {
+    margin-left: 17px;
+    width: 295px;
+}
+
 div.col-right div.pagecom {
     margin:5px 14px;
 }
 
 div.col-right div.facebook {
     height: 290px;
-    margin: 0px 0 0 11px;
+    margin: 0px 0 0 14px;
     width: 280px;
 }
 
@@ -437,4 +442,12 @@ div.mainContent {
 
 .yd-index-page .container {
     text-align: center;
+}
+
+#LiveChat_1342624305 {
+    margin-left: -13px;
+}
+
+.fb_iframe_widget {
+    margin-left: 10px;
 }

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: yd\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-08-31 17:04+0200\n"
-"PO-Revision-Date: 2013-01-11 10:47-0300\n"
+"PO-Revision-Date: 2013-01-16 20:08-0300\n"
 "Last-Translator: Eduardo Namba <namba@janamesa.com.br>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -7760,7 +7760,7 @@ msgstr[1] "%s Avaliações"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/janamesa.com.br/765e56c6e82fcbc84077ba5fa3670f49a4c52975.file.service.htm.php:197
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/09912035b1dc823b5048d19e57ad166dc5f8f972.file.service.htm.php:571
 msgid "Sortieren nach "
-msgstr "Separar por ordem "
+msgstr "Ordenar por: "
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/janamesa.com.br/765e56c6e82fcbc84077ba5fa3670f49a4c52975.file.service.htm.php:199
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/09912035b1dc823b5048d19e57ad166dc5f8f972.file.service.htm.php:573
@@ -7780,7 +7780,7 @@ msgstr "Por favor, digite um CEP"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/janamesa.com.br/765e56c6e82fcbc84077ba5fa3670f49a4c52975.file.service.htm.php:237
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/09912035b1dc823b5048d19e57ad166dc5f8f972.file.service.htm.php:636
 msgid "Sortiert nach"
-msgstr "Separar por ordem"
+msgstr "Ordernar por: "
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/janamesa.com.br/765e56c6e82fcbc84077ba5fa3670f49a4c52975.file.service.htm.php:238
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/09912035b1dc823b5048d19e57ad166dc5f8f972.file.service.htm.php:637
@@ -7800,12 +7800,12 @@ msgstr "alfabética"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/janamesa.com.br/765e56c6e82fcbc84077ba5fa3670f49a4c52975.file.service.htm.php:249
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/09912035b1dc823b5048d19e57ad166dc5f8f972.file.service.htm.php:648
 msgid "Höchste Bewertung"
-msgstr "A maior avaliação "
+msgstr "Avaliação"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/janamesa.com.br/765e56c6e82fcbc84077ba5fa3670f49a4c52975.file.service.htm.php:251
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/09912035b1dc823b5048d19e57ad166dc5f8f972.file.service.htm.php:650
 msgid "Meisten Bewertungen"
-msgstr "A mais avaliada"
+msgstr "Mais avaliado"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/janamesa.com.br/765e56c6e82fcbc84077ba5fa3670f49a4c52975.file.service.htm.php:253
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/09912035b1dc823b5048d19e57ad166dc5f8f972.file.service.htm.php:652
@@ -9697,8 +9697,8 @@ msgid ""
 "In deinem Warenkorb befindet sich keine Ware für die Treuepunkte eingelöste "
 "werden können."
 msgstr ""
-"No \"seu pedido\" ainda não tem pratos que valem no sistema de pontos de "
-"fidelidade."
+"No seu pedido ainda não tem pratos que possam ser descontados no sistema de "
+"pontos de fidelidade."
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/28681d78f3b64f5668e5b3ebd7350a5102e545ce.file.start.htm.php:232
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/65a4bf6f4a83b300a35a9dc620196d26823b0996.file.finish.htm.php:728
@@ -12873,7 +12873,7 @@ msgstr ""
 msgid ""
 "Dein Passwort ist bei uns verschlüsselt gespeichert. %s weiß zu keinem "
 "Zeitpunkt, wie dein Passwort lautet!"
-msgstr "Sua senha está chifrada. %s não sabe qual é sua senha!"
+msgstr "Sua senha está criptografada. %s não sabe qual é sua senha!"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/email/05fe7835a627745d48f9ba87e1e99c8a8f6cf46b.file.register.htm.php:106
 #, php-format

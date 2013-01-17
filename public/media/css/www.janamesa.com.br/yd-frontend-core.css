@@ -387,7 +387,6 @@ h2{
 }
 
 .yd-header .yd-inner{
-    background: url(/media/css/www.janamesa.com.br/images/top-bg.png) 0 0 no-repeat transparent;
     min-height: 115px;
     position: relative;
 }
@@ -3254,16 +3253,16 @@ dl.bonus-points .num{color:#fff; font-size:34px; font-family: Museo700, Helvetic
     position: relative;
     top: 0;
     left: 0;
-    z-index: 15;
     -moz-border-radius: 10px !important;
     -webkit-border-radius: 10px !important;
     border-radius: 10px !important;
     behavior: url(/media/css/www.janamesa.com.br/PIE.htc);
     min-height: 121px;
+    border: 1px solid #F2F2F2;
 }
 
 .yd-service-container form:hover{
-    background: url(/media/css/www.janamesa.com.br/images/yd-service-hover.png);
+    border: 1px solid black;
 }
 
 .yd-service-container form,
@@ -3319,7 +3318,7 @@ dl.bonus-points .num{color:#fff; font-size:34px; font-family: Museo700, Helvetic
 }
 
 .yd-service-container form:hover ul.yd-service-select .yd-sv3-1 .yd-rated span.yd-rated-total{
-    color: #fff;
+    color: #3E3935;
 }
 
 .yd-service-container form ul.yd-service-select .yd-sv3-1 .yd-rated:hover span.yd-rated-total{
@@ -3391,7 +3390,7 @@ dl.bonus-points .num{color:#fff; font-size:34px; font-family: Museo700, Helvetic
 }
 
 .yd-service-container form ul.yd-service-select .yd-sv3-3{
-    color: #757372; 
+    color: #3E3935; 
     font-size: 18px;
     padding: 0 0 12px 0;
     font-family: Helvetica,Verdana,Arial,sans-serif;
@@ -3408,21 +3407,19 @@ dl.bonus-points .num{color:#fff; font-size:34px; font-family: Museo700, Helvetic
 }
 
 .yd-service-container form:hover ul.yd-service-select .yd-sv3-2{
-    color: #ffffff;
+    color: #3E3935;
 }
 
 .yd-service-container form:hover ul.yd-service-select .yd-sv3-3{
-    color: #cdb628;
+    color: #3E3935;
 }
 
 .yd-service-container form:hover ul.yd-service-select .yd-sv3-4{
-    background: url(/media/css/www.janamesa.com.br/images/clock-img2.png) 4px 0 no-repeat transparent;
-    color: #5cec4f;
+    color: #61A62B;
 }
 
 .yd-service-container form:hover ul.yd-service-select .yd-sv3-5{
-    color: #fff;
-    background: url(/media/css/www.janamesa.com.br/images/yd-service-cart-white.png) 0 0 no-repeat transparent;
+    color: #4D4D4D;
 }
 
 .yd-service-container form ul.yd-service-select .yd-sv3-2 ul {

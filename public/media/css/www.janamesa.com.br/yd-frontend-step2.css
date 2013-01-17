@@ -8,7 +8,7 @@
     float: left;
     width: 200px;
     height: 35px;
-    margin: 0 10px 0 0;
+    margin: 0 10px 15px 0;
     background: #fff;
     -moz-border-radius: 3px !important;
     -webkit-border-radius: 3px !important;
@@ -33,7 +33,7 @@
     background: none;
 }
 
-#yd-sorting-left a {
+#yd-sorting-left a.old {
     box-shadow: 0 0 0 1px white inset;
     display: block;
     float: right;
@@ -63,7 +63,7 @@
     left: 0;
 }
 
-#yd-sorting-left a:hover {
+#yd-sorting-left a.old:hover {
     background: -moz-linear-gradient(top, #eeeeee 0%, #ffffff 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */

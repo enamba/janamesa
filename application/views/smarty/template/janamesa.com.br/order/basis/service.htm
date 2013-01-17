@@ -39,8 +39,8 @@
                 <span class="yd-rated" id="yd-rate-{$service->getId()}-1">
                     <span class="yd-rated-{($service->getRating()->getAverage()*2)|string_format:'%02d'}"></span>
                     <span class="yd-rated-average">&oslash; {_n('%s Stern', '%s Sterne', $service->getRating()->getAverage(), $service->getRating()->getAverage()|string_format:"%.2f")}</span>
-                    <span class="yd-rated-total">{__('aus total')} <span>{_n('%s Bewertung', '%s Bewertungen', $service->getRating()->count(null, true, false, true), $service->getRating()->count(null, true, false, true))}</span></span>
-                </span>
+                    <span class="yd-rated-total">{__('aus total')}<span>{_n('%s Bewertung', '%s Bewertungen', $service->getRating()->count(null, true, false, true), $service->getRating()->count(null, true, false, true))}</span></span>
+                -{$service->getRating()->getAverage()}-</span>
             </div>
         </form>
         {/foreach}
@@ -74,6 +74,7 @@
                 <input type="hidden" name="cityId" value="" />
                 <input type="text" title="{$city->getPlz()} {$city->getCity()}" class="yd-plz-autocomplete yd-plz-autocomplete-autosubmit yd-only-nr yd-empty-text ui-autocomplete-input yd-only-priv" name="plz" value="" />
             </form>
+            <a id="br-cep-autocomplete">Não sabe seu CEP? Clique aqui</a>
         </div>
 
         <div id="yd-sorting-middle" class="yd-sorting-middle-dropdown-box">
@@ -82,21 +83,17 @@
             <div id="yd-sorting-middle-list" class="hidden">
                 <ul>
                     <li>
-                        {__('Anzeige')}
+                        Ordena&ccedil;&atilde;o
                         <ul>
-                            <li class="active do-sort" id="sort-alpha">{__('Alphabetisch')}</li>
-                            <li class="do-sort revert" id="sort-ratingstars">{__('Höchste Bewertung')}</li>
-                            <li class="do-sort revert" id="sort-ratingcount">{__('Meisten Bewertungen')}</li>
-                            <li class="do-sort revert" id="sort-ratingvotes">{__('Meisten Empfehlungen')}</li>
-                            <li class="do-sort" id="sort-mincost">{__('Mindestbestellwert')}</li>
-                            {if $domain_base != 'taxiresto.fr'}
-                            <li class="do-sort" id="sort-premium">{__('Restaurant Lieferservice')}</li>
-                            {/if}
-                            <li class="do-sort" id="sort-delivercost">{__('Niedrigste Lieferkosten')}</li>
+                            <li class="active do-sort revert" id="sort-ratingstars">Avalia&ccedil;&atilde;o</li>
+                            <li class="do-sort revert" id="sort-ratingvotes">Recomenda&ccedil;&otilde;es</li>
+                            <li class="do-sort" id="sort-mincost">Pedido m&iacute;nimo</li>
+                            <li class="do-sort" id="sort-delivercost">Custo de entrega</li>
+                            <li class="do-sort" id="sort-alpha">Alfab&eacute;tica</li>
                         </ul>
                     </li>
                     <li>
-                        {__('Küchenart')}
+                        Filtro por tipo de cozinha
                         <ul>
                             {foreach from=$ydcategories item=cat name=selectcats}
                             <li class="do-sort-category" id="sort-{$cat.id}">{$cat.name} ({$cat.restcount})</li>
@@ -118,10 +115,6 @@
                 {__('Suche läuft...')}
             </div>
         </div>
-
-        {if $config->domain->base == 'janamesa.com.br'}
-        <a id="br-cep-autocomplete">Não sabe seu CEP? Clique aqui</a>
-        {/if}
 
     </div>
 

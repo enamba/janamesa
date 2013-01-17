@@ -60,7 +60,7 @@
 	                {if $order.status == -1}
 	                 <div class="td">{__('Deine Bewertung entspricht leider nicht unseren Richtlinien und wurde deshalb gelöscht.')}</div>                
 	                {elseif $order.delivery + $order.quality == 10}
-	                <div class="td"><span class="yd-rated-10"></span></div>
+	                <div class="td"><span class="yd-rated-0"></span></div>
 	                {else}
 	                <div class="td"><span class="yd-rated-0{$order.delivery + $order.quality}"></span></div>
 	                {/if}
@@ -131,7 +131,7 @@
                 {if $order.status == -1}
                  <div class="td">{__('Deine Bewertung entspricht leider nicht unseren Richtlinien und wurde deshalb gelöscht.')}</div>                
                 {elseif $order.delivery + $order.quality == 10}
-                <div class="td"><span class="yd-rated-10"></span></div>
+                <div class="td"><span class="yd-rated-0"></span></div>
                 {else}
                 <div class="td"><span class="yd-rated-0{$order.delivery + $order.quality}"></span></div>
                 {/if}
