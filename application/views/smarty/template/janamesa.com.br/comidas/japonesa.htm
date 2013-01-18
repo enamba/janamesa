@@ -1,0 +1,90 @@
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="expires" content="7200" />
+    <meta name="author" content="Janamesa Team" />
+    <meta name="publisher" content="Janamesa Team" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="Jánamesa você encontra o melhor delivery online de Pizzas, Massas, comida Japonesa com muita rapidez e facilidade, bem perto de você" />
+    <meta name="keywords" content="delivery Online, comida, sushi, pizza, delivery, lanche" />
+    <meta name="viewport" content="width=1100">
+    <title>Janamesa - Delivery Online de Sushi, Pizza, Massa, etc..</title>
+
+
+    <script type="text/javascript" src="/media/javascript/compiled/frontend-{$REVISION}.js"></script>
+    <link rel="stylesheet" type="text/css" href="/media/css/compiled/frontend-{$extra_css|default:'no'}-{$REVISION}.css" />
+    {include file='_cookies/google/analytics.htm'}
+</head>
+<body class="home">
+ <div class="container">
+     <div class="header">
+         <div class="banner">
+             <ul id="slideshow">
+                 <li class="item active"><img src="/media/images/jnm-frontend/home-banner/shushi_air_fire.jpg" alt="" /></li>
+                 <li class="item"><img src="/media/images/jnm-frontend/home-banner/burguer_air_fire.jpg" alt="" /></li>
+                 <li class="item"><img src="/media/images/jnm-frontend/home-banner/frango_air_fire.jpg" alt="" /></li>
+                 <li class="item"><img src="/media/images/jnm-frontend/home-banner/pizza_air_fire.jpg" alt="" /></li>
+             </ul>
+             <div class="headerBanner">
+                 <div class="contentHeader">
+                     <div class="logoJanamesa"><img src="/media/images/jnm-frontend/jnm_logo.png" /></div>
+                     <div class="acesso">
+                         <div class="facebook"><a href="/user/fb-login/?redirect_url=http://www.janamesa.com.br/"><img src="/media/images/jnm-frontend/facebooklogin.png" /></a></div>
+                         <div class="cadastrar"><a href="/user/register">CADASTRE-SE</a></div>
+                         <div class="entrar">ENTRAR<img src="/media/images/jnm-frontend/seta.png" /></div>
+                         <div class="entrar_modal" style="display:none;" >
+                             <form name="login" action="/user/login" method="post" id="login">
+                                 <input type="hidden" name="login" value="1" />
+                                 <ul>
+                                     <li>
+                                         <input class="yd-empty-text" type="text" name="user" value="" title="{__('E-Mail-Adresse')}" />
+
+                                         {include file='order/_includes/form_order.htm' postfix='login'}
+                                     </li>
+                                     <li>
+                                         <input class="yd-empty-text" type="password" name="pass" value="" title="{__('Passwort')}" />
+                                     </li>
+                                     <li class="naked"><input class="submitLogin" type="submit" name="ACESSAR" value="ACESSAR"></li>
+                                     {include file='order/_includes/form_order.htm' postfix='login'}
+                                 </ul>
+                             </form>
+                         </div>
+                     </div>
+                     <div class="cep"></div>
+                     <div class="box_header">
+                         PEÇA ONLINE SUA COMIDA
+                         <div class="input_cep">
+                             <form id="yd-start-order-form" method="get" name="cep_form" action="/order_basis/plz">
+                                 <input type="hidden" name="cityId" value="" />
+                                 <input id="yd-plz-search" class="cep yd-plz-autocomplete yd-plz-autocomplete-autosubmit yd-only-nr yd-empty-text" type="text" name="plz" value="" title="{__('Postleitzahl')}" />
+                                 <input class="findRestaurant" type="submit" name="BUSCAR RESTAURANTES" value="BUSCAR RESTAURANTES" />
+                             </form>
+                             <div class="buscarCep"><a id="br-cep-autocomplete2" href="javascript:void(0)">NÃO SABE SEU CEP? CLIQUE AQUI!</a></div>
+                         </div>
+
+                         <div class="iphone">
+                             <a href="https://itunes.apple.com/us/app/janamesa/id532193039?mt=8" target="_blank"><img src="/media/images/jnm-frontend/iphone.png" /> </a>
+                         </div>
+                     </div>
+                     <div class="step_by_step"></div>
+                 </div>
+             </div>
+         </div>
+         <div class="seletor">
+             {literal}
+             <div class="left" onclick="if (exec == false ){ exec=true;  $('#slideshow').slidePrevius();} exec = false;"><img src="/media/images/jnm-frontend/seta-esq.png" /></div>
+             <div class="right" onclick="if (exec == false ) {exec=true;  $('#slideshow').slideNext();} exec = false;"><img src="/media/images/jnm-frontend/seta-dir.png" /></div>
+             {/literal}
+         </div>
+         <div class="footerBanner"></div>
+     </div>
+
+ {if $config->google->conversion}
+     {include file='_cookies/google/adwords.htm'}
+ {/if}
+</body>
+
+</html>

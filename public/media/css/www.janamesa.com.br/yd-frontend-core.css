@@ -2775,11 +2775,12 @@ a.br-box, a.br-box *{
     text-transform: uppercase;
     font-size: 15px;
 }
+
 .br-box.ajuda .br-inner p.bp{
     padding: 15px 0 0 23px;
     color: #55969C;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 12dpx;
 }
 .br-box.social:hover .br-inner p.bp,
 .br-box.newsletter:hover .br-inner p.bp,

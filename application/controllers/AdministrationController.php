@@ -145,6 +145,27 @@ class AdministrationController extends Default_Controller_AdministrationBase {
         // deploy grid to view
         $this->view->grid = $grid->deploy();
     }
+    
+    public function placarAction(){
+        $showdeleted = $this->session->showdeletedcomp;
+
+        // build select
+        $db = Zend_Registry::get('dbAdapter');
+        $select = $db
+                ->select()
+                ->from(array('c' => 'orders'), array(
+                    'total' => 'count(id)',
+                ))
+                ->where('state = 2 AND time >= "2013-01-01"');
+        
+        $rows = $db->query($select);
+        foreach ($rows as $row){
+            $this->view->b = $row['total']-1;
+        }
+        $days = floor((strtotime("31-May-2013")-strtotime("01-Jan-2013"))/86400);
+        $untilNow = floor((time()-strtotime("01-Jan-2013"))/86400);
+        $this->view->c = floor(50000 - ($untilNow*50000)/$days);
+    }
 
     /**
      * show a sortable, filterable table of all companys
@@ -1349,14 +1370,8 @@ class AdministrationController extends Default_Controller_AdministrationBase {
      */
     public function definitionsAction() {
         $developer = array(
-            'vait@yourdelivery.de',
-            'priem@yourdelivery.de',
-            'frank@lieferando.de',
-            'hahn@lieferando.de',
-            'ponert@lieferando.de',
-            'matthias.laug@gmail.com',
-            'haferkorn@lieferando.de',
-            'wunder@lieferando.de'
+            'namba@janamesa.com.br'
+
         );
 
         $admin = $this->session->admin;
