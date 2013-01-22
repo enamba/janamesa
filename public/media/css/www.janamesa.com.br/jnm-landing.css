@@ -1,0 +1,63 @@
+/* 
+    Document   : jnm-landing
+    Created on : 21/01/2013, 14:00:36
+    Author     : eduardonamba
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+body.landing {
+    
+}
+body.landing div.footerBanner {
+    margin-top: 600px;
+}
+body.landing .container{
+    background-repeat: no-repeat;
+    background-position: center;
+}
+body.landing .container .header {
+    background-color: transparent;
+}
+body.landing .wrapper-benefits-block {
+    background: url("/media/images/www.janamesa.com.br/paguecom_landingpages.png") no-repeat scroll 0 0 transparent;
+    clear: none;
+    float: right;
+    height: 158px;
+    left: 0;
+    margin: -17px 22px 0 0;
+    overflow: hidden;
+    position: relative;
+    top: -91px;
+    white-space: nowrap;
+    width: 294px;
+    z-index: 6;
+}
+
+body.landing .wrapper-benefits-block p {
+    font-family: Museo300;
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    margin-left: 10px;
+}
+body.landing .pizza{
+    background-image: url("/media/images/jnm-frontend/home-banner/pizza_air_fire.jpg");
+}
+
+body.landing .japones{
+    background-image: url("/media/images/jnm-frontend/home-banner/shushi_air_fire.jpg");
+}
+
+body.landing .delivery{
+    background-image: url("/media/images/jnm-frontend/home-banner/burguer_air_fire.jpg");
+}
+
+body.landing .chines {
+    background-image: url("/media/images/jnm-frontend/home-banner/frangoxadres_air_fire.jpg");
+}

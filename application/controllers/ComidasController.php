@@ -102,6 +102,29 @@ class ComidasController extends Default_Controller_Base {
     public function japonesaAction() {
         
     }
-
+    /**
+     * A dummmy page to validate ab tests
+     * @author vpriem
+     * @since 29.11.2010
+     */
+    public function pizzaAction() {
+        
+    }
+        /**
+     * A dummmy page to validate ab tests
+     * @author vpriem
+     * @since 29.11.2010
+     */
+    public function deliveryAction() {
+        
+    }
+        /**
+     * A dummmy page to validate ab tests
+     * @author vpriem
+     * @since 29.11.2010
+     */
+    public function chinesaAction() {
+        
+    }
 }
 

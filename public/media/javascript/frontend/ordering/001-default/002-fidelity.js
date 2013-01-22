@@ -44,7 +44,7 @@ $(document).ready(function(){
             $('.yd-open-amount').html(ydOrder.calculate_open_amount(true));
 
             //remove cash if available
-            //hidePayment("bar");
+            hidePayment("bar");
             selectFirstVisiblePayment();
 
             hideDelivertimeSelect();

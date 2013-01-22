@@ -24,11 +24,8 @@
             {* include file="$bits/default/sidebar-location.htm" *}
             {include file="order/_includes/sidebar/cart-read.htm"}         
 
-            {if $config->domain->base == 'lieferando.de'}
-                <a href="#" class="yd-button-280 yd-submit-on-click">{__('Jetzt kaufen')}</a>
-            {else}
-                <a href="#" class="yd-button-280 yd-submit-on-click">{__('Bestellung abschicken')}</a>
-            {/if}
+            <a href="#" class="yd-button-280 yd-submit-on-click">{__('Bestellung abschicken')}</a>
+            {include file="order/_includes/livechat.htm"}
                 
         </div>
 
@@ -38,9 +35,6 @@
             </span>
         </div>
 
-        {if $config->domain->base == 'janamesa.com.br'}
-        {include file="order/_includes/livechat.htm"}
-        {/if}
         
         {if $newCustomerDiscountError}
         {include file='order/_includes/form_order.htm'}

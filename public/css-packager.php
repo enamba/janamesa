@@ -106,6 +106,7 @@ if ($compiletype == 'satellite') {
     $files[] = CSS_PATH . '/yd-frontend-ie.css';
     $files[] = CSS_PATH . '/yd-frontend-hidden.css';
     $files[] = CSS_PATH . '/jnm-banner.css';
+    $files[] = CSS_PATH . '/jnm-landing.css';
     $files[] = CSS_PATH . '/jnm-category.css';
     $files[] = CSS_PATH . '/jnm-district.css';
     $files[] = CSS_PATH . '/jnm-frontend.css';

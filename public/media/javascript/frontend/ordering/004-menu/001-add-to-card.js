@@ -539,7 +539,7 @@ $(document).ready(function(){
                     var maxMealCost = 0;
                     for (var i=0; i < choicesMax; i++) {
                         if (document.lastMealOptionCost[i]) {
-                            mealCost -= document.lastMealOptionCost[i];
+                            //mealCost -= document.lastMealOptionCost[i];
                             if (document.lastMealOptionCost[i]>maxMealCost && i!=optionNum) {
                                 maxMealCost = document.lastMealOptionCost[i];
                             }
@@ -547,13 +547,13 @@ $(document).ready(function(){
                     }
                     document.lastMealOptionCost[optionNum]=optionCost;
                     maxMealCost = Math.max(optionCost, maxMealCost)
-                    mealCost += maxMealCost;
+                    mealCost = maxMealCost;
                     for (var i=0; i < choicesMax; i++) {
                         if (document.lastMealOptionCost[i]) {
-                            if (document.lastMealOptionCost[i] != maxMealCost) {
-                                document.lastMealOptionCost[i] = 0;
-                            } else {
+                            if (document.lastMealOptionCost[i] == maxMealCost) {
                                 maxMealCost = -1;
+//                            } else {
+                                //document.lastMealOptionCost[i] = 0;
                             }
                         }
                     }

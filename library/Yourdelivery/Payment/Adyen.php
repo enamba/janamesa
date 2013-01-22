@@ -200,8 +200,8 @@ class Yourdelivery_Payment_Adyen extends Yourdelivery_Payment_Abstract {
             );
 
             $soapClient = new SoapClient(APPLICATION_PATH . '/templates/adyen/Payment.wsdl', array(
-                        'login' => "USER",
-                        'password' => "PASS",
+                        'login' => "ws@Company.Mountaindobrasil",
+                        'password' => "W}#qp5*+bH47ETU}#Vh]D>?AU",
                         'soap_version' => SOAP_1_1,
                         'style' => SOAP_DOCUMENT,
                         'encoding' => SOAP_LITERAL,
