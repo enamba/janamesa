@@ -179,7 +179,8 @@ You may or may not start/stop the topup server
         <echo msg="setting symlinks and setting htaccess to live" />
         <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="mv /home/ydadmin/live/${domain}/${version}/public/.htaccess_live /home/ydadmin/live/${domain}/${version}/public/.htaccess" /> 
         <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="ln -nfs /home/ydadmin/logs/system/${domain}/live /home/ydadmin/live/${domain}/${version}/application/logs" />   
-        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="ln -nfs /home/ydadmin/storage/${domain}/live /home/ydadmin/live/${domain}/${version}/storage" />       
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="ln -nfs /home/ydadmin/storage/${domain}/live /home/ydadmin/live/${domain}/${version}/storage" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="ln -nfs /home/ydadmin/storage/${domain}/live/public/lancamento/ /home/ydadmin/live/${domain}/${version}/public/lancamento" />
         
         <!-- making keys for optivo accessible -->
         <echo msg="fixing permissions for key files" />
