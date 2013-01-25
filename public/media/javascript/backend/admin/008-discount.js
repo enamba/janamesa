@@ -213,31 +213,31 @@ $(document).ready(function(){
         $('#yd-discount-citys-delete-all').show();
     }
 
-    $("#yd-discount-add-city").cautocomplete('/autocomplete/cityplz', 
-        function(item){
-            //span
-            log('hier');
-            renderItem(item);
-        },
-        
-        function(event) {            
-            $('ul.ui-autocomplete').prepend('<li ><a class="ui-corner-all" tabindex="-1" id="yd-discount-add-city-multiple">'+ event.target.value + '...</a></li>');
-            $('ul.ui-autocomplete').on('click','#yd-discount-add-city-multiple', function(){                
-                
-                $('ul.ui-autocomplete li.ui-menu-item').filter(':visible').each(function(i, item){
-                    var data = $(item).data('item.autocomplete');
-                   
-                    if(data !== undefined) {
-                        log(data.id)
-                        renderItem(data);
-                    }
-                });                                              
-                $('ul.ui-autocomplete li').hide();                                   
-            });            
-            return false;
-        });
-        
-        
+//    $("#yd-discount-add-city").cautocomplete('/autocomplete/cityplz', 
+//        function(item){
+//            //span
+//            log('hier');
+//            renderItem(item);
+//        },
+//        
+//        function(event) {            
+//            $('ul.ui-autocomplete').prepend('<li ><a class="ui-corner-all" tabindex="-1" id="yd-discount-add-city-multiple">'+ event.target.value + '...</a></li>');
+//            $('ul.ui-autocomplete').on('click','#yd-discount-add-city-multiple', function(){                
+//                
+//                $('ul.ui-autocomplete li.ui-menu-item').filter(':visible').each(function(i, item){
+//                    var data = $(item).data('item.autocomplete');
+//                   
+//                    if(data !== undefined) {
+//                        log(data.id)
+//                        renderItem(data);
+//                    }
+//                });                                              
+//                $('ul.ui-autocomplete li').hide();                                   
+//            });            
+//            return false;
+//        });
+//        
+//        
     $('#yd-discount-citys').on('click', '.yd-discount-city-delete', function(event) {
         var span = $(this).parent('strong');    
         $(span[0]).next().remove();

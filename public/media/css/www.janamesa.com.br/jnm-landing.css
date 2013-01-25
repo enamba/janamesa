@@ -20,7 +20,7 @@ body.landing .container{
     background-repeat: no-repeat;
     background-position: center;
 }
-body.landing .container .header {
+body.landing .container .header, body.landing .container .headerLanding {
     background-color: transparent;
 }
 body.landing .wrapper-benefits-block {
@@ -60,4 +60,9 @@ body.landing .delivery{
 
 body.landing .chines {
     background-image: url("/media/images/jnm-frontend/home-banner/frangoxadres_air_fire.jpg");
+}
+
+body.landing .vivi {
+    font-family: Museo700;
+    
 }

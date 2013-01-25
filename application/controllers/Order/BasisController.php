@@ -99,7 +99,8 @@ class Order_BasisController extends Default_Controller_Base {
 
         // rest url is now fix
         $col = "restUrl";
-        $paramString = $this->getAppendableParams();
+        $comida = $request->getParam('comida', null);
+        $paramString = $this->getAppendableParams(array("comida"=>$comida));
 
         $cache = md5(sprintf('redirect%s%s%s', $col, $plz, md5($paramString)));
         $redirect = Default_Helpers_Cache::load($cache);
@@ -111,6 +112,9 @@ class Order_BasisController extends Default_Controller_Base {
         foreach ($rows as $row) {
             if (!$row->parentCityId) {
                 Default_Helpers_Cache::store($cache, $row->$col . $paramString);
+                if ($comida !== null){
+                    $paramString = '/comida/' . $comida;
+                }
                 return $this->_redirect($row->$col . $paramString);
             }
         }
@@ -124,7 +128,7 @@ class Order_BasisController extends Default_Controller_Base {
     protected function getAppendableParams($additional = array()) {
         //remove those, which should not be appended
         $params = array_flip(array_filter(array_flip($_GET), function($key) {
-                            return !in_array($key, array('mode', 'plz', 'cityId'));
+                            return !in_array($key, array('mode', 'plz', 'cityId', 'empty'));
                         }));
 
         $params = array_merge($additional, $params);
@@ -172,6 +176,8 @@ class Order_BasisController extends Default_Controller_Base {
         $this->view->enableCache();
 
         $request = $this->getRequest();
+
+        $this->view->comida = $request->getParam('filterTag');
 
         //this element maybe an integer or a list of cityIds
         $cityIds = $request->getParam('cityId', 0);

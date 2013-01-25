@@ -21,7 +21,7 @@
             while ((foundValue = valuesRegExp.exec(classListString))) {
                 extraValues[foundValue[1]] = foundValue[2];
             }
-            
+
             var cache = {}, lastXhr = null;
             
             $(input).keyup(function(event){
@@ -47,7 +47,9 @@
                     if (term in cache) {
                         if(cache[term].length == 0) {
                             $(input).addClass('yd-form-invalid');
+                            $('.msgerror').removeClass("hidden");
                         } else {
+                            $('.msgerror').addClass("hidden");
                             $(input).removeClass('yd-form-invalid');
                         }
                         log('loading data from cache for plz ' + term);
@@ -62,8 +64,10 @@
                     lastXhr = $.getJSON("/autocomplete/plz", request, function(data, status, xhr) {
                         $(input).removeClass('waiting');
                         if(!data || data.length == 0) {
+                            $('.msgerror').removeClass("hidden");
                             $(input).addClass('yd-form-invalid');
                         } else {
+                            $('.msgerror').addClass("hidden");
                             $(input).removeClass('yd-form-invalid');
                         }
                         log('get data for plz ' + term);

@@ -96,7 +96,7 @@ $(document).ready(function(){
      */
     $('#yd-start-order-form').submit(function(){
         if (!this.plz.value.length) {
-            notification("error", $.lang("plz-not-given") || $.lang("plzerror"));
+            notification("error", "Por favor informe o CEP onde a comida deverá ser entregue.");
             return false;
         }
         

@@ -20,9 +20,8 @@
     </head>
     <body class="landing">
         <div class="container japones">
-            <div class="header">
-                <div class="banner">
-
+            <div class="headerLanding">
+                <div class="bannerLanding">
                     <div class="headerBanner">
                         <div class="contentHeader">
                             <div class="logoJanamesa"><img src="/media/images/jnm-frontend/jnm_logo.png" /></div>
@@ -52,6 +51,8 @@
                                 <div class="input_cep">
                                     <form id="yd-start-order-form" method="get" name="cep_form" action="/order_basis/plz">
                                         <input type="hidden" name="cityId" value="" />
+                                        <input type="hidden" name="comida" value="japonesa" />
+                                        <input type="hidden" name="empty" value="" />
                                         <input id="yd-plz-search" class="cep yd-plz-autocomplete yd-plz-autocomplete-autosubmit yd-only-nr yd-empty-text" type="text" name="plz" value="" title="{__('Postleitzahl')}" />
                                         <input class="findRestaurant" type="submit" name="BUSCAR RESTAURANTES" value="BUSCAR RESTAURANTES" />
                                     </form>

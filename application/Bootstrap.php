@@ -308,14 +308,22 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
                                 'serviceId' => $row['id'],
                             )));
         }
+        
+        $findingServiceWithMeal = explode("/",$uri);
+        if (strrpos($findingServiceWithMeal[0], "servico-de-entrega") === false){
+            $serviceWithMeal = $uri;
+        } else {
+            $serviceWithMeal = $findingServiceWithMeal[0];
+        }
 
         //plz url: for all services delivering to one plz
-        $row = Yourdelivery_Model_DbTable_City::findByDirectLink($uri);
+        $row = Yourdelivery_Model_DbTable_City::findByDirectLink($serviceWithMeal);
         if ($row !== null) {
             return $router->addRoute('listPlzServices', new Zend_Controller_Router_Route($uri, array(
                                 'controller' => 'order_basis',
                                 'action' => 'service',
                                 'cityId' => $row['id'],
+                                'filterTag' => isset($findingServiceWithMeal[2]) ? $findingServiceWithMeal[2]: '',
                             )));
         }
 

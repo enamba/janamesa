@@ -61,11 +61,11 @@ body {
     background-color: #f2f2f2;
 }
 
-.header {
+.header, .headerLanding {
     text-align: left;
 }
 
-.container .header {
+.container .header, .container .headerLanding {
     background-color: black;
 }
 
@@ -177,12 +177,12 @@ input.submitLogin {
     width: 220px;
 }
 
-div.banner {
+div.banner, div.bannerLanding {
     width: 100%;
     height: 675px;
 }
 
-div.banner div.headerBanner {
+div.bannerLanding div.headerBanner,div.banner div.headerBanner {
     background-image: url("/media/images/jnm-frontend/transparencia_header.png");
     background-repeat: repeat-x;
     width: 100%;
@@ -242,7 +242,7 @@ div.col-right div.facebook {
     width: 280px;
 }
 
-div.banner div.headerBanner div.box_header {
+div.bannerLanding div.headerBanner div.box_header, div.banner div.headerBanner div.box_header {
     background: url("/media/images/jnm-frontend/bgboxheader.png") no-repeat scroll 0 0 transparent;
     color: white;
     font-family: museo700;
@@ -273,12 +273,12 @@ div.banner div.headerBanner div.box_header {
     font-size: 12px;
 }
 
-div.banner div.headerBanner div.box_fake {
+div.bannerLanding div.headerBanner div.box_fake, div.banner div.headerBanner div.box_fake {
     margin: 175px 0 0;
     position: absolute;
 }
 
-div.banner div.input_cep .findRestaurant {
+div.bannerLanding div.input_cep .findRestaurant, div.banner div.input_cep .findRestaurant {
     background: url("/media/images/jnm-frontend/btnheader.png") repeat scroll 0 0 transparent;
     color: white;
     font-size: 18px;
@@ -289,7 +289,7 @@ div.banner div.input_cep .findRestaurant {
     cursor:pointer;cursor:hand;
 }
 
-div.banner div.input_cep .cep {
+div.bannerLanding div.input_cep .cep, div.banner div.input_cep .cep {
     border: 2px solid black;
     font-size: 17px;
     _font-size: 19px;
@@ -302,7 +302,7 @@ div.banner div.input_cep .cep {
     z-index: 0;
 }
 
-div.banner div.input_cep {
+div.bannerLanding div.input_cep, div.banner div.input_cep {
     margin: 9px 0 0;
     float:left;
 }
@@ -450,4 +450,8 @@ div.mainContent {
 
 .fb_iframe_widget {
     margin-left: 10px;
+}
+
+.jnm-mesg-error {
+    
 }

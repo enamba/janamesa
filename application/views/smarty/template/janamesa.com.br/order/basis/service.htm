@@ -9,7 +9,7 @@
     <a href="/">{__('Startseite')}</a>
     <a class="active">{__('Lieferservices in %s %s', $location->getPLz(), $location->getCity()->getCity())}</a>
 </div>
-
+<script> var filtroPorComida = "{$comida}"; </script>
 {include file="order/_includes/sidebar/howto_box.htm"}
 <div id="yd-sidebar">
 
@@ -146,7 +146,10 @@
         {__('Lieferdienste, die zu Ihnen liefern, aber nicht zu der Kategorie gehören')}:
         <span class=""><a id="yd-reset-service-filter" class="cursor">{__('Filter zurücksetzen')}</a></span>
     </div>
-
+    
+    <div id="yd-filter-the-rest-mesg" class="hidden yd-sv3-closed">
+        <p style="padding: 10px;">Temos algumas outras sugest&otilde;es pr&oacute;ximo a voc&ecirc; para matar sua fome:</p>
+    </div>
     <div id="yd-filter-the-rest"></div>
 
     <div class="hidden" id="yd-lang-minute">{__('%d Minute')}</div>

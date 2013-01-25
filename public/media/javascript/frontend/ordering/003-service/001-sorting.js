@@ -61,7 +61,7 @@ function _doSort(_this, field, revert){
     } else {
         sorted = sorted.sort(sort_by(field, revert));        
     }
-        
+
     for (var i = 0; i < sorted.length; i++) {
         var $s = $('#yd-service-' + sorted[i].id + '-' + sorted[i].type);
         if ($s.length) {
@@ -117,6 +117,58 @@ function _doSortCategory(_this, categoryId){
 }
 
 /**
+ * sorting of metrics
+ * @author mlaug, vpriem
+ * @since 24.06.2011
+ */ 
+function _doSortComida(comida){
+    log('initializing category comida');
+    foundMeal = false;
+    for (var i = 0; i < services.length; i++) {
+        var $s = $('#yd-service-' + services[i].id + '-' + services[i].type);
+        if (!$s.length) {
+            log('no div element found for ' + services[i].id);
+            continue;
+        }
+        
+        tagName = replaceAccents(services[i].tags);
+        comida = comida.toLowerCase();
+        tagNames = tagName.split(/, /);
+        log(tagNames);
+        log(comida);
+        if (jQuery.inArray(comida, tagNames)>=0) {
+            foundMeal = true;
+            if ($s.data('open')) {
+                $("#yd-filter-found").append($s);
+            }
+            else{
+                $("#yd-filter-found-closed").append($s);
+            }
+        }
+        else {
+            $('#yd-filter-the-rest-mesg').removeClass('hidden');
+            $("#yd-filter-the-rest").append($s);
+        }
+    }
+    if (foundMeal == false){
+        $('#yd-filter-the-rest-mesg').removeClass('hidden');
+        $('#yd-filter-the-rest-mesg').addClass('error');
+        $('#yd-filter-the-rest-mesg p').html("UUUPS! Infelizmente n&atilde;o encontramos em sua regi&atilde;o restaurantes da especialidade escolhida. Mas temos algumas sugest&otilde;es para matar sua fome:");
+    }
+}
+
+function replaceAccents (text) {
+    text = text.replace(new RegExp('[ÁÀÂÃ]','gi'), 'A');
+    text = text.replace(new RegExp('[ÉÈÊ]','gi'), 'E');
+    text = text.replace(new RegExp('[ÍÌÎ]','gi'), 'I');
+    text = text.replace(new RegExp('[ÓÒÔÕ]','gi'), 'O');
+    text = text.replace(new RegExp('[ÚÙÛ]','gi'), 'U');
+    text = text.replace(new RegExp('[Ç]','gi'), 'C');
+    text = text.toLowerCase();
+    return text;
+}
+
+/**
  * toggle the marker for the active li
  * @author mlaug
  * @since 26.02.2011
@@ -137,19 +189,18 @@ $(document).ready(function(){
     if ($.browser.msie && $.browser.version.split('.')[0] < 9) {
         return;
     }
-   
+
     if (typeof(services) != 'undefined' && $(".yd-service-page").length) {
         var preSorting = $.cookie('yd-sorting');
         var preSortingCategory = $.cookie('yd-sorting-category');
-        
-        if (preSortingCategory) {
-            log('found sorting category cookie, do presort by ' + preSortingCategory);
+        if (filtroPorComida) {
+            _doSortComida(filtroPorComida);
+        } else if (preSortingCategory) {
             _doSortCategory($('#sort-' + preSortingCategory), preSortingCategory);
         }
         else if (preSorting) {
             var field = preSorting.split('#')[0];
             var revert = preSorting.split('#')[1] == 'false' ? false : true;
-            log('found sorting cookie, doing presort by ' + field);
             _doSort($('#sort-' + field), field, revert);
         }
         else {

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: yd\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-08-31 17:04+0200\n"
-"PO-Revision-Date: 2013-01-16 20:08-0300\n"
-"Last-Translator: Eduardo Namba <namba@janamesa.com.br>\n"
+"PO-Revision-Date: 2013-01-24 10:21-0300\n"
+"Last-Translator: caspar <caspar@janamesa.com.br>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2582,9 +2582,9 @@ msgstr "ATENÇÃO: O PEDIDO AINDA NÃO FOI PAGO:"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/19d74c811c7c782fb8e8c1498b724165ab10bd64.file.bestellzettel.tpl.php:175
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/f4744eb278d20fe03e0d0891a2b7471ad5bebb78.file.bestellzettel.tpl.php:179
-#, fuzzy, php-format
+#, php-format
 msgid "KUNDE MÖCHTE MIT %s BEZAHLEN"
-msgstr "CLIENTE GOSTARIA DE PAGAR COM CARTÃO DE DÉBITO"
+msgstr "CLIENTE QUER PAGAR COM %s"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/19d74c811c7c782fb8e8c1498b724165ab10bd64.file.bestellzettel.tpl.php:178
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/f4744eb278d20fe03e0d0891a2b7471ad5bebb78.file.bestellzettel.tpl.php:182
@@ -3401,14 +3401,14 @@ msgstr "Pedido novo de Jánamesa"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/models/Order/Abstract.php:1499
 #: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Request/Administration/OrdereditController.php:397
-#, fuzzy, php-format
+#, php-format
 msgid "%s: Deine Bestellung bei %s."
-msgstr "Seu pedido com"
+msgstr "%s: Seu pedido com %s."
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/models/Order/Abstract.php:1502
-#, fuzzy, php-format
+#, php-format
 msgid "%s: Deine Bestellung wurde an %s übermittelt."
-msgstr "Enviar o pedido no dia %s."
+msgstr "%s: Seu pedido foi transmitido para %s."
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/models/Order/Abstract.php:1523
 #, php-format
@@ -3630,14 +3630,12 @@ msgid "Diese Gutscheinaktion ist beendet."
 msgstr "Essa ação de Voucher terminou."
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Request/DiscountController.php:389
-#, fuzzy
 msgid "Es wurde kein referer angegeben"
-msgstr "Até agora nenhuma endereço foi gravado"
+msgstr "Nenhum referrer inserido"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Request/DiscountController.php:393
-#, fuzzy
 msgid "Es konnte keine Gutscheinaktion gefunden werden."
-msgstr "O endereço não pode ser encontrado "
+msgstr "Não foi possível encontrar a ação de Voucher."
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Request/DiscountController.php:397
 msgid "Ein Fehler ist aufgetreten"
@@ -3831,11 +3829,10 @@ msgid "Dieser Gutschein ist nur für Lieferdienste"
 msgstr "Esse Voucher é somente para os deliverys"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Request/OrderController.php:305
-#, fuzzy
 msgid ""
 "Dieser Gutschein ist nur in der Android- oder iPhone-App von Lieferando.de "
 "einlösbar."
-msgstr "Esse Voucher pode ser utilizado somente no janamesa.com.br-iPhoneApp"
+msgstr "Esse Voucher pode ser utilizado somente no janamesa.com.br-iPhoneApp."
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Request/OrderController.php:316
 #: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Request/OrderController.php:371
@@ -4040,9 +4037,8 @@ msgid "Newsletter konnte nicht gespeichert werden"
 msgstr "Não foi possível salvar o botim informativo"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Request/UserController.php:468
-#, fuzzy
 msgid "Newsletter wurde abonniert"
-msgstr "Newsletter afirmado"
+msgstr "Newsletter assinado"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Request/UserController.php:470
 msgid "Newsletter wurde abbestellt"
@@ -4276,13 +4272,15 @@ msgstr "Não foi possível encontrar a cidade."
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/OrderController.php:754
 msgid "Bei der Verwendung von Gutscheinen ist kein Vorbestellen möglich."
-msgstr ""
+msgstr "Infelizmente, fazer um pedido agendado com Voucher não é possível."
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/OrderController.php:762
 msgid ""
 "Dieser Gutscheincode kann nicht eingelöst werden, da Du schon einen "
 "Gutschein dieser Aktion eingelöst hast."
 msgstr ""
+"Não pode utilizar esse número de Voucher. Você utilizou um Voucher para essa "
+"ação."
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/OrderController.php:825
 #, php-format
@@ -4355,7 +4353,6 @@ msgid "Paypal & Gutschein"
 msgstr "Paypal & Voucher"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/Get/ServiceController.php:743
-#, fuzzy
 msgid "keine"
 msgstr "nenhuma"
 
@@ -5157,8 +5154,8 @@ msgid ""
 "Eine sichere Verbindung zu Paypal konnte leider nicht hergestellt werden, "
 "bitte versuchen Sie erneut oder wählen Sie ein andere Zahlungsmöglichkeit"
 msgstr ""
-"A ligação com o PayPal não pode ser realizada, por favor, tente novamente ou "
-"escolha uma outra forma de pagamento"
+"A comunicação com o PayPal não pode ser realizada, por favor, tente "
+"novamente ou escolha uma outra forma de pagamento"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/controllers/RequestController.php:38
 msgid "Ihr Passwort wurde geändert und an Ihre eMail-Adresse gesandt."
@@ -9415,9 +9412,9 @@ msgstr "de"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a9d9eab98272a09dbe1252728136818bfcb1f75d.file.menu.htm.php:532
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/aec0e7ea40bb0ce6b2b1475393e08674ed4203da.file.menu.htm.php:769
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/bc599bc0829341876d955abd89852c520b0b608d.file.cart-menu.htm.php:27
-#, fuzzy, php-format
+#, php-format
 msgid "ab %s €"
-msgstr "R$ %s"
+msgstr "a partir de R$ %s"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a9d9eab98272a09dbe1252728136818bfcb1f75d.file.menu.htm.php:539
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/aec0e7ea40bb0ce6b2b1475393e08674ed4203da.file.menu.htm.php:776
@@ -10301,19 +10298,16 @@ msgid "Lieferservice %s %s"
 msgstr "Delivery %s %s"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/e48418fc12e20d0edc31c6c433295c74297d3cbb.file.postalrequest.htm.php:24
-#, fuzzy
 msgid "Gib jetzt Deine Postleitzahl ein"
-msgstr "Por favor, digite um CEP!"
+msgstr "Coloque seu CEP agora"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/e48418fc12e20d0edc31c6c433295c74297d3cbb.file.postalrequest.htm.php:33
-#, fuzzy
 msgid "Bestelle bei Deinem Lieblingslieferservice in Deiner Umgebung!"
-msgstr "Aqui você pode procurar um outro delivery na sua área:"
+msgstr "Faça seu pedido no seu delivery favorito, na sua região!"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/e48418fc12e20d0edc31c6c433295c74297d3cbb.file.postalrequest.htm.php:37
-#, fuzzy
 msgid "weiter"
-msgstr "Newsletter"
+msgstr "prosseguir"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/ca64f92c375df548dd794dad0e592c4b33f8bec9.file.rabattcodes.htm.php:28
 msgid "genutzt"
@@ -11689,9 +11683,8 @@ msgstr[0] "%d O pedido já está pago com Voucher."
 msgstr[1] "%d Os pedidos já estãp pagos com um Voucher."
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/b43ffe2eb1e858db31d2a6e021c2ca611905016b.file.setpassword.htm.php:487
-#, fuzzy
 msgid "Soll das Passwort an den Dienstleister verschickt werden?"
-msgstr "Enviar a senha para o Prestador de serviços"
+msgstr "Enviar a senha para o Prestador de serviços?"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/458d218bccdedf22b00f1485327bd00107c0cb8f.file.loginfailed.htm.php:136
 msgid "Ungültige E-Mail / Passwort Kombination"
@@ -11803,9 +11796,8 @@ msgid "Jetzt App downloaden: http://%s/apps"
 msgstr "Baixar o App agora: http://%s/apps"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/pyszne.pl/594085f463cf16bb924a4f3761abfaba660579b0.file.postalrequest.htm.php:24
-#, fuzzy
 msgid "Gib jetzt Deine Adresse ein"
-msgstr "Coloque seu endereço aqui"
+msgstr "Coloque seu endereço agora"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/pyszne.pl/af8fcbeb9b599f39d8d07593727c1cf1fbe84b16.file.register.htm.php:198
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/pyszne.pl/912ec1770dd3111b106048320552536bf85123bb.file.locations.htm.php:126
@@ -12885,14 +12877,13 @@ msgstr ""
 "atendimento pelo email %s ou pelo telefone %s"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/email/4dd3fda7f627c4dd8b80e0b6e3970e428125dca1.file.rating.htm.php:129
-#, fuzzy
 msgid "%A,<br/> %d.%m.%G um %H:%M Uhr"
-msgstr "%A, %d.%m.%G às %H:%M hora"
+msgstr "%A,<br/> %d.%m.%G às %H:%M horas"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/email/4dd3fda7f627c4dd8b80e0b6e3970e428125dca1.file.rating.htm.php:129
-#, fuzzy, php-format
+#, php-format
 msgid "Bewerte Deine Bestellung vom %s bei %s."
-msgstr "Avalie seu pedido feito de %s em %s"
+msgstr "Avalie seu pedido no %s com %s."
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/email/13c37f9495c932c1917c333fd381c9f344a361b4.file.forgotpw.htm.php:62
 msgid ""
@@ -13737,7 +13728,6 @@ msgid "Bitte geben Sie eine gültige Mobilnummer ein"
 msgstr "Por favor, digite um número de celular válido"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Default/Forms/Base.php:298
-#, fuzzy
 msgid "Altes Passwort"
 msgstr "Senha antiga"
 
@@ -13746,9 +13736,8 @@ msgid "Bitte geben Sie Ihr Passwort ein"
 msgstr "Por favor, digite a sua senha"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Default/Forms/Base.php:320
-#, fuzzy
 msgid "Neues Passwort wiederholen"
-msgstr "Repetir senha nova"
+msgstr "Repetir a senha nova"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Default/Forms/Base.php:329
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Default/Forms/Base.php:335
@@ -13949,9 +13938,8 @@ msgid "Unbekannter Terminal"
 msgstr "Terminal desconhecido"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Printer/Topup/Server.php:437
-#, fuzzy
 msgid "Fehlerhafter JSON"
-msgstr "Erro com a resposta no JSON"
+msgstr "Erro com JSON"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Printer/Topup/Server.php:481
 msgid "EUR"
@@ -13983,9 +13971,9 @@ msgid "Achtung: Bestellung konnte nicht bestätigt werden"
 msgstr "Atenção: Não foi possível confirmar o pedido"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Printer/Topup/Frame.php:124
-#, fuzzy, php-format
+#, php-format
 msgid "%s, bitte %s EUR kassieren"
-msgstr "Pagamento com cartão de débito, por favor receba %s Reais"
+msgstr "%s, por favor, pedir R$ %s"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Printer/Topup/Frame.php:125
 #, php-format
@@ -14009,11 +13997,11 @@ msgstr "%s REAIS"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Payment/Abstract.php:137
 msgid "cartão de crédito"
-msgstr ""
+msgstr "cartão de crédito"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Payment/Abstract.php:138
 msgid "vale refeição"
-msgstr ""
+msgstr "vale refeição"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Payment/Abstract.php:139
 msgid "Chèque"
@@ -14021,16 +14009,15 @@ msgstr "Cheque"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Payment/Abstract.php:140
 msgid "Chèque Vacances"
-msgstr ""
+msgstr "Chèque Vacances"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Payment/Abstract.php:141
 msgid "Carte Bleu"
-msgstr ""
+msgstr "Carte Bleu"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Payment/Abstract.php:142
-#, fuzzy
 msgid "Ticket Restaurant"
-msgstr "Restaurante"
+msgstr "Ticket Restaurante"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Payment/Paypal.php:251
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Payment/Heidelpay/Xml.php:125
@@ -14048,7 +14035,7 @@ msgstr "N° de pedido de volta %s"
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Connect/Facebook.php:77
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Connect/Facebook.php:84
 msgid "Wir können keine Daten von Facebook ermitteln. Erlaubst Du Cookies?"
-msgstr ""
+msgstr "Seu browser permite Cookies? Não conseguimos conectar com Facebook!"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../library/Yourdelivery/Connect/Facebook.php:103
 msgid ""
