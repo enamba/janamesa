@@ -102,6 +102,12 @@ class Order_BasisController extends Default_Controller_Base {
         $comida = $request->getParam('comida', null);
         $paramString = $this->getAppendableParams(array("comida"=>$comida));
 
+        if ($comida !== null){
+            $paramString = '/comida/' . $comida;
+        } else {
+            $paramString = '';
+        }
+        
         $cache = md5(sprintf('redirect%s%s%s', $col, $plz, md5($paramString)));
         $redirect = Default_Helpers_Cache::load($cache);
         if ($redirect) {
@@ -111,10 +117,8 @@ class Order_BasisController extends Default_Controller_Base {
         $rows = Yourdelivery_Model_City::getByPlz($plz);
         foreach ($rows as $row) {
             if (!$row->parentCityId) {
+
                 Default_Helpers_Cache::store($cache, $row->$col . $paramString);
-                if ($comida !== null){
-                    $paramString = '/comida/' . $comida;
-                }
                 return $this->_redirect($row->$col . $paramString);
             }
         }
@@ -176,8 +180,9 @@ class Order_BasisController extends Default_Controller_Base {
         $this->view->enableCache();
 
         $request = $this->getRequest();
+        
 
-        $this->view->comida = $request->getParam('filterTag');
+        $this->view->comida = $request->getParam('filterTag')?$request->getParam('filterTag') : $request->getParam('comida', '');
 
         //this element maybe an integer or a list of cityIds
         $cityIds = $request->getParam('cityId', 0);

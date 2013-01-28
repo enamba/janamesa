@@ -93,10 +93,16 @@
                         }
                     }
                 },
-                select: function (event, ui) {
-                    $(input.form)
-                        .data('href', "/" + ui.item.restUrl)
-                        .data('city', ui.item.id);
+                select: function (event, ui) {                                        
+                    if ($('input[name="comida"]').val() != "") {
+                        $(input.form)
+                            .data('href', "/" + ui.item.restUrl + "/comida/" + $('input[name="comida"]').val() )
+                            .data('city', ui.item.id);
+                    } else {
+                        $(input.form)
+                            .data('href', "/" + ui.item.restUrl)
+                            .data('city', ui.item.id);
+                    }
 
                     $(input).autocomplete("close")
                         .val(ui.item.value)
