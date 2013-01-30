@@ -436,6 +436,114 @@ class AdministrationController extends Default_Controller_AdministrationBase {
         //deploy grid to view
         $this->view->grid = $grid->deploy();
     }
+    
+    /**
+     * show a sortable, filterable table of all restaurants
+     * @param
+     * @return
+     */
+    public function servicesallAction() {
+        $this->view->assign('navservices', 'active');
+
+        $showdeleted = $this->session->showdeletedservices;
+        $showoffline = $this->session->showofflineservices;
+
+        // build select
+        $db = Zend_Registry::get('dbAdapter');
+        $select = $db
+                ->select()
+                ->from(array('r' => 'restaurants'), array(
+                    'ID' => 'id',
+                    'Nome' => 'r.name',
+                    'Endereco' => new Zend_Db_Expr('CONCAT (r.street, " ", r.hausnr)'),
+                    'Bairro' => 'cv.neighbour',
+                    'Cidade' => 'cv.city',
+                    'Estado' => 'ct.state',
+                    'CEP' => 'r.plz',
+                    'DIA 0 ' => 'ro0.day',
+                    'Abre' => 'ro0.from',
+                    'Fecha' => 'ro0.until',
+                    'DIA 1 ' => 'ro1.day',
+                    'Abre 1' => 'ro1.from',
+                    'Fecha 1' => 'ro1.until',
+                    'DIA 2 ' => 'ro2.day',
+                    'Abre 2' => 'ro2.from',
+                    'Fecha 2' => 'ro2.until',
+                    'DIA 3 ' => 'ro3.day',
+                    'Abre 3' => 'ro3.from',
+                    'Fecha 3' => 'ro3.until',
+                    'DIA 4 ' => 'ro4.day',
+                    'Abre 4' => 'ro4.from',
+                    'Fecha 4' => 'ro4.until',
+                    'DIA 5 ' => 'ro5.day',
+                    'Abre 5' => 'ro5.from',
+                    'Fecha 5' => 'ro5.until',
+                    'DIA 6 ' => 'ro6.day',
+                    'Abre 6' => 'ro6.from',
+                    'Fecha 6' => 'ro6.until',
+                    'DIA 10 ' => 'ro10.day',
+                    'Abre 10' => 'ro10.from',
+                    'Fecha 10' => 'ro10.until',
+                    __b('Status') => 'r.isOnline',
+                    __b('Offline Status') => 'r.status',
+                    'email' => 'r.email',
+                    'onlyCash' => 'r.onlycash',
+                    __b('Versand') => 'r.notify',
+                    'Franchise' => 'r.franchiseTypeId'
+                ))
+                ->joinLeft(array('ct' => 'city'), 'r.cityId = ct.id', array())
+                ->joinLeft(array('cv' => 'city_verbose'), 'cv.cityId = ct.id', array())
+                ->joinLeft(array('ro0' => 'restaurant_openings'), 'ro0.restaurantId = r.id AND ro0.day = 0', array())
+                ->joinLeft(array('ro1' => 'restaurant_openings'), 'ro1.restaurantId = r.id AND ro1.day = 1', array())
+                ->joinLeft(array('ro2' => 'restaurant_openings'), 'ro2.restaurantId = r.id AND ro2.day = 2', array())
+                ->joinLeft(array('ro3' => 'restaurant_openings'), 'ro3.restaurantId = r.id AND ro3.day = 3', array())
+                ->joinLeft(array('ro4' => 'restaurant_openings'), 'ro4.restaurantId = r.id AND ro4.day = 4', array())
+                ->joinLeft(array('ro5' => 'restaurant_openings'), 'ro5.restaurantId = r.id AND ro5.day = 5', array())
+                ->joinLeft(array('ro6' => 'restaurant_openings'), 'ro6.restaurantId = r.id AND ro6.day = 6', array())
+                ->joinLeft(array('ro10' => 'restaurant_openings'), 'ro10.restaurantId = r.id AND ro10.day = 10', array())
+                /*
+                 * if $showdeleted = 0, only active entries will be listed, if $showdeleted = 1, the deleted will be listed too
+                 * adding 1, so the expression always has a value, even if the variable $showdeleted is null
+                 * if $showoffline = 0, only online entries will be listed, if $showoffline = 1, the offline will be listed too
+                 * if we want to show ofline, compare to the count of elements in ofline states array
+                 */
+                ->where('r.deleted = 0 ')
+                ->group('r.id')
+                ->order('r.id DESC');
+
+        // build grid
+        $grid = Default_Helper::getTableGrid();
+        $grid->setExport(array('csv'));
+        $grid->export = array('pdf', 'csv');
+        $grid->setPagination(20);
+
+        // update some columns
+        $grid->setSource(new Bvb_Grid_Source_Zend_Select($select));
+        $grid->updateColumn(__b('Offline Status'), array('searchType' => "="));
+        
+        $grid->updateColumn(__b('Offline Status'), array('callback' => array('function' => 'offlineStatusToReadable', 'params' => array('{{' . __b('Offline Status') . '}}'))));
+        $grid->updateColumn(__b('Status'), array('callback' => array('function' => 'statusToReadable', 'params' => array('{{' . __b('Status') . '}}'))));
+        $grid->updateColumn('Franchise', array('searchType' => 'equal', 'title' => __b('Franchise'), 'callback' => array('function' => 'getFranchise', 'params' => array('{{Franchise}}'))));
+
+        $offlineStates = Yourdelivery_Model_Servicetype_Abstract::getStati();
+        $offlineStates[''] = __b('Alle');
+        
+        $activeStates = array(
+            '1' => __b('online'),
+            '0' => __b('offline'),
+            '' => __b('Alle')
+        );
+
+        $franchises = Yourdelivery_Model_Servicetype_Franchise::all();
+        $franchiseType = array('' => __b('Alle'));
+        foreach ($franchises as $franchise) {
+            $franchiseType[$franchise['id']] = __b($franchise['name']);
+        }
+
+
+        //deploy grid to view
+        $this->view->grid = $grid->deploy();
+    }
 
     /**
      * show a sortable, filterable table of all contacts

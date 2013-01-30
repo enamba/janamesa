@@ -65,7 +65,8 @@ class Yourdelivery_Model_DbTable_City_Verbose extends Default_Model_DbTable_Base
                 ->from(array('cv' => 'city_verbose'), array('vId' => 'cv.id', 'street' => 'cv.street', 'number' => 'cv.number', 'neighbour' => 'cv.neighbour'))
                 ->join(array('c' => 'city'), 'c.id=cv.cityId', array('cep' => 'c.plz', 'url' => 'c.restUrl', 'cityId' => 'c.id'))
                 ->where('c.city=?', $city)
-                ->where('cv.street=?', $street);
+                ->where('cv.street LIKE "%'.$street.'%"')
+                ->limit(50);
 
         //if a number has been provided
         if ($number !== null && !empty($number)) {

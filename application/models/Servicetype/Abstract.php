@@ -2521,7 +2521,7 @@ abstract class Yourdelivery_Model_Servicetype_Abstract extends Default_Model_Bas
      */
     public function getMenuIsNewUntil() {
         //so many days since change the menu is considered as new
-        $days = 7;
+        $days = 30;
         $seconds = $days * 24 * 60 * 60;
 
         // if no update time is defined

@@ -68,7 +68,7 @@
                         {/if}
                     </div>
                 </li>
-                {if $r->isOnlycash() || $r->isNoContract()}
+                {if $r->isOnlycash() || $r->isNoContract() || $r->getFranchiseTypeId() == 6}
                 <li class="yd-sv3-61"><span>{__('Nur Barzahlung möglich')}</span></li>
                 {elseif !$r->isPaymentbar()}
                 <li class="yd-sv3-62"><span>{__('Nur online Bezahlung möglich')}</span></li>
