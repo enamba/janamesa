@@ -460,36 +460,28 @@ class AdministrationController extends Default_Controller_AdministrationBase {
                     'Cidade' => 'cv.city',
                     'Estado' => 'ct.state',
                     'CEP' => 'r.plz',
-                    'DIA 0 ' => 'ro0.day',
-                    'Abre' => 'ro0.from',
-                    'Fecha' => 'ro0.until',
-                    'DIA 1 ' => 'ro1.day',
-                    'Abre 1' => 'ro1.from',
-                    'Fecha 1' => 'ro1.until',
-                    'DIA 2 ' => 'ro2.day',
-                    'Abre 2' => 'ro2.from',
-                    'Fecha 2' => 'ro2.until',
-                    'DIA 3 ' => 'ro3.day',
-                    'Abre 3' => 'ro3.from',
-                    'Fecha 3' => 'ro3.until',
-                    'DIA 4 ' => 'ro4.day',
-                    'Abre 4' => 'ro4.from',
-                    'Fecha 4' => 'ro4.until',
-                    'DIA 5 ' => 'ro5.day',
-                    'Abre 5' => 'ro5.from',
-                    'Fecha 5' => 'ro5.until',
-                    'DIA 6 ' => 'ro6.day',
-                    'Abre 6' => 'ro6.from',
-                    'Fecha 6' => 'ro6.until',
-                    'DIA 10 ' => 'ro10.day',
-                    'Abre 10' => 'ro10.from',
-                    'Fecha 10' => 'ro10.until',
-                    __b('Status') => 'r.isOnline',
+                    'CNPJ' => 'r.ustIdNr',
+                    'Telefone' => 'r.tel',
+                    'Abre DOM' => 'ro0.from',
+                    'Fecha DOM' => 'ro0.until',
+                    'Abre SEG' => 'ro1.from',
+                    'Fecha SEG' => 'ro1.until',
+                    'Abre TER' => 'ro2.from',
+                    'Fecha TER' => 'ro2.until',
+                    'Abre QUA' => 'ro3.from',
+                    'Fecha QUA' => 'ro3.until',
+                    'Abre QUI' => 'ro4.from',
+                    'Fecha QUI' => 'ro4.until',
+                    'Abre SEX' => 'ro5.from',
+                    'Fecha SEX' => 'ro5.until',
+                    'Abre SAB' => 'ro6.from',
+                    'Fecha SAB' => 'ro6.until',
+                    'Abre FER' => 'ro10.from',
+                    'Fecha FER' => 'ro10.until',
+                    'URL' => new Zend_Db_Expr('CONCAT ("http://www.janamesa.com.br/", r.restUrl)'),'',
+                    'Franchise' => 'r.franchiseTypeId',
                     __b('Offline Status') => 'r.status',
-                    'email' => 'r.email',
-                    'onlyCash' => 'r.onlycash',
-                    __b('Versand') => 'r.notify',
-                    'Franchise' => 'r.franchiseTypeId'
+                    'email' => 'r.email'
                 ))
                 ->joinLeft(array('ct' => 'city'), 'r.cityId = ct.id', array())
                 ->joinLeft(array('cv' => 'city_verbose'), 'cv.cityId = ct.id', array())
@@ -501,20 +493,15 @@ class AdministrationController extends Default_Controller_AdministrationBase {
                 ->joinLeft(array('ro5' => 'restaurant_openings'), 'ro5.restaurantId = r.id AND ro5.day = 5', array())
                 ->joinLeft(array('ro6' => 'restaurant_openings'), 'ro6.restaurantId = r.id AND ro6.day = 6', array())
                 ->joinLeft(array('ro10' => 'restaurant_openings'), 'ro10.restaurantId = r.id AND ro10.day = 10', array())
-                /*
-                 * if $showdeleted = 0, only active entries will be listed, if $showdeleted = 1, the deleted will be listed too
-                 * adding 1, so the expression always has a value, even if the variable $showdeleted is null
-                 * if $showoffline = 0, only online entries will be listed, if $showoffline = 1, the offline will be listed too
-                 * if we want to show ofline, compare to the count of elements in ofline states array
-                 */
                 ->where('r.deleted = 0 ')
                 ->group('r.id')
-                ->order('r.id DESC');
+                ->order('r.id');
 
         // build grid
         $grid = Default_Helper::getTableGrid();
-        $grid->setExport(array('csv'));
-        $grid->export = array('pdf', 'csv');
+        $grid->setcharEncoding("ISO-8859-1");
+        $grid->setExport(array('excel'));
+//        $grid->export = array('pdf', 'xml');
         $grid->setPagination(20);
 
         // update some columns

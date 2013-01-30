@@ -235,6 +235,13 @@ class Default_Controller_AdministrationBase extends Default_Controller_Auth {
                     __b('Erstellen') => '/administration_courier/create'
                 )
             ),
+            'Relatorios BE'=> array(
+                'url' => '#',
+                'icon_class' => 'icon01',
+                'children' => array(
+                    __b('PDS e Horarios') => '/administration/servicesall'
+                )
+            ),
             __b('Rechnungen') => array(
                 'url' => '#',
                 'icon_class' => 'icon08',

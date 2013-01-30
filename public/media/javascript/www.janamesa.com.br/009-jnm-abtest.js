@@ -18,7 +18,7 @@ $(document).ready( function () {
     log('AB TEST');
 
     if (ydABTestGroup == 'B') {
-        $('INPUT[name="BUSCAR RESTAURANTES"]').val("FAZER O PEDIDO");
+        $('INPUT[name="BUSCAR RESTAURANTES"]').val("FAZER MEU PEDIDO");
         $('INPUT[name="BUSCAR RESTAURANTES"]').css("padding-left", 0);
     } else {
         $('INPUT[name="BUSCAR RESTAURANTES"]').val("BUSCAR RESTAURANTES");

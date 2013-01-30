@@ -111,7 +111,7 @@ class Bvb_Grid_Deploy_Excel extends Bvb_Grid implements Bvb_Grid_Deploy_DeployIn
         }
 
         if ( ! isset($this->_deploy['download']) ) {
-            $this->_deploy['download'] = false;
+            $this->_deploy['download'] = true;
         }
 
         if ( $this->_deploy['save'] != 1 && $this->_deploy['download'] != 1 ) {
