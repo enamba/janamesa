@@ -89,6 +89,7 @@ class Order_BasisController extends Default_Controller_Base {
         // get plz and remove everything which is no a number
         $plz = preg_replace('/[^0-9\-]/', '', $request->getParam('plz'));
         if ($plz === null || $plz <= 0) {
+            $this->logger->warn('SEM_CEP_PARA: ' . $plz);
             return $this->_redirect('/#plzerror');
         }
 
@@ -117,11 +118,12 @@ class Order_BasisController extends Default_Controller_Base {
         $rows = Yourdelivery_Model_City::getByPlz($plz);
         foreach ($rows as $row) {
             if (!$row->parentCityId) {
-
                 Default_Helpers_Cache::store($cache, $row->$col . $paramString);
                 return $this->_redirect($row->$col . $paramString);
             }
         }
+        $this->logger->warn('SEM_CEP_PARA: ' . $plz);
+        
         return $this->_redirect('/' . $paramString . '#plzerror');
     }
 
