@@ -10,8 +10,8 @@ class Yourdelivery_Printer_Topup_Server {
     private $_server = "localhost";
     private $_port;
     
-    private $_domain = "lieferando.de";
-    private $_locale = "de";
+    private $_domain = "janamesa.com.br";
+    private $_locale = "pt_BR";
     
     /**
      * Gronic update server

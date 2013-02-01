@@ -445,8 +445,6 @@ class AdministrationController extends Default_Controller_AdministrationBase {
     public function servicesallAction() {
         $this->view->assign('navservices', 'active');
 
-        $showdeleted = $this->session->showdeletedservices;
-        $showoffline = $this->session->showofflineservices;
 
         // build select
         $db = Zend_Registry::get('dbAdapter');
@@ -512,6 +510,17 @@ class AdministrationController extends Default_Controller_AdministrationBase {
         $grid->updateColumn(__b('Status'), array('callback' => array('function' => 'statusToReadable', 'params' => array('{{' . __b('Status') . '}}'))));
         $grid->updateColumn('Franchise', array('searchType' => 'equal', 'title' => __b('Franchise'), 'callback' => array('function' => 'getFranchise', 'params' => array('{{Franchise}}'))));
 
+        
+        // add extra rows
+        $option = new Bvb_Grid_Extra_Column();
+        $option
+                ->position('right')
+                ->name('Horario Extra')
+                ->callback(array('function' => 'horarios', 'params' => array('{{ID}}')));
+
+        //add extra rows
+        $grid->addExtraColumns($option);        
+        
         $offlineStates = Yourdelivery_Model_Servicetype_Abstract::getStati();
         $offlineStates[''] = __b('Alle');
         
@@ -526,7 +535,6 @@ class AdministrationController extends Default_Controller_AdministrationBase {
         foreach ($franchises as $franchise) {
             $franchiseType[$franchise['id']] = __b($franchise['name']);
         }
-
 
         //deploy grid to view
         $this->view->grid = $grid->deploy();

@@ -1237,6 +1237,29 @@ function optionsForBillingRestaurant($id) {
     return $html;
 }
 
+function horarios($id){
+    $specialDates = Yourdelivery_Model_DbTable_Restaurant_Openings_Special::getOpeningsAtSqlDate($id);
+    if (count($specialDates) == 0){
+        return null;
+    }
+    
+    $html = '<table>';
+    $html .= '<tr><td>DIA</td><td>Inicio</td><td>Fim</td><td>#</td></tr>';
+    
+    foreach ($specialDates as $specialDate){
+        $closed = $specialDate['closed']==1?' Fechado ':' Aberto ';
+        $html .= '<tr>';
+        $html .= '<td> '.$specialDate['specialDate']. ' </td>';
+        $html .= '<td> '.$specialDate['from']. ' </td>';
+        $html .= '<td> '.$specialDate['until']. ' </td>';
+        $html .= '<td>'.$closed. '</td>';
+        $html .= '</td></tr>';
+    }
+    
+    $html .= '</table>';
+    return $html;
+}
+
 /**
  * show options for courier billings
  * @author alex

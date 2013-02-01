@@ -403,7 +403,7 @@ You may or may not update the views and deploy the update statements of the stag
 
         <!-- rsync to remote server -->
         <echo msg="moving staging release to servers" />
-        <exec command="rsync --partial --progress --rsh=ssh --archive ${tmp}/release-${build_time}.tar.gz ydadmin@${server}:/tmp" />
+        <exec command="scp ${tmp}/release-${build_time}.tar.gz ydadmin@${server}:/tmp" />
 
         <!-- pack release and link new staging -->
         <echo msg="decompressing: tar xzvf /tmp/release-${build_time}.tar.gz -C /home/ydadmin/staging/${domain}/${version}" />
