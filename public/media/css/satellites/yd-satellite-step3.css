@@ -1047,31 +1047,32 @@ ul.yd-menu-nav1 {
     font-size: 14px;
     margin: 0 1px 1px 0;
     padding: 4px 0 4px 20px;
-    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat -5px -732px;
+    background: url("/media/images/satellites/menu/yd-sprite-menu.png") no-repeat -5px -732px;
     border-radius: 4px;
 }
 
 .yd-menu-modern ul.yd-menu-nav1 li a.parent {
-    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat -4px -910px;
+    background: url("/media/images/satellites/menu/yd-sprite-menu.png") no-repeat -4px -910px;
 }
 
 .yd-menu-modern ul.yd-menu-nav1 li a:hover {
     font-weight: bold;
-    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat -5px -792px;
+    font-size: 13px;
+    background: url("/media/images/satellites/menu/yd-sprite-menu.png") no-repeat -5px -792px;
 }
 
 .yd-menu-modern ul.yd-menu-nav1 li a.parent:hover {
-    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat -4px -970px;
+    background: url("/media/images/satellites/menu/yd-sprite-menu.png") no-repeat -4px -970px;
 }
 
 
 .yd-menu-modern ul.yd-menu-nav1 li a.active {
     font-weight: bold;
-    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat -5px -850px;
+    background: url("/media/images/satellites/menu/yd-sprite-menu.png") no-repeat -5px -850px;
 }
 
 .yd-menu-modern ul.yd-menu-nav1 li a.active.parent {
-    background: url(/media/images/satellites/menu/yd-sprite-menu.png) no-repeat -4px -1028px;
+    background: url("/media/images/satellites/menu/yd-sprite-menu.png") no-repeat -4px -1028px;
 }
 
 .search-no-meal-in-cat {

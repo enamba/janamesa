@@ -89,3 +89,24 @@ function hideLoginModal() {
 function categorySetImage(target, imageName){
   target.src = '/media/images/jnm-frontend/category/' + imageName;
 }
+
+$(window).load(function(){
+    $('.finish-button-limit').waypoint(function(direction) {
+        if (direction == 'down'){
+            $('#static_menu').fadeTo('slow', 0.8 , function() {
+                $('#static_menu').css("display", "block");
+            })
+        } else {
+            $('#static_menu').fadeTo('slow', 0, function() {
+                $('#static_menu').css("display", "none");    
+            })
+        }
+    });
+});
+
+$(document).ready(function(){
+ if ($(".yd-full-amount")) {
+     $("#jnm-full-amount-value").html($(".yd-full-amount").html());
+ }
+ 
+})

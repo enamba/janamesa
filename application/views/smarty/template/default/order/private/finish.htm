@@ -3,7 +3,12 @@
 
 {assign var=serviceCacheId value=$service->getId()}
 {include file='order/_includes/menu/ranges.htm' caching=1 cache_lifetime=86400 cache_id="ranges.$serviceCacheId"}
-    
+<div id="static_menu" style="height: 65px; display:none;">
+    <div class="jnm_menu_static">
+        <div class="finish-div-static"><a href="#" id="yd-private-single-finish-bottom" class="yd-button-280 finish-button">{if $this->isOpened($service->getOpening()->getIntervalOfDay(time()))}Pedir agora{else}Agendar pedido{/if}</a></div>
+        <div id="jnm-full-amount"><span>Valor:</span><strong id="jnm-full-amount-value"></strong></div>
+    </div>
+</div>
     <div id="yd-finish-content">
         {assign var=orderData value=$order->getOrderData()}
 
@@ -36,11 +41,7 @@
                     <input type="hidden" name="newsletter" value="1" />
                 {/if}
 
-                {if $config->domain->base == 'lieferando.de'}
-                    <a href="#" id="yd-private-single-finish-bottom" class="yd-button-280 finish-button">{__('Jetzt kaufen')}</a>
-                {else}
-                    <a href="#" id="yd-private-single-finish-bottom" class="yd-button-280 finish-button">{__('Bestellung abschicken')}</a>
-                {/if}
+                <a href="#" id="yd-private-single-finish-bottom" class="yd-button-280 finish-button finish-button-limit">{if $this->isOpened($service->getOpening()->getIntervalOfDay(time()))}Pedir agora{else}Agendar pedido{/if}</a>
                     
                 {if $config->domain->base == 'janamesa.com.br'}
                 </div>

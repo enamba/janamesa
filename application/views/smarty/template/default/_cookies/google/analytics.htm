@@ -1,36 +1,50 @@
 <!-- Google Analytics -->
 <script type="text/javascript">
+    var ydABTestGroup,ydABTestGroupName,i,x,y,ARRcookies=document.cookie.split(/\s*;\s*/);
+    ydABTestGroupName = 'ab_colorchange'
+    if(document.cookie.indexOf('yd-abtest=A') != -1) {
+        ydABTestGroup="A";
+    } else if(document.cookie.indexOf('yd-abtest=B') != -1) {
+        ydABTestGroup="B";
+    }
+    if (!ydABTestGroup) {
+        if(Math.random() < 0.5) {
+            ydABTestGroup = 'A';
+        } else {
+            ydABTestGroup = 'B';
+        }
+        var exdate=new Date();
+        document.cookie="yd-abtest=" + ydABTestGroup + "; expires="+exdate.toUTCString() + "; path=/";     
+    }
+    
     var _gaq = _gaq || [];
     
-    $(document).ready(function() {
-    
     {foreach from=$googleAccounts item=ua}
-        log('adding analytics for {$ua}');
-        
-        {if $config->domain->base == 'eat-star.de'}
-            _gaq.push(['_setDomainName', '.eat-star.de']);
-        {/if}
-        
-        _gaq.push(['_setAccount', '{$ua}']);
-        
-        {if is_object($cust) && $cust->isLoggedIn()}
-            _gaq.push(['_setCustomVar', 4, 'has_logged_in', 'yes', 1]);
-        {/if}
-        
-        if(typeof(ydABTestGroup) != 'undefined' && typeof(ydABTestGroupName) != 'undefined') {
-            _gaq.push(['_setCustomVar', 5, ydABTestGroupName, ydABTestGroup, 2]);
-        }
-        
-        _gaq.push(['_trackPageview'{if isset($GATrackPageview)}, '{$GATrackPageview}'{/if}]);
+    log('adding analytics for {$ua}');
+
+    {if $config->domain->base == 'eat-star.de'}
+    _gaq.push(['_setDomainName', '.eat-star.de']);
+    {/if}
+
+    _gaq.push(['_setAccount', '{$ua}']);
+
+    {if is_object($cust) && $cust->isLoggedIn()}
+    _gaq.push(['_setCustomVar', 4, 'has_logged_in', 'yes', 1]);
+    {/if}
+
+    if(typeof(ydABTestGroup) != 'undefined' && typeof(ydABTestGroupName) != 'undefined') {
+        _gaq.push(['_setCustomVar', 5, ydABTestGroupName, ydABTestGroup, 2]);
+    }
+
+    _gaq.push(['_trackPageview'{if isset($GATrackPageview)}, '{$GATrackPageview}'{/if}]);
     {/foreach}
-    
+
     (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-    
-    } );
+
 </script>
 
 

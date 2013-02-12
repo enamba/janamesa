@@ -1,46 +1,14 @@
 <input type="hidden" id="kind" value="{$order->getKind()}" />
-<div class="yd-box br-address">
-
-    <div class="yd-bigbox-head">
-        Observações para seu pedido:
-        <br />
-    </div>
-    
-    <div class="yd-bigbox-body yd-form">
-        
-        <ul class="yd-clearfix yd-form-section">
-            <li class="yd-form-middle">
-                <span>{__('Besondere Hinweise')} <small class="green">{__('(optional)')}</small></span>
-                <textarea rows=""
-                            cols=""
-                            name="comment"
-                            autocomplete="off"
-                            id="comment"
-                            class="validate[length[0,1000]]">{$order->getLocation()->getComment()}</textarea>
-            </li>
-        </ul>
-        
-    </div>
-</div>
 
 <div class="yd-box br-address">
     <div class="yd-bigbox-head">
-        {__('Lieferadresse')}
-        <br />
-        {if $order->getMode() != "rest"}
-        <span class="yd-opening-info">{__('Dieser Lieferservice benötigt eine Vorlaufzeit von <b>%s</b>', $order->getService()->getDeliverTimeFormated())}</span>
-        {/if}
+        Dados para a entrega
     </div>
 
     <div class="yd-bigbox-body yd-form" id="yd-form-finish">
 
         <strong class="yd-form-tease">
-            {if $domain_base == 'eat-star.de'}
-            {__('Bitte gib deine Lieferadresse ein:')}
-            {else}
-            {__('Bitte gib Deine Lieferadresse ein:')}
-            {/if}
-
+            Por favor, preencha as informações abaixo:
         </strong>
 
         <div class="yd-form-wrapper">
@@ -63,39 +31,8 @@
                            value="{$order->getCustomer()->getName()|default:$post.name}" />
                 </li>
             </ul>
-            <ul class="yd-clearfix">
-                <li class="yd-form-{if $domain_base != 'taxiresto.fr'}left{else}right{/if}">
-                    <span>{__('Straße')} <b class="red yd-only-priv">*</b></span>                 
-                    <input type="text"
-                           name="street"
-                           autocomplete="off"
-                           id="street"
-                           value="{$post.street|default:$order->getLocation()->getStreet()}"
-                           class="yd-only-priv yd-form-invalid yd-form-input validate[street,length[1,100]]" />
-                </li>
-                <li class="yd-form-{if $domain_base != 'taxiresto.fr'}right{else}left{/if}">
-                    <span>{__('Hausnummer')} <b class="red yd-only-priv">*</b></span>               
-                    <input type="text"
-                           name="hausnr"
-                           autocomplete="off"
-                           id="hausnr"
-                           value="{if $post.hausnr}{$post.hausnr}{elseif $post.street}{else}{$order->getLocation()->getHausnr()}{/if}"
-                           class="yd-only-priv yd-form-invalid yd-form-input validate[hausnr,length[{$config->locale->housenumber->min},{$config->locale->housenumber->max}]]" />
-                    <em class="yd-form-info hidden" {if $domain_base == 'taxiresto.fr'}style="right:-315px;"{/if}>{__('Bitte gib hier Deine Straße und Nr ein in die Du beliefert werden möchtest.')}</em>
-                </li>
-            </ul>
 
             <ul class="yd-clearfix">
-                <li class="yd-form-right">
-                    <span>{__('Stadt:')} 
-                        <strong>                            
-                            {$order->getLocation()->getCity()->getPlz()} {$order->getLocation()->getCity()->getFullName()}
-                        </strong>
-                    </span>
-                </li>
-            </ul>
-
-            <ul class="yd-clearfix yd-form-section">
                 <li class="yd-form-left">
                     <span>{__('Telefon')} <b class="red">*</b> <small>{__('Für evtl. Rückfragen')}</small></span>
                     <input type="text"
@@ -106,7 +43,7 @@
                 </li>
                 <li class="yd-form-right">
                     <span>{__('E-Mail')} <b class="red">*</b> <small>{__('Für Ihre Bestellbestätigung')}</small></span>
-                    <input type="text"
+                    <input type="email"
                            name="email"
                            id="email"
                            value="{$post.email|default:$order->getCustomer()->getEmail()}"
@@ -114,22 +51,72 @@
                     <em class="yd-form-info hidden">{__('Bitte gib Deine Telefonnummer und E-Mail-Adresse ein.')}</em>
                 </li>
             </ul>
+            {if $order->getLocation()->getCity()->getPlz() !== ''}
             <ul class="yd-clearfix">
-                <li class="yd-form-left">
-                    <span>{__('Firma')} <small class="green yd-only-priv">{__('(optional)')}</small></span>
+                <li class="yd-form-{if $domain_base != 'taxiresto.fr'}left{else}right{/if}">
+                    <span>CEP</span>                 
                     <input type="text"
-                           name="companyName"
-                           autocomplete="off"
-                           id="company"
-                           value="{$post.companyName|default:$order->getLocation()->getCompanyName()}"
-                           class="yd-only-priv validate[length[0,100]]" />                            
+                           readonly
+                           name="CEP"
+                           value="{$order->getLocation()->getCity()->getPlz()}"
+                           class="jnm-readonly yd-only-priv yd-form-input" />
                 </li>
-
-                {include file='order/_includes/finish/floorfee.htm'}
-
+                <li class="yd-form-{if $domain_base != 'taxiresto.fr'}right{else}left{/if}">
+                    <span>Estado</span>               
+                    <input type="text"
+                           readonly
+                           name="estado"
+                           autocomplete="off"
+                           id="estado"
+                           value="{$order->getLocation()->getCity()->getFullName()}"
+                           class="jnm-readonly yd-only-priv yd-form-input" />
+                </li>
             </ul>
+            {/if}
 
-            <ul class="yd-clearfix yd-form-section yd-form-yquery yd-deliver-time-input">
+            <ul class="yd-clearfix">
+                <li class="yd-form-{if $domain_base != 'taxiresto.fr'}left{else}right{/if}">
+                    <span>{__('Straße')} <b class="red yd-only-priv">*</b></span>                 
+                    <input type="text"
+                           name="street"
+                           autocomplete="off"
+                           id="street"
+                           value="{$order->getLocation()->getStreetFromCEP($order->getLocation()->getCity()->getPlz(), $order->getLocation()->getCity()->getFullName())}"
+                           class="{if $order->getLocation()->getStreetFromCEP($order->getLocation()->getCity()->getPlz(), $order->getLocation()->getCity()->getFullName())!=''}jnm-readonly{/if} yd-only-priv yd-form-invalid yd-form-input validate[street,length[1,100]]" />
+                </li>
+                <li class="yd-form-center">
+                    <span>N&uacute;mero<b class="red yd-only-priv">*</b></span>               
+                    <input type="text"
+                           name="hausnr"
+                           autocomplete="off"
+                           id="hausnr"
+                           value="{if $post.hausnr}{$post.hausnr}{elseif $post.street}{else}{$order->getLocation()->getHausnr()}{/if}"
+                           style="width: 84px;"                           
+                           class="yd-only-priv yd-form-invalid yd-form-input validate[hausnr,length[{$config->locale->housenumber->min},{$config->locale->housenumber->max}]]" />
+                </li>
+                <li class="yd-form-right">
+                    <span>Complemento <small class="green">{__('(optional)')}</small></span>  
+                    <input type="text"
+                           name="etage"
+                           id="etage"
+                           value="{$order->getLocation()->getEtage()}"
+                           style="width: 200px;"                           
+                           class="validate[length[0,100]]" />
+                    <em class="yd-form-info hidden" {if $domain_base == 'taxiresto.fr'}style="right:-315px;"{/if}>{__('Bitte gib hier Deine Straße und Nr ein in die Du beliefert werden möchtest.')}</em>
+                </li>
+            </ul>
+            <ul class="yd-clearfix">
+                <li class="yd-form-middle">
+                    <span>Pontos de refer&ecirc;ncia <small class="green">{__('(optional)')}</small></span>
+                    <textarea rows=""
+                                cols=""
+                                name="comment"
+                                autocomplete="off"
+                                id="comment"
+                                class="validate[length[0,750]]">{$order->getLocation()->getComment()}</textarea>
+                </li>
+            </ul>
+            <ul class="yd-clearfix yd-form-section yd-form-yquery">
                 <li class="yd-form-left">
                     <span>{__('Lieferzeitpunkt')}</span>
                     <img src="{$domain_static}/images/yd-icons/yd-clock-big.png" alt="" />
@@ -141,16 +128,27 @@
                     <input type="text" name="deliver-time-day" value="{if $order->getDeliverTime() > $order->getService()->getNextDeliverTime()}{$order->getDeliverTime()|date_format:__('%d.%m.%Y')}{else}{$order->getService()->getNextDeliverTime()|date_format:__('%d.%m.%Y')}{/if}" id="yd-finish-deliver-time-day" class="{if $order->getMode() == 'rest'}yd-only-priv{/if}" />
                 </li>
             </ul>
+
+    <div class="yd-bigbox-head">
+        Informações adicionais
+    </div>
+            <ul class="yd-clearfix">
+                <li class="yd-form-left">
+                    <span>{__('Firma')} <small class="green yd-only-priv">{__('(optional)')}</small></span>
+                    <input type="text"
+                           name="companyName"
+                           autocomplete="off"
+                           id="company"
+                           value="{$post.companyName|default:$order->getLocation()->getCompanyName()}"
+                           class="yd-only-priv validate[length[0,100]]" />                            
+                </li>
+                <li class="yd-form-right">
+                    <span>CPF/CNPJ <small>Nota Fiscal Paulista</small> <small class="green yd-only-priv">{__('(optional)')}</small></span>
+                    <input type="text" name="cpf" value="{$post.cpf}" />
+                </li>
+            </ul>
+
             <input type="hidden" id="deliver-time-now" name="deliver-time-now" value="{__('sofort')}" />
-            
-            {if $config->domain->base == 'janamesa.com.br'}
-                <ul class="yd-clearfix yd-form-section yd-form-yquery yd-deliver-time-input">
-                    <li class="yd-form-left">
-                        <span>CPF</span>
-                        <input type="text" name="cpf" value="{$post.cpf}" />
-                    </li>
-                </ul>
-            {/if}
 
             {if !$order->getCustomer()->isLoggedIn()}
             <div class="br-terms">
@@ -172,7 +170,8 @@
                                id="createuser"
                                value="1" />
                         <label for="createuser">
-                            {__('Ich möchte einen Account anlegen.')}
+                            {__('Ich möchte einen Account anlegen.')}. <a class="vantagens_jnm"> Saiba mais sobre as vantagens!</a>
+                            <em class="yd-form-info hidden" style="left: 440px;top: -30px; width: 160px;">Se cadastre no Jánamesa e acumule pontos em nosso programa de fidelidade. Aproveite promoções especiais</em>
                         </label>
                     </li>
                 </ul>

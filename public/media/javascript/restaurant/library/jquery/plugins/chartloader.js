@@ -6,7 +6,7 @@ $(document).ready(function(){
     Date.format = 'dd.mm.yyyy';
     var httpaddress = $("#httproot").val();
     $('.startTimeS, .endTimeS').datepicker({
-		startDate: '01/01/2009',
+		startDate: '01/01/2010',
 		endDate: '',
         clickInput: true,
         createButton: false

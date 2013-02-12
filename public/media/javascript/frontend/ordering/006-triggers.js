@@ -97,7 +97,6 @@ var MenuTrigger = function() {
      * @return boolean
      */
     this.isPlzSet = function(callback) {
-        
         if (isServiceOnline && !isPlzSet) {
             $("#yd-select-plz-form").submit(function(e){
                 e.preventDefault();

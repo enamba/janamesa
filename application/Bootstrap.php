@@ -893,7 +893,9 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
          * init helpers
          */
         $openingsFormat = new Default_View_Helper_Openings_Format();
+        $view->registerHelper($openingsFormat, 'isOpened');
         $view->registerHelper($openingsFormat, 'formatOpenings');
+        $view->registerHelper($openingsFormat, 'formatOpeningSimple');
         $view->registerHelper($openingsFormat, 'formatOpeningsAsJson');
         $view->registerHelper($openingsFormat, 'formatOpeningsAsSelect');
         $view->registerHelper($openingsFormat, 'formatOpeningsMerged');

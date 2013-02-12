@@ -12,7 +12,6 @@ a {
 
 html {
     background-color: #F3F3F3;
-    overflow-x: hidden;
 
 }
 body.home, body.jnm-error, body.yd-index-page {
@@ -59,6 +58,7 @@ a:hover {
 
 body {
     background-color: #f2f2f2;
+    min-width: 1020px;
 }
 
 .header, .headerLanding {
@@ -238,7 +238,7 @@ div.col-right div.pagecom {
 
 div.col-right div.facebook {
     height: 290px;
-    margin: 0px 0 0 19px;
+    margin: 20px 0 0 19px;
     width: 280px;
 }
 
@@ -454,4 +454,92 @@ div.mainContent {
 
 .jnm-mesg-error {
     
+}
+
+div.jnm-bg-cinza {
+    background-color: #F8F8F8;
+}
+div.jnm-bg-claro{
+    background-color: #e5e5e5;
+}
+
+.menu-box div.td {
+    border-bottom: 0 solid #D1C8B5;
+}
+
+#static_menu {
+    background: url("/media/images/jnm-frontend/bg_header.png") repeat-x scroll center 0 transparent;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+    opacity: 0;
+    
+}
+
+#static_menu .jnm_menu_static {
+    height: 101px;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.yd-service-container form ul.yd-service-select li.yd-service-open-in,
+.yd-menu-detail ul li.yd-service-open-in,
+.yd-service-container form:hover ul.yd-service-select li.yd-service-open-in {
+    color:#DC0601;
+    padding-bottom: 10px;
+    background: url("/media/css/www.janamesa.com.br/images/clock-img-closed.png") no-repeat scroll 4px 0 transparent;
+}
+
+#yd-finish-order-form {
+    margin-top: 20px;
+}
+
+#static_menu .finish-button {
+    background: url("/media/css/www.janamesa.com.br/images/btns-bg.png") no-repeat scroll 0 0 transparent;
+    width: 260px;
+    font-size: 20px;
+}
+#static_menu .finish-div-static {
+    float: right;
+    margin: 10px 26px 0 0;
+    width: 260px;
+}
+
+#jnm-full-amount {
+    background: url("/media/css/www.janamesa.com.br/images/paper.png") repeat scroll 0 0 transparent;
+    color: #127F00;
+    display: block;
+    float: right;
+    font-size: 22px;
+    line-height: 30px;
+    margin: 13px 20px 13px 0;
+    padding: 15px 15px 15px 0;
+    text-align: right;
+    width: 180px;
+}
+
+#jnm-full-amount:before {
+    background: url("/media/css/www.janamesa.com.br/images/paper-top.png") repeat scroll 0 0 transparent;
+    content: "";
+    display: block;
+    height: 10px;
+    margin-top: -18px;
+    position: static;
+    width: 195px;
+}
+#jnm-full-amount:after {
+    background: url("/media/css/www.janamesa.com.br/images/paper-bottom.png") repeat scroll 0 0 transparent;
+    content: "";
+    display: block;
+    height: 10px;
+    margin-bottom: -23px;
+    position: static;
+    width: 195px;
+}
+
+#jnm-full-amount-value {
+    font-family: KGLoveYouThroughItRegular,Helvetica,Verdana,Arial,sans-serif;
+    margin-left: 10px;
 }

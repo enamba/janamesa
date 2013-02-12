@@ -68,7 +68,7 @@
                         <li class="code-{$order->getDiscount()->getId()} codes" id="valid-discount">
                             <strong>{$order->getDiscount()->getCode()}</strong>
                             {if $order->getDiscount()->getMinAmount() > 0}
-                                {__('Mindestbestellwert:')} {__('%s €',$order->getDiscount()->getMinAmount()|inttoprice)}<br /><br />
+                            Pedido m&iacute;nimo: {__('%s €',$order->getDiscount()->getMinAmount()|inttoprice)}<br /><br />
                             {/if}
                             {$order->getDiscount()->getInfo()}
                         </li>

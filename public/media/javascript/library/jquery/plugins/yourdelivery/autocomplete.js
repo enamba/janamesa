@@ -26,6 +26,14 @@
             
             $(input).keyup(function(event){
                 // remove cityId on change
+                if (event.which != 8){
+                    var cep = $(input).val();
+                    if (cep.length == 5)
+                    {
+                        cep = cep + '-';
+                        $(input).val(cep);
+                    }
+                }
                 if (event.which != 13) {
                     $(this).prev()
                         .val("");

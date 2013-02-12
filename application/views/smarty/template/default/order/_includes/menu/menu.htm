@@ -35,7 +35,7 @@
             </div>
 
             {foreach from=$service->getBestSeller(10) item=meal name=topseller}
-                <div class="tr add-to-card yd-menu-search" id="meal-{$meal->getId()}-{$meal->getCurrentSize()|default:0}-{if $meal->getCurrentSize() > 0}{$meal->hasSpecials()*1}{else}1{/if}-0-topseller">
+                <div class="tr add-to-card yd-menu-search jnm-bg-white {if $smarty.foreach.topseller.index % 2}jnm-bg-cinza{else}jnm-bg-claro{/if}" id="meal-{$meal->getId()}-{$meal->getCurrentSize()|default:0}-{if $meal->getCurrentSize() > 0}{$meal->hasSpecials()*1}{else}1{/if}-0-topseller">
 
                     <div class="td yd-menu-search {if $meal->getHasExistingPicture()}td-has-img{/if}">
 
@@ -128,10 +128,10 @@
                 {/foreach}
             </div>
 
-            {foreach from=$category.meals key=mealId item=mealSize}
+            {foreach from=$category.meals key=mealId item=mealSize name=foo}
             {assign var=firstSizeId value=key($mealSize)}
 
-            <div class="tr add-to-card yd-menu-search" id="meal-{$mealId}-{if count($mealSize) == 1}{$firstSizeId}-{$mealSize.$firstSizeId.hasSpecials*1}{else}0-1{/if}-{$catId}">
+            <div class="tr add-to-card yd-menu-search {if $smarty.foreach.foo.index % 2}jnm-bg-cinza{else}jnm-bg-claro{/if}" id="meal-{$mealId}-{if count($mealSize) == 1}{$firstSizeId}-{$mealSize.$firstSizeId.hasSpecials*1}{else}0-1{/if}-{$catId}">
                 {foreach name=mealIter from=$mealSize key=sizeId item=meal}
 
                 {if $smarty.foreach.mealIter.iteration == 1}

@@ -24,7 +24,7 @@
 #paymentDiv .yd-bigbox-payment{
 	display: inline-block;
 	width: 100%;
-	padding: 10px 0 34px 0;
+	padding: 10px 0 15px;
 	position: relative;
 	top: 0;
 	left: 0;
@@ -356,7 +356,7 @@ li#valid-discount a {
 }
 
 .br-cart-finish{
-	margin-top: -61px!important;
+	margin-top: 50px!important;
 	position: relative;
 	top: 0;
 	left: 0;

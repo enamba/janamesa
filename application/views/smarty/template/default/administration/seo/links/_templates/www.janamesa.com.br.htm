@@ -76,7 +76,7 @@
                             </div>
 
                             <div class="iphone">
-                                <a href="https://itunes.apple.com/us/app/janamesa/id532193039?mt=8" target="_blank"><img src="/media/images/jnm-frontend/iphone.png" /> </a>
+                                <a href="http://blog.janamesa.com.br/" target="_blank"><img src="/media/images/jnm-frontend/blog_janamesa.png" /> </a>
                             </div>
                         </div>
                         <div class="step_by_step"></div>
@@ -138,61 +138,9 @@
 
         </div>
 
-        <div id="yd-footer">	
-            <div class="yd-footer-inner">
-
-                <div id="yd-footer-content">            
-                    <div class="wrapper-navigation-footer">
-                        <ul class="navigation-footer">
-                            <li class="col-item">
-                                <ul>
-                                    <li><a href="/about-customer" title="Sobre Jánamesa">Sobre Jánamesa</a></li>
-                                    <li><a href="/customer-terms" title="Termos para consumidores">Termos para consumidores</a></li>
-                                    <li><a href="/jobs" title="Trabalhe conosco">Trabalhe conosco</a></li>
-                                </ul>
-                            </li>
-                            <li class="col-item">
-                                <ul>
-                                    <li><a href="/about-restaurants" title="Jánamesa para restaurantes">Jánamesa para restaurantes</a></li>
-                                    <li><a href="/restaurant-terms" title="Termos para restaurantes">Termos para restaurantes</a></li>
-                                    <li><a href="/contact" title="Serviço ao cliente">Serviço ao cliente</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div> 
-                </div>
-
-            </div>	
-        </div>
     </div>
+{include file="jnm_base_footer.htm"}
 
-        <script type="text/javascript">
-            var _sf_async_config={ uid:34514,domain:"janamesa.com.br" };
-            (function(){
-                function loadChartbeat() {
-                    window._sf_endpt=(new Date()).getTime();
-                    var e = document.createElement('script');
-                    e.setAttribute('language', 'javascript');
-                    e.setAttribute('type', 'text/javascript');
-                    e.setAttribute('src',
-                    (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
-                        "js/chartbeat.js");
-                    document.body.appendChild(e);
-                }
-                var oldonload = window.onload;
-                window.onload = (typeof window.onload != 'function') ?
-                    loadChartbeat : function() { oldonload(); loadChartbeat(); };
-            })();
-
-        </script>
-
-        {if $link->scriptBottom}
-        <script type="text/javascript">{$link->scriptBottom}</script>
-        {/if}
-
-        {include file='_cookies/masterpixel/global.htm' uadomain='elpedido.es'}
-        {include file='_cookies/piwik/global.htm'}
-
-        {include file='_helper/generatedby.htm'}
+        {include file='_cookies/google/remarketing.htm'}
     </body>
 </html>

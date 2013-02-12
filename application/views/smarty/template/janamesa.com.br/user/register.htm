@@ -38,8 +38,10 @@
                     <ul class="yd-clearfix br-sex">
                         <li class="yd-form-left">{__('Geschlecht')}</li>                        
                         <li class="br-radios-rw">
-                            <input type="radio" name="sex" {if isset($post.sex) && $post.sex == "w"}checked="checked"{/if} id="sex" value="w" class="validate[minCheckbox,1]" /> {__('Frau')}
-                            <input type="radio" name="sex" {if isset($post.sex) && $post.sex == "m"}checked="checked"{/if} id="sex2" value="m" /> {__('Herr')}
+                            <span style="width: 30px;float:left;" >{__('Frau')}</span><span><input style="width: 50px;float:left;" type="radio" name="sex" {if isset($post.sex) && $post.sex == "w"}checked="checked"{/if} id="sex" value="w" class="validate[minCheckbox,1]" /> </span>
+                        </li>
+                        <li class="br-radios-rw">
+                            <span style="width: 30px;float:left;" >{__('Herr')}</span><span><input style="width: 50px;float:left;" type="radio" name="sex" {if isset($post.sex) && $post.sex == "m"}checked="checked"{/if} id="sex2" value="m" /> </span>
                         </li>
                     </ul>
                     <ul class="yd-clearfix">

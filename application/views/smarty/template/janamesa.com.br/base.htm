@@ -67,10 +67,6 @@
         {include file="base_footer.htm"}
         
         <div id="yd-discount-evaluation-wait" style="display:none;"><img src="{$domain_static}/images/yd-backend/yd-back-load.gif" /></div>
-        
-        {include file='_cookies/masterpixel/global.htm' uadomain=$domain_base}
-        {include file='_cookies/piwik/global.htm' uadomain=$domain_base}
-
         {if $config->google->conversion}
             {include file='_cookies/google/adwords.htm'}
         {/if}

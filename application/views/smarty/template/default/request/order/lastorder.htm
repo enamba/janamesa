@@ -3,7 +3,7 @@
 <form class="yd-top-plz" action="/{$service->getDirectLink($mode)}" method="GET">
     <div class="yd-service-select-lastorder yd-clearfix" id="yd-repeat-lastorder-{$order->getHash()}-{$service->getId()}">
         <span class="yd-top-plz-img">
-            <img src="{$order->getService()->getImg('tiny')}" alt="{$order->getService()->getName()}" />
+            <img src="{$order->getService()->getImg('jobFormularImg')}" alt="{$order->getService()->getName()}" />
         </span>
 
         <span class="yd-lastorder-name">{$service->getName()|truncate:18:"..."}</span>

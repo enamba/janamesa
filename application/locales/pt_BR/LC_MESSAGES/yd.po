@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: yd\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-08-31 17:04+0200\n"
-"PO-Revision-Date: 2013-01-24 10:21-0300\n"
-"Last-Translator: caspar <caspar@janamesa.com.br>\n"
+"PO-Revision-Date: 2013-02-06 17:28-0300\n"
+"Last-Translator: Eduardo Namba <namba@janamesa.com.br>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Bookmarks: -1,-1,-1,-1,-1,-1,-1,-1,43,-1\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.5\n"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/db00e0fd5e5cf23a636859807107c97fb1f8b8e2.file.shortAttachment.tpl.php:35
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/0e3e124bfbf93a17dccdfb6497292a7a84507057.file.costcenter.tpl.php:306
@@ -1166,7 +1166,7 @@ msgstr ""
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/dad2df7b37e858e1764c262560d4b489e9f592b8.file.standard.tpl.php:428
 msgid "Eine genaue Auflistung der Leistungen entnehmen Sie bitte dem Anhang."
 msgstr ""
-"Segue em anexo extrato detalhado dos serviços. <br />Att., <br />Jánamesa"
+"Segue em anexo extrato detalhado dos serviços.     Att.,     Equipe Jánamesa"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/templates/latex/compile/70c47cc0af2d986a668ba64eec0d9bfe6a863309.file.simple.tpl.php:276
 msgid ""
@@ -5345,7 +5345,7 @@ msgstr "Deletar favorito"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/janamesa.com.br/2b4530308f371be6687f58b9116e957f12cd8d2d.file.orders.htm.php:230
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/94c0048558e1fdcd38231dfb63ed27f762aa5a18.file.orders.htm.php:250
 msgid "Lieferservice als Favorit hinzufügen"
-msgstr "Adicionar o servilço de entrega aos favoritos"
+msgstr "Adicionar o serviço de entrega aos favoritos"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/functions/grid.function.php:47
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/28681d78f3b64f5668e5b3ebd7350a5102e545ce.file.start.htm.php:336
@@ -6975,7 +6975,7 @@ msgstr "Sem avaliações ainda"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/elpedido.es/9334c823db9812fbc9d20b76ceef6affa5e2416a.file.services.htm.php:70
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/lieferando.ch/f821d5c275e80c6d56c799fa8730c701efac517f.file.services.htm.php:70
 msgid "zur Speisekarte"
-msgstr "ver cardápio"
+msgstr "Pedir agora"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/janamesa.com.br/0b06daa476d3a504c8c381eb2357683433026ebe.file.favourites.htm.php:282
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/janamesa.com.br/6cfae9e910702a23d1c63dc81152a9f3260432f2.file.index.htm.php:298
@@ -7602,8 +7602,7 @@ msgstr ""
 #, php-format
 msgid "Ich bin mit den %sAGB%s und %sDatenschutzbestimmungen%s einverstanden."
 msgstr ""
-"Eu concordo com as %scondições gerais de venda%s e as %sproteção da "
-"privacidade (dos dados pessoais)%s."
+"Eu concordo com as %scondições gerais de venda%s"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/janamesa.com.br/4cc7473e074bed4c98f3add7fa770e994df2d25a.file.register.htm.php:293
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/868e043d12801d2e4a098f1ff871da4219226639.file.all-settings.htm.php:389
@@ -7895,7 +7894,7 @@ msgstr "%d horas"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/09912035b1dc823b5048d19e57ad166dc5f8f972.file.service.htm.php:746
 #, php-format
 msgid "öffnet in %s"
-msgstr "aberto em %s"
+msgstr "FECHADO. Abrirá em %s"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/janamesa.com.br/765e56c6e82fcbc84077ba5fa3670f49a4c52975.file.service.htm.php:355
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/09912035b1dc823b5048d19e57ad166dc5f8f972.file.service.htm.php:748
@@ -8267,7 +8266,7 @@ msgstr "Aumento devido à energia:"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/scripts/e2a87346fac368a2b26c0ff9ec3bef5a89be2cae.file.sidebar-shoppingcart-read.htm.php:185
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/scripts/ba3fbcf6f38a1f1c6970870b79d850f5aa78ecdd.file.sidebar-repeat.htm.php:56
 msgid "Bestellwert:"
-msgstr "Valor de pedido:"
+msgstr "Valor do pedido:"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/b8ffb2dde1de48d16a54cb03e1229b9c046e89fa.file.payment.htm.php:337
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/65a4bf6f4a83b300a35a9dc620196d26823b0996.file.finish.htm.php:575
@@ -9414,7 +9413,7 @@ msgstr "de"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/bc599bc0829341876d955abd89852c520b0b608d.file.cart-menu.htm.php:27
 #, php-format
 msgid "ab %s €"
-msgstr "a partir de R$ %s"
+msgstr "R$ %s"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a9d9eab98272a09dbe1252728136818bfcb1f75d.file.menu.htm.php:539
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/aec0e7ea40bb0ce6b2b1475393e08674ed4203da.file.menu.htm.php:776
@@ -9426,7 +9425,7 @@ msgstr "Esvaziar cesta de compras"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/aec0e7ea40bb0ce6b2b1475393e08674ed4203da.file.menu.htm.php:808
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/bc599bc0829341876d955abd89852c520b0b608d.file.cart-menu.htm.php:66
 msgid "Mindestbestellwert: "
-msgstr "Valor mínimo da encomenda: "
+msgstr "Valor mínimo do pedido: "
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a9d9eab98272a09dbe1252728136818bfcb1f75d.file.menu.htm.php:577
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/aec0e7ea40bb0ce6b2b1475393e08674ed4203da.file.menu.htm.php:814
@@ -9444,7 +9443,7 @@ msgstr ""
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/iframe/4352e54f54d693a8bf5036efa3b54f07fad3ec9c.file.menu.htm.php:188
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/scripts/85c58362bfa1c09aa014416316e901385afd39b0.file.sidebar-shoppingcart.htm.php:43
 msgid "Aktueller Bestellwert:"
-msgstr "Montante atual do pedido:"
+msgstr "Valor total do pedido:"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/a9d9eab98272a09dbe1252728136818bfcb1f75d.file.menu.htm.php:596
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/aec0e7ea40bb0ce6b2b1475393e08674ed4203da.file.menu.htm.php:833

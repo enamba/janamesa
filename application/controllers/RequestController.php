@@ -307,6 +307,14 @@ class RequestController extends Default_Controller_RequestBase {
             "payment" => array(
                "regex" => "none",
                "alertTextCheckboxMultiple" => __("Bitte wählen Sie eine Zahlungsmethode aus.")
+            ),
+            "yd-payment-bar" => array(
+               "regex" => "none",
+               "alertTextCheckboxMultiple" => __("Bitte wählen Sie eine Zahlungsmethode aus.")
+            ),
+            "paymentAddition" => array(
+               "regex" => "none",
+               "alertTextCheckboxMultiple" => __("Bitte wählen Sie eine Zahlungsmethode aus.")
             )
                 ));
         if (!is_dir(APPLICATION_PATH . "/../public/cache/json")) {

@@ -160,6 +160,42 @@ class Yourdelivery_Model_Location extends Default_Model_Base {
             return '';
         }
     }
+    
+    /**
+     * Get street via google maps by CEP
+     * @author enamba
+     * @since 07.02.2013
+     * @return string
+     */
+    public function getStreetFromCEP($cep, $state) {
+        $data = file_get_contents("http://186.202.70.30/cep/index.php?cep=" . $cep);
+
+        $data = json_decode($data);
+        
+        if (!empty($data->logradouro)){
+            return $data->logradouro;
+        } else {
+            return false;
+        }
+    }
+    
+    /**
+     * Get street via google maps by CEP
+     * @author enamba
+     * @since 07.02.2013
+     * @return string
+     */
+    public function getDistrictFromCEPByCorreios($cep) {
+        $data = file_get_contents("http://186.202.70.30/cep/index.php?cep=" . $cep);
+
+        $data = json_decode($data);
+        
+        if (!empty($data->bairro)){
+            return $data->bairro;
+        } else {
+            return false;
+        }
+    }
 
     /**
      * @author mlaug

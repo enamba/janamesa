@@ -124,13 +124,13 @@ textarea, select {
     color: #575757;
 }
 
-body input[type="text"], body input[type="password"]{
+body input[type="text"],body input[type="email"], body input[type="password"]{
     margin: 0;
     padding: 0;
     border: 1px solid #CFCFCF;
     height: 32px;
     line-height: 32px;
-    width: 208px;
+    width: 295px;
     background: none #FFFFFF;
     display: inline-block;
     color: #575757;
@@ -147,13 +147,19 @@ body input[type="text"], body input[type="password"]{
 body .ui-dialog input[type="text"], body .ui-dialog input[type="password"]{
     z-index: 1005;
 }
+
 body input[type="text"].yd-empty-text, body input[type="password"].yd-empty-text{
     color: #828282;
 }
+
 body input[type="text"]:focus, body input[type="password"]:focus,
+body input[name="CEP"].jnm-readonly , body input[name="estado"].jnm-readonly , body input[name="street"].jnm-readonly, 
 body textarea:focus, body select:focus{
     border: 1px solid #818381;
-    background: none #FFFFFF;
+}
+
+body input[name="CEP"].jnm-readonly , body input[name="estado"].jnm-readonly , body input[name="street"].jnm-readonly {
+    background: none #ddd;
 }
 
 .wrap-inp{
@@ -481,6 +487,8 @@ h2{
 }
 
 .yd-logged-in .yd-customer-name{
+    color: #FFFFFF;
+    font-size: 16px;
     margin: 0 12px 0 0;
 }
 
@@ -613,7 +621,7 @@ h2{
 #yd-sidebar {
     float: right;
     width: 295px;
-    margin: 0 20px 0 0;
+    margin: -39px 20px 0 0;
 }
 
 #yd-sidebar .br-box{
@@ -648,18 +656,18 @@ h2{
 /********** New Button 140 px width **********/
 
 .yd-button-140 {
-    color: #FFFFFF;
     border: 0 none;
     cursor: pointer;
     display: inline-block;
     font-family: Museo700,Helvetica,Verdana,Arial,sans-serif;
     filter: none !important;
-    font-size: 18px;
-    width: 140px;
-    height: 45px;
+    font-size: 17px;
+    width: 157px;
+    height: 40px;
     line-height: 42px;
     text-align: center;
-    background: url(/media/css/www.janamesa.com.br/images/yd-button-140.png);
+    background: url("/media/css/www.janamesa.com.br/images/btns-bg.png") no-repeat scroll -109px -99px transparent;
+    color: #000000;
 
 }
 
@@ -734,7 +742,7 @@ h2{
 
 .yd-box {
     position: relative;
-    margin: 0 0 20px;
+    margin: 0;
 }
 .br-btn1748{
     display: inline-block;
@@ -810,12 +818,12 @@ h2{
     color: #6C584A;
     font-family: Museo700,Helvetica,Verdana,Arial,sans-serif;
     font-size: 34px;
-    padding: 21px 0 25px 0;
+    padding: 0 0 15px;
     background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) repeat-x scroll left bottom transparent;
 }
 
 #finishForm .br-address .yd-bigbox-head{
-    padding: 31px 0 0 0;
+    padding: 10px 0 0 0;
     background: none transparent;
 }
 
@@ -1282,8 +1290,8 @@ li.yd-canteen-edit {
 }
 
 .yd-form input.yd-form-valid{
-    width: 173px;
-    padding: 0 35px 0 0;
+    width: 295px;
+    padding: 0;
 }
 
 .yd-form input.yd-form-valid,
@@ -1304,9 +1312,10 @@ li.yd-canteen-edit {
 }
 
 .yd-form ul.yd-form-section { 
-    margin: 0 0 25px 0;
-    padding: 0 210px 25px 0;
     border-bottom: 1px solid #D1C8B5;
+    margin: 0 0 5px;
+    padding: 0 0 19px;
+    width: 640px;
 }
 
 .yd-form ul.yd-form-section.yd-deliver-time-input{
@@ -1316,18 +1325,18 @@ li.yd-canteen-edit {
 }
 
 .yd-form ul{
-    width: 430px;
+    width: 640px;
     display: inline-block;
     margin: 0;
-    padding: 0 210px 8px 0;
+    padding: 0 10px 8px 0;
 }
 
 .yd-form li {
     position: relative;
     top: 0;
     left: 0;
-    width: 210px;
     clear: none;
+    z-index: 99;
 }
 
 .yd-form li input[type="text"],
@@ -1390,11 +1399,13 @@ li.yd-canteen-edit {
     float: left;
 }
 
+.yd-form-center input,
 .yd-form-left input,
 .yd-form-right input {
     width: 173px;
 }
 
+.yd-form-center textarea,
 .yd-form-left textarea,
 .yd-form-right textarea {
     width: 173px;
@@ -1415,12 +1426,21 @@ li.yd-canteen-edit {
 }
 
 .yd-form .yd-form-middle textarea{
-    width: 418px;
+    width: 630px;
     height: 53px;
+}
+textarea#comment {
+    border: 1px solid #CFCFCF;
 }
 
 .yd-form input[type=checkbox] {
     width: 20px;
+}
+
+.yd-form-center {
+    float: left;
+    margin-left: 45px;
+    width: 95px;
 }
 
 .yd-form-info {
@@ -1484,7 +1504,7 @@ li.yd-canteen-edit {
 }
 
 #yd-finish-deliver-time {
-    width: 208px;
+    width: 297px;
 }
 
 #debit-reg-name-info,
@@ -1719,12 +1739,14 @@ div.hreview span.rating{
 
 
 .yd-breadcrumbs-new {
-    margin: 20px 360px 10px 20px;
-    padding: 0 0 17px 0;
+    background: url("/media/css/www.janamesa.com.br/images/strip-rw-block.png") repeat-x scroll left bottom transparent;
+    color: #000000;
     font-family: Georgia,"Times New Roman",Times,serif;
     font-size: 14px;
-    color: #000;
-    background: url(/media/css/www.janamesa.com.br/images/strip-rw-block.png) repeat-x scroll left bottom transparent;
+    margin: 20px 0 10px 20px;
+    padding: 0 0 17px;
+    width: 650px;
+}
 }
 
 .yd-breadcrumbs-new a {
@@ -2665,7 +2687,7 @@ select.select-sb *, div.selectbox.select-sb * {
     margin: 0;
     color: #ffffff;
     font-family: Museo700, Helvetica, Verdana, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     text-shadow: 0 1px 0 #000000;
     cursor: pointer;
     position: relative;
@@ -2977,9 +2999,7 @@ a.link-app-download:hover{text-decoration:none;}
     display: block;
     width: auto;
     padding: 14px;
-    margin-left: -14px;
-    margin-right: -14px;
-    margin-bottom: 35px;
+    margin: 60px -14px 35px;
     -moz-border-radius: 8px !important;
     -webkit-border-radius: 8px !important;
     border-radius: 8px !important;

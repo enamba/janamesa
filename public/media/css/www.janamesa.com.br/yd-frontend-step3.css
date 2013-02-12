@@ -250,7 +250,7 @@ yd-service-menu table .highlight{
 }
 
 .th {
-    padding: 25px 0 10px 0;
+    padding: 10px 0 10px 0;
     border-bottom: 1px solid #D1C8B5!important;
 }
 
@@ -270,7 +270,7 @@ yd-service-menu table .highlight{
 /* Speisen */
 
 .td {
-    padding: 33px 9px 35px 0;
+    padding: 20px 9px 20px 0;
     border-bottom: 1px solid #D1C8B5;
     text-align: right;
     vertical-align: top;
@@ -286,7 +286,7 @@ yd-service-menu table .highlight{
 }
 
 .td:first-child {
-    padding: 33px 0 35px 9px;
+    padding: 20px 0 20px 9px;
     text-align: left;
 }
 
@@ -374,7 +374,7 @@ yd-service-menu table .highlight{
 
 
 ul.yd-menu-tabs {
-    padding: 21px 0 0 0;
+    padding: 0 0 0 0;
     margin: 0;
     display: inline-block;
     width: 100%;
@@ -481,12 +481,12 @@ ul.yd-menu-tabs li.last a{
 /* Navigation Kategorien */
 
 ul.yd-menu-nav1 {
-    padding: 25px 0 20px 0;
+    padding: 5px 0 5px 0;
 }
 
 .yd-menu-modern ul.yd-menu-nav1 li {
     float: left;
-    width: 200px;
+    width: 203px;
     margin: 0 10px 0 0;
 }
 
@@ -503,6 +503,28 @@ ul.yd-menu-nav1 {
     text-decoration: none;
 }
 
+
+.yd-menu-modern ul.yd-menu-nav1 li a {
+    display: block;
+    width: 170px;
+    font-size: 14px;
+    margin: 0 1px 1px 0;
+    padding: 0 0 4px 20px;
+    background: url("/media/images/satellites/menu/yd-sprite-menu.png") no-repeat -5px -732px;
+    border-radius: 4px;
+}
+
+
+.yd-menu-modern ul.yd-menu-nav1 li a:hover {
+    background: url("/media/images/satellites/menu/yd-sprite-menu.png") no-repeat -5px -792px;
+}
+
+
+.yd-menu-modern ul.yd-menu-nav1 li a.active {
+    background: url("/media/images/satellites/menu/yd-sprite-menu.png") no-repeat -5px -850px;
+}
+
+
 .category-lenght-toggle {
     position: relative;
 }
@@ -513,8 +535,8 @@ ul.yd-menu-nav1 {
     left: 0px;
     z-index: 1;
     display: block;
-    width: 180px;
-    font-size: 18px;
+    width: 170px;
+    font-size: 14px;
     color: #757372;
     line-height: 1.5;
     padding: 4px;
@@ -522,6 +544,7 @@ ul.yd-menu-nav1 {
     background: #fafafa;
     border-radius: 4px;
     box-shadow: 0 0 1px rgba(0,0,0,0.5);
+    margin-left: 20px;
 }
 
 
@@ -542,13 +565,6 @@ ul.yd-menu-nav1 {
     margin: 10px 0 0;
 }
 
-
-
-
-
-
-
-
 .yd-menu-detail h1 {
     display: inline-block;
     width: 100%;
@@ -565,7 +581,7 @@ ul.yd-menu-nav1 {
 .yd-menu-detail .yd-clearfix{
     display: inline-block;
     margin: 7px 0 0 0;
-    padding: 16px 0;
+    padding: 16px 0 0;
     width: 100%;
     position: relative;
     top: 0;
@@ -575,15 +591,16 @@ ul.yd-menu-nav1 {
 }
 
 .yd-menu-detail-img {
-    width: 114px;
-    padding: 11px 15px 14px 14px;
-    float: left;
-    clear: none;
-    background: url(/media/css/www.janamesa.com.br/images/papre-img.png) no-repeat scroll 0 0 transparent;
     -webkit-background-size: 100% 100%;
     -moz-background-size: 100% 100%;
-    background-size: 100% 100%;
     zoom: 1;
+    background: url("/media/css/www.janamesa.com.br/images/papre-img.png") no-repeat scroll 0 0 / 100% 100% transparent;
+    clear: none;
+    float: left;
+    margin-left: -4px;
+    margin-top: 0;
+    padding: 11px 15px 14px 14px;
+    width: 114px;    
 }
 
 .yd-menu-detail-img img {

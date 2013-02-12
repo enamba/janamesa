@@ -142,7 +142,7 @@ class Default_Api_Google_Geocoding {
      * @return string
      */
     public function getAddress($i = 0) {
-
+return print_r($this->_response,1);
         if (count($this->_response->results)) {
             return $this->_response->results[$i]->formatted_address;
         }

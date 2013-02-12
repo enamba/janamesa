@@ -51,9 +51,9 @@
             <li class="yd-sv3-4 {if $r->isOnline()}hidden{/if}">{__('Online-Bestellung momentan nicht möglich.')}</li>
             {if $r->isOnline()}
                 {if $r->getType() != 'rest'}
-                    <li class="yd-sv3-4">{__('Vorlaufzeit: ')}{$r->getDeliverTimeFormated()}<br />{$this->formatOpenings($r->getOpening()->getIntervalOfDay(time()))}</li>
+                    <li class="yd-sv3-4">{__('Vorlaufzeit: ')}{$r->getDeliverTimeFormated()}<br />{$this->formatOpeningSimple($r->getOpening()->getIntervalOfDay(time()))}</li>
                 {else}   
-                    <li class="yd-sv3-4 yd-service-open">{$this->formatOpenings($r->getOpening()->getIntervalOfDay(time()))}</li>
+                    <li class="yd-sv3-4 yd-service-open">{$this->formatOpeningSimple($r->getOpening()->getIntervalOfDay(time()))}</li>
                     <li class="yd-sv3-4 yd-service-open-in hidden"></li>
                 {/if}
                 <li class="yd-sv3-5">

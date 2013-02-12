@@ -7,11 +7,11 @@
  */
 class Yourdelivery_Printer_Topup_Server {
     
-    private $_server = "localhost";
+    private $_server = "10.0.1.136";
     private $_port;
     
-    private $_domain = "janamesa.com.br";
-    private $_locale = "pt_BR";
+    private $_domain = "lieferando.de";
+    private $_locale = "de";
     
     /**
      * Gronic update server
@@ -98,14 +98,14 @@ class Yourdelivery_Printer_Topup_Server {
         $this->_log("Starting server at %s:%s", $this->_server, $this->_port);
         
         if (!($server = @socket_create(AF_INET, SOCK_STREAM, SOL_TCP))) {
-            return $this->_log("Failed: " . $this->_getSocketError());
+            return $this->_log("Failed:1 " . $this->_getSocketError());
         }
         socket_set_option($server, SOL_SOCKET, SO_REUSEADDR, 1);
         if (!@socket_bind($server, $this->_server, $this->_port)) {
-            return $this->_log("Failed: " . $this->_getSocketError($server));
+            return $this->_log("Failed:2 " . $this->_getSocketError($server));
         }
         if (!@socket_listen($server)) {
-            return $this->_log("Failed: " . $this->_getSocketError($server));
+            return $this->_log("Failed:3 " . $this->_getSocketError($server));
         }
         $this->_sockets[] = $server;
         $this->_log("Ok");
@@ -293,6 +293,8 @@ class Yourdelivery_Printer_Topup_Server {
             $this->_log("Could not select socket: " . $this->_getSocketError());
             return;
         }
+        
+        $this->_log("readSocket: " . print_r($sockets,1));
 
         foreach ($sockets as $socket) {
             if ($socket == $this->_sockets[0]) {
@@ -314,6 +316,7 @@ class Yourdelivery_Printer_Topup_Server {
                 $this->_removeSocket($socket);
                 continue;
             }
+            $this->_log("DATA: %s", $data);
 
             // for debugging
             if (!IS_PRODUCTION) {

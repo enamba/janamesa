@@ -19,28 +19,28 @@ function initDatepicker (type, idDatepickerElement, start, end) {
     switch (type) {
         case "default":
             $(idDatepickerElement).datepicker({
-                minDate: new Date('01 January 2008'),
+                minDate: new Date('01 January 2010'),
                 maxDate: '+52w'
             });
             break;
         
         case "full":
             $("#" + idDatepickerElement ).datepicker({
-                minDate: new Date('01 January 2008'),
+                minDate: new Date('01 January 2010'),
                 maxDate: '+52w'
             });
             break;
             
         case "before":
             $("#" + idDatepickerElement ).datepicker({
-                minDate: new Date('01 January 2008'),
+                minDate: new Date('01 January 2010'),
                 maxDate: '-1d'
             });
             break;
             
         case "beforeAndToday":
             $("#" + idDatepickerElement ).datepicker({
-                minDate: new Date('01 January 2008'),
+                minDate: new Date('01 January 2010'),
                 maxDate: 'now'
             });
             break;
@@ -62,7 +62,7 @@ function initDatepicker (type, idDatepickerElement, start, end) {
             
         case 'raw':
             $("#" + idDatepickerElement ).datepicker({
-                minDate: new Date('01 January 2008'),
+                minDate: new Date('01 January 2010'),
                 maxDate: new Date(),
                 dateFormat : 'yy-mm-dd',
                 defaultDate: '2010-01-01'

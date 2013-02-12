@@ -6,6 +6,73 @@
  * @author mlaug
  */
 class Default_View_Helper_Openings_Format extends Zend_View_Helper_Abstract {
+    
+    public function isOpened (array $openings){
+        $stringOpenings = array();
+        foreach ($openings as $openingsOfDay) {
+
+            foreach ($openingsOfDay as $ind => $opening) {
+
+                if ($opening['closed']) {
+                    $stringOpenings[] = __('geschlossen');
+                    continue;
+                }
+
+                if (strcmp($ind, 'next') == 0) {
+                    continue;
+                }
+                
+                if ($opening['timestamp_from'] <= time() && $opening['timestamp_until'] > time()) {
+                    return true;
+                }
+                
+            }
+
+        }
+        return false;        
+    }
+
+    /**
+     * Mostra apenas o horario que estará aberto e não mais o range.
+     * @param array $openings
+     */
+    public function formatOpeningSimple(array $openings) {
+        
+        $stringOpenings = array();
+        foreach ($openings as $openingsOfDay) {
+
+            foreach ($openingsOfDay as $ind => $opening) {
+
+                if ($opening['closed']) {
+                    $stringOpenings[] = __('geschlossen');
+                    continue;
+                }
+
+                if (strcmp($ind, 'next') == 0) {
+                    continue;
+                }
+                
+                if ($opening['timestamp_from'] <= time() && $opening['timestamp_until'] > time()) {
+                    //Conforme a mudanca para nao mostrar mais o range e apenas o proximo horario de 
+                    //fechamento eu terminei o código aqui retornando o valor pontual se o mesmo 
+                    //satisfazer a necessidade
+                    return 'Aberto até às ' . $opening['until'];
+                }
+                $stringOpenings[] = __('%s bis %s', $opening['from'], $opening['until']);
+                if ($this->hasOpeningFromMidnight($opening)) {
+                    array_pop($stringOpenings);
+                }
+                
+            }
+
+            $lastIntervalOfDay = $openingsOfDay[count($openingsOfDay) - 2];
+            if ($this->isDayExceedingMidnight($openingsOfDay)) {
+                $stringOpenings = array_slice($stringOpenings, 0, -1); //remove last entry, because we have overlapping times from this to the next day
+                $stringOpenings[] = __('%s bis %s am Folgetag', $lastIntervalOfDay['from'], $openingsOfDay['next'][0]['until']);
+            }
+        }
+        return implode(' ' . __('und') . ' ', $stringOpenings);
+    }
 
     /**
      * format the openings and make sure the openings of the next

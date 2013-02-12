@@ -177,7 +177,17 @@ $(document).ready(function(){
         .show();
     })
     .live('blur', function(){
-        if (this.value.length) {
+        if ($(this).attr("name") == 'email'){
+            if ($.validateEmail($(this).val())) {
+                $(this)
+                .removeClass('yd-form-invalid')
+                .addClass('yd-form-valid');
+            } else {
+                $(this)
+                .removeClass('yd-form-valid')
+                .addClass('yd-form-invalid');
+            }
+        } else if (this.value.length > 1) {
             $(this)
             .removeClass('yd-form-invalid')
             .addClass('yd-form-valid');
@@ -192,6 +202,30 @@ $(document).ready(function(){
         .find(".yd-form-info")
         .hide();
     });
+    
+    $('.vantagens_jnm').live ({
+        mouseenter: function(){
+            $(this)
+            .closest("ul")
+            .find(".yd-form-info")
+            .show();
+        },
+        mouseleave: function(){
+            $(this)
+            .closest("ul")
+            .find(".yd-form-info")
+            .hide();
+        }
+    });
+
+    $.validateEmail = function (email)
+	{
+	    er = /^[a-zA-Z0-9][a-zA-Z0-9\._-]+@([a-zA-Z0-9\._-]+\.)[a-zA-Z-0-9]{2}/;
+	    if(er.exec(email))
+	        return true;
+	    else
+	        return false;
+	};
 
     /**
      * Check plz

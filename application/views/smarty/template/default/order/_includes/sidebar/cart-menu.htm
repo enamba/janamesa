@@ -1,7 +1,7 @@
 <div class="hidden" id="yd-lang-size">{__('Größe: %s')}</div>
 <div class="hidden red" id="yd-lang-exmincost">{__('nicht im Mindestbestellwert')}</div>
 <div class="hidden" id="yd-lang-every">{__('je %s €')}</div>
-<div class="hidden" id="yd-lang-from-currency">{__('ab %s €')}</div>
+<div class="hidden" id="yd-lang-from-currency">R$ %s</div>
 
 
 <div class="yd-box br-box">
@@ -31,7 +31,7 @@
             <ul id="minamount">
                 <li>
                     <div>
-                        {__('Mindestbestellwert: ')} <strong class="yd-min-amount">{__('%s €', 0|inttoprice)}</strong>
+                        Pedido m&iacute;nimo: <strong class="yd-min-amount">{__('%s €', 0|inttoprice)}</strong>
                     </div>
                     <a id="yd-minamount-toogle-in"></a>
                     <em id="yd-minamount-toogle-out" class="hidden">
@@ -49,7 +49,7 @@
     </div>
 
     <a href="#" class="yd-button-250 yd-finish-order yd-gray-button">
-        {__('Bezahlmethode wählen')}
+        {if $this->isOpened($service->getOpening()->getIntervalOfDay(time()))}Pedir agora{else}Agendar pedido{/if}
         <strong class="mincosttooltip hidden">{__('Mindestbestellwert noch nicht erreicht!')}</strong>
     </a>
 

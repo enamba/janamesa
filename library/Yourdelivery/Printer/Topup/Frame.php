@@ -138,8 +138,8 @@ class Yourdelivery_Printer_Topup_Frame {
         foreach ($taxes as $tax) {
             if ($order->getTax($tax)) {
                 $data['req']['vat'][] = array(
-                    'vp' => $tax * 100,
-                    'tv' => intval($order->getTax($tax)),
+                    'vp' => 0,
+                    'tv' => 0,
                 );
             }
         }
@@ -152,14 +152,14 @@ class Yourdelivery_Printer_Topup_Frame {
                 $options = array();
                 if ($meal->getCurrentOptionsCount()) {
                     foreach ($meal->getCurrentOptions() as $option) {
-                        $options[] = $option->getName() . ($option->getCost() ? ">" . __("%s EUR", inttoprice($option->getCost())) : "");
+                        $options[] = $option->getName() . ($option->getCost() ? ">" . __("R$ %s", inttoprice($option->getCost())) : "");
                     }
                 }
 
                 $extras = array();
                 if ($meal->getCurrentExtrasCount()) {
                     foreach ($meal->getCurrentExtras() as $extra) {
-                        $extras[] = ($extra->getCount() > 1 ? $extra->getCount() . " x " : "") . $extra->getName() . ($extra->getCost() ? ">" . __("%s EUR", inttoprice($extra->getCost())) : "");
+                        $extras[] = ($extra->getCount() > 1 ? $extra->getCount() . " x " : "") . $extra->getName() . ($extra->getCost() ? ">" . __("R$ %s", inttoprice($extra->getCost())) : "");
                     }
                 }
 
@@ -174,7 +174,7 @@ class Yourdelivery_Printer_Topup_Frame {
                 );
             }
         }
-        
+        print_r($data);
         return $this->setData($data);
     }
     

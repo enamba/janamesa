@@ -94,15 +94,15 @@
             <<__('Bestellnummer:')|escape_latex>>               & \textbf{<<$order->getNr()|escape_latex>>}\\
             <<__('Name:')|escape_latex>>                   & \textbf{<<$order->getCustomer()->getFullname()|escape_latex>>}\\
             <<__('Strasse:')|escape_latex>>                & \textbf{<<if $DOMAIN_BASE != 'taxiresto.fr'>><<$location->getStreet()|escape_latex>> <<$location->getHausnr()|escape_latex>><<else>><<$location->getHausnr()|escape_latex>> <<$location->getStreet()|escape_latex>><</if>>}\\
+            <<"Complemento:"|escape_latex>>              & \textbf{<<$location->getEtage()|default:__("k.A.")|escape_latex>>}\\
             <<if !is_null($location->getOrt())>>
                 <<__('Stadt:')|escape_latex>>                  & \textbf{<<$location->getPlz()|escape_latex>> <<$location->getOrt()->getOrt()|escape_latex>>}\\
             <<else>>
                 <<__('Stadt:')|escape_latex>>                  & \textbf{<<__("k.A.")|escape_latex>>}\\
             <</if>>
-            <<__('Bairro')|escape_latex>>                & \textbf{<<$location->getDistrictByGoogleMaps()|default:__("k.A.")|escape_latex>>}\\
-            <<__('Lieferanweisungen:')|escape_latex>>      & \multicolumn{1}{v{13.5cm}}{\textbf{<<$location->getComment()|default:__("k.A.")|escape_latex>>}}\\
+            <<__('Bairro')|escape_latex>>                & \textbf{<<$location->getDistrictFromCEPByCorreios($location->getPlz())|default:__("k.A.")|escape_latex>>}\\
+            <<__('Lieferanweisungen:')|escape_latex>>      & \multicolumn{1}{v{9.5cm}}{\textbf{<<$location->getComment()|default:__("k.A.")|escape_latex>>}}\\
             <<__('Firma:')|escape_latex>>                  & \textbf{<<$location->getCompanyName()|default:__("k.A.")|escape_latex>>}\\
-            <<__('Stockwerk:')|escape_latex>>              & \textbf{<<$location->getEtage()|default:__("k.A.")|escape_latex>>}\\
             <<__('Telefon:')|escape_latex>>                & \textbf{<<$location->getTel()|default:__("k.A.")|escape_latex>>}\\
                 
 		\end{longtable}

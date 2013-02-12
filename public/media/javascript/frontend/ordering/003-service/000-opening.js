@@ -45,6 +45,7 @@ $(document).ready(function(){
                 $(".yd-service-open-in", this)
                     .html($.lang("is-closed"))
                     .show();
+                $(".offline span", this).html('Agendar pedido');
                 return;
             }
 
@@ -94,6 +95,7 @@ $(document).ready(function(){
             $(".yd-service-open-in", this)
                 .html(msg)
                 .show();
+            $(".offline span", this).html('Agendar pedido');
         });
     }
 });

@@ -1,30 +1,15 @@
 <script type="text/javascript">
 //<![CDATA[
 
-var ydABTestGroup,ydABTestGroupName,i,x,y,ARRcookies=document.cookie.split(/\s*;\s*/);
-ydABTestGroupName = 'ab_colorchange'
-if(document.cookie.indexOf('yd-abtest=A') != -1) {
-    ydABTestGroup="A";
-} else if(document.cookie.indexOf('yd-abtest=B') != -1) {
-    ydABTestGroup="B";
-}
-if (!ydABTestGroup) {
-    if(Math.random() < 0.5) {
-        ydABTestGroup = 'A';
-    } else {
-        ydABTestGroup = 'B';
-    }
-    var exdate=new Date("January 1, 2013 00:00:00");
-    document.cookie="yd-abtest=" + ydABTestGroup + "; expires="+exdate.toUTCString() + "; path=/";     
-}
+if (ydABTestGroup){
+    if (ydABTestGroup == 'B') {
+        var cssFile = '/media/css/www.janamesa.com.br/yd-frontend-abtest-b.css';
 
-if (ydABTestGroup == 'B') {
-    var cssFile = '/media/css/www.janamesa.com.br/yd-frontend-abtest-b.css';
-
-    if(document.createStyleSheet) {
-        document.createStyleSheet(cssFile);
-    } else {
-        document.write('<link rel="stylesheet" type="text/css" href="' + cssFile + '">');
+        if(document.createStyleSheet) {
+            document.createStyleSheet(cssFile);
+        } else {
+            document.write('<link rel="stylesheet" type="text/css" href="' + cssFile + '">');
+        }
     }
 }
 //]]>
