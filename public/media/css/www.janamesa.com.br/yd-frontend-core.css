@@ -3302,8 +3302,9 @@ dl.bonus-points .num{color:#fff; font-size:34px; font-family: Museo700, Helvetic
     display: inline-block;
     float: left;
     width: 126px;
-    height: 122px;
+    height: 139px;
     margin: 0;
+    background-repeat: no-repeat !important;
 }
 
 .yd-service-container form ul.yd-service-select .yd-sv3-1 .img-product{

@@ -499,7 +499,6 @@ h1.yd-lbicon-changeplz { background: url(/media/images/yd-sprites-icons.png) 25p
 *+html .ui-autocomplete {height: 190px;}
 
 ul.ui-autocomplete {
-    width: 202px !important;
     border-radius: 0 0 4px 4px;
     background: #fff;
 }
