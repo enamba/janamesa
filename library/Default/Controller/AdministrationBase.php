@@ -239,7 +239,9 @@ class Default_Controller_AdministrationBase extends Default_Controller_Auth {
                 'url' => '#',
                 'icon_class' => 'icon01',
                 'children' => array(
-                    __b('PDS e Horarios') => '/administration/servicesall'
+                    'PDS e Horarios' => '/administration/relatorioservicesall',
+                    'Total Cardapio e Entrega' => '/administration/relatoriosomasplzemeals',
+                    'Pedidos e Detalhes' => '/administration/relatorioordersfull'
                 )
             ),
             __b('Rechnungen') => array(

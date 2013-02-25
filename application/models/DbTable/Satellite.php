@@ -137,5 +137,4 @@ class Yourdelivery_Model_DbTable_Satellite extends Default_Model_DbTable_Base {
             }
         }
     }
-
 }

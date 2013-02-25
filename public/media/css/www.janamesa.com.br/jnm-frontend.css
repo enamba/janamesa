@@ -86,6 +86,19 @@ div.headerBanner div.logoJanamesa {
     float: left;
 }
 
+.satellite div.headerBanner div.logoSatellite img {
+    z-index: 90;
+}
+
+
+.satellite div.headerBanner div.logoSatellite {
+    display: inline;
+    float: left;
+    height: 125px;
+    margin: 30px 0 0 40px;
+    width: 125px;
+}
+
 div.headerBanner div.cep {
     height: 50px;
     width: 100px;
@@ -138,6 +151,7 @@ div.headerBanner div.entrar_modal {
     _top: -45px;
     *top: -45px;
     width: 234px;
+    z-index: 9;
 }
 
 div.headerBanner div.entrar_modal form ul {
@@ -248,11 +262,9 @@ div.bannerLanding div.headerBanner div.box_header, div.banner div.headerBanner d
     font-family: museo700;
     font-size: 26px;
     height: 270px;
-    margin: 290px 0 0 60px;
+    margin: 240px 0 0 60px;
     padding: 30px 0 0 42px;
     position: absolute;
-    _position: relative;
-    *position: relative;
     width: 860px;
     text-align: left;
 }
@@ -543,3 +555,35 @@ div.jnm-bg-claro{
     font-family: KGLoveYouThroughItRegular,Helvetica,Verdana,Arial,sans-serif;
     margin-left: 10px;
 }
+
+.yd-sv3.new:before {
+    background: url("http://cdn.yourdelivery.de/images/yd-frontend-step2/yd-sv3-new-de.png") repeat scroll 0 0 transparent;
+}
+.yd-sv3.new:before {
+    content: "";
+    display: block;
+    height: 57px;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+    width: 57px;
+    z-index: 10;
+}
+
+.bb .yd-sv3-1:after {
+    background: url("http://cdn.yourdelivery.de/images/yd-frontend-step2/badge-bloomsburys.png") repeat scroll 0 0 transparent;
+}
+
+.pr .yd-sv3-1:after {
+    background: url("http://cdn.yourdelivery.de/images/yd-frontend-step2/badge-premium.png") repeat scroll 0 0 transparent;
+}
+
+.bb .yd-sv3-1:after, .pr .yd-sv3-1:after {
+    content: "";
+    height: 30px;
+    left: 0;
+    position: absolute;
+    top: 5px;
+    width: 90px;
+}
+

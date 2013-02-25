@@ -1185,7 +1185,11 @@ abstract class Yourdelivery_Model_Servicetype_Abstract extends Default_Model_Bas
         if (is_null($this->getId())) {
             return null;
         }
-
+        
+        //FIX to use the images from owner server.
+        if (IS_PRODUCTION) {
+            return '/../storage/restaurants/'.$this->getId().'/default.jpg';
+        }
         //check for valid input
         $valid = array('api', 'tiny', 'small', 'normal');
         if (!in_array($size, $valid)) {
@@ -1200,6 +1204,7 @@ abstract class Yourdelivery_Model_Servicetype_Abstract extends Default_Model_Bas
 
         $url = sprintf('%s/%s/service/%s/%s-%d-%d.jpg', $http . $this->config->domain->timthumb, $domain, $this->getId(), urlencode($this->getName()), $width, $height);
         return $url;
+        
     }
 
     /**

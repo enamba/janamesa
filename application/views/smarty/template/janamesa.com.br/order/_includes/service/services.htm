@@ -2,8 +2,12 @@
 
     <form action="/{$r->getDirectLink()}" method="get" id="yd-service-submit-{$r->getId()}-{$r->getType()}" class="yd-service-submit {if !$r->isOnline()}service-offline{/if}">
         {if !empty($isFavourite) && $r->getCurrentCityId()}<input type="hidden" name="cityId" value="{$r->getCurrentCityId()}" />{/if}
-        <ul class="yd-sv3
-            {if $r->isNew()}
+        <ul class="yd-sv3 
+            {if $r->isLieferblitz() || $r->isPremium()}
+                pr
+            {elseif $r->isBloomsburys()}
+                bb
+            {elseif $r->isNew()}
                 new
             {/if}
             yd-service-select">

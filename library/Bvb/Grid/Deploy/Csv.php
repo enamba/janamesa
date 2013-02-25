@@ -247,6 +247,8 @@ class Bvb_Grid_Deploy_Csv extends Bvb_Grid implements Bvb_Grid_Deploy_DeployInte
             // adjust memory_limit if needed (not very important)
             ini_set('memory_limit', $this->_deploy['memory_limit']);
         }
+        //fix para gerar os relatorios grandes.
+        set_time_limit(9999);
     }
 
     /**

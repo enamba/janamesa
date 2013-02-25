@@ -31,7 +31,6 @@ html {
 }
 
 body {
-    height: 100%;
     font-family: "trebuchet ms",arial,"nimbus sans l",sans-serif;
     font-size: 12px;
     color: #333;
@@ -126,14 +125,12 @@ input:focus, textarea:focus, select:focus {
 
 #yd-nonfooter {
     position: relative;
-    min-height: 100%;
 }
 
 #content {
     position: relative;
     width: 1020px;
     margin: 0 auto;
-    padding: 0 0 200px;
 }
 
 #yd-sidebar {
@@ -477,7 +474,6 @@ input:focus, textarea:focus, select:focus {
 .yd-menu-head {
     background-repeat: no-repeat !important;
     border-radius: 0;
-    min-height:  172px;
     position: relative;
 }
 
@@ -823,12 +819,11 @@ div.time-picker li.selected {
                 Footer
 **********************************************/
 #yd-menu-footer{
-    position: relative;
-    height: 30px;
-    width: 1005px;
-    margin: -50px auto 0px auto;
-    height: 50px;
     border-radius: 5px 5px 0 0;
+    font-weight: bold;
+    height: 50px;
+    margin: 0 auto;
+    width: 1005px;
 }
 #yd-menu-footer #yd-menu-footer_content{
     margin: 0 auto;
@@ -1420,5 +1415,20 @@ h1.yd-lbicon-changeplz { background: url(/media/images/satellites/start/yd-sprit
 .yd-dialogs .yd-form .pl-autocomplete-city.ui-autocomplete-loading,
 .yd-dialogs .yd-form .pl-autocomplete-street.ui-autocomplete-loading {
     background: url(/media/images/ajax-loader-16-white.gif) no-repeat 160px 4px transparent;
+}
+
+.satellite div.banner div.headerBanner div.box_header  {}
+
+.satellite #slideshow LI {
+    height: 675px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+
+.satellite div.bannerLanding div.headerBanner, div.banner div.headerBanner {
+    background-image: none;
 }
 

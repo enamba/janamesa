@@ -20,14 +20,14 @@ $(document).ready( function () {
     if ($(window).height() < 673) {
         position = $(window).scrollTop() + $(window).height() - 23;
         if (position < 560){
-            $('.header').css('height', position +23 );
-            $('.banner').css('height', position +23 );
+            $('.home .header').css('height', position +23 );
+            $('.home .banner').css('height', position +23 );
         } else if ($(window).height() <= 570 ){
-            $('.header').css('height', 583 );
-            $('.banner').css('height', 583 );
+            $('.home .header').css('height', 583 );
+            $('.home .banner').css('height', 583 );
         } else if ($(window).height() < 673 ){
-            $('.header').css('height', $(window).height() );
-            $('.banner').css('height', $(window).height() );
+            $('.home .header').css('height', $(window).height() );
+            $('.home .banner').css('height', $(window).height() );
         }
     }
 
@@ -51,14 +51,14 @@ $(document).ready( function () {
 $(window).scroll(function () {
     position = $(window).scrollTop() + $(window).height() - 23;
     if (position < 560){
-        $('.header').css('height', position +23 );
-        $('.banner').css('height', position +23 );
+        $('.home .header').css('height', position +23 );
+        $('.home .banner').css('height', position +23 );
     } else if ($(window).height() <= 570 ){
-        $('.header').css('height', 583 );
-        $('.banner').css('height', 583 );
+        $('.home .header').css('height', 583 );
+        $('.home .banner').css('height', 583 );
     } else if ($(window).height() < 673 ){
-        $('.header').css('height', $(window).height() );
-        $('.banner').css('height', $(window).height() );
+        $('.home .header').css('height', $(window).height() );
+        $('.home .banner').css('height', $(window).height() );
     }
 });
 
@@ -67,11 +67,11 @@ $(window).resize(function() {
     $(window).scrollTop(0);
     if ($(window).height() < 673) {
         position = $(window).scrollTop() + $(window).height() - 23;
-        $('.header').css('height', $(window).height() );
-        $('.banner').css('height', $(window).height() );
+        $('.home .header').css('height', $(window).height() );
+        $('.home .banner').css('height', $(window).height() );
     } else {
-        $('.header').css('height', 675 );
-        $('.banner').css('height', 675 );
+        $('.home .header').css('height', 675 );
+        $('.home .banner').css('height', 675 );
     }
 });
 

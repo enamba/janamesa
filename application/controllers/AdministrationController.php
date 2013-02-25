@@ -438,11 +438,119 @@ class AdministrationController extends Default_Controller_AdministrationBase {
     }
     
     /**
+     * show a sortable, filterable table of all itens of order
+     * @param
+     * @return
+     */
+    public function relatorioordersfullAction() {
+        $this->view->assign('navservices', 'active');
+
+        // build select
+        $db = Zend_Registry::get('dbAdapter');
+        $select = $db
+                ->select()
+                ->from(array('o' => 'orders'), array(
+                    'orderID' => 'o.id',
+                    'restaurantID' => 'o.restaurantId',
+                    'E-mail Cliente' => 'oc.email',
+                    'Data Pedido' => 'o.time',
+                    'Nome' => 'r.name',
+                    'Total do Pedido' => new Zend_Db_Expr('REPLACE(REPLACE(FORMAT((rp.delcost+o.total)/100,2), ",", ""), ".", ",")'),
+                    'Custo Entrega' =>  new Zend_Db_Expr('REPLACE(REPLACE(FORMAT(rp.delcost/100,2), ",", ""), ".", ",")')
+                ))
+                ->join(array('r' => 'restaurants'), 'o.restaurantId = r.id', array())
+                ->joinleft(array('ol' => 'orders_location'), 'o.id = ol.orderId', array())
+                ->joinleft(array('rp' => 'restaurant_plz'), 'o.restaurantId = rp.restaurantId AND ol.plz = rp.plz', array())
+                ->joinleft(array('oc' => 'orders_customer'), 'oc.orderId = o.id', array())
+                ->order('o.id');
+
+        // build grid
+        $grid = Default_Helper::getTableGrid();
+        $grid->setcharEncoding("ISO-8859-1");
+        $grid->setExport(array('excel'));
+//        $grid->export = array('pdf', 'xml');
+        $grid->setPagination(20);
+        
+        $grid->setSource(new Bvb_Grid_Source_Zend_Select($select));
+
+        // add extra rows
+        $option = new Bvb_Grid_Extra_Column();
+        $option
+                ->position('right')
+                ->name('Itens do Pedido')
+                ->callback(array('function' => 'itensDoPedido', 'params' => array('{{orderID}}')));
+
+        //add extra rows
+        $grid->addExtraColumns($option);        
+        
+        // add extra rows
+        $option = new Bvb_Grid_Extra_Column();
+        $option
+                ->position('right')
+                ->name('Somatoria do Cardapio')
+                ->callback(array('function' => 'somaTodosItensCardapio', 'params' => array('{{restaurantID}}')));
+
+        //add extra rows
+        $grid->addExtraColumns($option);        
+        
+        //deploy grid to view
+        $this->view->grid = $grid->deploy();
+    }
+
+    
+    /**
+     * show a sortable, filterable table of all itens of order
+     * @param
+     * @return
+     */
+    public function relatoriosomasplzemealsAction() {
+        $this->view->assign('navservices', 'active');
+
+        // build select
+        $db = Zend_Registry::get('dbAdapter');
+        $select = $db
+                ->select()
+                ->from(array('rp' => 'restaurant_plz'), array(
+                    'Restaurante ID'=> 'rp.restaurantId',
+                    'Restaurante Nome'=> 'r.name',
+                    'Total de locais de entrega'=>new Zend_Db_Expr('count(rp.restaurantId)'),
+                    'Somatoria de todos os valores de todos locais de entrega'=>new Zend_Db_Expr('REPLACE(REPLACE(FORMAT(SUM(rp.delcost)/100,2), ",", ""), ".", ",")')
+                ))
+                ->join(array('r' => 'restaurants'), 'r.id = rp.restaurantId', array())
+                ->where('r.isOnline = 1')
+                ->group('rp.restaurantId');
+
+        // build grid
+        $grid = Default_Helper::getTableGrid();
+        $grid->setcharEncoding("ISO-8859-1");
+        $grid->setExport(array('excel'));
+        $grid->setPagination(20);
+        
+        $grid->setSource(new Bvb_Grid_Source_Zend_Select($select));
+        
+        // add extra rows
+        $option = new Bvb_Grid_Extra_Column();
+        $option
+                ->position('right')
+                ->name('Somatoria do Cardapio')
+                ->callback(array('function' => 'somaTodosItensCardapio', 'params' => array('{{Restaurante ID}}')));
+
+        //add extra rows
+        $grid->addExtraColumns($option);
+
+        //deploy grid to view
+        $this->view->grid = $grid->deploy();
+    }
+
+    
+    
+    
+    /**
      * show a sortable, filterable table of all restaurants
      * @param
      * @return
      */
-    public function servicesallAction() {
+    public function relatorioservicesallAction() {
         $this->view->assign('navservices', 'active');
 
 

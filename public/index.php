@@ -64,6 +64,16 @@ function isIndex($checkForParameters = true) {
  */
 function isBaseUrl() {
     
+    if (HOSTNAME == 'janamesa.com.br' || 
+            HOSTNAME == 'www.janamesa.com.br' ||
+            HOSTNAME == 'www.janamesa.com' ||
+            HOSTNAME == 'janamesa.com'
+            ){
+        return true;
+    } else {
+        return false;
+    }
+    
     if ( strstr(HOSTNAME,'gelbeseiten') ){
         return false;
     }

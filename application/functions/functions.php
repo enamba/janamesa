@@ -1260,6 +1260,55 @@ function horarios($id){
     return $html;
 }
 
+function itensDoPedido($id){
+    $table = new Yourdelivery_Model_DbTable_Order_BucketMeals();
+    $result = $table->fetchAll('orderId = ' . $id);
+    
+    if (count($result) == 0){
+        return null;
+    }
+    
+    $html = '<table>';
+    $html .= '<tr><td>Qtd</td><td>Item</td></tr>';
+    
+    foreach ($result as $itenPedido){
+        $html .= '<tr>';
+        $html .= '<td> '.$itenPedido['count']. ' </td>';
+        $html .= '<td> '.$itenPedido['name']. ' </td>';
+        $html .= '</td></tr>';
+    }
+    
+    $html .= '</table>';
+    return $html;
+}
+
+
+
+    /**
+     * show a sortable, filterable table of all itens of order
+     * @param
+     * @return
+     */
+    function somaTodosItensCardapio($id) {
+        
+        // build select
+        $db = Zend_Registry::get('dbAdapter');
+        $query = $db->select()
+                  ->from(array('ms' => 'meal_sizes_nn'), array(
+                               'ID' => 'm.restaurantId',
+                      'total_restaurante' => new Zend_Db_Expr('REPLACE(REPLACE(FORMAT(SUM(ms.cost)/100,2), ",", ""), ".", ",")')))
+                  ->join(array('m' => 'meals'), 'm.id = ms.mealId', array())
+                  ->where('m.restaurantId = ' . $id);
+//                               
+        
+        
+        $result = $db->fetchRow($query);
+
+        return $result['total_restaurante'];
+
+    }
+
+    
 /**
  * show options for courier billings
  * @author alex

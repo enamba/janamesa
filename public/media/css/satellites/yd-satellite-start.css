@@ -104,21 +104,18 @@ input:focus, textarea:focus, select:focus {
 body{
     font-family: helvetica,sans-serif;
     font-size: 11px;
-    height: 100%;
 }
 #yd-nonfooter {
-    min-height: 100%;
     position: relative;
 }
 #page{
 
     margin: 0 auto;
     width:  1021px;
-    padding-bottom: 140px;
 }
 /*-----Head-----*/
 #header{
-    height: 171px;
+    height: 0;
     width: 1021px;
 }
 #header ul{
@@ -325,16 +322,15 @@ body{
 
 /*Footer*/
 #yd-menu-footer{
-    position: relative;
-    height: 30px;
-    font-weight: bold;
-    width: 1005px;
-    margin: 0 auto;
-    height: 50px;
-    margin-top: -50px;
     border-radius: 5px 5px 0 0;
+    font-weight: bold;
+    height: 50px;
+    margin: 0 auto;
+    width: 1005px;  
 
 }
+
+
 #yd-menu-footer #yd-menu-footer_content{
     margin: 0 auto;
     padding-top: 15px;
@@ -734,3 +730,10 @@ body{
 }
 .satteliteid-105 #header ul li:first-child span {display: none;}
 .ie7 .satteliteid-105 #header ul li span,.ie6 .satteliteid-105 #header ul li span {display: inline;}
+
+.satellite .satelliteFace {
+    height: 20px;
+    margin: -80px 0 0 600px;
+    position: relative;
+    width: 120px;
+}
