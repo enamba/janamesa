@@ -67,6 +67,7 @@ function isBaseUrl() {
     if (HOSTNAME == 'janamesa.com.br' || 
             HOSTNAME == 'www.janamesa.com.br' ||
             HOSTNAME == 'www.janamesa.com' ||
+            HOSTNAME == 'staging.janamesa.com.br' ||
             HOSTNAME == 'janamesa.com'
             ){
         return true;

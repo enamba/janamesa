@@ -299,6 +299,7 @@ div.bannerLanding div.input_cep .findRestaurant, div.banner div.input_cep .findR
     padding-left: 29px;
     width: 263px;
     cursor:pointer;cursor:hand;
+    border: medium none;
 }
 
 div.bannerLanding div.input_cep .cep, div.banner div.input_cep .cep {

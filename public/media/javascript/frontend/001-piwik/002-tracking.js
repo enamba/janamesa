@@ -4,29 +4,6 @@
  * @see /public/js-packager.php
  */
 
-/**
- *_piwikUrl is set in js-packer.php via application.ini
- */
-var pkBaseURL = (("https:" == document.location.protocol) ? "https://" + _piwikUrl : "http://" + _piwikUrl);
-var _paq = _paq || [];
-
-try {
-    if ( !piwikId ){
-        log("no piwikId defined");
-    }
-    else{
-        (function(){
-            log("using piwik id " + piwikId);
-            _paq.push(['setSiteId', piwikId]);
-            _paq.push(['setTrackerUrl', pkBaseURL+'piwik.php']);
-            _paq.push(['enableLinkTracking']);
-            log('successfully loading piwik tracker');
-        })();
-        
-    }
-} catch( err ) {
-    log('failed to load piwik tracker' + err);
-}
 
 /**
  * set a cookie for internal tracking

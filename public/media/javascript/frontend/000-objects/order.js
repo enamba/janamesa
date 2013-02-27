@@ -702,7 +702,7 @@ var ydOrderPrototype = {
             if (order) {
                 var decodedJson = $.base64.decode(order);
                 if (decodedJson) {                
-                    log('restore order from storage');
+                    log('restore order from storage: ' + 'order-' + this.service_id + '-' + YdMode);
                     try{
                         order = JSON.parse(decodedJson);
                     }

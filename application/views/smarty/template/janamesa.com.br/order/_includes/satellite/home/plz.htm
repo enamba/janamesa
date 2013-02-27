@@ -1,0 +1,27 @@
+
+<form id="yd-select-plz-form" action="/menu" >
+            
+                     <div class="cep"></div>
+                     <div class="box_header">
+                         <div>PEÇA ONLINE -- {$service->getName()}</div>
+                         <div class="input_cep">
+                                 <input type="hidden" name="cityId" value="" />
+                                 <input id="yd-plz-search" type="text" class="yd-plz-autocomplete yd-plz-autocomplete-autosubmit yd-only-nr yd-empty-text ui-autocomplete-input yd-only-priv yd-autocomplete-value[service[{$service->getId()}]]" title="{__('Postleitzahl')}"  name="plz" value="" />
+                                 <input class="findRestaurant" type="submit" name="BUSCAR RESTAURANTES" style="margin: -5px 0 0 7px;"  value="Fazer meu pedido" />
+                             <div class="satelliteFace">
+                                {if $satellite->getShowFacebookLink() && $satellite->getFacebookLink()}
+                                <ul>
+                                    <li>
+                                        <a href="http://{$satellite->getFacebookLink()}" target="_blank" class="facebook">
+                                            <div id="fb-root"></div>
+                                            <script src="http://connect.facebook.net/{$config->locale->name}/all.js#xfbml=1"></script><fb:like href="{$satellite->getFacebookLink()}" send="false" layout="button_count" width="50" show_faces="false" font="arial"></fb:like>
+                                        </a>
+                                    </li>
+                                </ul>
+                                {/if}
+                             </div>
+                             <div class="msgerror hidden" style="margin-top: 53px; background-color: white; color: red;font-size: 12px;padding: 5px 10px;width: 277px; border: 1px solid #297E20;border-radius: 5px;min-height: 13px;">{$service->getName()} n&atilde;o entrega no CEP informado. </div>
+                         </div>
+                     </div>
+
+        </form>

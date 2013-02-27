@@ -1,0 +1,45 @@
+{extends file='satellite/_base_start.htm'}
+
+{block name="content"}
+ <div class="container">
+     <div class="header">
+         <div class="banner">
+             <ul id="slideshow">
+            {foreach from=$satellite->getRandomPictures() item=pic name=contador}
+                <li class="item {if $smarty.foreach.contador.index == 0}active{/if}" style="background: url({$pic}) no-repeat scroll center center #E8E7DA;"></li>
+                
+            {/foreach}
+             </ul>
+             <div class="headerBanner">
+                 <div class="contentHeader">
+                     <div class="logoSatellite"><img src="{$service->getImg()}" /></div>
+                     <div id="yd-select-plz-{$service->getId()}" class="yd-dialog-parent yd-select-plz">
+                        {include file='order/_includes/satellite/home/plz.htm'}
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="seletor">
+             {literal}
+             <div class="left" onclick="if (exec == false ){ exec=true;  $('#slideshow').slidePrevius();} exec = false;"><img src="/media/images/jnm-frontend/seta-esq.png" /></div>
+             <div class="right" onclick="if (exec == false ) {exec=true;  $('#slideshow').slideNext();} exec = false;"><img src="/media/images/jnm-frontend/seta-dir.png" /></div>
+             {/literal}
+         </div>
+     </div>
+ </div>
+
+{foreach from=$satellite->getPictures() item=pic}
+    <div class="box_img_text clearfix">
+
+        {if $pic->getPicture()}
+        <img class="text_box_img" alt="" src="{$pic->getPicture()}" />
+        {/if}
+
+        <div class="text_box2">
+            <p>{$pic->getDescription()|nl2br}</p>
+        </div>
+
+    </div>
+{/foreach}
+
+{/block}

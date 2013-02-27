@@ -1,54 +1,53 @@
 {extends file='satellite/_base_start.htm'}
 
 {block name="content"}
- <div class="container">
-     <div class="header">
-         <div class="banner">
-             <ul id="slideshow">
-            {foreach from=$satellite->getRandomPictures() item=pic name=contador}
-                <li class="item {if $smarty.foreach.contador.index == 0}active{/if}" style="background: url({$pic}) no-repeat scroll center center #E8E7DA;"></li>
-                
-            {/foreach}
-             </ul>
-             <div class="headerBanner">
-                 <div class="contentHeader">
-                     <div class="logoSatellite"><img src="{$service->getImg()}" /></div>
+<div id="flash">
+    <div id="yd-satellite-gallery">
 
-                     <div class="cep"></div>
-                     <div class="box_header">
-                         <div>PEÇA ONLINE -- {$service->getName()}</div>
-                         <div class="input_cep">
-                             <form id="yd-start-order-form" method="get" name="cep_form" action="/menu">
-                                 <input type="hidden" name="cityId" value="" />
-                                 <input id="yd-plz-search" class="cep yd-plz-autocomplete yd-plz-autocomplete-autosubmit yd-only-nr yd-empty-text" type="text" name="plz" value="" title="{__('Postleitzahl')}" />
-                                 <input class="findRestaurant" type="submit" name="BUSCAR RESTAURANTES" value="Fazer meu pedido" />
-                             </form>
-                             <div class="buscarCep"><a id="br-cep-autocomplete2" href="javascript:void(0)">NÃO SABE SEU CEP? CLIQUE AQUI!</a></div>
-                             <div class="satelliteFace">
-                                {if $satellite->getShowFacebookLink() && $satellite->getFacebookLink()}
-                                <ul>
-                                    <li>
-                                        <a href="http://{$satellite->getFacebookLink()}" target="_blank" class="facebook">
-                                            <div id="fb-root"></div>
-                                            <script src="http://connect.facebook.net/{$config->locale->name}/all.js#xfbml=1"></script><fb:like href="{$satellite->getFacebookLink()}" send="false" layout="button_count" width="50" show_faces="false" font="arial"></fb:like>
-                                        </a>
-                                    </li>
-                                </ul>
-                                {/if}
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-         <div class="seletor">
-             {literal}
-             <div class="left" onclick="if (exec == false ){ exec=true;  $('#slideshow').slidePrevius();} exec = false;"><img src="/media/images/jnm-frontend/seta-esq.png" /></div>
-             <div class="right" onclick="if (exec == false ) {exec=true;  $('#slideshow').slideNext();} exec = false;"><img src="/media/images/jnm-frontend/seta-dir.png" /></div>
-             {/literal}
-         </div>
-     </div>
- </div>
+        {foreach from=$satellite->getRandomPictures() item=pic}
+        <img src="{$pic}" alt="" title="" />
+        {/foreach}
+
+    </div>
+
+    <a href="{if $preview}/satellite/menu/id/{$satellite->getId()}{else}/menu{/if}" class="order_box">
+
+        <h1>{$satellite->getDynamicText()|default:__("Essen online Bestellen.")}</h1>
+
+        <i>{__("Jetzt online bestellen.")}</i>
+    </a>
+
+    <div class="clear"></div>
+
+</div>
+
+<div id="info">
+    <h2>{__("Essen online bestellen bei %s.", $service->getName())}</h2>
+</div>
+
+<div class="yd-service_info yd-box clearfix">
+    <div class="yd-box-head_2">
+        <table>
+            <tr>
+                <td class="left">{__('Öffnungszeiten')}</td>
+                <td class="right">{__('Mindestbestellwert und Liefergebiete in %s', $satellite->getService()->getOrt()->getOrt())}</td>
+            </tr>
+        </table>
+    </div>
+
+    <table class="left">
+        {$this->formatOpeningsMerged($satellite->getService()->getOpening()->getIntervals(strtotime('today'), strtotime('+7 days')))}
+    </table>
+
+    <table class="right">
+        {foreach from=$ranges key=cost item=range}
+        <tr>
+            <td><b>{__('%s €', $cost|inttoprice)}:</b></td>
+            <td><iframe width="500" height="300" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?viz=MAP&amp;q=select+col0+from+1RIF3JUuHHzUEG10pJ7tjqi_CNTH63rvaV5xB7E0&amp;h=false&amp;lat=-23.515987147144035&amp;lng=-46.4935647685669&amp;z=12&amp;t=1&amp;l=col0&amp;y=2&amp;tmplt=2"></iframe></td>
+        </tr>
+        {/foreach}
+    </table>
+</div>
 
 {foreach from=$satellite->getPictures() item=pic}
     <div class="box_img_text clearfix">

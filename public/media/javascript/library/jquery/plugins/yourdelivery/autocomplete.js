@@ -32,6 +32,13 @@
                     {
                         cep = cep + '-';
                         $(input).val(cep);
+                    } if (cep.length > 5 && cep.indexOf("-") == -1){
+                        firstPart = cep.substr(0,5);
+                        secondPart = cep.substr(5,cep.length);
+                        $(input).val(firstPart + '-' + secondPart);
+                    }
+                    if (cep.length > 9){
+                        $(input).val(cep.substr(0,9));
                     }
                 }
                 if (event.which != 13) {

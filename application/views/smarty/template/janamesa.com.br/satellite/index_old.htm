@@ -1,0 +1,67 @@
+{extends file='satellite/_base_start.htm'}
+
+{block name="content"}
+ <div class="container">
+     <div class="header">
+         <div class="banner">
+             <ul id="slideshow">
+            {foreach from=$satellite->getRandomPictures() item=pic name=contador}
+                <li class="item {if $smarty.foreach.contador.index == 0}active{/if}" style="background: url({$pic}) no-repeat scroll center center #E8E7DA;"></li>
+                
+            {/foreach}
+             </ul>
+             <div class="headerBanner">
+                 <div class="contentHeader">
+                     <div class="logoSatellite"><img src="{$service->getImg()}" /></div>
+
+                     <div class="cep"></div>
+                     <div class="box_header">
+                         <div>PEÇA ONLINE -- {$service->getName()}</div>
+                         <div class="input_cep">
+                             <form id="yd-start-order-form" method="get" name="cep_form" action="/menu">
+                                 <input type="hidden" name="cityId" value="" />
+                                 <input id="yd-plz-search" class="cep yd-plz-autocomplete yd-plz-autocomplete-autosubmit yd-only-nr yd-empty-text" type="text" name="plz" value="" title="{__('Postleitzahl')}" />
+                                 <input class="findRestaurant" type="submit" name="BUSCAR RESTAURANTES" value="Fazer meu pedido" />
+                             </form>
+                             <div class="buscarCep"><a id="br-cep-autocomplete2" href="javascript:void(0)">NÃO SABE SEU CEP? CLIQUE AQUI!</a></div>
+                             <div class="satelliteFace">
+                                {if $satellite->getShowFacebookLink() && $satellite->getFacebookLink()}
+                                <ul>
+                                    <li>
+                                        <a href="http://{$satellite->getFacebookLink()}" target="_blank" class="facebook">
+                                            <div id="fb-root"></div>
+                                            <script src="http://connect.facebook.net/{$config->locale->name}/all.js#xfbml=1"></script><fb:like href="{$satellite->getFacebookLink()}" send="false" layout="button_count" width="50" show_faces="false" font="arial"></fb:like>
+                                        </a>
+                                    </li>
+                                </ul>
+                                {/if}
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="seletor">
+             {literal}
+             <div class="left" onclick="if (exec == false ){ exec=true;  $('#slideshow').slidePrevius();} exec = false;"><img src="/media/images/jnm-frontend/seta-esq.png" /></div>
+             <div class="right" onclick="if (exec == false ) {exec=true;  $('#slideshow').slideNext();} exec = false;"><img src="/media/images/jnm-frontend/seta-dir.png" /></div>
+             {/literal}
+         </div>
+     </div>
+ </div>
+
+{foreach from=$satellite->getPictures() item=pic}
+    <div class="box_img_text clearfix">
+
+        {if $pic->getPicture()}
+        <img class="text_box_img" alt="" src="{$pic->getPicture()}" />
+        {/if}
+
+        <div class="text_box2">
+            <p>{$pic->getDescription()|nl2br}</p>
+        </div>
+
+    </div>
+{/foreach}
+
+{/block}
