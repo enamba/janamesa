@@ -15,17 +15,17 @@ $(document).ready( function () {
         ydMenuTrigger.init()
         
     });
-    
+
     $('#yd-select-plz-form').submit(function () {
-        
-        var plzIsSet = ydMenuTrigger.isPlzSet(function(){
-            alert("entrou");
-        });
-        if (!plzIsSet) {
-            return false;
+
+        recurring = ydRecurring.read();
+        if (ydRecurring.read()._lastarea == null){
+            //alert("nao selecionado");
+            return true;
+        } else {
+            //alert("selecionado manda bronca: " + ydRecurring.read()._lastarea);
+            return true;
         }
-        
-        
         if (!this.plz.value.length) {
             notification("error", "Por favor informe o CEP onde a comida deverá ser entregue.");
             return false;

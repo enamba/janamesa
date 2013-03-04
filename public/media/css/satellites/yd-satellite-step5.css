@@ -11,6 +11,7 @@
 ***********************************************************/
 #yd-success-page .yd-success-points{
     text-align: center;
+    height: 115px;
 
 }
 #yd-success-page .yd-success1 {
@@ -25,22 +26,61 @@
     padding-top: 5px;
 }
 #yd-success-page .yd-success-points .yd-button-240 {
-    text-align: left;
+    text-align: center;
     margin-left: 5px;
 }
-
+#LiveChat_1342624305 {
+    height: 115px;
+    margin-top: -5px;
+}
+#LiveChat_1342624305 img {
+    width: 250px;
+    margin: 20px 0;
+}
 #yd-success-page .yd-rest-info{
     padding: 5px 5px 5px 180px;
 }
 #yd-success-page .yd-rest-info img{
     position: absolute;
     position: absolute;
-    left: 5px;
-    top: 5px;
+    left: 25px;
+    top: 25px;
+}
+.yd-clearfix:after, .yd-sv3:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+.yd-form li {
+    clear: none;
+    left: 0;
+    position: relative;
+    top: 0;
+    z-index: 99;
+}
+
+.yd-dialogs-head {
+    background: none repeat scroll 0 0 white;
+    border: 10px solid #EBE8CD;
+    padding: 20px;
+}
+
+.yd-lightbox-content-container {
+    padding:20px;
+}
+
+.yd-lightbox-content-container .yd-form ul {
+    width: 323px;
+}
+.yd-form-left {
+    float: left;
 }
 #yd-success-page #yd-sidebar{
     position: absolute;
-    top: 177px;
+    top: 0;
     right: 10px;
 }
 #yd-success-page h1{

@@ -46,7 +46,11 @@
             <span>
                 {__("Bei Fragen zur Bestellung, Lieferzeit oder den Produkten wende Dich bitte an:")}
             </span>
-            <img class="yd-rest-logo" src="{$timthumb}/{$config->domain->base}/service/{$order->getService()->getId()}/{$order->getService()->getName()|urlencode}-155-100.jpg" alt="{$order->getService()->getName()}" />
+            {if $satellite && $satellite->getLogo()}
+            <img src="{$satellite->getLogo()}" />
+            {else}
+            <img class="yd-rest-logo" src="{$timthumb}/{$config->domain->base}/service/{$order->getService()->getId()}/{$order->getService()->getName()|urlencode}-126-122.jpg" alt="{$order->getService()->getName()}" />
+            {/if}
             {if $config->domain->base == 'janamesa.com.br'}
                 <strong>{$config->locale->tel->support}</strong>
             {else}
@@ -81,15 +85,9 @@
 
             <strong>{_n("%d Treuepunkt", "%d Treuepunkte", ($order->getCustomer()->getFidelity()->getPointsForAction('order')+$order->getCustomer()->getFidelity()->getPointsForAction('register')+$order->getCustomer()->getFidelity()->getPointsForAction('registeraftersale')),($order->getCustomer()->getFidelity()->getPointsForAction('order')+$order->getCustomer()->getFidelity()->getPointsForAction('register')+$order->getCustomer()->getFidelity()->getPointsForAction('registeraftersale')))}</strong>
 
-            {if $order->isSatellite()}
                 <a href="http://www.{$config->domain->base}/user/register" class="yd-button-240 yd-logged-out">
                     {__("Treuepunkte sichern")}
                 </a>
-            {else}
-                <a class="yd-button-240 yd-register-fidelity yd-logged-out" id="yd-register-fidelity-{$order->getId()}">
-                    {__("Treuepunkte sichern")}
-                </a>
-            {/if}
         </div>
 
         {/if}

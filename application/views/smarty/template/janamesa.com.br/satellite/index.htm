@@ -12,7 +12,11 @@
              </ul>
              <div class="headerBanner">
                  <div class="contentHeader">
+                     {if $satellite->getLogo()}
+                     <div class="logoSatellite"><img src="{$satellite->getLogo()}" /></div>
+                     {else}
                      <div class="logoSatellite"><img src="{$service->getImg()}" /></div>
+                     {/if}
                      <div id="yd-select-plz-{$service->getId()}" class="yd-dialog-parent yd-select-plz">
                         {include file='order/_includes/satellite/home/plz.htm'}
                      </div>

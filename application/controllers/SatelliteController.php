@@ -134,7 +134,24 @@ class SatelliteController extends Order_PrivateController {
     public function menuAction() {
         
         $service = $this->_satellite->getService();
+
         
+        $cityId = $this->_getParam('cityId', 0);
+        
+        if ($cityId == 0) {
+            return $this->_redirect('/');
+        }
+        
+        $plzs = Yourdelivery_Model_Autocomplete::getPlzFromServiceAndcity($cityId, $service->getId());
+        
+        if (count($plzs) == 0) {
+            return $this->_redirect('/');
+        }
+        
+        $plz = $plzs[0]['plz'];
+
+        $this->view->plz = $plz;
+        $this->view->city = $cityId;
         $this->view->extra_css = 'step3';
         list($menu, $parents) = $service->getMenu();
         $this->view->menu = $menu;

@@ -125,6 +125,7 @@ input:focus, textarea:focus, select:focus {
 
 #yd-nonfooter {
     position: relative;
+    z-index: 9;
 }
 
 #content {
@@ -304,8 +305,7 @@ input:focus, textarea:focus, select:focus {
 /********** New Button 240 px width **********/
 
 .yd-button-240 {
-    width: 220px;
-    padding-left: 20px;
+    width: 240px;
     height: 50px;
     line-height: 50px;
     margin: 0 0 20px;
@@ -591,7 +591,6 @@ div.time-picker li.selected {
     margin: 0 0 15px;
     padding: 0 0 5px;
     color: #333;
-    border-bottom: 1px dotted #ccc;
 }
 
 .yd-form strong.yd-form-tease span {
@@ -603,7 +602,13 @@ div.time-picker li.selected {
 .yd-form-valid {
     border: 2px solid #00c800;
     background:
-        url(/media/images/satellites/start/yd-sprites-icons.png) 160px -1966px no-repeat,
+        url(/media/images/satellites/start/yd-sprites-icons.png) 295px -1966px no-repeat,
+        url(/media/images/satellites/start/yd-input-text.png) repeat-x top left #fff;
+}
+
+input[name="hausnr"].yd-form-valid {
+    background:
+        url(/media/images/satellites/start/yd-sprites-icons.png) 70px -1966px no-repeat,
         url(/media/images/satellites/start/yd-input-text.png) repeat-x top left #fff;
 }
 
@@ -617,7 +622,7 @@ div.time-picker li.selected {
 }
 
 .yd-form .yd-form-wrapper {
-    width: 400px;
+    
 }
 
 .yd-form ul.yd-form-section {
@@ -627,7 +632,6 @@ div.time-picker li.selected {
 
 .yd-form li {
     position: relative;
-    width: 198px;
     margin: 0 0 10px;
 }
 
@@ -656,9 +660,15 @@ div.time-picker li.selected {
     float: left;
 }
 
+.yd-form li.yd-form-center {
+    float: left;
+    margin-left: 23px;
+    width: 95px;
+}
+
 .yd-form-left input,
 .yd-form-right input {
-    width: 180px;
+    width: 310px;
 }
 
 .yd-form-right select {
@@ -675,7 +685,7 @@ div.time-picker li.selected {
 }
 
 .yd-form .yd-form-middle textarea {
-    width: 382px !important;
+    width: 660px !important;
     height: 70px;
     max-height: 70px;
 }
@@ -735,7 +745,7 @@ div.time-picker li.selected {
 }
 
 .yd-form-yquery input {
-    width: 150px;
+    width: 280px;
 }
 
 .yd-form-yquery input:focus {
@@ -743,9 +753,23 @@ div.time-picker li.selected {
 }
 
 #yd-finish-deliver-time {
-    width: 165px;
+    width: 295px;
+}
+.payment-money{
+    float:left;
+}
+#yd-payment-form-bar {
+    width: 215px;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 40px;
+    margin: 0 10px 10px 0;
 }
 
+.yd-payment-cash {
+    float:left;
+}
 #debit-reg-name-info,
 #debit-reg-nr-info,
 #debit-reg-blz-info {
@@ -804,7 +828,7 @@ div.time-picker li.selected {
 }
 
 .yd-bigbox-body {
-    margin: 0 0 0 180px;
+
     min-height: 48px;
 }
 
@@ -877,16 +901,18 @@ h1.yd-lbicon-changeplz { background: url(/media/images/satellites/start/yd-sprit
 .yd-lightbox-content-container #yd-special-input {
     height: 100px !important;
 }
-
+.yd-dialog, #dialog {
+    z-index: 99999 !important;
+}
 /*
                 Siedebar
 ****************************************/
 .yd-box{
-    box-shadow: none;
-    border-radius:5px;
     border: medium none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: none;
+    margin: 0 0 20px;
     padding-top: 3px;
-    margin: 10px 0 20px 0;
 }
 .yd-box .edit-meal, .yd-box yd-minamount-toogle-in{
     background: none;
@@ -976,13 +1002,6 @@ h1.yd-lbicon-changeplz { background: url(/media/images/satellites/start/yd-sprit
     outline:none;
 }
 
-
-
-
-
-
-
-
 /*
  * Rescue CSS June 2012
  **********************************************************/
@@ -995,41 +1014,6 @@ h1.yd-lbicon-changeplz { background: url(/media/images/satellites/start/yd-sprit
 .yd-form-info-left {
     display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*
@@ -1432,3 +1416,7 @@ h1.yd-lbicon-changeplz { background: url(/media/images/satellites/start/yd-sprit
     background-image: none;
 }
 
+#yd-sidebar .logoSatellite {
+    text-align: center;
+    margin: 20px;
+}

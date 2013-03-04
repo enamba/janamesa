@@ -849,9 +849,14 @@ abstract class Yourdelivery_Model_Order_Abstract extends Default_Model_Base {
     public function setPaymentAddition($addition) {
 
         $additions = Yourdelivery_Payment_Abstract::getAdditions();
+//        echo "-payment: " . $this->getPayment();
+//        echo "-addition: " . $addition . '-';
+//        print_r($additions);
         if (array_key_exists($addition, $additions) && $this->getPayment() == 'bar') {
+//            echo "-dentro:";
             $this->_data['paymentAddition'] = $addition;
         }
+//        die("");
     }
 
     /**

@@ -8976,7 +8976,7 @@ msgstr[1] "%d pontos de fidelidade"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/1e544fc770683d17b8bb44e6afd8684d63a4e2ec.file.success.htm.php:593
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/1e544fc770683d17b8bb44e6afd8684d63a4e2ec.file.success.htm.php:599
 msgid "Treuepunkte sichern"
-msgstr "Assegurar pontos de fidelidade"
+msgstr "Garanta para você os pontos"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/935736fea0d22730db4b557702473d8f5252bae9.file.coupon.htm.php:24
 msgid "WO kann ich meinen Gutschein eingeben?"
@@ -16467,7 +16467,7 @@ msgstr "Não foi possível devolver o pagamento de cartão de crédito: %s : %s"
 
 #~ msgid "2 Treuepunkte sichern! Einfach nach Bestellung registrieren!"
 #~ msgstr ""
-#~ "Assegurar 2 pontos de fidelidae! Registrar simplesmente após a encomenda! "
+#~ "Garanta 2 pontos de fidelidade! Registrar simplesmente após a encomenda! "
 
 #~ msgid "Noch %s Punkte bis zum Gratis-Gericht!"
 #~ msgstr "Ainda %s até os pontos para um prato gratis!"

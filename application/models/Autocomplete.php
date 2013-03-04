@@ -278,5 +278,13 @@ class Yourdelivery_Model_Autocomplete {
             WHERE status = 1 AND `description` LIKE ? group by `description` order by count(`description`) desc
             LIMIT 5", $description . "%");
     }
+    
+    public static function getPlzFromServiceAndcity($cityId, $serviceId){
+        // get db
+        $db = Zend_Registry::get('dbAdapterReadOnly');
+
+        return $db->fetchAll("select plz FROM restaurant_plz WHERE restaurantId = ? AND cityId = ?", array($serviceId, $cityId));
+        ;
+    }
 
 }

@@ -145,7 +145,9 @@ class Request_UserController extends Default_Controller_RequestBase {
      */
     public function registerfidelityAction() {
         $fidelityConfig = new Zend_Config_Ini(APPLICATION_PATH . '/configs/fidelity.ini', APPLICATION_ENV);
-        $this->view->pointsforregister = $fidelityConfig->fidelity->points->register;
+        $this->view->pointsforregister = $fidelityConfig->fidelity->points->order + 
+                $fidelityConfig->fidelity->points->register +
+                $fidelityConfig->fidelity->points->registeraftersale;
         $request = $this->getRequest();
 
         // post, print json

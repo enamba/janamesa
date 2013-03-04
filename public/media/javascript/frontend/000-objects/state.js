@@ -63,7 +63,7 @@ var ydState = {
         }
 
         this._city = city;
-        log(city);
+        log("CITY:"+city);
 
         return this.save();
     },

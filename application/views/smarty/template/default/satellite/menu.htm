@@ -15,10 +15,11 @@
 </div>
 
 <div id="yd-sidebar">
-    <div>
-        <div class="cep_review"> </div>
-        <div><a href="#" class="clear_cep">redefinir</a></div>
-    </div>
+                    {if $satellite->getLogo()}
+                     <div class="logoSatellite"><img src="{$satellite->getLogo()}" /></div>
+                     {else}
+                     <div class="logoSatellite"><img src="{$service->getImg()}" /></div>
+                     {/if}
     {if $satellite->isPremium() == false}
     <div class="yd-menu-head" style="background:url({nocache}{$satellite->getLogo()}{/nocache});">
         {if $satellite->isPremium()}
@@ -39,7 +40,7 @@
         </object>
     </div>
     {/if}
-    <form action="{if $preview}/satellite/finish/id/{$satellite->getId()}{else}{$satellite->getUrl()}/finish{/if}" method="post" id="yd-finish-order-form">
+    <form action="{if $preview}/satellite/finish/id/{$satellite->getId()}{else}/finish{/if}" method="post" id="yd-finish-order-form">
         <!-- this will trigger the restoring of the ydOrder object with an update of the view -->
         <input type="hidden" name="serviceId" value="{$service->getId()}" id="yd-order-service-id" />       
         <input id="yd-order-restore-bucket" type="hidden" name="restore" />

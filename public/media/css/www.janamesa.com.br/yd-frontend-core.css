@@ -1322,6 +1322,10 @@ li.yd-canteen-edit {
     padding: 0 210px 8px 0!important;
 }
 
+.yd-lightbox-content-container .yd-form ul{
+    width: 298px;
+}
+
 .yd-form ul{
     width: 640px;
     display: inline-block;

@@ -787,8 +787,9 @@ class Order_BasisController extends Default_Controller_Base {
                 }
             }
 
+//            print_r($this->view->post['paymentAddition']);
             //add ec to payment
-            $order->setPaymentAddition($this->getRequest()->getParam('paymentAddition'));
+            $order->setPaymentAddition($this->view->post['paymentAddition']);
             $order->setChange((integer) preg_replace("/[^0-9]/", "", $this->getRequest()->getParam('change')));
 
             // save order

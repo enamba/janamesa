@@ -7,6 +7,11 @@
 #paymentcontent input{
     display: none;
 }
+#paymentcontent input[name="change"]{
+    display: block;
+    float: right;
+    width: 125px;
+}
 .yd-payment-cash,
 .yd-payment-payp,
 .yd-payment-ec ,
@@ -139,18 +144,16 @@
 .yd-form ul.yd-form-section {
     border: none;
 }
-.yd-bigbox-body{
-    margin: 0 0 0 145px;
-}
+
 .yd-form-valid {
-    background: url("/media/images/satellites/start/yd-sprites-icons.png") no-repeat scroll 150px -1966px, url("/media/images/satellites/start/yd-input-text.png") repeat-x scroll left top #FFFFFF;
+    background: url("/media/images/satellites/start/yd-sprites-icons.png") no-repeat scroll 295px -1966px, url("/media/images/satellites/start/yd-input-text.png") repeat-x scroll left top #FFFFFF;
 }
 .yd-form-middle a, .yd-link-rabatt-delete{
     background: none !important;
     text-decoration: underline;
 }
 .yd-form .yd-form-middle textarea{
-    width: 370px;
+    width: 660px;
     height: 50px;
 }
 #yd-finish-deliver-time {

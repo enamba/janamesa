@@ -2,7 +2,6 @@
 {block name="content"}
 
     <div id="nonFooter">
-        <a href="{if $preview}/satellite/menu/id/{$satellite->getId()}{else}{$satellite->getUrl()}/menu{/if}" class="backbutton">{__("Zurück zur Speisekarte")}</a>
         <div id="yd-menu" class="yd-clearfix">
             <div id="yd-menu-content-finish" class="yd-clearfix">
 
@@ -11,7 +10,5 @@
             </div>
         </div>
     </div>
-
-    {include file='_cookies/piwik/success.htm' uadomain=$domain_base}
 
 {/block}

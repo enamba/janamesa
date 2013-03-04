@@ -134,7 +134,7 @@ abstract class Yourdelivery_Payment_Abstract {
 
         return array(
             'ec' => "Cartão de Débito (Aparelho em domicílio)",
-            'creditcardathome' => "Cartão de Crédito (Aparelho em domicílio)",
+            'creditCardAtHome' => "Cartão de Crédito (Aparelho em domicílio)",
             'vr' => __("Vale Refeição"),
             'cheque' => __("Cheque"),
             'ticketRestaurant' => __("Ticket Restaurante"),
