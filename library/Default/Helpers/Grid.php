@@ -34,6 +34,7 @@ class Default_Helpers_Grid {
                     'Lieferzeit' => new Zend_Db_Expr("DATE_FORMAT(o.deliverTime, '%d.%m.%Y %H:%i')"),
                     'Status' => 'o.state',
                     'Payment' => 'o.payment',
+                    'Detalhe Pagamento' => 'o.paymentAddition',
                     'Typ' => 'o.mode',
                     'Kundentyp' => 'o.kind',
                     'Preis' => new Zend_Db_Expr("o.total + o.serviceDeliverCost + o.courierCost - o.courierDiscount"),
@@ -166,6 +167,7 @@ class Default_Helpers_Grid {
         $grid->updateColumn('Stadt', array('title' => __b('Stadt')));
         $grid->updateColumn('Firma', array('title' => __b('Firma'), 'callback' => array('function' => 'companyinfo', 'params' => array('{{Firma}}', '{{companyId}}', '{{ID}}'))));
         $grid->updateColumn('ipAddr', array('title' => __b('Ip Addr/UUID'), 'callback' => array('function' => 'ipinfo', 'params' => array('{{ipAddr}}', '{{uuid}}', '{{ID}}'))));
+        $grid->updateColumn('Detalhe Pagamento', array('title' => 'Detalhe Pagamento', 'callback' => array('function' => 'Default_Helpers_Grid_Order::payment', 'params' => array('{{Detalhe Pagamento}}', '{{ID}}'))));
 
         // translate stati
         $statis = array(
@@ -193,6 +195,16 @@ class Default_Helpers_Grid {
             'bar' => __b('Barzahlung'),
             'bill' => __b('Rechnung'),
             'ebanking' => __b('Überweisung'),
+            '' => __b('Alle')
+        );
+
+        // translate payment addition
+        $paymentAddition = array(
+            'ec' => "Cartão de Débito (Aparelho em domicílio)",
+            'creditCardAtHome' => "Cartão de Crédito (Aparelho em domicílio)",
+            'vr' => __("Vale Refeição"),
+            'cheque' => __("Cheque"),
+            'ticketRestaurant' => __("Ticket Restaurante"),
             '' => __b('Alle')
         );
 
@@ -233,6 +245,7 @@ class Default_Helpers_Grid {
                 ->addFilter('Lieferzeit')
                 ->addFilter('Status', array('values' => $statis))
                 ->addFilter('Payment', array('values' => $payments))
+                ->addFilter('Detalhe Pagamento', array('values' => $paymentAddition))
                 ->addFilter('Typ', array('values' => $modes))
                 ->addFilter('Kundentyp', array('values' => $kinds))
                 ->addFilter('Gutschein', array('values' => $ok))

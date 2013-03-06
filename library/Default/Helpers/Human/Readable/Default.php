@@ -74,7 +74,12 @@ class Default_Helpers_Human_Readable_Default {
             case 'bar': return __('Barzahlung');
             case 'debit': return __('Lastschrift');
             case 'ebanking': return __('Überweisung');
-            default: return __('Unbekannt');
+            case 'ec': return "Cartão de Débito (Aparelho em domicílio)";
+            case 'creditCardAtHome' : return "Cartão de Crédito (Aparelho em domicílio)";
+            case 'vr' : return  __("Vale Refeição");
+            case 'cheque': return  __("Cheque");
+            case 'ticketRestaurant' : return __("Ticket Restaurante");              
+            default: return '--';
         }
     }
 

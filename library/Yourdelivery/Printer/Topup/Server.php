@@ -7,7 +7,7 @@
  */
 class Yourdelivery_Printer_Topup_Server {
     
-    private $_server = "10.0.1.136";
+    private $_server = "192.168.2.105";
     private $_port;
     
     private $_domain = "lieferando.de";
@@ -97,7 +97,7 @@ class Yourdelivery_Printer_Topup_Server {
         // init socket
         $this->_log("Starting server at %s:%s", $this->_server, $this->_port);
         
-        if (!($server = @socket_create(AF_INET, SOCK_STREAM, SOL_TCP))) {
+        if (!($server = socket_create(AF_INET, SOCK_STREAM, SOL_TCP))) {
             return $this->_log("Failed:1 " . $this->_getSocketError());
         }
         socket_set_option($server, SOL_SOCKET, SO_REUSEADDR, 1);
@@ -113,7 +113,6 @@ class Yourdelivery_Printer_Topup_Server {
         $this->_log("Use printer locale %s", $this->_locale);
         
         $this->_queue = new Yourdelivery_Model_Printer_Topup_Queue();
-        
         $this->_startLoop();
     }
     

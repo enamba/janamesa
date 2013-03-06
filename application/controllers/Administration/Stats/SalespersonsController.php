@@ -38,6 +38,7 @@ class Administration_Stats_SalespersonsController extends Default_Controller_Adm
                     'salespersonPrename' => $row['salespersonPrename'],
                     'salespersonCallcenter' => $row['salespersonCallcenter'],
                     'salespersonSalary' => $row['salespersonSalary'],
+                    'Categoria' => $row['categoria'],
                     'count' => 0,
                     'noContractCount' => 0,
                     'data' => array()

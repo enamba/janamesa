@@ -50,8 +50,7 @@
                     <th width="5%">{__b('Bezahlt')}</th>
                     <th width="10%">{__b('Provision')}, %</th>
                     <th width="10%">{__b('Gebühr pro Bestellung')}, {__b('cents')}</th>
-                    <th width="10%"></th>
-                    <th width="10%"></th>
+                    <th width="10%">Categoria</th>
                 </tr>
                 {foreach from=$c['data'] item=d}
                 <tr>
@@ -96,10 +95,7 @@
                         {if $d['restaurantFee']>0}{$d['restaurantFee']}{/if}
                     </td>
                     <td>
-                        {if $d['restaurantOnlyCash']==1}{__b('nur Barzahlung')}{/if}
-                    </td>
-                    <td>
-                        {if $d['restaurantDeleted']==1}<span style="color:red">{__b('gelöscht')}</span>{/if}
+                        {$d['categoria']}
                     </td>
                 </tr>
                 {/foreach}

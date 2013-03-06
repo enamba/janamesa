@@ -89,6 +89,7 @@ class Yourdelivery_Model_DbTable_Salesperson_Restaurant extends Default_Model_Db
                             "sr.restaurantId",
                             "sr.paid",
                             "restaurantName" => "r.name",
+                            "categoria" => "rc.name",
                             "restaurantOnlyCash" => "r.onlycash",
                             "restaurantIsOnline" => "r.isOnline",
                             "restaurantStatus" => "r.status",
@@ -101,6 +102,7 @@ class Yourdelivery_Model_DbTable_Salesperson_Restaurant extends Default_Model_Db
                     ))
             ->join(array("s" => "salespersons"), "s.id=sr.salespersonId", array())
             ->join(array("r" => "restaurants"), "r.id=sr.restaurantId", array())
+            ->join(array("rc" => "restaurant_categories"), "r.categoryId=rc.id", array())
             ->join(array("ft" => "restaurant_franchisetype"), "ft.id=r.franchiseTypeId", array())
             ->join(array("c" => "city"), "c.id=r.cityId", array())
             ->where("sr.signed between '" . $from . "' and '" . $until . "'")
