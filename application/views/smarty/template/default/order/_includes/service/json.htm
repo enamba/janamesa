@@ -12,10 +12,10 @@
         ratingcount: {if $r->getRating()->count(null, true, false, true) < 5}0{else}{$r->getRating()->count(null, true, false, true)|default:5}{/if},
         ratingstars: "{if $r->getRating()->count(null, true, false, true) < 5}0{else}{round($r->getRating()->getAverage(),2)}{/if}",
         ratingvotes: {if $r->getRating()->count(null, true, false, true) < 5}0{else}{round($r->getRating()->getAverageAdvise())}{/if},
-        mincost: {$r->getMincost()|default:0},
-        category: {$r->getCategory()->id|default:0},
+        mincost: {if $r->getMincost()}{$r->getMincost()}{else}0{/if},
+        category: {if $r->getCategory()->id}{$r->getCategory()->id}{else}0{/if},
         premium: "{if $r->isPremium() || $r->isBloomsburys() || $r->isLieferblitz()}a{else}b{/if}{$r->getName()|strtolower}",
-        delivercost: {$r->getDeliverCost()|default:0},
+        delivercost: {if $r->getDeliverCost()}{$r->getDeliverCost()}{else}0{/if},
         openings: {$this->formatOpeningsAsJson($r->getOpening()->getIntervalOfDay())},
         score: {$r->getSortingScore($time)}
     });

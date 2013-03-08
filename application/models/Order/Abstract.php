@@ -181,6 +181,16 @@ abstract class Yourdelivery_Model_Order_Abstract extends Default_Model_Base {
     }
 
     /**
+     * get all services delivering from a category
+     * @param mixed integer|array $categoryId
+     * @param string $mode
+     * @return array
+     */
+    static public function getServicesByCagegoryId($categoryId = null, $mode = null, $limit = null) {
+        return Yourdelivery_Model_Servicetype_Restaurant::getByCategoryId($categoryId, $mode, false, $limit);
+    }
+
+    /**
      * get all services delivering in a certian area
      * @param mixed integer|array $cityId
      * @param string $mode
@@ -199,6 +209,17 @@ abstract class Yourdelivery_Model_Order_Abstract extends Default_Model_Base {
      */
     static public function getOfflineServicesByCityId($cityId = null, $mode = null, $limit = null) {
         return Yourdelivery_Model_Servicetype_Restaurant::getByCityId($cityId, $mode, true, $limit);
+    }
+
+    /**
+     * get offline services delivering in a certain area
+     * @author daniel
+     * @param int $cityId
+     * @param string $mode
+     * @return  array
+     */
+    static public function getOfflineServicesByCagegoryId($categoryId = null, $mode = null, $limit = null) {
+        return Yourdelivery_Model_Servicetype_Restaurant::getByCategoryId($categoryId, $mode, true, $limit);
     }
 
     /**

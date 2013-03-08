@@ -182,6 +182,10 @@ input, textarea {
     width: 99%;
 }
 
+input.yd-option-row-checkbox {
+    width: 9%;
+}
+
 input.submitLogin {
     background: url("/media/images/jnm-frontend/btnheader2.png") repeat scroll 0 0 transparent;
     color: white;

@@ -609,21 +609,6 @@ ul.ui-autocomplete li a {
 .formError .formErrorArrow .line1{width:1px;border:none;background:#ddd;}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .yd-dialogs {
     position: relative;
     top: 0;
@@ -635,7 +620,7 @@ ul.ui-autocomplete li a {
     -webkit-border-radius: 4px !important;
     border-radius: 4px !important;
     behavior: url(/media/css/www.janamesa.com.br/PIE.htc);
-    padding: 30px 0 40px 0;
+    padding: 15px 0 40px 0;
     z-index: auto;
     text-align: center;
 }
@@ -645,7 +630,7 @@ ul.ui-autocomplete li a {
     width: 100%;
     text-align: center;
     border-bottom: 1px solid #C8D9DB;
-    padding: 0 0 22px 0;
+    padding: 0 0 10px 0;
     margin: 0;
     position: relative;
     top: 0;
@@ -737,7 +722,7 @@ ul.ui-autocomplete li a {
 
 .yd-dialogs-head span {
     float: left;
-    margin: 4px 0 0;
+    margin: 0;
     font-family: FuturaCondensedMedium, "trebuchet ms", arial, "nimbus sans l", sans-serif;
     font-size: 24px;
     color: #559dd4;
@@ -790,6 +775,7 @@ ul.ui-autocomplete li a {
     -moz-border-radius: 4px 4px 0 0 !important;
     -webkit-border-radius: 4px 4px 0 0 !important;
     border-radius: 4px 4px 0 0 !important;
+    height: 30px;
 }
 
 .yd-dialogs-box-head:hover {
@@ -846,10 +832,12 @@ ul.ui-autocomplete li a {
     font-size: 16px;
     font-weight: bold;
     text-shadow: 0 1px 0 #fff;
+    float:left;
 }
 
 .yd-dialogs-box.yd-dialogs-green .yd-dialogs-box-head .yd-dbh-number {
     color: #65ba62;
+    float: left;
 }
 
 .yd-dialogs-box-head .yd-dbh-choose {
@@ -858,6 +846,9 @@ ul.ui-autocomplete li a {
     font-size: 16px;
     font-weight: bold;
     text-shadow: 0 1px 0 #fff;
+    width: 250px;
+    float: left;
+    display: block;
 }
 
 .yd-dialogs-box-head .yd-dbh-choise {
@@ -991,11 +982,12 @@ ul.ui-autocomplete li a {
     width: 530px;
     height: 100px;
     z-index: 1005;
+    border: 1px solid #CCCCCC;
 }
 
 .yd-dialogs-price {
     position: relative;
-    margin: 20px 0;
+    margin: 0;
 }
 
 .yd-dialogs-price strong {

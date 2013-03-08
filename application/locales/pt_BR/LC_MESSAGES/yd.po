@@ -5412,7 +5412,7 @@ msgstr ""
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/aec0e7ea40bb0ce6b2b1475393e08674ed4203da.file.menu.htm.php:886
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/pyszne.pl/a3c489a5f15e844732062d49bb11890ca7f6b8fa.file.plz.htm.php:32
 msgid "Bitte wähle Dein Liefergebiet:"
-msgstr "Por favor, escolha a sua área de entrega:"
+msgstr "Por favor, informe o CEP para verificarmos se o restaurante entrega na sua região."
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/janamesa.com.br/01671d804d5085a12f55f86d2d01a2e0282de140.file.plz.htm.php:49
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/67ef740c1c04bd54e09dcb9676ed8a3df9c1978b.file.plz.htm.php:61

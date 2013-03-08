@@ -838,7 +838,7 @@ ul.yd-menu-nav1 {
 }
 
 .callmeal.yd-dialogs{
-    padding-bottom: 25px;
+    padding-bottom: 10px;
 }
 
 
@@ -871,7 +871,7 @@ ul.yd-menu-nav1 {
 
 .callmeal .yd-dialogs-head span.yd-dialogs-head-price{
     float: right;
-    width: 190px;
+    width: 160px;
 }
 
 .callmeal .yd-dialogs-head span.yd-dialogs-head-price sup{
@@ -960,7 +960,7 @@ ul.yd-menu-nav1 {
 .callmeal .name{float:left; margin:0; margin-left:20px; width:295px; font-size:22px; font-family:Helvetica, Arial, sans-serif; font-weight:normal; color:#000; line-height:120%; text-align:left;}
 .callmeal .name small{display:block; margin:0; font-size:16px; color:#747372; font-family:Georgia, "Times New Roman", Times, serif; line-height:142%;}
 
-.yd-dialogs-head .yd-dialogs-head-price{margin-right:20px; text-shadow:#fff 0 2px; color:#127F00; font-family: KGLoveYouThroughItRegular, Helvetica, Verdana, Arial, sans-serif;}		
+.yd-dialogs-head .yd-dialogs-head-price{margin-right:45px; text-shadow:#fff 0 2px; color:#127F00; font-family: KGLoveYouThroughItRegular, Helvetica, Verdana, Arial, sans-serif;}		
 .yd-dialogs-head .yd-dialogs-head-price sup{font-size:20px !important; line-height:60px !important;}
 .yd-dialogs-head .yd-current-meal-price{float:none; font-size:41px; color:#127F00; font-family: KGLoveYouThroughItRegular, Helvetica, Verdana, Arial, sans-serif;}
 
@@ -969,8 +969,8 @@ ul.yd-menu-nav1 {
 .callmeal .br-submit{
     background: url("/media/css/www.janamesa.com.br/images/strip-rw-block.png") repeat-x scroll 0 0 transparent;
     clear: both;
-    margin: 35px 0 0;
-    padding: 39px 0 0;
+    margin: 15px 0 0;
+    padding: 15px 0 0;
     text-align: center;
     width: 100%;		
 }

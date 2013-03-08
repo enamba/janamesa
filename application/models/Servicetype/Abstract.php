@@ -307,6 +307,76 @@ abstract class Yourdelivery_Model_Servicetype_Abstract extends Default_Model_Bas
 
         return $services;
     }
+    
+    /**
+     * get a list of restaurants based on the plz
+     * @author Matthias Laug <laug@lieferando.de>
+     * @param mixed array|integer $cityId
+     * @param int $typeId
+     * @param boolean $onlyOffline
+     * @return array of objects
+     */
+    static public function getByCategoryId($categoryId, $typeId = null, $onlyOffline = false, $limit = null) {
+        switch ($typeId) {
+            case 'rest':
+                $typeId = 1;
+                break;
+
+            case 'cater':
+                $typeId = 2;
+                break;
+
+            case 'great':
+                $typeId = 3;
+                break;
+        }
+
+        $result = array();
+        try {
+            if (!$onlyOffline) {
+                $result = Yourdelivery_Model_DbTable_Restaurant::getListByCategoryId($categoryId, $typeId, null, $limit);
+            } else {
+                //add Offline Stati                ;
+                $result = Yourdelivery_Model_DbTable_Restaurant::getListByCategoryId($categoryId, $typeId, array(2, 3, 4, 5, 6, 7, 10, 14, 15, 16, 17, 18, 20, 24), $limit);
+            }
+        } catch (Zend_Db_Statement_Exception $e) {
+            return new SplObjectStorage();
+        }
+
+        $services = array();
+        foreach ($result as $s) {
+            try {
+
+                switch ($s['servicetypeId']) {
+                    default:
+                    case 1:
+                        $service = new Yourdelivery_Model_Servicetype_Restaurant($s['id']);
+                        break;
+                    case 2:
+                        $service = new Yourdelivery_Model_Servicetype_Cater($s['id']);
+                        break;
+                    case 3:
+                        $service = new Yourdelivery_Model_Servicetype_Great($s['id']);
+                        break;
+                }
+
+//                if (is_array($cityId)) {
+//                    $cityId = $cityId[0];
+//                }
+//
+//                $service->setCurrentCityId($cityId);
+
+                if (!$service->isOnline() && !$onlyOffline) {
+                    continue;
+                }
+                $services[md5($s['servicetypeId'] . $service->getId())] = $service;
+            } catch (Yourdelivery_Exception_Database_Inconsistency $e) {
+                continue;
+            }
+        }
+
+        return $services;
+    }
 
     /**
      * get a number of online services

@@ -17,6 +17,18 @@ class Yourdelivery_Model_Servicetype_Categories extends Default_Model_Base {
         $dbTable = new Yourdelivery_Model_DbTable_Restaurant_Categories();
         return $dbTable->fetchAll();
     }
+    
+    /**
+     * Get all
+     * @author vpriem
+     * @since 21.03.2011
+     * @return array
+     */
+    public static function getCategoryIdByName($categoryName) {
+
+        $dbTable = new Yourdelivery_Model_DbTable_Restaurant_Categories();
+        return $dbTable->findByName($categoryName);
+    }
 
     /**
      * Get all categories by plz

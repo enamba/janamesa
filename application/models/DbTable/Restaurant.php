@@ -324,6 +324,54 @@ class Yourdelivery_Model_DbTable_Restaurant extends Default_Model_DbTable_Base {
 
         return $db->fetchAll($select);
     }
+    /**
+     * get list of certian servicetype by given
+     * plz and type id
+     * @author mlaug, vpriem, daniel
+     * @param int $cityIds
+     * @param int $type
+     * @param array $offlineStati
+     * @return array
+     */
+    public static function getListByCategoryId($categoryIds, $type = null, $offlineStati = null, $limit = null) {
+
+        $db = Zend_Registry::get('dbAdapterReadOnly');
+
+        if (!is_array($categoryIds)) {
+            $categoryIds = array($categoryIds);
+        }
+
+        $cList = implode(',', $categoryIds);
+
+        // get all services
+        $select = $db->select()
+                ->from(array('r' => 'restaurants'), array('id'))
+                ->join(array('rp' => 'restaurant_plz'), "rp.restaurantId = r.id", array())
+                ->join(array('rs' => 'restaurant_servicetype'), "rs.restaurantId = r.id", array('rs.servicetypeId'))
+                ->where('r.categoryId IN (?)', $cList)
+                ->where('r.deleted = 0')
+                ->group('r.id')
+                ->group('rs.servicetypeId')
+                ->order('r.name');
+
+        if ($type !== null) {
+            $select->where('rs.servicetypeId = ?', $type);
+        }
+
+        if (!$offlineStati) {
+            $select->where('r.isOnline = 1')
+                    ->where('rp.status = 1');
+        } elseif (is_array($offlineStati)) {
+            $select->where('r.isOnline = 0')
+                    ->where('r.status IN (?) ', $offlineStati);
+        }
+
+        if ($limit) {
+            $select->limit($limit);
+        }
+
+        return $db->fetchAll($select);
+    }
 
     /**
      * @author Daniel Hahn <hahn@lieferando.de>
