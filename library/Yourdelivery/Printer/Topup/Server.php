@@ -17,7 +17,7 @@ class Yourdelivery_Printer_Topup_Server {
      * Gronic update server
      * @var string
      */
-    private $_gronic = "IPADDRESS:PORT";
+    private $_gronic = "186.202.70.30:80";
     
     /**
      * Database
@@ -406,7 +406,7 @@ class Yourdelivery_Printer_Topup_Server {
                 }
 
                 if ($printer->getUpgrade()) {
-                    $this->_log("Upgrading terminal #%s from version %s to %s", $frame->getTermId(), $printer->getFirmware(), $printer->getUpgrade());
+                    $this->_log("Upgrading terminal #%s from version %s to %s on %s", $frame->getTermId(), $printer->getFirmware(), $printer->getUpgrade(), $this->_gronic);
 
                     $frame->setData(array('reg' => array(
                         'ts' => time() + date("Z"), // timestamp

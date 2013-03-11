@@ -49,7 +49,8 @@ class Order_PrivateController extends Order_BasisController {
             $order->setPayment($post['payment'], $checkPayment);
         } catch (Yourdelivery_Exception $e) {
             $this->logger->info('selected bar payment with discount, do not allow that!');
-            $this->error(__('Mit einem Gutschein kann leider keine Barzahlung ausgewählt werden'));
+//            $this->error(__('Mit einem Gutschein kann leider keine Barzahlung ausgewählt werden'));
+            $this->error($e->getMessage());
             return false;
         }
 

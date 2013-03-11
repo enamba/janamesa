@@ -78,7 +78,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
             if ( $maintenance == 'on' ){
                 throw new Exception('page currently in maintenance mode');
             }
-            
         }
         catch (Exception $e){
             header('HTTP/1.1 500 Internal Server Error'); //should not be 200, so no caching is hit
@@ -396,6 +395,11 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
                 'danke', new Zend_Controller_Router_Route('thankyou',
                         array('controller' => 'user',
                             'action' => 'danke'))
+        );
+        $router->addRoute(
+                'danke', new Zend_Controller_Router_Route('double-opt-in',
+                        array('controller' => 'user',
+                            'action' => 'optin'))
         );
     }
 

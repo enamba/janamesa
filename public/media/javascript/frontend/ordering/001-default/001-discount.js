@@ -110,7 +110,7 @@ function checkDiscount(){
                 
                 filloutDiscount(code, json.data.minAmountHtml, json.data.kindHtml, json.data.info);
                 $('input[name=discount]').val(code);
-                
+                log(json);
                 if (!json.allowCash) {
                     hidePayment("bar");
                     hidePayment("ec");
@@ -175,7 +175,6 @@ $(document).ready(function(){
         if (newCustomerWarning) {
             $(newCustomerWarning).hide();
         }
-        
         selectFirstVisiblePayment();
         hideDiscountInfo();
         return false;

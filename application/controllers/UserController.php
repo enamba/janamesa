@@ -1065,6 +1065,19 @@ class UserController extends Default_Controller_Base {
         $this->view->assign('additionalMetatags', $meta);
         $this->view->customer = $customer;
     }
+    
+    /**
+     * show thank-you-page to customer after rating an order
+     * @author Felix Haferkorn <haferkorn@lieferando.de>
+     * @since 06/2010
+     */
+    public function optinAction() {
+
+        $meta[] = '<meta name="robots" content="noindex,follow" />';
+        $customer = $this->getCustomer();
+        $this->view->assign('additionalMetatags', $meta);
+        $this->view->customer = $customer;
+    }
 
     /**
      * show html emails for logged-in customer here

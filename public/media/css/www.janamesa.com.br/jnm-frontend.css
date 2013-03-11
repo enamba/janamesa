@@ -592,3 +592,10 @@ div.jnm-bg-claro{
     width: 90px;
 }
 
+div.newsletteroptin {
+    background: url("/media/images/jnm-frontend/newsletter.png") no-repeat scroll 0 0 transparent;
+    height: 50px;
+    margin: 50px;
+    padding-left: 60px;
+    padding-top: 23px;
+}

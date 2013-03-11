@@ -12297,7 +12297,7 @@ msgstr "Não quer mais receber nossos emails, clique %saqui%s."
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/email/4e5bb52dd60fcd2e85ab1a9b928cd8007499f4b4.file._email_order_base.htm.php:23
 #, php-format
 msgid "Deine Bestellung vom %s in der Übersicht:"
-msgstr "A visão geral do seu pedido de %s:"
+msgstr "Resumo do pedido de %s:"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/email/e9b850c73aa6400b1b826ddf239adfd8e522cb09.file.upselling_goods.htm.php:23
 msgid "Upselling Goods"
