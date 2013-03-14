@@ -6,13 +6,10 @@ $(document).ready(function(){
            close: function(e, ui) {
                $(ui).dialog('destroy');
            }
-       }, function(){             
-           $("#yd-yes-i-want").click(function() {
-               $.cookie('yd-preorder', $.base64.encode(id));
-               window.location.href = $form.attr("action");
-               return false;
-           });
+       }, function(){
+           $.cookie('first_wellcome' ,  '1');
        });
-       $.cookie('first_wellcome' ,  '1');
+       
     }
+    $(".home").scrollTop(0);
 })

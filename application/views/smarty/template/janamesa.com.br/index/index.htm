@@ -15,7 +15,9 @@
 
 
     <script type="text/javascript" src="/media/javascript/compiled/frontend-{$REVISION}.js"></script>
-    <script type="text/javascript" src="/media/javascript/actions/home.js"></script>
+    {if $config->sales->banner_header->modal_first_access == true}
+        <script type="text/javascript" src="/media/javascript/actions/home-min.js"></script>
+    {/if}
     <link rel="stylesheet" type="text/css" href="/media/css/compiled/frontend-{$extra_css|default:'no'}-{$REVISION}.css" />
     {include file='_cookies/google/analytics.htm'}
 </head>
