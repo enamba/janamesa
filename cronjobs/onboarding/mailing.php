@@ -43,13 +43,8 @@ while ($parcial_7A > $final){
     $rowsD_7_b[] = $db->fetchAll($select);
 }
 
-//echo "\n ListID:" . $config->mailchimp->listId->D1;
-//echo "\n apikey:" . $config->mailchimp->apikey;
 
 $api = new MCAPI($config->mailchimp->apikey);
-
-// --- D+1  \/
-//echo "D+1 \n";
 
 $retval = $api->listMembers($config->mailchimp->listId->D1, 'subscribed', null, 0, 5000 );
 $email_remove = array();
@@ -57,29 +52,11 @@ foreach($retval['data'] as $member){
     $email_remove[] = $member['email'];
 }
 $vals = $api->listBatchUnsubscribe($config->mailchimp->listId->D1, $email_remove, true, false, false);
-//echo "success:".$vals['success_count']."\n";
-//echo "errors:".$vals['error_count']."\n";
-
 $vals_D_1 = $api->listBatchSubscribe($config->mailchimp->listId->D1,$rowsD_1,false, true, false);
 
-//if ($api->errorCode){
-//    echo "Batch Subscribe failed! D1 \n";
-//	echo "code:".$api->errorCode."\n";
-//	echo "msg :".$api->errorMessage."\n";
-//} else {
-//	echo "added:   ".$vals_D_1['add_count']."\n";
-//	echo "updated: ".$vals_D_1['update_count']."\n";
-//	echo "errors:  ".$vals_D_1['error_count']."\n";
-//	foreach($vals_D_1['errors'] as $val){
-//		echo $val['email_address']. " failed\n";
-//		echo "code:".$val['code']."\n";
-//		echo "msg :".$val['message']."\n";
-//	}
-//}
-// --- D+1 /\
-// 
-// --- D+10  \/
-//echo "D+10 \n";
+if ($config->mailchimp->campaignId->D1 != ''){
+    $retval = $api->campaignSchedule($config->mailchimp->campaignId->D1, date ('Y-m-d') . ' 10:00:00');
+}
 
 $retval = $api->listMembers($config->mailchimp->listId->D10, 'subscribed', null, 0, 5000 );
 $email_remove = array();
@@ -87,29 +64,11 @@ foreach($retval['data'] as $member){
     $email_remove[] = $member['email'];
 }
 $vals = $api->listBatchUnsubscribe($config->mailchimp->listId->D10, $email_remove, true, false, false);
-//echo "success:".$vals['success_count']."\n";
-//echo "errors:".$vals['error_count']."\n";
-
 $vals_D_10 = $api->listBatchSubscribe($config->mailchimp->listId->D10,$rowsD_10,false, true, false);
+if ($config->mailchimp->campaignId->D10 != ''){
+    $retval = $api->campaignSchedule($config->mailchimp->campaignId->D10, date ('Y-m-d') . ' 10:00:00');
+}
 
-//if ($api->errorCode){
-//    echo "Batch Subscribe failed! D10 \n";
-//	echo "code:".$api->errorCode."\n";
-//	echo "msg :".$api->errorMessage."\n";
-//} else {
-//	echo "added:   ".$vals_D_10['add_count']."\n";
-//	echo "updated: ".$vals_D_10['update_count']."\n";
-//	echo "errors:  ".$vals_D_10['error_count']."\n";
-//	foreach($vals_D_10['errors'] as $val){
-//		echo $val['email_address']. " failed\n";
-//		echo "code:".$val['code']."\n";
-//		echo "msg :".$val['message']."\n";
-//        }
-//}
-// --- D+10 /\
-// 
-// --- D+7_A  \/
-//echo "D*7_A \n";
 $retval = $api->listMembers($config->mailchimp->listId->D7A, 'subscribed', null, 0, 5000 );
 $email_remove = array();
 foreach($retval['data'] as $member){
@@ -119,31 +78,12 @@ $simple_rowD_7_a = array();
 foreach ($rowsD_7_a as $rowD_7_a){
     $simple_rowD_7_a = array_merge($simple_rowD_7_a, $rowD_7_a);
 }
-
 $vals = $api->listBatchUnsubscribe($config->mailchimp->listId->D7A, $email_remove, true, false, false);
-//echo "success:".$vals['success_count']."\n";
-//echo "errors:".$vals['error_count']."\n";
 $vals_D_7_a = $api->listBatchSubscribe($config->mailchimp->listId->D7A,$simple_rowD_7_a,false, true, false);
+if ($config->mailchimp->campaignId->D7A != ''){
+    $retval = $api->campaignSchedule($config->mailchimp->campaignId->D7A, date ('Y-m-d') . ' 10:00:00');
+}
 
-//if ($api->errorCode){
-//    echo "Batch Subscribe failed! D*7 A \n";
-//	echo "code:".$api->errorCode."\n";
-//	echo "msg :".$api->errorMessage."\n";
-//} else {
-//	echo "added:   ".$vals_D_7_a['add_count']."\n";
-//	echo "updated: ".$vals_D_7_a['update_count']."\n";
-//	echo "errors:  ".$vals_D_7_a['error_count']."\n";
-//	foreach($vals_D_7_a['errors'] as $val){
-//		echo $val['email_address']. " failed\n";
-//		echo "code:".$val['code']."\n";
-//		echo "msg :".$val['message']."\n";
-//	}
-//}
-// --- D+7_A /\
- 
-// 
-// --- D+7_B  \/
-//echo "D*7_B \n";
 $retval = $api->listMembers($config->mailchimp->listId->D7B, 'subscribed', null, 0, 5000 );
 $email_remove = array();
 foreach($retval['data'] as $member){
@@ -153,27 +93,9 @@ $simple_rowD_7_b = array();
 foreach ($rowsD_7_b as $rowD_7_b){
     $simple_rowD_7_b = array_merge($simple_rowD_7_b, $rowD_7_b);
 }
-
-
 $vals = $api->listBatchUnsubscribe($config->mailchimp->listId->D7B, $email_remove, true, false, false);
-//echo "success:".$vals['success_count']."\n";
-//echo "errors:".$vals['error_count']."\n";
-
 $vals_D_7_b = $api->listBatchSubscribe($config->mailchimp->listId->D7B,$simple_rowD_7_b,false, true, false);
-
-//if ($api->errorCode){
-//    echo "Batch Subscribe failed! D*7 B \n";
-//	echo "code:".$api->errorCode."\n";
-//	echo "msg :".$api->errorMessage."\n";
-//} else {
-//	echo "added:   ".$vals_D_7_b['add_count']."\n";
-//	echo "updated: ".$vals_D_7_b['update_count']."\n";
-//	echo "errors:  ".$vals_D_7_b['error_count']."\n";
-//	foreach($vals_D_7_b['errors'] as $val){
-//		echo $val['email_address']. " failed\n";
-//		echo "code:".$val['code']."\n";
-//		echo "msg :".$val['message']."\n";
-//        }
-//}
-
+if ($config->mailchimp->campaignId->D7B){
+    $retval = $api->campaignSchedule($config->mailchimp->campaignId->D7B, date ('Y-m-d') . ' 10:00:00');
+}
 ?>

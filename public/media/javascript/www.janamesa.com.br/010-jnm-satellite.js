@@ -11,11 +11,9 @@ $(document).ready( function () {
         ydOrder.clear_bucket();
         ydOrder.update_view();    
         $.cookie('yd-state', null);
-        alert($.cookie('yd-state'));
         ydMenuTrigger.init()
-        
     });
-
+    
     $('#yd-select-plz-form').submit(function () {
 
         recurring = ydRecurring.read();

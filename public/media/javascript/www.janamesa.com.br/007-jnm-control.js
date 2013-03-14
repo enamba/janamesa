@@ -105,8 +105,7 @@ $(window).load(function(){
 });
 
 $(document).ready(function(){
- if ($(".yd-full-amount")) {
-     $("#jnm-full-amount-value").html($(".yd-full-amount").html());
- }
- 
-})
+    if ($(".yd-full-amount")) {
+        $("#jnm-full-amount-value").html($(".yd-full-amount").html());
+    }
+});

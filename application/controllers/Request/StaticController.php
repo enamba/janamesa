@@ -107,6 +107,10 @@ class Request_StaticController extends Default_Controller_RequestBase {
         }
 
     }
+    
+    public function discountfirstaccessAction() {
+        $this->view->enableCache();
+   }
 
 
 }
