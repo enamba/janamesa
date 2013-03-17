@@ -44,12 +44,12 @@ class Administration_Stats_AccesslogController extends Default_Controller_Admini
             $config = Zend_Registry::get('configuration');
             $logDirectory = $config->log->directory;
 
-            for ($ind = $fromInt; $ind <= $untilInt; $ind++) {
-                $fh = fopen($logDirectory . "access_log." . $ind, "r");
+//            for ($ind = $fromInt; $ind <= $untilInt; $ind++) {
+                $fh = fopen($logDirectory . "access_log", "r");
 
-                if (!$fh) {
-                    continue;
-                }
+//                if (!$fh) {
+//                    continue;
+//                }
                                                 
                 while (!feof($fh)) {
                    $line = fgets($fh);
@@ -63,7 +63,7 @@ class Administration_Stats_AccesslogController extends Default_Controller_Admini
                     }
                 }
                 fclose($fh);
-            }
+//            }
         }
         
         $this->view->assign('from', date("d.m.Y", strtotime($fromDate)));

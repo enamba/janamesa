@@ -496,6 +496,36 @@ class AdministrationController extends Default_Controller_AdministrationBase {
         //deploy grid to view
         $this->view->grid = $grid->deploy();
     }
+    /**
+     * show a sortable, filterable table of all itens of order
+     * @param
+     * @return
+     */
+    public function relatoriofacebook1anodeliverygratisfullAction() {
+        $this->view->assign('navservices', 'active');
+
+        // build select
+        $db = Zend_Registry::get('dbAdapter');
+        $select = $db
+                ->select()
+                ->from(array('f1' => 'facebookapp_1anodeliverygratis'), array(
+                    'Nome' => 'f1.name',
+                    'E-mail' => 'f1.email',
+                    'Data Criacao' => 'f1.created'
+                ));
+        // build grid
+        $grid = Default_Helper::getTableGrid();
+        $grid->setcharEncoding("ISO-8859-1");
+        $grid->setExport(array('excel'));
+//        $grid->export = array('pdf', 'xml');
+        $grid->setPagination(20);
+        
+        $grid->setSource(new Bvb_Grid_Source_Zend_Select($select));
+
+        
+        //deploy grid to view
+        $this->view->grid = $grid->deploy();
+    }
 
     
     /**

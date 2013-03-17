@@ -8,7 +8,9 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="author" content="janamesa Team" />
         <meta name="publisher" content="janamesa Team" />
-
+        {if $config->google->conversion}
+            {include file='_cookies/google/adwords.htm'}
+        {/if}
         <!-- custom meta tags -->
         {foreach from=$additionalMetatags item=meta}
         {$meta}
@@ -67,8 +69,6 @@
         {include file="base_footer.htm"}
         
         <div id="yd-discount-evaluation-wait" style="display:none;"><img src="{$domain_static}/images/yd-backend/yd-back-load.gif" /></div>
-        {if $config->google->conversion}
-            {include file='_cookies/google/adwords.htm'}
-        {/if}
+
     </body>
 </html>

@@ -241,7 +241,8 @@ class Default_Controller_AdministrationBase extends Default_Controller_Auth {
                 'children' => array(
                     'PDS e Horarios' => '/administration/relatorioservicesall',
                     'Total Cardapio e Entrega' => '/administration/relatoriosomasplzemeals',
-                    'Pedidos e Detalhes' => '/administration/relatorioordersfull'
+                    'Pedidos e Detalhes' => '/administration/relatorioordersfull',
+                    'Cadastro 1 ano Delivery Gratis' => '/administration/relatoriofacebook1anodeliverygratisfull'
                 )
             ),
             __b('Rechnungen') => array(
