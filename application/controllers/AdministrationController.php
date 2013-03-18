@@ -509,6 +509,7 @@ class AdministrationController extends Default_Controller_AdministrationBase {
         $select = $db
                 ->select()
                 ->from(array('f1' => 'facebookapp_1anodeliverygratis'), array(
+                    'ID' => 'f1.id',
                     'Nome' => 'f1.name',
                     'E-mail' => 'f1.email',
                     'Data Criacao' => 'f1.created'
