@@ -23,6 +23,8 @@
             </div>
         </div>
         {/if}
+        
+    {if (!$order->getService()->isNoContract())}
 
         {if (!$order->getService()->getOnlycash() && !$order->getService()->isNoOnlinePaymentNow())}
 
@@ -79,6 +81,8 @@
             <span>Ticket Refeição</span><small>Pagar na entrega</small>
         </div>
         {/if}
+        
+    {/if}
 
 
     </div>

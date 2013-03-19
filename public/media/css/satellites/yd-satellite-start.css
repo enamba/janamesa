@@ -109,9 +109,7 @@ body{
     position: relative;
 }
 #page{
-
     margin: 0 auto;
-    width:  1021px;
 }
 /*-----Head-----*/
 #header{
@@ -216,10 +214,10 @@ body{
 
 /*-----TextBox-----*/
 .box_img_text{
-    margin: 10px;
     border-radius:5px;
     padding: 10px;
-
+    margin: 0 auto 40px;
+    width: 980px;
 }
 .text_box_img{
     width: 300px;

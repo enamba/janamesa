@@ -5679,7 +5679,7 @@ msgstr "Endereço de entrega"
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/1302e716f726daea02ac56481220af9f7db5075a.file.bewerten.htm.php:153
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/default/8f5e80db5ad62b098077c122d9f567896e83856c.file.socialnetworks.htm.php:150
 msgid "Favoriten"
-msgstr "Favoritas"
+msgstr "Favoritos"
 
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/janamesa.com.br/26d3b2837efed53c7b92a5681348a38825b79672.file.fidelity.htm.php:149
 #: /home/ydadmin/translation/yd/bin/locale/../../application/views/smarty/template_c/janamesa.com.br/4e1f9fb870942a4c3322086b2e79036f902fd445.file.socialnetworks.htm.php:148
