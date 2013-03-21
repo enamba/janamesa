@@ -43,6 +43,10 @@ while ($parcial_7A > $final){
     $rowsD_7_b[] = $db->fetchAll($select);
 }
 
+$rowsD_1[] = array('FNAME'=>'Eduardo','LNAME'=> 'Namba', 'EMAIL' => 'namba@janamesa.com.br');
+$rowsD_10[] = array('FNAME'=>'Eduardo','LNAME'=> 'Namba', 'EMAIL' => 'namba@janamesa.com.br');
+$rowsD_7_a[] = array('FNAME'=>'Eduardo','LNAME'=> 'Namba', 'EMAIL' => 'namba@janamesa.com.br');
+$rowsD_7_b[] = array('FNAME'=>'Eduardo','LNAME'=> 'Namba', 'EMAIL' => 'namba@janamesa.com.br');
 
 $api = new MCAPI($config->mailchimp->apikey);
 

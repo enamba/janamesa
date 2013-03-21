@@ -32,9 +32,13 @@
                 {/if}
 
                 <a class="yd-button-140 yd-service-select {if !$r->isOnline}offline{/if}" href="/{$r->getDirectLink()}">
+                    {if $r->getFranchiseTypeId() == 7}
+                        Encomendar
+                    {else}
                     {if $r->getType() == "rest"}{__('zur Speisekarte')}{/if}
                     {if $r->getType() == "great"}{__('zur Auswahl')}{/if}
                     {if $r->getType() == "cater"}{__('zu den Caterern')}{/if}
+                    {/if}
                 </a>
 
                 {if $r->getMenuIsNewUntil() !== null}

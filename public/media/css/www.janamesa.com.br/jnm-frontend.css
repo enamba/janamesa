@@ -601,3 +601,28 @@ div.newsletteroptin {
     padding-left: 60px;
     padding-top: 23px;
 }
+
+div.encomenda_bloco div.title {
+    font-weight: bold;
+    font-size: 19px;
+}
+div.encomenda_bloco div {
+    padding:15px;
+}
+
+div.encomenda_bloco {
+    float: left;
+    text-align: center;
+    width: 270px;
+    padding: 19px;
+}
+
+body.encomenda div.container div.mainContent div.content {
+    height: 400px;
+}
+
+body.encomenda div.input_cep .findRestaurant {
+    font-weight: bold;
+    padding-left: 0;
+    font-size: 21px;
+}

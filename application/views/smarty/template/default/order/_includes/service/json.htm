@@ -8,7 +8,7 @@
         type: "{$r->getType()}",
         alpha: "{$r->getName()|strtolower}",
         name: "{$r->getName()}",
-        tags: "{$r->getTagsWithMaxStringlength(25)|implode:', '}",
+        tags: "{$r->getTagsWithMaxStringlength(25000)|implode:', '}",
         ratingcount: {if $r->getRating()->count(null, true, false, true) < 5}0{else}{$r->getRating()->count(null, true, false, true)|default:5}{/if},
         ratingstars: "{if $r->getRating()->count(null, true, false, true) < 5}0{else}{round($r->getRating()->getAverage(),2)}{/if}",
         ratingvotes: {if $r->getRating()->count(null, true, false, true) < 5}0{else}{round($r->getRating()->getAverageAdvise())}{/if},

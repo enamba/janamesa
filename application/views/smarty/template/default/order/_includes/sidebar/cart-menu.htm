@@ -49,7 +49,11 @@
     </div>
 
     <a href="#" class="yd-button-250 yd-finish-order yd-gray-button">
+        {if $service->getFranchiseTypeId() == 7}
+        Encomendar agora
+        {else}
         {if $this->isOpened($service->getOpening()->getIntervalOfDay(time()))}Pedir agora{else}Agendar pedido{/if}
+        {/if}
         <strong class="mincosttooltip hidden">{__('Mindestbestellwert noch nicht erreicht!')}</strong>
     </a>
 
