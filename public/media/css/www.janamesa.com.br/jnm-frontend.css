@@ -594,6 +594,19 @@ div.jnm-bg-claro{
     width: 90px;
 }
 
+.enc .yd-sv3-1:after {
+    background: url("http://www.janamesa.com.br/media/images/jnm-frontend/encomendas/badge_jnm_festas.gif") repeat scroll 0 0 transparent;
+}
+
+.enc .yd-sv3-1:after, .pr .yd-sv3-1:after {
+    content: "";
+    height: 30px;
+    left: 0;
+    position: absolute;
+    top: 5px;
+    width: 90px;
+}
+
 div.newsletteroptin {
     background: url("/media/images/jnm-frontend/newsletter.png") no-repeat scroll 0 0 transparent;
     height: 50px;

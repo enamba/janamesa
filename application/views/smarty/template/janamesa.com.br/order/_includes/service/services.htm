@@ -7,6 +7,8 @@
                 pr
             {elseif $r->isBloomsburys()}
                 bb
+            {elseif $r->getFranchiseTypeId() == 7}
+                enc bb
             {elseif $r->isNew()}
                 new
             {/if}

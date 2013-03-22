@@ -406,8 +406,8 @@ You may or may not update the views and deploy the update statements of the stag
         <exec command="scp ${tmp}/release-${build_time}.tar.gz ydadmin@${server}:/tmp" />
 
         <!-- pack release and link new staging -->
-        <echo msg="decompressing: tar xzvf /tmp/release-${build_time}.tar.gz -C /home/ydadmin/staging/${domain}/${version}" />
-        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="tar xzvf /tmp/release-${build_time}.tar.gz -C /home/ydadmin/staging/${domain}/${version}" />
+        <echo msg="decompressing: tar xzf /tmp/release-${build_time}.tar.gz -C /home/ydadmin/staging/${domain}/${version}" />
+        <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="tar xzf /tmp/release-${build_time}.tar.gz -C /home/ydadmin/staging/${domain}/${version}" />
         <echo msg="creating simbols links 1" />
         <ssh username="${ssh.username}" password="${ssh.password}" host="${server}" command="ln -nfs /home/ydadmin/staging/${domain}/${version} /home/ydadmin/staging/${domain}/current" />
         <echo msg="creating simbols links 2" />
