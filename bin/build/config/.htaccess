@@ -19,10 +19,10 @@ RewriteCond %{DOCUMENT_ROOT}/../storage/satellites/%{HTTP_HOST}%{REQUEST_URI} -f
 RewriteRule ^(.+) /storage/satellites/%{HTTP_HOST}/$1 [L]
 
 #ios redirect (without tablet)
-RewriteCond %{HTTP_HOST} lieferando\.de$
-RewriteCond %{REQUEST_URI} ^/apps$
+RewriteCond %{HTTP_HOST} janamesa\.com\.br$
+RewriteCond %{REQUEST_URI} ^/$
 RewriteCond %{HTTP_USER_AGENT} "iphone|ipod" [NC]
-RewriteRule (.*) http://itunes.apple.com/de/app/lieferando/id419724490?mt=8 [L,R]
+RewriteRule (.*) http://www.janamesa.com.br/phone/iphone [L,R]
 
 #android redirect (without tablet)
 RewriteCond %{HTTP_HOST} lieferando\.de$
