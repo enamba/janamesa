@@ -43,10 +43,10 @@ while ($parcial_7A > $final){
     $rowsD_7_b[] = $db->fetchAll($select);
 }
 
-$rowsD_1[] = array('FNAME'=>'Eduardo','LNAME'=> 'Namba', 'EMAIL' => 'namba@janamesa.com.br');
-$rowsD_10[] = array('FNAME'=>'Eduardo','LNAME'=> 'Namba', 'EMAIL' => 'namba@janamesa.com.br');
-$rowsD_7_a[] = array('FNAME'=>'Eduardo','LNAME'=> 'Namba', 'EMAIL' => 'namba@janamesa.com.br');
-$rowsD_7_b[] = array('FNAME'=>'Eduardo','LNAME'=> 'Namba', 'EMAIL' => 'namba@janamesa.com.br');
+if ($config->mailchimp->monitor != ''){
+    $rowsD_1[] = array('FNAME'=>'Eduardo','LNAME'=> 'Namba', 'EMAIL' => $config->mailchimp->monitor);
+    $rowsD_10[] = array('FNAME'=>'Eduardo','LNAME'=> 'Namba', 'EMAIL' => $config->mailchimp->monitor);
+}
 
 $api = new MCAPI($config->mailchimp->apikey);
 
@@ -82,6 +82,9 @@ $simple_rowD_7_a = array();
 foreach ($rowsD_7_a as $rowD_7_a){
     $simple_rowD_7_a = array_merge($simple_rowD_7_a, $rowD_7_a);
 }
+if ($config->mailchimp->monitor != ''){
+    $simple_rowD_7_a[] = array('FNAME'=>'Eduardo','LNAME'=> 'Namba', 'EMAIL' => $config->mailchimp->monitor);
+}
 $vals = $api->listBatchUnsubscribe($config->mailchimp->listId->D7A, $email_remove, true, false, false);
 $vals_D_7_a = $api->listBatchSubscribe($config->mailchimp->listId->D7A,$simple_rowD_7_a,false, true, false);
 if ($config->mailchimp->campaignId->D7A != ''){
@@ -96,6 +99,9 @@ foreach($retval['data'] as $member){
 $simple_rowD_7_b = array();
 foreach ($rowsD_7_b as $rowD_7_b){
     $simple_rowD_7_b = array_merge($simple_rowD_7_b, $rowD_7_b);
+}
+if ($config->mailchimp->monitor != ''){
+    $simple_rowD_7_b[] = array('FNAME'=>'Eduardo','LNAME'=> 'Namba', 'EMAIL' => $config->mailchimp->monitor);
 }
 $vals = $api->listBatchUnsubscribe($config->mailchimp->listId->D7B, $email_remove, true, false, false);
 $vals_D_7_b = $api->listBatchSubscribe($config->mailchimp->listId->D7B,$simple_rowD_7_b,false, true, false);
