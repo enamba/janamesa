@@ -9,12 +9,22 @@
     <div class="yd-bigbox-body yd-bigbox-payment yd-clearfix">
 
         {assign var=preselected value=Yourdelivery_Helpers_Payment::preselected($order)}
-
+        <table style="background:url('/media/images/jnm-frontend/divisor_pgt.jpg') repeat-y scroll 305px 0 transparent;">
+            <tr>
+                <td width="300px"  style="height: 50px;">
+                    <div style="float: left;"><img src="/media/images/jnm-frontend/pagamento_home.png" /></div><div style="font-family: Museo700; float: left; padding-top: 6px; font-size: 20px; padding-left: 5px; color: black;">Pagar na entrega</div>
+                </td>
+                <td>
+                    <div style="float: left;"><img src="/media/images/jnm-frontend/pagamento_online.png" /></div><div style="font-family: Museo700; float: left; padding-top: 6px; font-size: 20px; padding-left: 5px; color: black;">Pagar pela Internet</div>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;" >
         {if $order->getService()->isPaymentbar() && $order->getMode() == 'rest' && $order->getService()->isPaymentAllowed('bar')}
         <div id="yd-finish-payment-bar" class="yd-finish-payment yd-payment-cash {if !Yourdelivery_Helpers_Payment::allowBar($order) || $newCustomerDiscountError}hidden{/if} {if $preselected=='bar'}active{/if}">
             <div id="yd-finish-payment-bar-select">
                 <input id="yd-payment-bar" {if $preselected=='bar'}checked="checked"{/if} type="radio" name="payment" value="bar" class="radio yd-finish-payment-radio paymentHidden {if $order->getKind() != 'comp'}validate[payment]{/if}"/>
-                <span>{__("Barzahlung")}</span><small>{__("Bei Lieferung bezahlen")}</small>
+                <span style="padding:8px 0 0;">Dinheiro</span><small></small>
             </div>
             <div id="yd-payment-form-bar" class="yd-payment-form hidden yd-form" style="clear:both;">
                 <strong class="yd-form-tease">
@@ -25,20 +35,50 @@
         {/if}
         
     {if (!$order->getService()->isNoContract())}
+        {if $config->payment->bar->enabled && $order->getService()->isPaymentAllowed('creditcardathome')}
+        <div id="yd-finish-payment-creditathome" class="yd-finish-payment yd-payment-addition yd-payment-card">
+            <input id="yd-payment-creditathome" type="radio" name="paymentAddition" value="creditCardAtHome" class="yd-payment-addition-radio paymentHidden" />
+            <span style="padding:2px 0 0;">Cart&atilde;o de Cr&eacute;dito</span><small></small>
+        </div>
+        {/if}
 
+        {if $config->payment->bar->enabled && $order->getService()->isPaymentAllowed('vr')}
+        <div id="yd-finish-payment-vr" class="yd-finish-payment ">
+            <input id="yd-payment-vr" {if $preselected=='vr'}checked="checked"{/if} type="radio" name="paymentAddition" value="vr" class="yd-payment-addition-radio paymentHidden" />
+            <span style="padding:8px 0 0 10px;">Vale refeição</span><small></small>
+        </div>
+        {/if}
+
+        {if $config->payment->bar->enabled && $order->getService()->isPaymentAllowed('ticketRestaurant')}
+        <div id="yd-finish-payment-ticketRestaurante" class="yd-finish-payment ">
+            <input id="yd-payment-ticketRestaurante" {if $preselected=='ticketRestaurant'}checked="checked"{/if} type="radio" name="paymentAddition" value="ticketRestaurant" class="yd-payment-addition-radio paymentHidden" />
+            <span style="padding:8px;">Ticket Refeição</span><small></small>
+        </div>
+        {/if}
+        
+                </td>
+                <td style="vertical-align: top;" >
+        
         {if (!$order->getService()->getOnlycash() && !$order->getService()->isNoOnlinePaymentNow())}
 
             {if $order->getService()->isPaymentAllowed('paypal')}
             <div id="yd-finish-payment-paypal" class="yd-finish-payment yd-payment-payp {if !Yourdelivery_Helpers_Payment::allowPaypal($order)}hidden{/if} {if $preselected=='paypal'}active{/if}">
                 <input id="yd-payment-paypal" {if $preselected=='paypal'}checked="checked"{/if} type="radio" name="payment" value="paypal" class="radio yd-finish-payment-radio paymentHidden {if $order->getKind() != 'comp'}validate[payment]{/if}" />
-                <span>{__("PayPal")}</span><small>{__("Jetzt Online bezahlen")}</small>
+                <span>{__("PayPal")}</span><small></small>
+            </div>
+            {/if}
+            {if $config->payment->paypal->enabled}
+            <div id="yd-payment-form-paypal" class="yd-payment-form hidden yd-form" style="clear:both;">
+                <strong class="yd-form-tease">
+                    Voc&ecirc; ser&aacute; redirecionado para a p&aacute;gina do PayPal.
+                </strong>
             </div>
             {/if}
 
             {if $order->getService()->isPaymentAllowed('credit')}
             <div id="yd-finish-payment-credit" class="yd-finish-payment yd-payment-card {if !Yourdelivery_Helpers_Payment::allowCredit($order) || $newCustomerDiscountError}hidden{/if} {if $preselected=='credit'}active{/if}">
                 <input id="yd-payment-credit" {if $preselected=='credit'}checked="checked"{/if} type="radio" name="payment" value="credit" class="radio yd-finish-payment-radio paymentHidden {if $order->getKind() != 'comp'}validate[payment]{/if}" />
-                    <span>{__("Kreditkarte")}</span><small>{__("Jetzt Online bezahlen")}</small>
+                    <span>Cart&atilde;o de Cr&eacute;dito</span><small></small>
             </div>
             {/if}
 
@@ -50,40 +90,20 @@
             </div>
             {/if}
 
-            {if $config->payment->paypal->enabled}
-            <div id="yd-payment-form-paypal" class="yd-payment-form hidden yd-form" style="clear:both;">
-                <strong class="yd-form-tease">
-                    {__("Du wirst zu %sPayPal%s weitergeleitet.", '', '')}
-                </strong>
-            </div>
-            {/if}
         {/if}
+                </td>
+            </tr>
 
 
 
-        {if $config->payment->bar->enabled && $order->getService()->isPaymentAllowed('creditcardathome')}
-        <div id="yd-finish-payment-creditathome" class="yd-finish-payment yd-payment-addition yd-payment-card">
-            <input id="yd-payment-creditathome" type="radio" name="paymentAddition" value="creditCardAtHome" class="yd-payment-addition-radio paymentHidden" />
-            <span>cartão de crédito</span><small>Pagar na entrega</small>
-        </div>
-        {/if}
 
-        {if $config->payment->bar->enabled && $order->getService()->isPaymentAllowed('vr')}
-        <div id="yd-finish-payment-vr" class="yd-finish-payment yd-payment-addition yd-payment-card">
-            <input id="yd-payment-vr" {if $preselected=='vr'}checked="checked"{/if} type="radio" name="paymentAddition" value="vr" class="yd-payment-addition-radio paymentHidden" />
-            <span>Vale refeição</span><small>Pagar na entrega</small>
-        </div>
-        {/if}
-
-        {if $config->payment->bar->enabled && $order->getService()->isPaymentAllowed('ticketRestaurant')}
-        <div id="yd-finish-payment-ticketRestaurante" class="yd-finish-payment yd-payment-addition yd-payment-card">
-            <input id="yd-payment-ticketRestaurante" {if $preselected=='ticketRestaurant'}checked="checked"{/if} type="radio" name="paymentAddition" value="ticketRestaurant" class="yd-payment-addition-radio paymentHidden" />
-            <span>Ticket Refeição</span><small>Pagar na entrega</small>
-        </div>
-        {/if}
-        
+    {else}
+    </td>
+    <td></td>
+    </tr>
     {/if}
 
+        </table>
 
     </div>
 

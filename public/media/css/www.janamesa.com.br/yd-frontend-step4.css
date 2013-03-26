@@ -35,7 +35,7 @@
 	float: left;
 	clear: none;
 	width: 210px;
-	margin: 20px 0 0 0;
+	margin: 0;
 	padding: 0 0 0 108px;
 	position: relative;
 	top: 0;
@@ -49,37 +49,38 @@
 }
 
 #paymentDiv .yd-bigbox-payment .yd-finish-payment.yd-payment-cash{
-	background: url(/media/css/www.janamesa.com.br/images/payment1.png) 38px 0 no-repeat transparent;
+	background: url(/media/images/jnm-frontend/pgt_dinheiro.jpg) 38px 0 no-repeat transparent;
 	padding-bottom: 32px;
 }
 
 #paymentDiv .yd-bigbox-payment .yd-finish-payment.yd-payment-card{
-	background: url(/media/css/www.janamesa.com.br/images/img-card2.png) 42px 0 no-repeat transparent;
+	background: url(/media/css/www.janamesa.com.br/images/img-card2.png) 38px 0 no-repeat transparent;
 }
 
 #paymentDiv .yd-bigbox-payment .yd-finish-payment.yd-payment-card#yd-finish-payment-creditathome{
-	background: url(/media/css/www.janamesa.com.br/images/payment2.png) 38px 0 no-repeat transparent;
+	background: url(/media/css/www.janamesa.com.br/images/img-card2.png) 38px 0 no-repeat transparent;
 }
 
-#paymentDiv .yd-bigbox-payment .yd-finish-payment.yd-payment-card#yd-finish-payment-vr{
-	background: url(/media/css/www.janamesa.com.br/images/payment3.png) 38px 0 no-repeat transparent;
+#paymentDiv .yd-bigbox-payment .yd-finish-payment#yd-finish-payment-vr{
+	background: url(/media/images/jnm-frontend/pgt_cartao.jpg) 38px 0 no-repeat transparent;
 }
 
-#paymentDiv .yd-bigbox-payment .yd-finish-payment.yd-payment-card#yd-finish-payment-ticketRestaurante{
-	background: url(/media/images/jnm-frontend/ticketrestaurante.jpg) 38px 0 no-repeat transparent;
+#paymentDiv .yd-bigbox-payment .yd-finish-payment#yd-finish-payment-ticketRestaurante{
+	background: url(/media/images/jnm-frontend/pgt_tktrestaurante.jpg) 38px 0 no-repeat transparent;
 }
 
 #paymentDiv .yd-bigbox-payment .yd-finish-payment.yd-payment-payp#yd-finish-payment-paypal{
-	background: url(/media/css/www.janamesa.com.br/images/payment-paypal.png) 38px 0 no-repeat transparent;
+	background: url(/media/css/www.janamesa.com.br/images/payment-paypal.png) 35px -3px no-repeat transparent;
 }
 
 #paymentDiv .yd-bigbox-payment .yd-finish-payment.yd-payment-card small{
-	padding: 0 0 32px 0;
+	margin-bottom: 12px;
+        padding: 26px 0 0;
 	background: url(/media/css/www.janamesa.com.br/images/payment-img3.png) left bottom no-repeat transparent;
 }
 
-#paymentDiv .yd-bigbox-payment .yd-finish-payment.yd-payment-card#yd-finish-payment-vr small,
-#paymentDiv .yd-bigbox-payment .yd-finish-payment.yd-payment-card#yd-finish-payment-ticketRestaurante small
+#paymentDiv .yd-bigbox-payment .yd-finish-payment#yd-finish-payment-vr small,
+#paymentDiv .yd-bigbox-payment .yd-finish-payment#yd-finish-payment-ticketRestaurante small
 {
 	background: none transparent;	
 }
@@ -481,7 +482,7 @@ li#valid-discount a {
 #paymentDiv .yd-bigbox-payment #yd-payment-form-bar{
 	left: 108px;
     position: absolute;
-    top: 50px;
+    top: 40px;
     width: 199px;
 }
 
