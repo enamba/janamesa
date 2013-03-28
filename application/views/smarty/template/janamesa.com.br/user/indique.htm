@@ -1,0 +1,90 @@
+
+{extends file='user/_base.htm'}
+
+{block name="content"}
+
+<div class="yd-profile yd-clearfix">
+
+    <div class="br-inner-box">
+
+        {include file='user/_header.htm' active=8 active_title=__('Soziale Netzwerke')}
+
+        <div class="yd-profile-body">
+
+            <h1 style="font-family: Museo700;">
+                Indique seus amigos, e ganhe descontos no J&aacute;namesa.
+            </h1>
+            <div>
+            <p style="font-size: 20px;">Amigos de verdade gostam de trocar dicas especiais. Seja aquele 
+                show, uma balada exclusiva que acabou de acontecer ou um livro
+                super interessante. Com o J&aacute;namesa n&atilde;o &eacute; diferente: A cada amigo
+                que voc&ecirc; indicar - e ele fizer um pedido - voc&ecirc; e ele ganham, cada
+                um, 10% de desconto.
+            </p>
+            </div>
+            <div style="float:left; width: 300px;padding: 20px;">
+                <div style="background: url('/media/images/jnm-frontend/indique_titulo_email.png') no-repeat scroll 0px 0px transparent; padding-left: 65px; font-family: Museo700; color: black; padding-top: 23px; height: 35px;">
+                    Convide seus amigos via e-mail
+                </div>
+                <div>
+                    <textarea  id="referral_emails" style="width: 285px;border: 1px solid; height: 75px; margin-bottom: 5px;" placeholder="Informe os e-mails dos seus amigos."></textarea>
+                </div>
+                <div style="text-align: right;">
+                    <a href="/"><img src="/media/images/jnm-frontend/indique_botao_email.png" /></a>
+                </div>
+            </div>
+            <div style="float:left; width: 300px;padding: 20px;">
+                <div style="background: url('/media/images/jnm-frontend/indique_titulo_social.png') no-repeat scroll 0px 0px transparent;font-family: Museo700; color: black; padding-top: 7px; padding-left: 70px; height: 51px;">
+                    Convide seus amigos via facebook ou twitter
+                </div>
+                <div>
+                    <textarea id="referral_midiasocial" style="width: 285px;border: 1px solid; height: 75px; margin-bottom: 5px;">Fa&ccedil;a seu pedido no J&aacute;namesa e ganhe 10% de desconto. Acesse: http://www.janamesa.com.br/referral/{$code}</textarea>
+                </div>
+                <div style="text-align: right;">
+                    <a href="javascript:facebook_flow();"><img src="/media/images/jnm-frontend/indique_botao_face.png" /></a>
+<a target="_blank" id="b" href="" onclick="tweetar();">
+<span id="l" class="">
+<img src="/media/images/jnm-frontend/indique_botao_tweet.png" alt="Tweet" title="Click para compartilhar no Twitter"/>
+</span>
+</a>
+      {literal}
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";
+fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>                  </div>
+            </div>
+
+     <div id="fb-root"></div>
+      <script>
+        function tweetar(){
+            $("#b").attr("href", "https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Ftwitter.com%2Fabout%2Fresources%2Fbuttons&text=" + (encodeURIComponent($('#referral_midiasocial').text())));
+        }
+        var facebook_interval;
+        function facebook_flow() {
+          var check_fb_done, fb_popup, t, u;
+          if ($('referrals-notification')) {
+              $('referrals-notification').hide();
+          }
+          u = '{/literal}http://www.janamesa.com.br/referral/{$code}{literal}';
+          t = $('#referral_midiasocial').text();
+          fb_popup = window.open("http://www.facebook.com/sharer.php?u=" + (encodeURIComponent(u)) + "&t=" + (encodeURIComponent(t)), '_blank', 'toolbar=0,status=0,width=626,height=436');
+          AMC.log('referral_sent', {
+            'type': 'post',
+            'ip': '{/literal}{$remoteIp}{literal}',
+            'src': null
+          });
+          UserActivityLogger.log('web', 'referral_send_fb');
+          check_fb_done = function() {
+            if (fb_popup.closed) {
+              clearInterval(facebook_interval);
+              return FacebookOAuth.custom_show_complete();
+            }
+          };
+          facebook_interval = setInterval(check_fb_done, 250);
+        }
+      </script>      {/literal}
+        </div>
+
+    </div>
+
+</div>
+{/block}

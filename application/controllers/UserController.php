@@ -854,6 +854,24 @@ class UserController extends Default_Controller_Base {
     }
 
     /**
+     * confirm the email adress
+     * @author Matthias Laug <laug@lieferando.de>
+     * @since 07.04.2011
+     */
+    public function indiqueAction() {
+        
+        $code = Yourdelivery_Model_Rabatt::factory(Yourdelivery_Model_Rabatt::REFERRAL, array(
+                    'percent' => 10,
+                    'fullname' => $this->getCustomer()->getFullname(),
+                ));
+        $remoteIp = $_SERVER['REMOTE_ADDR'];
+        $this->view->assign('remoteIp', $remoteIp);
+        $this->view->assign('code', $code);
+//        $request = $this->getRequest();
+//        $hash = $request->getParam('hash');
+    }
+
+    /**
      * show form (with thumbs) for rating an order
      *
      * @author Felix Haferkorn <haferkorn@lieferando.de>

@@ -111,7 +111,7 @@ class Administration_DiscountController extends Default_Controller_Administratio
 
                 if (intval($values['number']) > 500 && $discount->getType() != Yourdelivery_Model_Rabatt::TYPE_VERIFICATION_SINGLE) {
                     if ($values['email'] == '') {
-                        $values['email'] = 'it@lieferando.de';
+                        $values['email'] = 'admin@janamesa.com.br';
                     }
                     $this->warn(__b('Du hast mehr als 500 Gutscheine angefordert. Das System wird diese im Hintergrund generieren und bei Vollendung eine email an %s schicken', $values['email']));
                     Yourdelivery_Model_DbTable_Rabatt_Jobs::createJob($discount, $values['email'], $values['number']);

@@ -8,6 +8,7 @@ class Yourdelivery_Model_Rabatt extends Default_Model_Base {
     const RELATIVE = 0;
     const ABSOLUTE = 1;
     const FIDELITY = 'fidelity';
+    const REFERRAL = 'REFERRAL';
 
     /**
      * Type 0: a regular rabatt code without any verification
@@ -189,6 +190,37 @@ class Yourdelivery_Model_Rabatt extends Default_Model_Base {
                 $code = $discount->generateCode();
                 $rabattCodeObj = new Yourdelivery_Model_Rabatt_Code($code);
                 return $rabattCodeObj;
+                break;
+                
+            case self::REFERRAL:
+                extract($params);
+                $discount = new Yourdelivery_Model_Rabatt();
+                $values = array();
+                if ($referral){
+                    $values['name'] = $fullname . " ($referral) " . date('d.m.Y. H:i');
+                } else {
+                    $values['name'] = $fullname . ' (USER REFERRAL) ' . date('d.m.Y. H:i');
+                }
+                $values['start'] = date('Y-m-d H:i:s', time());
+                $values['end'] = date('Y-m-d H:i:s', strtotime('+2days'));
+                $values['rrepeat'] = 0;
+                $values['number'] = 1;
+                $values['status'] = 1;
+                $values['kind'] = 0;
+                $values['info'] = '(USER REFERRAL)';
+                $values['fidelity'] = 1;
+                $values['rabatt'] = $percent;
+                $values['onlyPrivate'] = 1;
+                $values['noCash'] = 1;
+
+                $discountId = $discount->getId();
+                $discount->setData($values);
+                $discount->save();
+
+                // create RabattCode
+                $code = $discount->generateCode();
+                $rabattCodeObj = new Yourdelivery_Model_Rabatt_Code($code);
+                return $code;
                 break;
         }
         return null;
