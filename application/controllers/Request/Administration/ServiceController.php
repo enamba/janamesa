@@ -64,7 +64,7 @@ Qualquer dúvida ou alteração, entre em contato com nosso SAC:
 Segunda à Sexta: das 9:00 até as 23:00 horas
 Sábado e Domingo: das 11:00 até as 23:00 horas
 
-Telefone: (011) 4063-1731
+Telefone: (11) 4063-1731 (21) 4063-3731
 Email: sac@janamesa.com.br
 
 

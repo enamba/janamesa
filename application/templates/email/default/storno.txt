@@ -12,4 +12,4 @@ Du erreichst uns unter der Telefonnummer %s in der Zeit von Montag – Freitag 0
 Wir wünschen Dir eine angenehme Zeit und freuen uns auf Deinen nächsten Besuch bei www.%s
 
 Dein %s-Team
-', $customer->getFullname(), $config->locale->tel->support, $config->domain->base, $config->domain->base)}
+', $customer->getFullname(), $config->locale->areacodetel->support, $config->domain->base, $config->domain->base)}

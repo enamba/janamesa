@@ -60,7 +60,7 @@ $vals_D_1 = $api->listBatchSubscribe($config->mailchimp->listId->D1,$rowsD_1,fal
 
 if ($config->mailchimp->campaignId->D1 != ''){
     $retval = $api->campaignReplicate($config->mailchimp->campaignId->D1);
-    $retval = $api->campaignSchedule($retval, date ('Y-m-d') . ' 13:00:00');
+    $retval = $api->campaignSchedule($retval, date ('Y-m-d') . ' 14:00:00');
 }
 
 $retval = $api->listMembers($config->mailchimp->listId->D10, 'subscribed', null, 0, 5000 );
@@ -72,7 +72,7 @@ $vals = $api->listBatchUnsubscribe($config->mailchimp->listId->D10, $email_remov
 $vals_D_10 = $api->listBatchSubscribe($config->mailchimp->listId->D10,$rowsD_10,false, true, false);
 if ($config->mailchimp->campaignId->D10 != ''){
     $retval = $api->campaignReplicate($config->mailchimp->campaignId->D10);
-    $retval = $api->campaignSchedule($retval, date ('Y-m-d') . ' 13:00:00');
+    $retval = $api->campaignSchedule($retval, date ('Y-m-d') . ' 14:00:00');
 }
 
 $retval = $api->listMembers($config->mailchimp->listId->D7A, 'subscribed', null, 0, 5000 );
@@ -91,7 +91,7 @@ $vals = $api->listBatchUnsubscribe($config->mailchimp->listId->D7A, $email_remov
 $vals_D_7_a = $api->listBatchSubscribe($config->mailchimp->listId->D7A,$simple_rowD_7_a,false, true, false);
 if ($config->mailchimp->campaignId->D7A != ''){
     $retval = $api->campaignReplicate($config->mailchimp->campaignId->D7A);
-    $retval = $api->campaignSchedule($retval, date ('Y-m-d') . ' 13:00:00');
+    $retval = $api->campaignSchedule($retval, date ('Y-m-d') . ' 14:00:00');
 }
 
 $retval = $api->listMembers($config->mailchimp->listId->D7B, 'subscribed', null, 0, 5000 );
@@ -110,6 +110,6 @@ $vals = $api->listBatchUnsubscribe($config->mailchimp->listId->D7B, $email_remov
 $vals_D_7_b = $api->listBatchSubscribe($config->mailchimp->listId->D7B,$simple_rowD_7_b,false, true, false);
 if ($config->mailchimp->campaignId->D7B){
     $retval = $api->campaignReplicate($config->mailchimp->campaignId->D7B);
-    $retval = $api->campaignSchedule($retval, date ('Y-m-d') . ' 13:00:00');
+    $retval = $api->campaignSchedule($retval, date ('Y-m-d') . ' 14:00:00');
 }
 ?>

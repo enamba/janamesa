@@ -45,7 +45,7 @@
     float: left;
     display: block;
     width: 120px;
-    height: 72px;
+    height: 120px;
     margin: 20px 0 0;
     border: 3px solid #fff;
     border-radius: 2px;
@@ -54,11 +54,11 @@
 
 .yd-rest-info strong {
     float: right;
-    margin: 20px 0 0;
+    margin: 13px 0 0;
     display: block;
     width: 490px;
-    height: 76px;
-    line-height: 76px;
+    height: 139px;
+    line-height: 72px;
     text-align: center;
     font-size: 40px;
     color: #777;
