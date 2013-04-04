@@ -61,7 +61,6 @@
 
                 <p>
                     {if !$satellite->isPremium()}
-                    <a href="{if $preview}/satellite/about/id/{$satellite->getId()}{else}/about{/if}" target="_blank">{__("Impressum")}</a> ,
                     {$service->getName()} {$service->getStreet()} {$service->getHausnr()} {$service->getPlz()} {$service->getCity()->getCity()}
                     {/if}
                 </p>
