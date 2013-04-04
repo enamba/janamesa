@@ -125,7 +125,7 @@ input:focus, textarea:focus, select:focus {
 
 #yd-nonfooter {
     position: relative;
-    z-index: 9;
+    z-index: 0;
 }
 
 #page #content {
