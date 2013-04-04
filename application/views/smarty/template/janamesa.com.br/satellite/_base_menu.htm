@@ -42,7 +42,7 @@
         <script type="text/javascript" src="/media/javascript/compiled/frontend-{$REVISION}-satellite.js"></script>
     </head>
 
-    <body style="background:url({$satellite->getBackground()}) repeat-y center;" class="sattelite satteliteid-{$satellite->getId()} {strtolower($service->getName())} {if $satellite->isPremium()}premium{/if}" >
+    <body style="background:url({$satellite->getBackground()}) repeat 0 0 transparent;" class="sattelite satteliteid-{$satellite->getId()} {strtolower($service->getName())} {if $satellite->isPremium()}premium{/if}" >
 
         {assign var=serviceCacheId value=$service->getId()}
         {include file='order/_includes/menu/ranges.htm' caching=1 cache_lifetime=86400 cache_id="ranges.$serviceCacheId"}

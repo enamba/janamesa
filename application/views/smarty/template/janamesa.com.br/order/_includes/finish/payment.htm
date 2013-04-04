@@ -26,7 +26,7 @@
                 <input id="yd-payment-bar" {if $preselected=='bar'}checked="checked"{/if} type="radio" name="payment" value="bar" class="radio yd-finish-payment-radio paymentHidden {if $order->getKind() != 'comp'}validate[payment]{/if}"/>
                 <span style="padding:8px 0 0;">Dinheiro</span><small></small>
             </div>
-            <div id="yd-payment-form-bar" class="yd-payment-form hidden yd-form" style="clear:both;">
+            <div id="yd-payment-form-bar" class="yd-payment-form hidden yd-form" style="clear:both; display:none;">
                 <strong class="yd-form-tease">
                     Troco para&nbsp;<input type="text" name="change" class="yd-money" />
                 </strong>

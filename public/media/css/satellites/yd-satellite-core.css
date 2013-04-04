@@ -780,7 +780,7 @@ input[name="hausnr"].yd-form-valid {
 #yd-payment-form-bar {
     width: 215px;
     cursor: pointer;
-    display: block;
+/*    display: block;*/
     float: left;
     height: 40px;
     margin: 0 10px 10px 0;

@@ -10,10 +10,13 @@
 #paymentcontent input[name="change"]{
     display: block;
     float: right;
-    width: 125px;
+    margin-right: 61px;
+    width: 70px;
 }
 .yd-payment-cash,
 .yd-payment-payp,
+#yd-finish-payment-vr,
+#yd-finish-payment-ticketRestaurante,
 .yd-payment-ec ,
 .yd-payment-card,
 .yd-payment-bill,
@@ -24,15 +27,17 @@
     cursor: pointer;
     float: left;
     display: block;
-    width: 155px;
+    width: 207px;
     height: 40px;
     margin: 0 10px 10px 0;
-    padding: 10px 0 0 65px;
+    padding: 10px 0 0 79px;
     color: #333 !important;
-    background: url(/media/images/satellites/menu/yd-sprites.png);
+    background: url(/media/images/satellites/menu/yd-sprites.png) repeat scroll 0 0 / 1300px 1000px transparent;
 }
 
 .yd-payment-cash span,
+#yd-finish-payment-vr span,
+#yd-finish-payment-ticketRestaurante span,
 .yd-payment-ec span,
 .yd-payment-card span,
 .yd-payment-bill span,
@@ -48,6 +53,8 @@
     margin-top: 20px;
 }
 .yd-payment-cash small,
+#yd-finish-payment-vr small,
+#yd-finish-payment-ticketRestaurante small,
 .yd-payment-ec small,
 .yd-payment-payp small,
 .yd-payment-card small,
@@ -57,10 +64,17 @@
     font-size: 9px;
 }
 
-.yd-payment-cash { background-position: -440px -70px; }
+.yd-payment-cash { 
+    background-position: -572px -98px;
+    background-size: 1300px 1401px;
+    height: 60px;
+}
+
+#yd-finish-payment-vr { background-position: -287px -470px;}
+#yd-finish-payment-ticketRestaurante { background-position: -287px -470px;}
 .yd-payment-ec { background-position: -440px -20px; }
-.yd-payment-payp { background-position: -440px -120px; }
-.yd-payment-card { background-position: -440px -170px; }
+.yd-payment-payp { background-position: -572px -120px; }
+.yd-payment-card { background-position: -572px -170px; }
 .yd-payment-bill { background-position: -440px -220px; }
 .yd-payment-debit { background-position: -440px -270px; }
 .yd-payment-ebanking-de { background-position: -440px -320px; }
@@ -68,18 +82,34 @@
 .yd-payment-ebanking-en { background-position: -440px -420px; }
 
 
-.yd-payment-cash:hover { background-position: -220px -70px; color: #000 !important;}
+.yd-payment-cash:hover { background-position: 0 -98px;background-size: 1300px 1401px; color: #000 !important;}
+#yd-finish-payment-vr:hover { background-position: 0px -470px; color: #000 !important;}
+#yd-finish-payment-ticketRestaurante:hover { background-position: 0px -470px; color: #000 !important;}
 .yd-payment-ec:hover { background-position: -220px -20px;}
-.yd-payment-payp:hover { background-position: -220px -120px; color: #000 !important;}
-.yd-payment-card:hover { background-position: -220px -170px; color: #000 !important;}
+.yd-payment-payp:hover { background-position: 0px -120px; color: #000 !important;}
+.yd-payment-card:hover { background-position: 0px -170px; color: #000 !important;}
 .yd-payment-bill:hover { background-position: -220px -220px; color: #000 !important;}
 .yd-payment-debit:hover { background-position: -220px -270px;color: #000 !important; }
 .yd-payment-ebanking-de:hover { background-position: -220px -320px; color: #000 !important;}
 .yd-payment-ebanking-atch:hover { background-position: -220px -370px; color: #000 !important; }
 .yd-payment-ebanking-en:hover { background-position: -220px -420px; color: #000 !important; }
 
+ .yd-payment-cash.active {
+    background-position: 0 -98px;
+    background-size: 1300px 1401px;
+    height: 60px;
+    padding-left: 80px;
+    width: 207px;
+}
 
-.yd-payment-cash.active { background-position: 0px -70px; }
+.sattelite #yd-finish-payment-paypal span {
+    display: none;
+}
+.sattelite .yd-bigbox-payment table td {
+    width: 330px !important;
+}
+#yd-finish-payment-vr.active { background-position: 0px -470px;}
+#yd-finish-payment-ticketRestaurante.active { background-position: 0px -470px;}
 .yd-payment-ec.active { background-position: 0px -20px; }                         
 .yd-payment-payp.active { background-position: 0px -120px; }
 .yd-payment-card.active { background-position: 0px -170px; }

@@ -39,15 +39,6 @@
 
         {include file="order/_includes/sidebar/cart-menu.htm"}
     </form>
-    {if $satellite->isPremium() == false}
-    {if $domain_base == 'taxiresto.fr'}
-    <img src="{$domain_static}/images/satellites/menu/FR/FR_Payment.png" alt="payment" />
-    {elseif $domain_base == 'pyszne.pl'}
-    <img src="{$domain_static}/images/satellites/menu/PL/PL_Payment.png" alt="payment" />
-    {else}
-    <img src="{$domain_static}/images/satellites/menu/payment.png" alt="payment" />
-    {/if}
-    {/if} 
     {if $satellite->getCertificationImg()}
     <img id="yd-menu-certification" src="{$satellite->getCertificationImg()}" alt="" />
     {/if}

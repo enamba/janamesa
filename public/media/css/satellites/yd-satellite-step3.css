@@ -1054,16 +1054,6 @@ ul.yd-menu-nav1 {
     background: url("/media/images/satellites/menu/yd-sprite-menu.png") no-repeat -4px -910px;
 }
 
-.yd-menu-modern ul.yd-menu-nav1 li a:hover {
-    font-weight: bold;
-    font-size: 13px;
-    background: url("/media/images/satellites/menu/yd-sprite-menu.png") no-repeat -5px -792px;
-}
-
-.yd-menu-modern ul.yd-menu-nav1 li a.parent:hover {
-    background: url("/media/images/satellites/menu/yd-sprite-menu.png") no-repeat -4px -970px;
-}
-
 
 .yd-menu-modern ul.yd-menu-nav1 li a.active {
     font-weight: bold;

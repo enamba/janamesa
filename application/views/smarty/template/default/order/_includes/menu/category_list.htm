@@ -19,9 +19,6 @@
             <a href="#" class="{$a_classes} food_side category-lenght-toggle parent {if $parent.main}category-main{/if}" id="cat-0-side-{$parentId}-{$postfix}">
                 {if $config->domain->base != "eatstar.de"}
                     <span class="category-lenght-toggle-truncate">{$parent.name|truncate:20:"..."}</span>
-                    {if strlen($parent.name)>20}
-                        <span class="category-lenght-toggle-full" style="display:none;">{$parent.name}</span>
-                    {/if}
                 {else}
                     {$parent.name}
                 {/if}
@@ -36,9 +33,6 @@
                 <a href="#" class="{$a_classes} food_side category-lenght-toggle {if $category.main}category-main{/if}" id="cat-{$catId}-side-0-{$postfix}">
                     {if $config->domain->base != "eatstar.de"}
                         <span class="category-lenght-toggle-truncate">{$category.name|truncate:20:"..."}</span>
-                        {if strlen($category.name)>20}
-                            <span class="category-lenght-toggle-full" style="display:none;">{$category.name}</span>
-                        {/if}
                     {else}
                         {$category.name}
                     {/if}

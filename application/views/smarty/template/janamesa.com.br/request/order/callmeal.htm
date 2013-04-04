@@ -31,6 +31,8 @@
                 </span>
 
                 <span class="yd-dialogs-head-price">
+                    <sup>{__('€')}</sup>
+                    &nbsp;
                     <span class="yd-current-meal-price">
                         {if $meal->getPriceType() == 'normal'}
                         {$meal->getCost()|inttoprice}
@@ -38,8 +40,6 @@
                         {0|inttoprice}
                         {/if}
                     </span>
-                    &nbsp;
-                    <sup>{__('€')}</sup>
                 </span>
 
                 {if $config->domain->base == 'janamesa.com.br'}
